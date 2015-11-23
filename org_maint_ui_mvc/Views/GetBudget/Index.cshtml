@@ -1,0 +1,43 @@
+﻿<html data-ng-app="org_maint_module">
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<body>
+    <table data-ng-controller="org_maint_angular_controller">
+        <tr>
+            <th>Available</th>
+            <th>Allocated</th>
+            <th>BudgetRequired</th>
+        </tr>
+        <tr data-ng-repeat="budgetStatus1 in budgetStatus">
+            <td>
+                {{budgetStatus1.BudgetAvailable}}
+            </td>
+            <td>
+                {{budgetStatus1.BudgetAllocated}}
+</td>
+            <td>
+                {{budgetStatus1.BudgetRequired}}
+ </td>
+        </tr>
+        <tr>
+            <td>{{1+1}}</td>
+            <td>{{1+1}}</td>
+            <td>{{1+1}}</td>
+</tr>
+    </table>
+    <!-- 
+         public int BudgetStatusID { get; set; }
+        public decimal BudgetAvailable { get; set; }
+        public decimal BudgetAllocated { get; set; }
+        public decimal BudgetRequired { get; set; }
+        public System.DateTime DateUpdated { get; set; }-->
+</body>
+
+</html>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/org_maint_scripts/module.js"></script>
+<script src="~/Scripts/org_maint_scripts/service.js"></script>
+<script src="~/Scripts/org_maint_scripts/controller.js"></script>

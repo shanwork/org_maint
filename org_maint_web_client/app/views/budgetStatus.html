@@ -1,0 +1,33 @@
+﻿<h2>Budget Status</h2>
+ 
+<table>
+    <tr>
+        <th >Available</th>
+        <td >{{budgetStatus.available}}</td>
+        </tr>
+    <tr>
+        <th>Allocated</th>
+        <td>{{budgetStatus.allocated}}</td>
+     </tr>
+    <tr>
+        <th>Deficit</th>
+        <td>{{budgetStatus.deficit}}</td>
+
+    </tr>
+   
+</table>
+<table>
+      <tr>
+        <th>Amount</th>
+        <th>Debit or Credit</th>
+        <th>Date </th>
+        <th>Comments </th>
+    </tr>
+    <tr ng-repeat="budgetHistoryElement in budgetHistory">
+        <td>{{budgetHistoryElement.amount}}</td>
+        <td>{{budgetHistoryElement.debitOrCredit}}</td>
+        <td>{{budgetHistoryElement.date}}</td>
+        <td>{{budgetHistoryElement.comments}}</td>
+ </tr>
+</table>
+<br />

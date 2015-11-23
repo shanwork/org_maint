@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Org_MaintModelStoreContainer" CdmEntityContainer="Org_MaintEntities">
+    <EntitySetMapping Name="BudgetHistories">
+      <EntityTypeMapping TypeName="Org_MaintModel.BudgetHistory">
+        <MappingFragment StoreEntitySet="BudgetHistory">
+          <ScalarProperty Name="BudgetHistoryId" ColumnName="BudgetHistoryId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DebitCredit" ColumnName="DebitCredit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetStatus">
+      <EntityTypeMapping TypeName="Org_MaintModel.BudgetStatu">
+        <MappingFragment StoreEntitySet="BudgetStatus">
+          <ScalarProperty Name="BudgetStatusID" ColumnName="BudgetStatusID" />
+          <ScalarProperty Name="BudgetAvailable" ColumnName="BudgetAvailable" />
+          <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />
+          <ScalarProperty Name="BudgetRequired" ColumnName="BudgetRequired" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contributors">
+      <EntityTypeMapping TypeName="Org_MaintModel.Contributor">
+        <MappingFragment StoreEntitySet="Contributor">
+          <ScalarProperty Name="ContributorID" ColumnName="ContributorID" />
+          <ScalarProperty Name="ContributorName" ColumnName="ContributorName" />
+          <ScalarProperty Name="OriginalCurrencyAmount" ColumnName="OriginalCurrencyAmount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="ConvertedAmount" ColumnName="ConvertedAmount" />
+          <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+          <ScalarProperty Name="DateDeposited" ColumnName="DateDeposited" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntityBudgetPriorities">
+      <EntityTypeMapping TypeName="Org_MaintModel.EntityBudgetPriority">
+        <MappingFragment StoreEntitySet="EntityBudgetPriority">
+          <ScalarProperty Name="EntityBudgetPriorityID" ColumnName="EntityBudgetPriorityID" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="BudgetRequired" ColumnName="BudgetRequired" />
+          <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntitySummaries">
+      <EntityTypeMapping TypeName="Org_MaintModel.EntitySummary">
+        <MappingFragment StoreEntitySet="EntitySummary">
+          <ScalarProperty Name="EntitySummaryId" ColumnName="EntitySummaryId" />
+          <ScalarProperty Name="TotalEntities" ColumnName="TotalEntities" />
+          <ScalarProperty Name="TotalEntitiesAllocated" ColumnName="TotalEntitiesAllocated" />
+          <ScalarProperty Name="TotalEntitiesAllocable" ColumnName="TotalEntitiesAllocable" />
+          <ScalarProperty Name="TotalEntitiesUnallocated" ColumnName="TotalEntitiesUnallocated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

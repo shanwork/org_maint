@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Org_MaintModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BudgetHistory">
+          <Key>
+            <PropertyRef Name="BudgetHistoryId" />
+          </Key>
+          <Property Name="BudgetHistoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="DebitCredit" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BudgetStatus">
+          <Key>
+            <PropertyRef Name="BudgetStatusID" />
+          </Key>
+          <Property Name="BudgetStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BudgetAvailable" Type="money" Nullable="false" />
+          <Property Name="BudgetAllocated" Type="money" Nullable="false" />
+          <Property Name="BudgetRequired" Type="money" Nullable="false" />
+          <Property Name="DateUpdated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contributor">
+          <Key>
+            <PropertyRef Name="ContributorID" />
+          </Key>
+          <Property Name="ContributorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContributorName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="OriginalCurrencyAmount" Type="money" Nullable="false" />
+          <Property Name="Currency" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ConvertedAmount" Type="money" Nullable="false" />
+          <Property Name="DateReceived" Type="datetime" Nullable="false" />
+          <Property Name="DateDeposited" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EntityBudgetPriority">
+          <Key>
+            <PropertyRef Name="EntityBudgetPriorityID" />
+          </Key>
+          <Property Name="EntityBudgetPriorityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EntityName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="BudgetRequired" Type="money" Nullable="false" />
+          <Property Name="BudgetAllocated" Type="money" Nullable="false" />
+          <Property Name="DateUpdated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EntitySummary">
+          <Key>
+            <PropertyRef Name="EntitySummaryId" />
+          </Key>
+          <Property Name="EntitySummaryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TotalEntities" Type="bigint" Nullable="false" />
+          <Property Name="TotalEntitiesAllocated" Type="bigint" Nullable="false" />
+          <Property Name="TotalEntitiesAllocable" Type="bigint" Nullable="false" />
+          <Property Name="TotalEntitiesUnallocated" Type="bigint" Nullable="false" />
+          <Property Name="DateUpdated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Org_MaintModelStoreContainer">
+          <EntitySet Name="BudgetHistory" EntityType="Self.BudgetHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BudgetStatus" EntityType="Self.BudgetStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contributor" EntityType="Self.Contributor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntityBudgetPriority" EntityType="Self.EntityBudgetPriority" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntitySummary" EntityType="Self.EntitySummary" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Org_MaintModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BudgetHistory">
+          <Key>
+            <PropertyRef Name="BudgetHistoryId" />
+          </Key>
+          <Property Name="BudgetHistoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DebitCredit" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="BudgetStatu">
+          <Key>
+            <PropertyRef Name="BudgetStatusID" />
+          </Key>
+          <Property Name="BudgetStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BudgetAvailable" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="BudgetAllocated" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="BudgetRequired" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Contributor">
+          <Key>
+            <PropertyRef Name="ContributorID" />
+          </Key>
+          <Property Name="ContributorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContributorName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OriginalCurrencyAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Currency" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ConvertedAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DateReceived" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateDeposited" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="EntityBudgetPriority">
+          <Key>
+            <PropertyRef Name="EntityBudgetPriorityID" />
+          </Key>
+          <Property Name="EntityBudgetPriorityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EntityName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="BudgetRequired" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="BudgetAllocated" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="EntitySummary">
+          <Key>
+            <PropertyRef Name="EntitySummaryId" />
+          </Key>
+          <Property Name="EntitySummaryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalEntities" Type="Int64" Nullable="false" />
+          <Property Name="TotalEntitiesAllocated" Type="Int64" Nullable="false" />
+          <Property Name="TotalEntitiesAllocable" Type="Int64" Nullable="false" />
+          <Property Name="TotalEntitiesUnallocated" Type="Int64" Nullable="false" />
+          <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="Org_MaintEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BudgetHistories" EntityType="Self.BudgetHistory" />
+          <EntitySet Name="BudgetStatus" EntityType="Self.BudgetStatu" />
+          <EntitySet Name="Contributors" EntityType="Self.Contributor" />
+          <EntitySet Name="EntityBudgetPriorities" EntityType="Self.EntityBudgetPriority" />
+          <EntitySet Name="EntitySummaries" EntityType="Self.EntitySummary" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Org_MaintModelStoreContainer" CdmEntityContainer="Org_MaintEntities">
+          <EntitySetMapping Name="BudgetHistories">
+            <EntityTypeMapping TypeName="Org_MaintModel.BudgetHistory">
+              <MappingFragment StoreEntitySet="BudgetHistory">
+                <ScalarProperty Name="BudgetHistoryId" ColumnName="BudgetHistoryId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="DebitCredit" ColumnName="DebitCredit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BudgetStatus">
+            <EntityTypeMapping TypeName="Org_MaintModel.BudgetStatu">
+              <MappingFragment StoreEntitySet="BudgetStatus">
+                <ScalarProperty Name="BudgetStatusID" ColumnName="BudgetStatusID" />
+                <ScalarProperty Name="BudgetAvailable" ColumnName="BudgetAvailable" />
+                <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />
+                <ScalarProperty Name="BudgetRequired" ColumnName="BudgetRequired" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contributors">
+            <EntityTypeMapping TypeName="Org_MaintModel.Contributor">
+              <MappingFragment StoreEntitySet="Contributor">
+                <ScalarProperty Name="ContributorID" ColumnName="ContributorID" />
+                <ScalarProperty Name="ContributorName" ColumnName="ContributorName" />
+                <ScalarProperty Name="OriginalCurrencyAmount" ColumnName="OriginalCurrencyAmount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="ConvertedAmount" ColumnName="ConvertedAmount" />
+                <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+                <ScalarProperty Name="DateDeposited" ColumnName="DateDeposited" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntityBudgetPriorities">
+            <EntityTypeMapping TypeName="Org_MaintModel.EntityBudgetPriority">
+              <MappingFragment StoreEntitySet="EntityBudgetPriority">
+                <ScalarProperty Name="EntityBudgetPriorityID" ColumnName="EntityBudgetPriorityID" />
+                <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="BudgetRequired" ColumnName="BudgetRequired" />
+                <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntitySummaries">
+            <EntityTypeMapping TypeName="Org_MaintModel.EntitySummary">
+              <MappingFragment StoreEntitySet="EntitySummary">
+                <ScalarProperty Name="EntitySummaryId" ColumnName="EntitySummaryId" />
+                <ScalarProperty Name="TotalEntities" ColumnName="TotalEntities" />
+                <ScalarProperty Name="TotalEntitiesAllocated" ColumnName="TotalEntitiesAllocated" />
+                <ScalarProperty Name="TotalEntitiesAllocable" ColumnName="TotalEntitiesAllocable" />
+                <ScalarProperty Name="TotalEntitiesUnallocated" ColumnName="TotalEntitiesUnallocated" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

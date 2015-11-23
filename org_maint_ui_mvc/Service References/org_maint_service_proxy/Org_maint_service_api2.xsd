@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/org_maint_services" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/org_maint_services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BudgetStatusContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BudgetAllocated" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BudgetAvailable" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BudgetRequired" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DateUpdated" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BudgetStatusContract" nillable="true" type="tns:BudgetStatusContract" />
+  <xs:complexType name="ArrayOfBudgetHistoryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BudgetHistoryContract" nillable="true" type="tns:BudgetHistoryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBudgetHistoryContract" nillable="true" type="tns:ArrayOfBudgetHistoryContract" />
+  <xs:complexType name="BudgetHistoryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DebitCredit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BudgetHistoryContract" nillable="true" type="tns:BudgetHistoryContract" />
+  <xs:complexType name="EntitySummaryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TotalEntities" type="xs:long" />
+      <xs:element minOccurs="0" name="TotalEntitiesAllocable" type="xs:long" />
+      <xs:element minOccurs="0" name="TotalEntitiesAllocated" type="xs:long" />
+      <xs:element minOccurs="0" name="TotalEntitiesUnallocated" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntitySummaryContract" nillable="true" type="tns:EntitySummaryContract" />
+  <xs:complexType name="ArrayOfContributorContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContributorContract" nillable="true" type="tns:ContributorContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContributorContract" nillable="true" type="tns:ArrayOfContributorContract" />
+  <xs:complexType name="ContributorContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContributorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConvertedAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateDeposited" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateReceived" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OriginalCurrencyAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContributorContract" nillable="true" type="tns:ContributorContract" />
+  <xs:complexType name="ArrayOfEntityBudgetPriorityContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityBudgetPriorityContract" nillable="true" type="tns:EntityBudgetPriorityContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntityBudgetPriorityContract" nillable="true" type="tns:ArrayOfEntityBudgetPriorityContract" />
+  <xs:complexType name="EntityBudgetPriorityContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BudgetAllocated" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BudgetRequired" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DateUpdated" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityBudgetPriorityContract" nillable="true" type="tns:EntityBudgetPriorityContract" />
+</xs:schema>

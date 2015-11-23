@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Org_Maint_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58778/Org_maint_service_api.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58778/Org_maint_service_api.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58778/Org_maint_service_api.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/org_maint_services" />
+      <xsd:import schemaLocation="http://localhost:58778/Org_maint_service_api.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/org_maint_services.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOrg_Maint_Service1_GetBudgetStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBudgetStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetBudgetStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBudgetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetBudgetHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBudgetHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetBudgetHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBudgetHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetEntityStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetEntityStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetContributorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributorList" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetContributorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetEntitiesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesList" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GetEntitiesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_AddContributor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContributor" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_AddContributor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContributorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_AllocateFunds_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllocateFunds" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_AllocateFunds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllocateFundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GenerateTestData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTestData" />
+  </wsdl:message>
+  <wsdl:message name="IOrg_Maint_Service1_GenerateTestData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTestDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOrg_Maint_Service1">
+    <wsdl:operation name="GetBudgetStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetBudgetStatus" message="tns:IOrg_Maint_Service1_GetBudgetStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetBudgetStatusResponse" message="tns:IOrg_Maint_Service1_GetBudgetStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBudgetHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetBudgetHistory" message="tns:IOrg_Maint_Service1_GetBudgetHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetBudgetHistoryResponse" message="tns:IOrg_Maint_Service1_GetBudgetHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetEntityStatus" message="tns:IOrg_Maint_Service1_GetEntityStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetEntityStatusResponse" message="tns:IOrg_Maint_Service1_GetEntityStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContributorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetContributorList" message="tns:IOrg_Maint_Service1_GetContributorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetContributorListResponse" message="tns:IOrg_Maint_Service1_GetContributorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetEntitiesList" message="tns:IOrg_Maint_Service1_GetEntitiesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GetEntitiesListResponse" message="tns:IOrg_Maint_Service1_GetEntitiesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContributor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/AddContributor" message="tns:IOrg_Maint_Service1_AddContributor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/AddContributorResponse" message="tns:IOrg_Maint_Service1_AddContributor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllocateFunds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/AllocateFunds" message="tns:IOrg_Maint_Service1_AllocateFunds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/AllocateFundsResponse" message="tns:IOrg_Maint_Service1_AllocateFunds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTestData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GenerateTestData" message="tns:IOrg_Maint_Service1_GenerateTestData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrg_Maint_Service1/GenerateTestDataResponse" message="tns:IOrg_Maint_Service1_GenerateTestData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOrg_Maint_Service1" type="tns:IOrg_Maint_Service1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBudgetStatus">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/GetBudgetStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBudgetHistory">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/GetBudgetHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityStatus">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/GetEntityStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContributorList">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/GetContributorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesList">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/GetEntitiesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContributor">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/AddContributor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocateFunds">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/AllocateFunds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTestData">
+      <soap:operation soapAction="http://tempuri.org/IOrg_Maint_Service1/GenerateTestData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Org_Maint_Service">
+    <wsdl:port name="BasicHttpBinding_IOrg_Maint_Service1" binding="tns:BasicHttpBinding_IOrg_Maint_Service1">
+      <soap:address location="http://localhost:58778/Org_maint_service_api.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="org_maint_app">
+<head>
+    <title>Organization Budget Allocation</title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <a href="#/budgetStatus">Budget Status</a>
+    <a href="#/customers">Customers</a>
+
+     
+    <div ng-view></div>
+    
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/budgetStatusController.js"></script>
+    <script src="app/controllers/customersController.js"></script>
+    <script src="app/controllers/ordersController.js"></script>
+</body>
+</html>
