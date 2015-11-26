@@ -73,6 +73,11 @@
     <Content Include="app\views\budgetStatus.html" />
     <Content Include="app\views\customers.html" />
     <Content Include="app\views\orders.html" />
+    <Content Include="budget\scripts\app.js" />
+    <Content Include="budget\scripts\controllers\budgetStatusController.js" />
+    <Content Include="budget\views\budgetStatus.html" />
+    <Content Include="budget\views\customers.html" />
+    <Content Include="budget\views\orders.html" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
