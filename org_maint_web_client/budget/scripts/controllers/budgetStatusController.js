@@ -1,11 +1,19 @@
 ﻿(function() {
      var BudgetStatusController = function ($scope, BudgetStatusService) {
        
-        $scope.budgetStatus =
-            {
-                available: 10000,
-                allocated: 20000,
-                deficit:2000
+         GetAllRecords();
+         //To Get All Records  
+         function GetAllRecords() {
+             var promiseGet = BudgetStatusService.getBudgetStatus();
+             promiseGet.then(function (pl) { alert(pl.data); },
+              function (errorPl) {  
+               //   $log.error('Some Error in Getting Records.', errorPl);
+              });  
+         }
+         $scope.budgetStatus = {
+                BudgetAvailable: 10000,
+                BudgetAllocated: 20000,
+                BudgetRequired: 2000
             };
         $scope.budgetHistory = BudgetStatusService.getBudgetHistoryList();
        

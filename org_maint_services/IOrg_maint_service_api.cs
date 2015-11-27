@@ -35,7 +35,7 @@ namespace org_maint_services
         List<EntityBudgetPriorityContract> GetEntitiesList();
 
         [OperationContract]
-        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddContributor")]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddContributor", BodyStyle=WebMessageBodyStyle.Wrapped)]
         List<ContributorContract> AddContributor(Contributor contributor, bool returnList=false);
         
         [OperationContract]

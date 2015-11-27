@@ -75,6 +75,8 @@
     <Content Include="app\views\orders.html" />
     <Content Include="budget\scripts\app.js" />
     <Content Include="budget\scripts\controllers\budgetStatusController.js" />
+    <Content Include="budget\scripts\controllers\budgetStatusController2.js" />
+    <Content Include="budget\scripts\globals\budgetStatusService.js" />
     <Content Include="budget\views\budgetStatus.html" />
     <Content Include="budget\views\customers.html" />
     <Content Include="budget\views\orders.html" />
