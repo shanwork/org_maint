@@ -20,6 +20,9 @@ namespace org_maint_services
 
         [DataMember]
         public DateTime DateUpdated { get; set; }
+
+        [DataMember]
+        public string DateUpdatedString { get; set; }
     }
 
     [DataContract]
@@ -33,6 +36,9 @@ namespace org_maint_services
 
         [DataMember]
         public DateTime Date { get; set; }
+
+        [DataMember]
+        public string DateString { get; set; }
 
     }
     [DataContract]
@@ -54,8 +60,13 @@ namespace org_maint_services
         public DateTime DateReceived { get; set; }
 
         [DataMember]
+        public string DateReceivedString { get; set; }
+
+        [DataMember]
         public DateTime? DateDeposited { get; set; }
 
+        [DataMember]
+        public string  DateDepositedString { get; set; }
     }
     [DataContract]
     public class EntitySummaryContract
@@ -63,29 +74,42 @@ namespace org_maint_services
 
         [DataMember]
         public long TotalEntities { get; set; }
+
         [DataMember]
         public long TotalEntitiesAllocated { get; set; }
+
         [DataMember]
         public long TotalEntitiesAllocable { get; set; }
+
         [DataMember]
         public long TotalEntitiesUnallocated { get; set; }
+
         [DataMember]
         public DateTime DateUpdated { get; set; }
 
+        [DataMember]
+        public string DateUpdatedString { get; set; }
     }
     [DataContract]
     public class EntityBudgetPriorityContract
     {
         [DataMember]
         public string EntityName { get; set; }
+
         [DataMember]
         public int Priority { get; set; }
+
         [DataMember]
         public decimal BudgetRequired { get; set; }
+
         [DataMember]
         public decimal BudgetAllocated { get; set; }
+
         [DataMember]
         public DateTime? DateUpdated { get; set; }
+
+        [DataMember]
+        public string DateUpdatedString { get; set; }
 
     }
 }

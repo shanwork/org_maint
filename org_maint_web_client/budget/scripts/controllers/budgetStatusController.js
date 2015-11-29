@@ -1,6 +1,12 @@
 ﻿(function() {
      var BudgetStatusController = function ($scope, BudgetStatusService) {
-       
+         $scope.sortBy = 'Date';
+         $scope.reverse = true;
+
+         $scope.doSort = function (propName) {
+             $scope.sortBy = propName;
+             $scope.reverse = !$scope.reverse;
+         };
          GetAllRecords();
          //To Get All Records  
          function GetAllRecords() {

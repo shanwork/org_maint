@@ -19,6 +19,10 @@ namespace org_maint_services
             orgMaintEntitiesContext = new Org_MaintEntities();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public BudgetStatusContract GetBudgetStatus()
         {
             BudgetStatusContract budgetStatus = new BudgetStatusContract();
@@ -40,6 +44,7 @@ namespace org_maint_services
                 budgetStatus.BudgetAllocated = query.BudgetAllocated ;
                 budgetStatus.BudgetRequired = query.BudgetRequired ;
                 budgetStatus.DateUpdated = query.DateUpdated  ;
+                budgetStatus.DateUpdatedString = query.DateUpdated.ToShortDateString();
             }
             return budgetStatus;
 
@@ -55,7 +60,8 @@ namespace org_maint_services
                     {
                         Amount = rec.Amount,
                         DebitCredit = rec.DebitCredit,
-                        Date = rec.Date
+                        Date = rec.Date,
+                        DateString = rec.Date.ToShortDateString()
                     });
              });
             ////foreach (BudgetHistory bHDataElement in query.ToList())
@@ -80,6 +86,7 @@ namespace org_maint_services
                 entityStatus.TotalEntities = newEntitySummary.TotalEntitiesAllocable = 100000;
                 entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 200000;
                 entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
+                entityStatus.DateUpdatedString = newEntitySummary.DateUpdated.ToShortDateString();
 
                 orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
                 orgMaintEntitiesContext.SaveChanges();
@@ -90,7 +97,7 @@ namespace org_maint_services
                 entityStatus.TotalEntities = query.TotalEntitiesAllocable ;
                 entityStatus.TotalEntitiesUnallocated = query.TotalEntitiesUnallocated ;
                 entityStatus.DateUpdated = query.DateUpdated  ;
-
+                entityStatus.DateUpdatedString = query.DateUpdated.ToShortDateString();
 
             }
             return entityStatus;
@@ -111,7 +118,9 @@ namespace org_maint_services
                         OriginalCurrencyAmount = rec.OriginalCurrencyAmount,
                         Currency = rec.Currency,
                         DateReceived = rec.DateReceived,
-                        DateDeposited  = rec.DateDeposited
+                        DateReceivedString = rec.DateReceived.ToShortDateString(),
+                        DateDeposited = rec.DateDeposited,
+                        DateDepositedString = rec.DateDeposited != null? ((DateTime)rec.DateDeposited).ToShortDateString():""
                     });
             });
             return contributorList;
@@ -130,7 +139,8 @@ namespace org_maint_services
                         BudgetAllocated = rec.BudgetAllocated,
                         BudgetRequired = rec.BudgetRequired,
                         Priority = rec.Priority,
-                        DateUpdated = rec.DateUpdated
+                        DateUpdated = rec.DateUpdated,
+                        DateUpdatedString = rec.DateUpdated != null ? ((DateTime)rec.DateUpdated).ToShortDateString():""
                     }
                     );
             });
