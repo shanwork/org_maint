@@ -27,7 +27,7 @@
     
    BudgetStatusController.$inject = ['$scope','BudgetStatusService'];
 
-    angular.module('org_maint_app')
+    angular.module('org_maint_budget')
       .controller('BudgetStatusController', BudgetStatusController);
     
 }());

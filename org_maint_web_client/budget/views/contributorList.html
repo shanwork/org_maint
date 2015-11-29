@@ -1,0 +1,19 @@
+<h2>Customers</h2>
+
+<table>
+    <tr>
+        <th ng-click="doSort('name')">Name</th>
+        <th ng-click="doSort('city')">Amount in orignal curr.</th>
+        <th ng-click="doSort('orderTotal')">Converted Amount</th>
+        <th ng-click="doSort('joined')">Received</th>
+        <th>&nbsp;Deposited</th>
+    </tr>
+    <tr ng-repeat="contributor in contributorList"> <!--| filter:customerFilter | orderBy:sortBy:reverse">-->
+        <td>{{ contributor.ContributorName }}</td>
+        <td>{{ contributor.OriginalCurrencyAmount }} {{ contributor.Currency }}</td>
+        <td>{{ contributor.ConvertedAmount }}</td>
+        <td>{{ contributor.DateReceived | date }}</td>
+       <td>{{ contributor.DateDeposited | date }}</td>
+ </tr>
+</table>
+<br />

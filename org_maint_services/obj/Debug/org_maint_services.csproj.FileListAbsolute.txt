@@ -15,6 +15,5 @@ C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\b
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\bin\EntityFramework.SqlServer.dll
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\bin\EntityFramework.xml
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\bin\EntityFramework.SqlServer.xml
-C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\obj\Debug\org_maint_services.csprojResolveAssemblyReference.cache
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\obj\Debug\org_maint_services.dll
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\obj\Debug\org_maint_services.pdb

@@ -106,6 +106,7 @@ namespace org_maint_services
                 contributorList.Add(
                     new ContributorContract
                     {
+                        ConvertedAmount = rec.ConvertedAmount,
                         ContributorName = rec.ContributorName,
                         OriginalCurrencyAmount = rec.OriginalCurrencyAmount,
                         Currency = rec.Currency,
