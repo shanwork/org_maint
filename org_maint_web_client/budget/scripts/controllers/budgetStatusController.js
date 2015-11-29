@@ -4,18 +4,24 @@
          GetAllRecords();
          //To Get All Records  
          function GetAllRecords() {
-             var promiseGet = BudgetStatusService.getBudgetStatus();
-             promiseGet.then(function (pl) { alert(pl.data); },
+             var promiseGetBudgetStatus = BudgetStatusService.getBudgetStatus();
+             promiseGetBudgetStatus.then(function (budgetStatusDb) { $scope.budgetStatus = budgetStatusDb.data; },
               function (errorPl) {  
                //   $log.error('Some Error in Getting Records.', errorPl);
               });  
+             var promiseGetBudgetHistory = BudgetStatusService.getBudgetHistory();
+             promiseGetBudgetHistory.then(function (budgetHistoryDb) { $scope.budgetHistory = budgetHistoryDb.data; },
+              function (errorPl) {
+                  //   $log.error('Some Error in Getting Records.', errorPl);
+              });
+         //    $scope.budgetHistory = BudgetStatusService.getBudgetHistoryList();
          }
-         $scope.budgetStatus = {
-                BudgetAvailable: 10000,
-                BudgetAllocated: 20000,
-                BudgetRequired: 2000
-            };
-        $scope.budgetHistory = BudgetStatusService.getBudgetHistoryList();
+         //$scope.budgetStatus = {
+         //       BudgetAvailable: 10000,
+         //       BudgetAllocated: 20000,
+         //       BudgetRequired: 2000
+         //   };
+       // $scope.budgetHistory = BudgetStatusService.getBudgetHistoryList();
        
        };
     

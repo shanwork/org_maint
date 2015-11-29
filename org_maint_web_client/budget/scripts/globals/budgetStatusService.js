@@ -28,6 +28,9 @@
                   comments: 'Initial budget allocation'
               }
                ];
+          this.getBudgetHistory = function () {
+              return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetBudgetHistory");
+          };
           this.getBudgetHistoryList = function () {
               return budgetHistoryList;
           };

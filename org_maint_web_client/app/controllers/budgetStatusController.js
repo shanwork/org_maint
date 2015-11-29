@@ -1,6 +1,6 @@
 ﻿(function() {
     
-    var BudgetStatusController = function ($scope) {
+    var BudgetStatusController3 = function ($scope) {
        // $scope.sortBy = 'name';
        // $scope.reverse = false;
         
@@ -46,6 +46,6 @@
     BudgetStatusController.$inject = ['$scope'];
 
     angular.module('org_maint_app')
-      .controller('BudgetStatusController', BudgetStatusController);
+      .controller('BudgetStatusController3', BudgetStatusController3);
     
 }());
