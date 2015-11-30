@@ -206,66 +206,7 @@ namespace org_maint_services
             orgMaintEntitiesContext.SaveChanges();
             return true ;
         }
-        //public List<ContributorContract> AddContributor(Contributor contributor, bool returnList = false)
-        //{
-        //    List<ContributorContract> updatedContributorList = new List<ContributorContract>();
-        //    Contributor newContributorRecord = new Contributor
-        //    {
-        //        OriginalCurrencyAmount = contributor.OriginalCurrencyAmount,
-        //        ContributorName = contributor.ContributorName,
-        //        Currency = contributor.Currency,
-        //        DateReceived = DateTime.Now,// contributor.DateReceived,
-        //        DateDeposited = DateTime.Now//contributor.DateDeposited,
-        //    };
-        //    // do we do the conversion here or on the UI? 
-        //    // later on in the UI, because it is easier to update.. we can add a field for conversion 
-        //    switch (contributor.Currency.ToUpper())
-        //    {
-        //        case "INR":
-        //            newContributorRecord.ConvertedAmount = contributor.OriginalCurrencyAmount;
-        //            break;
-        //        case "USD":
-        //            newContributorRecord.ConvertedAmount = contributor.OriginalCurrencyAmount * 60;
-        //            break;
-        //        case "EUR":
-        //            newContributorRecord.ConvertedAmount = contributor.OriginalCurrencyAmount * 75;
-        //            break;
-        //        default:
-        //            newContributorRecord.ConvertedAmount = contributor.OriginalCurrencyAmount * 20;
-        //            break;
-        //    }
-        //    orgMaintEntitiesContext.Contributors.Add(newContributorRecord);
-        //    orgMaintEntitiesContext.SaveChanges();
-
-        //    BudgetHistory newBudgetHistoryRecord = new BudgetHistory
-        //    {
-        //        Amount = newContributorRecord.ConvertedAmount,
-        //        DebitCredit = "Credit",
-        //        Date = (DateTime)(newContributorRecord.DateDeposited == null ? DateTime.Now : newContributorRecord.DateDeposited)
-        //    };
-        //    orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
-        //    orgMaintEntitiesContext.SaveChanges();
-
-        //    var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
-        //    if (query == null)
-        //    {
-        //        BudgetStatu budgStatu = new BudgetStatu();
-        //        budgStatu.BudgetAvailable = newContributorRecord.ConvertedAmount;
-        //        budgStatu.BudgetAllocated = 0;
-        //        budgStatu.BudgetRequired = 20000;
-        //        budgStatu.DateUpdated = DateTime.Now;
-        //        orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
-
-        //    }
-        //    else
-        //    {
-        //        query.BudgetAvailable += newContributorRecord.ConvertedAmount;
-        //        query.DateUpdated = (DateTime)(DateTime)(newContributorRecord.DateDeposited == null ? DateTime.Now : newContributorRecord.DateDeposited);
-        //    }
-        //    orgMaintEntitiesContext.SaveChanges();
-        //    return updatedContributorList;
-        //}
-
+      
         public EntitySummaryContract AllocateFunds(Double fundsForAllocation)
         {
 

@@ -2,12 +2,46 @@
 <html ng-app="org_maint_app">
 <head>
     <title>Organization Budget Allocation</title>
-    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="styles/globalStyles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
      <a href="budget/home.html">Financials</a>
 
-     Hello home page
+    <br />
+    <h4>Status</h4>
+    <ol style="width:700px;">
+        <li class="completed">Budget History and contributor list and add <b>implemented</b></li>
+        <li class="completed">
+            Update Budget History and Status with Contributor addition
+            <b> Implemented</b></li>
+        <li  class="wip">
+            UI and Web service connection Entity summary
+            <b><i>Pending</i></b> *
+        </li>
+        <li  class="notStarted">
+            UI and Web service connection Allocate funds
+            <b><i>Pending</i></b> *
+        </li>
+        <li  class="notStarted">
+            Complete logic from WebService to UI for Add or Update Entity
+            <b><i>Pending</i></b> *
+        </li>
+        <li  class="notStarted">
+            Clean up data and regenerate (add entities and contributors which will update the summaries)
+            <b><i>Pending</i></b>
+        </li>
+        <li  class="notStarted">
+            Styling
+            <b><i>Pending</i></b>
+        </li>
+        <li  class="notStarted">
+            Hosting / Deployment, etc
+            <b><i>Pending</i></b>
+        </li>
+
+            
+</ol>
+    * Keep on Same Page
     <div ng-view></div>
     
     <script src="scripts/angular.js"></script>

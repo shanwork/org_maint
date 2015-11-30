@@ -1,0 +1,17 @@
+﻿body {
+}
+.completed
+{
+    background-color:#77AA77;
+    border: solid green 1px;
+}
+.notStarted
+{
+    background-color:#AB7A7A;
+    border: solid red 1px;
+}
+.wip
+{
+    background-color:#ABAB7A;
+    border: solid yellow 1px;
+}

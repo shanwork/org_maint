@@ -25,41 +25,7 @@ namespace org_maint_services
             {
                 Response.Flush();
             }
-            //HttpContext.Current.Response.AddHeader("Access-Control-Allow-Origin", "*");
-            //if (HttpContext.Current.Request.HttpMethod == "OPTIONS")
-            //{
-            //    HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
-            //    HttpContext.Current.Response.End();
-            //}
-            //HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
-            //HttpContext.Current.Response.AddHeader("Access-Control-Max-Age", "1728000");
-            //HttpContext.Current.Response.End();
-            //if (HttpContext.Current.Request.HttpMethod == "POST")
-            //{
-            //    HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Methods", "POST");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Max-Age", "1728000");
-            //    HttpContext.Current.Response.End();
-            //}
-            //if (HttpContext.Current.Request.HttpMethod == "PUT")
-            //{
-            //    HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Methods", "PUT");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Max-Age", "1728000");
-            //    HttpContext.Current.Response.End();
-            //}
-            //if (HttpContext.Current.Request.HttpMethod == "DELETE")
-            //{
-            //    HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Methods", "DELETE");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
-            //    HttpContext.Current.Response.AddHeader("Access-Control-Max-Age", "1728000");
-            //    HttpContext.Current.Response.End();
-            //}
+            
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
