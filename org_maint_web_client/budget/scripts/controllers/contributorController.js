@@ -16,9 +16,28 @@
                  //   $log.error('Some Error in Getting Records.', errorPl);
              });
          }
-    
+        $scope.save = function () {
+            var Contributor = {
+                ContributorName: $scope.ContributorName,
+                OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
+                Currency: $scope.Currency
+                // will add date later
+            };
+            alert($scope.ContributorName);
+            alert(Contributor.ContributorName);
+            var promisePost = ContributorService.post(Contributor);
+            promisePost.then(function (pl) {
+                $scope.ContributorID = pl.data.ContributorID;
+                GetAllRecords();
 
-    };
+                //   ClearModels();
+            }, function (err) {
+                console.log("Some error Occured" + err);
+            });
+        };
+     };
+        
+  
 
     ContributorController.$inject = ['$scope', 'ContributorService'];
 

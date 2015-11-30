@@ -71,6 +71,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="Model\Org_Maint_EM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Org_Maint_EM.edmx</DependentUpon>
@@ -85,6 +86,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Model\BudgetHistory.cs">
       <DependentUpon>Org_Maint_EM.tt</DependentUpon>
     </Compile>
