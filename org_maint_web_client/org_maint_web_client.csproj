@@ -67,10 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\controllers\budgetStatusController.js" />
     <Content Include="app\controllers\customersController.js" />
     <Content Include="app\controllers\ordersController.js" />
-    <Content Include="app\views\budgetStatus.html" />
     <Content Include="app\views\customers.html" />
     <Content Include="app\views\orders.html" />
     <Content Include="budget\home.html" />
@@ -78,11 +76,14 @@
     <Content Include="budget\scripts\controllers\budgetStatusController.js" />
     <Content Include="budget\scripts\controllers\budgetStatusController_backup.js" />
     <Content Include="budget\scripts\controllers\contributorController.js" />
+    <Content Include="budget\scripts\controllers\entityController.js" />
     <Content Include="budget\scripts\globals\budgetStatusService.js" />
     <Content Include="budget\scripts\globals\budgetStatusService_backup.js" />
     <Content Include="budget\scripts\globals\contributorService.js" />
+    <Content Include="budget\scripts\globals\entityService.js" />
     <Content Include="budget\views\budgetStatus.html" />
     <Content Include="budget\views\contributorList.html" />
+    <Content Include="budget\views\entityList.html" />
     <Content Include="budget\views\orders.html" />
     <Content Include="index.html" />
     <Content Include="packages.config" />

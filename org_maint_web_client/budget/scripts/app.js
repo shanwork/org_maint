@@ -5,6 +5,10 @@
 
     budgetApp.config(function ($routeProvider) {
         $routeProvider
+            .when('/entities', {
+                controller: 'EntityController',
+                templateUrl: 'views/entityList.html'
+            })
             .when('/contributors', {
                 controller: 'ContributorController',
                 templateUrl: 'views/contributorList.html'

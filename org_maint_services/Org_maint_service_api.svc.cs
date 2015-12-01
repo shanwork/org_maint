@@ -83,7 +83,7 @@ namespace org_maint_services
             {
                 EntitySummary newEntitySummary = new EntitySummary();
                 entityStatus.TotalEntities = newEntitySummary.TotalEntities =  100000;
-                entityStatus.TotalEntities = newEntitySummary.TotalEntitiesAllocable = 100000;
+                entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 100000;
                 entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 200000;
                 entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
                 entityStatus.DateUpdatedString = newEntitySummary.DateUpdated.ToShortDateString();
