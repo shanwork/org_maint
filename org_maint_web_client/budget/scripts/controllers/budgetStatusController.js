@@ -11,7 +11,7 @@
          //To Get All Records  
          function GetAllRecords() {
              var promiseGetBudgetStatus = BudgetStatusService.getBudgetStatus();
-             promiseGetBudgetStatus.then(function (budgetStatusDb) { $scope.budgetStatus = budgetStatusDb.data; },
+             promiseGetBudgetStatus.then(function (budgetStatusDb) { $scope.budgetStatus = budgetStatusDb.data; $scope.BudgetAvailable = $scope.budgetStatus.BudgetAvailable; },
               function (errorPl) {  
                //   $log.error('Some Error in Getting Records.', errorPl);
               });  
@@ -20,14 +20,27 @@
               function (errorPl) {
                   //   $log.error('Some Error in Getting Records.', errorPl);
               });
-         //    $scope.budgetHistory = BudgetStatusService.getBudgetHistoryList();
          }
-         //$scope.budgetStatus = {
-         //       BudgetAvailable: 10000,
-         //       BudgetAllocated: 20000,
-         //       BudgetRequired: 2000
-         //   };
-       // $scope.budgetHistory = BudgetStatusService.getBudgetHistoryList();
+         $scope.allocateFunds = function () {
+             alert(  $scope.BudgetAvailable);
+             //    OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
+             //    Currency: $scope.Currency,
+             //    Comments: $scope.Comments,
+             //    // will add date later
+             //};
+             //alert($scope.ContributorName);
+             //alert(Contributor.ContributorName);
+             //var promisePost = ContributorService.post(Contributor);
+             //promisePost.then(function (pl) {
+             //    $scope.ContributorID = pl.data.ContributorID;
+             //    GetAllRecords();
+
+             //    //   ClearModels();
+             //}, function (err) {
+             //    console.log("Some error Occured" + err);
+             //});
+         };
+        
        
        };
     

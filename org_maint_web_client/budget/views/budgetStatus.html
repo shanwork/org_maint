@@ -14,7 +14,16 @@
         <td>{{budgetStatus.BudgetRequired}}</td>
 
     </tr>
-   
+   <tr>
+       <td>
+           <input type="button" id="save" value="Allocate Funds" data-ng-click="allocateFunds()" />
+
+       </td>
+       <td>
+           <input type='text' data-ng-model="BudgetAvailable" />
+
+       </td>
+ </tr>
 </table>
 <p></p>
 <table  border="1" cellpadding="0" cellspacing="0">
