@@ -40,6 +40,12 @@ namespace org_maint_services
         [DataMember]
         public string DateString { get; set; }
 
+        [DataMember]
+        public string Comments { get; set; }
+
+        [DataMember]
+        public string Principal { get; set; }
+
     }
     [DataContract]
     public class ContributorContract
@@ -67,6 +73,9 @@ namespace org_maint_services
 
         [DataMember]
         public string  DateDepositedString { get; set; }
+
+        [DataMember]
+        public string Comments { get; set; }
     }
     [DataContract]
     public class EntitySummaryContract
@@ -110,6 +119,9 @@ namespace org_maint_services
 
         [DataMember]
         public string DateUpdatedString { get; set; }
+
+        [DataMember]
+        public string Comments { get; set; }
 
     }
 }

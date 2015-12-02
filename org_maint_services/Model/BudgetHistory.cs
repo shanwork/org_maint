@@ -18,5 +18,7 @@ namespace org_maint_services.Model
         public decimal Amount { get; set; }
         public string DebitCredit { get; set; }
         public System.DateTime Date { get; set; }
+        public string Comments { get; set; }
+        public string Principal { get; set; }
     }
 }

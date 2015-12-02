@@ -21,5 +21,6 @@ namespace org_maint_services.Model
         public decimal ConvertedAmount { get; set; }
         public System.DateTime DateReceived { get; set; }
         public Nullable<System.DateTime> DateDeposited { get; set; }
+        public string Comments { get; set; }
     }
 }

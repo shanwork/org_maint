@@ -20,5 +20,6 @@ namespace org_maint_services.Model
         public decimal BudgetRequired { get; set; }
         public decimal BudgetAllocated { get; set; }
         public Nullable<System.DateTime> DateUpdated { get; set; }
+        public string Comments { get; set; }
     }
 }

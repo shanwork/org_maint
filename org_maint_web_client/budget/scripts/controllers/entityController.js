@@ -1,6 +1,6 @@
 ﻿(function () {
-    var ContributorController = function ($scope, ContributorService) {
-        $scope.sortBy = 'DateReceived';
+    var EntityController = function ($scope, EntityService) {
+        $scope.sortBy = 'DateUpdated';
         $scope.reverse = true;
 
         $scope.doSort = function (propName) {
@@ -10,23 +10,27 @@
         GetAllRecords();
         //To Get All Records  
         function GetAllRecords() {
-            var promiseGetContributor = ContributorService.getContributorList();
-            promiseGetContributor.then(function (contributorListDb) { $scope.contributorList = contributorListDb.data; },
+            var promiseGetEntityStatus = EntityService.getEntityStatus();
+            promiseGetEntityStatus.then(function (entityStatusDb) { $scope.entityStatus = entityStatusDb.data; },
              function (errorPl) {
                  //   $log.error('Some Error in Getting Records.', errorPl);
              });
-         }
+            var promiseGetEntityList = EntityService.getEntitiesList();
+            promiseGetEntityList.then(function (entityListDb) { $scope.entityList = entityListDb.data; },
+             function (errorPl) {
+                 //   $log.error('Some Error in Getting Records.', errorPl);
+             });
+        }
         $scope.save = function () {
             var Contributor = {
                 ContributorName: $scope.ContributorName,
                 OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
-                Currency: $scope.Currency,
-                Comments:$scope.Comments,
+                Currency: $scope.Currency
                 // will add date later
             };
             alert($scope.ContributorName);
             alert(Contributor.ContributorName);
-            var promisePost = ContributorService.post(Contributor);
+            var promisePost = EntityService.post(Contributor);
             promisePost.then(function (pl) {
                 $scope.ContributorID = pl.data.ContributorID;
                 GetAllRecords();
@@ -36,13 +40,13 @@
                 console.log("Some error Occured" + err);
             });
         };
-     };
-        
-  
+    };
 
-    ContributorController.$inject = ['$scope', 'ContributorService'];
+
+
+    EntityController.$inject = ['$scope', 'EntityService'];
 
     angular.module('org_maint_budget')
-      .controller('ContributorController', ContributorController);
+      .controller('EntityController', EntityController);
 
 }());

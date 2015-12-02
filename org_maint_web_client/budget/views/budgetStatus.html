@@ -22,19 +22,22 @@
         <th ng-click="doSort('Amount')" >Amount</th>
         <th ng-click="doSort('DebitCredit')" >Debit or Credit</th>
         <th ng-click="doSort('Date')" >Dates </th>
-        <th >Comments </th>
+          <th ng-click="doSort('Principal')">Principal </th>
+<th ng-click="doSort('Comments')" >Comments </th>
     </tr>
     <tr>
         <th ><input type="text" ng-model="budgetHistoryFilter.Amount" /></th>
         <th><input type="text" ng-model="budgetHistoryFilter.DebitCredit"> </th>
         <th> <input type="text" ng-model="budgetHistoryFilter.DateString">  </th>
-        <th>Search </th>
+        <th> <input type="text" ng-model="budgetHistoryFilter.Principal">  </th>
+<th><input type="text" ng-model="budgetHistoryFilter.Comments">  </th>
     </tr>
 <tr ng-repeat="budgetHistoryElement in budgetHistory | filter:budgetHistoryFilter | orderBy:sortBy:reverse"">
         <td>{{budgetHistoryElement.Amount}}</td>
         <td>{{budgetHistoryElement.DebitCredit}}</td>
         <td>{{budgetHistoryElement.DateString}}</td>
-        <td>&nbsp;..</td>
+    <td>{{budgetHistoryElement.Principal}}</td>
+<td>{{budgetHistoryElement.Comments}}</td>
  </tr>
 </table>
 <br />

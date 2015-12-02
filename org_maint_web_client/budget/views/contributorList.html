@@ -1,7 +1,8 @@
 <h2>Contributors</h2>
-<input type='text' data-ng-model="ContributorName" /><br />
-<input type='text' data-ng-model="OriginalCurrencyAmount" /><br />
-<input type='text' data-ng-model="Currency" /><br />
+Name:<input type='text' data-ng-model="ContributorName" /><br />
+Amount:<input type='text' data-ng-model="OriginalCurrencyAmount" /><br />
+Currency:<input type='text' data-ng-model="Currency" /><br />
+Comments<input type='text' data-ng-model="Comments" /><br />
 <input type="button" id="save" value="Save" data-ng-click="save()" />  
 <table  border="1" cellpadding="0" cellspacing="0">
     <tr>
@@ -10,20 +11,23 @@
         <th ng-click="doSort('ConvertedAmount')"   >Converted Amount</th>
         <th ng-click="doSort('DateReceived')"   >Received</th>
         <th ng-click="doSort('DateDeposited')"  >&nbsp;Deposited</th>
-    </tr>
+        <th ng-click="doSort('Comments')">&nbsp;Comments</th>
+</tr>
     <tr>
         <th><input type="text" ng-model="contributorFilter.ContributorName" /></th>
         <th><input type="text" ng-model="contributorFilter.OriginalCurrencyAmount"> </th>
         <th> <input type="text" ng-model="contributorFilter.ConvertedAmount">  </th>
         <th> <input type="text" ng-model="contributorFilter.DateReceivedString">  </th>
         <th> <input type="text" ng-model="contributorFilter.DateDepositedString">  </th>
-     </tr>
+        <th> <input type="text" ng-model="contributorFilter.Comments">  </th>
+    </tr>
 <tr ng-repeat="contributor in contributorList | filter:contributorFilter | orderBy:sortBy:reverse"> 
         <td>{{ contributor.ContributorName }}</td>
         <td>{{ contributor.OriginalCurrencyAmount }} {{ contributor.Currency }}</td>
         <td>{{ contributor.ConvertedAmount }}</td>
         <td>{{ contributor.DateReceivedString  }}</td>
        <td>{{  contributor.DateDepositedString |date}}</td>
+    <td>{{  contributor.Comments}}</td>
  </tr>
 </table>
 <br />

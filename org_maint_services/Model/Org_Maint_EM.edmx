@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Org_MaintModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Org_MaintModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BudgetHistory">
           <Key>
             <PropertyRef Name="BudgetHistoryId" />
@@ -13,6 +13,8 @@
           <Property Name="Amount" Type="money" Nullable="false" />
           <Property Name="DebitCredit" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Principal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="BudgetStatus">
           <Key>
@@ -35,6 +37,7 @@
           <Property Name="ConvertedAmount" Type="money" Nullable="false" />
           <Property Name="DateReceived" Type="datetime" Nullable="false" />
           <Property Name="DateDeposited" Type="datetime" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="EntityBudgetPriority">
           <Key>
@@ -46,6 +49,7 @@
           <Property Name="BudgetRequired" Type="money" Nullable="false" />
           <Property Name="BudgetAllocated" Type="money" Nullable="false" />
           <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="EntitySummary">
           <Key>
@@ -65,8 +69,7 @@
           <EntitySet Name="EntityBudgetPriority" EntityType="Self.EntityBudgetPriority" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntitySummary" EntityType="Self.EntitySummary" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Org_MaintModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -78,6 +81,8 @@
           <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="DebitCredit" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Principal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BudgetStatu">
           <Key>
@@ -100,6 +105,7 @@
           <Property Name="ConvertedAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="DateReceived" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DateDeposited" Type="DateTime" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="EntityBudgetPriority">
           <Key>
@@ -111,6 +117,7 @@
           <Property Name="BudgetRequired" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="BudgetAllocated" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="EntitySummary">
           <Key>
@@ -139,6 +146,8 @@
           <EntitySetMapping Name="BudgetHistories">
             <EntityTypeMapping TypeName="Org_MaintModel.BudgetHistory">
               <MappingFragment StoreEntitySet="BudgetHistory">
+                <ScalarProperty Name="Principal" ColumnName="Principal" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
                 <ScalarProperty Name="BudgetHistoryId" ColumnName="BudgetHistoryId" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="DebitCredit" ColumnName="DebitCredit" />
@@ -160,6 +169,7 @@
           <EntitySetMapping Name="Contributors">
             <EntityTypeMapping TypeName="Org_MaintModel.Contributor">
               <MappingFragment StoreEntitySet="Contributor">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
                 <ScalarProperty Name="ContributorID" ColumnName="ContributorID" />
                 <ScalarProperty Name="ContributorName" ColumnName="ContributorName" />
                 <ScalarProperty Name="OriginalCurrencyAmount" ColumnName="OriginalCurrencyAmount" />
@@ -173,6 +183,7 @@
           <EntitySetMapping Name="EntityBudgetPriorities">
             <EntityTypeMapping TypeName="Org_MaintModel.EntityBudgetPriority">
               <MappingFragment StoreEntitySet="EntityBudgetPriority">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
                 <ScalarProperty Name="EntityBudgetPriorityID" ColumnName="EntityBudgetPriorityID" />
                 <ScalarProperty Name="EntityName" ColumnName="EntityName" />
                 <ScalarProperty Name="Priority" ColumnName="Priority" />

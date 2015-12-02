@@ -8,6 +8,8 @@
     <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="DebitCredit" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Principal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="BudgetStatu">
     <Key>
@@ -30,6 +32,7 @@
     <Property Name="ConvertedAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="DateReceived" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="DateDeposited" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="EntityBudgetPriority">
     <Key>
@@ -41,6 +44,7 @@
     <Property Name="BudgetRequired" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="BudgetAllocated" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="EntitySummary">
     <Key>

@@ -4,6 +4,8 @@
     <EntitySetMapping Name="BudgetHistories">
       <EntityTypeMapping TypeName="Org_MaintModel.BudgetHistory">
         <MappingFragment StoreEntitySet="BudgetHistory">
+          <ScalarProperty Name="Principal" ColumnName="Principal" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
           <ScalarProperty Name="BudgetHistoryId" ColumnName="BudgetHistoryId" />
           <ScalarProperty Name="Amount" ColumnName="Amount" />
           <ScalarProperty Name="DebitCredit" ColumnName="DebitCredit" />
@@ -25,6 +27,7 @@
     <EntitySetMapping Name="Contributors">
       <EntityTypeMapping TypeName="Org_MaintModel.Contributor">
         <MappingFragment StoreEntitySet="Contributor">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
           <ScalarProperty Name="ContributorID" ColumnName="ContributorID" />
           <ScalarProperty Name="ContributorName" ColumnName="ContributorName" />
           <ScalarProperty Name="OriginalCurrencyAmount" ColumnName="OriginalCurrencyAmount" />
@@ -38,6 +41,7 @@
     <EntitySetMapping Name="EntityBudgetPriorities">
       <EntityTypeMapping TypeName="Org_MaintModel.EntityBudgetPriority">
         <MappingFragment StoreEntitySet="EntityBudgetPriority">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
           <ScalarProperty Name="EntityBudgetPriorityID" ColumnName="EntityBudgetPriorityID" />
           <ScalarProperty Name="EntityName" ColumnName="EntityName" />
           <ScalarProperty Name="Priority" ColumnName="Priority" />

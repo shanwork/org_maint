@@ -61,7 +61,9 @@ namespace org_maint_services
                         Amount = rec.Amount,
                         DebitCredit = rec.DebitCredit,
                         Date = rec.Date,
-                        DateString = rec.Date.ToShortDateString()
+                        DateString = rec.Date.ToShortDateString(),
+                        Comments=rec.Comments,
+                        Principal = rec.Principal
                     });
              });
             ////foreach (BudgetHistory bHDataElement in query.ToList())
@@ -120,7 +122,8 @@ namespace org_maint_services
                         DateReceived = rec.DateReceived,
                         DateReceivedString = rec.DateReceived.ToShortDateString(),
                         DateDeposited = rec.DateDeposited,
-                        DateDepositedString = rec.DateDeposited != null? ((DateTime)rec.DateDeposited).ToShortDateString():""
+                        DateDepositedString = rec.DateDeposited != null? ((DateTime)rec.DateDeposited).ToShortDateString():"",
+                        Comments = rec.Comments
                     });
             });
             return contributorList;
@@ -140,7 +143,8 @@ namespace org_maint_services
                         BudgetRequired = rec.BudgetRequired,
                         Priority = rec.Priority,
                         DateUpdated = rec.DateUpdated,
-                        DateUpdatedString = rec.DateUpdated != null ? ((DateTime)rec.DateUpdated).ToShortDateString():""
+                        DateUpdatedString = rec.DateUpdated != null ? ((DateTime)rec.DateUpdated).ToShortDateString():"",
+                        Comments = rec.Comments
                     }
                     );
             });
@@ -156,7 +160,8 @@ namespace org_maint_services
                 ContributorName = contributor.ContributorName,
                 Currency = contributor.Currency,
                 DateReceived = DateTime.Now,// contributor.DateReceived,
-                DateDeposited = DateTime.Now//contributor.DateDeposited,
+                DateDeposited = DateTime.Now,//contributor.DateDeposited,
+                Comments = contributor.Comments
         };
             // do we do the conversion here or on the UI? 
             // later on in the UI, because it is easier to update.. we can add a field for conversion 
@@ -182,7 +187,9 @@ namespace org_maint_services
             {
                 Amount = newContributorRecord.ConvertedAmount,
                 DebitCredit = "Credit",
-                Date = (DateTime)(newContributorRecord.DateDeposited==null?  DateTime.Now: newContributorRecord.DateDeposited)
+                Date = (DateTime)(newContributorRecord.DateDeposited==null?  DateTime.Now: newContributorRecord.DateDeposited),
+                Comments = newContributorRecord.Comments,
+                Principal = newContributorRecord.ContributorName
             };
             orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
             orgMaintEntitiesContext.SaveChanges();
@@ -230,6 +237,7 @@ namespace org_maint_services
                                      where entityRequired.BudgetRequired > 0
                                      orderby entityRequired.Priority, entityRequired.BudgetRequired descending
                                      select entityRequired);
+                int entitiesAllocated = 0;
                 queryentities.ToList().ForEach(rec =>
                 {
                     if (queryBudgetStatus.BudgetAvailable > 0)
@@ -246,6 +254,7 @@ namespace org_maint_services
                         rec.BudgetAllocated += fundAllocated;
                         queryBudgetStatus.BudgetAvailable -= fundAllocated;
                         queryBudgetStatus.BudgetAllocated += fundAllocated;
+                        entitiesAllocated++;
                     }
                 });
                 if (totalFundAllocated > 0)
@@ -254,7 +263,8 @@ namespace org_maint_services
                     {
                         Amount = totalFundAllocated,
                         DebitCredit = "Debit",
-                        Date = (DateTime)DateTime.Now
+                        Date = (DateTime)DateTime.Now,
+                        Comments = string.Format("Number Allocated={0}")
                     };
                     orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
                 }

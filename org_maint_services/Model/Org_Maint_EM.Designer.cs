@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Shantanu\Technical\Web Development\prototypes\org_maint\org_maint_services\Model\Org_Maint_EM.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_services\Model\Org_Maint_EM.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
