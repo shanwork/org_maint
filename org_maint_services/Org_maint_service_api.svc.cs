@@ -115,6 +115,7 @@ namespace org_maint_services
                 contributorList.Add(
                     new ContributorContract
                     {
+                        ContributorID = rec.ContributorID,
                         ConvertedAmount = rec.ConvertedAmount,
                         ContributorName = rec.ContributorName,
                         OriginalCurrencyAmount = rec.OriginalCurrencyAmount,
@@ -156,6 +157,7 @@ namespace org_maint_services
             List<ContributorContract> updatedContributorList = new List<ContributorContract>();
             Contributor newContributorRecord = new Contributor
             {
+                ContributorID = contributor.ContributorID,
                 OriginalCurrencyAmount = contributor.OriginalCurrencyAmount,
                 ContributorName = contributor.ContributorName,
                 Currency = contributor.Currency,

@@ -1,33 +1,41 @@
 <h2>Contributors</h2>
-Name:<input type='text' data-ng-model="ContributorName" /><br />
-Amount:<input type='text' data-ng-model="OriginalCurrencyAmount" /><br />
-Currency:<input type='text' data-ng-model="Currency" /><br />
-Comments<input type='text' data-ng-model="Comments" /><br />
-<input type="button" id="save" value="Save" data-ng-click="save()" />  
+ 
 <table  border="1" cellpadding="0" cellspacing="0">
-    <tr>
-        <th ng-click="doSort('ContributorName')"   >Contributor Name</th>
+  <tr>
+        <th ng-click="doSort('ContributorID')">ID</th>
+    <th ng-click="doSort('ContributorName')"   >Contributor Name</th>
         <th ng-click="doSort('Amount')"   >Amount in orignal curr.</th>
         <th ng-click="doSort('ConvertedAmount')"   >Converted Amount</th>
-        <th ng-click="doSort('DateReceived')"   >Received</th>
-        <th ng-click="doSort('DateDeposited')"  >&nbsp;Deposited</th>
         <th ng-click="doSort('Comments')">&nbsp;Comments</th>
+        <th ng-click="doSort('DateReceived')">Received</th>
+        <th ng-click="doSort('DateDeposited')">&nbsp;Deposited</th>
 </tr>
     <tr>
+        <th><input type="text" ng-model="contributorFilter.ContributorID" /></th>
         <th><input type="text" ng-model="contributorFilter.ContributorName" /></th>
         <th><input type="text" ng-model="contributorFilter.OriginalCurrencyAmount"> </th>
         <th> <input type="text" ng-model="contributorFilter.ConvertedAmount">  </th>
+        <th> <input type="text" ng-model="contributorFilter.Comments">  </th>
         <th> <input type="text" ng-model="contributorFilter.DateReceivedString">  </th>
         <th> <input type="text" ng-model="contributorFilter.DateDepositedString">  </th>
-        <th> <input type="text" ng-model="contributorFilter.Comments">  </th>
+ </tr>
+    <tr>
+        <td><input type="button" id="save" value="ADD" data-ng-click="save()" /> </td>
+        <td><input type='text' data-ng-model="ContributorName" /></td>
+        <td><input type='text' data-ng-model="OriginalCurrencyAmount" /></td>
+        <td><input type='text' data-ng-model="Currency" /></td>
+        <td><input type='text' data-ng-model="Comments" /></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
     </tr>
 <tr ng-repeat="contributor in contributorList | filter:contributorFilter | orderBy:sortBy:reverse"> 
+        <td>{{ contributor.ContributorID }}</td>
         <td>{{ contributor.ContributorName }}</td>
         <td>{{ contributor.OriginalCurrencyAmount }} {{ contributor.Currency }}</td>
         <td>{{ contributor.ConvertedAmount }}</td>
+        <td>{{  contributor.Comments}}</td>
         <td>{{ contributor.DateReceivedString  }}</td>
-       <td>{{  contributor.DateDepositedString |date}}</td>
-    <td>{{  contributor.Comments}}</td>
- </tr>
+        <td>{{  contributor.DateDepositedString |date}}</td>
+</tr>
 </table>
 <br />

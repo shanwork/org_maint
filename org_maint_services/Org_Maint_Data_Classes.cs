@@ -52,7 +52,11 @@ namespace org_maint_services
     {
 
         [DataMember]
+        public int ContributorID { get; set; }
+
+        [DataMember]
         public string ContributorName { get; set; }
+
         [DataMember]
         public decimal OriginalCurrencyAmount { get; set; }
 

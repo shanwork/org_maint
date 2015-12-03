@@ -24,8 +24,8 @@
                 Comments:$scope.Comments,
                 // will add date later
             };
-            alert($scope.ContributorName);
-            alert(Contributor.ContributorName);
+           //alert($scope.ContributorName);
+          //  alert(Contributor.ContributorName);
             var promisePost = ContributorService.post(Contributor);
             promisePost.then(function (pl) {
                 $scope.ContributorID = pl.data.ContributorID;
