@@ -21,6 +21,7 @@
 <input type="button" id="save" value="Save" data-ng-click="save()" /-->
 <table border="1" cellpadding="0" cellspacing="0">
     <tr>
+        <th ng-click="doSort('EntityBudgetPriorityID')">ID</th>
         <th ng-click="doSort('EntityName')">EntityName</th>
         <th ng-click="doSort('BudgetAllocated')">BudgetAllocated</th>
         <th ng-click="doSort('BudgetRequired')">BudgetRequired</th>
@@ -29,6 +30,7 @@
         <th ng-click="doSort('Comments')">&nbsp;Comments</th>
 </tr>
     <tr>
+        <th><input type="text" ng-model="entityFilter.EntityBudgetPriorityID" /></th>
         <th><input type="text" ng-model="entityFilter.EntityName" /></th>
         <th><input type="text" ng-model="entityFilter.BudgetAllocated"> </th>
         <th> <input type="text" ng-model="entityFilter.BudgetRequired">  </th>
@@ -36,7 +38,17 @@
         <th> <input type="text" ng-model="entityFilter.DateUpdatedString">  </th>
         <th> <input type="text" ng-model="entityFilter.Comments">  </th>
 </tr>
+    <tr>
+        <td class="editCell"><input type="button" id="save" value="ADD" data-ng-click="addEntity()" /> </td>
+        <td class="editCell"><input type='text' data-ng-model="EntityName" /></td>
+        <td class="editCell"><input type='text' data-ng-model="BudgetAllocated" data-ng-init="0" /></td>
+        <td class="editCell"><input type='text' data-ng-model="BudgetRequired" /></td>
+        <td class="editCell"><input type='text' data-ng-model="Priority" /></td>
+        <td class="editCell">&nbsp;</td>
+        <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
+    </tr>
     <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
+        <td>{{ entity.EntityBudgetPriorityID }}</td>
         <td>{{ entity.EntityName }}</td>
         <td>{{ entity.BudgetAllocated }} {{ entity.Currency }}</td>
         <td>{{ entity.BudgetRequired }}</td>

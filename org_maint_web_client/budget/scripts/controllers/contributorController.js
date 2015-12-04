@@ -16,7 +16,7 @@
                  //   $log.error('Some Error in Getting Records.', errorPl);
              });
          }
-        $scope.save = function () {
+        $scope.addContributor = function () {
             var Contributor = {
                 ContributorName: $scope.ContributorName,
                 OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
@@ -26,7 +26,7 @@
             };
            //alert($scope.ContributorName);
           //  alert(Contributor.ContributorName);
-            var promisePost = ContributorService.post(Contributor);
+            var promisePost = ContributorService.addContributor(Contributor);
             promisePost.then(function (pl) {
                 $scope.ContributorID = pl.data.ContributorID;
                 GetAllRecords();

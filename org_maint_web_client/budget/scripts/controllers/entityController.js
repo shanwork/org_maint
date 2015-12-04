@@ -21,18 +21,19 @@
                  //   $log.error('Some Error in Getting Records.', errorPl);
              });
         }
-        $scope.save = function () {
-            var Contributor = {
-                ContributorName: $scope.ContributorName,
-                OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
-                Currency: $scope.Currency
-                // will add date later
+        $scope.addEntity = function () {
+             var Entity = {
+                EntityName: $scope.EntityName,
+                BudgetAllocated: $scope.BudgetAllocated,
+                BudgetRequired: $scope.BudgetRequired,
+                Priority: $scope.Priority,
+                 Comments:$scope.Comments
+            // will add date later
             };
-            alert($scope.ContributorName);
-            alert(Contributor.ContributorName);
-            var promisePost = EntityService.post(Contributor);
+             
+             var promisePost = EntityService.addEntity(Entity);
             promisePost.then(function (pl) {
-                $scope.ContributorID = pl.data.ContributorID;
+                $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
                 GetAllRecords();
 
                 //   ClearModels();

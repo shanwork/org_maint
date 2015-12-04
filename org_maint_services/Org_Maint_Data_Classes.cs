@@ -107,6 +107,9 @@ namespace org_maint_services
     public class EntityBudgetPriorityContract
     {
         [DataMember]
+        public int EntityBudgetPriorityID { get; set; }
+
+        [DataMember]
         public string EntityName { get; set; }
 
         [DataMember]
@@ -127,5 +130,11 @@ namespace org_maint_services
         [DataMember]
         public string Comments { get; set; }
 
+    }
+    // work around class since allocateFunds(double) doesnt work
+    public class AllocateWrapper
+    {
+        public string marc;
+        public double fundsToAllocate;
     }
 }

@@ -139,6 +139,7 @@ namespace org_maint_services
                 entityBudgetPriorityList.Add(
                     new EntityBudgetPriorityContract
                     {
+                        EntityBudgetPriorityID = rec.EntityBudgetPriorityID,
                         EntityName = rec.EntityName,
                         BudgetAllocated = rec.BudgetAllocated,
                         BudgetRequired = rec.BudgetRequired,
@@ -151,7 +152,7 @@ namespace org_maint_services
             });
             return entityBudgetPriorityList;
         }
-       
+
         public bool AddContributor(Contributor contributor)
         {
             List<ContributorContract> updatedContributorList = new List<ContributorContract>();
@@ -164,10 +165,10 @@ namespace org_maint_services
                 DateReceived = DateTime.Now,// contributor.DateReceived,
                 DateDeposited = DateTime.Now,//contributor.DateDeposited,
                 Comments = contributor.Comments
-        };
+            };
             // do we do the conversion here or on the UI? 
             // later on in the UI, because it is easier to update.. we can add a field for conversion 
-           switch(contributor.Currency.ToUpper())
+            switch (contributor.Currency.ToUpper())
             {
                 case "INR":
                     newContributorRecord.ConvertedAmount = contributor.OriginalCurrencyAmount;
@@ -189,7 +190,7 @@ namespace org_maint_services
             {
                 Amount = newContributorRecord.ConvertedAmount,
                 DebitCredit = "Credit",
-                Date = (DateTime)(newContributorRecord.DateDeposited==null?  DateTime.Now: newContributorRecord.DateDeposited),
+                Date = (DateTime)(newContributorRecord.DateDeposited == null ? DateTime.Now : newContributorRecord.DateDeposited),
                 Comments = newContributorRecord.Comments,
                 Principal = newContributorRecord.ContributorName
             };
@@ -200,12 +201,12 @@ namespace org_maint_services
             if (query == null)
             {
                 BudgetStatu budgStatu = new BudgetStatu();
-                budgStatu.BudgetAvailable  = newContributorRecord.ConvertedAmount;
-                budgStatu.BudgetAllocated =   0;
-                budgStatu.BudgetRequired =  20000;
+                budgStatu.BudgetAvailable = newContributorRecord.ConvertedAmount;
+                budgStatu.BudgetAllocated = 0;
+                budgStatu.BudgetRequired = 20000;
                 budgStatu.DateUpdated = DateTime.Now;
                 orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
-          
+
             }
             else
             {
@@ -213,9 +214,57 @@ namespace org_maint_services
                 query.DateUpdated = (DateTime)(DateTime)(newContributorRecord.DateDeposited == null ? DateTime.Now : newContributorRecord.DateDeposited);
             }
             orgMaintEntitiesContext.SaveChanges();
-            return true ;
+            return true;
         }
-      
+
+        public bool AddEntity(EntityBudgetPriority entity)
+        {
+            List<EntityBudgetPriorityContract> updatedEntityList = new List<EntityBudgetPriorityContract>();
+            EntityBudgetPriority  newEntityRecord = new EntityBudgetPriority 
+            {
+               EntityBudgetPriorityID = entity.EntityBudgetPriorityID,
+               EntityName = entity.EntityName,
+                BudgetAllocated=entity.BudgetAllocated,
+                BudgetRequired = entity.BudgetRequired,
+                Priority=entity.Priority,
+                DateUpdated = DateTime.Now,
+                 Comments = entity.Comments
+            };
+           
+            orgMaintEntitiesContext.EntityBudgetPriorities.Add(newEntityRecord);
+            orgMaintEntitiesContext.SaveChanges();
+
+            BudgetHistory newBudgetHistoryRecord = new BudgetHistory
+            {
+                Amount = newEntityRecord.BudgetRequired,
+                DebitCredit = "Debit",
+                Date = (DateTime)newEntityRecord.DateUpdated,
+                Comments = newEntityRecord.Comments,
+                Principal = newEntityRecord.EntityName
+            };
+            orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
+            orgMaintEntitiesContext.SaveChanges();
+
+            var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
+            if (query == null)
+            {
+                BudgetStatu budgStatu = new BudgetStatu();
+                budgStatu.BudgetAvailable = 0;
+                budgStatu.BudgetAllocated = 0;
+                budgStatu.BudgetRequired = newEntityRecord.BudgetRequired;
+                budgStatu.DateUpdated = DateTime.Now;
+                orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
+
+            }
+            else
+            {
+                query.BudgetRequired += newEntityRecord.BudgetRequired;
+                query.DateUpdated = DateTime.Now;
+            }
+            orgMaintEntitiesContext.SaveChanges();
+            return true;
+        }
+
         public EntitySummaryContract AllocateFunds(Double fundsForAllocation)
         {
 

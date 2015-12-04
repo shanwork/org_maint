@@ -8,6 +8,14 @@
           this.getEntityStatus = function () {
               return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntityStatus");//.success(function (response) { return response.value;});
           }
+          this.addEntity = function (Entity) {
+               var request = $http({
+                  method: "post",
+                  url: "http://localhost:58778/Org_maint_service_api.svc/AddEntity",
+                  data: Entity
+              });
+              return request;
+          }
       });
 
 

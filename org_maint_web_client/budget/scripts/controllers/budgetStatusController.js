@@ -23,22 +23,15 @@
          }
          $scope.allocateFunds = function () {
              alert(  $scope.BudgetAvailable);
-             //    OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
-             //    Currency: $scope.Currency,
-             //    Comments: $scope.Comments,
-             //    // will add date later
-             //};
-             //alert($scope.ContributorName);
-             //alert(Contributor.ContributorName);
-             //var promisePost = ContributorService.post(Contributor);
-             //promisePost.then(function (pl) {
-             //    $scope.ContributorID = pl.data.ContributorID;
-             //    GetAllRecords();
+            
+             var promisePost = BudgetStatusService.allocateFunds($scope.BudgetAvailable);
+             promisePost.then(function (pl) {
+                 GetAllRecords();
 
-             //    //   ClearModels();
-             //}, function (err) {
-             //    console.log("Some error Occured" + err);
-             //});
+                 //   ClearModels();
+             }, function (err) {
+                 console.log("Some error Occured" + err);
+             });
          };
         
        
