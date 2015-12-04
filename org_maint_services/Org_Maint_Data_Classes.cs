@@ -132,6 +132,7 @@ namespace org_maint_services
 
     }
     // work around class since allocateFunds(double) doesnt work
+    [Serializable]
     public class AllocateWrapper
     {
         public string marc;

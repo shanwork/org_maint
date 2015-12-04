@@ -234,16 +234,17 @@ namespace org_maint_services
             orgMaintEntitiesContext.EntityBudgetPriorities.Add(newEntityRecord);
             orgMaintEntitiesContext.SaveChanges();
 
-            BudgetHistory newBudgetHistoryRecord = new BudgetHistory
-            {
-                Amount = newEntityRecord.BudgetRequired,
-                DebitCredit = "Debit",
-                Date = (DateTime)newEntityRecord.DateUpdated,
-                Comments = newEntityRecord.Comments,
-                Principal = newEntityRecord.EntityName
-            };
-            orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
-            orgMaintEntitiesContext.SaveChanges();
+            // Dont need since we are not creating a budget transaction
+            //BudgetHistory newBudgetHistoryRecord = new BudgetHistory
+            //{
+            //    Amount = newEntityRecord.BudgetRequired,
+            //    DebitCredit = "Debit",
+            //    Date = (DateTime)newEntityRecord.DateUpdated,
+            //    Comments = newEntityRecord.Comments,
+            //    Principal = newEntityRecord.EntityName
+            //};
+            //orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
+            //orgMaintEntitiesContext.SaveChanges();
 
             var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
             if (query == null)
@@ -265,7 +266,7 @@ namespace org_maint_services
             return true;
         }
 
-        public EntitySummaryContract AllocateFunds(Double fundsForAllocation)
+        public bool AllocateFunds(Double fundsForAllocation)
         {
 
             EntitySummaryContract updatedEntityStatus = new EntitySummaryContract();
@@ -321,7 +322,89 @@ namespace org_maint_services
                 }
                 orgMaintEntitiesContext.SaveChanges();
             }
-            return updatedEntityStatus;
+            return true;
+        }
+        public bool  AllocateFunds2(AllocateWrapper fundsForAllocationBox)
+        {
+            BudgetHistory newBudgetHistoryRecordTest = new BudgetHistory
+            {
+                Amount = 100,
+                DebitCredit = "Debit",
+                Date = (DateTime)DateTime.Now,
+                Comments = string.Format("Number Allocated=1")
+            };
+            orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecordTest);
+            orgMaintEntitiesContext.SaveChanges();
+
+            Double fundsForAllocation = fundsForAllocationBox.fundsToAllocate;
+
+            EntitySummaryContract updatedEntityStatus = new EntitySummaryContract();
+            var queryBudgetStatus = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
+            if (queryBudgetStatus == null)
+            {
+                BudgetStatu budgStatu = new BudgetStatu();
+                budgStatu.BudgetAvailable = 0;
+                budgStatu.BudgetAllocated = 0;
+                budgStatu.DateUpdated = DateTime.Now;
+                var queryentity = (from entityRequired in orgMaintEntitiesContext.EntityBudgetPriorities select entityRequired.BudgetRequired).Sum();
+                budgStatu.BudgetRequired = (decimal)queryentity;
+                orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
+
+            }
+            else
+            {
+                decimal totalFundAllocated = 0M;
+                var queryentities = (from entityRequired in orgMaintEntitiesContext.EntityBudgetPriorities
+                                     where entityRequired.BudgetRequired > 0
+                                     orderby entityRequired.Priority, entityRequired.BudgetRequired descending
+                                     select entityRequired);
+                int entitiesAllocated = 0;
+                queryentities.ToList().ForEach(rec =>
+                {
+                    if (queryBudgetStatus.BudgetAvailable > 0)
+                    {
+                        decimal fundAllocated = rec.BudgetRequired;
+                        if (fundAllocated >= queryBudgetStatus.BudgetAvailable)
+                        {
+                            fundAllocated = queryBudgetStatus.BudgetAvailable;
+                            queryBudgetStatus.BudgetAvailable = 0;
+                        }
+                        totalFundAllocated += fundAllocated;
+
+                        rec.BudgetRequired -= fundAllocated;
+                        rec.BudgetAllocated += fundAllocated;
+                        queryBudgetStatus.BudgetAvailable -= fundAllocated;
+                        queryBudgetStatus.BudgetAllocated += fundAllocated;
+                        entitiesAllocated++;
+                    }
+                });
+                if (totalFundAllocated > 0)
+                {
+                    BudgetHistory newBudgetHistoryRecord = new BudgetHistory
+                    {
+                        Amount = totalFundAllocated,
+                        DebitCredit = "Debit",
+                        Date = (DateTime)DateTime.Now,
+                        Comments = string.Format("Number Allocated={0}")
+                    };
+                    orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
+                }
+                orgMaintEntitiesContext.SaveChanges();
+            }
+            return true; 
+        }
+        public bool AllocateFunds3()
+        {
+            BudgetHistory newBudgetHistoryRecordTest = new BudgetHistory
+            {
+                Amount = 100,
+                DebitCredit = "Debit",
+                Date = (DateTime)DateTime.Now,
+                Comments = string.Format("Number Allocated=1")
+            };
+            orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecordTest);
+       orgMaintEntitiesContext.SaveChanges();
+            return true;
         }
         public bool GenerateTestData()
         {

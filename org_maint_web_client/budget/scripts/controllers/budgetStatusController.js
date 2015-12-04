@@ -23,9 +23,14 @@
          }
          $scope.allocateFunds = function () {
              alert(  $scope.BudgetAvailable);
-            
-             var promisePost = BudgetStatusService.allocateFunds($scope.BudgetAvailable);
+             var fundsToAllocateBox =
+                 {
+                     marc: "Wrapped",
+                     fundsToAllocate: $scope.BudgetAvailable
+                 };
+             var promisePost = BudgetStatusService.allocateFunds(fundsToAllocateBox);
              promisePost.then(function (pl) {
+                 alert($scope.BudgetAvailable);
                  GetAllRecords();
 
                  //   ClearModels();
