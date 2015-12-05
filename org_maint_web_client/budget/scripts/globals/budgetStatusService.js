@@ -17,10 +17,9 @@
               return request;
           };
           this.allocateFunds3 = function (fundsToAllocateBox) {
-              alert(fundsToAllocateBox.fundsToAllocate);
               var request = $http({
                   method: "post",
-                  url: "http://localhost:58778/Org_maint_service_api.svc/AllocateFunds3"
+                  url: "http://localhost:58778/Org_maint_service_api.svc/AllocateFunds2"
               });
               return request;
           }
