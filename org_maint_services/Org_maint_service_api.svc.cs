@@ -14,11 +14,17 @@ namespace org_maint_services
     public class Org_Maint_Service : IOrg_Maint_Service1
     {
         Org_MaintEntities orgMaintEntitiesContext;
+        AdminMaintEntities adminMainEntitiesContext;
         public Org_Maint_Service()
         {
             orgMaintEntitiesContext = new Org_MaintEntities();
-        }
+            #region admin
+            // consider moving to a different webservice
+            adminMainEntitiesContext = new AdminMaintEntities();
+            #endregion
 
+        }
+        #region org budgetting and financing
         /// <summary>
         /// 
         /// </summary>
@@ -33,17 +39,17 @@ namespace org_maint_services
                 budgStatu.BudgetAvailable = budgetStatus.BudgetAvailable = 10000;
                 budgStatu.BudgetAllocated = budgetStatus.BudgetAllocated = 0;
                 budgStatu.BudgetRequired = budgetStatus.BudgetRequired = 20000;
-                budgStatu.DateUpdated =    DateTime.Now;
+                budgStatu.DateUpdated = DateTime.Now;
                 orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
                 orgMaintEntitiesContext.SaveChanges();
 
             }
             else
             {
-                budgetStatus.BudgetAvailable = query.BudgetAvailable  ;
-                budgetStatus.BudgetAllocated = query.BudgetAllocated ;
-                budgetStatus.BudgetRequired = query.BudgetRequired ;
-                budgetStatus.DateUpdated = query.DateUpdated  ;
+                budgetStatus.BudgetAvailable = query.BudgetAvailable;
+                budgetStatus.BudgetAllocated = query.BudgetAllocated;
+                budgetStatus.BudgetRequired = query.BudgetRequired;
+                budgetStatus.DateUpdated = query.DateUpdated;
                 budgetStatus.DateUpdatedString = query.DateUpdated.ToShortDateString();
             }
             return budgetStatus;
@@ -62,7 +68,7 @@ namespace org_maint_services
                         DebitCredit = rec.DebitCredit,
                         Date = rec.Date,
                         DateString = rec.Date.ToShortDateString(),
-                        Comments=rec.Comments,
+                        Comments = rec.Comments,
                         Principal = rec.Principal
                     });
              });
@@ -74,17 +80,17 @@ namespace org_maint_services
             ////    budgetHistoryListElement.Date = bHDataElement.Date;
             ////    budgetHistory.Add(budgetHistoryListElement);
             ////}
-            return budgetHistory ;
+            return budgetHistory;
         }
 
-         public EntitySummaryContract GetEntityStatus()
+        public EntitySummaryContract GetEntityStatus()
         {
             EntitySummaryContract entityStatus = new EntitySummaryContract();
             var query = (from entitySummary in orgMaintEntitiesContext.EntitySummaries select entitySummary).FirstOrDefault();
-            if (query==null)
+            if (query == null)
             {
                 EntitySummary newEntitySummary = new EntitySummary();
-                entityStatus.TotalEntities = newEntitySummary.TotalEntities =  100000;
+                entityStatus.TotalEntities = newEntitySummary.TotalEntities = 100000;
                 entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 100000;
                 entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 200000;
                 entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
@@ -95,17 +101,17 @@ namespace org_maint_services
             }
             else
             {
-                entityStatus.TotalEntities = query.TotalEntities ;
-                entityStatus.TotalEntities = query.TotalEntitiesAllocable ;
-                entityStatus.TotalEntitiesUnallocated = query.TotalEntitiesUnallocated ;
-                entityStatus.DateUpdated = query.DateUpdated  ;
+                entityStatus.TotalEntities = query.TotalEntities;
+                entityStatus.TotalEntities = query.TotalEntitiesAllocable;
+                entityStatus.TotalEntitiesUnallocated = query.TotalEntitiesUnallocated;
+                entityStatus.DateUpdated = query.DateUpdated;
                 entityStatus.DateUpdatedString = query.DateUpdated.ToShortDateString();
 
             }
             return entityStatus;
         }
 
-       public List<ContributorContract> GetContributorList()
+        public List<ContributorContract> GetContributorList()
         {
             List<ContributorContract> contributorList = new List<ContributorContract>();
             var query = (from contributor in orgMaintEntitiesContext.Contributors select contributor).Distinct();
@@ -123,7 +129,7 @@ namespace org_maint_services
                         DateReceived = rec.DateReceived,
                         DateReceivedString = rec.DateReceived.ToShortDateString(),
                         DateDeposited = rec.DateDeposited,
-                        DateDepositedString = rec.DateDeposited != null? ((DateTime)rec.DateDeposited).ToShortDateString():"",
+                        DateDepositedString = rec.DateDeposited != null ? ((DateTime)rec.DateDeposited).ToShortDateString() : "",
                         Comments = rec.Comments
                     });
             });
@@ -145,7 +151,7 @@ namespace org_maint_services
                         BudgetRequired = rec.BudgetRequired,
                         Priority = rec.Priority,
                         DateUpdated = rec.DateUpdated,
-                        DateUpdatedString = rec.DateUpdated != null ? ((DateTime)rec.DateUpdated).ToShortDateString():"",
+                        DateUpdatedString = rec.DateUpdated != null ? ((DateTime)rec.DateUpdated).ToShortDateString() : "",
                         Comments = rec.Comments
                     }
                     );
@@ -220,17 +226,17 @@ namespace org_maint_services
         public bool AddEntity(EntityBudgetPriority entity)
         {
             List<EntityBudgetPriorityContract> updatedEntityList = new List<EntityBudgetPriorityContract>();
-            EntityBudgetPriority  newEntityRecord = new EntityBudgetPriority 
+            EntityBudgetPriority newEntityRecord = new EntityBudgetPriority
             {
-               EntityBudgetPriorityID = entity.EntityBudgetPriorityID,
-               EntityName = entity.EntityName,
-                BudgetAllocated=entity.BudgetAllocated,
+                EntityBudgetPriorityID = entity.EntityBudgetPriorityID,
+                EntityName = entity.EntityName,
+                BudgetAllocated = entity.BudgetAllocated,
                 BudgetRequired = entity.BudgetRequired,
-                Priority=entity.Priority,
+                Priority = entity.Priority,
                 DateUpdated = DateTime.Now,
-                 Comments = entity.Comments
+                Comments = entity.Comments
             };
-           
+
             orgMaintEntitiesContext.EntityBudgetPriorities.Add(newEntityRecord);
             orgMaintEntitiesContext.SaveChanges();
 
@@ -324,10 +330,10 @@ namespace org_maint_services
             }
             return true;
         }
-        public bool  AllocateFunds2(AllocateWrapper fundsForAllocationBox)
+        public bool AllocateFunds2(AllocateWrapper fundsForAllocationBox)
         {
 
-           
+
             EntitySummaryContract updatedEntityStatus = new EntitySummaryContract();
             var queryBudgetStatus = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
             if (queryBudgetStatus == null)
@@ -357,7 +363,7 @@ namespace org_maint_services
                         if (fundAllocated >= queryBudgetStatus.BudgetAvailable)
                         {
                             fundAllocated = queryBudgetStatus.BudgetAvailable;
-                       //     queryBudgetStatus.BudgetAvailable = 0;
+                            //     queryBudgetStatus.BudgetAvailable = 0;
                         }
                         totalFundAllocated += fundAllocated;
 
@@ -391,7 +397,7 @@ namespace org_maint_services
                 //}
                 orgMaintEntitiesContext.SaveChanges();
             }
-            return true; 
+            return true;
         }
         public bool AllocateFunds3()
         {
@@ -403,7 +409,7 @@ namespace org_maint_services
                 Comments = string.Format("Number Allocated=1")
             };
             orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecordTest);
-       orgMaintEntitiesContext.SaveChanges();
+            orgMaintEntitiesContext.SaveChanges();
             return true;
         }
         public bool GenerateTestData()
@@ -414,4 +420,5 @@ namespace org_maint_services
             return true;
         }
     }
-    }
+    #endregion
+}

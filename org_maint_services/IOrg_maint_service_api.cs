@@ -13,7 +13,7 @@ namespace org_maint_services
     [ServiceContract]
     public interface IOrg_Maint_Service1
     {
-
+        #region org budgetting and financing
         [OperationContract]
         [WebInvoke(Method ="GET",RequestFormat =WebMessageFormat.Json, ResponseFormat =WebMessageFormat.Json, UriTemplate ="/GetBudgetStatus")]
         BudgetStatusContract GetBudgetStatus();
@@ -58,6 +58,7 @@ namespace org_maint_services
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GenerateTestData")]
         bool GenerateTestData();
+        #endregion
     }
 
 

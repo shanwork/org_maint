@@ -72,6 +72,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Model\Org_Maint_Admin_Dev.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Org_Maint_Admin_Dev.edmx</DependentUpon>
+      <LastGenOutput>Org_Maint_Admin_Dev.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Org_Maint_Admin_Dev.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Org_Maint_Admin_Dev.edmx</DependentUpon>
+      <LastGenOutput>Org_Maint_Admin_Dev.cs</LastGenOutput>
+    </Content>
     <Content Include="Model\Org_Maint_EM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Org_Maint_EM.edmx</DependentUpon>
@@ -98,11 +108,29 @@
     <Compile Include="Model\Contributor.cs">
       <DependentUpon>Org_Maint_EM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\DeveloperTasksAndBug.cs">
+      <DependentUpon>Org_Maint_Admin_Dev.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\EntityBudgetPriority.cs">
       <DependentUpon>Org_Maint_EM.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\EntitySummary.cs">
       <DependentUpon>Org_Maint_EM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Org_Maint_Admin_Dev.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Org_Maint_Admin_Dev.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Org_Maint_Admin_Dev.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Org_Maint_Admin_Dev.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Org_Maint_Admin_Dev.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Org_Maint_Admin_Dev.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Org_Maint_EM.Context.cs">
       <AutoGen>True</AutoGen>
@@ -124,6 +152,7 @@
       <DependentUpon>Org_maint_service_api.svc</DependentUpon>
     </Compile>
     <Compile Include="IOrg_maint_service_api.cs" />
+    <Compile Include="Org_Main_Admin_Servivce_api.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +167,13 @@
       <DependentUpon>Org_Maint_EM.edmx</DependentUpon>
     </Content>
     <Content Include="packages.config" />
+    <EntityDeploy Include="Model\Org_Maint_Admin_Dev.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Org_Maint_Admin_Dev.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\Org_Maint_Admin_Dev.edmx.diagram">
+      <DependentUpon>Org_Maint_Admin_Dev.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
