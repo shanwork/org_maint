@@ -1,5 +1,5 @@
 ﻿(function() {
-     var BudgetStatusController = function ($scope, BudgetStatusService) {
+    var BudgetStatusController = function ($scope, BudgetStatusService, connectToService) {
          $scope.sortBy = 'Date';
          $scope.reverse = true;
 
@@ -10,16 +10,23 @@
          GetAllRecords();
          //To Get All Records  
          function GetAllRecords() {
-             var promiseGetBudgetStatus = BudgetStatusService.getBudgetStatus();
-             promiseGetBudgetStatus.then(function (budgetStatusDb) { $scope.budgetStatus = budgetStatusDb.data; $scope.BudgetAvailable = $scope.budgetStatus.BudgetAvailable; },
-              function (errorPl) {  
-               //   $log.error('Some Error in Getting Records.', errorPl);
-              });  
-             var promiseGetBudgetHistory = BudgetStatusService.getBudgetHistory();
-             promiseGetBudgetHistory.then(function (budgetHistoryDb) { $scope.budgetHistory = budgetHistoryDb.data; },
-              function (errorPl) {
-                  //   $log.error('Some Error in Getting Records.', errorPl);
-              });
+             if (connectToService == 'true') {
+                 
+                 var promiseGetBudgetStatus = BudgetStatusService.getBudgetStatus();
+                 promiseGetBudgetStatus.then(function (budgetStatusDb) { $scope.budgetStatus = budgetStatusDb.data; $scope.BudgetAvailable = $scope.budgetStatus.BudgetAvailable; },
+                  function (errorPl) {
+                      //   $log.error('Some Error in Getting Records.', errorPl);
+                  });
+                 var promiseGetBudgetHistory = BudgetStatusService.getBudgetHistory();
+                 promiseGetBudgetHistory.then(function (budgetHistoryDb) { $scope.budgetHistory = budgetHistoryDb.data; },
+                  function (errorPl) {
+                      //   $log.error('Some Error in Getting Records.', errorPl);
+                  });
+             }
+             else {
+                 $scope.budgetStatus = BudgetStatusService.getBudgetStatus();
+                 $scope.budgetHistory= BudgetStatusService.getBudgetHistory();
+             }
          }
          $scope.allocateFunds = function () {
               var fundsToAllocateBox =
@@ -40,7 +47,7 @@
        
        };
     
-   BudgetStatusController.$inject = ['$scope','BudgetStatusService'];
+   BudgetStatusController.$inject = ['$scope','BudgetStatusService','connectToService'];
 
     angular.module('org_maint_budget')
       .controller('BudgetStatusController', BudgetStatusController);
