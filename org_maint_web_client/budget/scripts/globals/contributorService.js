@@ -40,7 +40,8 @@
                   return request;
               }
               else {
-
+                  Contributor.ContributorID = contributorList.length + 1;
+              //    if (Contributor.Currency=='I)
                   contributorList.push(Contributor);
              //     var budgetHistoryElement =
              //{
