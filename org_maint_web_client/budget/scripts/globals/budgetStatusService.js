@@ -27,6 +27,12 @@
                   return budgetHistory;
               }
           };
+          //this.addBudgetHistory(budgetHistoryElement) = function () {
+          //    if (connectToService == 'false') {
+          //        alert(budgetHistoryElement.Comments);
+          //        budgetHistory.push(budgetHistoryElement);
+          //    }
+          //};
           this.getBudgetStatus = function () {
               if (connectToService == 'true') {
 

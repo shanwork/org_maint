@@ -1,5 +1,5 @@
 ﻿(function () {
-    var ContributorController = function ($scope, ContributorService) {
+    var ContributorController = function ($scope, ContributorService, connectToService) {
         $scope.sortBy = 'DateReceived';
         $scope.reverse = true;
 
@@ -10,11 +10,17 @@
         GetAllRecords();
         //To Get All Records  
         function GetAllRecords() {
-            var promiseGetContributor = ContributorService.getContributorList();
-            promiseGetContributor.then(function (contributorListDb) { $scope.contributorList = contributorListDb.data; },
-             function (errorPl) {
-                 //   $log.error('Some Error in Getting Records.', errorPl);
-             });
+            if (connectToService == 'true') {
+                var promiseGetContributor = ContributorService.getContributorList();
+                promiseGetContributor.then(function (contributorListDb) { $scope.contributorList = contributorListDb.data; },
+                 function (errorPl) {
+                     //   $log.error('Some Error in Getting Records.', errorPl);
+                 });
+            }
+            else
+            {
+                $scope.contributorList = ContributorService.getContributorList();
+            }
          }
         $scope.addContributor = function () {
             var Contributor = {
@@ -25,22 +31,31 @@
                 // will add date later
             };
            //alert($scope.ContributorName);
-          //  alert(Contributor.ContributorName);
-            var promisePost = ContributorService.addContributor(Contributor);
-            promisePost.then(function (pl) {
-                $scope.ContributorID = pl.data.ContributorID;
-                GetAllRecords();
+            //  alert(Contributor.ContributorName);
+            if (connectToService == 'true') {
 
-                //   ClearModels();
-            }, function (err) {
-                console.log("Some error Occured" + err);
-            });
+                var promisePost = ContributorService.addContributor(Contributor);
+                promisePost.then(function (pl) {
+                    $scope.ContributorID = pl.data.ContributorID;
+                    GetAllRecords();
+
+                    //   ClearModels();
+                }, function (err) {
+                    console.log("Some error Occured" + err);
+                });
+            }
+            else
+            {
+                ContributorService.addContributor(Contributor);
+                GetAllRecords();
+            }
+
         };
      };
         
   
 
-    ContributorController.$inject = ['$scope', 'ContributorService'];
+    ContributorController.$inject = ['$scope', 'ContributorService', 'connectToService'];
 
     angular.module('org_maint_budget')
       .controller('ContributorController', ContributorController);
