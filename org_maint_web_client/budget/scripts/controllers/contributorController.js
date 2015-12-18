@@ -1,5 +1,5 @@
 ﻿(function () {
-    var ContributorController = function ($scope, ContributorService, connectToService) {
+    var ContributorController = function ($scope, ContributorService,BudgetStatusService, connectToService) {
         $scope.sortBy = 'DateReceived';
         $scope.reverse = true;
 
@@ -27,10 +27,22 @@
                 ContributorName: $scope.ContributorName,
                 OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
                 Currency: $scope.Currency,
+                ConvertedAmount: 0.0,
                 Comments:$scope.Comments,
                 // will add date later
             };
-           //alert($scope.ContributorName);
+            switch ($scope.Currency)
+            {
+                case 'INR':
+                    Contributor.ConvetedAmount = Contributor.OriginalCurrencyAmount;
+                    break;
+                case 'USD': Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 60.0; break;
+                case 'EUR': Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 75.0; break;
+                default : Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 15.0; break;
+            }
+            alert(Contributor.OriginalCurrencyAmount);
+            alert(Contributor.ConvertedAmount);
+            //alert($scope.ContributorName);
             //  alert(Contributor.ContributorName);
             if (connectToService == 'true') {
 
@@ -47,6 +59,16 @@
             else
             {
                 ContributorService.addContributor(Contributor);
+                     var budgetHistoryElement =
+                {
+                    Amount: Contributor.ConvertedAmount,
+                    DebitCredit: 'Credit',
+                    DateString: 'Nov 1, 2015',
+                    Date: '2015-11-01',
+                    Principal: Contributor.ContributorName,
+                    Comments: Contributor.Comments
+                }
+                     BudgetStatusService.addBudgetHistory(budgetHistoryElement);
                 GetAllRecords();
             }
 
@@ -55,7 +77,7 @@
         
   
 
-    ContributorController.$inject = ['$scope', 'ContributorService', 'connectToService'];
+    ContributorController.$inject = ['$scope', 'ContributorService','BudgetStatusService', 'connectToService'];
 
     angular.module('org_maint_budget')
       .controller('ContributorController', ContributorController);

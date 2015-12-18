@@ -3,7 +3,7 @@
       .service('BudgetStatusService', function ($http,$q,connectToService) {
           var budgetStatus = 
               {
-                  BudgetAvailable: 0,
+                  BudgetAvailable: 1000,
                   BudgetAllocated: 0,
                   BudgetRequired: 0
               } ;
@@ -27,12 +27,15 @@
                   return budgetHistory;
               }
           };
-          //this.addBudgetHistory(budgetHistoryElement) = function () {
-          //    if (connectToService == 'false') {
-          //        alert(budgetHistoryElement.Comments);
-          //        budgetHistory.push(budgetHistoryElement);
-          //    }
-          //};
+          this.addBudgetHistory = function (budgetHistoryElement) {
+              if (connectToService == 'false') {
+                  budgetHistory.push(budgetHistoryElement);
+                  if (budgetHistoryElement.DebitCredit == 'Credit')
+                  {
+                      budgetStatus.BudgetAvailable += budgetHistoryElement.Amount;
+                  }
+              }
+          };
           this.getBudgetStatus = function () {
               if (connectToService == 'true') {
 
