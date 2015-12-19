@@ -25,7 +25,8 @@
              }
              else {
                  $scope.budgetStatus = BudgetStatusService.getBudgetStatus();
-                 $scope.budgetHistory= BudgetStatusService.getBudgetHistory();
+                 $scope.budgetHistory = BudgetStatusService.getBudgetHistory();
+                 $scope.BudgetAvailable = $scope.budgetStatus.BudgetAvailable;
              }
          }
          $scope.allocateFunds = function () {

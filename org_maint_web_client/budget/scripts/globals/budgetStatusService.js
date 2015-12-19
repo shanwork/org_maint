@@ -3,7 +3,7 @@
       .service('BudgetStatusService', function ($http,$q,connectToService) {
           var budgetStatus = 
               {
-                  BudgetAvailable: 1000,
+                  BudgetAvailable: 1000.00,
                   BudgetAllocated: 0,
                   BudgetRequired: 0
               } ;
@@ -29,11 +29,22 @@
           };
           this.addBudgetHistory = function (budgetHistoryElement) {
               if (connectToService == 'false') {
+                  budgetHistoryElement.BudgetHistoryId = budgetHistory.length + 1;
                   budgetHistory.push(budgetHistoryElement);
                   if (budgetHistoryElement.DebitCredit == 'Credit')
                   {
-                      budgetStatus.BudgetAvailable += budgetHistoryElement.Amount;
+                      budgetStatus.BudgetAvailable += parseFloat(budgetHistoryElement.Amount);
+                      budgetStatus.BudgetRequired -= parseFloat(budgetHistoryElement.Amount);
+                      if (budgetStatus.BudgetRequired < 0)
+                          budgetStatus.BudgetRequired = 0;
                   }
+              }
+          };
+          this.updateBudgetStatus = function (newBudgetStatus) {
+              if (connectToService == 'false') {
+                  budgetStatus.BudgetAvailable = newBudgetStatus.BudgetAvailable;
+                  budgetStatus.BudgetAllocated = newBudgetStatus.BudgetAllocated;
+                  budgetStatus.BudgetRequired = newBudgetStatus.BudgetRequired;
               }
           };
           this.getBudgetStatus = function () {

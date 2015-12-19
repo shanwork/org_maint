@@ -103,6 +103,7 @@ namespace org_maint_services
             {
                 entityStatus.TotalEntities = query.TotalEntities;
                 entityStatus.TotalEntities = query.TotalEntitiesAllocable;
+                entityStatus.TotalEntitiesAllocated = query.TotalEntitiesAllocated;
                 entityStatus.TotalEntitiesUnallocated = query.TotalEntitiesUnallocated;
                 entityStatus.DateUpdated = query.DateUpdated;
                 entityStatus.DateUpdatedString = query.DateUpdated.ToShortDateString();

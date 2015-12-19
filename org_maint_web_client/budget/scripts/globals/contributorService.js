@@ -8,7 +8,7 @@
              }
              else {
                  if (contributorList.length == 0) {
-                     alert(contributorList.length);
+                     //alert(contributorList.length);
                      var newContributor =
                          {
                              ContributorID: 1,
@@ -41,19 +41,8 @@
               }
               else {
                   Contributor.ContributorID = contributorList.length + 1;
-              //    if (Contributor.Currency=='I)
                   contributorList.push(Contributor);
-             //     var budgetHistoryElement =
-             //{
-             //    Amount: Contributor.ConvertedAmount,
-             //    DebitCredit: 'Credit',
-             //    DateString: 'Nov 1, 2015',
-             //    Date: '2015-11-01',
-             //    Principal: Contributor.ContributorName,
-             //    Comments: Contributor.Comments
-             //}
-
-             //     BudgetStatusService.addBudgetHistory(budgetHistoryElement)
+             
 
                }
           }

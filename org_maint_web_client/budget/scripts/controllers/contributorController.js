@@ -1,5 +1,5 @@
 ﻿(function () {
-    var ContributorController = function ($scope, ContributorService,BudgetStatusService, connectToService) {
+    var ContributorController = function ($scope, ContributorService,BudgetStatusService, EntityService, connectToService) {
         $scope.sortBy = 'DateReceived';
         $scope.reverse = true;
 
@@ -34,16 +34,13 @@
             switch ($scope.Currency)
             {
                 case 'INR':
-                    Contributor.ConvetedAmount = Contributor.OriginalCurrencyAmount;
+                    Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount;
                     break;
                 case 'USD': Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 60.0; break;
                 case 'EUR': Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 75.0; break;
                 default : Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 15.0; break;
             }
-            alert(Contributor.OriginalCurrencyAmount);
-            alert(Contributor.ConvertedAmount);
-            //alert($scope.ContributorName);
-            //  alert(Contributor.ContributorName);
+           
             if (connectToService == 'true') {
 
                 var promisePost = ContributorService.addContributor(Contributor);
@@ -69,6 +66,7 @@
                     Comments: Contributor.Comments
                 }
                      BudgetStatusService.addBudgetHistory(budgetHistoryElement);
+                     EntityService.updateEntityStatus();
                 GetAllRecords();
             }
 
