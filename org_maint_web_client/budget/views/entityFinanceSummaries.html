@@ -1,0 +1,64 @@
+﻿<h2>Entities</h2>
+<table border="1" cellpadding="0" cellspacing="0" class="table">
+    <tr>
+        <th>Total</th>
+        <td>{{entityStatus.TotalEntities}}</td>
+    </tr>
+    <tr>
+        <th>Allocable</th>
+        <td>{{entityStatus.TotalEntitiesAllocable}}</td>
+    </tr>
+    <tr>
+        <th>Allocated (part or full)</th>
+        <td>{{entityStatus.TotalEntitiesAllocated}}</td>
+    </tr>
+    <tr>
+        <th>Unallocated</th>
+        <td>{{entityStatus.TotalEntitiesUnallocated}}</td>
+
+    </tr>
+
+</table>
+<!--input type='text' data-ng-model="EntityName" /><br />
+<input type='text' data-ng-model="BudgetAllocated" /><br />
+<input type='text' data-ng-model="BudgetRequired" /><br />
+<input type="button" id="save" value="Save" data-ng-click="save()" /-->
+<table border="1" cellpadding="0" cellspacing="0" class="table table-striped">
+    <tr>
+        <th ng-click="doSort('EntityFinanceSummaryID')">ID</th>
+        <th ng-click="doSort('EntityName')">EntityName</th>
+        <th ng-click="doSort('BudgetAllocated')">BudgetAllocated</th>
+        <th ng-click="doSort('BudgetRequired')">BudgetRequired</th>
+        <th ng-click="doSort('Priority')">Priority</th>
+        <th ng-click="doSort('DateUpdated')">&nbsp;Deposited</th>
+        <th ng-click="doSort('Comments')">&nbsp;Comments</th>
+    </tr>
+    <tr>
+        <th><input type="text" ng-model="entityFilter.EntityFinanceSummaryID" /></th>
+        <th><input type="text" ng-model="entityFilter.EntityName" /></th>
+        <th><input type="text" ng-model="entityFilter.BudgetAllocated"> </th>
+        <th> <input type="text" ng-model="entityFilter.BudgetRequired">  </th>
+        <th> <input type="text" ng-model="entityFilter.Priority">  </th>
+        <th> <input type="text" ng-model="entityFilter.DateUpdatedString">  </th>
+        <th> <input type="text" ng-model="entityFilter.Comments">  </th>
+    </tr>
+    <tr>
+        <td class="editCell"><input type="button" id="save" value="ADD" data-ng-click="addEntity()" /> </td>
+        <td class="editCell"><input type='text' data-ng-model="EntityName" /></td>
+        <td class="editCell"><input type='text' data-ng-model="BudgetAllocated" data-ng-init="0" /></td>
+        <td class="editCell"><input type='text' data-ng-model="BudgetRequired" /></td>
+        <td class="editCell"><input type='text' data-ng-model="Priority" /></td>
+        <td class="editCell">&nbsp;</td>
+        <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
+    </tr>
+    <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
+        <td>{{ entity.EntityFinanceSummaryID }}</td>
+        <td>{{ entity.EntityName }}</td>
+        <td>{{ entity.BudgetAllocated }} {{ entity.Currency }}</td>
+        <td>{{ entity.BudgetRequired }}</td>
+        <td>{{ entity.Priority  }}</td>
+        <td>{{  entity.DateUpdatedString |date}}</td>
+        <td>{{  entity.Comments |date}}</td>
+    </tr>
+</table>
+<br />

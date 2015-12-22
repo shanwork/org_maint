@@ -131,6 +131,33 @@ namespace org_maint_services
         public string Comments { get; set; }
 
     }
+    [DataContract]
+    public partial class EntityFinanceSummaryContract
+    {
+        [DataMember]
+        public int EntityFinanceSummaryID { get; set; }
+
+        [DataMember]
+        public string EntityName { get; set; }
+
+        [DataMember]
+        public int Priority { get; set; }
+
+        [DataMember]
+        public decimal BudgetRequired { get; set; }
+
+        [DataMember]
+        public decimal BudgetAllocated { get; set; }
+
+        [DataMember]
+        public string DateUpdatedString { get; set; }
+
+        [DataMember]
+        public Nullable<System.DateTime> DateUpdated { get; set; }
+
+        [DataMember]
+        public string Comments { get; set; }
+    }
     // work around class since allocateFunds(double) doesnt work
     [Serializable]
     public class AllocateWrapper

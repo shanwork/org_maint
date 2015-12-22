@@ -63,5 +63,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EntityFinanceSummaries">
+      <EntityTypeMapping TypeName="Org_MaintModel.EntityFinanceSummary">
+        <MappingFragment StoreEntitySet="EntityFinanceSummary">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />
+          <ScalarProperty Name="BudgetRequired" ColumnName="BudgetRequired" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="EntityFinanceSummaryID" ColumnName="EntityFinanceSummaryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

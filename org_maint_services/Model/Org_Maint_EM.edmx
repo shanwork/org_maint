@@ -51,6 +51,18 @@
           <Property Name="DateUpdated" Type="datetime" />
           <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="EntityFinanceSummary">
+          <Key>
+            <PropertyRef Name="EntityFinanceSummaryID" />
+          </Key>
+          <Property Name="EntityFinanceSummaryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EntityName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="BudgetRequired" Type="money" Nullable="false" />
+          <Property Name="BudgetAllocated" Type="money" Nullable="false" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="EntitySummary">
           <Key>
             <PropertyRef Name="EntitySummaryId" />
@@ -67,6 +79,7 @@
           <EntitySet Name="BudgetStatus" EntityType="Self.BudgetStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contributor" EntityType="Self.Contributor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntityBudgetPriority" EntityType="Self.EntityBudgetPriority" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntityFinanceSummary" EntityType="Self.EntityFinanceSummary" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntitySummary" EntityType="Self.EntitySummary" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -136,7 +149,20 @@
           <EntitySet Name="Contributors" EntityType="Self.Contributor" />
           <EntitySet Name="EntityBudgetPriorities" EntityType="Self.EntityBudgetPriority" />
           <EntitySet Name="EntitySummaries" EntityType="Self.EntitySummary" />
+          <EntitySet Name="EntityFinanceSummaries" EntityType="Org_MaintModel.EntityFinanceSummary" />
         </EntityContainer>
+        <EntityType Name="EntityFinanceSummary">
+          <Key>
+            <PropertyRef Name="EntityFinanceSummaryID" />
+          </Key>
+          <Property Name="EntityFinanceSummaryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EntityName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="BudgetRequired" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="BudgetAllocated" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -202,6 +228,19 @@
                 <ScalarProperty Name="TotalEntitiesAllocable" ColumnName="TotalEntitiesAllocable" />
                 <ScalarProperty Name="TotalEntitiesUnallocated" ColumnName="TotalEntitiesUnallocated" />
                 <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntityFinanceSummaries">
+            <EntityTypeMapping TypeName="Org_MaintModel.EntityFinanceSummary">
+              <MappingFragment StoreEntitySet="EntityFinanceSummary">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />
+                <ScalarProperty Name="BudgetRequired" ColumnName="BudgetRequired" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+                <ScalarProperty Name="EntityFinanceSummaryID" ColumnName="EntityFinanceSummaryID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

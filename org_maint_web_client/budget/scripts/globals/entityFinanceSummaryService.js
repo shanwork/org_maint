@@ -9,19 +9,18 @@
         <th> <input type="text" ng-model="entityFilter.Comments">  </th>
     */
     angular.module('org_maint_budget')
-      .service('EntityService', function ($http, $q, connectToService, BudgetStatusService) {
+      .service('EntityFinanceSummaryService', function ($http, $q, connectToService, BudgetStatusService) {
           var entityList = [];
           var entityStatus = {
               TotalEntities: 0,
               TotalEntitiesAllocable: 0,
               TotalEntitiesAllocated: 0,
-              TotalEntitiesUnallocated:0
+              TotalEntitiesUnallocated: 0
           };
           this.getEntitiesList = function () {
-              if (connectToService=='true')
-                  return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntitiesList");
-              else
-              {
+              if (connectToService == 'true')
+                  return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntitySummaryList");
+              else {
                   return entityList;
               }
           };
@@ -30,7 +29,7 @@
                   return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntityStatus");//.success(function (response) { return response.value;});
               }
               else {
-              //    this.updateEntityStatus();
+                  //    this.updateEntityStatus();
                   return this.updateEntityStatus();//entityStatus;
               }
           }
@@ -38,13 +37,12 @@
               if (connectToService == 'true') {
                   var request = $http({
                       method: "post",
-                      url: "http://localhost:58778/Org_maint_service_api.svc/AddEntity",
+                      url: "http://localhost:58778/Org_maint_service_api.svc/AddEntitySummary",
                       data: Entity
                   });
                   return request;
               }
-              else
-              {
+              else {
                   //if (Entity.BudgetAllocated > 0)
                   //    entityStatus.TotalEntitiesAllocated += 1;
                   //else
@@ -65,27 +63,26 @@
                   this.updateEntityStatus();
               }
           }
-          this.updateEntityStatus=function()
-          {
-//              var t = [
-//{
-//    amount: 10,
-//    priority: 14
-//}
-//,
-//{
-//    amount: 12,
-//    priority: 12
-//}
-//,
-//{
-//    amount: 12,
-//    priority: 10
-//}
+          this.updateEntityStatus = function () {
+              //              var t = [
+              //{
+              //    amount: 10,
+              //    priority: 14
+              //}
+              //,
+              //{
+              //    amount: 12,
+              //    priority: 12
+              //}
+              //,
+              //{
+              //    amount: 12,
+              //    priority: 10
+              //}
 
-//              ];
-//              t.sort(function (a, b) { return a.priority - b.priority });
-              entityStatus.TotalEntities = 0 ;
+              //              ];
+              //              t.sort(function (a, b) { return a.priority - b.priority });
+              entityStatus.TotalEntities = 0;
               entityStatus.TotalEntitiesAllocable = 0;
               entityStatus.TotalEntitiesAllocated = 0;
               entityStatus.TotalEntitiesUnallocated = 0;
@@ -100,13 +97,13 @@
                       entityStatus.TotalEntitiesAllocable += 1;
                   budgetAvailable -= entityList[i].BudgetRequired;
 
-                    
+
               }
               if (budgetAvailable < 0) {
                   budgetStatus.BudgetRequired = -1 * budgetAvailable;
                   BudgetStatusService.updateBudgetStatus(budgetStatus);
               }
-             // alert(entityStatus.TotalEntities); alert(entityStatus.TotalEntitiesAllocated); alert(entityStatus.TotalEntitiesAllocable);
+              // alert(entityStatus.TotalEntities); alert(entityStatus.TotalEntitiesAllocated); alert(entityStatus.TotalEntitiesAllocable);
               if (entityStatus.TotalEntities > (entityStatus.TotalEntitiesAllocated + entityStatus.TotalEntitiesAllocable))
                   entityStatus.TotalEntitiesUnallocated = entityStatus.TotalEntities - (entityStatus.TotalEntitiesAllocated + entityStatus.TotalEntitiesAllocable);
               return entityStatus;

@@ -30,5 +30,6 @@ namespace org_maint_services.Model
         public virtual DbSet<Contributor> Contributors { get; set; }
         public virtual DbSet<EntityBudgetPriority> EntityBudgetPriorities { get; set; }
         public virtual DbSet<EntitySummary> EntitySummaries { get; set; }
+        public virtual DbSet<EntityFinanceSummary> EntityFinanceSummaries { get; set; }
     }
 }

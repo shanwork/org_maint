@@ -35,12 +35,21 @@ namespace org_maint_services
         List<EntityBudgetPriorityContract> GetEntitiesList();
 
         [OperationContract]
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetEntitySummaryList")]
+        List<EntityFinanceSummaryContract> GetEntitySummaryList();
+
+        [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddContributor",BodyStyle=WebMessageBodyStyle.Bare)]
         bool AddContributor(Contributor contributor);
 
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntity", BodyStyle = WebMessageBodyStyle.Bare)]
         bool AddEntity(EntityBudgetPriority entity);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntitySummary", BodyStyle = WebMessageBodyStyle.Bare)]
+        bool AddEntitySummary(EntityFinanceSummary entity);
+
 
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AllocateFunds", BodyStyle = WebMessageBodyStyle.Bare)]

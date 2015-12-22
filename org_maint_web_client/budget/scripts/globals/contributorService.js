@@ -3,7 +3,7 @@
       .service('ContributorService', function ($http, $q, connectToService ) {
           var contributorList = [];
           this.getContributorList = function () {
-             if (connectToService == 'true') {
+              if (connectToService == 'true') {
                   return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetContributorList");
              }
              else {

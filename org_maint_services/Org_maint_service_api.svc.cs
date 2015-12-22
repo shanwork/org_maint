@@ -160,6 +160,28 @@ namespace org_maint_services
             return entityBudgetPriorityList;
         }
 
+        public List<EntityFinanceSummaryContract> GetEntitySummaryList()
+        {
+            List<EntityFinanceSummaryContract> entityFinanceSummariesList = new List<EntityFinanceSummaryContract>();
+            var query = (from entityFinanceSummariesElement in orgMaintEntitiesContext.EntityFinanceSummaries select entityFinanceSummariesElement).Distinct();
+            query.ToList().ForEach(rec =>
+            {
+                entityFinanceSummariesList.Add(
+                    new EntityFinanceSummaryContract
+                    {
+                        EntityFinanceSummaryID = rec.EntityFinanceSummaryID,
+                        EntityName = rec.EntityName,
+                        BudgetAllocated = rec.BudgetAllocated,
+                        BudgetRequired = rec.BudgetRequired,
+                        Priority = rec.Priority,
+                        DateUpdated = rec.DateUpdated,
+                        DateUpdatedString = rec.DateUpdated != null ? ((DateTime)rec.DateUpdated).ToShortDateString() : "",
+                        Comments = rec.Comments
+                    }
+                    );
+            });
+            return entityFinanceSummariesList;
+        }
         public bool AddContributor(Contributor contributor)
         {
             List<ContributorContract> updatedContributorList = new List<ContributorContract>();
@@ -273,6 +295,55 @@ namespace org_maint_services
             return true;
         }
 
+        public bool AddEntitySummary(EntityFinanceSummary entity)
+        {
+            List<EntityFinanceSummaryContract> updatedEntityList = new List<EntityFinanceSummaryContract>();
+            EntityFinanceSummary newEntityRecord = new EntityFinanceSummary
+            {
+                EntityFinanceSummaryID = entity.EntityFinanceSummaryID,
+                EntityName = entity.EntityName,
+                BudgetAllocated = entity.BudgetAllocated,
+                BudgetRequired = entity.BudgetRequired,
+                Priority = entity.Priority,
+                DateUpdated = DateTime.Now,
+                Comments = entity.Comments
+            };
+
+            orgMaintEntitiesContext.EntityFinanceSummaries.Add(newEntityRecord);
+            orgMaintEntitiesContext.SaveChanges();
+
+            // Dont need since we are not creating a budget transaction
+            //BudgetHistory newBudgetHistoryRecord = new BudgetHistory
+            //{
+            //    Amount = newEntityRecord.BudgetRequired,
+            //    DebitCredit = "Debit",
+            //    Date = (DateTime)newEntityRecord.DateUpdated,
+            //    Comments = newEntityRecord.Comments,
+            //    Principal = newEntityRecord.EntityName
+            //};
+            //orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
+            //orgMaintEntitiesContext.SaveChanges();
+
+            var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
+            if (query == null)
+            {
+                BudgetStatu budgStatu = new BudgetStatu();
+                budgStatu.BudgetAvailable = 0;
+                budgStatu.BudgetAllocated = 0;
+                budgStatu.BudgetRequired = newEntityRecord.BudgetRequired;
+                budgStatu.DateUpdated = DateTime.Now;
+                orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
+
+            }
+            else
+            {
+                query.BudgetRequired += newEntityRecord.BudgetRequired;
+                query.DateUpdated = DateTime.Now;
+            }
+            orgMaintEntitiesContext.SaveChanges();
+            return true;
+        }
+
         public bool AllocateFunds(Double fundsForAllocation)
         {
 
@@ -331,6 +402,7 @@ namespace org_maint_services
             }
             return true;
         }
+
         public bool AllocateFunds2(AllocateWrapper fundsForAllocationBox)
         {
 

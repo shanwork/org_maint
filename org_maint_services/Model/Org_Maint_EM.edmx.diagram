@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="Org_MaintModel.Contributor" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Org_MaintModel.EntityBudgetPriority" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Org_MaintModel.EntitySummary" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Org_MaintModel.EntityFinanceSummary" Width="1.75" PointX="5.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

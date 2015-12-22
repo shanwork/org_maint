@@ -63,5 +63,18 @@
     <EntitySet Name="Contributors" EntityType="Self.Contributor" />
     <EntitySet Name="EntityBudgetPriorities" EntityType="Self.EntityBudgetPriority" />
     <EntitySet Name="EntitySummaries" EntityType="Self.EntitySummary" />
+    <EntitySet Name="EntityFinanceSummaries" EntityType="Org_MaintModel.EntityFinanceSummary" />
   </EntityContainer>
+  <EntityType Name="EntityFinanceSummary">
+    <Key>
+      <PropertyRef Name="EntityFinanceSummaryID" />
+    </Key>
+    <Property Name="EntityFinanceSummaryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EntityName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="BudgetRequired" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="BudgetAllocated" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
