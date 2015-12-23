@@ -55,6 +55,14 @@ namespace org_maint_services
             return budgetStatus;
 
         }
+
+        public BudgetStatusContract GetCachedBudgetStatus()
+        {
+            BudgetStatusContract budgetStatus = CacheData.Instance.GetBudgetStatus();
+             
+            return budgetStatus;
+
+        }
         public List<BudgetHistoryContract> GetBudgetHistory()
         {
             List<BudgetHistoryContract> budgetHistory = new List<BudgetHistoryContract>();
@@ -80,6 +88,12 @@ namespace org_maint_services
             ////    budgetHistoryListElement.Date = bHDataElement.Date;
             ////    budgetHistory.Add(budgetHistoryListElement);
             ////}
+            return budgetHistory;
+        }
+
+        public List<BudgetHistoryContract> GetCachedBudgetHistory()
+        {
+            List<BudgetHistoryContract> budgetHistory = CacheData.Instance.GetBudgetHistory();
             return budgetHistory;
         }
 

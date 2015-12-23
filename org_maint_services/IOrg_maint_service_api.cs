@@ -19,8 +19,16 @@ namespace org_maint_services
         BudgetStatusContract GetBudgetStatus();
 
         [OperationContract]
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetCachedBudgetStatus")]
+        BudgetStatusContract GetCachedBudgetStatus();
+
+        [OperationContract]
         [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetBudgetHistory")]
         List<BudgetHistoryContract> GetBudgetHistory();
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetCachedBudgetHistory")]
+        List<BudgetHistoryContract> GetCachedBudgetHistory();
 
         [OperationContract]
         [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetEntityStatus")]

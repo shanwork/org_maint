@@ -27,7 +27,7 @@ namespace org_maint_services
 
             #endregion
         }
-         BudgetStatusContract GetBudgetStatus()
+       public  BudgetStatusContract GetBudgetStatus()
         {
             
             var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
