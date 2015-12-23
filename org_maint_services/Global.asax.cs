@@ -12,7 +12,7 @@ namespace org_maint_services
 
         protected void Application_Start(object sender, EventArgs e)
         {
-           
+            CacheData.Instance.writeToDb = false;
         }
         protected void Session_Start(object sender, EventArgs e)
         {
