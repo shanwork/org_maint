@@ -32,6 +32,11 @@
             $scope.sortBy = propName;
             $scope.reverse = !$scope.reverse;
         };
+        $scope.doSortFloat = function (propName) {
+            $scope.sortBy = parseFloat(propName);
+            alert(parseFloat(propName));
+            $scope.reverse = !$scope.reverse;
+        };
         GetAllRecords();
         //To Get All Records  
         function GetAllRecords() {
@@ -55,9 +60,9 @@
         $scope.addEntity = function () {
             var Entity = {
                 EntityName: $scope.EntityName,
-                BudgetAllocated: $scope.BudgetAllocated,
-                BudgetRequired: $scope.BudgetRequired,
-                Priority: $scope.Priority,
+                BudgetAllocated: parseFloat($scope.BudgetAllocated),
+                BudgetRequired: parseFloat($scope.BudgetRequired),
+                Priority: parseInt($scope.Priority),
                 Comments: $scope.Comments
                 // will add date later
             };

@@ -24,31 +24,32 @@
                   return entityList;
               }
           };
-          this.getEntitiesSortedList = function () {
-              if (connectToService == 'true')
-                  return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntitySummaryList");
-              else {
+          // in session functions 
+          this.getEntitiesSortedPriorityAAmountDList = function () {
+              //if (connectToService == 'true')
+              //    return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntitySummaryList");
+              //else {
 
-                  return entityList.sort(compare) ;
-              }
+              return entityList.sort(compareSortedPriorityAAmountD);
+            //  }
           };
-          function compare(ent1, ent2)
+          function compareSortedPriorityAAmountD(ent1, ent2)
           {
               var ret = 0;
-              if (ent1.Priority > ent2.Priority)
+              if (parseInt( ent1.Priority) > parseInt(ent2.Priority))
               {
                   ret = 1;
               }
-              else if (ent1.Priority < ent2.Priority)
+              else if (parseInt( ent1.Priority) < parseInt( ent2.Priority))
                   {
                   ret = -1 
               }
               else
               {
-                  if (ent1.BudgetRequired < ent2.BudgetRequired) {
+                  if (parseFloat( ent1.BudgetRequired) < parseFloat(ent2.BudgetRequired)) {
                       ret = 1;
                   }
-                  else if (ent1.BudgetRequired > ent2.BudgetRequired) {
+                  else if (parseFloat(ent1.BudgetRequired) > parseFloat(ent2.BudgetRequired) ) {
                       ret = -1
                   }
               }

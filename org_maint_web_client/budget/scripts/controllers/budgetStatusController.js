@@ -48,19 +48,41 @@
               else 
               {
                   alert('hi');
-                  var entityList = EntityFinanceSummaryService.getEntitiesSortedList();
-                    for (i = 0; i < entityList.length; i++) {
-                        alert(entityList[i].EntityName);
-                        alert(entityList[i].Priority);
-                        alert(entityList[i].BudgetRequired);
-                        //if (entityList[i].BudgetAllocated > 0)
-                        //    entityStatus.TotalEntitiesAllocated += 1;
-                        //else if (budgetAvailable > 0)
-                        //    entityStatus.TotalEntitiesAllocable += 1;
-                        //budgetAvailable -= entityList[i].BudgetRequired;
+                   var fundToAllocate = parseFloat($scope.budgetStatus.BudgetAvailable);
+                   if (fundToAllocate > 0.0) {
+                      
+                       var entityList = EntityFinanceSummaryService.getEntitiesSortedPriorityAAmountDList();
+                       alert(entityList.length);
+                       for (i = 0; i < entityList.length; i++) {
+                           if (fundToAllocate > 0.0) {
+                               alert(fundToAllocate);
 
+                               var fundRequired = parseFloat(entityList[i].BudgetRequired);
+                               if (fundToAllocate <= fundRequired)
+                                   fundRequired = fundToAllocate;
+                               entityList[i].BudgetRequired -= fundRequired;
+                               entityList[i].BudgetAllocated += fundRequired;
+                               fundToAllocate -= fundRequired;
+                                var budgetHistoryElement =
+                              {
+                                  Amount: Contributor.ConvertedAmount,
+                                  DebitCredit: 'Debit',
+                                  DateString: 'Nov 1, 2015',
+                                  Date: '2015-11-01',
+                                  Principal: entityList[i].EntityName,
+                                  Comments: entityList[i].Commenyts
+                              }
+                               BudgetStatusService.addBudgetHistory(budgetHistoryElement);
+                           }
+                           else
+                               break;
+                          
 
-                    }
+                       }
+                       EntityService.updateEntityStatus();
+
+                   }
+                   
               }
          };
         
