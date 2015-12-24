@@ -1,5 +1,5 @@
 ﻿(function() {
-    var BudgetStatusController = function ($scope, BudgetStatusService, connectToService) {
+    var BudgetStatusController = function ($scope, BudgetStatusService, EntityFinanceSummaryService, connectToService) {
          $scope.sortBy = 'Date';
          $scope.reverse = true;
 
@@ -35,20 +35,39 @@
                      marc: "Wrapped",
                      fundsToAllocate: $scope.BudgetAvailable
                  };
-             var promisePost = BudgetStatusService.allocateFunds(fundsToAllocateBox);
-             promisePost.then(function (pl) {
-                 GetAllRecords();
+              if (connectToService == 'true') {
+                  var promisePost = BudgetStatusService.allocateFunds(fundsToAllocateBox);
+                  promisePost.then(function (pl) {
+                      GetAllRecords();
 
-                 //   ClearModels();
-             }, function (err) {
-                 console.log("Some error Occured" + err);
-             });
+                      //   ClearModels();
+                  }, function (err) {
+                      console.log("Some error Occured" + err);
+                  });
+              }
+              else 
+              {
+                  alert('hi');
+                  var entityList = EntityFinanceSummaryService.getEntitiesSortedList();
+                    for (i = 0; i < entityList.length; i++) {
+                        alert(entityList[i].EntityName);
+                        alert(entityList[i].Priority);
+                        alert(entityList[i].BudgetRequired);
+                        //if (entityList[i].BudgetAllocated > 0)
+                        //    entityStatus.TotalEntitiesAllocated += 1;
+                        //else if (budgetAvailable > 0)
+                        //    entityStatus.TotalEntitiesAllocable += 1;
+                        //budgetAvailable -= entityList[i].BudgetRequired;
+
+
+                    }
+              }
          };
         
        
        };
     
-   BudgetStatusController.$inject = ['$scope','BudgetStatusService','connectToService'];
+    BudgetStatusController.$inject = ['$scope', 'BudgetStatusService', 'EntityFinanceSummaryService', 'connectToService'];
 
     angular.module('org_maint_budget')
       .controller('BudgetStatusController', BudgetStatusController);

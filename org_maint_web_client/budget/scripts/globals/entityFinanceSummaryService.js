@@ -24,6 +24,36 @@
                   return entityList;
               }
           };
+          this.getEntitiesSortedList = function () {
+              if (connectToService == 'true')
+                  return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntitySummaryList");
+              else {
+
+                  return entityList.sort(compare) ;
+              }
+          };
+          function compare(ent1, ent2)
+          {
+              var ret = 0;
+              if (ent1.Priority > ent2.Priority)
+              {
+                  ret = 1;
+              }
+              else if (ent1.Priority < ent2.Priority)
+                  {
+                  ret = -1 
+              }
+              else
+              {
+                  if (ent1.BudgetRequired < ent2.BudgetRequired) {
+                      ret = 1;
+                  }
+                  else if (ent1.BudgetRequired > ent2.BudgetRequired) {
+                      ret = -1
+                  }
+              }
+              return ret;
+          }
           this.getEntityStatus = function () {
               if (connectToService == 'true') {
                   return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntityStatus");//.success(function (response) { return response.value;});
@@ -58,7 +88,7 @@
                   //        entityStatus.TotalEntitiesUnallocated += 1;
 
                   //}
-                  Entity.EntityBudgetPriorityID = entityList.length + 1;
+                  Entity.EntityFinanceSummaryID = entityList.length + 1;
                   entityList.push(Entity);
                   this.updateEntityStatus();
               }
