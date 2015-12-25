@@ -1,1 +1,28 @@
 ﻿<h2>Itemwise Expenses {{EntityName}}</h2>
+<table border="1" cellpadding="0" cellspacing="0" class="table table-striped">
+    <tr>
+        <th>  &nbsp; </th>
+         <th ng-click="doSort('EntityFinanceSummaryID')">ID</th>
+        <th ng-click="doSort('EntityName')">EntityName</th>
+        <th ng-click="doSort('BudgetAllocated')">BudgetAllocated</th>
+        <th ng-click="doSort('BudgetRequired')">BudgetRequired</th>
+        <th ng-click="doSort('Priority')">Priority</th>
+        <th ng-click="doSort('DateUpdated')">&nbsp;Deposited</th>
+        <th ng-click="doSort('Comments')">&nbsp;Comments</th>
+        <th>  &nbsp; </th>
+    </tr>
+    
+    <tr>
+        <td class="editCell"><input type="button" id="save" value="Update" data-ng-click="updateEntity()" /> </td>
+        <td>{{ entity.EntityFinanceSummaryID }}</td>
+        <td class="editCell"><input type='text' data-ng-model="entity.EntityName" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.BudgetAllocated" data-ng-init="0" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.BudgetRequired" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.Priority" /></td>
+        <td class="editCell">&nbsp;</td>
+        <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
+    </tr>
+    <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
+ 
+</table>
+<br />
