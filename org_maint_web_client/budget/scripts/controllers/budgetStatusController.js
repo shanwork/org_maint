@@ -47,30 +47,36 @@
               }
               else 
               {
-                  alert('hi');
                    var fundToAllocate = parseFloat($scope.budgetStatus.BudgetAvailable);
                    if (fundToAllocate > 0.0) {
                       
                        var entityList = EntityFinanceSummaryService.getEntitiesSortedPriorityAAmountDList();
                        alert(entityList.length);
                        for (i = 0; i < entityList.length; i++) {
+                           if (parseFloat(entityList[i].BudgetRequired) == 0.0)
+                               continue;
                            if (fundToAllocate > 0.0) {
                                alert(fundToAllocate);
+                               alert(fundRequired);
 
                                var fundRequired = parseFloat(entityList[i].BudgetRequired);
                                if (fundToAllocate <= fundRequired)
                                    fundRequired = fundToAllocate;
                                entityList[i].BudgetRequired -= fundRequired;
                                entityList[i].BudgetAllocated += fundRequired;
+
+                               $scope.budgetStatus.BudgetAvailable -= fundRequired;
+                               $scope.budgetStatus.BudgetAllocated += fundRequired;
+
                                fundToAllocate -= fundRequired;
-                                var budgetHistoryElement =
+                              var budgetHistoryElement =
                               {
-                                  Amount: Contributor.ConvertedAmount,
+                                  Amount: fundRequired,
                                   DebitCredit: 'Debit',
                                   DateString: 'Nov 1, 2015',
                                   Date: '2015-11-01',
                                   Principal: entityList[i].EntityName,
-                                  Comments: entityList[i].Commenyts
+                                  Comments: entityList[i].Comments
                               }
                                BudgetStatusService.addBudgetHistory(budgetHistoryElement);
                            }
@@ -80,7 +86,7 @@
 
                        }
                        EntityService.updateEntityStatus();
-
+                       $scope.BudgetAvailable = $scope.budgetStatus.BudgetAvailable;
                    }
                    
               }

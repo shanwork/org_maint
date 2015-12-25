@@ -32,7 +32,8 @@
         <th ng-click="doSort('Priority')">Priority</th>
         <th ng-click="doSort('DateUpdated')">&nbsp;Deposited</th>
         <th ng-click="doSort('Comments')">&nbsp;Comments</th>
-    </tr>
+        <th>  &nbsp; </th>
+</tr>
     <tr>
         <th><input type="text" ng-model="entityFilter.EntityFinanceSummaryID" /></th>
         <th><input type="text" ng-model="entityFilter.EntityName" /></th>
@@ -41,7 +42,8 @@
         <th> <input type="text" ng-model="entityFilter.Priority">  </th>
         <th> <input type="text" ng-model="entityFilter.DateUpdatedString">  </th>
         <th> <input type="text" ng-model="entityFilter.Comments">  </th>
-    </tr>
+        <th>  &nbsp; </th>
+</tr>
     <tr>
         <td class="editCell"><input type="button" id="save" value="ADD" data-ng-click="addEntity()" /> </td>
         <td class="editCell"><input type='text' data-ng-model="EntityName" /></td>
@@ -59,6 +61,7 @@
         <td>{{ entity.Priority  }}</td>
         <td>{{  entity.DateUpdatedString |date}}</td>
         <td>{{  entity.Comments |date}}</td>
+        <td><a href="#/entityExpenses/{{ entity.EntityFinanceSummaryID }}/{{ entity.EntityName }}">Details</a></td>
     </tr>
 </table>
 <br />

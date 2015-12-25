@@ -13,6 +13,10 @@
                 controller: 'EntityFinanceSummaryController',
                 templateUrl: 'views/entityFinanceSummaries.html'
             })
+             .when('/entityExpenses/:EntityFinanceSummaryID/:EntityName', {
+                 controller: 'EntityExpensesController',
+                 templateUrl: 'views/entityExpenses.html'
+             })
             .when('/contributors', {
                 controller: 'ContributorController',
                 templateUrl: 'views/contributorList.html'
