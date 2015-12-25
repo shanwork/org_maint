@@ -35,6 +35,29 @@
         $httpProvider.defaults.headers.put = {};
         $httpProvider.defaults.headers.patch = {};
     });
+    budgetApp.directive('clickLink', ['$location', function ($location) {
+        return {
+            link: function (scope, element, attrs) {
+                element.on('click', function () {
+                    scope.$apply(function () {
+                        $location.path(attrs.clickLink);
+                    });
+                });
+            }
+        }
+    }]);
+    budgetApp.directive('clickLinkConfirm', ['$location', function ($location) {
+        return {
+            link: function (scope, element, attrs) {
+                element.on('click', function () {
+                    scope.$apply(function () {
+                        if (confirm("are you sure you want to return?"))
+                            $location.path(attrs.clickLinkConfirm);
+                    });
+                });
+            }
+        }
+    }]);
     //budgetApp.config(function ($routeProvider) {
     //    $routeProvider
     //        .when('/contributors', {

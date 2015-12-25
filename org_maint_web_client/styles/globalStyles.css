@@ -18,6 +18,8 @@
 .editCell{
     background-color:gray;
 }
-table { width:800px; max-width:800px; border: solid 1px black;}
+table { width:3200px; max-width:200px; border: solid 2px black;}
+td {   max-width:200px; border: solid 1px black;}
+inpout {  width:1110px;}
 ul {background-color:aqua;}
 li {width:auto; margin:15px; font-weight:bold;}
