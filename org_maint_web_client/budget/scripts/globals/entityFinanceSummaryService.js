@@ -26,6 +26,11 @@
           };
           // in session functions 
           this.getEntitiesSortedPriorityAAmountDList = function () {
+              if (connectToService == 'true') {
+                  // No operation contract
+                  // Maybe this whole logic needs to shift to the controller
+                  // down the line, add one more global as utility
+              }
               return entityList.sort(compareSortedPriorityAAmountD);
            };
           function compareSortedPriorityAAmountD(ent1, ent2)
@@ -75,22 +80,34 @@
               }
           }
           this.getEntity = function (EntityFinanceSummaryID) {
-
-              var entity = null;
-              for (i = 0; i < entityList.length; i++) {
-                  entityStatus.TotalEntities += 1;
-                  if (entityList[i].EntityFinanceSummaryID == EntityFinanceSummaryID) {
-                      entity = entityList[i];
-                      break;
-                  }
-
-
+              if (connectToService == 'true') {
+                  // No operation contract
               }
-               
+              else {
+                  var entity = null;
+                  for (i = 0; i < entityList.length; i++) {
+                      entityStatus.TotalEntities += 1;
+                      if (entityList[i].EntityFinanceSummaryID == EntityFinanceSummaryID) {
+                          entity = entityList[i];
+                          break;
+                      }
+
+
+                  }
+              }
               return entity ;
           }
+          this.getEntityListLength = function () {
+              if (connectToService == 'true') {
+                  // No operation contract
+              }
+               
+              return  entityList.length;  
+          }
           this.updateEntityStatus = function () {
-            
+              if (connectToService == 'true') {
+                  // No operation contract
+              }
               entityStatus.TotalEntities = 0;
               entityStatus.TotalEntitiesAllocable = 0;
               entityStatus.TotalEntitiesAllocated = 0;

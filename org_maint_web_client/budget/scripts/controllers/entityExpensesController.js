@@ -1,6 +1,7 @@
 ﻿(function () {
     var EntityExpensesController = function ($scope, $routeParams, EntityExpensesService, EntityFinanceSummaryService, connectToService) {
         $scope.entityItemList = [];
+        $scope.EntityFinanceSummaryID  = parseInt($routeParams.EntityFinanceSummaryID)
         if ($routeParams.EntityName != '-1')
             $scope.EntityName = $routeParams.EntityName;
         else
@@ -8,17 +9,33 @@
         if ($routeParams.EntityFinanceSummaryID != '-1')
         $scope.entity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
         $scope.addEntityItem = function () {
-            /*
-             <td class="editCell"><input type="button" id="save" value="Add Item" data-ng-click="addEntityItem()" /> </td>
-        <th><input type="text" ng-model="EntityItemName" /></th>
-        <th><input type="text" ng-model="EntityItemDetail"> </th>
-        <th> <input type="text" ng-model="EntityItemBudgetRequired">  </th>
-        <th> <input type="text" ng-model="EntityItemBudgetAllocated">  </th>
-        <th> <input type="text" ng-model="EntityItemPriority">  </th>
-        <th> <input type="text" ng-model="EntityItemDateUpdated">  </th>
-        <th> <input type="text" ng-model="EntityItemComments">  </th>
-        <th>  &nbsp; </th>
-            */
+            if ($routeParams.EntityFinanceSummaryID == '-1')
+            {
+                var Entity = {
+                    EntityName: $scope.EntityName,
+                    BudgetAllocated: parseFloat($scope.BudgetAllocated),
+                    BudgetRequired: parseFloat($scope.BudgetRequired),
+                    Priority: parseInt($scope.Priority),
+                    Comments: $scope.Comments
+                    // will add date later
+                };
+                if (connectToService == 'true') {
+                    var promisePost = EntityFinanceSummaryService.addEntity(Entity);
+                    promisePost.then(function (pl) {
+                        $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
+                   //     GetAllRecords();
+
+                        //   ClearModels();
+                    }, function (err) {
+                        console.log("Some error Occured" + err);
+                    });
+                }
+                else {
+                    EntityFinanceSummaryService.addEntity(Entity);
+              //      GetAllRecords();
+                }
+                $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
+            }
             var EntityItem = {
                 EntityItemName: $scope.EntityItemName,
                 EntityItemDetail: $scope.EntityItemDetail,
