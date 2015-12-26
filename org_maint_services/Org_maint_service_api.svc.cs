@@ -113,8 +113,108 @@ namespace org_maint_services
                 orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
                 orgMaintEntitiesContext.SaveChanges();
             }
+            
+                entityStatus.TotalEntities = query.TotalEntities;
+                entityStatus.TotalEntities = query.TotalEntitiesAllocable;
+                entityStatus.TotalEntitiesAllocated = query.TotalEntitiesAllocated;
+                entityStatus.TotalEntitiesUnallocated = query.TotalEntitiesUnallocated;
+                entityStatus.DateUpdated = query.DateUpdated;
+                entityStatus.DateUpdatedString = query.DateUpdated.ToShortDateString();
+
+           
+            return entityStatus;
+        }
+
+        public EntitySummaryContract GetEntityStatusMixed()
+        {
+            EntitySummaryContract entityStatus = new EntitySummaryContract();
+            var query = (from entitySummary in orgMaintEntitiesContext.EntitySummaries select entitySummary).FirstOrDefault();
+            if (query == null)
+            {
+                EntitySummary newEntitySummary = new EntitySummary();
+                entityStatus.TotalEntities = newEntitySummary.TotalEntities = 0;
+                entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 00;
+                entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 00;
+                entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
+                entityStatus.DateUpdatedString = newEntitySummary.DateUpdated.ToShortDateString();
+
+                orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
+                orgMaintEntitiesContext.SaveChanges();
+            }
             else
             {
+                List<EntityFinanceSummaryContract> entityList = GetEntitySummaryList();
+                decimal budgetAvailable = 0 ;
+                var query2 = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
+                if (query2 == null)
+                {
+                    BudgetStatu budgStatu = new BudgetStatu();
+                    budgStatu.BudgetAvailable = 0;
+                    budgStatu.BudgetAllocated = 0;
+                    budgStatu.BudgetRequired = 00;
+                    budgStatu.DateUpdated = DateTime.Now;
+                    orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
+
+                }
+                else
+                    budgetAvailable = query2.BudgetAvailable;
+                 foreach(EntityFinanceSummaryContract entityElement in entityList)
+                {
+                    query.TotalEntities += 1;
+                    if (entityElement.BudgetAllocated > 0)
+                        query.TotalEntitiesAllocated += 1;
+                    else if (budgetAvailable > 0)
+                        query.TotalEntitiesAllocable += 1;
+                    budgetAvailable -= entityElement.BudgetRequired;
+                }
+                if (budgetAvailable < 0)
+                {
+                    query2.BudgetRequired = -1 * budgetAvailable;
+                }
+
+                /*
+                var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
+            if (query == null)
+            {
+                BudgetStatu budgStatu = new BudgetStatu();
+                budgStatu.BudgetAvailable = newContributorRecord.ConvertedAmount;
+                budgStatu.BudgetAllocated = 0;
+                budgStatu.BudgetRequired = 00;
+                budgStatu.DateUpdated = DateTime.Now;
+                orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
+
+            }
+            else
+            {
+                query.BudgetAvailable += newContributorRecord.ConvertedAmount;
+                query.DateUpdated = (DateTime)(DateTime)(newContributorRecord.DateDeposited == null ? DateTime.Now : newContributorRecord.DateDeposited);
+            }
+                 entityStatus.TotalEntities = 0;
+              entityStatus.TotalEntitiesAllocable = 0;
+              entityStatus.TotalEntitiesAllocated = 0;
+              entityStatus.TotalEntitiesUnallocated = 0;
+              var budgetStatus = BudgetStatusService.getBudgetStatus();
+              var budgetAvailable = budgetStatus.BudgetAvailable;
+              var totalBudgetRequired = 0;
+              for (i = 0; i < entityList.length; i++) {
+                  entityStatus.TotalEntities += 1;
+                  if (entityList[i].BudgetAllocated > 0)
+                      entityStatus.TotalEntitiesAllocated += 1;
+                  else if (budgetAvailable > 0)
+                      entityStatus.TotalEntitiesAllocable += 1;
+                  budgetAvailable -= entityList[i].BudgetRequired;
+
+
+              }
+              if (budgetAvailable < 0) {
+                  budgetStatus.BudgetRequired = -1 * budgetAvailable;
+                  BudgetStatusService.updateBudgetStatus(budgetStatus);
+              }
+              // alert(entityStatus.TotalEntities); alert(entityStatus.TotalEntitiesAllocated); alert(entityStatus.TotalEntitiesAllocable);
+              if (entityStatus.TotalEntities > (entityStatus.TotalEntitiesAllocated + entityStatus.TotalEntitiesAllocable))
+                  entityStatus.TotalEntitiesUnallocated = entityStatus.TotalEntities - (entityStatus.TotalEntitiesAllocated + entityStatus.TotalEntitiesAllocable);
+              return entityStatus;
+                */
                 entityStatus.TotalEntities = query.TotalEntities;
                 entityStatus.TotalEntities = query.TotalEntitiesAllocable;
                 entityStatus.TotalEntitiesAllocated = query.TotalEntitiesAllocated;
