@@ -14,8 +14,8 @@
                 templateUrl: 'views/entityFinanceSummaries.html'
             })
              .when('/entityExpenses/:EntityFinanceSummaryID/:EntityName', {
-                 controller: 'EntityExpensesController',
-                 templateUrl: 'views/entityExpenses.html'
+                 controller: 'EntityItemExpensesController',
+                 templateUrl: 'views/entityItemExpenses.html'
              })
             .when('/contributors', {
                 controller: 'ContributorController',

@@ -66,6 +66,8 @@
     <EntitySetMapping Name="EntityFinanceSummaries">
       <EntityTypeMapping TypeName="Org_MaintModel.EntityFinanceSummary">
         <MappingFragment StoreEntitySet="EntityFinanceSummary">
+          <ScalarProperty Name="EntityCategory" ColumnName="EntityCategory" />
+          <ScalarProperty Name="BudgetUsed" ColumnName="BudgetUsed" />
           <ScalarProperty Name="Comments" ColumnName="Comments" />
           <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
           <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />

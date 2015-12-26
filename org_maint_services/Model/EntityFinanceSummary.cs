@@ -21,5 +21,7 @@ namespace org_maint_services.Model
         public decimal BudgetAllocated { get; set; }
         public Nullable<System.DateTime> DateUpdated { get; set; }
         public string Comments { get; set; }
+        public decimal BudgetUsed { get; set; }
+        public string EntityCategory { get; set; }
     }
 }

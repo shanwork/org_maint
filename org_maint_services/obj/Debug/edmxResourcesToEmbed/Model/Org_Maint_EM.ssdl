@@ -52,9 +52,11 @@
     </Key>
     <Property Name="EntityFinanceSummaryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="EntityName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="EntityCategory" Type="nvarchar" MaxLength="256" Nullable="false" />
     <Property Name="Priority" Type="int" Nullable="false" />
-    <Property Name="BudgetRequired" Type="money" Nullable="false" />
     <Property Name="BudgetAllocated" Type="money" Nullable="false" />
+    <Property Name="BudgetUsed" Type="money" Nullable="false" />
+    <Property Name="BudgetRequired" Type="money" Nullable="false" />
     <Property Name="DateUpdated" Type="datetime" />
     <Property Name="Comments" Type="nvarchar" MaxLength="100" />
   </EntityType>

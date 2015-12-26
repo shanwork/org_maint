@@ -76,5 +76,7 @@
     <Property Name="BudgetAllocated" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="DateUpdated" Type="DateTime" Precision="3" />
     <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BudgetUsed" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="EntityCategory" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

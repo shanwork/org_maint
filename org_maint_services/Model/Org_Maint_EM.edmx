@@ -57,9 +57,11 @@
           </Key>
           <Property Name="EntityFinanceSummaryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EntityName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="EntityCategory" Type="nvarchar" MaxLength="256" Nullable="false" />
           <Property Name="Priority" Type="int" Nullable="false" />
-          <Property Name="BudgetRequired" Type="money" Nullable="false" />
           <Property Name="BudgetAllocated" Type="money" Nullable="false" />
+          <Property Name="BudgetUsed" Type="money" Nullable="false" />
+          <Property Name="BudgetRequired" Type="money" Nullable="false" />
           <Property Name="DateUpdated" Type="datetime" />
           <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
@@ -162,6 +164,8 @@
           <Property Name="BudgetAllocated" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="DateUpdated" Type="DateTime" Precision="3" />
           <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BudgetUsed" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="EntityCategory" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -234,6 +238,8 @@
           <EntitySetMapping Name="EntityFinanceSummaries">
             <EntityTypeMapping TypeName="Org_MaintModel.EntityFinanceSummary">
               <MappingFragment StoreEntitySet="EntityFinanceSummary">
+                <ScalarProperty Name="EntityCategory" ColumnName="EntityCategory" />
+                <ScalarProperty Name="BudgetUsed" ColumnName="BudgetUsed" />
                 <ScalarProperty Name="Comments" ColumnName="Comments" />
                 <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
                 <ScalarProperty Name="BudgetAllocated" ColumnName="BudgetAllocated" />
