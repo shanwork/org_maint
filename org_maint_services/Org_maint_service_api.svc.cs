@@ -113,8 +113,8 @@ namespace org_maint_services
                 orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
                 orgMaintEntitiesContext.SaveChanges();
             }
-            
-                entityStatus.TotalEntities = query.TotalEntities;
+           
+            entityStatus.TotalEntities = query.TotalEntities;
                 entityStatus.TotalEntities = query.TotalEntitiesAllocable;
                 entityStatus.TotalEntitiesAllocated = query.TotalEntitiesAllocated;
                 entityStatus.TotalEntitiesUnallocated = query.TotalEntitiesUnallocated;
@@ -428,6 +428,7 @@ namespace org_maint_services
 
             orgMaintEntitiesContext.EntityFinanceSummaries.Add(newEntityRecord);
             orgMaintEntitiesContext.SaveChanges();
+            updateEntityStatus(orgMaintEntitiesContext.EntityFinanceSummaries.Count());
             //var query = (from entitySummary in orgMaintEntitiesContext.EntitySummaries select entitySummary).FirstOrDefault();
             //if (query == null)
             //{
@@ -477,7 +478,66 @@ namespace org_maint_services
         {
             return true;
         }
+        static bool onOff = true;
+        public bool updateEntityStatus(int totalEntities=-1)
+        {
+            EntitySummaryContract entityStatus = new EntitySummaryContract();
+            var query = (from entitySummary in orgMaintEntitiesContext.EntitySummaries select entitySummary).FirstOrDefault();
+            if (query == null)
+            {
+                EntitySummary newEntitySummary = new EntitySummary();
+                entityStatus.TotalEntities = newEntitySummary.TotalEntities = 0;
+                entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 00;
+                entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 00;
+                entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
+                entityStatus.DateUpdatedString = newEntitySummary.DateUpdated.ToShortDateString();
 
+                orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
+                orgMaintEntitiesContext.SaveChanges();
+            }
+            if (Org_Maint_Service.onOff == true)
+            {
+                query.TotalEntities =   0;
+                query.TotalEntitiesAllocable =    00;
+                query.TotalEntitiesUnallocated =  00;
+                query.DateUpdated =  DateTime.Now;
+                  Org_Maint_Service.onOff = false;
+            }
+            if (totalEntities >= 0)
+            {
+                List<EntityFinanceSummaryContract> entityList = GetEntitySummaryList();
+                decimal budgetAvailable = 0;
+                var query2 = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
+                if (query2 == null)
+                {
+                    BudgetStatu budgStatu = new BudgetStatu();
+                    budgStatu.BudgetAvailable = 0;
+                    budgStatu.BudgetAllocated = 0;
+                    budgStatu.BudgetRequired = 00;
+                    budgStatu.DateUpdated = DateTime.Now;
+                    orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
+
+                }
+                else
+                    budgetAvailable = query2.BudgetAvailable;
+                foreach (EntityFinanceSummaryContract entityElement in entityList)
+                {
+                    query.TotalEntities += 1;
+                    if (entityElement.BudgetAllocated > 0)
+                        query.TotalEntitiesAllocated += 1;
+                    else if (budgetAvailable > 0)
+                        query.TotalEntitiesAllocable += 1;
+                    budgetAvailable -= entityElement.BudgetRequired;
+                }
+                if (budgetAvailable < 0)
+                {
+                    query2.BudgetRequired = -1 * budgetAvailable;
+                }
+                orgMaintEntitiesContext.SaveChanges();
+
+            }
+            return true;
+        }
         public bool AllocateFunds(Double fundsForAllocation)
         {
 
