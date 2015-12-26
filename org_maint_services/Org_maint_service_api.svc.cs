@@ -104,9 +104,9 @@ namespace org_maint_services
             if (query == null)
             {
                 EntitySummary newEntitySummary = new EntitySummary();
-                entityStatus.TotalEntities = newEntitySummary.TotalEntities = 100000;
-                entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 100000;
-                entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 200000;
+                entityStatus.TotalEntities = newEntitySummary.TotalEntities = 0;
+                entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 00;
+                entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 00;
                 entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
                 entityStatus.DateUpdatedString = newEntitySummary.DateUpdated.ToShortDateString();
 
@@ -161,7 +161,7 @@ namespace org_maint_services
                     new EntityBudgetPriorityContract
                     {
                         EntityBudgetPriorityID = rec.EntityBudgetPriorityID,
-                        EntityName = rec.EntityName,
+                        EntityName = rec.EntityName, 
                         BudgetAllocated = rec.BudgetAllocated,
                         BudgetRequired = rec.BudgetRequired,
                         Priority = rec.Priority,
@@ -185,6 +185,7 @@ namespace org_maint_services
                     {
                         EntityFinanceSummaryID = rec.EntityFinanceSummaryID,
                         EntityName = rec.EntityName,
+                        EntityCategory = rec.EntityCategory,
                         BudgetAllocated = rec.BudgetAllocated,
                         BudgetRequired = rec.BudgetRequired,
                         Priority = rec.Priority,
@@ -246,7 +247,7 @@ namespace org_maint_services
                 BudgetStatu budgStatu = new BudgetStatu();
                 budgStatu.BudgetAvailable = newContributorRecord.ConvertedAmount;
                 budgStatu.BudgetAllocated = 0;
-                budgStatu.BudgetRequired = 20000;
+                budgStatu.BudgetRequired = 00;
                 budgStatu.DateUpdated = DateTime.Now;
                 orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
 
@@ -318,6 +319,8 @@ namespace org_maint_services
                 EntityName = entity.EntityName,
                 BudgetAllocated = entity.BudgetAllocated,
                 BudgetRequired = entity.BudgetRequired,
+                BudgetUsed = entity.BudgetUsed,
+                EntityCategory = entity.EntityCategory,
                 Priority = entity.Priority,
                 DateUpdated = DateTime.Now,
                 Comments = entity.Comments
@@ -325,7 +328,19 @@ namespace org_maint_services
 
             orgMaintEntitiesContext.EntityFinanceSummaries.Add(newEntityRecord);
             orgMaintEntitiesContext.SaveChanges();
+            //var query = (from entitySummary in orgMaintEntitiesContext.EntitySummaries select entitySummary).FirstOrDefault();
+            //if (query == null)
+            //{
+            //    EntitySummary newEntitySummary = new EntitySummary();
+            //    entityStatus.TotalEntities = newEntitySummary.TotalEntities = 0;
+            //    entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 00;
+            //    entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 00;
+            //    entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
+            //    entityStatus.DateUpdatedString = newEntitySummary.DateUpdated.ToShortDateString();
 
+            //    orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
+            //    orgMaintEntitiesContext.SaveChanges();
+            //}
             // Dont need since we are not creating a budget transaction
             //BudgetHistory newBudgetHistoryRecord = new BudgetHistory
             //{
@@ -358,6 +373,11 @@ namespace org_maint_services
             return true;
         }
 
+        public bool UpdateEntitySummary(List<EntityItemExpens> entityItemExpenses, EntityFinanceSummary entity)
+        {
+            return true;
+        }
+
         public bool AllocateFunds(Double fundsForAllocation)
         {
 
@@ -369,7 +389,7 @@ namespace org_maint_services
                 budgStatu.BudgetAvailable = 0;
                 budgStatu.BudgetAllocated = 0;
                 budgStatu.DateUpdated = DateTime.Now;
-                var queryentity = (from entityRequired in orgMaintEntitiesContext.EntityBudgetPriorities select entityRequired.BudgetRequired).Sum();
+                var queryentity = (from entityRequired in orgMaintEntitiesContext.EntityFinanceSummaries select entityRequired.BudgetRequired).Sum();
                 budgStatu.BudgetRequired = (decimal)queryentity;
                 orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
 
@@ -377,7 +397,7 @@ namespace org_maint_services
             else
             {
                 decimal totalFundAllocated = 0M;
-                var queryentities = (from entityRequired in orgMaintEntitiesContext.EntityBudgetPriorities
+                var queryentities = (from entityRequired in orgMaintEntitiesContext.EntityFinanceSummaries
                                      where entityRequired.BudgetRequired > 0
                                      orderby entityRequired.Priority, entityRequired.BudgetRequired descending
                                      select entityRequired);
@@ -416,6 +436,7 @@ namespace org_maint_services
             }
             return true;
         }
+       
 
         public bool AllocateFunds2(AllocateWrapper fundsForAllocationBox)
         {
@@ -429,7 +450,7 @@ namespace org_maint_services
                 budgStatu.BudgetAvailable = 0;
                 budgStatu.BudgetAllocated = 0;
                 budgStatu.DateUpdated = DateTime.Now;
-                var queryentity = (from entityRequired in orgMaintEntitiesContext.EntityBudgetPriorities select entityRequired.BudgetRequired).Sum();
+                var queryentity = (from entityRequired in orgMaintEntitiesContext.EntityFinanceSummaries select entityRequired.BudgetRequired).Sum();
                 budgStatu.BudgetRequired = (decimal)queryentity;
                 orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
 
@@ -437,7 +458,7 @@ namespace org_maint_services
             else
             {
                 decimal totalFundAllocated = 0M;
-                var queryentities = (from entityRequired in orgMaintEntitiesContext.EntityBudgetPriorities
+                var queryentities = (from entityRequired in orgMaintEntitiesContext.EntityFinanceSummaries
                                      where entityRequired.BudgetRequired > 0
                                      orderby entityRequired.Priority, entityRequired.BudgetRequired descending
                                      select entityRequired);

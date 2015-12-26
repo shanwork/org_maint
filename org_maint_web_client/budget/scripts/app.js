@@ -2,7 +2,7 @@
     
    
     var budgetApp = angular.module('org_maint_budget', ['ngRoute']);
-    budgetApp.value('connectToService', 'false');
+    budgetApp.value('connectToService', 'true');
     budgetApp.config(function ($routeProvider) {
         $routeProvider
             .when('/entities', {

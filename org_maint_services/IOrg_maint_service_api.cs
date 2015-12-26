@@ -58,6 +58,9 @@ namespace org_maint_services
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntitySummary", BodyStyle = WebMessageBodyStyle.Bare)]
         bool AddEntitySummary(EntityFinanceSummary entity);
 
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/UpdateEntitySummary", BodyStyle = WebMessageBodyStyle.Wrapped)]
+        bool UpdateEntitySummary(List<EntityItemExpens> entityItemExpenses, EntityFinanceSummary entity);
 
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AllocateFunds", BodyStyle = WebMessageBodyStyle.Bare)]

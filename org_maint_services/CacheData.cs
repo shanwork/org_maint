@@ -34,9 +34,9 @@ namespace org_maint_services
             if (query == null)
             {
                 BudgetStatu budgStatu = new BudgetStatu();
-                budgStatu.BudgetAvailable = budgetStatus.BudgetAvailable = 10000;
+                budgStatu.BudgetAvailable = budgetStatus.BudgetAvailable = 0;
                 budgStatu.BudgetAllocated = budgetStatus.BudgetAllocated = 0;
-                budgStatu.BudgetRequired = budgetStatus.BudgetRequired = 20000;
+                budgStatu.BudgetRequired = budgetStatus.BudgetRequired = 0;
                 budgStatu.DateUpdated = DateTime.Now;
                 orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
                 orgMaintEntitiesContext.SaveChanges();

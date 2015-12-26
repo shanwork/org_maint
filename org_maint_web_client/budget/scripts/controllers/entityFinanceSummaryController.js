@@ -60,8 +60,11 @@
         $scope.addEntity = function () {
             var Entity = {
                 EntityName: $scope.EntityName,
+                EntityCategory: $scope.EntityCategory,
                 BudgetAllocated: parseFloat($scope.BudgetAllocated),
                 BudgetRequired: parseFloat($scope.BudgetRequired),
+                BudgetUsed: parseFloat($scope.BudgetUsed),
+                
                 Priority: parseInt($scope.Priority),
                 Comments: $scope.Comments
                 // will add date later

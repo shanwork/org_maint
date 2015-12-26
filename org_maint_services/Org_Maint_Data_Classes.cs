@@ -141,6 +141,10 @@ namespace org_maint_services
         public string EntityName { get; set; }
 
         [DataMember]
+        public string EntityCategory { get; set; }
+
+
+        [DataMember]
         public int Priority { get; set; }
 
         [DataMember]
@@ -150,6 +154,9 @@ namespace org_maint_services
         public decimal BudgetAllocated { get; set; }
 
         [DataMember]
+        public decimal BudgetUsed { get; set; }
+
+        [DataMember]
         public string DateUpdatedString { get; set; }
 
         [DataMember]
@@ -157,6 +164,36 @@ namespace org_maint_services
 
         [DataMember]
         public string Comments { get; set; }
+    }
+    [DataContract]
+    public partial class EntityItemExpensesContract
+    {
+        [DataMember]
+        public int EntityItemID { get; set; }
+
+        [DataMember]
+        public int EntityFinanceSummaryID { get; set; }
+
+        [DataMember]
+        public string EntityItemName { get; set; }
+
+        [DataMember]
+        public string EntityItemDetail { get; set; }
+
+        [DataMember]
+        public decimal EntityItemBudgetRequired { get; set; }
+
+        [DataMember]
+        public decimal EntityItemBudgetAllocated { get; set; }
+
+        [DataMember]
+        public short EntityItemPriority { get; set; }
+
+        [DataMember]
+        public Nullable<System.DateTime> EntityItemDateUpdated { get; set; }
+
+        [DataMember]
+        public string EntityItemComments { get; set; }
     }
     // work around class since allocateFunds(double) doesnt work
     [Serializable]

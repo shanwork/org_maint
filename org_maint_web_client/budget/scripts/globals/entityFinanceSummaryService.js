@@ -65,6 +65,7 @@
           }
           this.addEntity = function (Entity) {
               if (connectToService == 'true') {
+                  alert('hi');
                   var request = $http({
                       method: "post",
                       url: "http://localhost:58778/Org_maint_service_api.svc/AddEntitySummary",
