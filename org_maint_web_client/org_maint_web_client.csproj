@@ -73,6 +73,7 @@
     <Content Include="app\views\orders.html" />
     <Content Include="budget\home.html" />
     <Content Include="budget\scripts\app.js" />
+    <Content Include="budget\scripts\controllers\aboutThisSiteController.js" />
     <Content Include="budget\scripts\controllers\budgetStatusController.js" />
     <Content Include="budget\scripts\controllers\budgetStatusController_backup.js" />
     <Content Include="budget\scripts\controllers\contributorController.js" />
@@ -91,9 +92,12 @@
     <Content Include="budget\views\entityExpenses.html" />
     <Content Include="budget\views\entityList.html" />
     <Content Include="budget\views\entityFinanceSummaries.html" />
+    <Content Include="budget\views\aboutThisSite.html" />
     <Content Include="budget\views\orders.html" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\use-my-software.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\use-my-software.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

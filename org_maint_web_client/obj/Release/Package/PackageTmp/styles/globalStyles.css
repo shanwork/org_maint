@@ -1,0 +1,25 @@
+﻿body {
+}
+.completed
+{
+    background-color:#77AA77;
+    border: solid green 1px;
+}
+.notStarted
+{
+    background-color:#AB7A7A;
+    border: solid red 1px;
+}
+.wip
+{
+    background-color:#ABAB7A;
+    border: solid yellow 1px;
+}
+.editCell{
+    background-color:gray;
+}
+table { width:3200px; max-width:200px; border: solid 2px black;}
+td {   max-width:200px; border: solid 1px black;}
+inpout {  width:1110px;}
+ul {background-color:aqua;}
+li {width:auto; margin:15px; font-weight:bold;}
