@@ -65,6 +65,20 @@
           <Property Name="DateUpdated" Type="datetime" />
           <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="EntityItemExpenses">
+          <Key>
+            <PropertyRef Name="EntityItemID" />
+          </Key>
+          <Property Name="EntityItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EntityFinanceSummaryID" Type="int" Nullable="false" />
+          <Property Name="EntityItemName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="EntityItemDetail" Type="nvarchar" MaxLength="256" />
+          <Property Name="EntityItemBudgetRequired" Type="money" Nullable="false" />
+          <Property Name="EntityItemBudgetAllocated" Type="money" Nullable="false" />
+          <Property Name="EntityItemPriority" Type="smallint" Nullable="false" />
+          <Property Name="EntityItemDateUpdated" Type="smalldatetime" />
+          <Property Name="EntityItemComments" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="EntitySummary">
           <Key>
             <PropertyRef Name="EntitySummaryId" />
@@ -82,6 +96,7 @@
           <EntitySet Name="Contributor" EntityType="Self.Contributor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntityBudgetPriority" EntityType="Self.EntityBudgetPriority" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntityFinanceSummary" EntityType="Self.EntityFinanceSummary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntityItemExpenses" EntityType="Self.EntityItemExpenses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntitySummary" EntityType="Self.EntitySummary" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -152,6 +167,7 @@
           <EntitySet Name="EntityBudgetPriorities" EntityType="Self.EntityBudgetPriority" />
           <EntitySet Name="EntitySummaries" EntityType="Self.EntitySummary" />
           <EntitySet Name="EntityFinanceSummaries" EntityType="Org_MaintModel.EntityFinanceSummary" />
+          <EntitySet Name="EntityItemExpenses" EntityType="Org_MaintModel.EntityItemExpens" />
         </EntityContainer>
         <EntityType Name="EntityFinanceSummary">
           <Key>
@@ -166,6 +182,20 @@
           <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="BudgetUsed" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="EntityCategory" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EntityItemExpens">
+          <Key>
+            <PropertyRef Name="EntityItemID" />
+          </Key>
+          <Property Name="EntityItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EntityFinanceSummaryID" Type="Int32" Nullable="false" />
+          <Property Name="EntityItemName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EntityItemDetail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EntityItemBudgetRequired" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="EntityItemBudgetAllocated" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="EntityItemPriority" Type="Int16" Nullable="false" />
+          <Property Name="EntityItemDateUpdated" Type="DateTime" Precision="0" />
+          <Property Name="EntityItemComments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -247,6 +277,21 @@
                 <ScalarProperty Name="Priority" ColumnName="Priority" />
                 <ScalarProperty Name="EntityName" ColumnName="EntityName" />
                 <ScalarProperty Name="EntityFinanceSummaryID" ColumnName="EntityFinanceSummaryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntityItemExpenses">
+            <EntityTypeMapping TypeName="Org_MaintModel.EntityItemExpens">
+              <MappingFragment StoreEntitySet="EntityItemExpenses">
+                <ScalarProperty Name="EntityItemComments" ColumnName="EntityItemComments" />
+                <ScalarProperty Name="EntityItemDateUpdated" ColumnName="EntityItemDateUpdated" />
+                <ScalarProperty Name="EntityItemPriority" ColumnName="EntityItemPriority" />
+                <ScalarProperty Name="EntityItemBudgetAllocated" ColumnName="EntityItemBudgetAllocated" />
+                <ScalarProperty Name="EntityItemBudgetRequired" ColumnName="EntityItemBudgetRequired" />
+                <ScalarProperty Name="EntityItemDetail" ColumnName="EntityItemDetail" />
+                <ScalarProperty Name="EntityItemName" ColumnName="EntityItemName" />
+                <ScalarProperty Name="EntityFinanceSummaryID" ColumnName="EntityFinanceSummaryID" />
+                <ScalarProperty Name="EntityItemID" ColumnName="EntityItemID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

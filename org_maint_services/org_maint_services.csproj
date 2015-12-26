@@ -118,6 +118,9 @@
     <Compile Include="Model\EntityFinanceSummary.cs">
       <DependentUpon>Org_Maint_EM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\EntityItemExpens.cs">
+      <DependentUpon>Org_Maint_EM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\EntitySummary.cs">
       <DependentUpon>Org_Maint_EM.tt</DependentUpon>
     </Compile>

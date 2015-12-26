@@ -64,6 +64,7 @@
     <EntitySet Name="EntityBudgetPriorities" EntityType="Self.EntityBudgetPriority" />
     <EntitySet Name="EntitySummaries" EntityType="Self.EntitySummary" />
     <EntitySet Name="EntityFinanceSummaries" EntityType="Org_MaintModel.EntityFinanceSummary" />
+    <EntitySet Name="EntityItemExpenses" EntityType="Org_MaintModel.EntityItemExpens" />
   </EntityContainer>
   <EntityType Name="EntityFinanceSummary">
     <Key>
@@ -78,5 +79,19 @@
     <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="BudgetUsed" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="EntityCategory" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EntityItemExpens">
+    <Key>
+      <PropertyRef Name="EntityItemID" />
+    </Key>
+    <Property Name="EntityItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EntityFinanceSummaryID" Type="Int32" Nullable="false" />
+    <Property Name="EntityItemName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EntityItemDetail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EntityItemBudgetRequired" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="EntityItemBudgetAllocated" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="EntityItemPriority" Type="Int16" Nullable="false" />
+    <Property Name="EntityItemDateUpdated" Type="DateTime" Precision="0" />
+    <Property Name="EntityItemComments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

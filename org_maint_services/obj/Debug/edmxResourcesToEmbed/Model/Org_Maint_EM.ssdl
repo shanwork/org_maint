@@ -60,6 +60,20 @@
     <Property Name="DateUpdated" Type="datetime" />
     <Property Name="Comments" Type="nvarchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="EntityItemExpenses">
+    <Key>
+      <PropertyRef Name="EntityItemID" />
+    </Key>
+    <Property Name="EntityItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EntityFinanceSummaryID" Type="int" Nullable="false" />
+    <Property Name="EntityItemName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="EntityItemDetail" Type="nvarchar" MaxLength="256" />
+    <Property Name="EntityItemBudgetRequired" Type="money" Nullable="false" />
+    <Property Name="EntityItemBudgetAllocated" Type="money" Nullable="false" />
+    <Property Name="EntityItemPriority" Type="smallint" Nullable="false" />
+    <Property Name="EntityItemDateUpdated" Type="smalldatetime" />
+    <Property Name="EntityItemComments" Type="nvarchar" MaxLength="500" />
+  </EntityType>
   <EntityType Name="EntitySummary">
     <Key>
       <PropertyRef Name="EntitySummaryId" />
@@ -77,6 +91,7 @@
     <EntitySet Name="Contributor" EntityType="Self.Contributor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EntityBudgetPriority" EntityType="Self.EntityBudgetPriority" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EntityFinanceSummary" EntityType="Self.EntityFinanceSummary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntityItemExpenses" EntityType="Self.EntityItemExpenses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EntitySummary" EntityType="Self.EntitySummary" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

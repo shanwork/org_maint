@@ -31,5 +31,6 @@ namespace org_maint_services.Model
         public virtual DbSet<EntityBudgetPriority> EntityBudgetPriorities { get; set; }
         public virtual DbSet<EntitySummary> EntitySummaries { get; set; }
         public virtual DbSet<EntityFinanceSummary> EntityFinanceSummaries { get; set; }
+        public virtual DbSet<EntityItemExpens> EntityItemExpenses { get; set; }
     }
 }

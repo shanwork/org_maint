@@ -78,5 +78,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EntityItemExpenses">
+      <EntityTypeMapping TypeName="Org_MaintModel.EntityItemExpens">
+        <MappingFragment StoreEntitySet="EntityItemExpenses">
+          <ScalarProperty Name="EntityItemComments" ColumnName="EntityItemComments" />
+          <ScalarProperty Name="EntityItemDateUpdated" ColumnName="EntityItemDateUpdated" />
+          <ScalarProperty Name="EntityItemPriority" ColumnName="EntityItemPriority" />
+          <ScalarProperty Name="EntityItemBudgetAllocated" ColumnName="EntityItemBudgetAllocated" />
+          <ScalarProperty Name="EntityItemBudgetRequired" ColumnName="EntityItemBudgetRequired" />
+          <ScalarProperty Name="EntityItemDetail" ColumnName="EntityItemDetail" />
+          <ScalarProperty Name="EntityItemName" ColumnName="EntityItemName" />
+          <ScalarProperty Name="EntityFinanceSummaryID" ColumnName="EntityFinanceSummaryID" />
+          <ScalarProperty Name="EntityItemID" ColumnName="EntityItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
