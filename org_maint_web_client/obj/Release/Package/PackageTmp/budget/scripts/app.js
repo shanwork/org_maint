@@ -3,6 +3,7 @@
    
     var budgetApp = angular.module('org_maint_budget', ['ngRoute']);
     budgetApp.value('connectToService', 'false');
+    budgetApp.value('configuration', { imMemoryData: 'yes', verbose: 'yes' });
     budgetApp.config(function ($routeProvider) {
         $routeProvider
             .when('/entities', {
@@ -14,8 +15,8 @@
                 templateUrl: 'views/entityFinanceSummaries.html'
             })
              .when('/entityExpenses/:EntityFinanceSummaryID/:EntityName', {
-                 controller: 'EntityExpensesController',
-                 templateUrl: 'views/entityExpenses.html'
+                 controller: 'EntityItemExpensesController',
+                 templateUrl: 'views/entityItemExpenses.html'
              })
             .when('/contributors', {
                 controller: 'ContributorController',

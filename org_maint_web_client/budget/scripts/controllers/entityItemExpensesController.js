@@ -6,8 +6,19 @@
             $scope.EntityName = $routeParams.EntityName;
         else
             $scope.EntityName = ' New Entity';
-        if ($routeParams.EntityFinanceSummaryID != '-1')
-        $scope.entity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
+        if ($routeParams.EntityFinanceSummaryID != '-1') {
+            if (connectToService == 'true') {
+                var promiseGetEntity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
+                promiseGetEntity.then(function (entityStatusDb) { $scope.entity = entityStatusDb.data; },
+                 function (errorPl) {
+                     //   $log.error('Some Error in Getting Records.', errorPl);
+                 });
+                
+            }
+            else {
+                $scope.entity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
+            }
+        }
         $scope.addEntityItem = function () {
             if ($routeParams.EntityFinanceSummaryID == '-1')
             {

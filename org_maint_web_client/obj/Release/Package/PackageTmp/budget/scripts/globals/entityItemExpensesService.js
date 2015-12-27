@@ -1,6 +1,6 @@
 ﻿(function () {
     angular.module('org_maint_budget')
-         .service('EntityExpensesService', function ($http, $q, connectToService) {
+         .service('EntityItemExpensesService', function ($http, $q, connectToService) {
              var entityItemList = [];
              this.getEntityItemList = function () {
                  if (connectToService == 'true') {

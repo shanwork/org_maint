@@ -36,9 +36,9 @@ namespace org_maint_services
             if (query == null)
             {
                 BudgetStatu budgStatu = new BudgetStatu();
-                budgStatu.BudgetAvailable = budgetStatus.BudgetAvailable = 10000;
+                budgStatu.BudgetAvailable = budgetStatus.BudgetAvailable = 0;
                 budgStatu.BudgetAllocated = budgetStatus.BudgetAllocated = 0;
-                budgStatu.BudgetRequired = budgetStatus.BudgetRequired = 20000;
+                budgStatu.BudgetRequired = budgetStatus.BudgetRequired = 00;
                 budgStatu.DateUpdated = DateTime.Now;
                 orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
                 orgMaintEntitiesContext.SaveChanges();
@@ -115,7 +115,7 @@ namespace org_maint_services
             }
            
             entityStatus.TotalEntities = query.TotalEntities;
-                entityStatus.TotalEntities = query.TotalEntitiesAllocable;
+                entityStatus.TotalEntitiesAllocable = query.TotalEntitiesAllocable;
                 entityStatus.TotalEntitiesAllocated = query.TotalEntitiesAllocated;
                 entityStatus.TotalEntitiesUnallocated = query.TotalEntitiesUnallocated;
                 entityStatus.DateUpdated = query.DateUpdated;
@@ -273,7 +273,27 @@ namespace org_maint_services
             });
             return entityBudgetPriorityList;
         }
+        public EntityFinanceSummaryContract GetEntity(string EntityFinanceSummaryID)
+        {
+           EntityFinanceSummaryContract entity= new EntityFinanceSummaryContract();
+            var query = (from entityFinanceSummariesElement in orgMaintEntitiesContext.EntityFinanceSummaries
+                         where entityFinanceSummariesElement.EntityFinanceSummaryID == int.Parse(EntityFinanceSummaryID)
+                         select entityFinanceSummariesElement).FirstOrDefault(); ;
+            if (query != null)
+            {
+                entity.EntityFinanceSummaryID = query.EntityFinanceSummaryID;
+                entity.EntityName = entity.EntityName;
+                entity.EntityCategory = query.EntityCategory;
+                entity.Comments = query.Comments;
+                entity.BudgetAllocated = query.BudgetAllocated;
+                entity.BudgetRequired = query.BudgetRequired;
+                entity.BudgetUsed = query.BudgetUsed;
+                entity.Priority = query.Priority;
 
+
+            }
+            return entity ;
+        }
         public List<EntityFinanceSummaryContract> GetEntitySummaryList()
         {
             List<EntityFinanceSummaryContract> entityFinanceSummariesList = new List<EntityFinanceSummaryContract>();
@@ -288,6 +308,7 @@ namespace org_maint_services
                         EntityCategory = rec.EntityCategory,
                         BudgetAllocated = rec.BudgetAllocated,
                         BudgetRequired = rec.BudgetRequired,
+                        BudgetUsed = rec.BudgetUsed,
                         Priority = rec.Priority,
                         DateUpdated = rec.DateUpdated,
                         DateUpdatedString = rec.DateUpdated != null ? ((DateTime)rec.DateUpdated).ToShortDateString() : "",
@@ -358,6 +379,7 @@ namespace org_maint_services
                 query.DateUpdated = (DateTime)(DateTime)(newContributorRecord.DateDeposited == null ? DateTime.Now : newContributorRecord.DateDeposited);
             }
             orgMaintEntitiesContext.SaveChanges();
+            updateEntityStatus();
             return true;
         }
 
@@ -428,31 +450,9 @@ namespace org_maint_services
 
             orgMaintEntitiesContext.EntityFinanceSummaries.Add(newEntityRecord);
             orgMaintEntitiesContext.SaveChanges();
-            updateEntityStatus(orgMaintEntitiesContext.EntityFinanceSummaries.Count());
-            //var query = (from entitySummary in orgMaintEntitiesContext.EntitySummaries select entitySummary).FirstOrDefault();
-            //if (query == null)
-            //{
-            //    EntitySummary newEntitySummary = new EntitySummary();
-            //    entityStatus.TotalEntities = newEntitySummary.TotalEntities = 0;
-            //    entityStatus.TotalEntitiesAllocable = newEntitySummary.TotalEntitiesAllocable = 00;
-            //    entityStatus.TotalEntitiesUnallocated = newEntitySummary.TotalEntitiesUnallocated = 00;
-            //    entityStatus.DateUpdated = newEntitySummary.DateUpdated = DateTime.Now;
-            //    entityStatus.DateUpdatedString = newEntitySummary.DateUpdated.ToShortDateString();
+            updateEntityStatus();
+           
 
-            //    orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
-            //    orgMaintEntitiesContext.SaveChanges();
-            //}
-            // Dont need since we are not creating a budget transaction
-            //BudgetHistory newBudgetHistoryRecord = new BudgetHistory
-            //{
-            //    Amount = newEntityRecord.BudgetRequired,
-            //    DebitCredit = "Debit",
-            //    Date = (DateTime)newEntityRecord.DateUpdated,
-            //    Comments = newEntityRecord.Comments,
-            //    Principal = newEntityRecord.EntityName
-            //};
-            //orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
-            //orgMaintEntitiesContext.SaveChanges();
 
             var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
             if (query == null)
@@ -479,7 +479,7 @@ namespace org_maint_services
             return true;
         }
         static bool onOff = true;
-        public bool updateEntityStatus(int totalEntities=-1)
+        public bool updateEntityStatus()
         {
             EntitySummaryContract entityStatus = new EntitySummaryContract();
             var query = (from entitySummary in orgMaintEntitiesContext.EntitySummaries select entitySummary).FirstOrDefault();
@@ -494,18 +494,15 @@ namespace org_maint_services
 
                 orgMaintEntitiesContext.EntitySummaries.Add(newEntitySummary);
                 orgMaintEntitiesContext.SaveChanges();
+                query = newEntitySummary;
             }
-            if (Org_Maint_Service.onOff == true)
-            {
-                query.TotalEntities =   0;
-                query.TotalEntitiesAllocable =    00;
-                query.TotalEntitiesUnallocated =  00;
-                query.DateUpdated =  DateTime.Now;
-                  Org_Maint_Service.onOff = false;
-            }
-            if (totalEntities >= 0)
-            {
-                List<EntityFinanceSummaryContract> entityList = GetEntitySummaryList();
+            query.TotalEntities = 0;
+            query.TotalEntitiesAllocable =  00;
+            query.TotalEntitiesAllocated = 0;
+            query.TotalEntitiesUnallocated =   00;
+            query.DateUpdated =  DateTime.Now;
+            
+            List<EntityFinanceSummaryContract> entityList = GetEntitySummaryList();
                 decimal budgetAvailable = 0;
                 var query2 = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
                 if (query2 == null)
@@ -533,9 +530,10 @@ namespace org_maint_services
                 {
                     query2.BudgetRequired = -1 * budgetAvailable;
                 }
+            query.TotalEntitiesUnallocated = query.TotalEntities - (query.TotalEntitiesAllocable + query.TotalEntitiesAllocated);
                 orgMaintEntitiesContext.SaveChanges();
 
-            }
+           
             return true;
         }
         public bool AllocateFunds(Double fundsForAllocation)
@@ -597,7 +595,7 @@ namespace org_maint_services
             return true;
         }
        
-
+        // corerect one
         public bool AllocateFunds2(AllocateWrapper fundsForAllocationBox)
         {
 
@@ -665,6 +663,7 @@ namespace org_maint_services
                 //}
                 orgMaintEntitiesContext.SaveChanges();
             }
+            updateEntityStatus();
             return true;
         }
         public bool AllocateFunds3()

@@ -81,8 +81,10 @@
               }
           }
           this.getEntity = function (EntityFinanceSummaryID) {
+              alert(EntityFinanceSummaryID);
               if (connectToService == 'true') {
-                  // No operation contract
+                  return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntity/" + EntityFinanceSummaryID);//.success(function (response) { return response.value;});
+
               }
               else {
                   var entity = null;

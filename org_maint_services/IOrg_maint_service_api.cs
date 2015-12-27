@@ -47,6 +47,10 @@ namespace org_maint_services
         List<EntityFinanceSummaryContract> GetEntitySummaryList();
 
         [OperationContract]
+        [WebGet( RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetEntity/EntityFinanceSummaryID={EntityFinanceSummaryID}")]
+        EntityFinanceSummaryContract GetEntity(string EntityFinanceSummaryID);
+
+        [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddContributor",BodyStyle=WebMessageBodyStyle.Bare)]
         bool AddContributor(Contributor contributor);
 

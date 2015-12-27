@@ -1,8 +1,11 @@
 ﻿(function() {
-    var BudgetStatusController = function ($scope, BudgetStatusService, EntityFinanceSummaryService, connectToService) {
+    var BudgetStatusController = function ($scope, BudgetStatusService, EntityFinanceSummaryService, connectToService, configuration) {
          $scope.sortBy = 'Date';
          $scope.reverse = true;
-
+         if (configuration.verbose == 'yes')
+         {
+             $scope.readMe='This is the budget dashboard page, with budget history. Availanle is total budget that has come in but is not distributed. '
+         }
          $scope.doSort = function (propName) {
              $scope.sortBy = propName;
              $scope.reverse = !$scope.reverse;
@@ -95,7 +98,7 @@
        
        };
     
-    BudgetStatusController.$inject = ['$scope', 'BudgetStatusService', 'EntityFinanceSummaryService', 'connectToService'];
+    BudgetStatusController.$inject = ['$scope', 'BudgetStatusService', 'EntityFinanceSummaryService', 'connectToService','configuration'];
 
     angular.module('org_maint_budget')
       .controller('BudgetStatusController', BudgetStatusController);
