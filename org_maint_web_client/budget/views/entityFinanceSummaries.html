@@ -58,8 +58,9 @@
         <td class="editCell"><input type='text' data-ng-model="BudgetUsed" data-ng-init="0" /></td>
         <td class="editCell"><input type='text' data-ng-model="BudgetRequired" /></td>
         <td class="editCell"><input type='text' data-ng-model="Priority" /></td>
-        <td class="editCell">&nbsp;</td>
+        <td class="editCell">&nbsp;..</td>
         <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
+        <td class="editCell">&nbsp;..</td>
     </tr>
     <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
         <td width="50px">{{ entity.EntityFinanceSummaryID }}</td>

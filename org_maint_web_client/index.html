@@ -7,9 +7,9 @@
     <link href="styles/globalStyles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="container">
-        <header style="margin:10px;border: outset 3px;">
-            <nav class="navbar navbar-default">
+   
+        <header >
+            <nav class="navbar navbar-default" style="border:2px outset silver;">
                 <ul class="navbar navbar-nav">
                     <li><a href="index.html">About this site</a></li>
                     <li><a href="budget/home.html#/budgetStatus">Budget Status</a></li>
@@ -18,22 +18,24 @@
                 </ul>
             </nav>
         </header>
-
+     
         <para>
             <a name="top"><H1>Budgetting Website </H1></a>
             Hi, <p>
-                This website is being developed inspired by a desire to do something, in addition to merely work on upgrading and staying current with skills relevant to my profession.<p> A humanitarian effort like <a href="https://en.wikipedia.org/wiki/Naam_Foundation" target="_blank">NAAM movement for Farmer Suicides in Maharashtra (India)</a> has different ways by which we can help. 
-            Sometimes organized accounting may take a backseat to the more urgent needs and emotions to resolve things, help etc. Thus enters an idea into my head to use a subject matter to apply whatever I am in the process of learning.
-            <br />
+                This website is being developed inspired by a desire to do something, in addition to merely work on upgrading and staying current with skills relevant to my profession.
+            <p>
+                A humanitarian effort like <a href="https://en.wikipedia.org/wiki/Naam_Foundation" target="_blank">NAAM movement for Farmer Suicides in Maharashtra (India)</a> has different ways by which we can help.
+                Sometimes organized accounting may take a backseat to the more urgent needs and emotions to resolve things, help etc. Thus enters an idea into my head to use a subject matter to apply whatever I am in the process of learning.
+                <br />
 
-               At this point, this is a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc.
+                At this point, this is a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc.
             <p />
             While, as said, it was initiated with NAAM as an inspiration, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
             a list of items, say a transport service which maintains a bunch of trucks.<p />
             <a href="#Elements"><li>Components</a></li>
             <a href="#status"><li>Status</a></li>
             <a href="#technical"><li>Technical</a></li>
-           <a name="Elements"><h3>Components</h3></a>
+            <a name="Elements"><h3>Components</h3></a>
 
             I identified and am in the process of developing the following elements:
             </p>
@@ -59,21 +61,26 @@
 
             <a name="status"><h3>Status  </h3></a>
             <li>What you are seeing here is a proof of concept user interface not connected to a database with sample data.(clicking the browser refresh button will erase all the data you added, leaving you with the 'pre-loaded' sample data)  </li>
-            <li>I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
-                It's simply that I have been unable to get the bandwidth to publish the database and connecting service to the public website </li>
+            <li>
+                I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
+                It's simply that I have been unable to get the bandwidth to publish the database and connecting service to the public website
+            </li>
             <li>This update relationships are functional in this P.O.C.  e.g adding a contributor will update budget status.  </li>
             <li> The only flow that is not complete is the drill down for an entity - the coordination between the entity list page and detail page - item wise expense breakup - for each entity </li>
             <li> Another (quite obvious) item to be addressed is the styling, positioning and look and feel </li>
             <li> This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
             <li> Lot of hard coding, need to make more stuff configurable  </li>
-             <a href="#top">Top of page</a>
+            <a href="#top">Top of page</a>
 
 
             <a name="technical"><h3>Technical  </h3></a>
-            <li> The Web application UI is written in AngularJS.
-             The fully vertical version consumes a WCF web service which in turn talks to a Sql Server database through Entity Framework.
-            (I introduced a global variable in the angular code to switch between using in memory and dB data) </li>
-            <li> References and Thanks<br />
+            <li>
+                The Web application UI is written in AngularJS.
+                The fully vertical version consumes a WCF web service which in turn talks to a Sql Server database through Entity Framework.
+                (I introduced a global variable in the angular code to switch between using in memory and dB data)
+            </li>
+            <li>
+                References and Thanks<br />
                 <a href=https://www.udemy.com/angularjs-jumpstart/" target="_blank">Dan Wahlin Angular JumpStart course on Udemy</a><br />
                 <a href="http://www.c-sharpcorner.com/UploadFile/rahul4_saxena/crud-operation-in-mvc4-using-angularjs-and-wcf-rest-services/" target="_blank">
                     Rahul Saxena - CRUD Operations in MVC4 Using AngularJS and WCF REST Services on CSharpCorner
@@ -83,49 +90,12 @@
             <li> work on templatizing the names and other configurability, e.g. the terms 'contributor' and 'entity' will be made configurable and can be renamed 'Donor' and 'Village' or 'funding' and 'vehicle' </li>
             <li> Iteratively, bring in the data connectivity layers. Maybe I'll map a different version of the Webservice to static (cache) data stored in a Singleton.. </li>
             <li> Complete UI styling </li>
-            
+
             <h4>Sources on Github I'll mail you the link on demand</h4> mail me at shanwork2012@gmail.com<br />
             <a href="#top">Top of page</a>
         </para>
-    </div>
-    <ol style="width:700px; visibility:hidden;">
-        <table>
-            <tr></tr>
-
-        </table>
-        <li class="completed">Budget History and contributor list and add <b>implemented</b></li>
-        <li class="completed">
-            Update Budget History and Status with Contributor addition
-            <b> Implemented</b></li>
-        <li  class="completed">
-            UI and Web service connection Entity summary
-            <b><i>Implemented</i></b> *
-        </li>
-        <li  class="wip">
-            UI and Web service connection Allocate funds
-            <b><i>In Progress</i></b> *
-        </li>
-        <li  class="notStarted">
-            Complete logic from WebService to UI for Add or Update Entity
-            <b><i>Pending</i></b> *
-        </li>
-        <li  class="notStarted">
-            Clean up data and regenerate (add entities and contributors which will update the summaries)
-            <b><i>Pending</i></b>
-        </li>
-        <li  class="notStarted">
-            Styling
-            <b><i>Pending</i></b>
-        </li>
-        <li  class="notStarted">
-            Hosting / Deployment, etc
-            <b><i>Pending</i></b>
-        </li>
-
-            
-</ol>
-    * Keep on Same Page
-    <div ng-view></div>
+    
+   
      <script src="scripts/angular.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="scripts/app.js"></script>

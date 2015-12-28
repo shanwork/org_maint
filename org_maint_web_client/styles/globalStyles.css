@@ -1,4 +1,15 @@
 ﻿body {
+    background-color:#EEFFFF;
+    margin:20px;
+    padding:10px;
+    border:outset 3px #77AA77 ;
+    border-radius:6px;
+}
+header{
+     background-color:#EAEEEA;
+    padding:10px;
+    border:inset 2px #ABAB7A;
+    border-radius:4px;
 }
 .completed
 {
@@ -21,5 +32,5 @@
 table { width:3200px; max-width:200px; border: solid 2px black;}
 td {   max-width:200px; border: solid 1px black;}
 inpout {  width:1110px;}
-ul {background-color:aqua;}
+ul {background-color:#ffffff;}
 li {width:auto; margin:15px; font-weight:bold;}
