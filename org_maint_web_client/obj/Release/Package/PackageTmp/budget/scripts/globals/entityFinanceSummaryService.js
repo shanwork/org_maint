@@ -1,16 +1,36 @@
 ﻿(function () {
     /*
-     <th><input type="text" ng-model="entityFilter.EntityBudgetPriorityID" /></th>
-        <th><input type="text" ng-model="entityFilter.EntityName" /></th>
-        <th><input type="text" ng-model="entityFilter.BudgetAllocated"> </th>
-        <th> <input type="text" ng-model="entityFilter.BudgetRequired">  </th>
-        <th> <input type="text" ng-model="entityFilter.Priority">  </th>
-        <th> <input type="text" ng-model="entityFilter.DateUpdatedString">  </th>
-        <th> <input type="text" ng-model="entityFilter.Comments">  </th>
+   <td>{{ entity.EntityFinanceSummaryID }}</td>
+        <td>{{ entity.EntityName }}</td>
+        <td>{{ entity.EntityCategory }}</td>
+        <td>{{ entity.BudgetAllocated }} {{ entity.Currency }}</td>
+        <td>{{ entity.BudgetUsed }} {{ entity.Currency }}</td>
+        <td>{{ entity.BudgetRequired }}</td>
+        <td>{{ entity.Priority  }}</td>
+        <td>{{  entity.DateUpdatedString |date}}</td>
+        <td>{{  entity.Comments |date}}</td>
     */
     angular.module('org_maint_budget')
       .service('EntityFinanceSummaryService', function ($http, $q, connectToService, BudgetStatusService) {
-          var entityList = [];
+          var entityList = [
+          {
+              EntityFinanceSummaryID:1,
+              EntityName: 'Gaon1',
+              EntityCategory: 'Village',
+              BudgetAllocated: 0.0,
+              BudgetUsed: 0.0,
+              BudgetRequired: 1220.0,
+              Priority: 1,
+          },
+          {
+              EntityFinanceSummaryID: 2,
+              EntityName: 'Gaon2',
+              EntityCategory: 'Village',
+              BudgetAllocated: 0.0,
+              BudgetUsed: 0.0,
+              BudgetRequired: 11220.0,
+              Priority: 2,
+          }];
           var entityStatus = {
               TotalEntities: 0,
               TotalEntitiesAllocable: 0,
@@ -65,7 +85,7 @@
           }
           this.addEntity = function (Entity) {
               if (connectToService == 'true') {
-                  alert('hi');
+              //    alert('hi');
                   var request = $http({
                       method: "post",
                       url: "http://localhost:58778/Org_maint_service_api.svc/AddEntitySummary",
@@ -81,7 +101,7 @@
               }
           }
           this.getEntity = function (EntityFinanceSummaryID) {
-              alert(EntityFinanceSummaryID);
+              //alert(EntityFinanceSummaryID);
               if (connectToService == 'true') {
                   return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntity/" + EntityFinanceSummaryID);//.success(function (response) { return response.value;});
 

@@ -4,7 +4,14 @@
          $scope.reverse = true;
          if (configuration.verbose == 'yes')
          {
-             $scope.readMe='This is the budget dashboard page, with budget history. Availanle is total budget that has come in but is not distributed. '
+             $scope.readMeOverview = 'This is the budget dashboard page, with budget history.<br> ';
+             $scope.readMeOverview += 'Available is total budget that has come in but is not distributed.<br> ';
+             $scope.readMeOverview += 'Allocated is total budget that has been distributed.<br> ';
+             $scope.readMeOverview += 'Deficit is the amount that is not covered by available budget. The amount is driven by total unallocated budget and the number of entities (Entity Summaries  page) with required budget amount';
+             $scope.readmeHistory = "History - shows the list of contributions (''Credit'') and distributions (''Debit''). <br> "
+             $scope.readmeHistory = "When a contribution is added (''Contributors'' page), a ''Credit'' entry is added below. <br> "
+             $scope.readmeHistory += "When the ''Allocate'' button (above) is pressed, a number of ''Debit'' entries are added corresponding to the entities whose budgets are fulfilled.<br>"
+             $scope.readmeHistory += "(bug - the amount in the allocate edit box should reduce by the total amounts of debits)"
          }
          $scope.doSort = function (propName) {
              $scope.sortBy = propName;
@@ -54,13 +61,13 @@
                    if (fundToAllocate > 0.0) {
                       
                        var entityList = EntityFinanceSummaryService.getEntitiesSortedPriorityAAmountDList();
-                       alert(entityList.length);
+                 //      alert(entityList.length);
                        for (i = 0; i < entityList.length; i++) {
                            if (parseFloat(entityList[i].BudgetRequired) == 0.0)
                                continue;
                            if (fundToAllocate > 0.0) {
-                               alert(fundToAllocate);
-                               alert(fundRequired);
+                 //              alert(fundToAllocate);
+                //              alert(fundRequired);
 
                                var fundRequired = parseFloat(entityList[i].BudgetRequired);
                                if (fundToAllocate <= fundRequired)

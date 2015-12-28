@@ -1,8 +1,15 @@
 ﻿(function () {
-    var ContributorController = function ($scope, ContributorService, BudgetStatusService, EntityService, connectToService) {
+    var ContributorController = function ($scope, ContributorService, BudgetStatusService, EntityService, connectToService, configuration) {
+        if (configuration.verbose == 'yes') {
+            $scope.readMeOverview = 'This is the page for adding and listing contributions.<br> ';
+            $scope.readMeOverview += 'Enter Name, amount in decimal, currency and comments (optional) .<br> ';
+            $scope.readMeOverview += 'Adding a contributor adds an entry in Budget History as a  "Credit"  and adds to available budget ("Budget Status" page) .<br> ';
+            $scope.readMeOverview += '(At this point, only currency is INR, USD where original amount is multiplied by 60 and EUR - by 75 and there are no validations)';
+        }
+
         $scope.sortBy = 'DateReceived';
         $scope.reverse = true;
-
+        $scope.Currency = 'INR';
         $scope.doSort = function (propName) {
             $scope.sortBy = propName;
             $scope.reverse = !$scope.reverse;
@@ -71,7 +78,7 @@
         
   
 
-    ContributorController.$inject = ['$scope', 'ContributorService','BudgetStatusService', 'EntityService', 'connectToService'];
+    ContributorController.$inject = ['$scope', 'ContributorService', 'BudgetStatusService', 'EntityService', 'connectToService', 'configuration'];
 
     angular.module('org_maint_budget')
       .controller('ContributorController', ContributorController);

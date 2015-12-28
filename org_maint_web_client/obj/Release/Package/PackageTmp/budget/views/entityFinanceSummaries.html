@@ -1,4 +1,6 @@
-﻿<h2>Entities</h2><input type="button" click-Link="/entityExpenses/-1/-1" value="Add Entity with expense items" />
+﻿<h2>Entities</h2>
+<p ng-bind-html="readMeOverview"></p> 
+<input type="button" click-Link="/entityExpenses/-1/-1" value="Add Entity with expense items" />
 <table border="1" cellpadding="0" cellspacing="0" class="table">
     <tr>
         <th>Total</th>
@@ -25,7 +27,7 @@
 <input type="button" id="save" value="Save" data-ng-click="save()" /-->
 <table border="1" cellpadding="0" cellspacing="0" class="table table-striped">
     <tr>
-        <th ng-click="doSort('EntityFinanceSummaryID')">ID</th>
+        <th ng-click="doSort('EntityFinanceSummaryID')" width="50px">ID</th>
         <th ng-click="doSort('EntityName')">EntityName</th>
         <th ng-click="doSort('EntityCategory')">EntityCategory</th>
         <th ng-click="doSort('BudgetAllocated')">BudgetAllocated</th>
@@ -37,7 +39,7 @@
         <th>  &nbsp; </th>
 </tr>
     <tr>
-        <th><input type="text" ng-model="entityFilter.EntityFinanceSummaryID" /></th>
+        <th width="50px"><input type="text" ng-model="entityFilter.EntityFinanceSummaryID"   /></th>
         <th><input type="text" ng-model="entityFilter.EntityName" /></th>
         <th><input type="text" ng-model="entityFilter.EntityCategory" /></th>
         <th><input type="text" ng-model="entityFilter.BudgetAllocated"> </th>
@@ -48,8 +50,8 @@
         <th> <input type="text" ng-model="entityFilter.Comments">  </th>
         <th>  &nbsp; </th>
 </tr>
-    <tr>
-        <td class="editCell"><input type="button" id="save" value="Add Summary" data-ng-click="addEntity()" /> </td>
+    <tr> 
+        <td class="editCell" width="50px"><input type="button" id="save" value="Add Summary" data-ng-click="addEntity()" /> </td>
         <td class="editCell"><input type='text' data-ng-model="EntityName" /></td>
         <td class="editCell"><input type='text' data-ng-model="EntityCategory" /></td>
         <td class="editCell"><input type='text' data-ng-model="BudgetAllocated" data-ng-init="0" /></td>
@@ -60,12 +62,12 @@
         <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
     </tr>
     <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
-        <td>{{ entity.EntityFinanceSummaryID }}</td>
+        <td width="50px">{{ entity.EntityFinanceSummaryID }}</td>
         <td>{{ entity.EntityName }}</td>
         <td>{{ entity.EntityCategory }}</td>
         <td>{{ entity.BudgetAllocated }} {{ entity.Currency }}</td>
         <td>{{ entity.BudgetUsed }} {{ entity.Currency }}</td>
-     <td>{{ entity.BudgetRequired }}</td>
+        <td>{{ entity.BudgetRequired }}</td>
         <td>{{ entity.Priority  }}</td>
         <td>{{  entity.DateUpdatedString |date}}</td>
         <td>{{  entity.Comments |date}}</td>
