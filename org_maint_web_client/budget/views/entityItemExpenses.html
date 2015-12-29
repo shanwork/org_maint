@@ -17,14 +17,14 @@
     <tr>
         <td class="editCell"><input type="button" id="save" value="Update" data-ng-click="updateEntity()" /> </td>
         <td>{{ EntityFinanceSummaryID }}</td>
-        <td class="editCell"><input type='text' data-ng-model="EntityName" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.EntityName" /></td>
         <td class="editCell"><input type='text' data-ng-model="entity.EntityCategory" /></td>
-        <td class="editCell"><input type='text' data-ng-model="BudgetAllocated" data-ng-init="0" /></td>
-        <td class="editCell"><input type='text' data-ng-model="BudgetUsed" data-ng-init="0" /></td>
-        <td class="editCell"><input type='text' data-ng-model="BudgetRequired" /></td>
-        <td class="editCell"><input type='text' data-ng-model="Priority" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.BudgetAllocated" data-ng-init="0" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.BudgetUsed" data-ng-init="0" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.BudgetRequired" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.Priority" /></td>
         <td class="editCell">&nbsp;</td>
-        <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.Comments" /></td>
     </tr>
     <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
  

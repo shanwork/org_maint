@@ -17,21 +17,15 @@
             }
             else {
                 $scope.entity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
+               
             }
         }
-        $scope.addEntityItem = function () {
+        $scope.updateEntity = function () {
             if ($routeParams.EntityFinanceSummaryID == '-1')
             {
-                var Entity = {
-                    EntityName: $scope.EntityName,
-                    BudgetAllocated: parseFloat($scope.BudgetAllocated),
-                    BudgetRequired: parseFloat($scope.BudgetRequired),
-                    Priority: parseInt($scope.Priority),
-                    Comments: $scope.Comments
-                    // will add date later
-                };
+                
                 if (connectToService == 'true') {
-                    var promisePost = EntityFinanceSummaryService.addEntity(Entity);
+                    var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
                     promisePost.then(function (pl) {
                         $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
                    //     GetAllRecords();
@@ -42,37 +36,41 @@
                     });
                 }
                 else {
-                    EntityFinanceSummaryService.addEntity(Entity);
+                    EntityFinanceSummaryService.addEntity($scope.entity);
               //      GetAllRecords();
                 }
                 $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
             }
-            var EntityItem = {
-                EntityItemName: $scope.EntityItemName,
-                EntityItemDetail: $scope.EntityItemDetail,
-                EntityItemName: $scope.EntityItemName,
-                EntityItemBudgetAllocated: parseFloat($scope.EntityItemBudgetAllocated),
-                EntityItemBudgetRequired: parseFloat($scope.EntityItemBudgetRequired),
-                EntityItemPriority: parseInt($scope.EntityItemPriority),
-                EntityItemDateUpdated: parseInt($scope.EntityItemDateUpdated),
-                EntityItemComments: $scope.EntityItemComments
-                // will add date later
-            };
-            alert($scope.entityItemList.length);
-            //if (connectToService == 'true') {
-            //    var promisePost = EntityFinanceSummaryService.addEntity(Entity);
-            //    promisePost.then(function (pl) {
-            //        $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
-            //        GetAllRecords();
+            else 
+            {
+                EntityFinanceSummaryService.updateEntity($scope.entity);
+            }
+            //var EntityItem = {
+            //    EntityItemName: $scope.EntityItemName,
+            //    EntityItemDetail: $scope.EntityItemDetail,
+            //    EntityItemName: $scope.EntityItemName,
+            //    EntityItemBudgetAllocated: parseFloat($scope.EntityItemBudgetAllocated),
+            //    EntityItemBudgetRequired: parseFloat($scope.EntityItemBudgetRequired),
+            //    EntityItemPriority: parseInt($scope.EntityItemPriority),
+            //    EntityItemDateUpdated: parseInt($scope.EntityItemDateUpdated),
+            //    EntityItemComments: $scope.EntityItemComments
+            //    // will add date later
+            //};
+            //alert($scope.entityItemList.length);
+            ////if (connectToService == 'true') {
+            ////    var promisePost = EntityFinanceSummaryService.addEntity(Entity);
+            ////    promisePost.then(function (pl) {
+            ////        $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
+            ////        GetAllRecords();
 
-            //        //   ClearModels();
-            //    }, function (err) {
-            //        console.log("Some error Occured" + err);
-            //    });
-            //}
-            //else {
-            EntityItem.EntityItemID = $scope.entityItemList.length + 1;
-                $scope.entityItemList.push(EntityItem);
+            ////        //   ClearModels();
+            ////    }, function (err) {
+            ////        console.log("Some error Occured" + err);
+            ////    });
+            ////}
+            ////else {
+            //EntityItem.EntityItemID = $scope.entityItemList.length + 1;
+            //    $scope.entityItemList.push(EntityItem);
           //  }
         };
     };

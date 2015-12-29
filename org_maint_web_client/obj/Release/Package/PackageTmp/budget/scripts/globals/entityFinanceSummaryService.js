@@ -100,6 +100,34 @@
                   this.updateEntityStatus();
               }
           }
+          this.updateEntity = function (Entity) {
+              if (connectToService == 'true') {
+                  //    alert('hi');
+                  var request = $http({
+                      method: "post",
+                      url: "http://localhost:58778/Org_maint_service_api.svc/AddEntitySummary",
+                      data: Entity
+                  });
+                  return request;
+              }
+              else {
+
+                  for (i = 0; i < entityList.length; i++) {
+
+                      if (entityList[i].EntityFinanceSummaryID == EntityFinanceSummaryID) {
+
+                          entityList[i].BudgetAllocated = Entity.BudgetAllocated;
+                          entityList[i].BudgetRequired = Entity.BudgetRequired;
+                          entityList[i].BudgetUsed = Entity.BudgetUsed;
+                          entityList[i].Priority = Entity.Priority;
+                          entityList[i].EntityCategory = Entity.EntityCategory;
+                          entityList[i].EntityName = Entity.EntityName;
+                          this.updateEntityStatus();
+                          break;
+                      }
+                  }
+              }
+          }
           this.getEntity = function (EntityFinanceSummaryID) {
               //alert(EntityFinanceSummaryID);
               if (connectToService == 'true') {
@@ -107,16 +135,19 @@
 
               }
               else {
+                  
                   var entity = null;
                   for (i = 0; i < entityList.length; i++) {
-                      entityStatus.TotalEntities += 1;
+                      
                       if (entityList[i].EntityFinanceSummaryID == EntityFinanceSummaryID) {
+                          
                           entity = entityList[i];
                           break;
                       }
-
-
                   }
+                      return entity;
+
+                 
               }
               return entity ;
           }
