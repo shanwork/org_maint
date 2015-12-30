@@ -5,8 +5,26 @@
         if ($routeParams.EntityName != '-1')
             $scope.EntityName = $routeParams.EntityName;
         else
+        {
             $scope.EntityName = ' New Entity';
+            $scope.entity =
+              {
+                  EntityName: 'New entity',
+                  EntityCategory: 'New Cat',
+                  BudgetAllocated: 0,
+                  BudgetUsed: 0,
+                  BudgetRequired: 0,
+                  Priority: 1
+
+              };
+      //      $scope.entity = entity;
+      //      alert($scope.entity.EntityCategory);
+     //      $scope.entity.EntityCategory = 'Entity Cat';
+            //$scope.entity.BudgetAllocated = $scope.entity.BudgetUsed = $scope.entity.BudgetRequired =parseFloat(0);
+            //$scope.entity.Priority = parseInt(1) ; 
+        }
         if ($routeParams.EntityFinanceSummaryID != '-1') {
+          
             if (connectToService == 'true') {
                 var promiseGetEntity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
                 promiseGetEntity.then(function (entityStatusDb) { $scope.entity = entityStatusDb.data; },
@@ -45,34 +63,38 @@
             {
                 EntityFinanceSummaryService.updateEntity($scope.entity);
             }
-            //var EntityItem = {
-            //    EntityItemName: $scope.EntityItemName,
-            //    EntityItemDetail: $scope.EntityItemDetail,
-            //    EntityItemName: $scope.EntityItemName,
-            //    EntityItemBudgetAllocated: parseFloat($scope.EntityItemBudgetAllocated),
-            //    EntityItemBudgetRequired: parseFloat($scope.EntityItemBudgetRequired),
-            //    EntityItemPriority: parseInt($scope.EntityItemPriority),
-            //    EntityItemDateUpdated: parseInt($scope.EntityItemDateUpdated),
-            //    EntityItemComments: $scope.EntityItemComments
-            //    // will add date later
-            //};
-            //alert($scope.entityItemList.length);
-            ////if (connectToService == 'true') {
-            ////    var promisePost = EntityFinanceSummaryService.addEntity(Entity);
-            ////    promisePost.then(function (pl) {
-            ////        $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
-            ////        GetAllRecords();
-
-            ////        //   ClearModels();
-            ////    }, function (err) {
-            ////        console.log("Some error Occured" + err);
-            ////    });
-            ////}
-            ////else {
-            //EntityItem.EntityItemID = $scope.entityItemList.length + 1;
-            //    $scope.entityItemList.push(EntityItem);
-          //  }
+          
         };
+        $scope.addEntityItem = function()
+        {
+            var EntityItem = {
+                EntityItemName: $scope.EntityItemName,
+                EntityItemDetail: $scope.EntityItemDetail,
+                EntityItemName: $scope.EntityItemName,
+                EntityItemBudgetAllocated: parseFloat($scope.EntityItemBudgetAllocated),
+                EntityItemBudgetRequired: parseFloat($scope.EntityItemBudgetRequired),
+                EntityItemBudgetRequired: parseFloat($scope.EntityItemBudgetRequired),
+                EntityItemPriority: parseInt($scope.EntityItemPriority),
+                EntityItemDateUpdated: parseInt($scope.EntityItemDateUpdated),
+                EntityItemComments: $scope.EntityItemComments
+                // will add date later
+            };
+            $scope.entity.BudgetRequired += parseFloat($scope.EntityItemBudgetRequired);
+            if ($scope.entity.BudgetAllocated > 0) {
+                if ($scope.entity.BudgetAllocated >= $scope.EntityItemBudgetAllocated) {
+                    $scope.entity.BudgetAllocated -= parseFloat($scope.EntityItemBudgetAllocated);
+                    $scope.entity.BudgetUsed += parseFloat($scope.EntityItemBudgetUsed);
+                }
+                else {
+
+                    $scope.entity.BudgetUsed += $scope.entity.BudgetAllocated;
+                    $scope.entity.BudgetAllocated = 0;
+                }
+            }
+            EntityItem.EntityItemID = $scope.entityItemList.length + 1;
+            $scope.entityItemList.push(EntityItem);
+        }
+
     };
 
 
