@@ -11,14 +11,15 @@
 </head>
 <body>
     <div class="container-fluid" style="overflow:auto;">
-        
-            <header  >
+        <div class="row">
+            <div class="col-lg-12 col-cm-12">
+            <header>
                 <nav class="navbar navbar-default" style="border:2px outset silver;">
-                    <ul  class="navbar navbar-nav">
+                    <ul class="navbar navbar-nav">
                         <li><a href="../index.html">About this site</a></li>
                         <li><a href="#/budgetStatus">Budget Status</a></li>
                         <li><a href="#/contributors">Contributors</a></li>
-                       <li><a href="#/entityFinanceSummaries">Entity Summaries</a></li>
+                        <li><a href="#/entityFinanceSummaries">Entity Summaries</a></li>
                     </ul>
                 </nav>
             </header>
@@ -26,7 +27,8 @@
 
 
             <div ng-view></div>
-         
+            </div>
+        </div>
     </div>
     <script src="../scripts/angular.js"></script>
     <script src="../scripts/angular-route.js"></script>

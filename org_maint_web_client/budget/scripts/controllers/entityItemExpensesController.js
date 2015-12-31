@@ -17,6 +17,15 @@
                   Priority: 1
 
               };
+            $scope.doSort = function (propName) {
+                $scope.sortBy = propName;
+                $scope.reverse = !$scope.reverse;
+            };
+            $scope.doSortFloat = function (propName) {
+                $scope.sortBy = parseFloat(propName);
+                //      alert(parseFloat(propName));
+                $scope.reverse = !$scope.reverse;
+            };
       //      $scope.entity = entity;
       //      alert($scope.entity.EntityCategory);
      //      $scope.entity.EntityCategory = 'Entity Cat';
@@ -35,6 +44,7 @@
             }
             else {
                 $scope.entity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
+                $scope.entityItemList = EntityItemExpensesService.getEntityItemList($routeParams.EntityFinanceSummaryID);
                
             }
         }
@@ -92,7 +102,13 @@
                 }
             }
             EntityItem.EntityItemID = $scope.entityItemList.length + 1;
-            $scope.entityItemList.push(EntityItem);
+            if ($routeParams.EntityFinanceSummaryID != -1)
+            {
+                EntityItem.EntityFinanceSummaryID = $routeParams.EntityFinanceSummaryID;
+            }
+            EntityItemExpensesService.addEntityItem(EntityItem);
+            $scope.entityItemList = EntityItemExpensesService.getEntityItemList($routeParams.EntityFinanceSummaryID);
+            // $scope.entityItemList.push(EntityItem);
         }
 
     };

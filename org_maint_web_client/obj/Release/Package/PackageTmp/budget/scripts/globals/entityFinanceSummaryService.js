@@ -19,7 +19,7 @@
               EntityCategory: 'Village',
               BudgetAllocated: 0.0,
               BudgetUsed: 0.0,
-              BudgetRequired: 1220.0,
+              BudgetRequired: 70000.0,
               Priority: 1,
           },
           {
@@ -28,7 +28,7 @@
               EntityCategory: 'Village',
               BudgetAllocated: 0.0,
               BudgetUsed: 0.0,
-              BudgetRequired: 11220.0,
+              BudgetRequired: 102000.0,
               Priority: 2,
           }];
           var entityStatus = {

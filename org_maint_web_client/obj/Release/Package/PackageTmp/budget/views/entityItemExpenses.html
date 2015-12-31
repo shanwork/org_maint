@@ -17,12 +17,12 @@
     <tr>
         <td class="editCell"><input type="button" id="save" value="Update" data-ng-click="updateEntity()" /> </td>
         <td>{{ EntityFinanceSummaryID }}</td>
-        <td class="editCell"><input type='text' data-ng-model="entity.EntityName" /></td>
-        <td class="editCell"><input type='text' data-ng-model="entity.EntityCategory" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.EntityName" value="New Entity" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.EntityCategory"  value="New Entity" /></td>
         <td class="editCell"><input type='text' data-ng-model="entity.BudgetAllocated" data-ng-init="0" /></td>
-        <td class="editCell"><input type='text' data-ng-model="entity.BudgetUsed" data-ng-init="0" /></td>
-        <td class="editCell"><input type='text' data-ng-model="entity.BudgetRequired" /></td>
-        <td class="editCell"><input type='text' data-ng-model="entity.Priority" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.BudgetUsed"  value="0"  /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.BudgetRequired"   value="0" /></td>
+        <td class="editCell"><input type='text' data-ng-model="entity.Priority"   value="1" /></td>
         <td class="editCell">&nbsp;</td>
         <td class="editCell"><input type='text' data-ng-model="entity.Comments" /></td>
     </tr>
@@ -64,7 +64,7 @@
         <th>  &nbsp; </th>
     </tr>
     <tr ng-repeat="entityItem in entityItemList | filter:entityFilter | orderBy:sortBy:reverse">
-        <td>{{ entityItem.EntityFinanceSummaryID }}</td>
+        <td>{{ entityItem.EntityItemId }}</td>
         <td>{{ entityItem.EntityItemName }}</td>
         <td>{{ entityItem.EntityItemDetail }}</td>
         <td>{{ entityItem.EntityItemBudgetRequired }}</td>
