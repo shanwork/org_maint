@@ -126,9 +126,9 @@
                     var EntityFinanceSummaryId = EntityFinanceSummaryService.addEntity($scope.entity);
                     $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
                     for (var i = 0; i < $scope.entityItemList.length; i++) {
-                        alert($scope.entityItemList[i].EntityItemName);
+                   //     alert($scope.entityItemList[i].EntityItemName);
                         $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
-                        alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                //        alert($scope.entityItemList[i].EntityFinanceSummaryID);
                         EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
 
                     }
