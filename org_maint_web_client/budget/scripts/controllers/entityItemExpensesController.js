@@ -49,14 +49,14 @@
             }
         }
         $scope.updateEntity = function () {
-            if ($routeParams.EntityFinanceSummaryID == '-1')
-            {
-                
-                if (connectToService == 'true') {
+            if (connectToService == 'true') {
+                if ($routeParams.EntityFinanceSummaryID == '-1') {
+
+
                     var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
                     promisePost.then(function (pl) {
                         $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
-                   //     GetAllRecords();
+                        //     GetAllRecords();
 
                         //   ClearModels();
                     }, function (err) {
@@ -64,20 +64,69 @@
                     });
                 }
                 else {
-                    EntityFinanceSummaryService.addEntity($scope.entity);
-              //      GetAllRecords();
+                    // update on WCF end
                 }
-                $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
             }
-            else 
+            else // client side
             {
+                if ($routeParams.EntityFinanceSummaryID == '-1') {
+                    var EntityFinanceSummaryId = EntityFinanceSummaryService.addEntity($scope.entity);
+                    $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
+                }
+                else {
+                    alert($scope.entityItemList.length);
+                    EntityFinanceSummaryService.updateEntity($scope.entity);
+                }
+                for (var i = 0; i < $scope.entityItemList.length; i++) {
+                    alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                    if ($scope.entityItemList[i].EntityFinanceSummaryID == -1 ) {
+                        $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+                        
+                        EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+                    }
+
+                }
+            }
+        };
+        
+        $scope.updateEntityOld = function () {
+            if ($routeParams.EntityFinanceSummaryID == '-1') {
+
+                if (connectToService == 'true') {
+                    var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
+                    promisePost.then(function (pl) {
+                        $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
+                        //     GetAllRecords();
+
+                        //   ClearModels();
+                    }, function (err) {
+                        console.log("Some error Occured" + err);
+                    });
+                }
+                else {
+
+                    var EntityFinanceSummaryId = EntityFinanceSummaryService.addEntity($scope.entity);
+                    $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
+                    for (var i = 0; i < $scope.entityItemList.length; i++) {
+                        alert($scope.entityItemList[i].EntityItemName);
+                        $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+                        alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                        EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+
+                    }
+                    //      GetAllRecords();
+                }
+
+            }
+            else {
                 EntityFinanceSummaryService.updateEntity($scope.entity);
             }
-          
+
         };
         $scope.addEntityItem = function()
         {
             var EntityItem = {
+                EntityFinanceSummaryID:-1,
                 EntityItemName: $scope.EntityItemName,
                 EntityItemDetail: $scope.EntityItemDetail,
                 EntityItemName: $scope.EntityItemName,
@@ -102,13 +151,13 @@
                 }
             }
             EntityItem.EntityItemID = $scope.entityItemList.length + 1;
-            if ($routeParams.EntityFinanceSummaryID != -1)
-            {
-                EntityItem.EntityFinanceSummaryID = $routeParams.EntityFinanceSummaryID;
-            }
-            EntityItemExpensesService.addEntityItem(EntityItem);
-            $scope.entityItemList = EntityItemExpensesService.getEntityItemList($routeParams.EntityFinanceSummaryID);
-            // $scope.entityItemList.push(EntityItem);
+            //if ($routeParams.EntityFinanceSummaryID != -1)
+            //{
+            //    EntityItem.EntityFinanceSummaryID = $routeParams.EntityFinanceSummaryID;
+            //}
+            
+       //     $scope.entityItemList = EntityItemExpensesService.getEntityItemList($routeParams.EntityFinanceSummaryID);
+            $scope.entityItemList.push(EntityItem);
         }
 
     };

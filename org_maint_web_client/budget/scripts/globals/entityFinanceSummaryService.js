@@ -98,6 +98,7 @@
                   Entity.EntityFinanceSummaryID = entityList.length + 1;
                   entityList.push(Entity);
                   this.updateEntityStatus();
+                  return (Entity.EntityFinanceSummaryID);
               }
           }
           this.updateEntity = function (Entity) {

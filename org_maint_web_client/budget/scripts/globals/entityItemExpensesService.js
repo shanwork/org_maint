@@ -93,6 +93,7 @@
                      var matches = [];
 
                      for (var i = 0; i < localEntityItemList.length; i++) {
+                         alert(localEntityItemList[i].EntityFinanceSummaryID);
                          if (localEntityItemList[i].EntityFinanceSummaryID == EntityFinanceSummaryID) {
 
                              matches.push(localEntityItemList[i]);
@@ -101,8 +102,10 @@
                      return (matches);
                  }
              };
-             this.addEntityItem = function (entityItem) {
-                 alert(localEntityItemList.length);
+             this.addEntityItem = function (entityItem, EntityFinanceSummaryID) {
+                 //alert(localEntityItemList.length);
+                 alert(entityItem.EntityFinanceSummaryID);
+                 //alert(EntityFinanceSummaryID);
                  entityItem.EntityItemId = localEntityItemList.length + 1;
                  localEntityItemList.push(entityItem);
              };
