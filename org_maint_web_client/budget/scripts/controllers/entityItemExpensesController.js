@@ -72,20 +72,38 @@
                 if ($routeParams.EntityFinanceSummaryID == '-1') {
                     var EntityFinanceSummaryId = EntityFinanceSummaryService.addEntity($scope.entity);
                     $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
+                    for (var i = 0; i < $scope.entityItemList.length; i++) {
+                        alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                        if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
+                            $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+
+                            EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+                        }
+
+                    }
                 }
                 else {
                     alert($scope.entityItemList.length);
+                    for (var i = 0; i < $scope.entityItemList.length; i++) {
+                        alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                        if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
+                            $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+
+                            EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+                        }
+
+                    }
                     EntityFinanceSummaryService.updateEntity($scope.entity);
                 }
-                for (var i = 0; i < $scope.entityItemList.length; i++) {
-                    alert($scope.entityItemList[i].EntityFinanceSummaryID);
-                    if ($scope.entityItemList[i].EntityFinanceSummaryID == -1 ) {
-                        $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+                //for (var i = 0; i < $scope.entityItemList.length; i++) {
+                //    alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                //    if ($scope.entityItemList[i].EntityFinanceSummaryID == -1 ) {
+                //        $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
                         
-                        EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
-                    }
+                //        EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+                //    }
 
-                }
+                //}
             }
         };
         
@@ -108,9 +126,9 @@
                     var EntityFinanceSummaryId = EntityFinanceSummaryService.addEntity($scope.entity);
                     $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
                     for (var i = 0; i < $scope.entityItemList.length; i++) {
-                        alert($scope.entityItemList[i].EntityItemName);
+                   //     alert($scope.entityItemList[i].EntityItemName);
                         $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
-                        alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                //        alert($scope.entityItemList[i].EntityFinanceSummaryID);
                         EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
 
                     }

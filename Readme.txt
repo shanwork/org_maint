@@ -1,4 +1,21 @@
 
+Known issues
+1. Currency is hard codes 
+- Assumed all processing is in INR
+- Taking INR - hard code 1:1. USD hard code 1:60, EUR(??) 1:75, anything else is 1:15
+- configure base currency, see item 2
+
+2. Add Settings page 
+ - connecting to web service
+
+3. Thinking about a second WCF service which uses server side singleton abstraction layer
+   - This is like a server side cache the static singleton will contain all records at application level
+   - iteratively have no EF/dB connectivity, then add it, then synchronously update a data base.
+
+ 4. Entity summary
+ - Allocate fund from entity summary to items
+ - bug - when adding an entity and updating it without adding an item, errors
+
 Entitied Page
 - Decided approach
  New Entity Summary and Itens addition on the detail page; entity summary list page will only allow edits

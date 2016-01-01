@@ -93,7 +93,7 @@
                      var matches = [];
 
                      for (var i = 0; i < localEntityItemList.length; i++) {
-                         alert(localEntityItemList[i].EntityFinanceSummaryID);
+                         //alert(localEntityItemList[i].EntityFinanceSummaryID);
                          if (localEntityItemList[i].EntityFinanceSummaryID == EntityFinanceSummaryID) {
 
                              matches.push(localEntityItemList[i]);
