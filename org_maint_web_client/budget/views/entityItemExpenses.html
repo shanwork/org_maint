@@ -1,7 +1,7 @@
-﻿<h2>Itemwise Expenses {{EntityName}}</h2>
+﻿<h2>Itemwise Expenses {{EntityName}}</h2><input type="button" click-Link-Confirm="/entityFinanceSummaries" value="return"  style="margin:10px;" />
 <table border="1" cellpadding="0" cellspacing="0" class="table table-striped">
     <tr>
-        <th> <input type="button" click-Link-Confirm="/entityFinanceSummaries" value="return" /></th>
+        <th><input type="button" id="save" value="Update" data-ng-click="updateEntity()" /></th>
         <th ng-click="doSort('EntityFinanceSummaryID')">ID</th>
         <th ng-click="doSort('EntityName')">EntityName</th>
         <th ng-click="doSort('EntityCategory')">EntityCategory</th>
@@ -15,7 +15,7 @@
     </tr>
     
     <tr>
-        <td class="editCell"><input type="button" id="save" value="Update" data-ng-click="updateEntity()" /> </td>
+        <td class="editCell"> <input type="button" id="save" value="Allocate" data-ng-click="allocateFunds()" /></td>
         <td>{{ EntityFinanceSummaryID }}</td>
         <td class="editCell"><input type='text' data-ng-model="entity.EntityName" value="New Entity" /></td>
         <td class="editCell"><input type='text' data-ng-model="entity.EntityCategory"  value="New Entity" /></td>
@@ -34,8 +34,8 @@
         <th ng-click="doSort('EntityItemID')">ID</th>
         <th ng-click="doSort('EntityItemName')">Item</th>
         <th ng-click="doSort('EntityItemDetail')">Description</th>
-        <th ng-click="doSort('EntityItemBudgetRequired')">Budget Required</th>
-        <th ng-click="doSort('EntityItemBudgetAllocated')">Budget Allocated</th>
+        <th ng-click="doSortFloat('EntityItemBudgetRequired')">Budget Required</th>
+        <th ng-click="doSortFloat('EntityItemBudgetAllocated')">Budget Allocated</th>
         <th ng-click="doSort('EntityItemPriority')">Priority</th>
         <th ng-click="doSort('EntityItemDateUpdated')">&nbsp;Deposited</th>
         <th ng-click="doSort('EntityItemComments')">&nbsp;Comments</th>

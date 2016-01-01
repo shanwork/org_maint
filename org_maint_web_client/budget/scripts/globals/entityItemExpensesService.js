@@ -102,6 +102,32 @@
                      return (matches);
                  }
              };
+             this.getEntityItemsSortedPriorityAAmountDList = function () {
+                 if (connectToService == 'true') {
+                     // No operation contract
+                     // Maybe this whole logic needs to shift to the controller
+                     // down the line, add one more global as utility
+                 }
+                 return localEntityItemList.sort(compareSortedPriorityAAmountD);
+             };
+             function compareSortedPriorityAAmountD(ent1, ent2) {
+                 var ret = 0;
+                 if (parseInt(ent1.Priority) > parseInt(ent2.Priority)) {
+                     ret = 1;
+                 }
+                 else if (parseInt(ent1.Priority) < parseInt(ent2.Priority)) {
+                     ret = -1
+                 }
+                 else {
+                     if (parseFloat(ent1.BudgetRequired) < parseFloat(ent2.BudgetRequired)) {
+                         ret = 1;
+                     }
+                     else if (parseFloat(ent1.BudgetRequired) > parseFloat(ent2.BudgetRequired)) {
+                         ret = -1
+                     }
+                 }
+                 return ret;
+             }
              this.addEntityItem = function (entityItem, EntityFinanceSummaryID) {
                  //alert(localEntityItemList.length);
                  alert(entityItem.EntityFinanceSummaryID);

@@ -1,7 +1,16 @@
 ﻿(function () {
     var EntityItemExpensesController = function ($scope, $routeParams, EntityItemExpensesService, EntityFinanceSummaryService, connectToService) {
         $scope.entityItemList = [];
-        $scope.EntityFinanceSummaryID  = parseInt($routeParams.EntityFinanceSummaryID)
+        $scope.EntityFinanceSummaryID = parseInt($routeParams.EntityFinanceSummaryID);
+        $scope.doSort = function (propName) {
+            $scope.sortBy = propName;
+            $scope.reverse = !$scope.reverse;
+        };
+         $scope.doSortFloat = function (propName) {
+            $scope.sortBy = parseFloat(propName);
+            //      alert(parseFloat(propName));
+            $scope.reverse = !$scope.reverse;
+        };
         if ($routeParams.EntityName != '-1')
             $scope.EntityName = $routeParams.EntityName;
         else
@@ -17,15 +26,7 @@
                   Priority: 1
 
               };
-            $scope.doSort = function (propName) {
-                $scope.sortBy = propName;
-                $scope.reverse = !$scope.reverse;
-            };
-            $scope.doSortFloat = function (propName) {
-                $scope.sortBy = parseFloat(propName);
-                //      alert(parseFloat(propName));
-                $scope.reverse = !$scope.reverse;
-            };
+           
       //      $scope.entity = entity;
       //      alert($scope.entity.EntityCategory);
      //      $scope.entity.EntityCategory = 'Entity Cat';
@@ -48,6 +49,28 @@
                
             }
         }
+        $scope.allocateFunds = function () {
+            alert($scope.entity.BudgetAllocated);
+            if ($scope.entity.BudgetAllocated > 0.0)
+            {
+                var sortedEntityItemList = EntityItemExpensesService.getEntityItemsSortedPriorityAAmountDList();
+                var budgetRequired = 0.0;
+                for (var i = 0; i < sortedEntityItemList.length; i++) {
+                    if ($scope.entity.BudgetAllocated > sortedEntityItemList[i].EntityItemBudgetRequired) {
+                        budgetRequired = sortedEntityItemList[i].EntityItemBudgetRequired;
+                    }
+                    else
+                    {
+                        budgetRequired = $scope.entity.BudgetAllocated;
+                    }
+                    sortedEntityItemList[i].EntityItemBudgetAllocated += budgetRequired;
+                    sortedEntityItemList[i].EntityItemBudgetRequired -= budgetRequired;
+                    $scope.entity.BudgetAllocated -= budgetRequired;
+                    $scope.entity.BudgetUsed += budgetRequired;
+                }
+                }
+        };
+
         $scope.updateEntity = function () {
             if (connectToService == 'true') {
                 if ($routeParams.EntityFinanceSummaryID == '-1') {
