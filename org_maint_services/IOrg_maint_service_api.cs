@@ -58,14 +58,11 @@ namespace org_maint_services
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddContributor",BodyStyle=WebMessageBodyStyle.Bare)]
         bool AddContributor(Contributor contributor);
 
-        [OperationContract]
-        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntity", BodyStyle = WebMessageBodyStyle.Bare)]
-        bool AddEntity(EntityBudgetPriority entity);
-
+       
       //  We are not going to add just the summary = we will add entity summary and items from the details, right now not working so will iterate
        [OperationContract]
-        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntitySummary", BodyStyle = WebMessageBodyStyle.Bare)]
-        int AddEntitySummary(EntityFinanceSummary entity);
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/UpdateEntitySummary", BodyStyle = WebMessageBodyStyle.Bare)]
+        int UpdateEntitySummary(EntityFinanceSummary entity);
 
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntityItem", BodyStyle = WebMessageBodyStyle.Bare)]

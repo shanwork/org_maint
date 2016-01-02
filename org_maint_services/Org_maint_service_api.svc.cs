@@ -416,103 +416,60 @@ namespace org_maint_services
             return true;
         }
 
-        public bool AddEntity(EntityBudgetPriority entity)
+       
+        public int UpdateEntitySummary(EntityFinanceSummary entity)
         {
-            List<EntityBudgetPriorityContract> updatedEntityList = new List<EntityBudgetPriorityContract>();
-            EntityBudgetPriority newEntityRecord = new EntityBudgetPriority
+            int newEntityFinanceSummaryID = -1;
+            decimal budgetRequired = 0;
+            EntityFinanceSummary updateEntityRecord = null;
+             if (entity.EntityFinanceSummaryID == -1)
             {
-                EntityBudgetPriorityID = entity.EntityBudgetPriorityID,
-                EntityName = entity.EntityName,
-                BudgetAllocated = entity.BudgetAllocated,
-                BudgetRequired = entity.BudgetRequired,
-                Priority = entity.Priority,
-                DateUpdated = DateTime.Now,
-                Comments = entity.Comments
-            };
+                updateEntityRecord = new EntityFinanceSummary
+                {
+                    EntityFinanceSummaryID = entity.EntityFinanceSummaryID,
+                    EntityName = entity.EntityName,
+                    BudgetAllocated = entity.BudgetAllocated,
+                    BudgetRequired = entity.BudgetRequired,
+                    BudgetUsed = entity.BudgetUsed,
+                    EntityCategory = entity.EntityCategory,
+                    Priority = entity.Priority,
+                    DateUpdated = DateTime.Now,
+                    Comments = entity.Comments
+                };
 
-            orgMaintEntitiesContext.EntityBudgetPriorities.Add(newEntityRecord);
-            orgMaintEntitiesContext.SaveChanges();
+                orgMaintEntitiesContext.EntityFinanceSummaries.Add(updateEntityRecord);
+                orgMaintEntitiesContext.SaveChanges();
+                newEntityFinanceSummaryID = updateEntityRecord.EntityFinanceSummaryID;
 
-            // Dont need since we are not creating a budget transaction
-            //BudgetHistory newBudgetHistoryRecord = new BudgetHistory
-            //{
-            //    Amount = newEntityRecord.BudgetRequired,
-            //    DebitCredit = "Debit",
-            //    Date = (DateTime)newEntityRecord.DateUpdated,
-            //    Comments = newEntityRecord.Comments,
-            //    Principal = newEntityRecord.EntityName
-            //};
-            //orgMaintEntitiesContext.BudgetHistories.Add(newBudgetHistoryRecord);
-            //orgMaintEntitiesContext.SaveChanges();
-
-            var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
-            if (query == null)
-            {
-                BudgetStatu budgStatu = new BudgetStatu();
-                budgStatu.BudgetAvailable = 0;
-                budgStatu.BudgetAllocated = 0;
-                budgStatu.BudgetRequired = newEntityRecord.BudgetRequired;
-                budgStatu.DateUpdated = DateTime.Now;
-                orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
-
+                budgetRequired = entity.BudgetRequired;
             }
             else
             {
-                query.BudgetRequired += newEntityRecord.BudgetRequired;
-                query.DateUpdated = DateTime.Now;
+          //      updateEntityRecord = GetEntitySummary(entity.EntityFinanceSummaryID.ToString());
+                var query = (from entityFinanceSummariesElement in orgMaintEntitiesContext.EntityFinanceSummaries
+                             where entityFinanceSummariesElement.EntityFinanceSummaryID == entity.EntityFinanceSummaryID
+                             select entityFinanceSummariesElement).FirstOrDefault(); ;
+                if (query != null)
+                {
+                    query.EntityName = entity.EntityName;
+                    query.EntityCategory = entity.EntityCategory;
+                    query.Comments = entity.Comments;
+                    query.BudgetAllocated = entity.BudgetAllocated;
+                    query.BudgetRequired = entity.BudgetRequired;
+                    query.BudgetUsed = entity.BudgetUsed;
+                    query.Priority = entity.Priority;
+                    query.DateUpdated = DateTime.Now;
+                    orgMaintEntitiesContext.SaveChanges();
+                    newEntityFinanceSummaryID = query.EntityFinanceSummaryID;
+
+                }
+
             }
-            orgMaintEntitiesContext.SaveChanges();
-            return true;
-        }
-
-        public int AddEntitySummary(EntityFinanceSummary entity)
-        {
-
-            List<EntityFinanceSummaryContract> updatedEntityList = new List<EntityFinanceSummaryContract>();
-            EntityFinanceSummary newEntityRecord = new EntityFinanceSummary
-            {
-                EntityFinanceSummaryID = entity.EntityFinanceSummaryID,
-                EntityName = entity.EntityName,
-                BudgetAllocated = entity.BudgetAllocated,
-                BudgetRequired = entity.BudgetRequired,
-                BudgetUsed = entity.BudgetUsed,
-                EntityCategory = entity.EntityCategory,
-                Priority = entity.Priority,
-                DateUpdated = DateTime.Now,
-                Comments = entity.Comments
-            };
-
-            orgMaintEntitiesContext.EntityFinanceSummaries.Add(newEntityRecord) ;
             
-            orgMaintEntitiesContext.SaveChanges();
-            int newEntityFinanceSummaryID = newEntityRecord.EntityFinanceSummaryID;
-            System.IO.StreamWriter testFile = new System.IO.StreamWriter(@"c:\Shantanu\Test.txt", true);
-            testFile.Write(newEntityFinanceSummaryID.ToString());
-            testFile.Flush();
-            testFile.Close();
-            updateEntityStatus();
-           
-
-
-            var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
-            if (query == null)
-            {
-                BudgetStatu budgStatu = new BudgetStatu();
-                budgStatu.BudgetAvailable = 0;
-                budgStatu.BudgetAllocated = 0;
-                budgStatu.BudgetRequired = newEntityRecord.BudgetRequired;
-                budgStatu.DateUpdated = DateTime.Now;
-                orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
-
-            }
-            else
-            {
-                query.BudgetRequired += newEntityRecord.BudgetRequired;
-                query.DateUpdated = DateTime.Now;
-            }
-            orgMaintEntitiesContext.SaveChanges();
-            return newEntityFinanceSummaryID;
+            updateEntityStatus(); //also updates budget status
+             return newEntityFinanceSummaryID;
         }
+
         public int AddEntityItem(EntityItemExpens entityItem)
         {
           int newEntityItemID=  orgMaintEntitiesContext.EntityItemExpenses.Add(entityItem).EntityItemID;
@@ -524,7 +481,7 @@ namespace org_maint_services
         {
             if (entity.EntityFinanceSummaryID == -1)
             {
-                int EntityFinanceSummaryID = AddEntitySummary(entity);
+                int EntityFinanceSummaryID = UpdateEntitySummary(entity);
                 foreach(EntityItemExpens entityItemExpense in entityItemExpenses)
                 {
                     entityItemExpense.EntityFinanceSummaryID = EntityFinanceSummaryID;
@@ -743,6 +700,32 @@ namespace org_maint_services
             orgMaintEntitiesContext.Contributors.ToList().RemoveRange(0, orgMaintEntitiesContext.Contributors.Count());
             return true;
         }
+        #region private helper functions
+        void updateBudgetStatus(decimal budgetRequired = 0, decimal budgetAvailable = 0)
+        {
+
+            var query = (from budgetStatusSingle in orgMaintEntitiesContext.BudgetStatus select budgetStatusSingle).FirstOrDefault();
+            if (query == null)
+            {
+                BudgetStatu budgStatu = new BudgetStatu();
+                budgStatu.BudgetAvailable = 0;
+                budgStatu.BudgetAllocated = 0;
+                budgStatu.BudgetRequired = budgetRequired;
+                budgStatu.DateUpdated = DateTime.Now;
+                orgMaintEntitiesContext.BudgetStatus.Add(budgStatu);
+
+            }
+            else
+            {
+                query.BudgetRequired += budgetRequired;
+                query.DateUpdated = DateTime.Now;
+            }
+            orgMaintEntitiesContext.SaveChanges();
+
+        }
+
+        #endregion
     }
     #endregion
+
 }

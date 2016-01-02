@@ -2,7 +2,7 @@
     
    
     var budgetApp = angular.module('org_maint_budget', ['ngRoute','ngSanitize']);
-    budgetApp.value('connectToService', 'false');
+    budgetApp.value('connectToService', 'true');
     budgetApp.value('configuration', { imMemoryData: 'yes', verbose: 'yes' });
     budgetApp.config(function ($routeProvider) {
         $routeProvider
