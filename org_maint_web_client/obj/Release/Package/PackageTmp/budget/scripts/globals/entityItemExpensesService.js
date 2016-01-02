@@ -85,9 +85,11 @@
              ];
              this.getEntityItemList = function (EntityFinanceSummaryID) {
                  if (connectToService == 'true') {
-                     // No operation contract
-                     // no table created in dB
-                     //  var entityItemList = Webservice;
+                     / / / alert(EntityFinanceSummaryID);
+                     if (connectToService == 'true') {
+                         return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntityItems/" + EntityFinanceSummaryID);//.success(function (response) { return response.value;});
+
+                     }
                  }
                  else {
                      var matches = [];
@@ -102,12 +104,53 @@
                      return (matches);
                  }
              };
+             this.getEntityItemsSortedPriorityAAmountDList = function () {
+                 if (connectToService == 'true') {
+                     // No operation contract
+                     // Maybe this whole logic needs to shift to the controller
+                     // down the line, add one more global as utility
+                 }
+                 return localEntityItemList.sort(compareSortedPriorityAAmountD);
+             };
+             function compareSortedPriorityAAmountD(ent1, ent2) {
+                 var ret = 0;
+                 if (parseInt(ent1.Priority) > parseInt(ent2.Priority)) {
+                     ret = 1;
+                 }
+                 else if (parseInt(ent1.Priority) < parseInt(ent2.Priority)) {
+                     ret = -1
+                 }
+                 else {
+                     if (parseFloat(ent1.BudgetRequired) < parseFloat(ent2.BudgetRequired)) {
+                         ret = 1;
+                     }
+                     else if (parseFloat(ent1.BudgetRequired) > parseFloat(ent2.BudgetRequired)) {
+                         ret = -1
+                     }
+                 }
+                 return ret;
+             }
              this.addEntityItem = function (entityItem, EntityFinanceSummaryID) {
                  //alert(localEntityItemList.length);
                  alert(entityItem.EntityFinanceSummaryID);
-                 //alert(EntityFinanceSummaryID);
-                 entityItem.EntityItemId = localEntityItemList.length + 1;
-                 localEntityItemList.push(entityItem);
+                 if (connectToService == 'true') {
+                     //    alert('hi');
+                     var request = $http({
+                         method: "post",
+                         url: "http://localhost:58778/Org_maint_service_api.svc/AddEntityItem",
+                         data: entityItem
+                     });
+                     return request;
+
+                 }
+                 else
+                 {
+                     //alert(EntityFinanceSummaryID);
+                     entityItem.EntityItemId = localEntityItemList.length + 1;
+                     localEntityItemList.push(entityItem);
+                 }
+                
+                
              };
          });
 }());

@@ -273,16 +273,17 @@ namespace org_maint_services
             });
             return entityBudgetPriorityList;
         }
-        public EntityFinanceSummaryContract GetEntity(string EntityFinanceSummaryID)
+        public EntityFinanceSummaryContract GetEntitySummary(string EntityFinanceSummaryID)
         {
+            int entityFinanceSummaryId = Convert.ToInt32(EntityFinanceSummaryID);
            EntityFinanceSummaryContract entity= new EntityFinanceSummaryContract();
             var query = (from entityFinanceSummariesElement in orgMaintEntitiesContext.EntityFinanceSummaries
-                         where entityFinanceSummariesElement.EntityFinanceSummaryID == int.Parse(EntityFinanceSummaryID)
+                         where entityFinanceSummariesElement.EntityFinanceSummaryID == entityFinanceSummaryId
                          select entityFinanceSummariesElement).FirstOrDefault(); ;
             if (query != null)
             {
                 entity.EntityFinanceSummaryID = query.EntityFinanceSummaryID;
-                entity.EntityName = entity.EntityName;
+                entity.EntityName = query.EntityName;
                 entity.EntityCategory = query.EntityCategory;
                 entity.Comments = query.Comments;
                 entity.BudgetAllocated = query.BudgetAllocated;
@@ -293,6 +294,38 @@ namespace org_maint_services
 
             }
             return entity ;
+        }
+        public List<EntityItemExpensesContract> GetEntityItems(string EntityFinanceSummaryID)
+        {
+            int entityFinanceSummaryId = Convert.ToInt32(EntityFinanceSummaryID);
+            List<EntityItemExpensesContract> entityItems = new List<EntityItemExpensesContract>();
+            var query = (from entityItemElement in orgMaintEntitiesContext.EntityItemExpenses
+                         where entityItemElement.EntityFinanceSummaryID == entityFinanceSummaryId
+                         select entityItemElement).Distinct(); ;
+            if (query != null)
+            {
+                query.ToList().ForEach(rec =>
+                {
+                    entityItems.Add(
+                        new EntityItemExpensesContract
+                        {
+                            EntityFinanceSummaryID = rec.EntityFinanceSummaryID,
+                            EntityItemID = rec.EntityItemID,
+                            EntityItemBudgetAllocated = rec.EntityItemBudgetAllocated,
+                            EntityItemBudgetRequired = rec.EntityItemBudgetRequired,
+                            EntityItemName = rec.EntityItemName,
+                            EntityItemDetail = rec.EntityItemDetail,
+                            EntityItemComments = rec.EntityItemComments,
+                            EntityItemPriority = rec.EntityItemPriority,
+                            EntityItemDateUpdated = rec.EntityItemDateUpdated
+                            
+                        }
+                        );
+                });
+
+
+            }
+            return entityItems;
         }
         public List<EntityFinanceSummaryContract> GetEntitySummaryList()
         {
@@ -432,8 +465,9 @@ namespace org_maint_services
             return true;
         }
 
-        public bool AddEntitySummary(EntityFinanceSummary entity)
+        public int AddEntitySummary(EntityFinanceSummary entity)
         {
+
             List<EntityFinanceSummaryContract> updatedEntityList = new List<EntityFinanceSummaryContract>();
             EntityFinanceSummary newEntityRecord = new EntityFinanceSummary
             {
@@ -448,8 +482,14 @@ namespace org_maint_services
                 Comments = entity.Comments
             };
 
-            orgMaintEntitiesContext.EntityFinanceSummaries.Add(newEntityRecord);
+            orgMaintEntitiesContext.EntityFinanceSummaries.Add(newEntityRecord) ;
+            
             orgMaintEntitiesContext.SaveChanges();
+            int newEntityFinanceSummaryID = newEntityRecord.EntityFinanceSummaryID;
+            System.IO.StreamWriter testFile = new System.IO.StreamWriter(@"c:\Shantanu\Test.txt", true);
+            testFile.Write(newEntityFinanceSummaryID.ToString());
+            testFile.Flush();
+            testFile.Close();
             updateEntityStatus();
            
 
@@ -471,11 +511,28 @@ namespace org_maint_services
                 query.DateUpdated = DateTime.Now;
             }
             orgMaintEntitiesContext.SaveChanges();
-            return true;
+            return newEntityFinanceSummaryID;
         }
-
-        public bool UpdateEntitySummary(List<EntityItemExpens> entityItemExpenses, EntityFinanceSummary entity)
+        public int AddEntityItem(EntityItemExpens entityItem)
         {
+          int newEntityItemID=  orgMaintEntitiesContext.EntityItemExpenses.Add(entityItem).EntityItemID;
+       
+        orgMaintEntitiesContext.SaveChanges();
+            return newEntityItemID;
+        }
+        public bool UpdateEntity(EntityFinanceSummary entity, List<EntityItemExpens> entityItemExpenses )
+        {
+            if (entity.EntityFinanceSummaryID == -1)
+            {
+                int EntityFinanceSummaryID = AddEntitySummary(entity);
+                foreach(EntityItemExpens entityItemExpense in entityItemExpenses)
+                {
+                    entityItemExpense.EntityFinanceSummaryID = EntityFinanceSummaryID;
+                    orgMaintEntitiesContext.EntityItemExpenses.Add(entityItemExpense);
+                }
+
+            }
+            orgMaintEntitiesContext.SaveChanges();
             return true;
         }
         static bool onOff = true;

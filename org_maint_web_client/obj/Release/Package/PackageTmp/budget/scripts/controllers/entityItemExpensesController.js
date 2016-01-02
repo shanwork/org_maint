@@ -1,7 +1,16 @@
 ﻿(function () {
     var EntityItemExpensesController = function ($scope, $routeParams, EntityItemExpensesService, EntityFinanceSummaryService, connectToService) {
         $scope.entityItemList = [];
-        $scope.EntityFinanceSummaryID  = parseInt($routeParams.EntityFinanceSummaryID)
+        $scope.EntityFinanceSummaryID = parseInt($routeParams.EntityFinanceSummaryID);
+        $scope.doSort = function (propName) {
+            $scope.sortBy = propName;
+            $scope.reverse = !$scope.reverse;
+        };
+         $scope.doSortFloat = function (propName) {
+            $scope.sortBy = parseFloat(propName);
+            //      alert(parseFloat(propName));
+            $scope.reverse = !$scope.reverse;
+        };
         if ($routeParams.EntityName != '-1')
             $scope.EntityName = $routeParams.EntityName;
         else
@@ -17,15 +26,7 @@
                   Priority: 1
 
               };
-            $scope.doSort = function (propName) {
-                $scope.sortBy = propName;
-                $scope.reverse = !$scope.reverse;
-            };
-            $scope.doSortFloat = function (propName) {
-                $scope.sortBy = parseFloat(propName);
-                //      alert(parseFloat(propName));
-                $scope.reverse = !$scope.reverse;
-            };
+           
       //      $scope.entity = entity;
       //      alert($scope.entity.EntityCategory);
      //      $scope.entity.EntityCategory = 'Entity Cat';
@@ -35,27 +36,74 @@
         if ($routeParams.EntityFinanceSummaryID != '-1') {
           
             if (connectToService == 'true') {
-                var promiseGetEntity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
-                promiseGetEntity.then(function (entityStatusDb) { $scope.entity = entityStatusDb.data; },
+                var promiseGetEntity = EntityFinanceSummaryService.getEntitySummary($routeParams.EntityFinanceSummaryID);
+                promiseGetEntity.then(function (entityStatusDb)
+                {
+                    $scope.entity = entityStatusDb.data; alert($scope.entity.EntityName);
+                    var promiseGetEntityItems = EntityItemExpensesService.getEntityItemList($routeParams.EntityFinanceSummaryID);
+                    promiseGetEntityItems.then(function (entityItemsDb) {
+                        $scope.entityItemList = entityItemsDb.data;
+
+                    },
+                    function (errorP2) {
+
+                    });
+                },
                  function (errorPl) {
                      //   $log.error('Some Error in Getting Records.', errorPl);
                  });
                 
             }
             else {
-                $scope.entity = EntityFinanceSummaryService.getEntity($routeParams.EntityFinanceSummaryID);
+                $scope.entity = EntityFinanceSummaryService.getEntitySummary($routeParams.EntityFinanceSummaryID);
                 $scope.entityItemList = EntityItemExpensesService.getEntityItemList($routeParams.EntityFinanceSummaryID);
                
             }
         }
+        $scope.allocateFunds = function () {
+            alert($scope.entity.BudgetAllocated);
+            if ($scope.entity.BudgetAllocated > 0.0)
+            {
+                var sortedEntityItemList = EntityItemExpensesService.getEntityItemsSortedPriorityAAmountDList();
+                var budgetRequired = 0.0;
+                for (var i = 0; i < sortedEntityItemList.length; i++) {
+                    if ($scope.entity.BudgetAllocated > sortedEntityItemList[i].EntityItemBudgetRequired) {
+                        budgetRequired = sortedEntityItemList[i].EntityItemBudgetRequired;
+                    }
+                    else
+                    {
+                        budgetRequired = $scope.entity.BudgetAllocated;
+                    }
+                    sortedEntityItemList[i].EntityItemBudgetAllocated += budgetRequired;
+                    sortedEntityItemList[i].EntityItemBudgetRequired -= budgetRequired;
+                    $scope.entity.BudgetAllocated -= budgetRequired;
+                    $scope.entity.BudgetUsed += budgetRequired;
+                }
+                }
+        };
+
         $scope.updateEntity = function () {
             if (connectToService == 'true') {
                 if ($routeParams.EntityFinanceSummaryID == '-1') {
 
+               // later now we will do one by one      var promisePost = EntityFinanceSummaryService.updateEntityDetail($scope.entity, $scope.entityItemList);
+                     var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
+                     promisePost.then(function (p1) {
+                      //   alert(p1.data);
+                         $scope.EntityFinanceSummaryID = p1.data;
+                         for (var i = 0; i < $scope.entityItemList.length; i++) {
+                             //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                             if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
+                                 $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
 
-                    var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
-                    promisePost.then(function (pl) {
-                        $scope.EntityBudgetPriorityID = pl.data.EntityBudgetPriorityID;
+                                 var promisePost2 = EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+                                 promisePost2.then(function (p2) {
+                                     $scope.entityItemList[i].EntityItemID = p2.data;
+                                 } ,function (err2) {
+                                     console.log("Some error Occured" + err2);
+                                 });
+                                 }
+                         }
                         //     GetAllRecords();
 
                         //   ClearModels();
@@ -73,7 +121,7 @@
                     var EntityFinanceSummaryId = EntityFinanceSummaryService.addEntity($scope.entity);
                     $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
                     for (var i = 0; i < $scope.entityItemList.length; i++) {
-                        alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                   //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
                         if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
                             $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
 

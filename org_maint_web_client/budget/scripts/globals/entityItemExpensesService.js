@@ -85,9 +85,11 @@
              ];
              this.getEntityItemList = function (EntityFinanceSummaryID) {
                  if (connectToService == 'true') {
-                     // No operation contract
-                     // no table created in dB
-                     //  var entityItemList = Webservice;
+                     / / / alert(EntityFinanceSummaryID);
+                     if (connectToService == 'true') {
+                         return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntityItems/" + EntityFinanceSummaryID);//.success(function (response) { return response.value;});
+
+                     }
                  }
                  else {
                      var matches = [];
@@ -131,9 +133,24 @@
              this.addEntityItem = function (entityItem, EntityFinanceSummaryID) {
                  //alert(localEntityItemList.length);
                  alert(entityItem.EntityFinanceSummaryID);
-                 //alert(EntityFinanceSummaryID);
-                 entityItem.EntityItemId = localEntityItemList.length + 1;
-                 localEntityItemList.push(entityItem);
+                 if (connectToService == 'true') {
+                     //    alert('hi');
+                     var request = $http({
+                         method: "post",
+                         url: "http://localhost:58778/Org_maint_service_api.svc/AddEntityItem",
+                         data: entityItem
+                     });
+                     return request;
+
+                 }
+                 else
+                 {
+                     //alert(EntityFinanceSummaryID);
+                     entityItem.EntityItemId = localEntityItemList.length + 1;
+                     localEntityItemList.push(entityItem);
+                 }
+                
+                
              };
          });
 }());

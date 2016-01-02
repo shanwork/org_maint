@@ -47,8 +47,12 @@ namespace org_maint_services
         List<EntityFinanceSummaryContract> GetEntitySummaryList();
 
         [OperationContract]
-        [WebGet( RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetEntity/EntityFinanceSummaryID={EntityFinanceSummaryID}")]
-        EntityFinanceSummaryContract GetEntity(string EntityFinanceSummaryID);
+        [WebGet( RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetEntitySummary/{EntityFinanceSummaryID}")]
+        EntityFinanceSummaryContract GetEntitySummary(string EntityFinanceSummaryID);
+
+        [OperationContract]
+        [WebGet(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/GetEntityItems/{EntityFinanceSummaryID}")]
+        List<EntityItemExpensesContract> GetEntityItems(string EntityFinanceSummaryID);
 
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddContributor",BodyStyle=WebMessageBodyStyle.Bare)]
@@ -58,14 +62,20 @@ namespace org_maint_services
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntity", BodyStyle = WebMessageBodyStyle.Bare)]
         bool AddEntity(EntityBudgetPriority entity);
 
-        [OperationContract]
+      //  We are not going to add just the summary = we will add entity summary and items from the details, right now not working so will iterate
+       [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntitySummary", BodyStyle = WebMessageBodyStyle.Bare)]
-        bool AddEntitySummary(EntityFinanceSummary entity);
+        int AddEntitySummary(EntityFinanceSummary entity);
 
         [OperationContract]
-        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/UpdateEntitySummary", BodyStyle = WebMessageBodyStyle.Wrapped)]
-        bool UpdateEntitySummary(List<EntityItemExpens> entityItemExpenses, EntityFinanceSummary entity);
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntityItem", BodyStyle = WebMessageBodyStyle.Bare)]
+        int AddEntityItem(EntityItemExpens entityItem);
 
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/UpdateEntity", BodyStyle = WebMessageBodyStyle.Wrapped)]
+        bool UpdateEntity(EntityFinanceSummary entity,List<EntityItemExpens> entityItemList );
+
+        
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AllocateFunds", BodyStyle = WebMessageBodyStyle.Bare)]
         bool AllocateFunds(double fundsForAllocation);

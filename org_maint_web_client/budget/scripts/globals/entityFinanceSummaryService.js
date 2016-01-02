@@ -85,7 +85,7 @@
           }
           this.addEntity = function (Entity) {
               if (connectToService == 'true') {
-              //    alert('hi');
+                   alert('hi');
                   var request = $http({
                       method: "post",
                       url: "http://localhost:58778/Org_maint_service_api.svc/AddEntitySummary",
@@ -129,10 +129,38 @@
                   }
               }
           }
-          this.getEntity = function (EntityFinanceSummaryID) {
+          this.updateEntityDetail = function (Entity,EntityList) {
+              if (connectToService == 'true') {
+                  //    alert('hi');
+                  var request = $http({
+                      method: "post",
+                      url: "http://localhost:58778/Org_maint_service_api.svc/UpdateEntity",
+                      data: { Entity, EntityList }
+                  });
+                  return request;
+              }
+              else {
+
+                  for (i = 0; i < entityList.length; i++) {
+
+                      if (entityList[i].EntityFinanceSummaryID == EntityFinanceSummaryID) {
+
+                          entityList[i].BudgetAllocated = Entity.BudgetAllocated;
+                          entityList[i].BudgetRequired = Entity.BudgetRequired;
+                          entityList[i].BudgetUsed = Entity.BudgetUsed;
+                          entityList[i].Priority = Entity.Priority;
+                          entityList[i].EntityCategory = Entity.EntityCategory;
+                          entityList[i].EntityName = Entity.EntityName;
+                          this.updateEntityStatus();
+                          break;
+                      }
+                  }
+              }
+          }
+          this.getEntitySummary = function (EntityFinanceSummaryID) {
               //alert(EntityFinanceSummaryID);
               if (connectToService == 'true') {
-                  return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntity/" + EntityFinanceSummaryID);//.success(function (response) { return response.value;});
+                  return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntitySummary/" + EntityFinanceSummaryID);//.success(function (response) { return response.value;});
 
               }
               else {

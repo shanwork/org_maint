@@ -32,13 +32,26 @@ CREATE TABLE [dbo].[Contributor]
 CREATE TABLE [dbo].[EntityFinanceSummary] (
     [EntityFinanceSummaryID] INT            IDENTITY (1, 1) NOT NULL,
     [EntityName]             NVARCHAR (256) NOT NULL,
+    [EntityCategory]         NVARCHAR (256) NOT NULL,
     [Priority]               INT            NOT NULL,
-    [BudgetRequired]         MONEY          NOT NULL,
     [BudgetAllocated]        MONEY          NOT NULL,
+    [BudgetUsed]             MONEY          NOT NULL,
+    [BudgetRequired]         MONEY          NOT NULL,
     [DateUpdated]            DATETIME       NULL,
     [Comments]               NVARCHAR (100) DEFAULT ('') NULL,
     PRIMARY KEY CLUSTERED ([EntityFinanceSummaryID] ASC)
 );
+
+/*
+ <th><input type="text" ng-model="entityFilter.EntityItemID" /></th>
+        <th><input type="text" ng-model="entityFilter.EntityItemName" /></th>
+        <th><input type="text" ng-model="entityFilter.EntityItemDetail"> </th>
+        <th> <input type="text" ng-model="entityFilter.EntityItemBudgetRequired">  </th>
+        <th> <input type="text" ng-model="entityFilter.EntityItemBudgetAllocated">  </th>
+        <th> <input type="text" ng-model="entityFilter.EntityItemPriority">  </th>
+        <th> <input type="text" ng-model="entityFilter.EntityItemDateUpdated">  </th>
+        <th> <input type="text" ng-model="entityFilter.EntityItemComments">  </th>
+*/
 
 
 CREATE TABLE [dbo].[EntityItemExpenses]

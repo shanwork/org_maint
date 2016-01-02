@@ -13,8 +13,12 @@ Known issues
    - iteratively have no EF/dB connectivity, then add it, then synchronously update a data base.
 
  4. Entity summary
- - Allocate fund from entity summary to items
+ - Allocate fund from entity summary to items !!!DONE
  - bug - when adding an entity and updating it without adding an item, errors
+
+ 5. Cleanup and Merge
+ - Merge EntityFinanceSummary and EntityItemExpense controllers and services
+ - Remove EntityBudgetPriority elements and references
 
 Entitied Page
 - Decided approach
