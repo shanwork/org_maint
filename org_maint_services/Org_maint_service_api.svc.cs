@@ -470,9 +470,30 @@ namespace org_maint_services
              return newEntityFinanceSummaryID;
         }
 
-        public int AddEntityItem(EntityItemExpens entityItem)
+        public int UpdateEntityItem(EntityItemExpens entityItem)
         {
-          int newEntityItemID=  orgMaintEntitiesContext.EntityItemExpenses.Add(entityItem).EntityItemID;
+            int newEntityItemID = 0;
+            if (entityItem.EntityItemID == -1)
+                newEntityItemID = orgMaintEntitiesContext.EntityItemExpenses.Add(entityItem).EntityItemID;
+            else
+            {
+                var query = (from entityItemElement in orgMaintEntitiesContext.EntityItemExpenses
+                             where entityItemElement.EntityItemID == entityItem.EntityItemID
+                             select entityItemElement).FirstOrDefault(); ;
+                if (query != null)
+                {
+                    query.EntityItemName = entityItem.EntityItemName;
+                    query.EntityItemBudgetAllocated = entityItem.EntityItemBudgetAllocated;
+                    query.EntityItemBudgetRequired = entityItem.EntityItemBudgetRequired;
+                    query.EntityFinanceSummaryID = entityItem.EntityFinanceSummaryID;
+                    query.EntityItemComments = entityItem.EntityItemComments;
+                    query.EntityItemDateUpdated = DateTime.Now ;
+                    query.EntityItemDetail = entityItem.EntityItemDetail ;
+                    query.EntityItemPriority = entityItem.EntityItemPriority;
+                    newEntityItemID = query.EntityFinanceSummaryID;
+
+                }
+            }
        
         orgMaintEntitiesContext.SaveChanges();
             return newEntityItemID;

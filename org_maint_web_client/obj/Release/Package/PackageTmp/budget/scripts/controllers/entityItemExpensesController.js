@@ -64,7 +64,8 @@
             alert($scope.entity.BudgetAllocated);
             if ($scope.entity.BudgetAllocated > 0.0)
             {
-                var sortedEntityItemList = EntityItemExpensesService.getEntityItemsSortedPriorityAAmountDList();
+                
+                var sortedEntityItemList = $scope.entityItemList.sort(EntityItemExpensesService.compareSortedPriorityAAmountD);// EntityItemExpensesService.getEntityItemsSortedPriorityAAmountDList();
                 var budgetRequired = 0.0;
                 for (var i = 0; i < sortedEntityItemList.length; i++) {
                     if ($scope.entity.BudgetAllocated > sortedEntityItemList[i].EntityItemBudgetRequired) {
@@ -84,36 +85,66 @@
 
         $scope.updateEntity = function () {
             if (connectToService == 'true') {
+                // add or update shouldnt matter...
                 if ($routeParams.EntityFinanceSummaryID == '-1') {
-
-               // later now we will do one by one      var promisePost = EntityFinanceSummaryService.updateEntityDetail($scope.entity, $scope.entityItemList);
-                     var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
-                     promisePost.then(function (p1) {
-                      //   alert(p1.data);
-                         $scope.EntityFinanceSummaryID = p1.data;
-                         for (var i = 0; i < $scope.entityItemList.length; i++) {
-                             //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
-                             if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
-                                 $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
-
-                                 var promisePost2 = EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
-                                 promisePost2.then(function (p2) {
-                                     $scope.entityItemList[i].EntityItemID = p2.data;
-                                 } ,function (err2) {
-                                     console.log("Some error Occured" + err2);
-                                 });
-                                 }
-                         }
+                    $scope.entity.EntityFinanceSummaryID = -1;
+                }
+                // later now we will do one by one      var promisePost = EntityFinanceSummaryService.updateEntityDetail($scope.entity, $scope.entityItemList);
+                var promisePost = EntityFinanceSummaryService.updateEntity($scope.entity);
+                    promisePost.then(function (p1) {
+                        //   alert(p1.data);
+                        $scope.EntityFinanceSummaryID = p1.data;
+                        for (var i = 0; i < $scope.entityItemList.length; i++) {
+                            //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
+                            if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
+                                $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+                                alert('add new item');
+                                var promisePost2 = EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+                                promisePost2.then(function (p2) {
+                                    $scope.entityItemList[i].EntityItemID = p2.data;
+                                }, function (err2) {
+                                    console.log("Some error Occured" + err2);
+                                });
+                            }
+                        }
                         //     GetAllRecords();
 
                         //   ClearModels();
                     }, function (err) {
+                        alert('error');
                         console.log("Some error Occured" + err);
                     });
-                }
-                else {
-                    // update on WCF end
-                }
+                 
+               // if ($routeParams.EntityFinanceSummaryID == '-1') {
+               //     $scope.entity.EntityFinanceSummaryID = -1;
+               //// later now we will do one by one      var promisePost = EntityFinanceSummaryService.updateEntityDetail($scope.entity, $scope.entityItemList);
+               //      var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
+               //      promisePost.then(function (p1) {
+               //       //   alert(p1.data);
+               //          $scope.EntityFinanceSummaryID = p1.data;
+               //          for (var i = 0; i < $scope.entityItemList.length; i++) {
+               //              //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
+               //              if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
+               //                  $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+
+               //                  var promisePost2 = EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
+               //                  promisePost2.then(function (p2) {
+               //                      $scope.entityItemList[i].EntityItemID = p2.data;
+               //                  } ,function (err2) {
+               //                      console.log("Some error Occured" + err2);
+               //                  });
+               //                  }
+               //          }
+               //         //     GetAllRecords();
+
+               //         //   ClearModels();
+               //     }, function (err) {
+               //         console.log("Some error Occured" + err);
+               //     });
+               // }
+               // else {
+               //     // update on WCF end
+               // }
             }
             else // client side
             {

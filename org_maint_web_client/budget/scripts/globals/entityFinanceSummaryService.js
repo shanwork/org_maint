@@ -85,7 +85,7 @@
           }
           this.addEntity = function (Entity) {
               if (connectToService == 'true') {
-                   alert('hi');
+             //      alert('hi');
                   var request = $http({
                       method: "post",
                       url: "http://localhost:58778/Org_maint_service_api.svc/UpdateEntitySummary",
@@ -103,7 +103,7 @@
           }
           this.updateEntity = function (Entity) {
               if (connectToService == 'true') {
-                      alert('hit');
+             //         alert('hit');
                   var request = $http({
                       method: "post",
                       url: "http://localhost:58778/Org_maint_service_api.svc/UpdateEntitySummary",

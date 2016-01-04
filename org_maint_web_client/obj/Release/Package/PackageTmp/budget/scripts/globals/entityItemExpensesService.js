@@ -132,12 +132,12 @@
              }
              this.addEntityItem = function (entityItem, EntityFinanceSummaryID) {
                  //alert(localEntityItemList.length);
-                 alert(entityItem.EntityFinanceSummaryID);
+                 //alert(entityItem.EntityFinanceSummaryID);
                  if (connectToService == 'true') {
                      //    alert('hi');
                      var request = $http({
                          method: "post",
-                         url: "http://localhost:58778/Org_maint_service_api.svc/AddEntityItem",
+                         url: "http://localhost:58778/Org_maint_service_api.svc/UpdateEntityItem",
                          data: entityItem
                      });
                      return request;

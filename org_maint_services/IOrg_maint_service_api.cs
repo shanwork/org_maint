@@ -65,8 +65,8 @@ namespace org_maint_services
         int UpdateEntitySummary(EntityFinanceSummary entity);
 
         [OperationContract]
-        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/AddEntityItem", BodyStyle = WebMessageBodyStyle.Bare)]
-        int AddEntityItem(EntityItemExpens entityItem);
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/UpdateEntityItem", BodyStyle = WebMessageBodyStyle.Bare)]
+        int UpdateEntityItem(EntityItemExpens entityItem);
 
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "/UpdateEntity", BodyStyle = WebMessageBodyStyle.Wrapped)]
