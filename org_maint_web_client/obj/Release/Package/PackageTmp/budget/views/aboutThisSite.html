@@ -1,44 +1,75 @@
 ﻿<!DOCTYPE html>
 <para>
-   Hi, <p>
-    This website is being developed with the <a href="https://en.wikipedia.org/wiki/Naam_Foundation" target="_blank">NAAM movement for Farmer Suicides in Maharashtra (India)</a> in mind. <br />
+    <a name="top"><H1>Budgeting Website </H1></a>
+    Hi, <p>
+        This website is being developed inspired by a desire to do something, in addition to merely work on upgrading and staying current with skills relevant to my profession.
+    <p>
+        A humanitarian effort like <a href="https://en.wikipedia.org/wiki/Naam_Foundation" target="_blank">NAAM movement for Farmer Suicides in Maharashtra (India)</a> has different ways by which we can help.
+        Sometimes organized accounting may take a backseat to the more urgent needs and emotions to resolve things, help etc. Thus enters an idea into my head to use a subject matter to apply whatever I am in the process of learning.
+        <br />
 
-    It has started as a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc. <p/>
-    While, as said, it was initiated with the above in mind, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
-    a list of items, say a transport service which maintains a bunch of trucks.<p/>
+        At this point, this is a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc.
+    <p />
+    While, as said, it was initiated with NAAM as an inspiration, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
+    a list of items, say a transport service which maintains a bunch of trucks.<p />
+    <a ng-click="scrollTo('Elements')"><li>Components</a></li>
+    <a ng-click="scrollTo('status')"><li>Status and Pending</a></li>
+    <a ng-click="scrollTo('technical')"><li>Technical</a></li>
 
-    <a name="top"><h3>Elements</h3></a>
-   
     I identified and am in the process of developing the following elements:
-</p>
+    </p>
     <ol>
-        <li><a href="#/budgetStatus">High Level Budget Status</a>.. Gives an overview of Available, Used and Deficit (required) quantities<br />
-        Gives a listing of budget history, contributions, allocations. Also one can allocate the available funds.
-         </li>
         <li>
-            <a href="#/contributors">Contributions</a>.. <br />
-            Gives a list of contributions - name, amount, currency, etc. Adding a contribution automatically updates budget status and history
-             
+            <a href="budget/home.html#/budgetStatus">High Level Budget Status</a>.. Gives an overview of Available, Used and Deficit (required) quantities<br />
+            Gives a listing of budget history, contributions, allocations. Also one can allocate the available funds.
         </li>
         <li>
-            <a href="#/entityFinanceSummaries">Entity Summaries</a>.. <br />
+            <a href="budget/home.html#/contributors">Contributions</a>.. <br />
+            Gives a list of contributions - name, amount, currency, etc. Adding a contribution automatically updates budget status and history
+
+        </li>
+        <li>
+            <a href="budget/home.html#/entityFinanceSummaries">Entity Summaries</a>.. <br />
             A summary of entities involved within the framework of budget distribution. Summary of entities in status of allocated (budget was allocated),
             allocable (budget is available, but not yet allocable) and unallocated (budget not available)<br />
             List of entities with their budget specifics. Add entity. Drill down item wise expenses for an entity
 
         </li>
-</ol>
-    <h3>Status on {{date| date:'dd/MM/yyyy'}}, Technology and Design</h3>
+    </ol>
+    <a ng-click="scrollTo('top')">Top of page</a>
+
+    <a name="status"><h3>Status and Pending  </h3></a>
     <li>What you are seeing here is a proof of concept user interface not connected to a database with sample data.(clicking the browser refresh button will erase all the data you added, leaving you with the 'pre-loaded' sample data)  </li>
-   <li>This update relationships are functional in this P.O.C.  e.g adding a contributor will update budget status.  </li>
-    <li> The only flow that is not complete is the drill down for an entity - the coordination between the entity list page and detail page - item wise expense breakup - for each entity </li>
+    <li>
+        I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
+        It's simply that I have been unable to get the bandwidth to publish the database and connecting service to the public website
+    </li>
+    <li>This update relationships are functional in this P.O.C.  e.g adding a contributor will update budget status. Adding entity, then expense items updates the totals for the former and the entity status </li>
+    <li> Another (quite obvious) item to be addressed is the styling, positioning and look and feel </li>
+    <li> This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
+    <li> Lot of hard coding (e.g. Currency is only "USD - 1:60, EUR 1:75, INR 1:1 and default 1:2"), need to make more stuff configurable. Adding lookups like drop downs, etc.  </li>
+    <a ng-click="scrollTo('top')">Top of page</a>
+
+
+    <a name="technical"><h3>Technical  </h3></a>
+    <li>
+        The Web application UI is written in AngularJS.
+        The fully vertical version consumes a WCF web service which in turn talks to a Sql Server database through Entity Framework.
+        (I introduced a global variable in the angular code to switch between using in memory and dB data)
+    </li>
+    <li>
+        References and Thanks<br />
+        <a href="https://www.udemy.com/angularjs-jumpstart/" target="_blank">Dan Wahlin Angular JumpStart course on Udemy</a><br />
+        <a href="http://www.c-sharpcorner.com/UploadFile/rahul4_saxena/crud-operation-in-mvc4-using-angularjs-and-wcf-rest-services/" target="_blank">
+            Rahul Saxena - CRUD Operations in MVC4 Using AngularJS and WCF REST Services on CSharpCorner
+        </a>
+    </li>
     <li> Iteratively will complete the flows</li>
     <li> work on templatizing the names and other configurability, e.g. the terms 'contributor' and 'entity' will be made configurable and can be renamed 'Donor' and 'Village' or 'funding' and 'vehicle' </li>
-    <li> Locally, keep it working with a database </li>
-    <li> Iteratively, bring in the data connectivity layers </li>
+    <li> Iteratively, bring in the data connectivity layers. Maybe I'll map a different version of the Webservice to static (cache) data stored in a Singleton.. </li>
     <li> Complete UI styling </li>
-    <li> Tech stack - front end is AngularJS UI which consumes a WCF web service which in turn talks to a Sql Server database through Entity Framework </li>
-   
-    <h4>Sources on Github</h4> mail me at shanwork2012@gmail.com
-    <a href="#/about">Top of page</a>
+
+    <h4>Sources on Github I'll mail you the link on demand</h4> mail me at shanwork2012@gmail.com<br />
+    <a ng-click="scrollTo('top')">Top of page</a>
 </para>
+

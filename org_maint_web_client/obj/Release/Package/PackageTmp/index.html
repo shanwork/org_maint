@@ -12,93 +12,36 @@
             <nav class="navbar navbar-default" style="border:2px outset silver;">
                 <ul class="navbar navbar-nav">
                     <li><a href="index.html">About this site</a></li>
-                    <li><a href="budget/home.html#/budgetStatus">Budget Status</a></li>
-                    <li><a href="budget/home.html#/contributors">Contributors</a></li>
-                    <li><a href="budget/home.html#/entityFinanceSummaries">Entity Summaries</a></li>
-                </ul>
+                    <li><a href="budget/home.html#/about">Budgeting Website</li>
+                    <li><a href="comingNext/home.html">Coming Soon!!</li>
+</ul>
             </nav>
         </header>
      
         <para>
-            <a name="top"><H1>Budgetting Website </H1></a>
+            <a name="top"><H1>Shantanu's Home Page </H1></a>
             Hi, <p>
-                This website is being developed inspired by a desire to do something, in addition to merely work on upgrading and staying current with skills relevant to my profession.
+                <i>It was about time, I presented something to the outside world, so I picked up a basic hosting package and started publishing....</i><p>
             <p>
+               <h3>Published Work as on <span id="dateShow"></span> </h3>
+                <a href="#budgetSite"><li>Budgeting Wesbite</a></li>
+                <a name="budgetSite"><h5>Budgeting Wesbite</h5></a>
+                As of   I have developed the  budgeting website. Some background:<br />
                 A humanitarian effort like <a href="https://en.wikipedia.org/wiki/Naam_Foundation" target="_blank">NAAM movement for Farmer Suicides in Maharashtra (India)</a> has different ways by which we can help.
-                Sometimes organized accounting may take a backseat to the more urgent needs and emotions to resolve things, help etc. Thus enters an idea into my head to use a subject matter to apply whatever I am in the process of learning.
+                Sometimes organized accounting may take a backseat to the more urgent needs and emotions to resolve things, help etc. Thus entered an idea into my head to use a subject matter to apply whatever I am in the process of learning.
                 <br />
 
-                At this point, this is a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc.
-            <p />
-            While, as said, it was initiated with NAAM as an inspiration, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
-            a list of items, say a transport service which maintains a bunch of trucks.<p />
-            <a href="#Elements"><li>Components</a></li>
-            <a href="#status"><li>Status and Pending</a></li>
-            <a href="#technical"><li>Technical</a></li>
-        
-            I identified and am in the process of developing the following elements:
-            </p>
-            <ol>
-                <li>
-                    <a href="budget/home.html#/budgetStatus">High Level Budget Status</a>.. Gives an overview of Available, Used and Deficit (required) quantities<br />
-                    Gives a listing of budget history, contributions, allocations. Also one can allocate the available funds.
-                </li>
-                <li>
-                    <a href="budget/home.html#/contributors">Contributions</a>.. <br />
-                    Gives a list of contributions - name, amount, currency, etc. Adding a contribution automatically updates budget status and history
-
-                </li>
-                <li>
-                    <a href="budget/home.html#/entityFinanceSummaries">Entity Summaries</a>.. <br />
-                    A summary of entities involved within the framework of budget distribution. Summary of entities in status of allocated (budget was allocated),
-                    allocable (budget is available, but not yet allocable) and unallocated (budget not available)<br />
-                    List of entities with their budget specifics. Add entity. Drill down item wise expenses for an entity
-
-                </li>
-            </ol>
-            <a href="#top">Top of page</a>
-
-            <a name="status"><h3>Status and Pending  </h3></a>
-            <li>What you are seeing here is a proof of concept user interface not connected to a database with sample data.(clicking the browser refresh button will erase all the data you added, leaving you with the 'pre-loaded' sample data)  </li>
-            <li>
-                I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
-                It's simply that I have been unable to get the bandwidth to publish the database and connecting service to the public website
-            </li>
-            <li>This update relationships are functional in this P.O.C.  e.g adding a contributor will update budget status. Adding entity, then expense items updates the totals for the former and the entity status </li>
-            <li> Another (quite obvious) item to be addressed is the styling, positioning and look and feel </li>
-            <li> This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
-            <li> Lot of hard coding (e.g. Currency is only "USD - 1:60, EUR 1:75, INR 1:1 and default 1:2"), need to make more stuff configurable. Adding lookups like drop downs, etc.  </li>
-            <a href="#top">Top of page</a>
-
-
-            <a name="technical"><h3>Technical  </h3></a>
-            <li>
-                The Web application UI is written in AngularJS.
-                The fully vertical version consumes a WCF web service which in turn talks to a Sql Server database through Entity Framework.
-                (I introduced a global variable in the angular code to switch between using in memory and dB data)
-            </li>
-            <li>
-                References and Thanks<br />
-                <a href="https://www.udemy.com/angularjs-jumpstart/" target="_blank">Dan Wahlin Angular JumpStart course on Udemy</a><br />
-                <a href="http://www.c-sharpcorner.com/UploadFile/rahul4_saxena/crud-operation-in-mvc4-using-angularjs-and-wcf-rest-services/" target="_blank">
-                    Rahul Saxena - CRUD Operations in MVC4 Using AngularJS and WCF REST Services on CSharpCorner
-                </a>
-            </li>
-            <li> Iteratively will complete the flows</li>
-            <li> work on templatizing the names and other configurability, e.g. the terms 'contributor' and 'entity' will be made configurable and can be renamed 'Donor' and 'Village' or 'funding' and 'vehicle' </li>
-            <li> Iteratively, bring in the data connectivity layers. Maybe I'll map a different version of the Webservice to static (cache) data stored in a Singleton.. </li>
-            <li> Complete UI styling </li>
-
-            <h4>Sources on Github I'll mail you the link on demand</h4> mail me at shanwork2012@gmail.com<br />
-            <a href="#top">Top of page</a>
+                At this point, this is a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc.<br />
+                While, as said, it was initiated with NAAM as an inspiration, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
+                a list of items, say a transport service which maintains a bunch of trucks.
+            
+            <p /> <b>Go to this section by clicking <a href="budget/home.html#/about"> here  </a>. </b> 
         </para>
     
    
      <script src="scripts/angular.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="budget/scripts/controllers/budgetStatusController_backup.js"></script>
-    <script src="budget/scripts/globals/budgetStatusService_backup.js"></script><script src="app/controllers/customersController.js"></script>
-    <script src="app/controllers/ordersController.js"></script>
+   <script>document.getElementById("dateShow").innerHTML = new Date().getMonth()+1 + '-'  + new Date().getDate() + '-' + new Date().getFullYear() ;</script>
 </body>
 </html>

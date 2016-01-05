@@ -96,6 +96,7 @@
     <Content Include="budget\views\orders.html" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
+    <Content Include="comingNext\home.html" />
     <None Include="Properties\PublishProfiles\use-my-software.com - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\use-my-software.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">

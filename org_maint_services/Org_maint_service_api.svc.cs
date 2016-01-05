@@ -24,7 +24,7 @@ namespace org_maint_services
             #endregion
 
         }
-        #region org budgetting and financing
+        #region org budgeting and financing
         /// <summary>
         /// 
         /// </summary>
