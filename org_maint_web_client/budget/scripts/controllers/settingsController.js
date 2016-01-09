@@ -1,14 +1,101 @@
 ﻿(function () {
     var SettingsController = function ($scope, configuration, connectToService, $localStorage) {
-        
-       
+        $scope.CurrencyId = -1;
+            $scope.currencyData =  {
+            currencyList:
+                [{
+                    Id:1,
+                    Name: 'USD',
+                    value: 60.00
+                }, {
+                    Id: 2,
+                    Name: 'EUR',
+                    value: 75.00
+
+                }, {
+                    Id: 3,
+                    Name: 'INR',
+                    value: 1.00
+
+                }, {
+                    Id: 4,
+                    Name: 'GBP',
+                    value: 101.00
+
+                }, {
+                    Id: 5,
+                    Name: 'DIR',
+                    value: 22.00
+
+                }], selectedOption: {
+                Name: 'INR',
+                value: 1.00
+                }
+            };
+            if ($localStorage.currencyData == null)
+                $localStorage.currencyData = $scope.currencyData;
+            else
+                $scope.currencyData = $localStorage.currencyData;
      //   $localStorage.verbose = 'false';
         configuration.verbose = 'false';
-        
-      //  $scope.data.verbose = 'yes';
+        $scope.doSort = function (propName) {
+            $scope.sortBy = propName;
+            $scope.reverse = !$scope.reverse;
+        };
+        $scope.doSortFloat = function (propName) {
+            $scope.sortBy = parseFloat(propName);
+            //      alert(parseFloat(propName));
+            $scope.reverse = !$scope.reverse;
+        };
         $scope.updateVerbose = function () {
             $localStorage.verbose = $scope.data.verbose;
             configuration.verbose = $scope.data.verbose;
+        };
+        $scope.update = function (currencyDetail) {
+            var editCurrency = currencyDetail.split(",");
+            $scope.CurrencyName = editCurrency[0];
+            $scope.CurrencyValue = editCurrency[1];
+            $scope.CurrencyId = editCurrency[2];
+
+        };
+        $scope.updateCurrency = function () {
+            for(var i =0; i< $scope.currencyData.currencyList.length;i++)
+            {
+                alert($scope.currencyData.currencyList[i].value);
+            }
+                // will add date later
+             
+        };
+        $scope.addCurrency = function () {
+            if ($scope.CurrencyId == -1) {
+                var Currency = {
+                    Id: $scope.currencyData.currencyList.length + 1,
+                    Name: $scope.CurrencyName,
+                    value: $scope.CurrencyValue
+                    // will add date later
+                };
+                $scope.currencyData.currencyList.push(Currency);
+            }
+            else
+            {
+               
+                for (var i = 0; i < $scope.currencyData.currencyList.length; i++) {
+                    //alert($scope.currencyData.currencyList[i].Id);
+                    //alert($scope.CurrencyId);
+                    if ($scope.currencyData.currencyList[i].Id == $scope.CurrencyId)
+                    {
+                       
+                        $scope.currencyData.currencyList[i].Name = $scope.CurrencyName;
+                        $scope.currencyData.currencyList[i].value = $scope.CurrencyValue;
+                       
+                    }
+                }
+
+            }
+            $scope.CurrencyId = -1;
+            $scope.CurrencyName = '';
+            $scope.CurrencyValue = '';
+            $localStorage.currencyData.currencyList = $scope.currencyData.currencyList;
         };
         $scope.flushData = function () {
             $localStorage.budgetStatus = {

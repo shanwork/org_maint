@@ -1,4 +1,27 @@
 ﻿<div>
+    <table>
+        <tr>
+            <th ng-click="doSortFloat('CurrencyID')">ID</th>
+            <th ng-click="doSort('Name')">Currency</th>
+            <th ng-click="doSortFloat('value')">Value</th>
+             
+        </tr>
+        <tr>
+            <td class="editCell"><input type="button" id="save" value="ADD/Update" data-ng-click="addCurrency()" />{{CurrencyId}} </td>
+            <td class="editCell"><input type='text' data-ng-model="CurrencyName" /></td>
+            <td class="editCell">
+                <input type='text' data-ng-model="CurrencyValue" />
+            </td>
+            </tr>
+            <tr ng-repeat="currency in  currencyData.currencyList| filter:currencyFilter | orderBy:sortBy:reverse">
+                <td ng-click="update(currency.Name + ',' + currency.value + ',' + currency.Id)">{{currency.Id}} </td>
+                    <td> {{currency.Name}} </td>
+                    <td><input type="text" value={{currency.value}}  /></td>
+            </tr>
+            <tr >
+            <td colspan="2"><input type="button" id="update" value="Update" data-ng-click="updateCurrency()" /> </td>
+        </tr>
+    </table>
    Verbose: Show readme 
     <select ng-model="data.verbose">
         <option value="yes" >yes</option>
