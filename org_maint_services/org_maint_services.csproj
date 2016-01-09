@@ -184,6 +184,8 @@
     <Content Include="Model\Org_Maint_Admin_Dev.edmx.diagram">
       <DependentUpon>Org_Maint_Admin_Dev.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\use-my-software.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\use-my-software.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

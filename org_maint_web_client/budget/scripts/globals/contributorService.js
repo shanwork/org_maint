@@ -1,6 +1,6 @@
 ﻿(function () {
     angular.module('org_maint_budget')
-      .service('ContributorService', function ($http, $q, connectToService ) {
+      .service('ContributorService', function ($http, $q, connectToService, $localStorage) {
           var contributorList = [];
           this.getContributorList = function () {
               if (connectToService == 'true') {
@@ -22,7 +22,11 @@
                          };
                      contributorList.push(newContributor);
                  }
-
+                 if ($localStorage.contributorList != null)
+                  
+                     contributorList = $localStorage.contributorList;
+                 else
+                     $localStorage.contributorList = contributorList;
 
                  return contributorList;
 
@@ -42,7 +46,7 @@
               else {
                   Contributor.ContributorID = contributorList.length + 1;
                   contributorList.push(Contributor);
-             
+                  $localStorage.contributorList = contributorList;
 
                }
           }

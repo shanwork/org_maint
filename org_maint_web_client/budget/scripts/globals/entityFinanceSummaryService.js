@@ -11,7 +11,7 @@
         <td>{{  entity.Comments |date}}</td>
     */
     angular.module('org_maint_budget')
-      .service('EntityFinanceSummaryService', function ($http, $q, connectToService, BudgetStatusService) {
+      .service('EntityFinanceSummaryService', function ($http, $q, connectToService, BudgetStatusService, $localStorage) {
           var entityList = [
           {
               EntityFinanceSummaryID:1,
@@ -41,6 +41,10 @@
               if (connectToService == 'true')
                   return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetEntitySummaryList");
               else {
+                  if ($localStorage.entityList != null)
+                      entityList = $localStorage.entityList;
+                  else
+                      $localStorage.entityList = entityList;
                   return entityList;
               }
           };
@@ -98,6 +102,7 @@
                   Entity.EntityFinanceSummaryID = entityList.length + 1;
                   entityList.push(Entity);
                   this.updateEntityStatus();
+                  $localStorage.entityList = entityList;
                   return (Entity.EntityFinanceSummaryID);
               }
           }
@@ -127,6 +132,7 @@
                           break;
                       }
                   }
+                  $localStorage.entityList = entityList;
               }
           }
           this.updateEntityDetail = function (Entity,EntityList) {
@@ -164,7 +170,10 @@
 
               }
               else {
-                  
+                  if ($localStorage.entityList != null)
+                      entityList = $localStorage.entityList;
+                  else
+                      $localStorage.entityList = entityList;
                   var entity = null;
                   for (i = 0; i < entityList.length; i++) {
                       
@@ -208,6 +217,7 @@
 
 
               }
+             
               if (budgetAvailable < 0) {
                   budgetStatus.BudgetRequired = -1 * budgetAvailable;
                   BudgetStatusService.updateBudgetStatus(budgetStatus);

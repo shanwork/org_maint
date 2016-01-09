@@ -1,6 +1,6 @@
 ﻿(function () {
     angular.module('org_maint_budget')
-      .service('BudgetStatusService', function ($http,$q,connectToService) {
+      .service('BudgetStatusService', function ($http,$q,connectToService,$localStorage) {
           var budgetStatus = 
               {
                   BudgetAvailable: 1000.00,
@@ -24,6 +24,10 @@
               }
               else
               {
+                  if ($localStorage.budgetHistory != null)
+                      budgetHistory = $localStorage.budgetHistory;
+                  else
+                      $localStorage.budgetHistory = budgetHistory;
                   return budgetHistory;
               }
           };
@@ -39,6 +43,7 @@
                           budgetStatus.BudgetRequired = 0;
                   }
               }
+              $localStorage.budgetHistory = budgetHistory;
           };
           this.updateBudgetStatus = function (newBudgetStatus) {
               if (connectToService == 'false') {
@@ -46,6 +51,7 @@
                   budgetStatus.BudgetAllocated = newBudgetStatus.BudgetAllocated;
                   budgetStatus.BudgetRequired = newBudgetStatus.BudgetRequired;
               }
+              $localStorage.budgetStatus = budgetStatus;
           };
           this.getBudgetStatus = function () {
               if (connectToService == 'true') {
@@ -54,6 +60,10 @@
               }
               else
               {
+                  if ($localStorage.budgetStatus != null)
+                      budgetStatus = $localStorage.budgetStatus;
+                  else
+                      $localStorage.budgetStatus = budgetStatus;
                   return budgetStatus;
              }
           };

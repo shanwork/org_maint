@@ -81,6 +81,7 @@
     <Content Include="budget\scripts\controllers\entityController.js" />
     <Content Include="budget\scripts\controllers\entityItemExpensesController.js" />
     <Content Include="budget\scripts\controllers\entityFinanceSummaryController.js" />
+    <Content Include="budget\scripts\controllers\settingsController.js" />
     <Content Include="budget\scripts\globals\budgetStatusService.js" />
     <Content Include="budget\scripts\globals\budgetStatusService_backup.js" />
     <Content Include="budget\scripts\globals\contributorService.js" />
@@ -94,6 +95,7 @@
     <Content Include="budget\views\entityFinanceSummaries.html" />
     <Content Include="budget\views\aboutThisSite.html" />
     <Content Include="budget\views\orders.html" />
+    <Content Include="budget\views\Settings.html" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="comingNext\home.html" />
@@ -109,6 +111,7 @@
   <ItemGroup>
     <Content Include="scripts\angular-route.js" />
     <Content Include="scripts\angular.js" />
+    <Content Include="services\test.html" />
     <Content Include="styles\globalStyles.css" />
     <Content Include="Web.config" />
   </ItemGroup>

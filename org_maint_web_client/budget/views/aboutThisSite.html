@@ -20,16 +20,16 @@
     </p>
     <ol>
         <li>
-            <a href="budget/home.html#/budgetStatus">High Level Budget Status</a>.. Gives an overview of Available, Used and Deficit (required) quantities<br />
+            <a href="../budget/home.html#/budgetStatus">High Level Budget Status</a>.. Gives an overview of Available, Used and Deficit (required) quantities<br />
             Gives a listing of budget history, contributions, allocations. Also one can allocate the available funds.
         </li>
         <li>
-            <a href="budget/home.html#/contributors">Contributions</a>.. <br />
+            <a href="../budget/home.html#/contributors">Contributions</a>.. <br />
             Gives a list of contributions - name, amount, currency, etc. Adding a contribution automatically updates budget status and history
 
         </li>
         <li>
-            <a href="budget/home.html#/entityFinanceSummaries">Entity Summaries</a>.. <br />
+            <a href="../budget/home.html#/entityFinanceSummaries">Entity Summaries</a>.. <br />
             A summary of entities involved within the framework of budget distribution. Summary of entities in status of allocated (budget was allocated),
             allocable (budget is available, but not yet allocable) and unallocated (budget not available)<br />
             List of entities with their budget specifics. Add entity. Drill down item wise expenses for an entity
@@ -39,7 +39,8 @@
     <a ng-click="scrollTo('top')">Top of page</a>
 
     <a name="status"><h3>Status and Pending  </h3></a>
-    <li>What you are seeing here is a proof of concept user interface not connected to a database with sample data.(clicking the browser refresh button will erase all the data you added, leaving you with the 'pre-loaded' sample data)  </li>
+    <li>What you are seeing here is a proof of concept user interface not connected to a database with sample data.
+    <font color="blue">I am injecting the 'ngstorage'  module and '$localStorage' to persist data now</font> </li>
     <li>
         I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
         It's simply that I have been unable to get the bandwidth to publish the database and connecting service to the public website

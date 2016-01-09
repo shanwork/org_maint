@@ -32,7 +32,7 @@
             $scope.readMeOverview += 'Allocable is the number of entities awaiting funding and budget is available.<br> ';
             $scope.readMeOverview += 'Allocated is the number of entities which have had budget allocated either fully or partially<br> ';
             $scope.readMeOverview += 'Unallocated  is the number of entities awaiting funding but budget is unavailable<br>';
-            $scope.readMeOverview += '"Add Entity with Expense Items" - opens detail page to add an entity and its expense items<br> (right now we are able to add only summary information and the detail page is not functional yet)';
+            $scope.readMeOverview += '"Add Entity with Expense Items" - opens detail page to add an entity and its expense items<br>';
             $scope.readmeAdd = "History - shows the list of contributions (''Credit'') and distributions (''Debit''). <br> "
             $scope.readmeAdd = "When a contribution is added (''Contributors'' page), a ''Credit'' entry is added below. <br> "
             $scope.readmeAdd += "When the ''Allocate'' button (above) is pressed, a number of ''Debit'' entries are added corresponding to the entities whose budgets are fulfilled.<br>"

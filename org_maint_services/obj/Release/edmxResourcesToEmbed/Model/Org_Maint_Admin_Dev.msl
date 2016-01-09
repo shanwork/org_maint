@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdminMaintModelStoreContainer" CdmEntityContainer="AdminMaintEntities">
+    <EntitySetMapping Name="DeveloperTasksAndBugs">
+      <EntityTypeMapping TypeName="AdminMaintModel.DeveloperTasksAndBug">
+        <MappingFragment StoreEntitySet="DeveloperTasksAndBugs">
+          <ScalarProperty Name="DeveloperTasksAndBugsId" ColumnName="DeveloperTasksAndBugsId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

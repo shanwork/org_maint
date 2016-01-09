@@ -24,15 +24,16 @@
         public string Comments { get; set; }
         */
 (function () {
-    var EntityFinanceSummaryController = function ($scope, EntityFinanceSummaryService, connectToService, configuration) {
+    var EntityFinanceSummaryController = function ($scope, EntityFinanceSummaryService, connectToService, configuration,$localStorage) {
         $scope.sortBy = 'DateUpdated';
         $scope.reverse = true;
-        if (configuration.verbose == 'yes') {
+        //    if (configuration.verbose == 'yes') {
+        if ($localStorage.verbose == 'yes') {
             $scope.readMeOverview = 'This is the entity overview and detail page.<br> ';
             $scope.readMeOverview += 'Allocable is the number of entities awaiting funding and budget is available.<br> ';
             $scope.readMeOverview += 'Allocated is the number of entities which have had budget allocated either fully or partially<br> ';
             $scope.readMeOverview += 'Unallocated  is the number of entities awaiting funding but budget is unavailable<br>';
-            $scope.readMeOverview += '"Add Entity with Expense Items" - opens detail page to add an entity and its expense items<br> (right now we are able to add only summary information and the detail page is not functional yet)';
+            $scope.readMeOverview += '"Add Entity with Expense Items" - opens detail page to add an entity and its expense items<br>';
             $scope.readmeAdd = "History - shows the list of contributions (''Credit'') and distributions (''Debit''). <br> "
             $scope.readmeAdd = "When a contribution is added (''Contributors'' page), a ''Credit'' entry is added below. <br> "
             $scope.readmeAdd += "When the ''Allocate'' button (above) is pressed, a number of ''Debit'' entries are added corresponding to the entities whose budgets are fulfilled.<br>"
@@ -100,7 +101,7 @@
 
 
 
-    EntityFinanceSummaryController.$inject = ['$scope', 'EntityFinanceSummaryService', 'connectToService', 'configuration'];
+    EntityFinanceSummaryController.$inject = ['$scope', 'EntityFinanceSummaryService', 'connectToService', 'configuration', '$localStorage'];
 
     angular.module('org_maint_budget')
       .controller('EntityFinanceSummaryController', EntityFinanceSummaryController);
