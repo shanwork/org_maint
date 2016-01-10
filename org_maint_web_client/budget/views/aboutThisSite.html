@@ -35,7 +35,13 @@
             List of entities with their budget specifics. Add entity. Drill down item wise expenses for an entity
 
         </li>
-    </ol>
+        <li>
+            <a href="../budget/home.html#/settings">Settings</a>.. <br />
+            Iteratively removing the hard coding, this page right now has the option of adding and editing currencies, flushing data and showing or hiding help texts on each page.
+
+
+        </li>
+ </ol>
     <a ng-click="scrollTo('top')">Top of page</a>
 
     <a name="status"><h3>Status and Pending  </h3></a>
@@ -48,7 +54,7 @@
     <li>This update relationships are functional in this P.O.C.  e.g adding a contributor will update budget status. Adding entity, then expense items updates the totals for the former and the entity status </li>
     <li> Another (quite obvious) item to be addressed is the styling, positioning and look and feel </li>
     <li> This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
-    <li> Lot of hard coding (e.g. Currency is only "USD - 1:60, EUR 1:75, INR 1:1 and default 1:2"), need to make more stuff configurable. Adding lookups like drop downs, etc.  </li>
+    <li> Hard coding (e.g. Dates in the client-only version), need to make more stuff configurable. Adding lookups like drop downs, etc.<font color="blue">(Currencies are now configurable)</font>  </li>
     <a ng-click="scrollTo('top')">Top of page</a>
 
 

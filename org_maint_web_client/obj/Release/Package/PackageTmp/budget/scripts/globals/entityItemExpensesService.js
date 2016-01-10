@@ -10,7 +10,7 @@
 */
 (function () {
     angular.module('org_maint_budget')
-         .service('EntityItemExpensesService', function ($http, $q, connectToService) {
+         .service('EntityItemExpensesService', function ($http, $q, connectToService, $localStorage) {
              var localEntityItemList = [
                  {
                      EntityFinanceSummaryID: 1,
@@ -93,6 +93,10 @@
                  }
                  else {
                      var matches = [];
+                     if ($localStorage.localEntityItemList != null)
+                         localEntityItemList = $localStorage.localEntityItemList;
+                     else
+                         $localStorage.localEntityItemList = localEntityItemList;
 
                      for (var i = 0; i < localEntityItemList.length; i++) {
                          //alert(localEntityItemList[i].EntityFinanceSummaryID);
@@ -148,6 +152,7 @@
                      //alert(EntityFinanceSummaryID);
                      entityItem.EntityItemId = localEntityItemList.length + 1;
                      localEntityItemList.push(entityItem);
+                     $localStorage.localEntityItemList = localEntityItemList;
                  }
                 
                 

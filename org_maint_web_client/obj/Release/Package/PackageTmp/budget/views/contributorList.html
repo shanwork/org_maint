@@ -24,8 +24,12 @@
     <tr>
         <td class="editCell"><input type="button" id="save" value="ADD" data-ng-click="addContributor()" /> </td>
         <td  class="editCell"><input type='text' data-ng-model="ContributorName" /></td>
-        <td  class="editCell"><input type='text' data-ng-model="OriginalCurrencyAmount" /></td>
-        <td  class="editCell"><input type='text' data-ng-model="Currency" /></td>
+        <td  class="editCell"><input type='text' data-ng-model="OriginalCurrencyAmount" />
+        </td>
+        <td  class="editCell"> 
+        <select data-ng-model="data.selectedOption"
+                data-ng-options="currency.Name + ' (' + currency.value +')' for currency in data.currencyList">
+</select></td>
         <td  class="editCell">&nbsp;</td>
         <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
         <td  class="editCell">&nbsp;</td>

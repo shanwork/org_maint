@@ -1,8 +1,9 @@
 ﻿(function() {
-    var BudgetStatusController = function ($scope, BudgetStatusService, EntityFinanceSummaryService, connectToService, configuration) {
+    var BudgetStatusController = function ($scope, BudgetStatusService, EntityFinanceSummaryService, connectToService, configuration,$localStorage) {
          $scope.sortBy = 'Date';
          $scope.reverse = true;
-         if (configuration.verbose == 'yes')
+      //   if (configuration.verbose == 'yes')
+             if ($localStorage.verbose == 'yes')
          {
              $scope.readMeOverview = 'This is the budget dashboard page, with budget history.<br> ';
              $scope.readMeOverview += 'Available is total budget that has come in but is not distributed.<br> ';
@@ -61,6 +62,7 @@
                    if (fundToAllocate > 0.0) {
                       
                        var entityList = EntityFinanceSummaryService.getEntitiesSortedPriorityAAmountDList();
+                       alert($localStorage.entityList[0].BudgetAllocated);
                  //      alert(entityList.length);
                        for (i = 0; i < entityList.length; i++) {
                            if (parseFloat(entityList[i].BudgetRequired) == 0.0)
@@ -95,8 +97,9 @@
                           
 
                        }
-                       EntityService.updateEntityStatus();
-                       $scope.BudgetAvailable = $scope.budgetStatus.BudgetAvailable;
+                       EntityFinanceSummaryService.updateEntityStatus();
+                       $localStorage.entityList = entityList;
+                         $scope.BudgetAvailable = $scope.budgetStatus.BudgetAvailable;
                    }
                    
               }
@@ -105,7 +108,7 @@
        
        };
     
-    BudgetStatusController.$inject = ['$scope', 'BudgetStatusService', 'EntityFinanceSummaryService', 'connectToService','configuration'];
+    BudgetStatusController.$inject = ['$scope', 'BudgetStatusService', 'EntityFinanceSummaryService', 'connectToService', 'configuration', '$localStorage'];
 
     angular.module('org_maint_budget')
       .controller('BudgetStatusController', BudgetStatusController);

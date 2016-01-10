@@ -1,7 +1,7 @@
 (function() {
     
    
-    var budgetApp = angular.module('org_maint_budget', ['ngRoute','ngSanitize']);
+    var budgetApp = angular.module('org_maint_budget', ['ngRoute','ngSanitize','ngStorage']);
     budgetApp.value('connectToService', 'false');
     budgetApp.value('configuration', { imMemoryData: 'yes', verbose: 'yes' });
     budgetApp.config(function ($routeProvider) {
@@ -32,6 +32,11 @@
              })
             .when('/home', {
                 templateUrl: '../../index.html'
+            })
+            .when('/settings', {
+                controller:'SettingsController',
+                templateUrl: 'views/settings.html'
+
             })
             .otherwise({ redirectTo: '/budgetStatus' });
     },function ($httpProvider) {

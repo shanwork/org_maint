@@ -1,12 +1,35 @@
 ﻿(function () {
-    var ContributorController = function ($scope, ContributorService, BudgetStatusService, EntityService, connectToService, configuration) {
-        if (configuration.verbose == 'yes') {
+    var ContributorController = function ($scope, ContributorService, BudgetStatusService, EntityService, connectToService, configuration, $localStorage) {
+    //    if (configuration.verbose == 'yes') {
+        if ($localStorage.verbose == 'yes')
+            {
             $scope.readMeOverview = 'This is the page for adding and listing contributions.<br> ';
             $scope.readMeOverview += 'Enter Name, amount in decimal, currency and comments (optional) .<br> ';
             $scope.readMeOverview += 'Adding a contributor adds an entry in Budget History as a  "Credit"  and adds to available budget ("Budget Status" page) .<br> ';
-            $scope.readMeOverview += '(At this point, only currency is INR, USD where original amount is multiplied by 60 and EUR - by 75 and there are no validations)';
-        }
+       }
+        $scope.data =$localStorage.currencyData;
+   /*     {
+            currencyList:
+               [{
+                   Name: 'USD',
+                   value: 60.00
+               }, {
+                   Name: 'EUR',
+                   value: 75.00
 
+               }, {
+                   Name: 'INR',
+                   value: 1.00
+
+               }, {
+                   Name: 'GBP',
+                   value: 101.00
+
+               }], selectedOption: {
+                   Name: 'INR',
+                   value: 1.00
+               }
+        };*/
         $scope.sortBy = 'DateReceived';
         $scope.reverse = true;
         $scope.Currency = 'INR';
@@ -32,19 +55,13 @@
             var Contributor = {
                 ContributorName: $scope.ContributorName,
                 OriginalCurrencyAmount: $scope.OriginalCurrencyAmount,
-                Currency: $scope.Currency,
+                Currency:   $scope.data.selectedOption.Name + '(' + $scope.data.selectedOption.value + ')',
                 ConvertedAmount: 0.0,
                 Comments: $scope.Comments,
                 // will add date later
             };
-            switch ($scope.Currency) {
-                case 'INR':
-                    Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount;
-                    break;
-                case 'USD': Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 60.0; break;
-                case 'EUR': Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 75.0; break;
-                default: Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * 15.0; break;
-            }
+            Contributor.ConvertedAmount = Contributor.OriginalCurrencyAmount * parseFloat($scope.data.selectedOption.value);
+            
             if (connectToService == 'true') {
            //alert($scope.ContributorName);
           //  alert(Contributor.ContributorName);
@@ -78,7 +95,7 @@
         
   
 
-    ContributorController.$inject = ['$scope', 'ContributorService', 'BudgetStatusService', 'EntityService', 'connectToService', 'configuration'];
+    ContributorController.$inject = ['$scope', 'ContributorService', 'BudgetStatusService', 'EntityService', 'connectToService', 'configuration', '$localStorage'];
 
     angular.module('org_maint_budget')
       .controller('ContributorController', ContributorController);

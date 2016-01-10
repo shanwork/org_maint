@@ -24,10 +24,11 @@
         public string Comments { get; set; }
         */
 (function () {
-    var EntityFinanceSummaryController = function ($scope, EntityFinanceSummaryService, connectToService, configuration) {
+    var EntityFinanceSummaryController = function ($scope, EntityFinanceSummaryService, connectToService, configuration,$localStorage) {
         $scope.sortBy = 'DateUpdated';
         $scope.reverse = true;
-        if (configuration.verbose == 'yes') {
+        //    if (configuration.verbose == 'yes') {
+        if ($localStorage.verbose == 'yes') {
             $scope.readMeOverview = 'This is the entity overview and detail page.<br> ';
             $scope.readMeOverview += 'Allocable is the number of entities awaiting funding and budget is available.<br> ';
             $scope.readMeOverview += 'Allocated is the number of entities which have had budget allocated either fully or partially<br> ';
@@ -100,7 +101,7 @@
 
 
 
-    EntityFinanceSummaryController.$inject = ['$scope', 'EntityFinanceSummaryService', 'connectToService', 'configuration'];
+    EntityFinanceSummaryController.$inject = ['$scope', 'EntityFinanceSummaryService', 'connectToService', 'configuration', '$localStorage'];
 
     angular.module('org_maint_budget')
       .controller('EntityFinanceSummaryController', EntityFinanceSummaryController);

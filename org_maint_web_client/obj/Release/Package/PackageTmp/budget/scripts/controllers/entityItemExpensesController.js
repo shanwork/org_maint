@@ -98,7 +98,7 @@
                             //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
                             if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
                                 $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
-                                alert('add new item');
+                             //   alert('add new item');
                                 var promisePost2 = EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
                                 promisePost2.then(function (p2) {
                                     $scope.entityItemList[i].EntityItemID = p2.data;
