@@ -8,28 +8,7 @@
             $scope.readMeOverview += 'Adding a contributor adds an entry in Budget History as a  "Credit"  and adds to available budget ("Budget Status" page) .<br> ';
        }
         $scope.data =$localStorage.currencyData;
-   /*     {
-            currencyList:
-               [{
-                   Name: 'USD',
-                   value: 60.00
-               }, {
-                   Name: 'EUR',
-                   value: 75.00
-
-               }, {
-                   Name: 'INR',
-                   value: 1.00
-
-               }, {
-                   Name: 'GBP',
-                   value: 101.00
-
-               }], selectedOption: {
-                   Name: 'INR',
-                   value: 1.00
-               }
-        };*/
+ 
         $scope.sortBy = 'DateReceived';
         $scope.reverse = true;
         $scope.Currency = 'INR';

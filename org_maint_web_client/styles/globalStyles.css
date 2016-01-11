@@ -29,6 +29,15 @@ header{
 .editCell{
     background-color:gray;
 }
+.subSection 
+{
+    background-color:#EAEEEA;
+    margin:5px;
+    border: inset 3px;
+    border-radius: 5px;
+    padding:5px;
+
+}
 table { width:3200px; max-width:200px; border: solid 2px black;}
 td {   max-width:200px; border: solid 1px black;}
 inpout {  width:1110px;}

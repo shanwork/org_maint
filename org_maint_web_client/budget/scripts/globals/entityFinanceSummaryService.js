@@ -12,25 +12,26 @@
     */
     angular.module('org_maint_budget')
       .service('EntityFinanceSummaryService', function ($http, $q, connectToService, BudgetStatusService, $localStorage) {
-          var entityList = [
-          {
-              EntityFinanceSummaryID:1,
-              EntityName: 'Gaon1',
-              EntityCategory: 'Village',
-              BudgetAllocated: 0.0,
-              BudgetUsed: 0.0,
-              BudgetRequired: 70000.0,
-              Priority: 1,
-          },
-          {
-              EntityFinanceSummaryID: 2,
-              EntityName: 'Gaon2',
-              EntityCategory: 'Village',
-              BudgetAllocated: 0.0,
-              BudgetUsed: 0.0,
-              BudgetRequired: 102000.0,
-              Priority: 2,
-          }];
+          var entityList = [];
+          //var entityList = [
+          //{
+          //    EntityFinanceSummaryID:1,
+          //    EntityName: 'Gaon1',
+          //    EntityCategory: 'Village',
+          //    BudgetAllocated: 0.0,
+          //    BudgetUsed: 0.0,
+          //    BudgetRequired: 70000.0,
+          //    Priority: 1,
+          //},
+          //{
+          //    EntityFinanceSummaryID: 2,
+          //    EntityName: 'Gaon2',
+          //    EntityCategory: 'Village',
+          //    BudgetAllocated: 0.0,
+          //    BudgetUsed: 0.0,
+          //    BudgetRequired: 102000.0,
+          //    Priority: 2,
+          //}];
           var entityStatus = {
               TotalEntities: 0,
               TotalEntitiesAllocable: 0,

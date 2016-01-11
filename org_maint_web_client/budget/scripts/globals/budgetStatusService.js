@@ -1,22 +1,24 @@
 ﻿(function () {
     angular.module('org_maint_budget')
-      .service('BudgetStatusService', function ($http,$q,connectToService,$localStorage) {
+      .service('BudgetStatusService', function ($http, $q, connectToService, $localStorage) {
+        //  var budgetStatus = {};
           var budgetStatus = 
               {
-                  BudgetAvailable: 1000.00,
+                  BudgetAvailable: 0.00,
                   BudgetAllocated: 0,
                   BudgetRequired: 0
               } ;
-          var budgetHistory = [
-              {
-                  Amount: 1000,
-                  DebitCredit: 'Credit',
-                  DateString: 'Nov 1, 2015',
-                  Date: '2015-11-01',
-                  Principal: 'Ganesha',
-                  Comments:'Initial Thrust'
-              }
-          ];
+          var budgetHistory = [];
+          //var budgetHistory = [
+          //    {
+          //        Amount: 1000,
+          //        DebitCredit: 'Credit',
+          //        DateString: 'Nov 1, 2015',
+          //        Date: '2015-11-01',
+          //        Principal: 'Ganesha',
+          //        Comments:'Initial Thrust'
+          //    }
+          //];
           this.getBudgetHistory = function () {
               if (connectToService == 'true') {
 

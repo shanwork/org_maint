@@ -24,8 +24,15 @@
     <select ng-model="data.verbose">
         <option value="yes" >yes</option>
         <option value="no">no</option>
-</select>
-    <input type="button" value="update" ng-click="updateVerbose()" />
+        </select>
+        &nbsp;&nbsp;Show Test Data
+        <select ng-model="data.showTestData">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+    <input type="button" value="update" ng-click="updateSettings()" />
     <input type="button" value="flushData" ng-click="flushData()" />
-     
+    <input type="button" value="Save" ng-click="saveData()" />
+    <a download="file1.txt" id="file1Link" style="display:block">Download</a>
+  
 </div>

@@ -7,21 +7,21 @@
                   return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetContributorList");
              }
              else {
-                 if (contributorList.length == 0) {
-                     //alert(contributorList.length);
-                     var newContributor =
-                         {
-                             ContributorID: 1,
-                             ContributorName: 'Ganesha',
-                             OriginalCurrencyAmount: 1000,
-                             Currency: 'INR',
-                             ConvertedAmount: 1000,
-                             Comments: 'Initial Thrust',
-                             DateReceivedString: 'Nov 1 2015',
-                             DateReceived: '2015-11-01'
-                         };
-                     contributorList.push(newContributor);
-                 }
+                 //if (contributorList.length == 0) {
+                 //    //alert(contributorList.length);
+                 //    var newContributor =
+                 //        {
+                 //            ContributorID: 1,
+                 //            ContributorName: 'Ganesha',
+                 //            OriginalCurrencyAmount: 1000,
+                 //            Currency: 'INR',
+                 //            ConvertedAmount: 1000,
+                 //            Comments: 'Initial Thrust',
+                 //            DateReceivedString: 'Nov 1 2015',
+                 //            DateReceived: '2015-11-01'
+                 //        };
+                 //    contributorList.push(newContributor);
+                 //}
                  if ($localStorage.contributorList != null)
                   
                      contributorList = $localStorage.contributorList;
