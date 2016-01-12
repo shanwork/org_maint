@@ -1,6 +1,7 @@
 ﻿(function () {
     var AboutThisSiteController = function ($scope, $location,$anchorScroll, connectToService) {
-        $scope.date = new Date;
+        var today = new Date();
+        $scope.todayShort = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear() + '*';
         $scope.scrollTo = function(label)
         {
             $location.hash(label);

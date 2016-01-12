@@ -13,7 +13,7 @@
     While, as said, it was initiated with NAAM as an inspiration, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
     a list of items, say a transport service which maintains a bunch of trucks.<p />
     <a ng-click="scrollTo('Elements')"><li>Components</a></li>
-    <a ng-click="scrollTo('status')"><li>Status and Pending</a></li>
+    <a ng-click="scrollTo('status')"><li>Status and Pending ({{todayShort}})</a></li>
     <a ng-click="scrollTo('technical')"><li>Technical</a></li>
 
     I identified and am in the process of developing the following elements:
@@ -38,6 +38,7 @@
         <li>
             <a href="../budget/home.html#/settings">Settings</a>.. <br />
             Iteratively removing the hard coding, this page right now has the option of adding and editing currencies, flushing data and showing or hiding help texts on each page.
+            <font color="blue">(WIP - working on loading and saving data from and to external comma separated files)</font>
 
 
         </li>
@@ -45,13 +46,20 @@
     <a ng-click="scrollTo('top')">Top of page</a>
 
     <a name="status"><h3>Status and Pending  </h3></a>
-    <li>What you are seeing here is a proof of concept user interface not connected to a database with sample data.
-    <font color="blue">I am injecting the 'ngstorage'  module and '$localStorage' to persist data now</font> </li>
+    <li>What you are seeing here is a proof of concept user interface not connected to a database with or without sample data.
+    <font color="blue">I am injecting the 'ngstorage'  module and '$localStorage' to persist data now. 
+       </font> </li>
     <li>
         I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
         It's simply that I have been unable to get the bandwidth to publish the database and connecting service to the public website
     </li>
-    <li>This update relationships are functional in this P.O.C.  e.g adding a contributor will update budget status. Adding entity, then expense items updates the totals for the former and the entity status </li>
+    <li>Even without the full blown (not connected to a regular data base) version, it is iteratively reaching full functionality at client side 
+    where<font color="blue">
+    a user can
+    <br />&nbsp;&nbsp;&nbsp;* upload existing data files which they had saved prevously in the last session
+    <br />&nbsp;&nbsp;&nbsp;* do their record updates and other work, and
+    <br />&nbsp;&nbsp;&nbsp;* save their work overwriting the existing, or writing to a new, set of files(You can currently download the records you have saved on the Settings page)</font>
+</li>
     <li> Another (quite obvious) item to be addressed is the styling, positioning and look and feel </li>
     <li> This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
     <li> Hard coding (e.g. Dates in the client-only version), need to make more stuff configurable. Adding lookups like drop downs, etc.<font color="blue">(Currencies are now configurable)</font>  </li>

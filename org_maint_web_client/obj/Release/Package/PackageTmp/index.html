@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/globalStyles.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body data-ng-controller="IndexPageController">
    
         <header >
             <nav class="navbar navbar-default" style="border:2px outset silver;">
@@ -22,7 +22,7 @@
             Hi, <p>
                 <i>It was about time, I presented something to the outside world, so I picked up a basic hosting package and started publishing....</i><p>
             <p>
-               <h3>Published Work as on <span id="dateShow"></span> </h3>
+               <h3>Published Work as on <span id="dateShow">{{todayShort}} </span> </h3>
                 <a href="#budgetSite"><li>About the Budgeting Wesbite</a></li>
                 <a name="budgetSite"><h5>Budgeting Wesbite</h5></a>
                 As of   I have developed the  budgeting website. Some background:<br />
@@ -35,6 +35,7 @@
                 a list of items, say a transport service which maintains a bunch of trucks.
             
             <p /> <b>Go to this section by clicking <a href="budget/home.html#/about"> here  </a>. </b> 
+            <p/>  {{DateFormat}}
         </para>
     
    

@@ -62,7 +62,7 @@
                    if (fundToAllocate > 0.0) {
                       
                        var entityList = EntityFinanceSummaryService.getEntitiesSortedPriorityAAmountDList();
-                       alert($localStorage.entityList[0].BudgetAllocated);
+               //        alert($localStorage.entityList[0].BudgetAllocated);
                  //      alert(entityList.length);
                        for (i = 0; i < entityList.length; i++) {
                            if (parseFloat(entityList[i].BudgetRequired) == 0.0)

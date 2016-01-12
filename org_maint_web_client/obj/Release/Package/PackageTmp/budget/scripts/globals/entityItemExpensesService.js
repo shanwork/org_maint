@@ -94,10 +94,10 @@
                  }
                  else {
                      var matches = [];
-                     if ($localStorage.localEntityItemList != null)
-                         localEntityItemList = $localStorage.localEntityItemList;
+                     if ($localStorage.entityItemList != null)
+                         localEntityItemList = $localStorage.entityItemList;
                      else
-                         $localStorage.localEntityItemList = localEntityItemList;
+                         $localStorage.entityItemList = localEntityItemList;
 
                      for (var i = 0; i < localEntityItemList.length; i++) {
                          //alert(localEntityItemList[i].EntityFinanceSummaryID);
@@ -153,7 +153,7 @@
                      //alert(EntityFinanceSummaryID);
                      entityItem.EntityItemId = localEntityItemList.length + 1;
                      localEntityItemList.push(entityItem);
-                     $localStorage.localEntityItemList = localEntityItemList;
+                     $localStorage.entityItemList = localEntityItemList;
                  }
                 
                 

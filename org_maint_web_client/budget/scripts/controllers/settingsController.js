@@ -60,7 +60,7 @@
             if ($localStorage.showTestData == 'yes')
                 message += ' and it will be replaced by sample data.';
             else
-                message += ' completely, leaving you with no records.';
+                message += ' completely, leaving you with no records, except the default currency of INR.';
             message += 'Proceed?';
             if (confirm(message)) {
                 if ($localStorage.showTestData == 'yes') {
@@ -183,21 +183,21 @@
                     ];
                     $localStorage.currencyData = {
                         currencyList:
-                            [{
-                                Id: 1,
+                             [{
+                                 Id: 1,
+                    Name: 'INR',
+                    value: 1.00
+
+                },{
+                                Id: 2,
                                 Name: 'USD',
                                 value: 60.00
                             }, {
-                                Id: 2,
+                                Id: 3,
                                 Name: 'EUR',
                                 value: 75.00
 
-                            }, {
-                                Id: 3,
-                                Name: 'INR',
-                                value: 1.00
-
-                            }, {
+                            },   {
                                 Id: 4,
                                 Name: 'GBP',
                                 value: 101.00
@@ -233,13 +233,21 @@
                     $localStorage.entityList = [];
                     $localStorage.budgetHistory = [];
                     $localStorage.contributorList = [];
-                    $localStorage.currencyData = { };
+                    $localStorage.currencyData = { currencyList:
+                            [{
+                                Id: 1,
+                                Name: 'INR',
+                                value: 1.00
+
+                            }]
+                    };
 
                     }
             }
         };
         $scope.upload = function () {
             var file = fileInput.files[0];
+            alert(fileInput.files[0].name);
             var reader = new FileReader();
             reader.onload = function (e) {
                 alert( reader.result.split('\n')[0]);
@@ -248,6 +256,10 @@
             reader.readAsText(file);
              
         };
+        $scope.uploadBudgetStatus = function(fileObj)
+        {
+
+        }
         $scope.saveData = function () {
             var contributorListLink = document.getElementById('contributorListLink');
             

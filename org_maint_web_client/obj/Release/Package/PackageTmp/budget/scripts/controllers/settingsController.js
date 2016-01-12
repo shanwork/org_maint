@@ -1,5 +1,7 @@
 ﻿(function () {
     var SettingsController = function ($scope, configuration, connectToService, $localStorage) {
+        var today = new Date();
+        $scope.suffix = today.getDate() + '_' + (today.getMonth()+1) + '_' + today.getFullYear() + '.txt'
         $scope.CurrencyId = -1;
             $scope.currencyData =  {
             currencyList:
@@ -58,7 +60,7 @@
             if ($localStorage.showTestData == 'yes')
                 message += ' and it will be replaced by sample data.';
             else
-                message += ' completely, leaving you with no records.';
+                message += ' completely, leaving you with no records, except the default currency of INR.';
             message += 'Proceed?';
             if (confirm(message)) {
                 if ($localStorage.showTestData == 'yes') {
@@ -107,7 +109,7 @@
                      BudgetRequired: 102000.0,
                      Priority: 2,
                  }];
-                    $localStorage.localEntityItemList = [
+                    $localStorage.entityItemList = [
                         {
                             EntityFinanceSummaryID: 1,
                             EntityItemId: 1,
@@ -179,6 +181,37 @@
 
                         }
                     ];
+                    $localStorage.currencyData = {
+                        currencyList:
+                             [{
+                                 Id: 1,
+                    Name: 'INR',
+                    value: 1.00
+
+                },{
+                                Id: 2,
+                                Name: 'USD',
+                                value: 60.00
+                            }, {
+                                Id: 3,
+                                Name: 'EUR',
+                                value: 75.00
+
+                            },   {
+                                Id: 4,
+                                Name: 'GBP',
+                                value: 101.00
+
+                            }, {
+                                Id: 5,
+                                Name: 'DIR',
+                                value: 22.00
+
+                            }], selectedOption: {
+                                Name: 'INR',
+                                value: 1.00
+                            }
+                    };
                 }
                 else {
                     $localStorage.budgetStatus = {
@@ -186,7 +219,7 @@
                         BudgetAllocated: 0,
                         BudgetRequired: 0
                     };
-                    $localStorage.localEntityItemList = [{
+                    $localStorage.entityItemList = [{
                         EntityFinanceSummaryID: -1,
                         EntityItemId: -1,
                         EntityItemName: '',
@@ -200,41 +233,118 @@
                     $localStorage.entityList = [];
                     $localStorage.budgetHistory = [];
                     $localStorage.contributorList = [];
+                    $localStorage.currencyData = { currencyList:
+                            [{
+                                Id: 1,
+                                Name: 'INR',
+                                value: 1.00
 
-                }
+                            }]
+                    };
+
+                    }
             }
         };
-        $scope.saveData = function () {
-            var link = document.getElementById('file1Link');
-            var myArray = [
-                {
-                    Name: 'test1',
-                    value: 23
-                },
-                {
-                    Name: 'test2',
-                    value: 23
-                }
-                ,
-                {
-                    Name: 'test3',
-                    value: 23
-                }
-            ];
-            var write = '';
-            var streamedOutput = []
-            for (i = 0; i < myArray.length; i++) {
-                streamedOutput.push( myArray[i].Name + ',' + myArray.value );
+        $scope.upload = function () {
+            var file = fileInput.files[0];
+            alert(fileInput.files[0].name);
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                alert( reader.result.split('\n')[0]);
             }
-            link.href = "data:text/html," + encodeURIComponent(streamedOutput.join("\r\n"));
-            link.download = "inventory.txt";
 
-           // downloadURI("data:text/html," + encodeURIComponent(myArray.join("\r\n"), "inventory.txt"));
-            //for (i = 0; i < myArray.length; i++) {
-            //    write += myArray[i].Name + ',' + myArray.value + '\n\r';
-            //}
-            //link.href = $scope.makeTextFile(write);
-            //link.style.display = 'block';
+            reader.readAsText(file);
+             
+        };
+        $scope.uploadBudgetStatus = function(fileObj)
+        {
+
+        }
+        $scope.saveData = function () {
+            var contributorListLink = document.getElementById('contributorListLink');
+            
+            var contributorListOutput = []
+            for (i = 0; i < $localStorage.contributorList.length; i++) {
+                contributorListOutput.push($localStorage.contributorList[i].ContributorID + ',' +
+                    $localStorage.contributorList[i].ContributorName + ',' +
+                    $localStorage.contributorList[i].OriginalCurrencyAmount + ',' +
+                    $localStorage.contributorList[i].Currency + ',' +
+                    $localStorage.contributorList[i].ConvertedAmount + ',' +
+                $localStorage.contributorList[i].Comments + ',' +
+                $localStorage.contributorList[i].DateReceivedString + ',' +
+                 $localStorage.contributorList[i].DateReceived);
+            }
+            contributorListLink.href = "data:text/html," + encodeURIComponent(contributorListOutput.join("\r\n"));
+            contributorListLink.download = "contributorList" + $scope.suffix;
+            contributorListLink.style.display = 'block';
+            
+            var entityListLink = document.getElementById('entityListLink');
+            var entityListOutput = []
+            for (i = 0; i < $localStorage.entityList.length; i++) {
+                entityListOutput.push( 
+                $localStorage.entityList[i].EntityFinanceSummaryID + ',' +
+                $localStorage.entityList[i].EntityName + ',' +
+                $localStorage.entityList[i].EntityCategory + ',' +
+                $localStorage.entityList[i].BudgetAllocated + ',' +
+                $localStorage.entityList[i].BudgetUsed + ',' +
+                $localStorage.entityList[i].BudgetRequired + ',' +
+               $localStorage.entityList[i].Priority );
+            }
+            entityListLink.href = "data:text/html," + encodeURIComponent(entityListOutput.join("\r\n"));
+            entityListLink.download = "entities" + $scope.suffix;
+            entityListLink.style.display = 'block';
+
+            var entityItemListLink = document.getElementById('entityItemListLink');
+            var entityItemListOutput = []
+            for (i = 0; i < $localStorage.entityItemList.length; i++) {
+                entityItemListOutput.push(
+                $localStorage.entityItemList[i].EntityFinanceSummaryID + ',' +
+                $localStorage.entityItemList[i].EntityItemId + ',' +
+                $localStorage.entityItemList[i].EntityItemName + ',' +
+               $localStorage.entityItemList[i].EntityItemDetail + ',' +
+                $localStorage.entityItemList[i].EntityItemBudgetRequired + ',' +
+                $localStorage.entityItemList[i].EntityItemBudgetAllocated + ',' +
+                $localStorage.entityItemList[i].EntityItemPriority + ',' +
+                $localStorage.entityItemList[i].EntityItemDateUpdated + ',' +
+                $localStorage.entityItemList[i].EntityItemComments);
+            }
+            entityItemListLink.href = "data:text/html," + encodeURIComponent(entityItemListOutput.join("\r\n"));
+            entityItemListLink.download = "entityItemList" + $scope.suffix;
+            entityItemListLink.style.display = 'block';
+           
+            var budgetHistoryLink = document.getElementById('budgetHistoryLink');
+            var budgetHistoryOutput = []
+            for (i = 0; i < $localStorage.budgetHistory.length; i++) {
+                budgetHistoryOutput.push( 
+                $localStorage.budgetHistory[i].Amount + ',' +
+                 $localStorage.budgetHistory[i].DebitCredit + ',' +
+                 $localStorage.budgetHistory[i].DateString + ',' +
+                 $localStorage.budgetHistory[i].Date + ',' +
+                 $localStorage.budgetHistory[i].Principal + ',' +
+                 $localStorage.budgetHistory[i].Comments);
+            }
+            budgetHistoryLink.href = "data:text/html," + encodeURIComponent(budgetHistoryOutput.join("\r\n"));
+            budgetHistoryLink.download = "budgetHistory" + $scope.suffix;
+            budgetHistoryLink.style.display = 'block';
+           
+            var budgetStatusLink = document.getElementById('budgetStatusLink');
+            
+            budgetStatusLink.href = "data:text/html," + encodeURIComponent($localStorage.budgetStatus.BudgetAvailable + ',' +
+         $localStorage.budgetStatus.BudgetAllocated + ',' +
+        $localStorage.budgetStatus.BudgetRequired );
+            budgetStatusLink.download = "budgetStatus" + $scope.suffix;
+            budgetStatusLink.style.display = 'block';
+          
+            var currencyListLink = document.getElementById('currencyListLink');
+            var currencyListOutput = []
+            for (i = 0; i < $localStorage.currencyData.currencyList.length; i++) {
+                currencyListOutput.push(
+                $localStorage.currencyData.currencyList[i].Name + ',' +
+                 $localStorage.currencyData.currencyList[i].value  );
+            }
+            currencyListLink.href = "data:text/html," + encodeURIComponent(currencyListOutput.join("\r\n"));
+            currencyListLink.download = "currencyList" + $scope.suffix;
+            currencyListLink.style.display = 'block';
         };
         $scope.textFile=null;
         $scope.makeTextFile = function (text) {
@@ -343,7 +453,7 @@
          //    BudgetRequired: 102000.0,
          //    Priority: 2,
          //}];
-         //   $localStorage.localEntityItemList = [
+         //   $localStorage.entityItemList = [
          //       {
          //           EntityFinanceSummaryID: 1,
          //           EntityItemId: 1,
