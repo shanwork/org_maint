@@ -51,38 +51,39 @@
        </font> </li>
     <li>
         I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
-        It's simply that I have been unable to get the bandwidth to publish the database and connecting service to the public website
+        I recently uploaded this to a public website. I am having some issues with connection strings.<br /><i> However, read on...</i>
     </li>
-    <li>Even without the full blown (not connected to a regular data base) version, it is iteratively reaching full functionality at client side 
-    where<font color="blue">
-    a user can
+    <li>Even without the full blown (not connected to a regular data base) version, it is iteratively reaching full functionality completely client side 
+    where <font color="blue">
+    <br />a user can
     <br />&nbsp;&nbsp;&nbsp;* upload existing data files which they had saved prevously in the last session
     <br />&nbsp;&nbsp;&nbsp;* do their record updates and other work, and
     <br />&nbsp;&nbsp;&nbsp;* save their work overwriting the existing, or writing to a new, set of files(You can currently download the records you have saved on the Settings page)</font>
 </li>
-    <li> Another (quite obvious) item to be addressed is the styling, positioning and look and feel </li>
-    <li> This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
-    <li> Hard coding (e.g. Dates in the client-only version), need to make more stuff configurable. Adding lookups like drop downs, etc.<font color="blue">(Currencies are now configurable)</font>  </li>
-    <a ng-click="scrollTo('top')">Top of page</a>
+    <li> Pending - Documentation on how to use this site. Planning to style in some sliding or pop up help windows soon</li>
+    <li> Pending - Refining the look - styling. Validations</li>
+    <li> Pending -This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
+    <li> Pending - Reduce hard coding (e.g. Dates in the client-only version), need to make more stuff configurable. Adding lookups like drop downs, etc.<font color="blue">(Currencies are now configurable)</font>  </li>
+    <li> Pending templatizing the names and other configurability, e.g. the terms 'contributor' and 'entity' will be made configurable and can be renamed 'Donor' and 'Village' or 'funding' and 'vehicle' </li>
+    <li> Pending resolve issue of database connectivity.  </li>
+    <li> Pending bugs and errors  </li>
+<a ng-click="scrollTo('top')">Top of page</a>
 
 
     <a name="technical"><h3>Technical  </h3></a>
     <li>
-        The Web application UI is written in AngularJS.
-        The fully vertical version consumes a WCF web service which in turn talks to a Sql Server database through Entity Framework.
+        The Web application UI is written in AngularJS/HTML/CSS with gradual increasing infusion of bootstrap styling cues.<br />
+        The fully vertical version consumes an asp.net 4.5/C# WCF web service which in turn talks to a Sql Server database through Entity Framework.
         (I introduced a global variable in the angular code to switch between using in memory and dB data)
     </li>
-    <li>
+    <li style="visibility:hidden">
         References and Thanks<br />
         <a href="https://www.udemy.com/angularjs-jumpstart/" target="_blank">Dan Wahlin Angular JumpStart course on Udemy</a><br />
         <a href="http://www.c-sharpcorner.com/UploadFile/rahul4_saxena/crud-operation-in-mvc4-using-angularjs-and-wcf-rest-services/" target="_blank">
             Rahul Saxena - CRUD Operations in MVC4 Using AngularJS and WCF REST Services on CSharpCorner
-        </a>
+        </a><br />
+        Google
     </li>
-    <li> Iteratively will complete the flows</li>
-    <li> work on templatizing the names and other configurability, e.g. the terms 'contributor' and 'entity' will be made configurable and can be renamed 'Donor' and 'Village' or 'funding' and 'vehicle' </li>
-    <li> Iteratively, bring in the data connectivity layers. Maybe I'll map a different version of the Webservice to static (cache) data stored in a Singleton.. </li>
-    <li> Complete UI styling </li>
 
     <h4>Sources on Github I'll mail you the link on demand</h4> mail me at shanwork2012@gmail.com<br />
     <a ng-click="scrollTo('top')">Top of page</a>
