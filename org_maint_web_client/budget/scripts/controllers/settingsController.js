@@ -1,7 +1,8 @@
 ﻿(function () {
     var SettingsController = function ($scope, configuration, connectToService, $localStorage) {
         var today = new Date();
-        $scope.suffix = today.getDate() + '_' + (today.getMonth()+1) + '_' + today.getFullYear() + '.txt'
+        $scope.suffix = today.getDate() + '_' + (today.getMonth() + 1) + '_' + today.getFullYear() + '.txt'
+        $scope.overwriteCurrency = true;
         $scope.CurrencyId = -1;
             $scope.currencyData =  {
             currencyList:
@@ -256,6 +257,37 @@
             reader.readAsText(file);
              
         };
+        $scope.uploadCurrency = function () {
+            var file = currencyFileInput.files[0];
+          //  alert(currencyFileInput.files[0].name);
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var lines = reader.result.split('\n');
+                if (lines.length > 0)
+                {
+                    var overwrite = document.getElementById('overwrite');
+                  //  alert(overwrite.value);
+                    if ($scope.overwriteCurrency == true) {
+                        $scope.currencyData.currencyList = [];
+                    }
+                    for (i=0; i < lines.length;i++)
+                    {
+
+                        var currencyLine = lines[i].split(',');
+                        var currencyElement = {
+                            Id: currencyLine[0],
+                            Name: currencyLine[1],
+                            value: currencyLine[2]
+                        };
+                        $scope.currencyData.currencyList.push(currencyElement);
+                    }
+                    alert('currency data uploaded.. please refresh the page');
+                }
+            }
+
+            reader.readAsText(file);
+
+        };
         $scope.uploadBudgetStatus = function(fileObj)
         {
 
@@ -339,6 +371,7 @@
             var currencyListOutput = []
             for (i = 0; i < $localStorage.currencyData.currencyList.length; i++) {
                 currencyListOutput.push(
+                $localStorage.currencyData.currencyList[i].Id + ',' +
                 $localStorage.currencyData.currencyList[i].Name + ',' +
                  $localStorage.currencyData.currencyList[i].value  );
             }
