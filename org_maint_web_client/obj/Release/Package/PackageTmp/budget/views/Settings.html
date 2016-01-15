@@ -25,12 +25,12 @@
         </table>
         <div id="currencyUpload" style="border: 1px solid silver; padding:2px;margin:3px;">
         <b>Upload data</b><br /> Overwrite or Append(checked=overwrite) &nbsp;<input type="checkbox" name="overwrite" ng-model="overwriteCurrency"   />
-        <input type="file" id="currencyFileInput"> <input type="button" value="Upload" ng-click="uploadCurrency()" /></div>
+        <input type="file" id="currencyFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadCurrency()" class="uploadButtonStyle"/></div>
 
     </div>
     <div class="subSection" style="float:left">
         <h4>Save/Upload using external files</h4> <h5>Save</h5>suffix:<input type="text" value=".txt" ng-model="suffix" />
-        <input type="button" value="Save" ng-click="saveData()" />
+        <input type="button" value="Save" ng-click="saveData()" class="downloadButtonStyle" />
         <a download="contributors.csv" id="contributorListLink" style="display:none">Download Contributor List</a>
         <a download="entities.csv" id="entityListLink" style="display:none">Download Entity Summary List</a>
         <a download="entityItems.csv" id="entityItemListLink" style="display:none">Download Entity Items List</a>

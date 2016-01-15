@@ -38,6 +38,30 @@ header{
     padding:5px;
 
 }
+.chooseFileStyle {
+    background-color: white;
+    border: solid 2px green;
+    border-radius: 3px;
+    padding:2px;
+    margin: 1px;
+}
+
+.uploadButtonStyle
+ { 
+    background-color:#AAEEEF;
+    border: solid 1px black; 
+    border-radius:3px;
+    margin:1px;
+
+}
+.downloadButtonStyle
+ { 
+    background-color:#FFFD90;
+    border: solid 1px black; 
+    border-radius:3px;
+    margin:1px;
+
+}
 table { width:3200px; max-width:200px; border: solid 2px black;}
 td {   max-width:200px; border: solid 1px black;}
 inpout {  width:1110px;}

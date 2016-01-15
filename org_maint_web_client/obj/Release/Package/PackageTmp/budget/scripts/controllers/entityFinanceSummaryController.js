@@ -97,6 +97,34 @@
                 GetAllRecords();
             }
         };
+        $scope.uploadEntitySummaries = function () {
+            var file = entityFileInput.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var lines = reader.result.split('\n');
+                if (lines.length > 0) {
+
+                    for (eLine = 0; eLine < lines.length; eLine++) {
+
+                        var entityLine = lines[eLine].split(',');
+                        var Entity = {
+                            EntityFinanceSummaryID: -1,
+                            EntityName: entityLine[1],
+                            EntityCategory: entityLine[2],
+                            BudgetAllocated: parseFloat(entityLine[3]),
+                            BudgetUsed: parseFloat(entityLine[4]),
+                            BudgetRequired: parseFloat(entityLine[5]),
+                            Priority: parseInt(entityLine[6]),
+                            Comments: ''
+                        };
+
+                    };
+                    $scope.addContributorObject(ContributorObject)
+                }
+                alert('entity data uploaded.. please refresh the page');
+            }
+        };
+        
     };
 
 
