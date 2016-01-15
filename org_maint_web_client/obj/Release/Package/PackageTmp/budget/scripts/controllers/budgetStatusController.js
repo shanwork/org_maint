@@ -85,8 +85,7 @@
                               {
                                   Amount: fundRequired,
                                   DebitCredit: 'Debit',
-                                  DateString: 'Nov 1, 2015',
-                                  Date: '2015-11-01',
+                                  Date: entityList[i].DateUpdated,
                                   Principal: entityList[i].EntityName,
                                   Comments: entityList[i].Comments
                               }

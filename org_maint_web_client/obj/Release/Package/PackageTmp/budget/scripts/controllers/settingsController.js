@@ -350,8 +350,7 @@
                 budgetHistoryOutput.push( 
                 $localStorage.budgetHistory[i].Amount + ',' +
                  $localStorage.budgetHistory[i].DebitCredit + ',' +
-                 $localStorage.budgetHistory[i].DateString + ',' +
-                 $localStorage.budgetHistory[i].Date + ',' +
+                  $localStorage.budgetHistory[i].Date + ',' +
                  $localStorage.budgetHistory[i].Principal + ',' +
                  $localStorage.budgetHistory[i].Comments);
             }

@@ -22,8 +22,8 @@
         <th><input type="text" ng-model="contributorFilter.Currency"> </th>
         <th> <input type="text" ng-model="contributorFilter.ConvertedAmount">  </th>
         <th> <input type="text" ng-model="contributorFilter.Comments">  </th>
-        <th> <input type="text" ng-model="contributorFilter.DateReceivedString">  </th>
-        <th> <input type="text" ng-model="contributorFilter.DateDepositedString">  </th>
+        <th> <input type="text" ng-model="contributorFilter.DateReceived">  </th>
+        <th> <input type="text" ng-model="contributorFilter.DateDeposited">  </th>
  </tr>
     <tr>
         <td class="editCell"><input type="button" id="save" value="ADD" data-ng-click="addContributor()" /> </td>
@@ -46,8 +46,8 @@
         <td> {{ contributor.Currency }}</td>
         <td>{{ contributor.ConvertedAmount }}</td>
         <td>{{  contributor.Comments}}</td>
-        <td>{{ contributor.DateReceivedString  }}</td>
-        <td>{{  contributor.DateDepositedString |date}}</td>
+        <td>{{ contributor.DateReceived |date:'MMM dd yyyy' }}</td>
+        <td>{{  contributor.DateDeposited |date:'MMM dd yyyy'}}</td>
 </tr>
 </table>
 <br />

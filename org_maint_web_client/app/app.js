@@ -4,7 +4,7 @@
     
     var IndexPageController = function ($scope, $localStorage) {
         var today = new Date();
-        $localStorage.todayShort = $scope.todayShort = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()   ;
+        $localStorage.todayShort = new Date(); //$scope.todayShort = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
         $scope.DateFormat = ' Format = Month / Day / Year ';
     }
     IndexPageController.$inject = ['$scope',  '$localStorage'];

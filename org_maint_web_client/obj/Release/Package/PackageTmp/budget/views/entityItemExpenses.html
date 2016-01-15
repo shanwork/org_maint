@@ -9,7 +9,7 @@
         <th ng-click="doSort('BudgetUsed')">BudgetUsed</th>
         <th ng-click="doSort('BudgetRequired')">BudgetRequired</th>
         <th ng-click="doSort('Priority')">Priority</th>
-        <th ng-click="doSort('DateUpdated')">&nbsp;Deposited</th>
+        <th ng-click="doSort('DateUpdated')">&nbsp;Updated</th>
         <th ng-click="doSort('Comments')">&nbsp;Comments</th>
         <th>  &nbsp; </th>
     </tr>
@@ -23,7 +23,7 @@
         <td class="editCell"><input type='text' data-ng-model="entity.BudgetUsed"  value="0"  /></td>
         <td class="editCell"><input type='text' data-ng-model="entity.BudgetRequired"   value="0" /></td>
         <td class="editCell"><input type='text' data-ng-model="entity.Priority"   value="1" /></td>
-        <td class="editCell">&nbsp;</td>
+        <td class="editCell"><input type='text' data-ng-model="entity.DateUpdated" /></td>
         <td class="editCell"><input type='text' data-ng-model="entity.Comments" /></td>
     </tr>
     <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
@@ -37,7 +37,7 @@
         <th ng-click="doSortFloat('EntityItemBudgetRequired')">Budget Required</th>
         <th ng-click="doSortFloat('EntityItemBudgetAllocated')">Budget Allocated</th>
         <th ng-click="doSort('EntityItemPriority')">Priority</th>
-        <th ng-click="doSort('EntityItemDateUpdated')">&nbsp;Deposited</th>
+        <th ng-click="doSort('EntityItemDateUpdated')">&nbsp;Updated</th>
         <th ng-click="doSort('EntityItemComments')">&nbsp;Comments</th>
         <th>  &nbsp; </th>
     </tr>
@@ -70,8 +70,7 @@
         <td>{{ entityItem.EntityItemBudgetRequired }}</td>
         <td>{{ entityItem.EntityItemBudgetAllocated }}</td>
         <td>{{ entityItem.EntityItemPriority }}</td>
-        <td>{{ entityItem.EntityItemDateUpdated  }}</td>
-        <td>{{ entityItem.EntityItemDateUpdated  }}</td>
+        <td>{{ entityItem.EntityItemDateUpdated |date:'MMM dd yyyy' }}</td>
          <td>{{  entityItem.EntityItemComments}}</td>
     </tr>
 </table>

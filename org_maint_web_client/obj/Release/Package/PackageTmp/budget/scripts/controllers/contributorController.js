@@ -44,6 +44,7 @@
 
         }
         $scope.addContributorObject = function (Contributor) {
+            
             if (connectToService == 'true') {
                 //alert($scope.ContributorName);
                 //  alert(Contributor.ContributorName);
@@ -58,16 +59,17 @@
                 });
             }
             else {
+                Contributor.DateReceived = Contributor.DateDeposited = new Date();
                 ContributorService.addContributor(Contributor);
                 var budgetHistoryElement =
            {
                Amount: Contributor.ConvertedAmount,
                DebitCredit: 'Credit',
-               DateString: 'Nov 1, 2015',
-               Date: '2015-11-01',
+               Date: Contributor.DateReceived,
                Principal: Contributor.ContributorName,
                Comments: Contributor.Comments
-           }
+
+           };
                 BudgetStatusService.addBudgetHistory(budgetHistoryElement);
                 EntityService.updateEntityStatus();
             }

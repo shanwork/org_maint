@@ -115,39 +115,11 @@
                         console.log("Some error Occured" + err);
                     });
                  
-               // if ($routeParams.EntityFinanceSummaryID == '-1') {
-               //     $scope.entity.EntityFinanceSummaryID = -1;
-               //// later now we will do one by one      var promisePost = EntityFinanceSummaryService.updateEntityDetail($scope.entity, $scope.entityItemList);
-               //      var promisePost = EntityFinanceSummaryService.addEntity($scope.entity);
-               //      promisePost.then(function (p1) {
-               //       //   alert(p1.data);
-               //          $scope.EntityFinanceSummaryID = p1.data;
-               //          for (var i = 0; i < $scope.entityItemList.length; i++) {
-               //              //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
-               //              if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
-               //                  $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
-
-               //                  var promisePost2 = EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
-               //                  promisePost2.then(function (p2) {
-               //                      $scope.entityItemList[i].EntityItemID = p2.data;
-               //                  } ,function (err2) {
-               //                      console.log("Some error Occured" + err2);
-               //                  });
-               //                  }
-               //          }
-               //         //     GetAllRecords();
-
-               //         //   ClearModels();
-               //     }, function (err) {
-               //         console.log("Some error Occured" + err);
-               //     });
-               // }
-               // else {
-               //     // update on WCF end
-               // }
+              
             }
             else // client side
             {
+                $scope.entity.DateUpdated = new Date();
                 if ($routeParams.EntityFinanceSummaryID == '-1') {
                     var EntityFinanceSummaryId = EntityFinanceSummaryService.addEntity($scope.entity);
                     $scope.EntityFinanceSummaryID = EntityFinanceSummaryService.getEntityListLength();
@@ -155,18 +127,18 @@
                    //     alert($scope.entityItemList[i].EntityFinanceSummaryID);
                         if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
                             $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
-
+                            $scope.entityItemList[i].EntityItemDateUpdated = new Date();
                             EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
                         }
 
                     }
                 }
                 else {
-                    alert($scope.entityItemList.length);
                     for (var i = 0; i < $scope.entityItemList.length; i++) {
                         alert($scope.entityItemList[i].EntityFinanceSummaryID);
                         if ($scope.entityItemList[i].EntityFinanceSummaryID == -1) {
                             $scope.entityItemList[i].EntityFinanceSummaryID = $scope.EntityFinanceSummaryID;
+                            $scope.entityItemList[i].EntityItemDateUpdated = new Date();
 
                             EntityItemExpensesService.addEntityItem($scope.entityItemList[i], $scope.EntityFinanceSummaryID);
                         }

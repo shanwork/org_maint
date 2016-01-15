@@ -45,7 +45,7 @@
 <tr ng-repeat="budgetHistoryElement in budgetHistory | filter:budgetHistoryFilter | orderBy:sortBy:reverse"">
         <td>{{budgetHistoryElement.Amount}}</td>
         <td>{{budgetHistoryElement.DebitCredit}}</td>
-        <td>{{budgetHistoryElement.DateString}}</td>
+        <td>{{budgetHistoryElement.Date |date:'MMM dd yyyy'}}</td>
     <td>{{budgetHistoryElement.Principal}}</td>
 <td>{{budgetHistoryElement.Comments}}</td>
  </tr>

@@ -61,8 +61,8 @@
         <td>{{ entity.BudgetUsed }} {{ entity.Currency }}</td>
         <td>{{ entity.BudgetRequired }}</td>
         <td>{{ entity.Priority  }}</td>
-        <td>{{  entity.DateUpdatedString |date}}</td>
-        <td>{{  entity.Comments |date}}</td>
+        <td>{{  entity.DateUpdated  |date:'MMM dd yyyy'}}</td>
+        <td>{{  entity.Comments}}</td>
 
     </tr>
 </table>
