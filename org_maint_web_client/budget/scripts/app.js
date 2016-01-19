@@ -6,12 +6,9 @@
     budgetApp.value('configuration', { imMemoryData: 'yes', verbose: 'yes' });
     budgetApp.config(function ($routeProvider) {
         $routeProvider
-            .when('/entities', {
-                controller: 'EntityController',
-                templateUrl: 'views/entityList.html'
-            })
-            .when('/entityFinanceSummaries', {
-                controller: 'EntityFinanceSummaryController',
+          .when('/entityFinanceSummaries', {
+              controller: 'EntityFinanceSummaryController',
+              
                 templateUrl: 'views/entityFinanceSummaries.html'
             })
              .when('/entityExpenses/:EntityFinanceSummaryID/:EntityName', {
@@ -36,6 +33,10 @@
             .when('/settings', {
                 controller:'SettingsController',
                 templateUrl: 'views/settings.html'
+
+            }).when('/charting', {
+               // controller: 'SettingsController',
+                templateUrl: 'views/charting.html'
 
             })
             .otherwise({ redirectTo: '/budgetStatus' });

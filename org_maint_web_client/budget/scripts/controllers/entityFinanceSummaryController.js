@@ -24,7 +24,7 @@
         public string Comments { get; set; }
         */
 (function () {
-    var EntityFinanceSummaryController = function ($scope, EntityFinanceSummaryService, connectToService, configuration,$localStorage) {
+    var EntityFinanceSummaryController = function ($scope, EntityFinanceSummaryService, EntityItemExpensesService, connectToService, configuration, $localStorage) {
         $scope.sortBy = 'DateUpdated';
         $scope.reverse = true;
         //    if (configuration.verbose == 'yes') {
@@ -97,15 +97,15 @@
                 GetAllRecords();
             }
         };
+        $scope.oldEntityIdNewEntityIdList = [];
         $scope.uploadEntitySummaries = function () {
-            var file = entityFileInput.files[0];
+            var file = entitySummaryFileInput.files[0];
             var reader = new FileReader();
             reader.onload = function (e) {
                 var lines = reader.result.split('\n');
                 if (lines.length > 0) {
 
                     for (eLine = 0; eLine < lines.length; eLine++) {
-
                         var entityLine = lines[eLine].split(',');
                         var Entity = {
                             EntityFinanceSummaryID: -1,
@@ -117,19 +117,74 @@
                             Priority: parseInt(entityLine[6]),
                             Comments: ''
                         };
-
+                        var newEntitySummaryId = EntityFinanceSummaryService.addEntity(Entity);
+                        var oldEntityIdNewEntityId = { OldEntityId: entityLine[0], newEntityId: newEntitySummaryId };
+                        alert('old summary id ' + entityLine[0] + ' replaced by ' + newEntitySummaryId);
+                        $scope.oldEntityIdNewEntityIdList.push(oldEntityIdNewEntityId);
                     };
-                    $scope.addContributorObject(ContributorObject)
+                   
+
                 }
+                $localStorage.oldEntityIdNewEntityIdList = $scope.oldEntityIdNewEntityIdList;
                 alert('entity data uploaded.. please refresh the page');
             }
+            reader.readAsText(file);
+            return;
         };
-        
+        $scope.uploadEntityItems = function () {
+            if ($localStorage.oldEntityIdNewEntityIdList == null || $localStorage.oldEntityIdNewEntityIdList.length == 0) {
+                alert('entity data not loaded');
+
+            }
+            else {
+                alert($localStorage.oldEntityIdNewEntityIdList.length);
+                var file = entityItemFileInput.files[0];
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var lines = reader.result.split('\n');
+                    if (lines.length > 0) {
+
+                        for (eILine = 0; eILine < lines.length; eILine++) {
+                            var entityItemLine = lines[eILine].split(',');
+
+                            var EntityItem =
+                                {
+                                    EntityFinanceSummaryID: -1,
+                                    EntityItemName: entityItemLine[2],
+                                    EntityItemDetail: entityItemLine[3],
+                                    EntityItemBudgetRequired: entityItemLine[4],
+                                    EntityItemBudgetAllocated: entityItemLine[5],
+                                    EntityItemPriority: entityItemLine[6],
+                                    EntityItemDateUpdated: entityItemLine[7],
+                                    EntityItemComments: entityItemLine[8],
+                                };
+                            var currentEntityFinanceSummaryId = entityItemLine[1];
+                            alert('current entity id=' + currentEntityFinanceSummaryId);
+                            for (matchIndex = 0 ; matchIndex < $localStorage.oldEntityIdNewEntityIdList.length; matchIndex++) {
+                                
+                                if ($localStorage.oldEntityIdNewEntityIdList[matchIndex].OldEntityId == currentEntityFinanceSummaryId) {
+                                    alert($localStorage.oldEntityIdNewEntityIdList[matchIndex].OldEntityId + ' replaced by ' + $localStorage.oldEntityIdNewEntityIdList[matchIndex].newEntityId);
+                                    EntityItem.EntityFinanceSummaryID = $localStorage.oldEntityIdNewEntityIdList[matchIndex].newEntityId;
+                                    EntityItemExpensesService.addEntityItem(EntityItem, $localStorage.oldEntityIdNewEntityIdList[matchIndex].newEntityId);
+                                }
+                            }
+                        };
+
+
+                    }
+                    alert('entity data uploaded.. please refresh the page');
+                }
+                reader.readAsText(file);
+
+            }
+            return;
+        };
+
     };
 
 
 
-    EntityFinanceSummaryController.$inject = ['$scope', 'EntityFinanceSummaryService', 'connectToService', 'configuration', '$localStorage'];
+    EntityFinanceSummaryController.$inject = ['$scope', 'EntityFinanceSummaryService', 'EntityItemExpensesService', 'connectToService', 'configuration', '$localStorage'];
 
     angular.module('org_maint_budget')
       .controller('EntityFinanceSummaryController', EntityFinanceSummaryController);

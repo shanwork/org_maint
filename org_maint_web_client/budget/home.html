@@ -4,6 +4,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/globalStyles.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/c3.min.css" rel="stylesheet" type="text/css" />
 
 
     <title>Organization Budget Allocation</title>
@@ -22,7 +23,8 @@
                         <li><a href="#/contributors">Contributors</a></li>
                         <li><a href="#/entityFinanceSummaries">Entity Summaries</a></li>
                         <li><a href="#/settings">Settings</a></li>
-                    </ul>
+                        <li><a href="views/charting.html">Charting</a></li>
+                     </ul>
                 </nav>
             </header>
 
@@ -30,8 +32,10 @@
 
             <div ng-view></div>
             </div>
+          
         </div>
     </div>
+
     <script src="../scripts/angular.js"></script>
     <script src="../scripts/angular-route.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-sanitize.js"></script>
@@ -49,5 +53,8 @@
     <script src="scripts/globals/entityItemExpensesService.js"></script>
     <script src="scripts/controllers/aboutThisSiteController.js"></script>
     <script src="scripts/controllers/settingsController.js"></script>
+    <script src="scripts/d3.min.js"></script>
+   <script src="scripts/c3.min.js"></script>
+   
 </body>
 </html>
