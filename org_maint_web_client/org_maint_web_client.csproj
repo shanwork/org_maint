@@ -77,6 +77,7 @@
     <Content Include="budget\scripts\controllers\aboutThisSiteController.js" />
     <Content Include="budget\scripts\controllers\budgetStatusController.js" />
     <Content Include="budget\scripts\controllers\budgetStatusController_backup.js" />
+    <Content Include="budget\scripts\controllers\chartController.js" />
     <Content Include="budget\scripts\controllers\contributorController.js" />
     <Content Include="budget\scripts\controllers\contributorControllerbackup.js" />
     <Content Include="budget\scripts\controllers\entityController.js" />

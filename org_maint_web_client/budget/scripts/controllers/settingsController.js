@@ -1,6 +1,8 @@
 ﻿(function () {
     var SettingsController = function ($scope, configuration, connectToService, $localStorage) {
-        $localStorage.debugMode = true;
+        $localStorage.debugMode = false;
+        if ($localStorage.debugMode==true)
+        alert($localStorage.debugMode);
         var today = new Date();
         $scope.suffix = today.getDate() + '_' + (today.getMonth() + 1) + '_' + today.getFullYear() + '.txt'
         $scope.overwriteCurrency = true;
