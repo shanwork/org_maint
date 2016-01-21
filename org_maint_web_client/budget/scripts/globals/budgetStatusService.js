@@ -9,6 +9,7 @@
                   BudgetRequired: 0
               } ;
           var budgetHistory = [];
+          var budgetStatusHistory = [];
           //var budgetHistory = [
           //    {
           //        Amount: 1000,
@@ -44,6 +45,8 @@
                       if (budgetStatus.BudgetRequired < 0)
                           budgetStatus.BudgetRequired = 0;
                   }
+                  budgetStatusHistory.push(budgetStatus);
+                  $localStorage.budgetStatusHistory = budgetStatusHistory;
               }
               $localStorage.budgetHistory = budgetHistory;
           };
@@ -53,6 +56,9 @@
                   budgetStatus.BudgetAllocated = newBudgetStatus.BudgetAllocated;
                   budgetStatus.BudgetRequired = newBudgetStatus.BudgetRequired;
               }
+              budgetStatusHistory.push(budgetStatus);
+              $localStorage.budgetStatusHistory = budgetStatusHistory;
+              alert($localStorage.budgetStatusHistory.length);
               $localStorage.budgetStatus = budgetStatus;
           };
           this.getBudgetStatus = function () {
