@@ -10,16 +10,9 @@
               } ;
           var budgetHistory = [];
           var budgetStatusHistory = [];
-          //var budgetHistory = [
-          //    {
-          //        Amount: 1000,
-          //        DebitCredit: 'Credit',
-          //        DateString: 'Nov 1, 2015',
-          //        Date: '2015-11-01',
-          //        Principal: 'Ganesha',
-          //        Comments:'Initial Thrust'
-          //    }
-          //];
+          if ($localStorage.budgetStatusHistory != null)
+              budgetStatusHistory = $localStorage.budgetStatusHistory
+
           this.getBudgetHistory = function () {
               if (connectToService == 'true') {
 

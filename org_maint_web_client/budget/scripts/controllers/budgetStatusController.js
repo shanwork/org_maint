@@ -62,14 +62,14 @@
                    if (fundToAllocate > 0.0) {
                       
                        var entityList = EntityFinanceSummaryService.getEntitiesSortedPriorityAAmountDList();
-                       alert(entityList.length);
-                 //      alert(entityList.length);
+                        if ($localStorage.debugMode == true) alert(entityList.length);
+                 //       if ($localStorage.debugMode == true) alert(entityList.length);
                        for (i = 0; i < entityList.length; i++) {
                            if (parseFloat(entityList[i].BudgetRequired) == 0.0)
                                continue;
                            if (fundToAllocate > 0.0) {
-                 //              alert(fundToAllocate);
-                //              alert(fundRequired);
+                 //               if ($localStorage.debugMode == true) alert(fundToAllocate);
+                //               if ($localStorage.debugMode == true) alert(fundRequired);
 
                                var fundRequired = parseFloat(entityList[i].BudgetRequired);
                                if (fundToAllocate <= fundRequired)

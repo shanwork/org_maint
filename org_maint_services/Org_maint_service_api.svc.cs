@@ -210,7 +210,7 @@ namespace org_maint_services
                   budgetStatus.BudgetRequired = -1 * budgetAvailable;
                   BudgetStatusService.updateBudgetStatus(budgetStatus);
               }
-              // alert(entityStatus.TotalEntities); alert(entityStatus.TotalEntitiesAllocated); alert(entityStatus.TotalEntitiesAllocable);
+              //  if ($localStorage.debugMode == true) alert(entityStatus.TotalEntities);  if ($localStorage.debugMode == true) alert(entityStatus.TotalEntitiesAllocated);  if ($localStorage.debugMode == true) alert(entityStatus.TotalEntitiesAllocable);
               if (entityStatus.TotalEntities > (entityStatus.TotalEntitiesAllocated + entityStatus.TotalEntitiesAllocable))
                   entityStatus.TotalEntitiesUnallocated = entityStatus.TotalEntities - (entityStatus.TotalEntitiesAllocated + entityStatus.TotalEntitiesAllocable);
               return entityStatus;

@@ -1,6 +1,7 @@
 ﻿<h2>Entities</h2>
 <div id="contributorUpload" style="border: 1px solid silver; padding:2px;margin:3px;width:auto;">
     <b>Upload existing entity data</b> <input type="checkbox" name="overwrite" value="Overwrite?" ng-model="overwriteEntities" hidden />
+    <span style="float:right;"> Combined summary and item Data:<input type="file" id="entitySummaryItemFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadEntitySummariesItems()" class="uploadButtonStyle" /></span>
     <span style="float:right;"> Summary Data:<input type="file" id="entitySummaryFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadEntitySummaries()" class="uploadButtonStyle" /></span>
     <div style="float:right;"id="entityItemUpload"  >
         Item Data:<input type="file" id="entityItemFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadEntityItems()" class="uploadButtonStyle" /></div>
