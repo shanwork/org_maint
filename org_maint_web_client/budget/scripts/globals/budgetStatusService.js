@@ -6,7 +6,8 @@
               {
                   BudgetAvailable: 0.00,
                   BudgetAllocated: 0,
-                  BudgetRequired: 0
+                  BudgetRequired: 0,
+                  DateUpdated : new Date()
               } ;
           var budgetHistory = [];
           var budgetStatusHistory = [];
@@ -48,6 +49,7 @@
                   budgetStatus.BudgetAvailable = newBudgetStatus.BudgetAvailable;
                   budgetStatus.BudgetAllocated = newBudgetStatus.BudgetAllocated;
                   budgetStatus.BudgetRequired = newBudgetStatus.BudgetRequired;
+                  budgetStatus.DateUpdated = new Date();
               }
               budgetStatusHistory.push(budgetStatus);
               $localStorage.budgetStatusHistory = budgetStatusHistory;

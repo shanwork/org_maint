@@ -12,19 +12,22 @@
         $scope.config.type1 = $scope.typeOptions[0];
         $scope.config.type2 = $scope.typeOptions[1];
         $scope.showGraph = function () {
+           
             var config = {};
             config.bindto = '#chart';
             config.data = {};
+            config.type1 = $scope.typeOptions[3];
             config.data.json = {};
             config.data.json.contributors = []; 
             config.data.json.entities = []; 
             config.data.json.budgetAvailable = [];
             config.data.json.budgetAllocated = [];
             config.data.json.budgetRequired = [];
+            var dates = [];
             if ($localStorage.contributorList.length > 0)
-
-                for (i = 0; i < $localStorage.contributorList.length; i++) {
-                    config.data.json.contributors.push(parseFloat($localStorage.contributorList[i].ConvertedAmount ) );
+               for (i = 0; i < $localStorage.contributorList.length; i++) {
+                    config.data.json.contributors.push(parseFloat($localStorage.contributorList[i].ConvertedAmount));
+                    dates.push($localStorage.contributorList[i].DateReceived)
                 }
            
             for (j = 0; j < $localStorage.entityList.length; j++) {
@@ -38,14 +41,14 @@
             }
             
             if ($localStorage.budgetStatusHistory != null && $localStorage.budgetStatusHistory.length > 0)
-
+                alert($localStorage.budgetStatusHistory.length);
                 for (k = 0; k < $localStorage.budgetStatusHistory.length; k++) {
                     config.data.json.budgetAvailable.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetAvailable));
                     config.data.json.budgetRequired.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetRequired));
                     config.data.json.budgetAllocated.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetAllocated));
                 }
 
-            config.axis = { "y": { "label": { "text": "Amount in INR", "position": "outer-middle" } } };
+            config.axis = { "y": { "label": { "text": "Amount in INR", "position": "outer-middle" } }, "x": {type: "Date", tick: dates} };
             config.data.types = { "Contributors": $scope.config.contributors, "Entities": $scope.config.entities, "Available Budget": $scope.config.budgetAvailable, "Required Budget": $scope.config.budgetRequired, "Allocated Budget": $scope.config.budgetAllocated };
             $scope.chart = c3.generate(config);
         }

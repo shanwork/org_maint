@@ -1,8 +1,12 @@
 ﻿(function () {
     var SettingsController = function ($scope, configuration, connectToService, $localStorage) {
         $localStorage.debugMode = false;
+        if ($localStorage.verbose == null)
+            $localStorage.verbose = 'yes';
         //$scope.data.showTestData = 'no';
-        //$scope.data.verbose = 'no';
+        var verbose = 'yes';
+        var data = {verbose:'yes', showTestData:'yes'};
+        $scope.data = data;//.verbose = verbose;//'yes';
         if ($localStorage.debugMode == true)
             alert($localStorage.debugMode);
         var today = new Date();
@@ -74,7 +78,7 @@
                     $localStorage.budgetStatus = {
                         BudgetAvailable: 1000.00,
                         BudgetAllocated: 0,
-                        BudgetRequired: 0
+                        BudgetRequired: 172000
                     };
                     $localStorage.budgetHistory = [
                       {
@@ -86,6 +90,13 @@
                           Comments: 'Initial Thrust'
                       }
                     ];
+                    $localStorage.budgetStatusHistory = [
+                    {
+                        BudgetAvailable: 1000,
+                        BudgetAllocated: 0,
+                        BudgetRequired: 172000,
+                        DateUpdated: '2015-11-01'
+                    }]
                     $localStorage.contributorList = [{
                         ContributorID: 1,
                         ContributorName: 'Ganesha',
@@ -238,6 +249,7 @@
                     }, ];
                     $localStorage.entityList = [];
                     $localStorage.budgetHistory = [];
+                    $localStorage.budgetStatusHistory = [];
                     $localStorage.contributorList = [];
                     $localStorage.currencyData = { currencyList:
                             [{
@@ -314,7 +326,7 @@
             contributorListLink.href = "data:text/html," + encodeURIComponent(contributorListOutput.join("\r\n"));
             contributorListLink.download = "contributorList" + $scope.suffix;
             contributorListLink.style.display = 'block';
-            
+            /* will show combined only 
             var entityListLink = document.getElementById('entityListLink');
             var entityListOutput = []
             for (i = 0; i < $localStorage.entityList.length; i++) {
@@ -349,7 +361,7 @@
             entityItemListLink.href = "data:text/html," + encodeURIComponent(entityItemListOutput.join("\r\n"));
             entityItemListLink.download = "entityItemList" + $scope.suffix;
             entityItemListLink.style.display = 'block';
-           
+           */
             var entity_entityItemListLink = document.getElementById('entity_entityItemListLink');
             var entity_entityItemListOutput = []
             for (i = 0; i < $localStorage.entityList.length; i++) {
