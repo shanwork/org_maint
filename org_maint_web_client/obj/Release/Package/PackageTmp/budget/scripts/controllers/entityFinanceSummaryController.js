@@ -98,6 +98,68 @@
             }
         };
         $scope.oldEntityIdNewEntityIdList = [];
+        $scope.uploadEntitySummariesItems = function () {
+            
+            var file = entitySummaryItemFileInput.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var lines = reader.result.split('\n');
+                if (lines.length > 0) {
+                    var newEntitySummaryId = 0;
+                    for (eLine = 0; eLine < lines.length; eLine++) {
+                        var entityLine = lines[eLine].split(',');
+                       
+                        if (entityLine[0] == "Entity") {
+                            var Entity = {
+                                EntityFinanceSummaryID: -1,
+                                EntityName: entityLine[1],
+                                EntityCategory: entityLine[2],
+                                BudgetAllocated: parseFloat(entityLine[3]),
+                                BudgetUsed: parseFloat(entityLine[4]),
+                                BudgetRequired: parseFloat(entityLine[5]),
+                                Priority: parseInt(entityLine[6]),
+                                Comments: ''
+                            };
+                            var newEntitySummaryId = EntityFinanceSummaryService.addEntity(Entity);  
+                            if ($localStorage.debugMode == true) alert('new entity id ' + newEntitySummaryId)
+                            var oldEntityIdNewEntityId = { OldEntityId: entityLine[0], newEntityId: newEntitySummaryId };
+                            if ($localStorage.debugMode == true)  alert('old summary id ' + entityLine[0] + ' replaced by ' + newEntitySummaryId);
+                        }
+                        else {
+                            var EntityItem =
+                                    {
+                                        EntityFinanceSummaryID: newEntitySummaryId,
+                                        EntityItemName: entityLine[2],
+                                        EntityItemDetail: entityLine[3],
+                                        EntityItemBudgetRequired: entityLine[4],
+                                        EntityItemBudgetAllocated: entityLine[5],
+                                        EntityItemPriority: entityLine[6],
+                                        EntityItemDateUpdated: entityLine[7],
+                                        EntityItemComments: entityLine[8],
+                                    };
+                            if ($localStorage.debugMode == true) {
+                                alert('uploading name:' + EntityItem.EntityItemName);
+                                alert('uploading detail:' + EntityItem.EntityItemDetail);
+                                alert('uploading req:' + EntityItem.EntityItemBudgetRequired);
+                                alert('uploading alloc:' + EntityItem.EntityItemBudgetAllocated);
+                                alert('uploading pri:' + EntityItem.EntityItemPriority);
+                                alert('uploading EntityItemComments:' + EntityItem.EntityItemComments);
+                            }
+                            EntityItemExpensesService.addEntityItem(EntityItem, newEntitySummaryId);
+                            if ($localStorage.debugMode == true) alert('added new item for  ' + newEntitySummaryId)
+
+                        }
+                        $scope.oldEntityIdNewEntityIdList.push(oldEntityIdNewEntityId);
+                    };
+
+
+                }
+                $localStorage.oldEntityIdNewEntityIdList = $scope.oldEntityIdNewEntityIdList;
+                alert('entity data uploaded.. please refresh the page');
+            }
+            reader.readAsText(file);
+            return;
+        }
         $scope.uploadEntitySummaries = function () {
             var file = entitySummaryFileInput.files[0];
             var reader = new FileReader();

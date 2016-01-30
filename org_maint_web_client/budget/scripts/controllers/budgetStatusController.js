@@ -19,6 +19,62 @@
              $scope.reverse = !$scope.reverse;
          };
          GetAllRecords();
+         $scope.showGraph = function () {
+             var budgetAvailable = [];
+             var budgetAllocated = [];
+             var budgetRequired = [];
+             var periodOne = [];//'2013-01-01', '2013-01-04', '2013-01-07', '2013-01-11', '2013-01-15'];
+             var periodTwo = [];//['2013-01-02', '2013-01-04', '2013-01-06', '2013-01-08', '2013-01-10', '2013-01-13', '2013-01-15', '2013-01-18', '2013-01-22'];
+             var periodThr = [];//['2013-01-05', '2013-01-10', '2013-01-15', '2013-01-20', '2013-01-25'];
+             if ($localStorage.budgetStatusHistory != null && $localStorage.budgetStatusHistory.length > 0)
+             {
+                 for (k = 0; k < $localStorage.budgetStatusHistory.length; k++) {
+                     budgetAvailable.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetAvailable));
+                     budgetAllocated.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetAllocated));
+                     budgetRequired.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetRequired));
+                     alert($localStorage.budgetStatusHistory[k].Date);
+                     periodOne.push($localStorage.budgetStatusHistory[k].Date);
+                     periodTwo.push($localStorage.budgetStatusHistory[k].Date);
+                     periodThr.push($localStorage.budgetStatusHistory[k].Date);
+                 }
+             }
+             var xOne = [12, 31, 14, 13, 34];
+             var xTwo = [11, 13, 14, 23, 63, 27, 21, 19, 15];
+             var xThr = [12, 32, 13, 13, 23];
+
+             $scope.chart =   c3.generate({
+                 data: {
+                     xs: {
+                         //Declare the axes
+                         'Available': 'x1',
+                         'Allocated': 'x2',
+                         'Required': 'x3'
+                     },
+                     columns: [
+                         ['x1'].concat(periodOne),
+                         ['x2'].concat(periodTwo),
+                         ['x3'].concat(periodThr),
+                         ['Available'].concat(budgetAvailable),
+                         ['Allocated'].concat(budgetAllocated),
+                         ['Required'].concat(budgetRequired)
+                     ]
+                 },
+                 axis: {
+                     x: {
+                         type: 'timeseries'
+                     }
+                 }
+             });
+             //$scope.chart = c3.generate({
+             //    bindto: '#chart',
+             //    data: {
+             //        columns: [
+             //          ['data1', 30, 200, 100, 400, 150, 250],
+             //          ['data2', 50, 20, 10, 40, 15, 25]
+             //        ]
+             //    }
+             //});
+         }
          //To Get All Records  
          function GetAllRecords() {
              if (connectToService == 'true') {

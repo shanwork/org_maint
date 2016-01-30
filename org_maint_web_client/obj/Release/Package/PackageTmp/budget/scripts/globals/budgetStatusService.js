@@ -6,19 +6,14 @@
               {
                   BudgetAvailable: 0.00,
                   BudgetAllocated: 0,
-                  BudgetRequired: 0
+                  BudgetRequired: 0,
+                  DateUpdated : new Date()
               } ;
           var budgetHistory = [];
-          //var budgetHistory = [
-          //    {
-          //        Amount: 1000,
-          //        DebitCredit: 'Credit',
-          //        DateString: 'Nov 1, 2015',
-          //        Date: '2015-11-01',
-          //        Principal: 'Ganesha',
-          //        Comments:'Initial Thrust'
-          //    }
-          //];
+          var budgetStatusHistory = [];
+          if ($localStorage.budgetStatusHistory != null)
+              budgetStatusHistory = $localStorage.budgetStatusHistory
+
           this.getBudgetHistory = function () {
               if (connectToService == 'true') {
 
@@ -44,6 +39,8 @@
                       if (budgetStatus.BudgetRequired < 0)
                           budgetStatus.BudgetRequired = 0;
                   }
+                  budgetStatusHistory.push(budgetStatus);
+                  $localStorage.budgetStatusHistory = budgetStatusHistory;
               }
               $localStorage.budgetHistory = budgetHistory;
           };
@@ -52,7 +49,11 @@
                   budgetStatus.BudgetAvailable = newBudgetStatus.BudgetAvailable;
                   budgetStatus.BudgetAllocated = newBudgetStatus.BudgetAllocated;
                   budgetStatus.BudgetRequired = newBudgetStatus.BudgetRequired;
+                  budgetStatus.DateUpdated = new Date();
               }
+              budgetStatusHistory.push(budgetStatus);
+              $localStorage.budgetStatusHistory = budgetStatusHistory;
+              alert($localStorage.budgetStatusHistory.length);
               $localStorage.budgetStatus = budgetStatus;
           };
           this.getBudgetStatus = function () {

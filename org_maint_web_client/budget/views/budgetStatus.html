@@ -1,9 +1,10 @@
 ﻿<h2>Budget Status</h2>
  <p ng-bind-html="readMeOverview"></p> 
-<table  border="1" cellpadding="0" cellspacing="0" class="table">
+<table  border="1" cellpadding="0" cellspacing="0" class="table" data-ng-init="showGraph()">
     <tr>
         <th >Available</th>
         <td >{{budgetStatus.BudgetAvailable}}</td>
+        <td rowspan="4"><div id="chart"></div></td>
         </tr>
     <tr>
         <th>Allocated</th>
@@ -51,3 +52,5 @@
  </tr>
 </table>
 <br />
+<script src="../scripts/d3.min.js"></script>
+<script src="../scripts/c3.min.js"></script>
