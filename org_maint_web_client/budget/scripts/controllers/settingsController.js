@@ -73,6 +73,11 @@
                 message += ' completely, leaving you with no records, except the default currency of INR.';
             message += 'Proceed?';
             if (confirm(message)) {
+                $localStorage.budgetStatus = null;
+                $localStorage.entityItemList = null;
+                $localStorage.entityList = null;
+                $localStorage.budgetHistory = null;
+                $localStorage.budgetStatusHistory = null;
                 if ($localStorage.showTestData == 'yes') {
 
                     $localStorage.budgetStatus = {
@@ -85,7 +90,7 @@
                           Amount: 1000,
                           DebitCredit: 'Credit',
                           DateString: 'Nov 1, 2015',
-                          Date: '2015-11-01',
+                          DateUpdated: '2015-11-01',
                           Principal: 'Ganesha',
                           Comments: 'Initial Thrust'
                       }
@@ -105,8 +110,9 @@
                         ConvertedAmount: 1000,
                         Comments: 'Initial Thrust',
                         DateReceivedString: 'Nov 1 2015',
-                        DateReceived: '2015-11-01'
-                    }];
+                        DateReceived: '2015-11-01',
+                        DateDeposited: '2015-11-01'
+                }];
                     $localStorage.entityList = [
                  {
                      EntityFinanceSummaryID: 1,
@@ -116,6 +122,7 @@
                      BudgetUsed: 0.0,
                      BudgetRequired: 70000.0,
                      Priority: 1,
+                     DateUpdated:'2015-11-01'
                  },
                  {
                      EntityFinanceSummaryID: 2,
@@ -125,6 +132,7 @@
                      BudgetUsed: 0.0,
                      BudgetRequired: 102000.0,
                      Priority: 2,
+                     DateUpdated: '2015-12-01'
                  }];
                     $localStorage.entityItemList = [
                         {
@@ -231,26 +239,32 @@
                     };
                 }
                 else {
-                    $localStorage.budgetStatus = {
-                        BudgetAvailable: 0.00,
-                        BudgetAllocated: 0,
-                        BudgetRequired: 0
-                    };
-                    $localStorage.entityItemList = [{
-                        EntityFinanceSummaryID: -1,
-                        EntityItemId: -1,
-                        EntityItemName: '',
-                        EntityItemDetail: '',
-                        EntityItemBudgetRequired: 0.0,
-                        EntityItemBudgetAllocated: 0.0,
-                        EntityItemPriority: -1,
-                        EntityItemDateUpdated: '',
-                        EntityItemComments: ''
-                    }, ];
-                    $localStorage.entityList = [];
-                    $localStorage.budgetHistory = [];
-                    $localStorage.budgetStatusHistory = [];
-                    $localStorage.contributorList = [];
+                    // clean data first
+                    $localStorage.budgetStatus = null;
+                    $localStorage.entityItemList = null;
+                    $localStorage.entityList = null;
+                    $localStorage.budgetHistory = null;
+                    $localStorage.budgetStatusHistory = null ;
+                    //$localStorage.contributorList = []; $localStorage.budgetStatus = {
+                    //    BudgetAvailable: 0.00,
+                    //    BudgetAllocated: 0,
+                    //    BudgetRequired: 0
+                    //};
+                    //$localStorage.entityItemList = [{
+                    //    EntityFinanceSummaryID: -1,
+                    //    EntityItemId: -1,
+                    //    EntityItemName: '',
+                    //    EntityItemDetail: '',
+                    //    EntityItemBudgetRequired: 0.0,
+                    //    EntityItemBudgetAllocated: 0.0,
+                    //    EntityItemPriority: -1,
+                    //    EntityItemDateUpdated: '',
+                    //    EntityItemComments: ''
+                    //}, ];
+                    //$localStorage.entityList = [];
+                    //$localStorage.budgetHistory = [];
+                    //$localStorage.budgetStatusHistory = [];
+                    //$localStorage.contributorList = [];
                     $localStorage.currencyData = { currencyList:
                             [{
                                 Id: 1,

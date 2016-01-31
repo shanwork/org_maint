@@ -11,8 +11,8 @@
               } ;
           var budgetHistory = [];
           var budgetStatusHistory = [];
-          if ($localStorage.budgetStatusHistory != null)
-              budgetStatusHistory = $localStorage.budgetStatusHistory
+          //if ($localStorage.budgetStatusHistory != null)
+          //    budgetStatusHistory = $localStorage.budgetStatusHistory
 
           this.getBudgetHistory = function () {
               if (connectToService == 'true') {
@@ -28,6 +28,19 @@
                   return budgetHistory;
               }
           };
+          this.getBudgeStatustHistory = function () {
+              if (connectToService == 'true') {
+
+            //      return $http.get("http://localhost:58778/Org_maint_service_api.svc/GetBudgetHistory");
+              }
+              else {
+                  if ($localStorage.budgetHistory != null)
+                      budgetHistory = $localStorage.budgetHistory;
+                  else
+                      $localStorage.budgetHistory = budgetHistory;
+                  return budgetStatusHistory;
+              }
+          };
           this.addBudgetHistory = function (budgetHistoryElement) {
               if (connectToService == 'false') {
                   budgetHistoryElement.BudgetHistoryId = budgetHistory.length + 1;
@@ -40,7 +53,7 @@
                           budgetStatus.BudgetRequired = 0;
                   }
                   budgetStatusHistory.push(budgetStatus);
-                  $localStorage.budgetStatusHistory = budgetStatusHistory;
+                  $localStorage.budgetStatusHistory.push(budgetStatus);//= budgetStatusHistory;
               }
               $localStorage.budgetHistory = budgetHistory;
           };
@@ -52,8 +65,8 @@
                   budgetStatus.DateUpdated = new Date();
               }
               budgetStatusHistory.push(budgetStatus);
-              $localStorage.budgetStatusHistory = budgetStatusHistory;
-              alert($localStorage.budgetStatusHistory.length);
+              $localStorage.budgetStatusHistory.push(budgetStatus);//= budgetStatusHistory;
+          //    alert($localStorage.budgetStatusHistory.length);
               $localStorage.budgetStatus = budgetStatus;
           };
           this.getBudgetStatus = function () {
