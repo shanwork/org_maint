@@ -1,0 +1,65 @@
+﻿<div>
+    <h3>Settings, Uploads, Downloads</h3>
+    <div class="subSection" style="float:left;">
+        <h4>Currencies</h4>
+        <table>
+            <tr>
+                <th ng-click="doSortFloat('CurrencyID')">ID</th>
+                <th ng-click="doSort('Name')">Currency</th>
+                <th ng-click="doSortFloat('value')">Value</th>
+
+            </tr>
+            <tr>
+                <td class="editCell"><input type="button" id="save" value="ADD/Update" data-ng-click="addCurrency()" />{{CurrencyId}} </td>
+                <td class="editCell"><input type='text' data-ng-model="CurrencyName" /></td>
+                <td class="editCell">
+                    <input type='text' data-ng-model="CurrencyValue" />
+                </td>
+            </tr>
+            <tr ng-repeat="currency in  currencyData.currencyList| filter:currencyFilter | orderBy:sortBy:reverse">
+                <td ng-click="update(currency.Name + ',' + currency.value + ',' + currency.Id)">&nbsp;&nbsp;&nbsp;<font color="blue">{{currency.Id}}</font> </td>
+                <td> {{currency.Name}} </td>
+                <td> {{currency.value}}  </td>
+            </tr>
+
+        </table>
+        <div id="currencyUpload" style="border: 1px solid silver; padding:2px;margin:3px;">
+        <b>Upload data</b><br /> Overwrite or Append(checked=overwrite) &nbsp;<input type="checkbox" name="overwrite" ng-model="overwriteCurrency"   />
+        <input type="file" id="currencyFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadCurrency()" class="uploadButtonStyle"/></div>
+
+    </div>
+    <div class="subSection" style="float:left">
+        <h4>Save/Upload using external files</h4> <h5>Save</h5>suffix:<input type="text" value=".txt" ng-model="suffix" />
+        <input type="button" value="Save" ng-click="saveData()" class="downloadButtonStyle" />
+        <a download="contributors.csv" id="contributorListLink" style="display:none">Download Contributor List</a>
+        <a download="entities.csv" id="entityListLink" style="display:none">Download Entity Summary List</a>
+        <a download="entityItems.csv" id="entityItemListLink" style="display:none">Download Entity Items List</a>
+        <a download="entityItems.csv" id="entity_entityItemListLink" style="display:none">Download Combined Entity - Entity Items List</a>
+        <a download="budgetStatus.csv" id="budgetStatusLink" style="display:none">Download Budget Status</a>
+        <a download="budgetHistory.csv" id="budgetHistoryLink" style="display:none">Download Budget History</a>
+        <a download="currencyList.csv" id="currencyListLink" style="display:none">Download Currencies</a>
+<hr />
+        
+         <div id="test" style="visibility:hidden;"> <input type="file" id="fileInput" multiple>
+            <input type="button" value="Upload" ng-click="upload()" />
+            
+        </div>
+        </div><br />
+    <div>
+        <div class="subSection" style="float:left">
+            <h4>Misc</h4>
+            Show readme
+            <select ng-model="data.verbose">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select><br />
+             Show Test Data
+            <select ng-model="data.showTestData">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select><br />
+            <input type="button" value="update(above settings)" ng-click="updateSettings()" /><br />
+            <input type="button" value="flushData" ng-click="flushData()" />
+</div>
+        </div>
+    </div>

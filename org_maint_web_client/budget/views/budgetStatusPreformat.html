@@ -1,38 +1,31 @@
 ﻿<h2>Budget Status</h2>
  <p ng-bind-html="readMeOverview"></p> 
-<div class="row">
-    <div class="col-md-6">
-        <table border="1" cellpadding="0" cellspacing="0" class="table" data-ng-init="showGraph()">
-            <tr>
-                <th>Available</th>
-                <td>{{budgetStatus.BudgetAvailable}}</td>
+<table  border="1" cellpadding="0" cellspacing="0" class="table" data-ng-init="showGraph()">
+    <tr>
+        <th >Available</th>
+        <td >{{budgetStatus.BudgetAvailable}}</td>
+        <td rowspan="4"><div id="chart" style="overflow:auto;margin:10px;"></div></td>
+        </tr>
+    <tr>
+        <th>Allocated</th>
+        <td>{{budgetStatus.BudgetAllocated}}</td>
+     </tr>
+    <tr>
+        <th>Deficit</th>
+        <td>{{budgetStatus.BudgetRequired}}</td>
 
-            </tr>
-            <tr>
-                <th>Allocated</th>
-                <td>{{budgetStatus.BudgetAllocated}}</td>
-            </tr>
-            <tr>
-                <th>Deficit</th>
-                <td>{{budgetStatus.BudgetRequired}}</td>
+    </tr>
+   <tr>
+       <td>
+           <input type="button" id="save" value="Allocate Funds" data-ng-click="allocateFunds()" />
 
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" class="btn btn-primary" id="save" value="Allocate Funds" data-ng-click="allocateFunds()" />
+       </td>
+       <td>
+           <input type='text' data-ng-model="budgetStatus.BudgetAvailable" />
 
-                </td>
-                <td>
-                    <input type='text' data-ng-model="budgetStatus.BudgetAvailable" />
-
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="col-md-6">
-        <div id="chart" style="overflow:auto;margin:10px;"></div>
-    </div>
-</div>
+       </td>
+ </tr>
+</table>
 <p ng-bind-html="readmeHistory"></p>
 
 <table  border="1" cellpadding="0" cellspacing="0"  class="table">
@@ -53,7 +46,7 @@
 <tr ng-repeat="budgetHistoryElement in budgetHistory | filter:budgetHistoryFilter | orderBy:sortBy:reverse"">
         <td>{{budgetHistoryElement.Amount}}</td>
         <td>{{budgetHistoryElement.DebitCredit}}</td>
-        <td>{{budgetHistoryElement.DateUpdated |date:'MMM dd yyyy'}}</td>
+        <td>{{budgetHistoryElement.Date |date:'MMM dd yyyy'}}</td>
     <td>{{budgetHistoryElement.Principal}}</td>
 <td>{{budgetHistoryElement.Comments}}</td>
  </tr>

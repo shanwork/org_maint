@@ -1,0 +1,88 @@
+﻿<h2>Entities</h2>
+<div id="contributorUpload" style="border: 1px solid silver; padding:2px;margin:3px;width:auto;">
+    <b>Upload existing entity data</b> <input type="checkbox" name="overwrite" value="Overwrite?" ng-model="overwriteEntities" hidden />
+    <span style="float:right;"> Combined summary and item Data:<input type="file" id="entitySummaryItemFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadEntitySummariesItems()" class="uploadButtonStyle" /></span>
+    <span style="float:right; visibility:hidden;"> Summary Data:<input type="file" id="entitySummaryFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadEntitySummaries()" class="uploadButtonStyle" /></span>
+    <div style="float:right;visibility:hidden;"id="entityItemUpload"  >
+        Item Data:<input type="file" id="entityItemFileInput" class="chooseFileStyle"> <input type="button" value="Upload" ng-click="uploadEntityItems()" class="uploadButtonStyle" /></div>
+    </div>
+<p ng-bind-html="readMeOverview"></p> 
+<table border="1" cellpadding="0" cellspacing="0" class="table">
+    <tr>
+        <th>Total</th>
+        <td>{{entityStatus.TotalEntities}}</td>
+    </tr>
+    <tr>
+        <th>Allocable</th>
+        <td>{{entityStatus.TotalEntitiesAllocable}}</td>
+    </tr>
+    <tr>
+        <th>Allocated (part or full)</th>
+        <td>{{entityStatus.TotalEntitiesAllocated}}</td>
+    </tr>
+    <tr>
+        <th>Unallocated</th>
+        <td>{{entityStatus.TotalEntitiesUnallocated}}</td>
+
+    </tr>
+
+</table>
+<!--input type='text' data-ng-model="EntityName" /><br />
+<input type='text' data-ng-model="BudgetAllocated" /><br />
+<input type='text' data-ng-model="BudgetRequired" /><br />
+<input type="button" id="save" value="Save" data-ng-click="save()" /-->
+<input type="button" click-Link="/entityExpenses/-1/-1" value="Add Entity with expense items" style="margin:10px;"/>
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="table table-striped">
+    <tr>
+        <th>  &nbsp; </th>
+        <th ng-click="doSort('EntityFinanceSummaryID')" width="50px">ID</th>
+        <th ng-click="doSort('EntityName')">EntityName</th>
+        <th ng-click="doSort('EntityCategory')">EntityCategory</th>
+        <th ng-click="doSort('BudgetAllocated')">BudgetAllocated</th>
+        <th ng-click="doSort('BudgetUsed')">BudgetUsed</th>
+        <th ng-click="doSort('BudgetRequired')">BudgetRequired</th>
+        <th ng-click="doSort('Priority')">Priority</th>
+        <th ng-click="doSort('DateUpdated')">&nbsp;Deposited</th>
+        <th ng-click="doSort('Comments')">&nbsp;Comments</th>
+</tr>
+    <tr>
+        <th>  &nbsp; </th>
+        <th width="50px"><input type="text" ng-model="entityFilter.EntityFinanceSummaryID"   /></th>
+        <th><input type="text" ng-model="entityFilter.EntityName" /></th>
+        <th><input type="text" ng-model="entityFilter.EntityCategory" /></th>
+        <th><input type="text" ng-model="entityFilter.BudgetAllocated"> </th>
+        <th><input type="text" ng-model="entityFilter.BudgetUsed"> </th>
+        <th> <input type="text" ng-model="entityFilter.BudgetRequired">  </th>
+        <th> <input type="text" ng-model="entityFilter.Priority">  </th>
+        <th> <input type="text" ng-model="entityFilter.DateUpdatedString">  </th>
+        <th> <input type="text" ng-model="entityFilter.Comments">  </th>
+</tr>
+   
+    <tr ng-repeat="entity in entityList | filter:entityFilter | orderBy:sortBy:reverse">
+        <td><a href="#/entityExpenses/{{ entity.EntityFinanceSummaryID }}/{{ entity.EntityName }}/">Details/Edit</a></td>
+        <td width="50px">{{ entity.EntityFinanceSummaryID }}</td>
+        <td>{{ entity.EntityName }}</td>
+        <td>{{ entity.EntityCategory }}</td>
+        <td>{{ entity.BudgetAllocated }} {{ entity.Currency }}</td>
+        <td>{{ entity.BudgetUsed }} {{ entity.Currency }}</td>
+        <td>{{ entity.BudgetRequired }}</td>
+        <td>{{ entity.Priority  }}</td>
+        <td>{{  entity.DateUpdated  |date:'MMM dd yyyy'}}</td>
+        <td>{{  entity.Comments}}</td>
+
+    </tr>
+</table>
+<br />
+<!---tr style="visibility:hidden;">
+    <td class="editCell" width="50px"><input type="button" id="save" value="Add Summary" data-ng-click="addEntity()" /> </td>
+    <td class="editCell"><input type='text' data-ng-model="EntityName" /></td>
+    <td class="editCell"><input type='text' data-ng-model="EntityCategory" /></td>
+    <td class="editCell"><input type='text' data-ng-model="BudgetAllocated" data-ng-init="0" /></td>
+    <td class="editCell"><input type='text' data-ng-model="BudgetUsed" data-ng-init="0" /></td>
+    <td class="editCell"><input type='text' data-ng-model="BudgetRequired" /></td>
+    <td class="editCell"><input type='text' data-ng-model="Priority" /></td>
+    <td class="editCell">&nbsp;..</td>
+    <td class="editCell"><input type='text' data-ng-model="Comments" /></td>
+    <td class="editCell">&nbsp;..</td>
+</!--tr-->

@@ -91,6 +91,7 @@
     <Content Include="budget\scripts\globals\entityItemExpensesService.js" />
     <Content Include="budget\scripts\globals\entityFinanceSummaryService.js" />
     <Content Include="budget\scripts\globals\entityService.js" />
+    <Content Include="budget\views\budgetStatusPreformat.html" />
     <Content Include="budget\views\budgetStatus.html" />
     <Content Include="budget\views\charting.html" />
     <Content Include="budget\views\contributorList.html" />
@@ -105,6 +106,37 @@
     <Content Include="charting\scripts\c3.min.js" />
     <Content Include="charting\scripts\d3.min.js" />
     <Content Include="index.html" />
+    <Content Include="nectar-words\home.html" />
+    <Content Include="nectar-words\scripts\app.js" />
+    <Content Include="nectar-words\scripts\c3.min.js" />
+    <Content Include="nectar-words\scripts\controllers\aboutThisSiteController.js" />
+    <Content Include="nectar-words\scripts\controllers\budgetStatusController.js" />
+    <Content Include="nectar-words\scripts\controllers\budgetStatusController_backup.js" />
+    <Content Include="nectar-words\scripts\controllers\chartController.js" />
+    <Content Include="nectar-words\scripts\controllers\contributorController.js" />
+    <Content Include="nectar-words\scripts\controllers\contributorControllerbackup.js" />
+    <Content Include="nectar-words\scripts\controllers\entityController.js" />
+    <Content Include="nectar-words\scripts\controllers\entityFinanceSummaryController.js" />
+    <Content Include="nectar-words\scripts\controllers\entityItemExpensesController.js" />
+    <Content Include="nectar-words\scripts\controllers\settingsController.js" />
+    <Content Include="nectar-words\scripts\d3.min.js" />
+    <Content Include="nectar-words\scripts\globals\budgetStatusService.js" />
+    <Content Include="nectar-words\scripts\globals\budgetStatusService_backup.js" />
+    <Content Include="nectar-words\scripts\globals\contributorService.js" />
+    <Content Include="nectar-words\scripts\globals\entityFinanceSummaryService.js" />
+    <Content Include="nectar-words\scripts\globals\entityItemExpensesService.js" />
+    <Content Include="nectar-words\scripts\globals\entityService.js" />
+    <Content Include="nectar-words\styling\nectar.css" />
+    <Content Include="nectar-words\views\aboutThisSite.html" />
+    <Content Include="nectar-words\views\budgetStatus.html" />
+    <Content Include="nectar-words\views\budgetStatusPreformat.html" />
+    <Content Include="nectar-words\views\charting.html" />
+    <Content Include="nectar-words\views\contributorList.html" />
+    <Content Include="nectar-words\views\entityFinanceSummaries.html" />
+    <Content Include="nectar-words\views\entityItemExpenses.html" />
+    <Content Include="nectar-words\views\entityList.html" />
+    <Content Include="nectar-words\views\orders.html" />
+    <Content Include="nectar-words\views\Settings.html" />
     <Content Include="packages.config" />
     <Content Include="comingNext\home.html" />
     <None Include="Properties\PublishProfiles\use-my-software.com - FTP.pubxml" />
@@ -127,7 +159,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="app\amrutvani\" />
+    <Folder Include="nectar-words\images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
