@@ -9,7 +9,7 @@
         <th> <input type="text" ng-model="entityFilter.EntityItemComments">  </th>
 */
 (function () {
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
          .service('EntityItemExpensesService', function ($http, $q, connectToService, $localStorage) {
              var localEntityItemList = [];
              //var localEntityItemList = [

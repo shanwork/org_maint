@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .service('ContributorService', function ($http, $q, connectToService, $localStorage) {
           var contributorList = [];
           this.getContributorList = function () {

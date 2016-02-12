@@ -235,7 +235,7 @@
 
     EntityItemExpensesController.$inject = ['$scope', '$routeParams', 'EntityItemExpensesService', 'EntityFinanceSummaryService','connectToService'];
 
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .controller('EntityItemExpensesController', EntityItemExpensesController);
 
 }());

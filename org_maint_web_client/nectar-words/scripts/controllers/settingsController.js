@@ -507,7 +507,7 @@
        
     };
     SettingsController.$inject = ['$scope', 'configuration', 'connectToService', '$localStorage'];
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
      .controller('SettingsController', SettingsController);
 
 }());

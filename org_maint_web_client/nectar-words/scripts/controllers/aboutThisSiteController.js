@@ -14,7 +14,7 @@
 
     AboutThisSiteController.$inject = ['$scope', '$location', '$anchorScroll', 'connectToService'];
 
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .controller('AboutThisSiteController', AboutThisSiteController);
 
 }());

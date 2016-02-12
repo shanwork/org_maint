@@ -10,7 +10,7 @@
         <td>{{  entity.DateUpdatedString |date}}</td>
         <td>{{  entity.Comments |date}}</td>
     */
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .service('EntityFinanceSummaryService', function ($http, $q, connectToService, BudgetStatusService, $localStorage) {
           var entityList = [];
           //var entityList = [

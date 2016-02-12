@@ -60,7 +60,7 @@
 
     EntityController.$inject = ['$scope', 'EntityService','connectToService'];
 
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .controller('EntityController', EntityController);
 
 }());

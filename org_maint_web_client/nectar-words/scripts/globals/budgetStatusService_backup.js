@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('org_maint_app')
+    angular.module('nectar_words_app')
       .service('BudgetStatusService', function ($http, $q) {
          
           this.getBudgetHistory = function () {

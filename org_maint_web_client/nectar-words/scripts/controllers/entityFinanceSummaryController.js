@@ -249,7 +249,7 @@
 
     EntityFinanceSummaryController.$inject = ['$scope', 'EntityFinanceSummaryService', 'EntityItemExpensesService', 'connectToService', 'configuration', '$localStorage'];
 
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .controller('EntityFinanceSummaryController', EntityFinanceSummaryController);
 
 }());

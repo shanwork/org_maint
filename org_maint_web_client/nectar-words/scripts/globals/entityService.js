@@ -8,7 +8,7 @@
         <th> <input type="text" ng-model="entityFilter.DateUpdatedString">  </th>
         <th> <input type="text" ng-model="entityFilter.Comments">  </th>
     */
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .service('EntityService', function ($http, $q, connectToService, BudgetStatusService) {
           var entityList = [];
           var entityStatus = {

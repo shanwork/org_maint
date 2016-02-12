@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('org_maint_budget')
+    angular.module('nectar_words_app')
       .service('BudgetStatusService', function ($http, $q, connectToService, $localStorage) {
         //  var budgetStatus = {};
           var budgetStatus = 

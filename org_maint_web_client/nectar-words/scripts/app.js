@@ -1,16 +1,20 @@
 (function() {
     
    
-    var budgetApp = angular.module('org_maint_budget', ['ngRoute','ngSanitize','ngStorage']);
-    budgetApp.value('connectToService', 'false');
-    budgetApp.value('configuration', { imMemoryData: 'yes', verbose: 'yes' });
-    budgetApp.config(function ($routeProvider) {
+    var nectar_words_app = angular.module('nectar_words_app', ['ngRoute', 'ngSanitize', 'ngStorage']);
+    nectar_words_app.value('connectToService', 'false');
+    nectar_words_app.value('configuration', { imMemoryData: 'yes', verbose: 'yes' });
+    nectar_words_app.config(function ($routeProvider) {
         $routeProvider
-          .when('/entityFinanceSummaries', {
-              controller: 'EntityFinanceSummaryController',
+          .when('/Week/:weekIndex', {
+              controller: 'WeeklyNectarController',
               
-                templateUrl: 'views/entityFinanceSummaries.html'
-            })
+              templateUrl: 'views/WeeklyNectar.html'
+          }).when('/Archive', {
+              controller: 'OldNectarController',
+
+              templateUrl: 'views/OldNectar.html'
+          })
              .when('/entityExpenses/:EntityFinanceSummaryID/:EntityName', {
                  controller: 'EntityItemExpensesController',
                  templateUrl: 'views/entityItemExpenses.html'
@@ -39,14 +43,14 @@
                 templateUrl: 'views/charting.html'
 
             })
-            .otherwise({ redirectTo: '/budgetStatus' });
+            .otherwise({ redirectTo: '/Week/1' });
     },function ($httpProvider) {
         $httpProvider.defaults.headers.common = {};
         $httpProvider.defaults.headers.post = {};
         $httpProvider.defaults.headers.put = {};
         $httpProvider.defaults.headers.patch = {};
     });
-    budgetApp.directive('clickLink', ['$location', function ($location) {
+    nectar_words_app.directive('clickLink', ['$location', function ($location) {
         return {
             link: function (scope, element, attrs) {
                 element.on('click', function () {
@@ -57,7 +61,7 @@
             }
         }
     }]);
-    budgetApp.directive('clickLinkConfirm', ['$location', function ($location) {
+    nectar_words_app.directive('clickLinkConfirm', ['$location', function ($location) {
         return {
             link: function (scope, element, attrs) {
                 element.on('click', function () {

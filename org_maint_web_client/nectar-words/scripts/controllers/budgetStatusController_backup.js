@@ -27,7 +27,7 @@
 
     BudgetStatusController.$inject = ['$scope', 'BudgetStatusService'];
 
-    angular.module('org_maint_app')
+    angular.module('nectar_words_app')
       .controller('BudgetStatusController', BudgetStatusController);
 
 }());
