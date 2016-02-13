@@ -1,1 +1,12 @@
-﻿Current Start of Week {{startOfThisWeek}}, Chosen Start of Week: {{startOfChosenWeek}}
+﻿Current Start of Week {{startOfThisWeek}}, Chosen Start of Week: {{startOfChosenWeek}} today {{today}}
+<table class="table table striped">
+    <tr ng-repeat="thisDaySaying in thisWeeksSaying">
+        <td>
+            Posted: {{thisDaySaying.posted}} <br />
+            <h3>{{thisDaySaying.title}}</h3>
+            <p ng-bind-html="thisDaySaying.content">
+               </p>
+                &nbsp;&nbsp; -  {{thisDaySaying.author}}<br />
+</td>
+    </tr>
+</table>

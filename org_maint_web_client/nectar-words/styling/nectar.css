@@ -1,15 +1,25 @@
 ﻿body {
-    background-image:url('../images/dwarkamai_1.jpg');
     border: solid 5px;
-    background-size: 768px 1024px;
+    background-size: 480px 640px;
     background-repeat:repeat-x;
-    background-position:center;
+    background-position:top ;
     opacity:0.8;
      
     
 }
 .nectar-back {
     border: solid 5px;
-    background-color:yellow;
-    
+    background-color:#32c385;
+    background-image:url('../images/dwarkamai_1.jpg');
+    background-size: 768px 1024px;
+    min-height:768px;
+    min-width:1024px;
+    opacity:1.0;
+    font-weight:900;
+}
+table{
+     color: white ;
+     opacity:1;
+     font-style:italic;
+
 }
