@@ -23,10 +23,15 @@
             config.data.json.budgetAvailable = [];
             config.data.json.budgetAllocated = [];
             config.data.json.budgetRequired = [];
+            config.data.json.budgetUpdated = [];
+            config.data.json.contributorsAdded = [];
+            config.data.json.entitiesAdded = [];
+
             var dates = [];
             if ($localStorage.contributorList.length > 0)
                for (i = 0; i < $localStorage.contributorList.length; i++) {
                     config.data.json.contributors.push(parseFloat($localStorage.contributorList[i].ConvertedAmount));
+                    dates.push($localStorage.contributorList[i].DateReceived)
                     dates.push($localStorage.contributorList[i].DateReceived)
                 }
            
@@ -41,15 +46,17 @@
             }
             
             if ($localStorage.budgetStatusHistory != null && $localStorage.budgetStatusHistory.length > 0)
-                alert($localStorage.budgetStatusHistory.length);
+            //    alert($localStorage.budgetStatusHistory.length);
                 for (k = 0; k < $localStorage.budgetStatusHistory.length; k++) {
                     config.data.json.budgetAvailable.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetAvailable));
                     config.data.json.budgetRequired.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetRequired));
                     config.data.json.budgetAllocated.push(parseFloat($localStorage.budgetStatusHistory[k].BudgetAllocated));
                 }
 
-            config.axis = { "y": { "label": { "text": "Amount in INR", "position": "outer-middle" } }, "x": {type: "Date", tick: dates} };
+            config.axis = { "y": { "label": { "text": "Amount in INR", "position": "outer-middle" } } };
             config.data.types = { "Contributors": $scope.config.contributors, "Entities": $scope.config.entities, "Available Budget": $scope.config.budgetAvailable, "Required Budget": $scope.config.budgetRequired, "Allocated Budget": $scope.config.budgetAllocated };
+            config.xs = { 'Contri': 'x1' };
+            config.data.columns = [['x1'].concat(dates)];
             $scope.chart = c3.generate(config);
         }
         $scope.showGraphHardCode = function () {

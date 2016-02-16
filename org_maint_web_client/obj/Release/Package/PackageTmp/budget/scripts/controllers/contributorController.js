@@ -65,7 +65,7 @@
            {
                Amount: Contributor.ConvertedAmount,
                DebitCredit: 'Credit',
-               Date: Contributor.DateReceived,
+               DateUpdated: new Date(),
                Principal: Contributor.ContributorName,
                Comments: Contributor.Comments
 

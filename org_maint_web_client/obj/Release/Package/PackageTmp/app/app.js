@@ -1,11 +1,12 @@
 (function() {
     
-    var app = angular.module('org_maint_app', ['ngRoute','ngStorage']);
+    var org_maint_app = angular.module('org_maint_app', ['ngStorage']);
     
     var IndexPageController = function ($scope, $localStorage) {
         var today = new Date();
-        $localStorage.todayShort = new Date(); //$scope.todayShort = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
-        $scope.DateFormat = ' Format = Month / Day / Year ';
+     //   $scope.todayShort = new Date('MMM-DD-YYYY'); //$scope.todayShort = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+        $scope.DateFormat = ' Format = MMM / Day / Year ';
+        $scope.AmrutvaniTitle = "Sai Amrutvani";
     }
     IndexPageController.$inject = ['$scope',  '$localStorage'];
 

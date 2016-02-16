@@ -7,5 +7,299 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
+    <_PublishTargetUrl>ftp://w18.winhost.com:21/myapp</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="app/app.js">
+      <publishTime>02/01/2016 06:53:40</publishTime>
+    </File>
+    <File Include="app/controllers/customersController.js">
+      <publishTime>11/20/2015 06:48:13</publishTime>
+    </File>
+    <File Include="app/controllers/ordersController.js">
+      <publishTime>11/20/2015 06:48:13</publishTime>
+    </File>
+    <File Include="app/views/customers.html">
+      <publishTime>11/20/2015 06:39:29</publishTime>
+    </File>
+    <File Include="app/views/orders.html">
+      <publishTime>11/20/2015 06:39:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>11/15/2015 07:10:04</publishTime>
+    </File>
+    <File Include="bin/org_maint_web_client.dll">
+      <publishTime>02/14/2016 07:15:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>11/15/2015 07:10:03</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>11/15/2015 07:10:03</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>11/15/2015 07:10:03</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>11/15/2015 07:10:03</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>11/15/2015 07:10:03</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>11/15/2015 07:10:03</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>11/15/2015 07:10:03</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>11/15/2015 07:10:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>11/15/2015 07:10:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>11/15/2015 07:10:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>11/15/2015 07:10:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>11/15/2015 07:10:04</publishTime>
+    </File>
+    <File Include="budget/home.html">
+      <publishTime>02/01/2016 07:35:41</publishTime>
+    </File>
+    <File Include="budget/scripts/app.js">
+      <publishTime>01/18/2016 18:00:32</publishTime>
+    </File>
+    <File Include="budget/scripts/c3.min.js">
+      <publishTime>01/18/2016 17:58:09</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/aboutThisSiteController.js">
+      <publishTime>01/11/2016 07:17:30</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/budgetStatusController.js">
+      <publishTime>01/31/2016 08:00:08</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/budgetStatusController_backup.js">
+      <publishTime>11/28/2015 16:44:06</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/chartController.js">
+      <publishTime>01/29/2016 20:09:20</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/contributorController.js">
+      <publishTime>01/30/2016 19:26:58</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/contributorControllerbackup.js">
+      <publishTime>12/20/2015 13:30:56</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/entityController.js">
+      <publishTime>01/09/2016 07:16:40</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/entityFinanceSummaryController.js">
+      <publishTime>01/30/2016 19:00:19</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/entityItemExpensesController.js">
+      <publishTime>01/14/2016 22:18:09</publishTime>
+    </File>
+    <File Include="budget/scripts/controllers/settingsController.js">
+      <publishTime>01/30/2016 19:27:17</publishTime>
+    </File>
+    <File Include="budget/scripts/d3.min.js">
+      <publishTime>01/18/2016 17:58:10</publishTime>
+    </File>
+    <File Include="budget/scripts/globals/budgetStatusService.js">
+      <publishTime>01/30/2016 08:03:20</publishTime>
+    </File>
+    <File Include="budget/scripts/globals/budgetStatusService_backup.js">
+      <publishTime>11/28/2015 16:48:26</publishTime>
+    </File>
+    <File Include="budget/scripts/globals/contributorService.js">
+      <publishTime>01/10/2016 08:38:04</publishTime>
+    </File>
+    <File Include="budget/scripts/globals/entityFinanceSummaryService.js">
+      <publishTime>01/10/2016 09:20:03</publishTime>
+    </File>
+    <File Include="budget/scripts/globals/entityItemExpensesService.js">
+      <publishTime>01/12/2016 06:17:03</publishTime>
+    </File>
+    <File Include="budget/scripts/globals/entityService.js">
+      <publishTime>12/19/2015 15:28:22</publishTime>
+    </File>
+    <File Include="budget/views/aboutThisSite.html">
+      <publishTime>01/24/2016 09:19:32</publishTime>
+    </File>
+    <File Include="budget/views/budgetStatus.html">
+      <publishTime>01/31/2016 07:44:59</publishTime>
+    </File>
+    <File Include="budget/views/budgetStatusPreformat.html">
+      <publishTime>01/31/2016 07:44:20</publishTime>
+    </File>
+    <File Include="budget/views/charting.html">
+      <publishTime>01/18/2016 23:27:27</publishTime>
+    </File>
+    <File Include="budget/views/contributorList.html">
+      <publishTime>01/15/2016 06:22:50</publishTime>
+    </File>
+    <File Include="budget/views/entityFinanceSummaries.html">
+      <publishTime>01/27/2016 08:50:26</publishTime>
+    </File>
+    <File Include="budget/views/entityItemExpenses.html">
+      <publishTime>01/14/2016 22:13:53</publishTime>
+    </File>
+    <File Include="budget/views/entityList.html">
+      <publishTime>12/18/2015 07:06:16</publishTime>
+    </File>
+    <File Include="budget/views/orders.html">
+      <publishTime>11/26/2015 14:34:59</publishTime>
+    </File>
+    <File Include="budget/views/Settings.html">
+      <publishTime>01/17/2016 12:50:56</publishTime>
+    </File>
+    <File Include="charting/home.html">
+      <publishTime>01/19/2016 06:08:10</publishTime>
+    </File>
+    <File Include="charting/scripts/app.js">
+      <publishTime>01/19/2016 06:25:42</publishTime>
+    </File>
+    <File Include="charting/scripts/c3.min.js">
+      <publishTime>01/19/2016 06:04:59</publishTime>
+    </File>
+    <File Include="charting/scripts/d3.min.js">
+      <publishTime>01/19/2016 06:04:59</publishTime>
+    </File>
+    <File Include="comingNext/home.html">
+      <publishTime>01/05/2016 06:54:17</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>02/01/2016 06:53:38</publishTime>
+    </File>
+    <File Include="nectar-words/home.html">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/images/dwarkamai_1.JPG">
+      <publishTime>02/01/2016 07:21:50</publishTime>
+    </File>
+    <File Include="nectar-words/images/sai_1221_1.JPG">
+      <publishTime>02/01/2016 07:22:13</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/app.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/c3.min.js">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/aboutThisSiteController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/budgetStatusController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/budgetStatusController_backup.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/chartController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/contributorController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/contributorControllerbackup.js">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/entityController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/entityFinanceSummaryController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/entityItemExpensesController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/settingsController.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/controllers/WeeklyNectarController.js">
+      <publishTime>02/14/2016 07:14:21</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/d3.min.js">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/globals/budgetStatusService.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/globals/budgetStatusService_backup.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/globals/contributorService.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/globals/entityFinanceSummaryService.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/globals/entityItemExpensesService.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/globals/entityService.js">
+      <publishTime>02/13/2016 07:17:39</publishTime>
+    </File>
+    <File Include="nectar-words/styling/nectar.css">
+      <publishTime>02/14/2016 07:04:53</publishTime>
+    </File>
+    <File Include="nectar-words/views/aboutThisSite.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/budgetStatus.html">
+      <publishTime>02/01/2016 07:39:30</publishTime>
+    </File>
+    <File Include="nectar-words/views/budgetStatusPreformat.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/charting.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/contributorList.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/entityFinanceSummaries.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/entityItemExpenses.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/entityList.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/orders.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/Settings.html">
+      <publishTime>02/01/2016 06:29:36</publishTime>
+    </File>
+    <File Include="nectar-words/views/WeeklyNectar.html">
+      <publishTime>02/14/2016 07:02:17</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/18/2015 05:49:40</publishTime>
+    </File>
+    <File Include="scripts/angular-route.js">
+      <publishTime>11/20/2015 06:39:29</publishTime>
+    </File>
+    <File Include="scripts/angular.js">
+      <publishTime>11/20/2015 06:39:29</publishTime>
+    </File>
+    <File Include="services/test.html">
+      <publishTime>01/08/2016 06:03:53</publishTime>
+    </File>
+    <File Include="styles/c3.min.css">
+      <publishTime>01/18/2016 18:01:45</publishTime>
+    </File>
+    <File Include="styles/globalStyles.css">
+      <publishTime>01/15/2016 06:33:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/14/2016 07:16:00</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

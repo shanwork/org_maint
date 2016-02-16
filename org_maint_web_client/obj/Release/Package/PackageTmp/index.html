@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="org_maint_app">
+<html data-ng-app="org_maint_app">
 <head>
     <title>Organization Budget Allocation</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -12,12 +12,14 @@
             <nav class="navbar navbar-default" style="border:2px outset silver;">
                 <ul class="navbar navbar-nav">
                      <li><a href="budget/home.html#/about">Budgeting Website</a></li>
-                    <li><a href="comingNext/home.html">Coming Soon!!</a></li>
+                    <li><a href="nectar-words/home.html#/about">{{AmrutvaniTitle}}</a></li>
+                <li><a href="comingNext/home.html">Coming Soon!!</a></li>
 </ul>
             </nav>
         </header>
      
         <para>
+            {{AmrutvaniTitle}}
             <a name="top"><H1>Shantanu's Home Page </H1></a>
             Hi, <p>
                 <i>It was about time, I presented something to the outside world, so I picked up a basic hosting package and started publishing....</i><p>
@@ -41,7 +43,8 @@
    
      <script src="scripts/angular.js"></script>
     <script src="scripts/angular-route.js"></script>
-    <script src="scripts/app.js"></script>
-   <script>document.getElementById("dateShow").innerHTML = new Date().getMonth()+1 + '-'  + new Date().getDate() + '-' + new Date().getFullYear() ;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+<script src="app/app.js"></script>
+   <script>document.getElementById("dateShow").innerHTML = new Date().getMonth() + 1 + '-' + new Date().getDate() + '-' + new Date().getFullYear(); //alert($localStorage.todayShort);</script>
 </body>
 </html>

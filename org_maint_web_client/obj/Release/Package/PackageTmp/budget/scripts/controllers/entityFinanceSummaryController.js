@@ -78,7 +78,8 @@
                 BudgetUsed: parseFloat($scope.BudgetUsed),
                 
                 Priority: parseInt($scope.Priority),
-                Comments: $scope.Comments
+                Comments: $scope.Comments,
+                DateUpdated: new Date()
                 // will add date later
             };
             if (connectToService == 'true') {

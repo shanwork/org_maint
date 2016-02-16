@@ -107,6 +107,9 @@
     <Content Include="charting\scripts\d3.min.js" />
     <Content Include="index.html" />
     <Content Include="nectar-words\home.html" />
+    <Content Include="nectar-words\images\dwarkamai_1.JPG" />
+    <Content Include="nectar-words\images\Ganesha.JPG" />
+    <Content Include="nectar-words\images\sai_1221_1.JPG" />
     <Content Include="nectar-words\scripts\app.js" />
     <Content Include="nectar-words\scripts\c3.min.js" />
     <Content Include="nectar-words\scripts\controllers\aboutThisSiteController.js" />
@@ -163,7 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\amrutvani\" />
-    <Folder Include="nectar-words\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

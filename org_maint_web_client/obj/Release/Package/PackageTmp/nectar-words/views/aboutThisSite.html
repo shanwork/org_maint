@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<para>
+    <a name="top"><H1>Budgeting Website </H1></a>
+    Hi, <p>
+        This website is being developed inspired by a desire to do something, in addition to merely work on upgrading and staying current with skills relevant to my profession.
+    <p>
+        A humanitarian effort like <a href="https://en.wikipedia.org/wiki/Naam_Foundation" target="_blank">NAAM movement for Farmer Suicides in Maharashtra (India)</a> has different ways by which we can help.
+        Sometimes organized accounting may take a backseat to the more urgent needs and emotions to resolve things, help etc. Thus enters an idea into my head to use a subject matter to apply whatever I am in the process of learning.
+        <br />
+
+        At this point, this is a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc.
+    <p />
+    While, as said, it was initiated with NAAM as an inspiration, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
+    a list of items, say a transport service which maintains a bunch of trucks.<p />
+    <a ng-click="scrollTo('Elements')"><li>Components</a></li>
+    <a ng-click="scrollTo('status')"><li>Status   ({{todayShort}})</a></li>
+    <a ng-click="scrollTo('pending')"><li> Pending ({{todayShort}})</a></li>
+    <a ng-click="scrollTo('technical')"><li>Technical</a></li>
+
+    I identified and am in the process of developing the following elements:
+    </p>
+    <ol>
+        <li>
+            <a href="../budget/home.html#/budgetStatus">High Level Budget Status</a>.. Gives an overview of Available, Used and Deficit (required) quantities<br />
+            Gives a listing of budget history, contributions, allocations. Also one can allocate the available funds.
+        </li>
+        <li>
+            <a href="../budget/home.html#/contributors">Contributions</a>.. <br />
+            Gives a list of contributions - name, amount, currency, etc. Adding a contribution automatically updates budget status and history
+
+        </li>
+        <li>
+            <a href="../budget/home.html#/entityFinanceSummaries">Entity Summaries</a>.. <br />
+            A summary of entities involved within the framework of budget distribution. Summary of entities in status of allocated (budget was allocated),
+            allocable (budget is available, but not yet allocable) and unallocated (budget not available)<br />
+            List of entities with their budget specifics. Add entity. Drill down item wise expenses for an entity
+
+        </li>
+        <li>
+            <a href="../budget/home.html#/settings">Settings</a>.. <br />
+            Iteratively removing the hard coding, this page right now has the option of adding and editing currencies, flushing data and showing or hiding help texts on each page.
+            <font color="blue">(WIP - working on loading and saving data from and to external comma separated files)</font>
+
+
+        </li>
+        <li>
+            <a href="../budget/home.html#/settings">Settings</a>.. <br />
+            Iteratively removing the hard coding, this page right now has the option of adding and editing currencies, flushing data and showing or hiding help texts on each page.
+            <font color="blue">(WIP - working on loading and saving data from and to external comma separated files)</font>
+
+
+        </li>
+ </ol>
+    <a ng-click="scrollTo('top')">Top of page</a>
+
+    <a name="status"><h3>Status </h3></a>
+    <li>What you are seeing here is a proof of concept user interface not connected to a database with or without sample data.
+    <font color="blue">I am injecting the 'ngstorage'  module and '$localStorage' to persist data now. 
+       </font> </li>
+    <li>
+        I have created the database for this site and the version of this website running on my local computer saves all data to a local database, so it can be read and updated later.(more in the 'Technical' section)
+        I recently uploaded this to a public website. I am having some issues with connection strings.<br /><i> However, read on...</i>
+    </li>
+    <li>Even without the full blown (not connected to a regular data base) version, it is iteratively reaching full functionality completely client side 
+    where <font color="blue"> 
+    <br />a user can
+    <br />&nbsp;&nbsp;&nbsp;* upload existing data files which they had saved prevously in the last session <i>(in place for contributors and currencies)</i>
+    <br />&nbsp;&nbsp;&nbsp;* do their record updates and other work, and
+    <br />&nbsp;&nbsp;&nbsp;* save their work overwriting the existing, or writing to a new, set of files(You can currently download the records you have saved on the Settings page)</font>
+</li>
+    <a name="pending"><h3>Pending  </h3></a>
+
+    <li> Documentation on how to use this site. Planning to style in some sliding or pop up help windows soon</li>
+    <li> Refining the look - styling. Validations</li>
+    <li> This website is also not secure, but I'm thinking that this may be deployed on an internal computer, and it doesnt hold sensitive data  </li>
+    <li> Reduce hard coding (e.g. Dates in the client-only version), need to make more stuff configurable. Adding lookups like drop downs, etc.<font color="blue">(Currencies are now configurable)</font>  </li>
+    <li> Templatizing the names and other configurability, e.g. the terms 'contributor' and 'entity' will be made configurable and can be renamed 'Donor' and 'Village' or 'funding' and 'vehicle' </li>
+    <li> Resolve issue of database connectivity on hosted deployment.  </li>
+    <li> Code related and some specifics
+        <br />&nbsp;&nbsp;&nbsp;* Data base / WCF flow to catch up with client functionality - entity summary and itens, currencies..
+        <br />&nbsp;&nbsp;&nbsp;* Implement upload Entity Summary and Item data from files. (Re-think logic on how to save and upload Entity Summary and Item data to files)
+        <br />&nbsp;&nbsp;&nbsp;* One 'fileinput-upload button' functionality.
+        <br />&nbsp;&nbsp;&nbsp;* Delete unwanted code 
+        <br />&nbsp;&nbsp;&nbsp;* Add Inline documentation
+        <br />&nbsp;&nbsp;&nbsp;* Merge Entity finance summary and entity item processing in the same set of files.
+        <br />&nbsp;&nbsp;&nbsp;* Add 'append vs overwrite' choice for data when working completely client side.
+        <br />&nbsp;&nbsp;&nbsp;* Headers for downloaded csv data files.
+        <br />&nbsp;&nbsp;&nbsp;* Maybe create a separate mvc flow for bugs and requirements(?).
+
+     </li>
+<a ng-click="scrollTo('top')">Top of page</a>
+
+
+    <a name="technical"><h3>Technical  </h3></a>
+    <li>
+        The Web application UI is written in AngularJS/HTML/CSS with gradual increasing infusion of bootstrap styling cues.<br />
+        The fully vertical version consumes an asp.net 4.5/C# WCF web service which in turn talks to a Sql Server database through Entity Framework.
+        (I introduced a global variable in the angular code to switch between using in memory and dB data)
+    </li>
+    <li >
+        References and Thanks<br />
+        <a href="https://www.udemy.com/angularjs-jumpstart/" target="_blank">Dan Wahlin Angular JumpStart course on Udemy</a><br />
+        <a href="http://www.c-sharpcorner.com/UploadFile/rahul4_saxena/crud-operation-in-mvc4-using-angularjs-and-wcf-rest-services/" target="_blank">
+            Rahul Saxena - CRUD Operations in MVC4 Using AngularJS and WCF REST Services on CSharpCorner
+        </a><br />
+        Google Search Engine
+    </li>
+
+    <h4>Sources on Github I'll mail you the link on demand</h4> mail me at shanwork2012@gmail.com<br />
+    <a ng-click="scrollTo('top')">Top of page</a>
+</para>
+
