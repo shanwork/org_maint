@@ -10,39 +10,11 @@
               controller: 'WeeklyNectarController',
               
               templateUrl: 'views/WeeklyNectar.html'
-          }).when('/Archive', {
-              controller: 'OldNectarController',
-
-              templateUrl: 'views/OldNectar.html'
           })
-             .when('/entityExpenses/:EntityFinanceSummaryID/:EntityName', {
-                 controller: 'EntityItemExpensesController',
-                 templateUrl: 'views/entityItemExpenses.html'
-             })
-            .when('/contributors', {
-                controller: 'ContributorController',
-                templateUrl: 'views/contributorList.html'
-            })
-            .when('/budgetStatus', {
-                controller: 'BudgetStatusController',
-                templateUrl: 'views/budgetStatus.html'
-            })
              .when('/about', {
                  controller: 'AboutThisSiteController',
                  templateUrl: 'views/aboutThisSite.html'
              })
-            .when('/home', {
-                templateUrl: '../../index.html'
-            })
-            .when('/settings', {
-                controller:'SettingsController',
-                templateUrl: 'views/settings.html'
-
-            }).when('/charting', {
-               // controller: 'SettingsController',
-                templateUrl: 'views/charting.html'
-
-            })
             .otherwise({ redirectTo: '/Week/1' });
     },function ($httpProvider) {
         $httpProvider.defaults.headers.common = {};

@@ -29,7 +29,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="bin/org_maint_web_client.dll">
-      <publishTime>02/14/2016 07:15:50</publishTime>
+      <publishTime>02/16/2016 22:18:17</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/15/2015 07:10:03</publishTime>
@@ -104,7 +104,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/14/2016 22:18:09</publishTime>
     </File>
     <File Include="budget/scripts/controllers/settingsController.js">
-      <publishTime>01/30/2016 19:27:17</publishTime>
+      <publishTime>02/15/2016 10:29:02</publishTime>
     </File>
     <File Include="budget/scripts/d3.min.js">
       <publishTime>01/18/2016 17:58:10</publishTime>
@@ -176,22 +176,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/01/2016 06:53:38</publishTime>
     </File>
     <File Include="nectar-words/home.html">
-      <publishTime>02/13/2016 07:17:39</publishTime>
+      <publishTime>02/16/2016 19:39:29</publishTime>
     </File>
     <File Include="nectar-words/images/dwarkamai_1.JPG">
       <publishTime>02/01/2016 07:21:50</publishTime>
+    </File>
+    <File Include="nectar-words/images/Ganesha.JPG">
+      <publishTime>02/14/2016 07:49:41</publishTime>
     </File>
     <File Include="nectar-words/images/sai_1221_1.JPG">
       <publishTime>02/01/2016 07:22:13</publishTime>
     </File>
     <File Include="nectar-words/scripts/app.js">
-      <publishTime>02/13/2016 07:17:39</publishTime>
+      <publishTime>02/16/2016 19:41:22</publishTime>
     </File>
     <File Include="nectar-words/scripts/c3.min.js">
       <publishTime>02/01/2016 06:29:36</publishTime>
     </File>
     <File Include="nectar-words/scripts/controllers/aboutThisSiteController.js">
-      <publishTime>02/13/2016 07:17:39</publishTime>
+      <publishTime>02/14/2016 08:00:18</publishTime>
     </File>
     <File Include="nectar-words/scripts/controllers/budgetStatusController.js">
       <publishTime>02/13/2016 07:17:39</publishTime>
@@ -221,7 +224,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/13/2016 07:17:39</publishTime>
     </File>
     <File Include="nectar-words/scripts/controllers/WeeklyNectarController.js">
-      <publishTime>02/14/2016 07:14:21</publishTime>
+      <publishTime>02/16/2016 22:13:40</publishTime>
     </File>
     <File Include="nectar-words/scripts/d3.min.js">
       <publishTime>02/01/2016 06:29:36</publishTime>
@@ -245,10 +248,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/13/2016 07:17:39</publishTime>
     </File>
     <File Include="nectar-words/styling/nectar.css">
-      <publishTime>02/14/2016 07:04:53</publishTime>
+      <publishTime>02/16/2016 22:16:28</publishTime>
     </File>
     <File Include="nectar-words/views/aboutThisSite.html">
-      <publishTime>02/01/2016 06:29:36</publishTime>
+      <publishTime>02/16/2016 19:39:29</publishTime>
     </File>
     <File Include="nectar-words/views/budgetStatus.html">
       <publishTime>02/01/2016 07:39:30</publishTime>
@@ -275,10 +278,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/01/2016 06:29:36</publishTime>
     </File>
     <File Include="nectar-words/views/Settings.html">
-      <publishTime>02/01/2016 06:29:36</publishTime>
+      <publishTime>02/15/2016 10:11:42</publishTime>
     </File>
     <File Include="nectar-words/views/WeeklyNectar.html">
-      <publishTime>02/14/2016 07:02:17</publishTime>
+      <publishTime>02/16/2016 22:16:14</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>11/18/2015 05:49:40</publishTime>
@@ -299,7 +302,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/15/2016 06:33:42</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/14/2016 07:16:00</publishTime>
+      <publishTime>02/16/2016 22:18:26</publishTime>
     </File>
   </ItemGroup>
 </Project>

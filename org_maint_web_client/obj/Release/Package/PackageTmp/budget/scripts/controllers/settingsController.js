@@ -1,6 +1,6 @@
 ﻿(function () {
     var SettingsController = function ($scope, configuration, connectToService, $localStorage) {
-        $localStorage.debugMode = false;
+        $localStorage.debugMode = true;
         if ($localStorage.verbose == null)
             $localStorage.verbose = 'yes';
         //$scope.data.showTestData = 'no';
@@ -441,9 +441,11 @@
             currencyListLink.href = "data:text/html," + encodeURIComponent(currencyListOutput.join("\r\n"));
             currencyListLink.download = "currencyList" + $scope.suffix;
             currencyListLink.style.display = 'block';
+      //      $scope.makeTextFile(currencyListOutput.join("\r\n"));
         };
         $scope.textFile=null;
         $scope.makeTextFile = function (text) {
+            alert(text);
             var data = new Blob([text], { type: 'text/plain' });
 
             // If we are replacing a previously generated file we need to
@@ -455,6 +457,25 @@
             $scope.textFile = window.URL.createObjectURL(data);
              if ($localStorage.debugMode == true) alert($scope.textFile);
             //   $scope.textFile = null;
+             var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+             db.transaction(function (tx) {
+               //  tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+                 tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")');
+                 tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")');
+             });
+             db.transaction(function (tx) {
+                 tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+                     var len = results.rows.length, i;
+                     msg = "<p>Found rows: " + len + "</p>";
+                     alert(msg);
+                   //  document.querySelector('#status').innerHTML += msg;
+
+                     for (i = 0; i < len; i++) {
+                         alert(results.rows.item(i).log);
+                     }
+
+                 }, null);
+             });
             return $scope.textFile;
         };
         $scope.update = function (currencyDetail) {

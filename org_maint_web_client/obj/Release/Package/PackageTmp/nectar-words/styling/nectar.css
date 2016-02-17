@@ -9,7 +9,7 @@
 }
 .nectar-back {
     border: solid 5px;
-    background-color:#32c385;
+    background-color:silver;
  /*   background-image:url('../images/dwarkamai_1.jpg');
     background-size: 768px 1024px;*/
     min-height:768px;
@@ -18,15 +18,33 @@
     font-weight:900;
 }
 table{
-      ;
+      
      opacity:1;
      font-style:italic;
 }
 .portait
 {
-    border: 15px inset;
+    border: 15px outset;
     border-radius:7px;
     border-color:gold;
     width: 300px ;
     height:380px;
+}
+.textcontent
+{
+    border: 14px inset;
+    border-radius:3px;
+    border-color:brown;
+    
+}
+.ganesha {
+    border: solid 5px;
+   background-size: 768px 1024px;
+    background-repeat:repeat-x;
+    /* background-color:#32c385;*/
+    background-image:url('/nectar-words/images/Ganesha.JPG');
+    min-height:768px;
+    min-width:1024px;
+    opacity:0.9;
+    font-weight:900;
 }

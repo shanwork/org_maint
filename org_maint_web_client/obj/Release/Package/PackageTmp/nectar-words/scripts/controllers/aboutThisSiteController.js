@@ -1,5 +1,6 @@
 ﻿(function () {
-    var AboutThisSiteController = function ($scope, $location,$anchorScroll, connectToService) {
+    var AboutThisSiteController = function ($scope, $location, $anchorScroll, connectToService) {
+        $scope.ganesha = '/MyApp/nectar-words/images/Ganesha.JPG';
         var today = new Date();
         $scope.todayShort = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear() + '*';
         $scope.scrollTo = function(label)
