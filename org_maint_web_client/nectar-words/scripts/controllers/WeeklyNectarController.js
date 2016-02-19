@@ -1,7 +1,7 @@
 ﻿(function () {
     
     var WeeklyNectarController = function ($scope, $routeParams, $localStorage, connectToService) {
-        $scope.root = '/MyApp/nectar-words';
+        $scope.root = '/myApp/nectar-words';
         var startOfThisWeek = parseInt(new Date().getDay());
         var deltaToDesiredWeek = startOfThisWeek + (($routeParams.weekIndex - 1) * 7)
         //console.log(startOfDateString);
@@ -16,6 +16,12 @@
         if ($localStorage.thisWeekSaying == undefined || $localStorage.thisWeekSaying == null) {
             $scope.allWeeksSaying = [
                  [{
+                     posted: 'Feb 17 2016',
+                     title: 'Where are you searching for him?',
+                     content: 'As fragrance abides in the flower, as the reflection is within the mirror, so does the Lord resides with in you. Why are you searching from Him elsewhere?',
+                     author: 'Guru Nanak',
+                     img: $scope.root + '/images/sai_1221_1.jpg'
+                 }, {
                      posted: 'Feb 16 2016',
                      title: 'Beauty (or Fault) is in the eye of the beholder',
                      content: 'The waxing and waning of the moon has nothing to do with the moon. When the moon waxes, we falsely think that the moon is growing; and when it wanes, we think that the moon is shrinking. Factually, the moon as it is, always the same. It solely depends on the observer on the earth who is looking at the moon. So too, the faults that you see in others are mainly due to you',
@@ -96,7 +102,26 @@
                      'For, when one is idle, all sorts of bad thoughts crop up in one’s mind.',
                  author: '-Sri Ramakrishna Paramahamsa',
                  img: $scope.root + '/images/sai_1221_1.jpg'
-        }],[]
+             }], [{
+                 posted: 'Jan 31 2016',
+                 title: ' Burning Karma',
+                 content: 'Just as fire fanned by powerful winds destroys heaps of firewood in no time, so also, the fire of meditation destroys heaps of Karma in a moment.',
+                 author: 'Lord Mahavir',
+                 img: $scope.root + '/images/dwarkamai_1.jpg'
+             },
+             {
+                 posted: 'Jan 30 2016',
+                 title: 'The most peaceful person',
+                 content: 'He who recognizes the existence of suffering, its cause, its cessation and path leading to its cessation has fathomed the Four Noble Truths. He will walk in the right path. Right views will be the torch to light his way. Right aims will be his guide. Right words will be his dwelling place on the road. His gait will be straight, for it is right behavior. His refreshments will be the right way of earning his livelihood. Right efforts will be his steps; right thoughts his breath; and peace will follow in his footprints',
+                 author: 'Lord Buddha',
+                 img: $scope.root + '/images/sai_1221_1.jpg'
+             }, {
+                 posted: 'Jan 29 2016',
+                 title: 'Why would somebody name me ‘Dust’?',
+                 content: 'We all look upon dust with contempt as something that we should avoid or not to come in contact with. Renu is a very common name for girls in northern part of India. Several months ago, one of the volunteers at the Shirdi Temple told me that Renu means ‘dust’. Please read this wonderful story……<p/>One day, Krishna by his maya, fell into a dreaded disease which no doctor could cure.  Narada came in the disguise of a physician and prescribed that if somebody can give his or her feet’s dust washed and give that water for Krishna to drink, he will be cured. Otherwise, he will die. When Krishna asked Rukmini and Sathyabhama for the ‘dust water’ they started cried saying that it will the highest sin because Krishna is their husband, as well as God.<p/> When Krishna approached Radha and the other Gopis, they were ready to offer their ‘dust water’. When Krishna warned them that they will be committing the greatest sin, they simply smiled and said that they would rather go to hell than lose their dear Krishna. The Lord craves for the ‘dust’ from the feet of the devotees because it is very auspicious. Then, what to speak of the Bhakta? Don’t you feel that you are blessed to have such a nice name, like Renu?',
+                 author: 'Anon',
+                 img: $scope.root + '/images/dwarkamai_1.jpg'
+             }]
             ];
             $scope.thisWeeksSaying = $scope.allWeeksSaying[$scope.weekIndex];
          }
