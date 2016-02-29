@@ -105,6 +105,7 @@
     <Content Include="charting\scripts\app.js" />
     <Content Include="charting\scripts\c3.min.js" />
     <Content Include="charting\scripts\d3.min.js" />
+    <Content Include="HubMVC\home.html" />
     <Content Include="index.html" />
     <Content Include="nectar-words\home.html" />
     <Content Include="nectar-words\images\dwarkamai_1.JPG" />
