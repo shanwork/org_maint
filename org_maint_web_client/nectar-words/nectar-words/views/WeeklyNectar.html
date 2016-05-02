@@ -1,0 +1,14 @@
+﻿<h3> Sayings for {{WhichWeek}}</h3>
+<table class="table table-striped" style="padding:100px;">
+   
+    <tr ng-repeat="thisDaySaying in thisWeeksSaying|orderBy:sortType">
+        <td class="textcontent"> 
+            Posted: {{thisDaySaying.posted}} <br />
+            <h3 ng-bind-html="thisDaySaying.title"></h3>
+            <p ng-bind-html="thisDaySaying.content">
+               </p>
+                &nbsp;&nbsp; -  {{thisDaySaying.author}}<br />
+</td>
+        <td class="portait"> <img ng-src={{thisDaySaying.img}} width="240" height="320"> </td>
+    </tr>
+</table>
