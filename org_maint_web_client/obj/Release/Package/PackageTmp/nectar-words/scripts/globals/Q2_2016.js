@@ -2,10 +2,209 @@
 var root = '/myApp/nectar-words';
 angular.module('nectar_words_app')
   .service('Q2_2016', function () {
-     
+      /*
+      {
+                    posted: 'Week of April 17-22 2016',
+                    postDate: new Date('April 08 2016 3:00 AM'),
+                    title: 'repetition of Ramayana and Ramnavmi',
+                    content: 'This week, the posts of Ramayan and Ramnavmi have been repeated...',
+                    author: '',
+                    seriesId: '-10',
+                    seq: '-1',
+                    img: root + '/images/dwarkamai_1.jpg'
+                } 
+      */
       var allWeeksSaying =
          [
+                [{
+             posted: 'April 30 2016',
+             postDate: new Date('April 30 2016 3:30 AM'),
+                    title: 'Ego colors your view',
+                    content: 'Once, Krishna thought of testing Yudhishthira (Dharma Raja) and Duryodhana. He first called Yudhishthira and said, “I have a task to perform. I need a very mean-minded person who is always untruthful and goes on evil ways. Can you bring such a person?”' 
+                    + '<br /><br />Then, Krishna called Duryodhana and said to him, “Duryodhana! A great task is to be performed. For that, a noble person is required who is pure, kind hearted and virtuous. Can you bring such a person?”'
+                    + '<br /><br />Both of them agreed to perform the tasks assigned to them and went in different directions. After some time, Yudhishthira came back and said most humbly to Krishna, “Oh, Lord! There is no wicked person in our kingdom. I am the only person who has some wickedness. Please make use of me.” Sometime later, Duryodhana also came back and said to Krishna, “Krishna! A completely noble person is nowhere to be seen in this kingdom. I thinkI am the only such person. Please make use of me.”'
+                     + '<br /><br />In the egoistic outlook of Duryodhana, all appeared to be wicked. In the humble nature of Yudhishthira, all appeared to be good. Therefore, whatever is the color of the glasses that you wear, everything will appear to you of that color. If you vision is evil, everything will appear evil to you. Yudhishthira was an epitome of virtues. Therefore, everyone appeared noble and good to him. ',
+                    author: ' Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
+      seriesId: '-1',
+      seq: '-1',
+      img: root + '/images/sai_1221_1.jpg'
+  }, {
+                    posted: 'April 29 2016',
+                    postDate: new Date('April 29 2016 3:30 AM'),
+                    title: 'Why use foul words when you have nice words?',
+                    content: 'To use fowl and bitter words, when kind words are at hand, is like going after unripe fruits and eating them when a tree is fully laden with sweet ripe fruits',
+                    author: 'Thiruvalluvar',
+                    seriesId: '-1',
+                    seq: '-1',
+                    img: root + '/images/dwarkamai_1.jpg'
+                }, {
+                    posted: 'April 28 2016',
+                    postDate: new Date('April 28 2016 3:30 AM'),
+                    title: 'Effect of using foul words',
+                    content: 'A tank full of water gets quickly emptied through a small sluice. Similarly, your accumulated spiritual merits will diminish very quickly with the use of one foul word. Therefore, there is no greater penance than integrating one’s heart and word.',
+                    author: 'Malayala Swami. Taken from Sant Darshan, p52.',
+                    seriesId: '-1',
+                    seq: '-1',
+                    img: root + '/images/sai_unplugged.jpg'
+                }, {
+                    posted: 'April 27 2016',
+                    postDate: new Date('April 27 2016 3:30 AM'),
+                    title: ' Holy company',
+                    content: '<strong>Devotee:</strong><br /> What is the use of being in a holy company?'
+                             + '<br/><br /><strong>Sri Ramakrishna:</strong><br /> It begets yearning for God. It begets love of God. By constantly being in the company of holy men, the soul becomes restless for God. Nothing whatsoever is achieved in spiritual life without yearning. This yearning is like the state of man who has someone seriously ill in the family. His mind is in a state of perpetual restlessness, thinking how the sick person can be cured. Or, one should feel a yearning for God like the yearning of a man who has lost his job and is wandering from office to office looking for a job. If he is sent away from a certain place which has no vacancy, he goes there again next day and inquires, “Is there any vacancy today?”'
+                             + '<br /><br />It is like constantly seeking God.',
+                    author: 'Sayings of Sri Ramakrishna taken from Sant Darshan, p40',
+                    seriesId: '-1',
+                    seq: '-1',
+                    img: root + '/images/sai_1221_1.jpg'
+                }, {
+                    posted: 'April 26 2016',
+                    postDate: new Date('April 26 2016 3:30 AM'),
+                    title: 'Keep the right company',
+                    content: 'If you keep fine tea bags next to a bottle of heeng (asafoetida), over time, the tea will smell of heeng and becomes unusable. However, if you keep the same tea bags next to freshly plucked Jasmine flowers, it acquires the Jasmine flavor and the tea is still usable. So, be careful of the company you keep',
+                    author: ' Swami Thiruchitrambalam (Swami T for short)',
+                    seriesId: '-1',
+                    seq: '-1',
+                    img: root + '/images/dwarkamai_1.jpg'
+                }, {
+                    posted: 'April 24 2016',
+                    postDate: new Date('April 24 2016 5:30 AM'),
+                    title: 'Today is Sri Sathya Sai Baba’s Aradhana Day',
+                    content: '<u>Bhagawan Sri Sathya Sai Baba (11/23/1926 – 4/24/2011)</u>'
+                    + '<ul><li>“For those who have experienced Me, no explanation is necessary.</li>'
+                    + '<li>For those who have not experienced Me, no explanation is possible.”</li>'
+                    + '<li>“I will give you what you want, so that you will</li>'
+                    + '<li>come to Me for what I want to give you.”</li>'
+                    + '<li>Love All, Serve All.” - Baba</li></ul>'
+                    + '<u>Baba’s parting message</u>'
+                    + '<br/> Don’t miss Me, I have not gone away, I live inside your heart.</li>'
+                    + '<br/>&nbsp;&nbsp;With faith and love you must believe of Me, you are a part.'
+                    + '<br/>Don’t tell how one can part the endless ocean from a wave'
+                    + '<br/>&nbsp;&nbsp;Or distance my devotees, when their blissful love I crave.'
+                    + '<br/>I am here as I have always been; I have merely changed my form!'
+                    + '<br/>&nbsp;&nbsp;I have taken on my cosmic self; the body, tired and worn, was left as a gift to mother earth;'
+                    + '<br/>To rest upon her bosom and for those pilgrims near and far!'
+                    + '<br/>&nbsp;&nbsp;Just call my name and I will be there, to wipe your tears.'
+                    + '<br/>To hold you in my loving arms and to cast away your fears.'
+                    + '<br/>&nbsp;&nbsp;Don’t miss Me, I have not gone away, there is no place for Me to go,'
+                    + '<br/>Just look inside your peaceful heart- My presence you will surely know. ',
+                    author: ' – Sri Sathya Sai Baba, April 2, 1984',
+                    seriesId: '-1',
+                    seq: '-1',
+                    img: root + '/images/sai_1221_1.jpg'
+                }, {
+                    posted: 'April 24 2016',
+                    postDate: new Date('April 24 2016 3:30 AM'),
+                    title: 'True penance',
+                    content: 'To emaciate one’s body with fasts and the like is not true penance. So long as evil passions persist in man, all external rituals and ordeals are useless. The two greatest impediments to spiritual progress are woman and wealth. ',
+                    author: 'Sant Eknath. Taken from Sant Darshan, p27',
+                    seriesId: '-1',
+                    seq: '-1',
+                    img: root + '/images/sai_unplugged.jpg'
+                }, {
+                    posted: 'April 23 2016',
+                    postDate: new Date('April 23 2016 3:30 AM'),
+                    title: 'Purify your inner self',
+                    content: 'If you smear your face with lamp-soot and go on cleaning the mirror in front, can you get your face cleaned? One, who doesn’t cleanse his habits, practices and actions but merely performs worship and prayer, cannot purify one’s inner self. Without purity of action, one cannot attain Self-knowledge' , 
+                    author: 'Malayala Swami taken from Sant Darshan, p52',
+                    seriesId: '-1',
+                    seq: '-1',
+                    img: root + '/images/sai_unplugged.jpg'
+                }],
                   [{
+                      posted: 'Week of April 17-22 2016',
+                      postDate: new Date('April 08 2016 3:00 AM'),
+                      title: 'repetition of Ramayana and Ramnavmi',
+                      content: 'This week, the posts of Ramayan and Ramnavmi have been repeated...',
+                      author: '',
+                      seriesId: '-10',
+                      seq: '-1',
+                      img: root + '/images/dwarkamai_1.jpg'
+                  }, {
+                      posted: 'April 22 2016',
+                      postDate: new Date('April 22 2016 3:30 AM'),
+                      title: ' Attitude is in your look',
+                      content: 'To all women, every man except her husband should be her son. To all men, every woman except his own wife should be his mother. When I look around me and see what you call gallantry, my soul is filled with disgust! Not until you learn to ignore this evil looks and to meet on a common ground of humanity, will men and women develop spiritually.',
+                      author: ' – Swami Vivekananda in Complete Works, V(5), p 412.',
+                      seriesId: '-1',
+                      seq: '-1',
+                      img: root + '/images/dwarkamai_1.jpg'
+                  }, {
+                      posted: 'April 21 2016',
+                      postDate: new Date('April 21 2016 3:30 AM'),
+                      title: 'Similarities between snake and man',
+                      content: 'The sound of a manthra is as valuable as its meaning. Even a poisonous cobra can be calmed by music. Sound (naadam) has that allaying property. The child in the cradle stops wailing as soon as the lullaby is sung; it may not carry any meaning. It may be a nonsensical rhyme or just a jingle. But, it calms, soothes the nerves and induces sleep.'
+                      + '<br/>&nbsp;In the case of Gayathri manthra, the meaning is too easy and profound. It does not ask for mercy or pardon; it asks for a clear intellect so that the Truth may be reflected.',
+                        author: ' – Excerpts from Sri Sathya Sai Baba’s discourses',
+                      seriesId: '-1',
+                      seq: '-1',
+                      img: root + '/images/sai_unplugged.jpg'
+                  }, {
+                      posted: 'April 19 2016',
+                      postDate: new Date('April 19 2016 3:30 AM'),
+                      title: ' Repetition of a Manthra',
+                      content: 'Spiritual aspirants would benefit more if they repeat the Panchakshari (Nama Shivaaya) or Ashtakshari (Namo Narayanaya) with the Pranava (Om) added in the beginning. When they have made sufficient progress, they can give up even the words and concentrate on the form of the Lord that is depicted through the manthra leading to silence. That is why scriptures say, “Brahman is Silence, the absence of Sound.”',
+                      author: ' – Sri Sathya Sai Baba in Sadhana-The inward path, pp83-84',
+                      seriesId: '-1',
+                      seq: '-1',
+                      img: root + '/images/sai_unplugged.jpg'
+                  }, {
+                      posted: 'April 18 2016',
+                      postDate: new Date('April 18 2016 3:30 AM'),
+                      title: 'Message in offering a flower to God',
+                      content: 'Consider a rose plant which has leaves, thorns, branches and flowers. The ability to distinguish between thorns, leaves, branches and flowers is called discrimination. Focusing the attention on the flower alone is called concentration. Once you are able to locate the flower and concentrate on it, you can pluck the flower without touching the thorns. Once you have plucked the flower, there is no connection whatsoever between the flower in your hand and the thorns, leaves and branches of the plant. The separation of the flower from the other parts of the plant is called contemplation.  You will take this flower and offer it to God. After you have offered the flower to the God, there is no connection between the plant, the branches, the hand and even the flower. This offering, where everything has disappeared and God alone exits is called meditation.',
+                      author: ' – Sri Sathya Sai Baba in Sadhana-The inward path, pp93-94',
+                      seriesId: '-1',
+                      seq: '-1',
+                      img: root + '/images/sai_1221_1.jpg'
+                  }, {
+                      posted: 'April 17 2016',
+                      postDate: new Date('April 17 2016 3:30 AM'),
+                      title: ' External cleanliness only?',
+                      content: 'When your clothes get dirty, you change them because you are ashamed to appear in dirty garments. If your house is dirty, you clean it so that visitors do not get a bad impression. But when your minds and your hearts are polluted, you do not feel ashamed. Isn’t it strange that you are so concerned about the cleanliness of your clothes and homes, but not concerned about the purity of your hearts and minds which affects your entire life?'
+                        + '<br/>&nbsp;&nbsp;Once a friend of Michelangelo asked him, “Why are working so hard, chiseling this huge rock? Why don’t you go home and get some rest?” Michelangelo replied, “I want to bring out the living Divinity that is embedded in this lifeless stone.” If that sculptor could create out of an inanimate piece of stone, a living image of God, cannot human beings vibrant with life bring out the living Divinity that resides within them?',
+                      author: ' – Sri Sathya Sai Baba, April 2, 1984',
+                      seriesId: '-1',
+                      seq: '-1',
+                      img: root + '/images/sai_unplugged.jpg'
+                  }, {
+                      posted: 'April 16 2016',
+                      postDate: new Date('April 16 2016 3:30 AM'),
+                      title: ' Inner meaning of Ramayana',
+                      content: '<h4>Lord Shiva describes the power of Rama mantra to Parvathi</h4>'
++ 'By meditating on ‘Rama Rama’ my mind gets attracted to the beautiful name ‘Rama’.<br/>&nbsp;Saying the name of ‘Rama’ is equivalent to chanting the thousand names of Lord Vishnu.'
++ '<br/><u>Sri Rama Rama Rameti Rame Rame Manorame<br/>&nbsp;Sahasra naama tattulyam Rama Nama Varanane</u>'
++ '<h4>The inner meaning of Ramayana</h4>'
++ '<li>Rama is the Indweller in every Body. He is the Atma-Rama, the Rama (Source of Bliss) in every individual. His blessings surging up from that inner Spring can confer Peace and Bliss.<br/> The Ramayana, the Rama story, teaches two lessons: the value of detachment, and the need to become aware of the Divine in every being.<br/> Faith in God and detachment from objective pursuits are the keys for human liberation. Give up sense-objects; you gain Rama.<br/> Sita gave up the luxuries of Ayodhya and so, she could be with Rama, in the period of \'exile\'. When she cast longing eyes on the golden deer and craved for it, she lost the presence of Rama.<br/> Renunciation leads to joy; attachment brings about grief. Be in the world, but, not of it.<br/> The brothers, comrades, companions and collaborators of Rama are each of them examples of persons saturated with Dharma.'
++ '<li> Dasaratha is the representative of the merely physical, with the ten senses.'
++ '<li> The three Gunas - Sathwa, Rajas and Thamas - are the three Queens.'
++ '<li> The Four Goals of Life (Dharma, Artha, Kama, Moksha) - the Purusharthas - are the four Sons. Lakshmana is the Intellect; Sugriva is Viveka or Discrimination. Vali is Despair. Hanuman is the embodiment of Courage.'
++ '<li> The Bridge is built over the Ocean of Delusion. The three Rakshasa chiefs are personifications of the Rajasic (Ravana), Thamasic (Kumbhakarna) and the Sathwic qualities (Vibhishana). '
++ '<li>Sita is Brahma jnana or the Awareness of the Universal Absolute, which the Individual must acquire and regain undergoing travails in the crucible of Life.'
++ '<li> Make your heart pure and strong, contemplating the grandeur of the Ramayana. Be established in the faith that Rama is the Reality of your existence.',
+                      author: ' – Sri Sathya Sai Baba in Rama Katha Rasa Vahini, V(1)',
+                      seriesId: 'Ramayan and Ramnavmi',
+                      seq: '2',
+                      img: root + '/images/sai_1221_1.jpg'
+                  },{
+                      posted: 'April 15 2016',
+                      postDate: new Date('April 15 2016 3:30 AM'),
+                      title: 'Rama Navami',
+                      content: 'Wishing All a Happy Rama Navmi<br/>' +
+                          'Thousands of years have passed since the advent of Treta Yuga. Yet, even now, everyone, right from children to elderly people, everyone remembers the name of Rama. The glory of Rama’s name is such that it has not diminished even a bit with the passage of time. This truth should be recognized by all. Rama is the name given to a form, but the name Rama is not limited to a form. Atma is Rama. Therefore, wherever and whenever you chant the name Rama, Rama is there with you, in you and around you.'
++ '<br/>&nbsp;&nbsp; – Sri Sathya Baba on Rama Navami, March 27,  2007.'
++ '<h4>The power of Rama mantra</h4>'
++ '<br/>One day, sage Narada went to Vaikunta and asked Lord Narayana, “O Lord! The people on earth are celebrating Rama Navami and chanting Rama’s name incessantly. What is the mahima (special power) of this Rama mantra?”'
++ '<br/>Narayana said, “You have asked a very good question. Please go to Bhuloka (earth) now. There is a parrot in a forest. Go to the parrot and say ‘Rama’. Come back and tell me what happens.”'
++ '<br/>Narada went to the parrot and said, “Rama!” The parrot repeated, “Rama!” and fell down dead. Narada immediately rushed to Vaikunta and reported this to Narayana. Narayana said, “Narada, there is a village close to this forest. There a cow that gave birth to a calf. Go and say ‘Rama’ to the calf and tell me what happens.” Narada rushed to the village with enthusiasm. There, a poor brahmin owned this cow and was selling the milk to make a living. Narada went to the calf and said, “Rama!” The calf on hearing ‘Rama’, fell dead. The poor Brahmin got very angry with Narada for having destroyed his only income from the milk. He threw Narada out of his house.'
++ '<br/>Narada immediately rushed to Vaikunta and reported this incident to Narayana. Narayana with a gentle smile on His face told Narada, “There is a city next to this village. A king of that country lives in that city. The queen delivered a baby boy now. Go and tell ‘Rama!’ to this baby and report back.” Narada went to the city reluctantly because he was afraid that he might bring death to the baby. With hesitation, he approached the king and the king was extremely happy to see sage Narada visit his palace. The king gave a grand welcome to Narada and took him to his chambers to show the new born baby. Narada looked at the baby boy.  He was very beautiful and chubby. Narada touched the baby boy and blessed him. Then he said, “Rama!” and closed his eyes being afraid of the outcome. He heard the voice, “O revered sage Narada! How blessed I am! You have taken me through three births by simply chanting name ‘Rama’ in my ears. Now that same mantra has given me the power to speak. I am forever grateful to you for liberating me!” Narada opened his eyes and found that the baby was actually saying all these words with a smile on its face.'
++ '<br/><br/>Narada immediately flew to Vaikunta and told Narayana, “O Lord, I don’t know how to thank you for exposing me to the great mahima of Rama mantra. The people of Bhuloka are indeed are very realized, blessed and fortunate! But, I have one question. Why did you kill the calf and created a problem for the Brahmin family who was dependent on the cow for his livelihood?” Lord Narayana smilingly said, “He was all the time thinking of his cow and its milk for his livelihood. He never thought of Me! So, I have to take it away from him so that he will turn his attention to Me!” – Story as narrated by Sri Sathya Sai Baba',
+                      author: '',
+                      seriesId: 'Ramayan and Ramnavmi',
+                      seq: '1',
+                      img: root + '/images/sai_1221_1.jpg'
+                  }],
+                      [{
                       posted: 'Week of April 08-16 2016',
                       postDate: new Date('April 08 2016 3:00 AM'),
                       title: 'Festivals, Multiple Sayings and Sundara Kaandam',

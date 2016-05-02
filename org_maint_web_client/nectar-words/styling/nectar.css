@@ -57,6 +57,14 @@
     font-weight:900;
      
 }
+.nectar-menu-sidebar-weekly-link
+{
+    text-decoration:none;color:darkblue;
+}
+.nectar-menu-sidebar-collection-link
+{
+    text-decoration:none;color:darkSlateblue;font-size:larger;
+}
 /*
 
     style="background-color:orange; color:darkorange;text-decoration:none;"

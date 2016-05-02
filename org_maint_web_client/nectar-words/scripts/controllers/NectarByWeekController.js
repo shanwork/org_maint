@@ -1,7 +1,7 @@
 ﻿//NectarByWeekController
 (function () {
 
-    var NectarByWeekController = function ($scope, $routeParams, $localStorage, Hub) {
+    var NectarByWeekController = function ($scope, $routeParams, $localStorage,$sce, Hub) {
         //publish   
         $scope.root = '/myApp/nectar-words';
         $scope.sortType3 = 'postDate';
@@ -21,14 +21,28 @@
         $scope.today = new Date();
         $scope.thisWeeksSaying = Hub.getThisWeekSaying(parseInt($scope.weekIndex));//$scope.allWeeksSaying[$scope.weekIndex];
         $scope.Weeks = Hub.getWeekIndices();
-   
+        $scope.renderAsHtml = function(texts)
+        {
+            return $sce.trustAsHtml(texts);
+        }
     };
 
 
 
-    NectarByWeekController.$inject = ['$scope', '$routeParams', '$localStorage', 'Hub'];
+    NectarByWeekController.$inject = ['$scope', '$routeParams', '$localStorage', '$sce', 'Hub'];
 
     angular.module('nectar_words_app')
       .controller('NectarByWeekController', NectarByWeekController);
+    var weeklyRecord = function () {
+        return {
+            scope: {
+                saying: '@'
+            },
+            template: "saying.replace"
+        };
+    };
+  //  weeklyRecord.$inject = ['$scope', '$routeParams', '$localStorage', '$compile','Hub'];
+    angular.module('nectar_words_app')
+      .directive('weeklyRecord', weeklyRecord);
 
 }());

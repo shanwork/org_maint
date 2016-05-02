@@ -29,7 +29,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="bin/org_maint_web_client.dll">
-      <publishTime>04/20/2016 07:21:32</publishTime>
+      <publishTime>04/24/2016 09:19:47</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/15/2015 07:10:03</publishTime>
@@ -218,7 +218,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/11/2016 16:09:37</publishTime>
     </File>
     <File Include="HubMVC/views/aboutThisSite.html">
-      <publishTime>04/20/2016 07:20:48</publishTime>
+      <publishTime>04/20/2016 09:00:27</publishTime>
     </File>
     <File Include="HubMVC/views/caseStudyAmrutvani.html">
       <publishTime>04/11/2016 17:09:13</publishTime>
@@ -229,11 +229,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="HubMVC/views/principals.html">
       <publishTime>04/11/2016 16:57:43</publishTime>
     </File>
+    <File Include="hubTemplate/home.html">
+      <publishTime>04/23/2016 12:49:10</publishTime>
+    </File>
+    <File Include="hubTemplate/scripts/app.js">
+      <publishTime>04/23/2016 12:39:27</publishTime>
+    </File>
+    <File Include="hubTemplate/scripts/globals/Hub.js">
+      <publishTime>04/23/2016 12:42:52</publishTime>
+    </File>
+    <File Include="hubTemplate/styling/hubTemplate.css">
+      <publishTime>04/23/2016 12:45:45</publishTime>
+    </File>
     <File Include="index.html">
       <publishTime>04/20/2016 06:50:29</publishTime>
     </File>
     <File Include="nectar-words/home.html">
-      <publishTime>04/08/2016 05:10:16</publishTime>
+      <publishTime>04/24/2016 08:22:35</publishTime>
     </File>
     <File Include="nectar-words/images/dwarkamai_1.JPG">
       <publishTime>02/01/2016 07:21:52</publishTime>
@@ -248,7 +260,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/05/2016 06:45:50</publishTime>
     </File>
     <File Include="nectar-words/scripts/app.js">
-      <publishTime>04/11/2016 16:02:07</publishTime>
+      <publishTime>04/23/2016 23:12:48</publishTime>
     </File>
     <File Include="nectar-words/scripts/c3.min.js">
       <publishTime>02/01/2016 06:29:38</publishTime>
@@ -287,7 +299,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/21/2016 21:47:44</publishTime>
     </File>
     <File Include="nectar-words/scripts/controllers/NectarByWeekController.js">
-      <publishTime>04/17/2016 08:00:33</publishTime>
+      <publishTime>04/24/2016 08:01:51</publishTime>
     </File>
     <File Include="nectar-words/scripts/controllers/NectarNarrationController.js">
       <publishTime>04/09/2016 08:35:47</publishTime>
@@ -310,6 +322,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="nectar-words/scripts/globals/contributorService.js">
       <publishTime>02/13/2016 07:17:39</publishTime>
     </File>
+    <File Include="nectar-words/scripts/globals/directives.js">
+      <publishTime>04/24/2016 09:18:58</publishTime>
+    </File>
     <File Include="nectar-words/scripts/globals/entityFinanceSummaryService.js">
       <publishTime>02/13/2016 07:17:39</publishTime>
     </File>
@@ -320,13 +335,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/13/2016 07:17:39</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Hub.js">
-      <publishTime>04/17/2016 09:03:41</publishTime>
+      <publishTime>04/24/2016 08:20:23</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Q1_2016.js">
       <publishTime>04/09/2016 16:13:52</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Q2_2016.js">
-      <publishTime>04/17/2016 13:28:04</publishTime>
+      <publishTime>04/23/2016 07:40:18</publishTime>
     </File>
     <File Include="nectar-words/styling/nectar preTheming.css">
       <publishTime>03/30/2016 07:48:22</publishTime>
@@ -365,7 +380,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/06/2016 06:59:22</publishTime>
     </File>
     <File Include="nectar-words/views/NectarByWeek.html">
-      <publishTime>04/17/2016 08:14:06</publishTime>
+      <publishTime>04/24/2016 09:19:08</publishTime>
     </File>
     <File Include="nectar-words/views/NectarNarrations.html">
       <publishTime>04/09/2016 08:34:31</publishTime>
@@ -375,6 +390,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="nectar-words/views/Settings.html">
       <publishTime>02/15/2016 10:11:42</publishTime>
+    </File>
+    <File Include="nectar-words/views/templateSideMenu.html">
+      <publishTime>04/24/2016 09:08:38</publishTime>
     </File>
     <File Include="nectar-words/views/WeeklyArchive.html">
       <publishTime>03/09/2016 05:25:42</publishTime>
@@ -401,7 +419,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/15/2016 06:33:44</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/20/2016 07:21:41</publishTime>
+      <publishTime>04/24/2016 09:20:00</publishTime>
     </File>
     <File Include="what-u-ate/home.html">
       <publishTime>04/14/2016 18:33:46</publishTime>

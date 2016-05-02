@@ -124,7 +124,13 @@
     <Content Include="HubMVC\views\caseStudyAmrutvani.html" />
     <Content Include="HubMVC\views\caseStudyWhatUAte.html" />
     <Content Include="HubMVC\views\principals.html" />
+    <Content Include="hubTemplate\home.html" />
+    <Content Include="hubTemplate\scripts\app.js" />
+    <Content Include="hubTemplate\scripts\globals\Hub.js" />
+    <Content Include="hubTemplate\styling\hubTemplate.css" />
     <Content Include="index.html" />
+    <Content Include="nectar-words\scripts\globals\directives.js" />
+    <Content Include="nectar-words\views\templateSideMenu.html" />
     <Content Include="what-u-ate\home.html" />
     <Content Include="what-u-ate\images\dwarkamai_1.JPG" />
     <Content Include="what-u-ate\images\Ganesha.JPG" />
@@ -200,6 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\amrutvani\" />
+    <Folder Include="hubTemplate\views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
