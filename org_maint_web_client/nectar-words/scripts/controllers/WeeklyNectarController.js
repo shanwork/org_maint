@@ -1,7 +1,9 @@
 ﻿(function () {
     
     var WeeklyNectarController = function ($scope, $routeParams, $localStorage, connectToService) {
+        //publish   
         $scope.root = '/myApp/nectar-words';
+        // local $scope.root = '/nectar-words';
         var startOfThisWeek = parseInt(new Date().getDay());
         var deltaToDesiredWeek = startOfThisWeek + (($routeParams.weekIndex - 1) * 7)
         //console.log(startOfDateString);
@@ -13,8 +15,136 @@
         $scope.startOfThisWeek = new Date(new Date().getTime() - parseInt(startOfThisWeek * 24 * 60 * 60 * 1000));
         $scope.startOfChosenWeek = new Date(new Date().getTime() - parseInt(deltaToDesiredWeek * 24 * 60 * 60 * 1000));
         $scope.today = new Date();
+        $scope.sortType = 'seq';
         if ($localStorage.thisWeekSaying == undefined || $localStorage.thisWeekSaying == null) {
             $scope.allWeeksSaying = [
+                [{
+                    posted: 'March 8 2016',
+                    postDate: new Date('March 8 2016'),
+                    title: ' Faith-1',
+                    content: 'Parvati once asked Shiva, “O Lord, what is the root of the eternal, everlasting, all-embracing bliss?” To her Shiva replied, “The root is faith.” Let everyone take to devotional practices and perform the duties of his own creed and faith',
+                    author: 'Sayings of Sri Ramakrishna, p133',
+                    img: $scope.root + '/images/sai_1221_1.jpg'
+                }, {
+                    posted: 'March 9 2016',
+                    postDate: new Date('March 9 2016'),
+                    title: ' Faith-2',
+                    content: 'Unless one becomes child-like in faith, it is difficult for one to realize God. If the mother says to the child, “He is your brother”, the child fully believes that the person referred to is really its brother. If the mother says, “Don’t go there. There is bogey man”, the child is indeed convinced that there is a bogey man. God is really moved when He sees in a man that kind of child-like faith. None can realize God with the calculating nature of the worldly-minded',
+                    author: 'Sayings of Sri Ramakrishna, p134',
+                    img: $scope.root + '/images/sai_unplugged.jpg'
+                }, {
+                    posted: 'March 10 2016',
+                    postDate: new Date('March 10 2016'),
+                    title: ' Faith-3',
+                    content: 'The stone may remain in water for many years; yet the water will never penetrate into it. But clay soon disintegrates into mud when it comes in contact with water. So too, the strong heart of a faithful devotee does not despair however long he is subjected to trials and torments. But the man of weak faith is shaken even by the most trifling cause.',
+                    author: 'Sayings of Sri Ramakrishna, p135',
+                    img: $scope.root + '/images/dwarkamai_1.jpg'
+                }, {
+                    posted: 'March 10 2016',
+                    postDate: new Date('March 10 2016'),
+                    title: 'Weekend is suffused with Faith!',
+                    content: '<u>TFD (1727): Fri 3/11/16. Faith-4</u><br/><br/>' +
+                'While struggling in the spiritual field, you should accept God as your protector. To instill faith in a child, the mother persuades it to walk a few steps but will be careful not to let it fall. If the child totters and is about to lose its balance, the mother hurries to catch it. God too, like a mother has His eyes fixed on you. This ever present faith and conviction will fill you with divine love. </i>–Teachings of Sri Sathya Sai Baba, p52.<i>'+
+                '<br/><br/><u>TFD (1728): Sat 3/12/16. Faith-5</u><br/><br/>' +
+                'When the sun is directly over your head, there will be no shadow. So too, when the faith is direct and steady in your mind, it will not cast a shadow of doubt. . –Teachings of Sri Sathya Sai Baba, p99..<i>'+
+                '<br/><br/><u>TFD (1729): Sun 3/13/16. Faith-6</u><br/><br/>' +
+                'Sri Rama, who was God incarnate, had to build a bridge to cross the ocean to reach Lanka. But, Hanuman, his faithful monkey devotee and servant, crossed the ocean in one leap, because of his firm faith in Rama. Here, the servant achieved more than the master, simply through faith.',
+                    img: $scope.root + '/images/sai_unplugged.jpg',
+                    author: 'Sayings of Sri Ramakrishna, p135',
+            }, {
+                    posted: 'March 7 2016',
+                    postDate: new Date('March 7 2016'),
+                    title: 'Maha Shivarathri',
+                    content: 'Rathri means night, signifying darkness. Shiva means auspiciousness. ‘Shivarathri’ signifies auspiciousness which is inherent in darkness. It refers to the wisdom which exists in the midst of ignorance. Wisdom and ignorance are not two different things; they are essentially the same, opposite polarities of the same underlying principle. The state that transcends both wisdom and ignorance is Divinity (Paratatva). This Shivarathri is a day when one tries to establish friendship between mind and God. Shivarathri reminds everyone of the fact that Divinity is all pervasive and is to be found everywhere. It is said that Shiva lives in Kailasa. But where is Kailasa? Kailasa is our own mind full of joy and bliss. It means that when you develop purity, steadiness and sacredness from within, your heart becomes filled with peace and bliss and ultimately your heart itself becomes Kailasa.<p/>' +
+                ' Scriptures proclaim that Maha Shivarathri is very auspicious time to worship Lord Shiva. Performing Abhisheka to Shivalingam with Panchamruthams (Milk, Buttermilk, Ghee, Honey, Sugar, and Fruits) while chanting Sri Rudram pleases Lord Shiva the most. Staying awake throughout the night (Jagarana) and worshipping Lord Shiva is particularly pleasing to Him.  One has to worship Lord Shiva to achieve salvation and that too on Shivarathri day. It is certain that one who keeps awake on this day will attain Shiva Sayujyam (becoming one with Lord Shiva). It is believed that the devotee\'s sincere worship of Lord Shiva on this auspicious night will absolve past sins and enable salvation. ',
+                    author: 'Sri Sathya Sai Baba, Feb 17, 1985(1st passage)',
+                    img: $scope.root + '/images/sai_unplugged.jpg'
+                }, {
+                    posted: 'March 6 2016',
+                    postDate: new Date('March 6 2016'),
+                    title: 'Maha Shivarathri',
+                    content: 'The phase of the Moon generally controls the mind. Every day, during the dark phase of the month, the Moon wanes and its counterpart in man, the mind, also wanes. On the fourteenth day (Chathurdashi), just a tiny bit is left and if some extra effort is made on that day, the mind can be killed (Manohara). The Chathurdashi of the dark half of this month is called Maha Shivarathri and it should be spent in Japa and Dhyana of Shiva without thinking about food or sleep. - Baba in Sanathana Sarathi, April 1994, p7.<p/>' +
+                '<u>Mrutyunjaya Mantra <i>(due to Sage Vashishta)</i></u><br>'+
+                '<i>We offer or worship to the fragrant, three eyed Lord Shiva who enhances prosperity. May he liberate us from the bondage of death like the urvaruka melon (which effortlessly separates from the vine when ripe). May He not (let us turn away) from immortality.</i><p>' +
+                '<b><i>Om tryambakam yajamahe sugnadhim pushtivardhanam<br/>&nbsp;Urvarukamiva bandanaan mrutyur muksheeya mamrutat</i></b>',
+                    author: ' ',
+                    img: $scope.root + '/images/dwarkamai_1.jpg'
+                } ],
+                [{
+                    posted: 'March 1 2016',
+                    postDate: new Date('March 1 2016'),
+                    title: 'Namah Shivaya – the first letter "Na"',
+                    content: '"Namah Shivaya" is a very powerful mantra to worship Lord Shiva and also to meditate upon Him. Adi Sankara has composed Shiva Panchakshara Stotram with each verse starting with each letter of the mantra Namah Shivaya.  Click <a href="https://www.youtube.com/watch?v=nGiHxuAhpRw" target=_blank ><span style="font-weight:bolder">here</span></a> to enjoy Shiva’s glory!<p/>' +
+                       'My salutations to Lord Shiva, who is in the form the syllable ‘Na’, who wears serpent king as a garland, who has three eyes, who has ashes smeared all over his body, who is the supreme Lord, who is eternal, pure and who wears space as his clothing.<p/>' +
+                       '<i>Naagendra-Haaraaya Tri-Lochanaaya<br/>Bhasma-Angga-Raagaaya Maheshvaraaya |<br/>Nityaaya Shuddhaaya Dig-Ambaraaya<br/>Tasmai Nakaaraaya NamahShivaaya ||1||</i>',
+                    author: 'Shankaracharya',
+                    img: $scope.root + '/images/sai_1221_1.jpg'
+                }, {
+                    posted: 'March 2 2016',
+                    postDate: new Date('March 2 2016'),
+                    title: 'Namah Shivaya – the second letter ‘Ma’',
+                    content: 'My salutations to Lord Shiva, who is in the form the syllable "Ma", who is bathed with waters of Ganga and sandal paste, who is the supreme Lord of Nandi and other leaders of the troop of attendants in Kailasa and who is elaborately worshipped with mandara and many other flowers.  Click <a href="https://www.youtube.com/watch?v=nGiHxuAhpRw" target=_blank ><span style="font-weight:bolder">here</span></a> to enjoy Shiva’s glory!<p/>' +
+                       '<p/>Mandaakinii-Salila-Chandana-Carcitaaya<br/>Nandi-Iishvara-Pramatha-Naatha-Maheshvaraaya |<br/>Mandaara-Pushpa-Bahu-Pushpa-Su-Puujitaaya<br/>Tasmai Makaaraaya Namah Shivaaya ||2||',
+                    author: 'Shankaracharya',
+                    img: $scope.root + '/images/sai_unplugged.jpg'
+                }, {
+                    posted: 'March 3 2016',
+                    postDate: new Date('March 3 2016'),
+                    title: 'Namah Shivaya – the third letter ‘Shi’',
+                    content: 'My salutations to Lord Shiva, who is in the form the syllable ‘Shi’, the blessed one who has a blue neck, who is like the sun to the cluster of lotuses that is likened to Parvathi’s face, who destroyed Daksha’s sacrifice and who has the bull inscription on his banner.  Click <a href="https://www.youtube.com/watch?v=nGiHxuAhpRw" target=_blank ><span style="font-weight:bolder">here</span></a> to enjoy Shiva’s glory!<p/>' +
+                       '<p/>Shivaaya Gaurii-Vadana-Abja-Vrnda-Suuryaaya<br/>' +
+                        'Dakssa-Adhvara-Naashakaaya |<br/>' +
+                        'Shree-Neelakantaaya Vrsha-Dhvajaaya<br/>' +
+                        'Tasmai Shikaaraaya Namah Shivaaya ||3||',
+                    author: 'Shankaracharya',
+                    img: $scope.root + '/images/dwarkamai_1.jpg'
+                }, {
+                    posted: 'March 4 2016',
+                    postDate: new Date('March 4 2016'),
+                    title: ' Namah Shivaya – the fourth letter ‘Va’',
+                    content: '<p/>My salutations to Lord Shiva, who is in the form the syllable ‘Va’, who is adored by great sages like Vashishta, Agstya, Gutama as well as other gods and who has the sun, the moon and the fire as his three eyes. Click <a href="https://www.youtube.com/watch?v=nGiHxuAhpRw" target=_blank ><span style="font-weight:bolder">here</span></a> to enjoy Shiva’s glory!<p/>' +
+                       'Vashissta-Kumbhodbhava-Gautama-Aarya<br/>' +
+'Muuni-Indra-Deva-Aarcita-Shekharaaya |<br/>' +
+'Candra-Aarka-Vaishvaanara-Locanaaya<br/>' +
+'Tasmai Vakaaraaya Namah Shivaaya ||4||',
+                    author: 'Shankaracharya',
+                    img: $scope.root + '/images/sai_unplugged.jpg'
+                }, {
+                    posted: 'March 5 2016',
+                    postDate: new Date('March 5 2016'),
+                    title: ' NamahShivaya – the fifth letter ‘Ya’',
+                    content: '<p/>My salutations to Lord Shiva, who is in the form the syllable ‘Ya’, who appeared once as a yaksha (celestial being), who has a braid of matted locks, who holds the pinaka bow in his arm and who is the most ancient, the shining Lord, whose clothes are the four directions (He invades the space). Click <a href="https://www.youtube.com/watch?v=nGiHxuAhpRw" target=_blank ><span style="font-weight:bolder">here</span></a> to enjoy Shiva’s glory!<p/>' +
+                       'Yajnya-SvaruupaayaJattaa-Dharaaya<br/>' +
+'Pinaaka-HastaayaSanaatanaaya |<br/>' +
+'DivyaayaDevaaya Dig-Ambaraaya<br/>' +
+'TasmaiYakaaraayaNamahShivaaya ||5||<p/>' +
+'He, who recites this meritorious five syllabled hymn in the shrine of Lord Shiva, gains the abode of Shiva and rejoices with the Lord.<p/>' +
+'Panchaakssaram-Idam Punnyam Yah Pateth-Shiva-Sannidhau |<br/>' +
+'Shivalokam-Aavaapnoti Shivena Saha Modate ||6||',
+                    author: 'Shankaracharya',
+                    img: $scope.root + '/images/sai_1221_1.jpg'
+                },  {
+                    posted: 'Feb 29 2016',
+                    postDate: new Date('Feb 29 2016'),
+                    title: 'Silence is Golden',
+                    content: 'When the mind is still, then the truth gets a chance to be heard in the purity of silence',
+                    author: 'Sri Aurobindo',
+                    img: $scope.root + '/images/sai_unplugged.jpg'
+                },{
+                posted: 'Feb 28 2016',
+            postDate: new Date('Feb 28 2016'),
+            title: 'The best teacher',
+            content: 'This world is the best teacher. There is a lesson in everything. There is a lesson in each experience. Learn it and become wise. Every failure is a stepping stone to success. Every difficulty or disappointment is a trail of your faith. Every unpleasant incident or temptation is a test of your inner strength. Therefore, do not despair. Match forward!',
+            author: 'Swami Sivananda',
+            img: $scope.root + '/images/dwarkamai_1.jpg'
+        }, {
+                    posted: 'Feb 27 2016',
+                    postDate: new Date('Feb 27 2016'),
+                    title: 'What makes us engage in service?',
+                    content: 'Just as a flower gives out its fragrance to whosoever approaches it or uses it, so too, love from our heart radiates towards everybody and manifests as spontaneous service.',
+                    author: 'Swami Ramdas',
+                    img: $scope.root + '/images/sai_1221_1.jpg'
+                }],
                 [{
                     posted: 'Feb 26 2016',
                     postDate: new Date('Feb 26 2016'),
@@ -39,7 +169,7 @@
                     title: 'The power of God’s name-3',
                     content: 'A man, who voluntarily goes to a river, gets the benefit of the bath; so does he, who has been pushed into the river by another, or who, when sleeping soundly, has a bucket of river water thrown upon him. So too, knowingly or unknowingly, consciously or unconsciously, in whatever state of mind a man utters God’s name, he acquires the merit of such utterance.',
                     author: 'Sayings of Sri Ramakrishna, p96. (slightly edited)',
-                    img: $scope.root + '/images/sai_1221_1.jpg'
+                    img: $scope.root + '/images/sai_unplugged.jpg'
                 }, {
                     posted: 'Feb 23 2016',
                     postDate: new Date('Feb 23 2016'),
@@ -69,7 +199,7 @@
                     title: 'What is Karma Yoga?',
                     content: 'Karma Yoga makes us understand and admit that this world is a world of five minutes and it is something that we have to pass through, and that freedom is not here but is only to be found beyond. To find the way out of bondages of the world, we have to go through it slowly and surely. There may be a few exceptional persons who can stand aside and give up the world, as a snake casts off its skin and stands aside and looks at it. There is no doubt, these are exceptional beings. But the rest of us have to go slowly through the world of work (Karma). Karma Yoga shows the process, the secret and the method of doing it to the best of our advantage.',
                     author: 'Swami Vivekananda in Complete Works, V(1), pp 99-100.',
-                    img: $scope.root + '/images/sai_1221_1.jpg'
+                    img: $scope.root + '/images/sai_unplugged.jpg'
                 }],
                  [{
                      posted: 'Feb 19 2016',
@@ -94,19 +224,17 @@
                      img:$scope.root + '/images/dwarkamai_1.jpg'
                  },
                  {
-                     posted: 'Feb 15 2016',
-                     postDate: new Date('Feb 15 2016'),
-                     title: 'Love Story of Rukmini and Krishna – Part 3',
-                     content: '<h4>Krishna suddenly appeared</h4>' + '<p>Suddenly, from behind, a hand came and held her right hand and the other hand held her left shoulder. She heard, “Rukmini! It is me! Your Krishna!” In a moment, she was placed in the chariot next to Him and Krishna’s chariot sped away blowing dust into the eyes of the confused Kings. Jarasandha ordered his army to pursue Krishna. Balarama immediately came behind Krishna’s chariot and assured Krishna that he will deal with them.</p>' + '<h4>Rukmi follows Krishna</h4>' +
-                         '<p>While Balarama was dealing with Jarasandha and his army, Rukmi and Shishupala charged ahead towards Krishna’s chariot. Balarama engaged in a fierce fight with Shishupala. Shishupala slowed down lost Krishna. Meanwhile, Rukmi had almost caught up with Krishna. Rukmi shot an arrow at Krishna which only hit his armor. Krishna then killed Rukmi’s horses with his arrows and then shattered his chariot. Mad with rage, Rukmi took his sword and rushed towards Krishna. Krishna picked up his sword and was ready to fight. Immediately, Rukmini fell at Krishna’s feet and cried, “O Dear Lord, please spare my brother. Please do not kill him!”</p>' + 
-                         '<h4>Rukmi humiliated</h4>' + 
-                         '<p>Krishna said, “Arise Rukmini! For your sake, Rukmi shall live.” Krishna went up to Rukmi and tied him with his cummerbund. Krishna then with his sword, shaved half of Rukmi’s mustache and shaved half of his head. Just then Balarama arrived and he talked to Rukmini,“Please do not take offence, dear sister-in-law. Your brother has reaped the fruits of his own actions.” Humiliated and insulted, Rukmi walked away saying, “I can’t return to the capital now. It is a shame.”</p>' + 
-                         '<h4>Rukmini weds Krishna in Dwaraka</h4>' + 
-                         '<p>Krishna said, “Come into the chariot Rukmini. We must hurry to Dwaraka and have our wedding solemnized by rituals.” After a few days, they were married according to Vedic rituals. After this marriage, Krishna became the King of Yadus at Dwaraka. The inhabitants of Dwaraka City were so pleased that they dressed themselves with nicest garments and ornaments and went to present gifts, according to their means, to the newly married couple. All the houses of Dwaraka were decorated with flags, festoons and flowers.  The whole city became fragrant by burning of fine incense. At night, there was illumination from thousands of lamps, which decorated every building. The Goddess of fortune Rukmini, was finally united with the Lord Krishna and all the people of Dwaraka felt extremely jubilant.', 
-                          
+                     posted: 'Feb 13 2016',
+                     postDate: new Date('Feb 13 2016'),
+                     title: 'Love Story of Rukmini and Krishna – Part 1',
+                     content: '<h4>The Love Story of Rukmini and Krishna</h4><p><h4>Background and characters</h4></p>' +
+'<p>Krishna was the eighth son of Devaki and Vasudeva. The fetus of the seventh son Balarama was transferred to the womb of Rohini and he was brought up in Gokul. Devaki’s father was Devaka and his elder brother Ugrasena was ruling over Mathura. Ugrasena had nine sons and Kamsa was the eldest son. Kamsa had no sisters of his own and so he loved Devaki as his dearest self. Kamsa imprisoned his father Ugrasena and installed himself as the King of Mathura.</p><p>Jarasandha ruled over Magadha. He gave his two daughters Asti and Prapti in marriage to Kamsa. Krishna killed Kamsa in a fight and restored the crown to Ugrasena. Krishna refused to take the crown, handed over Mathura to Ugrasena and went back to Dwaraka. Jarasandha hated Krishna because both his daughters were widowed by Krishna.</p><p>Jarasandha’s friend Damaghosha was a king of Chedi. He was very cruel and a stubborn King. (Dama means curbing down. Ghosha means famous. So, he was famous for curbing down and controlling his citizens.) He had a son Sishupala who will be the crown prince of Chedi. Damaghosha loved his son so much that he would many perform many rituals to invoke good fortune on him.</p>' +
+'<h4>Rukmi brings the news</h4><p>Bheeshmaka was the King of Vidharba. He had five sons and only one daughter. The first son was Rukmi and the youngest daughter was Rukmini. She was very beautiful and was at the right age to be married. Narada used to visit Bhishmaka’s palace often and from their conversations she had heard many good things about Krishna. Slowly, Rukmini started thinking of Krishna and began to dote on Krishna.</p><p>Rukmini’s brother Rukmi was always in bad company and he was very friendly with Kamsa and  Jarasandha. Rukmi brought the news to Bheeshmaka that the cowherd boy Krishna had slain Kamsa.<br/>Rukmini said, “He is not a cowherd boy. He is a noble Yadava.”<br/>Rukmi snapped immediately, “Rukmini, he has killed my friend and you call him noble?”<br/>“Don’t forget! Kamsa was cruel. He imprisoned his own father and usurped the throne”, shouted Rukmini.<br/>Bheeshmaka interrupted, “I assume Krishna will now become the King of Mathura.”<br/>Rukmi said, “No. Krishna refused the crown and Ugrasena was re-instated.”<br/>Rukmini cut him short, “Don’t you see! How noble Krishna is?”<br/>“How did Jarasandha react?” asked Bheeshmaka.<br/>Rukmi replied, “He is furious. He vows to take revenge. He has sent word for me. I must go and see him.”</p>' +
+'<h4>Rukmini longs for Krishna</h4><p>All this news and incidents made Rukmini’s love for Krishna even stronger. Bheeshmaka and his wife also felt that Krishna was the most suitable groom for Rukmini.<br/>Meanwhile, Jarasandha with Rukmi and his allies made several attempts to kill Krishna but in vain. After the eighteenth attempt, they decided to bide their time and go back to their capitals.<br/>In Dwaraka, Balarama broke the news: “Krishna, we have come to know that Jarasandha has decided to lie low for a while. Now, you will have some time to think of the beautiful princess of Vidharba!”<br/>“Balarama! Somehow, I have also developed love for Rukmini. I am thinking of her all the time! My mind is also set on marrying her. But her brother Rukmi is a staunch ally of Jarasandha.”<br/>At the same time, in Vidharba, Rukmini too was lost in the dreams of Krishna hugging her (when the Lord thinks of His devotee, the devotee also thinks of Him!). She thought, “Even with Rukmi and his allies, Jarasandha could not vanquish Krishna. You are great, Krishna! You and only You shall be my Lord!”<p><h4>To be continued….</h4>',
                      author: 'anon',
-                     img: $scope.root + '/images/sai_1221_1.jpg'
+                     img: $scope.root + '/images/sai_unplugged.jpg'
                  },
+                 
                  {
                      posted: 'Feb 14 2016',
                      postDate: new Date('Feb 14 2016'),
@@ -120,18 +248,20 @@
 + '<h4>To be continued</h4>',
                      author: 'anon',
                      img: $scope.root + '/images/dwarkamai_1.jpg'
-                 },
-                 {
-                     posted: 'Feb 13 2016',
-                     postDate: new Date('Feb 13 2016'),
-                     title: 'Love Story of Rukmini and Krishna – Part 1',
-                     content: '<h4>The Love Story of Rukmini and Krishna</h4><p><h4>Background and characters</h4></p>' + 
-'<p>Krishna was the eighth son of Devaki and Vasudeva. The fetus of the seventh son Balarama was transferred to the womb of Rohini and he was brought up in Gokul. Devaki’s father was Devaka and his elder brother Ugrasena was ruling over Mathura. Ugrasena had nine sons and Kamsa was the eldest son. Kamsa had no sisters of his own and so he loved Devaki as his dearest self. Kamsa imprisoned his father Ugrasena and installed himself as the King of Mathura.</p><p>Jarasandha ruled over Magadha. He gave his two daughters Asti and Prapti in marriage to Kamsa. Krishna killed Kamsa in a fight and restored the crown to Ugrasena. Krishna refused to take the crown, handed over Mathura to Ugrasena and went back to Dwaraka. Jarasandha hated Krishna because both his daughters were widowed by Krishna.</p><p>Jarasandha’s friend Damaghosha was a king of Chedi. He was very cruel and a stubborn King. (Dama means curbing down. Ghosha means famous. So, he was famous for curbing down and controlling his citizens.) He had a son Sishupala who will be the crown prince of Chedi. Damaghosha loved his son so much that he would many perform many rituals to invoke good fortune on him.</p>' + 
-'<h4>Rukmi brings the news</h4><p>Bheeshmaka was the King of Vidharba. He had five sons and only one daughter. The first son was Rukmi and the youngest daughter was Rukmini. She was very beautiful and was at the right age to be married. Narada used to visit Bhishmaka’s palace often and from their conversations she had heard many good things about Krishna. Slowly, Rukmini started thinking of Krishna and began to dote on Krishna.</p><p>Rukmini’s brother Rukmi was always in bad company and he was very friendly with Kamsa and  Jarasandha. Rukmi brought the news to Bheeshmaka that the cowherd boy Krishna had slain Kamsa.<br/>Rukmini said, “He is not a cowherd boy. He is a noble Yadava.”<br/>Rukmi snapped immediately, “Rukmini, he has killed my friend and you call him noble?”<br/>“Don’t forget! Kamsa was cruel. He imprisoned his own father and usurped the throne”, shouted Rukmini.<br/>Bheeshmaka interrupted, “I assume Krishna will now become the King of Mathura.”<br/>Rukmi said, “No. Krishna refused the crown and Ugrasena was re-instated.”<br/>Rukmini cut him short, “Don’t you see! How noble Krishna is?”<br/>“How did Jarasandha react?” asked Bheeshmaka.<br/>Rukmi replied, “He is furious. He vows to take revenge. He has sent word for me. I must go and see him.”</p>' +
-'<h4>Rukmini longs for Krishna</h4><p>All this news and incidents made Rukmini’s love for Krishna even stronger. Bheeshmaka and his wife also felt that Krishna was the most suitable groom for Rukmini.<br/>Meanwhile, Jarasandha with Rukmi and his allies made several attempts to kill Krishna but in vain. After the eighteenth attempt, they decided to bide their time and go back to their capitals.<br/>In Dwaraka, Balarama broke the news: “Krishna, we have come to know that Jarasandha has decided to lie low for a while. Now, you will have some time to think of the beautiful princess of Vidharba!”<br/>“Balarama! Somehow, I have also developed love for Rukmini. I am thinking of her all the time! My mind is also set on marrying her. But her brother Rukmi is a staunch ally of Jarasandha.”<br/>At the same time, in Vidharba, Rukmini too was lost in the dreams of Krishna hugging her (when the Lord thinks of His devotee, the devotee also thinks of Him!). She thought, “Even with Rukmi and his allies, Jarasandha could not vanquish Krishna. You are great, Krishna! You and only You shall be my Lord!”<p><h4>To be continued….</h4>',
-                     author: 'anon',
-                     img: $scope.root + '/images/dwarkamai_1.jpg'
-                 }],
+                 },{
+                posted: 'Feb 15 2016',
+            postDate: new Date('Feb 15 2016'),
+            title: 'Love Story of Rukmini and Krishna – Part 3',
+            content: '<h4>Krishna suddenly appeared</h4>' + '<p>Suddenly, from behind, a hand came and held her right hand and the other hand held her left shoulder. She heard, “Rukmini! It is me! Your Krishna!” In a moment, she was placed in the chariot next to Him and Krishna’s chariot sped away blowing dust into the eyes of the confused Kings. Jarasandha ordered his army to pursue Krishna. Balarama immediately came behind Krishna’s chariot and assured Krishna that he will deal with them.</p>' + '<h4>Rukmi follows Krishna</h4>' +
+                '<p>While Balarama was dealing with Jarasandha and his army, Rukmi and Shishupala charged ahead towards Krishna’s chariot. Balarama engaged in a fierce fight with Shishupala. Shishupala slowed down lost Krishna. Meanwhile, Rukmi had almost caught up with Krishna. Rukmi shot an arrow at Krishna which only hit his armor. Krishna then killed Rukmi’s horses with his arrows and then shattered his chariot. Mad with rage, Rukmi took his sword and rushed towards Krishna. Krishna picked up his sword and was ready to fight. Immediately, Rukmini fell at Krishna’s feet and cried, “O Dear Lord, please spare my brother. Please do not kill him!”</p>' + 
+                '<h4>Rukmi humiliated</h4>' + 
+                '<p>Krishna said, “Arise Rukmini! For your sake, Rukmi shall live.” Krishna went up to Rukmi and tied him with his cummerbund. Krishna then with his sword, shaved half of Rukmi’s mustache and shaved half of his head. Just then Balarama arrived and he talked to Rukmini,“Please do not take offence, dear sister-in-law. Your brother has reaped the fruits of his own actions.” Humiliated and insulted, Rukmi walked away saying, “I can’t return to the capital now. It is a shame.”</p>' + 
+                '<h4>Rukmini weds Krishna in Dwaraka</h4>' + 
+                '<p>Krishna said, “Come into the chariot Rukmini. We must hurry to Dwaraka and have our wedding solemnized by rituals.” After a few days, they were married according to Vedic rituals. After this marriage, Krishna became the King of Yadus at Dwaraka. The inhabitants of Dwaraka City were so pleased that they dressed themselves with nicest garments and ornaments and went to present gifts, according to their means, to the newly married couple. All the houses of Dwaraka were decorated with flags, festoons and flowers.  The whole city became fragrant by burning of fine incense. At night, there was illumination from thousands of lamps, which decorated every building. The Goddess of fortune Rukmini, was finally united with the Lord Krishna and all the people of Dwaraka felt extremely jubilant.', 
+                          
+            author: 'anon',
+            img: $scope.root + '/images/sai_unplugged.jpg'
+        }],
                 [{
                 posted: 'Feb 12 2016',
                 postDate: new Date('Feb 12 2016'),
@@ -155,7 +285,7 @@
                 content: 'You love your friends so much that you invite them for dinner at your home. You talk to them, and entertain them. After the dessert and coffee is served, you expect them to slowly leave. What will happen if everyone wants to stay back? (everyone laughs) For those who are still chatting and not thinking of leaving, you give a hint saying, “Shall I offer some more coffee?” or “Can you help us in the kitchen to put things away?”(big laughter)<p/>' +
                         'What has happened? A few hours ago, you loved them so much that you poured your hearts out to them. Now you want them to leave. Why?.. because, you want to spend time with yourself and your family. So too, be engaged in the worldly things only to the extent necessary for your survival. Spend the rest of the time in contemplating on the glories of the Lord and engaging in Sadhana (spiritual practice).',
                 author: 'Swami T',
-                img: $scope.root + '/images/sai_1221_1.jpg'
+                img: $scope.root + '/images/sai_unplugged.jpg'
         },
              {
                 posted: 'Feb 10 2016',
@@ -173,7 +303,7 @@
                  content: 'One should always be active. One should be never without work.<p/>' +
                      'For, when one is idle, all sorts of bad thoughts crop up in one’s mind.',
                  author: '-Sri Ramakrishna Paramahamsa',
-                 img: $scope.root + '/images/sai_1221_1.jpg'
+                 img: $scope.root + '/images/sai_unplugged.jpg'
              }], [{
                  posted: 'Jan 31 2016',
                  postDate: new Date('Jan 31 2016'),

@@ -1,7 +1,7 @@
 ﻿<h3> Sayings for {{WhichWeek}}</h3>
 <table class="table table-striped" style="padding:100px;">
    
-    <tr ng-repeat="thisDaySaying in thisWeeksSaying">
+    <tr ng-repeat="thisDaySaying in thisWeeksSaying|orderBy:sortType">
         <td class="textcontent"> 
             Posted: {{thisDaySaying.posted}} <br />
             <h3 ng-bind-html="thisDaySaying.title"></h3>

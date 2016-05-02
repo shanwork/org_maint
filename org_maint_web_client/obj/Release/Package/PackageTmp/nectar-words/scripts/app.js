@@ -10,12 +10,24 @@
               controller: 'WeeklyNectarController',
               
               templateUrl: 'views/WeeklyNectar.html'
+          }).when('/PastWeek/:weekIndex', {
+              controller: 'NectarByWeekController',
+
+              templateUrl: 'views/NectarByWeek.html'
+          }).when('/Archive', {
+              controller: 'NectarArchiveController',
+
+              templateUrl: 'views/NectarArchive.html'
+          }).when('/Narrations', {
+              controller: 'NectarNarrationController',
+
+              templateUrl: 'views/NectarNarrations.html'
           })
              .when('/about', {
                  controller: 'AboutThisSiteController',
                  templateUrl: 'views/aboutThisSite.html'
              })
-            .otherwise({ redirectTo: '/Week/1' });
+            .otherwise({ redirectTo: '/PastWeek/1' });
     },function ($httpProvider) {
         $httpProvider.defaults.headers.common = {};
         $httpProvider.defaults.headers.post = {};

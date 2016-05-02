@@ -1,0 +1,86 @@
+﻿body {
+    border: solid 5px;
+    background-size: 480px 640px;
+    background-repeat:repeat-x;
+    background-position:top ;
+    opacity:0.8;
+     
+    
+}
+.nectar-back {
+    border: solid 5px;
+    background-color:silver;
+ /*   background-image:url('../images/dwarkamai_1.jpg');
+    background-size: 768px 1024px;*/
+    min-height:768px;
+ //   min-width:1024px;
+    opacity:1.0;
+    font-weight:900;
+}
+.nectar-menu-sidebar {
+    border: outset 1px;
+    background-color:#99edf8;
+    text-align:center;
+ /*   background-image:url('../images/dwarkamai_1.jpg');
+    background-size: 768px 1024px;*/
+    min-height:768px;
+    opacity:1.0;
+    font-weight:900;
+    color:brown;
+}
+
+table{
+      
+     opacity:1;
+     font-style:italic;
+}
+.portait
+{
+    border: 5px outset;
+    border-radius:7px;
+    border-color:gold;
+   
+}
+.portrait_tr
+{
+     border: 4px outset;
+    border-radius:5px;
+    border-color:gold;
+    height:auto;
+}
+.textcontent
+{
+    border: 14px inset;
+    border-radius:3px;
+    border-color:brown;
+    
+}
+.weeklytextcontent
+{
+    border:  4px inset;
+    width:auto;
+    min-width:600px;
+    border-radius:3px;
+    border-color:brown;
+    
+}
+.archivedtextcontent
+{
+    border:  7px inset;
+    width:auto;
+    min-width:600px;
+    border-radius:3px;
+    border-color:brown;
+    
+}
+.ganesha {
+    border: solid 5px;
+   background-size: 768px 1024px;
+    background-repeat:repeat-x;
+    /* background-color:#32c385;*/
+    background-image:url('/nectar-words/images/Ganesha.JPG');
+    min-height:768px;
+    min-width:1024px;
+    opacity:0.9;
+    font-weight:900;
+}

@@ -1,12 +1,13 @@
 ﻿<!doctype html>
-<html>
+<html  ng-app="hmvc_app">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../HubMVC/styling/nectar.css" rel="stylesheet" type="text/css" />
     <link href="../styles/globalStyles.css" rel="stylesheet" type="text/css" />
 
 
-    <title>Coming soon!!!</title>
+    <title>HMVC</title>
 
 </head>
 <body>
@@ -17,19 +18,38 @@
                     <nav class="navbar navbar-default" style="border:2px outset silver;">
                         <ul class="navbar navbar-nav">
                             <li><a href="../index.html">Home Page</a></li>
-                             
+                          <!--  
+                            <li><a href="#/Principals">Basic Principal</a></!--li>
+                            <li><a href="#/Amrutvani">Case Study - Amrutvani website </a></li>
+                            <li><a href="#/WhatUAte">Case Study - WhatUAte website </a></li>
+                            -->
                         </ul>
                     </nav>
                 </header>
 
+                <div ng-view></div>
+                <div style="display:none;">
 
-
-                <a name="top"></a><h1>The concept of Hub MVC</h1>
-                <a name="mvc_small_simple_more_complex"><h2> MVC Meets its Limits</h2></a>
-                
-                <a name="enter_hmvc"><h2>Hubbing MVC</h2></a>
+                    <a name="top"></a><h1>The concept of Hub MVC</h1>
+                    <a name="mvc_small_simple_more_complex"><h2> MVC Meets its Limits</h2></a>
+                    Showing simple MVC pattern
+                    <img src="images/simpleMVC.png" /><p />
+                    What happens when you try modelling a complex multi element multi dependency applicatiin using MVC
+                    <img src="images/intricateNetwork.png" />
+                    <a name="enter_hmvc"><h2>Solution? Hubbing MVC</h2></a>
+                    <img src="images/HubNetwork.png" />
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="../scripts/angular.js"></script>
+    <script src="../scripts/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/Controllers/AboutThisSiteController.js"></script>
+     <script src="scripts/controllers/principalsController.js"></script>
+    
 </body>
 </html>

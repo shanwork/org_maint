@@ -1,0 +1,34 @@
+﻿<div class="nectar-menu-sidebar">
+    <h4>Pages:</h4>
+    <div>
+       Weekly <br />
+              <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/1"> * 1 Week ago</a><p />
+            <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/2"> * 2 Weeks ago</a><p />
+            <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/3"> * 3 Weeks ago</a><p />
+            <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/4"> * 4 Weeks ago</a><p />
+        <a style="text-decoration:none;color:darkslateblue;font-size:larger;" href="#/Narrations"> * Narratives</a><p />
+        <a style="text-decoration:none;color:darkslateblue;font-size:larger;" href="#/Archive"> * Archives</a><p />
+        
+        
+
+      </div>
+</div>
+<div class="nectar-back" style="height:auto;float:right;width:85%;overflow:
+    auto;">
+    <h5> Sayings for {{WhichWeek}} </h5>
+    <table class="table table-striped"  >
+
+        <tr ng-repeat="thisDaySaying in thisWeeksSaying|orderBy:sortType3">
+            <td style="min-width:700px;width:70%">
+                <article class="weeklytextcontent">
+                    Posted {{thisDaySaying.posted}} <br />
+                    <h3 ng-bind-html="thisDaySaying.title"></h3>
+                    <p ng-bind-html="thisDaySaying.content">
+                    </p>
+                    &nbsp;&nbsp; -  {{thisDaySaying.author}}<br />
+                </article>
+            </td>
+            <td > <img class="portait" ng-src={{thisDaySaying.img}} width="240" height="320">  </td>
+        </tr>
+    </table>
+    </div>

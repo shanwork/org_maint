@@ -1,0 +1,46 @@
+﻿<div class="nectar-menu-sidebar">
+    <h4>Pages:</h4>
+    <div>
+        Weekly <br />
+        <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/1"> * 1 Week ago</a><p />
+        <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/2"> * 2 Weeks ago</a><p />
+        <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/3"> * 3 Weeks ago</a><p />
+        <a style="text-decoration:none;color:darkblue;" href="#/PastWeek/4"> * 4 Weeks ago</a><p />
+        <a style="text-decoration:none;color:darkslateblue;font-size:larger;" href="#/Narrations"> * Narratives</a><p />
+        <a style="text-decoration:none;color:darkslateblue;font-size:larger;" href="#/Archive"> * Archives</a><p />
+
+
+
+    </div>
+</div>
+<div class="nectar-back" style="height:auto;float:right;width:85%;overflow:
+    auto;">
+    <h2>Narratives and sequences of related sayings</h2>
+    <table class="table table-striped" style="padding: 0px; margin:0px;width:auto;">
+        <tr class="portrait_tr" style="height:auto;" title="Enter text to search">
+            <th>Select:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>
+                <select ng-model="archiveFilter.seriesId">
+                    <option ng-repeat="series in seriesIds" value="{{series.value}}">{{series.label}}</option>
+                </select>
+            </th>
+
+        </tr>
+    </table>
+    <div style="overflow:auto;max-height:600px;">
+      
+
+        <article  class="narrationtextcontent" ng-repeat="thisDaySaying in narrations| filter:archiveFilter | orderBy:sortBy:reverse">
+
+            <!-- article ng-class="getCurrentClass(thisDaySaying.seriesId)" ng-repeat="thisDaySaying in narrations| filter:archiveFilter | orderBy:sortBy:reverse"-->
+                Posted: {{thisDaySaying.posted}} <br />
+                <h3 ng-bind-html="thisDaySaying.title"></h3>
+                <p ng-bind-html="thisDaySaying.content">
+                </p>
+                &nbsp;&nbsp; -  {{thisDaySaying.author}}<br />
+                <div class="narrationtextcontentAlt" ng-show="false">Concluded</div>
+            </article>
+
+
+</div>
+</div>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<para>
+    <a name="top"><H1>The Concept of Hub MVC </H1></a>
+    <i>Disclaimer:<br/> Please note this blog is a living docunent and will be iteratively changing<br/>
+       Also, I haven't been too fancy, too orderly or consistent on my images.<br /> I would also have liked this to be less of a static site, adding animation and user events, but constraints on time etc have 
+    left me with little bandwidth to do so. I do HOPE to get this in order. <br/>.. so please bear with me</i>
+   
+   <p> Hi, <p>
+       I have been dabbling around in web application development using the layered (UI middle tiers backend data) and MVC patterns<p>
+        Each has its advantages and drawbacks. However, the trend today has been more towards the MVC pattern, whose basic is as shown:  <p />
+        <img src="images/simpleMVC.png" style="width:320px;border:4px groove;border-radius:5px;" />
+    <p>Please read on..</p>  
+   <h3>Main content</h3>   <a ng-click="scrollTo('mvc limit')"><li>Limitations of MVC</a></li>
+    <a ng-click="scrollTo('hMVC concept')"><li>Concept of Hub MVC</a></li>
+    <a ng-click="scrollTo('hMVC variant1')"><li> Inner details - one example</a></li>
+    <a ng-click="scrollTo('hHMVC application')"><li>Live example of Hub MVC</a></li>
+    <a ng-click="scrollTo('Contact')"><li>Comments? Feedback?</a></li>
+
+    <a name="mvc limit"><h3>Limitations of MVC </h3></a>
+    Taking the basic ring of nodes above, if you try to design a system with separate flows, <b>but with</b> inter-dependencies, the situation can get complex with 
+    increasing amount of dependencies and can even get messy. Shown below:<br/>
+    <img src="images/intricateNetwork.png" style="width:500px;border:4px groove;border-radius:5px;"/>
+   <br/>
+ <a ng-click="scrollTo('top')">Top of page</a>
+
+    <a name="hMVC concept"><h3>Concept of Hub MVC </h3></a>
+    <p>Enter Hub MVC. <br />This is not a completely new concept. It is just an attempt to bring some order and anchor point to that intricate web shown above, and 
+    selectively hide it </p>Shown below. One thought is to take away the complexity of interrelationships away from the teams does the separate flows and offer an API - let's call it Hub API
+    <img src="images/HubNetwork.png" style="width:500px;border:4px groove;border-radius:5px;" />
+    <br/>
+     <a ng-click="scrollTo('top')">Top of page</a>
+
+    <a name="hMVC variant1"><h3>Inner details - one example  </h3></a>
+
+    <p>
+        Thoughts of what would be behind the scenes, how input and output are handled...<br/> 
+      This is one way of how the models 'pour' into the Hub, and controllers 'extract' from it through an API.    Shown below. <p/>
+        <img src="images/HubNetwork_var1.png" style="width:500px;border:4px groove;border-radius:5px;" />
+    <p>Now let's add external sources and dependencies like angular libraries, etc </p>
+    <img src="images/HubNetwork_var1a.png" style="width:500px;border:4px groove;border-radius:5px;" />
+    <br />
+
+    <a ng-click="scrollTo('top')">Top of page</a>
+
+
+    <a name="technical"><h3>Live example of Hub MVC  </h3></a>
+    This is not a classic or extensive application of this pattern, but it <i>does</i> use the concept of a central hub where data and signals flow in and out of<br/>
+    The Sai Amruta Vani web site can be found <a href="http://www.use-my-software.com/myApp/nectar-words/home.html#/about" target="_blank">here </a><br/>
+    Showing how HMVC is applied here. To repeat, it is not a classic example, just uses the concept<br/>
+    <img src="images/HubNetwork_Amrutavani.png" style="width:500px;border:4px groove;border-radius:5px;" /><br/>
+    <a ng-click="scrollTo('top')">Top of page</a>
+
+    <a name="Contact"><h4>Feedback  </h4></a>
+    <p> Email me feedback at webfeedback2016@gmail.com - mention 'Hub MVC' in the subject</p>
+    <a ng-click="scrollTo('top')">Top of page</a>
+</para>
+

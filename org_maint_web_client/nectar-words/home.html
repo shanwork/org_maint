@@ -12,27 +12,26 @@
 
 </head>
 <body>
-    <div class="container-fluid" style="overflow:auto;">
+    <div class="container-fluid" style="overflow:auto;margin:0px;padding:0px;">
         <div class="row">
             <div class="col-lg-12 col-cm-12">
-                <header>
-                    <nav class="navbar navbar-default" style="border:2px outset silver;">
+                <header style="border:1px outset silver;margin:0px;padding:0px;">
+                    <nav class="navbar navbar-default nectar-navbar-default" >
                         <ul class="navbar navbar-nav">
                             <li><a href="../index.html"><b>Home Page</b></a></li>
                             <li><a href="#/about">About this site</a></li>
-                            <li><a href="#/Week/1">The last Week</a></li>
-                            <li><a href="#/Week/2">Two Week back</a></li>
-                            <li><a href="#/Week/3">Three Weeks Back</a></li>
-                            <li><a href="#/Week/4">Four Weeks Back</a></li>
-                            <li><a href="#/Week/Archive">..</a></li>
+                            <li><a href="#/PastWeek/1">Weekly ** </a></li>
+                            <li><a href="#/Narrations">Narratives </a></li>
+                            <li><a href="#/Archive">Archives </a></li>
+
                         </ul>
                     </nav>
                 </header>
+         
+                     <div ng-view></div>
 
-
-                <div class="nectar-back">
-                    <div ng-view></div>
-                </div>
+             
+                
             </div>
         </div>
     </div>
@@ -42,17 +41,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-sanitize.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/WeeklyNectarController.js"></script>
-    <script src="scripts/controllers/budgetStatusController.js"></script>
-    <script src="scripts/globals/budgetStatusService.js"></script>
-    <script src="scripts/controllers/contributorController.js"></script>
-    <script src="scripts/globals/contributorService.js"></script>
-    <script src="scripts/controllers/entityController.js"></script>
-    <script src="scripts/globals/entityService.js"></script>
-    <script src="scripts/controllers/entityFinanceSummaryController.js"></script>
-    <script src="scripts/globals/entityFinanceSummaryService.js"></script>
-    <script src="scripts/controllers/entityItemExpensesController.js"></script>
-    <script src="scripts/globals/entityItemExpensesService.js"></script>
+    <script src="scripts/globals/Q2_2016.js"></script>
+    <script src="scripts/globals/Q1_2016.js"></script>
+    <script src="scripts/globals/Hub.js"></script>
+    <script src="scripts/controllers/NectarByWeekController.js"></script>
+    <script src="scripts/controllers/NectarArchiveController.js"></script>   
+    <script src="scripts/controllers/NectarNarrationController.js"></script>
     <script src="scripts/controllers/aboutThisSiteController.js"></script>
     <script src="scripts/controllers/settingsController.js"></script>
     <script src="scripts/d3.min.js"></script>
