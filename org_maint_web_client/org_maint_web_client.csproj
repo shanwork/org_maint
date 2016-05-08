@@ -66,6 +66,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="animations\views\basic.html" />
+    <Content Include="animations\views\basicAnimation.html" />
+    <Content Include="animations\views\reactionTester.html" />
     <Content Include="app\app.js" />
     <Content Include="app\controllers\customersController.js" />
     <Content Include="app\controllers\ordersController.js" />
@@ -124,12 +127,18 @@
     <Content Include="HubMVC\views\caseStudyAmrutvani.html" />
     <Content Include="HubMVC\views\caseStudyWhatUAte.html" />
     <Content Include="HubMVC\views\principals.html" />
+    <Content Include="animations\home.html" />
+    <Content Include="animations\scripts\app.js" />
+    <Content Include="animations\scripts\globals\Hub.js" />
+    <Content Include="animations\styling\hubTemplate.css" />
     <Content Include="hubTemplate\home.html" />
     <Content Include="hubTemplate\scripts\app.js" />
     <Content Include="hubTemplate\scripts\globals\Hub.js" />
     <Content Include="hubTemplate\styling\hubTemplate.css" />
     <Content Include="index.html" />
+    <Content Include="nectar-words\scripts\controllers\StatsController.js" />
     <Content Include="nectar-words\scripts\globals\directives.js" />
+    <Content Include="nectar-words\views\Stats.html" />
     <Content Include="nectar-words\views\templateSideMenu.html" />
     <Content Include="what-u-ate\home.html" />
     <Content Include="what-u-ate\images\dwarkamai_1.JPG" />

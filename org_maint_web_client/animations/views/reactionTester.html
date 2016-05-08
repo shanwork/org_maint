@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div {
+            border: 1px solid black;
+            overflow: scroll;
+        }
+
+        .circleClass {
+            border: 1px ridge maroon;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            overflow: auto;
+        }
+
+        .circleClassfade1 {
+            border: 5px ridge orangered;
+            border-radius: 100px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            overflow: auto;
+        }
+
+        .circleClassfade2 {
+            border: 5px ridge orange;
+            border-radius: 100px;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body onload="interval = window.setInterval(whichClass, 700);">
+    <h1>Test Your Reaction Time</h1>
+    <p>The shape - currently a circle - will appear at random location on the canvass below.
+    <br/>Clicking it will make it disappear after which it re-appears after a random time between 1 and <input type="text" id="benchmark" value="5000" /> milliseconds*
+    <br/>Reaction time is how quickly you can click the shape after it reappears </p>
+    <span style="font-weight:bold"> Please note the element size can get really really small sometimes!!</span>
+    <p> <span id="demo">0</span> </p>
+    <br/>* just enter a number - the time span will change the next time the circle re-appears after clicking
+    <div id="playground" style="height:700px;border:2px groove;background-color:silver;"></div>
+    <div id="reactCircle" class="circleClass" style="display:none;"></div>
+    Enter timespan upto which the circle will re-display 
+   
+
+    <script>
+        document.getElementById("playground").style.height = Math.floor(window.innerHeight * 0.7) + "px" ;
+     //   document.getElementById("playground").style.backgroundColor = window.innerHeight * 0.7;
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        var displayTime = Date.now();
+        var hideTime = Date.now();
+        makeBox = function () {
+            var reactCircleTop = 0;
+            var reactCircleLeft = 0;
+            var reactCircleDimension = 0;
+            var reactCircleRadius = 0;
+            var timeSpan = parseFloat(document.getElementById("benchmark").value)
+            reactCircleDimension = Math.floor(Math.random()*(window.innerWidth/8));
+            reactCircleTop = Math.floor(Math.random()*window.innerHeight);
+            reactCircleLeft = Math.floor(Math.random() * window.innerWidth);
+            if (reactCircleTop < window.innerHeight * 3)
+                reactCircleTop = Math.floor(window.innerHeight * 3) + 2;
+            if (reactCircleTop + reactCircleDimension > (window.innerHeight*0.7))
+                reactCircleTop = (window.innerHeight*0.7) - reactCircleDimension - 2;
+            if (reactCircleLeft + reactCircleDimension > window.innerWidth)
+                reactCircleLeft= window.innerWidth - reactCircleDimension - 2;
+            var showTime = Math.random() * timeSpan;//5000;
+            setTimeout(function()
+            {
+                var reactCircle = document.getElementById("reactCircle");
+              //  reactCircleDimension
+                reactCircle.style.backgroundColor = getRandomColor();
+                reactCircle.style.width = reactCircleDimension + "px";
+                reactCircle.style.height = reactCircleDimension + "px";
+                reactCircle.style.borderRadius = reactCircle.style.width / 2 + "px";
+                reactCircle.style.left = reactCircleLeft + "px";
+                reactCircle.style.top = reactCircleTop + "px";
+                reactCircle.style.display = "block";
+                displayTime = Date.now();
+            }, showTime)
+        }
+        document.getElementById("reactCircle").onclick = function()
+        {
+            document.getElementById("reactCircle").style.display = "none";
+            hideTime = Date.now();
+            document.getElementById("demo").innerHTML = "Reaction time = " + (hideTime - displayTime) + " ms"  ;
+            makeBox();
+        }
+        makeBox();
+        var startStop = 0;
+        var styles = [
+
+
+        ]
+        var interval = null;
+        document.getElementById("disappearingCircle").onfocus = function () {
+
+            window.setInterval(whichClass, 700);
+            // setTimeout("document.getElementById('disappearingCircle').style.display='none'", 1500)
+
+            ;// = 'none';
+        }
+        function whichClass()
+        {
+            if (document.getElementById('disappearingCircle').className == 'circleClassfade1') {
+
+                document.getElementById('disappearingCircle').className = 'circleClassfade2';
+            }
+            else if (document.getElementById('disappearingCircle').className == 'circleClassfade2')
+                document.getElementById('disappearingCircle').className = 'circleClass';
+            else
+                document.getElementById('disappearingCircle').className = 'circleClassfade1'
+
+        }
+document.getElementById("disappearingCircle").onclick = function ()
+{
+    document.getElementById("demo").innerHTML = document.getElementById('disappearingCircle').className;
+    if (startStop == 0) {
+        clearInterval(interval);
+        startStop = 1;
+    }
+    else {
+        startStop = 0;
+        interval = window.setInterval(whichClass, 700);
+    }
+   // setTimeout("document.getElementById('disappearingCircle').style.display='none'", 1500)
+
+    ;// = 'none';
+}
+
+    </script>
+    <script src="imageLoader.js"></script>
+</body>
+</html>

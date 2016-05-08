@@ -22,6 +22,10 @@
               controller: 'NectarNarrationController',
 
               templateUrl: 'views/NectarNarrations.html'
+          }).when('/Stats', {
+              controller: 'StatsController',
+
+              templateUrl: 'views/Stats.html'
           })
              .when('/about', {
                  controller: 'AboutThisSiteController',

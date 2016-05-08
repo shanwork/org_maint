@@ -20,6 +20,12 @@
         $scope.startOfChosenWeek = new Date(new Date().getTime() - parseInt(deltaToDesiredWeek * 24 * 60 * 60 * 1000));
         $scope.today = new Date();
         $scope.thisWeeksSaying = Hub.getThisWeekSaying(parseInt($scope.weekIndex));//$scope.allWeeksSaying[$scope.weekIndex];
+        var newStat =
+            {
+                Page: 'Weekly Post' + $scope.WhichWeek,
+                Visited: new Date()
+            };
+        Hub.updateStatistics(newStat);
         $scope.Weeks = Hub.getWeekIndices();
         $scope.renderAsHtml = function(texts)
         {

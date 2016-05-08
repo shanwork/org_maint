@@ -31,6 +31,12 @@
             }
         }
         //   $scope.Weeks = Hub.getWeekIndices();
+        var newStat =
+             {
+                 Page: 'Narratives Page',
+                 Visited: new Date()
+             };
+        Hub.updateStatistics(newStat);
         $scope.currentClass = 'narrationtextcontent';
         $scope.whichSeries = '';
         $scope.changed = function(whichSeries)

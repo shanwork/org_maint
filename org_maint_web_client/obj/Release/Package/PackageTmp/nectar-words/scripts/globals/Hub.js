@@ -1,7 +1,7 @@
 ﻿(function () {
     var root = '/myApp/nectar-words';
     angular.module('nectar_words_app')
-      .service('Hub', function ($http, $q,
+      .service('Hub', function ($http, $q,$localStorage,
             Q1_2016,
             Q2_2016) {
           //  var budgetStatus = {};
@@ -21,6 +21,8 @@
           this.insertQuarterData(Q2_2016AllWeeksSaying);
 
           var weekCount = [];
+          var nectarVisitedStats = [];
+          var latestStats = {};
           for (var i = 1; i <= allWeeksSaying.length; i++)
           { weekCount.push(i); }
           var archive = [];
@@ -55,6 +57,20 @@
           };
           this.filterDisclaimer = function (obj) {
               return obj.seriesId != '-10';
+          }
+          this.updateStatistics = function(newStat)
+          {
+              if (this.nectarVisitedStats == undefined)
+                  this.nectarVisitedStats = [];
+              this.nectarVisitedStats.push(newStat);
+              this.latestStats = newStat;
+          }
+          this.getLatestStatistics = function () {
+           
+            return this.latestStats;
+          }
+          this.getAllStatistics = function () {
+              return this.nectarVisitedStats;
           }
           this.getArchives = function () {
 

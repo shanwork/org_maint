@@ -10,7 +10,13 @@
             $scope.reverse = !$scope.reverse;
          };
          $scope.archive = [];
-          $scope.archive = Hub.getArchives();
+         $scope.archive = Hub.getArchives();
+         var newStat =
+             {
+                 Page: 'Archive Page',
+                 Visited: new Date()
+             };
+         Hub.updateStatistics(newStat);
       //   $scope.Weeks = Hub.getWeekIndices();
 
     };
