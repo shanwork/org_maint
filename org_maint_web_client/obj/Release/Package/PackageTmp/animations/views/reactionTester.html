@@ -44,18 +44,21 @@
         }
     </style>
 </head>
-<body onload="interval = window.setInterval(whichClass, 700);">
-    <h1>Test Your Reaction Time</h1>
-    <p>The shape - currently a circle - will appear at random location on the canvass below.
-    <br/>Clicking it will make it disappear after which it re-appears after a random time between 1 and <input type="text" id="benchmark" value="5000" /> milliseconds*
-    <br/>Reaction time is how quickly you can click the shape after it reappears </p>
-    <span style="font-weight:bold"> Please note the element size can get really really small sometimes!!</span>
-    <p> <span id="demo">0</span> </p>
-    <br/>* just enter a number - the time span will change the next time the circle re-appears after clicking
-    <div id="playground" style="height:700px;border:2px groove;background-color:silver;"></div>
+<body style="overflow:hidden;">
+    <div style="height:220px;width:auto;overflow:hidden;">
+        <h1>Test Your Reaction Time</h1>
+        <p>
+            The shape - currently a circle - will appear at random location on the canvass below.
+            <br />Clicking it will make it disappear after which it re-appears after a random time between 1 and <input type="text" id="benchmark" value="2000" /> milliseconds*
+            <br />Reaction time is how quickly you can click the shape after it reappears
+        </p>
+        <span style="font-weight:bold"> Please note the element size can get really really small sometimes!!</span>
+        <p> <span id="demo">0</span> </p>
+       
+    </div>
+    <div id="playground" style="height:auto;border:2px groove;background-color:silver;overflow:hidden;"></div>*<em> just enter a number - the time span will change the next time the circle re-appears after clicking</em>
     <div id="reactCircle" class="circleClass" style="display:none;"></div>
-    Enter timespan upto which the circle will re-display 
-   
+     
 
     <script>
         document.getElementById("playground").style.height = Math.floor(window.innerHeight * 0.7) + "px" ;

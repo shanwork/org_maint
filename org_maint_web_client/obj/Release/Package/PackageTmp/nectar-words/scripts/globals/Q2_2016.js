@@ -16,6 +16,86 @@ angular.module('nectar_words_app')
       */
       var allWeeksSaying =
          [
+                     [{
+                         posted: 'May 08 2016',
+                         postDate: new Date('May 08 2016 3:30 AM'),
+                         title: 'Mother’s Day',
+                         content: 'In the world today, there may be a wicked son, but never a wicked mother. It is because of the noble feelings of mothers that children become virtuous, intelligent, attain exalted positions and earn name and fame. It is the mother who fosters and nourishes you.  What is the gratitude you are offering to your mother for the sacrifice made by her?'
+                         + '<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is she who knows your likes and preferences and fulfills all your needs. So, be grateful to your mother always.  First and foremost, you should show gratitude to your parents, love them and respect them.  Your blood, food, head and money are all the gifts from your parents. You do not receive these gifts directly from God. So, never forget the love of the mother. Love your mother, father, teacher and God. The mother shows the father; the father shows the teacher; the teacher shows God.<br/>&nbsp; –Sri Sathya Sai Speaks V(31), p399'
+                         + '<br /><br />There is no place to look for your mother except in the prayer room,<br/>&nbsp;&nbsp;for there is not a single moment when she has not prayed for you! - Robert Brault'
+                          + '<br /><br />Everyone on earth has to be born from a mother’s womb, be it a common man, a saint or even an Avatar. Therefore, adore the mother as God. Uphold her and respect her.<br/>&nbsp;  -Baba'
+                         + '<br /><h4>How did Devaki become Krishna’s mother?</h4>'
+                          + '<br />Devaki in her previous birth was a very pious woman and always thinking of Lord Narayana. After many years of her prayers, Lord Narayana appeared before her and asked what she wanted. She could have asked for Moksha (Liberation) then and there. However, since she was always thinking of Narayana, her selfish needs did not surface to her mind. She felt that her body should be useful to humanity. So, she asked Lord Narayana, “Please give me the boon so that you will be born in my womb”. Lord Narayana granted her boon saying that in her next birth He will be born to her. She thought that she could love the Lord even more because as a baby, she could nurse Him, fondle Him with love, feed Him, bathe Him, clothe Him and play with Him.'
+                          + '<br /> As destined, baby Krishna was born to Devaki and Vasudeva in the prison, in the early morning hours. As instructed by the Lord, the baby had to be transported to Gokul and placed beside Yashoda, before dawn. Devaki did not get to a chance to fondle baby Krishna and Yashoda had the great fortune of bringing up Krishna. As you can see, the Lord gave her the boon exactly as she requested: “Please give me the boon so that you will be born in my womb”. <br/>–Story as narrated by Sri Sathya Sai Baba'
+                         ,
+                         author: '- Various',
+                         seriesId: '-1',
+                         seq: '-1',
+                         img: root + '/images/sai_1221_1.jpg'
+                     }, {
+                         posted: 'May 07 2016',
+                         postDate: new Date('May 07 2016 3:30 AM'),
+                         title: 'When will I see the results of Sadhana?',
+                         content: 'No tree will yield fruits the moment you plant the seedlings in your backyard. To reach that stage, you have to follow carefully without break, all the preparatory procedures. No one can acquire the spiritual fruit without vigilance and steadfastness.',
+                         author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, p89',
+                         seriesId: 'Sadhana -2',
+                         seq: '3',
+                         img: root + '/images/dwarkamai_1.jpg'
+                     }, {
+                         posted: 'May 06 2016',
+                         postDate: new Date('May 04 2016 3:30 AM'),
+                         title: 'How does Self reveal Itself?',
+                         content: 'The Self is not attained through discourses, not through intellectual enquiry, not through much learning.  It is gained only by him who longs forIt, whole-heartedly. For such a one, the Self reveals Its own nature.<br/> – Mundaka Upanishad, verse 3.2.3.<br/><br/>The Self is always of the nature of one’s innermost being; it has not to be gained from anywhere else. Only ignorance veils it. True longing of the heart dispels that ignorance and then the Self, which was always there, reveals itself.<br/> - Swami Sarvananda in Mundaka Upanishad, p70.',
+                         author: 'Various',
+                         seriesId: '-1',
+                         seq: '-1',
+                         img: root + '/images/sai_unplugged.jpg'
+                     }, {
+                         posted: 'May 05 2016',
+                         postDate: new Date('May 06 2016 3:30 AM'),
+                         title: 'I have a job. No time for Sadhana!',
+                         content: 'Everyone says, “I am too busy with my job. I have no time for Sadhana.” The Sanskrit word ‘Udyogam’ is commonly understood as employment in some job, something worth doing. No. It means ud (higher) yogam (spiritual discipline), a sadhana which has assumed the status of a job. All jobs which you take up are udyogas - higher spiritual disciplines which stands out in man (Udyogam Purusha Lakshanam). All jobs are meant for higher eternal values in man (parama purushartha). Your daily living (nithya jeevitham) must be transformed into live prayers and live Sadhana. Of the many billions of living beings, man alone has the privilege of being entitled to examine the Truth and merge into the bliss of Self-Realization. Do not squander away the time allotted to you in this life',
+                         author: ' -Sri Sathya Sai Baba in Sadhana-The Inward Path, pp69-70',
+                         seriesId: 'Sadhana -2',
+                         seq: '2',
+                         img: root + '/images/dwarkamai_1.jpg'
+                     }, {
+                         posted: 'May 04 2016',
+                         postDate: new Date('May 05 2016 3:30 AM'),
+                         title: 'Sadhana must start very early',
+                         content: 'When the mind is drifting from one thing to the other, how can chanting of ‘Om, Om’ by your vocal organs give you liberation? The senses have to be curbed, thoughts have to be one pointed and the glory of the Lord has to be apprehended.  That is why the Lord advised that from birth to death you must be engaged in search for Truth. Instead, you postpone Sadhana (spiritual practice) until the last moment. It is like the student who turns over the pages of his text book for the first time, just before he enters the examination hall! The student feels that he has before him one full year and he neglects to learn from the teacher, from the lecture notes and from books. Now can anything enter his brain when he opens the pages of his book that very morning? It will only add to his despair! ',
+                         author: '-Sri Sathya Sai Baba in Sadhana-The Inward Path, p89',
+                         seriesId: 'Sadhana -2',
+                         seq: '1',
+                         img: root + '/images/dwarkamai_1.jpg'
+                     }, {
+                         posted: 'May 03 2016',
+                         postDate: new Date('May 03 2016 2016 5:30 AM'),
+                         title: 'The Lord is nearest to you',
+                         content: 'The Lord is nearest to you. Slide ajar the door of delusion; part the curtain if ignorance; open the closed eye; He is right there before you! The fog of sensual pleasure is hiding Him from you. Turn on the inner light; the darkness disappears and He becomes visible.',
+                         author: '-Sri Sathya Sai Baba in Sadhana-The Inward Path, p14',
+                         seriesId: '-1',
+                         seq: '-1',
+                         img: root + '/images/sai_1221_1.jpg'
+                     }, {
+                         posted: 'May 02 2016',
+                         postDate: new Date('May 02 2016 3:30 AM'),
+                         title: 'Proper way to chant God’s name',
+                         content: 'Many people know the efficacy of chanting the Divine name of God. As narrated before, by hearing the name of Rama, the parrot had next birth as calf and the calf as prince. (See TFD 1761) Many people chant ‘Sai Ram’, ‘Sai Ram’ constantly, yet there is no transformation in them? It is not enough if you repeat the Name of the Lord. The tape recorder can also repeat the Name of the Lord. So, we should not chant the Name of the Lord mechanically. We should do it with full awareness. Everything should come out of the heart, not merely out of the lips. We should imprint the divine feelings in the heart and chant the Name of the Lord',
+                         author: '– Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
+                         seriesId: '-1',
+                         seq: '-1',
+                         img: root + '/images/sai_unplugged.jpg'
+                     }, {
+                         posted: 'May 01 2016',
+                         postDate: new Date('May 01 2016 3:30 AM'),
+                         title: 'Rama in Threta and Krishna in Dwapara Yuga?',
+                         content: 'There are four Yugas (eons): Satya, Threta, Dwapara and Kali.  Some confusion may arise in devotees’ minds now. Rama was before Krishna. Yet, Rama was in Threta Yuga (referring to third) and Krishna was in Dwapara Yuga (referring to second). Is there a mistake? No. The Yugas are based on the strength of Dharma (righteousness). Dharma is depicted as a four legged animal (like a cow for example). It rests all its four legs on the earth when there is only pure Dharma. When the Dharma declines slightly, it lifts one leg and three legs are on the earth. This is Threta Yuga because of three legs are on the earth. When Dharma declines further, two legs are up and only two legs are on the earth. This is Dwapara Yuga. In Kali Yuga (the present Yuga), only one leg is down and three are up and Dharama is in its last (lost!) legs',
+                         author: '– Discourses from Sri Sathya Sai Baba (slightly edited and summarized)',
+                         seriesId: '-1',
+                         seq: '-1',
+                         img: root + '/images/sai_unplugged.jpg'
+                     }],
                 [{
              posted: 'April 30 2016',
              postDate: new Date('April 30 2016 3:30 AM'),
