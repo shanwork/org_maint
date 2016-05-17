@@ -56,7 +56,7 @@
         <p> <span id="demo">0</span> </p>
        
     </div>
-    <div id="playground" style="height:auto;border:2px groove;background-color:silver;overflow:hidden;"></div>*<em> just enter a number - the time span will change the next time the circle re-appears after clicking</em>
+    <div id="playground" style="height:100%;width:100%;border:2px groove;background-color:silver;overflow:hidden;"></div>*<em> just enter a number - the time span will change the next time the circle re-appears after clicking</em>
     <div id="reactCircle" class="circleClass" style="display:none;"></div>
      
 
@@ -117,13 +117,7 @@
 
         ]
         var interval = null;
-        document.getElementById("disappearingCircle").onfocus = function () {
-
-            window.setInterval(whichClass, 700);
-            // setTimeout("document.getElementById('disappearingCircle').style.display='none'", 1500)
-
-            ;// = 'none';
-        }
+        
         function whichClass()
         {
             if (document.getElementById('disappearingCircle').className == 'circleClassfade1') {
@@ -136,23 +130,9 @@
                 document.getElementById('disappearingCircle').className = 'circleClassfade1'
 
         }
-document.getElementById("disappearingCircle").onclick = function ()
-{
-    document.getElementById("demo").innerHTML = document.getElementById('disappearingCircle').className;
-    if (startStop == 0) {
-        clearInterval(interval);
-        startStop = 1;
-    }
-    else {
-        startStop = 0;
-        interval = window.setInterval(whichClass, 700);
-    }
-   // setTimeout("document.getElementById('disappearingCircle').style.display='none'", 1500)
 
-    ;// = 'none';
-}
 
     </script>
-    <script src="imageLoader.js"></script>
+  
 </body>
 </html>

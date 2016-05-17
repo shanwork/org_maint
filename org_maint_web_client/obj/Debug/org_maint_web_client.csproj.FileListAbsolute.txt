@@ -57,7 +57,6 @@ C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_web_client
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_web_client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_web_client\obj\Debug\org_maint_web_client.dll
 C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_web_client\obj\Debug\org_maint_web_client.pdb
-C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_web_client\obj\Debug\org_maint_web_client.csprojResolveAssemblyReference.cache
 C:\Users\sgadkari\Documents\GitHub\org_maint\org_maint_web_client\bin\roslyn\csc.exe
 C:\Users\sgadkari\Documents\GitHub\org_maint\org_maint_web_client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\sgadkari\Documents\GitHub\org_maint\org_maint_web_client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -78,3 +77,4 @@ C:\Users\sgadkari\Documents\GitHub\org_maint\org_maint_web_client\bin\Microsoft.
 C:\Users\sgadkari\Documents\GitHub\org_maint\org_maint_web_client\obj\Debug\org_maint_web_client.csprojResolveAssemblyReference.cache
 C:\Users\sgadkari\Documents\GitHub\org_maint\org_maint_web_client\obj\Debug\org_maint_web_client.dll
 C:\Users\sgadkari\Documents\GitHub\org_maint\org_maint_web_client\obj\Debug\org_maint_web_client.pdb
+C:\Shantanu\Technical\Web Development\My-projects\org_maint\org_maint_web_client\obj\Debug\org_maint_web_client.csprojResolveAssemblyReference.cache

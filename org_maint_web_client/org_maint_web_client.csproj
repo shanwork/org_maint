@@ -72,7 +72,9 @@
     <Content Include="app\app.js" />
     <Content Include="app\controllers\customersController.js" />
     <Content Include="app\controllers\ordersController.js" />
+    <Content Include="app\directives.js" />
     <Content Include="app\views\customers.html" />
+    <Content Include="app\views\MainMenu.html" />
     <Content Include="app\views\orders.html" />
     <Content Include="budget\home.html" />
     <Content Include="budget\scripts\app.js" />
@@ -108,6 +110,33 @@
     <Content Include="charting\scripts\app.js" />
     <Content Include="charting\scripts\c3.min.js" />
     <Content Include="charting\scripts\d3.min.js" />
+    <Content Include="Ganesha\Ashtavinayak.html" />
+    <Content Include="Ganesha\Feedback.html" />
+    <Content Include="Ganesha\home.html" />
+    <Content Include="Ganesha\images\ganesh_icon.jpg" />
+    <Content Include="Ganesha\images\jai_ganesh_deva_poster.png" />
+    <Content Include="Ganesha\multimedia\videos\Jai_Ganesh_Deva_Aarti.mp4" />
+    <Content Include="Ganesha\multimedia\videos\mikethefrog.mp4" />
+    <Content Include="Ganesha\styles\mainStyle.css" />
+    <Content Include="assignments\home.html" />
+    <Content Include="assignments\images\HubNetwork.png" />
+    <Content Include="assignments\images\HubNetwork_Amrutavani.png" />
+    <Content Include="assignments\images\HubNetwork_var1.png" />
+    <Content Include="assignments\images\HubNetwork_var1a.png" />
+    <Content Include="assignments\images\intricateNetwork.png" />
+    <Content Include="assignments\images\nectarWordNetwork.png" />
+    <Content Include="assignments\images\simpleMVC.png" />
+    <Content Include="assignments\scripts\app.js" />
+    <Content Include="assignments\scripts\Controllers\AboutThisSiteController.js" />
+    <Content Include="assignments\scripts\Controllers\GitAPIController.js" />
+    <Content Include="assignments\scripts\globals\Hub.js" />
+    <Content Include="assignments\styling\nectar preTheming.css" />
+    <Content Include="assignments\styling\assignments.css" />
+    <Content Include="assignments\styling\nectar_ver1.css" />
+    <Content Include="assignments\views\aboutThisSite.html" />
+    <Content Include="assignments\views\gitApi.html" />
+    <Content Include="assignments\views\caseStudyWhatUAte.html" />
+    <Content Include="assignments\views\principals.html" />
     <Content Include="HubMVC\home.html" />
     <Content Include="HubMVC\images\HubNetwork.png" />
     <Content Include="HubMVC\images\HubNetwork_Amrutavani.png" />
@@ -131,13 +160,24 @@
     <Content Include="animations\scripts\app.js" />
     <Content Include="animations\scripts\globals\Hub.js" />
     <Content Include="animations\styling\hubTemplate.css" />
+    <Content Include="naam\home.html" />
+    <Content Include="naam\scripts\app.js" />
+    <Content Include="naam\scripts\controllers\BudgetStatusController.js" />
+    <Content Include="naam\scripts\controllers\ContributorController.js" />
+    <Content Include="naam\scripts\controllers\RequirementsController.js" />
+    <Content Include="naam\scripts\globals\Hub.js" />
+    <Content Include="naam\styling\hubTemplate.css" />
     <Content Include="hubTemplate\home.html" />
     <Content Include="hubTemplate\scripts\app.js" />
     <Content Include="hubTemplate\scripts\globals\Hub.js" />
     <Content Include="hubTemplate\styling\hubTemplate.css" />
     <Content Include="index.html" />
+    <Content Include="naam\views\budgetStatus.html" />
+    <Content Include="naam\views\contributorList.html" />
+    <Content Include="naam\views\requirements.html" />
     <Content Include="nectar-words\scripts\controllers\StatsController.js" />
     <Content Include="nectar-words\scripts\globals\directives.js" />
+    <Content Include="nectar-words\styling\nectar_greenblue.css" />
     <Content Include="nectar-words\views\Stats.html" />
     <Content Include="nectar-words\views\templateSideMenu.html" />
     <Content Include="what-u-ate\home.html" />
@@ -193,6 +233,9 @@
     <Content Include="nectar-words\views\NectarByWeek.html" />
     <Content Include="packages.config" />
     <Content Include="comingNext\home.html" />
+    <Content Include="Ganesha\multimedia\videos\mikethefrog.ogv" />
+    <Content Include="Ganesha\multimedia\videos\mikethefrog.webm" />
+    <Content Include="Ganesha\multimedia\videos\Jai_Ganesh_Deva_Aarti.webm" />
     <None Include="Properties\PublishProfiles\use-my-software.com - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\use-my-software.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
@@ -215,6 +258,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\amrutvani\" />
+    <Folder Include="Ganesha\multimedia\audio\" />
+    <Folder Include="Ganesha\views\" />
     <Folder Include="hubTemplate\views\" />
   </ItemGroup>
   <PropertyGroup>

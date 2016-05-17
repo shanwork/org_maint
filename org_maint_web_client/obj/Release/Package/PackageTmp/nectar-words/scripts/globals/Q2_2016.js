@@ -16,6 +16,96 @@ angular.module('nectar_words_app')
       */
       var allWeeksSaying =
          [
+                   [{
+                       posted: 'May 16 2016',
+                       postDate: new Date('May 16 2016 3:30 AM'),
+                       title: 'Rarest of rare things',
+                       content: 'Of all the living creatures, human birth indeed is very rare;' 
+                           + '<br/>&nbsp;Much more difficult is to become a righteous man;' 
+                           + '<br/>Rarer than this is a Saattwic attitude in life.' 
+                           + '<br/>&nbsp;Even after gaining these things, having steadfastness in spiritual practice is yet rarer;' 
+                           + '<br/>Even more difficult is to have correct knowledge and deep significance of the scriptures;' 
+                           + '<br/>&nbsp;Discriminating between the Real and unreal and getting fully established in living consciousness leads to liberation.' 
+                           + '<br/>This kind of perfect liberation cannot be had without the earned merits of hundred crores of lives lived properly.',
+                       author: 'Viveka Choodamani by Adi Sankara, Verse 2.',
+                       seriesId: '-1',
+                       seq: '-1',
+                       img: root + '/images/sai_unplugged.jpg'
+                   }, {
+                       posted: 'May 15 2016',
+                       postDate: new Date('May 15 2016 3:30 AM'),
+                       title: 'Blessings cannot be taken back',
+                       content: '<p>Yudhisthira got blessings from Bhishma, ‘Let there be victory on your side!’ Yet, after a few days of the war, there was a heavy casualty on Pandava’s side. The Pandavas were in despair and they met with Krishna. Yudhisthira told Krishna that despite Bhishma’s blessings, there is no chance for Pandavas to win the war as long as Bhishma is on Kaurava’s side. Looking at Yudhisthira, Krishna said with a smile, “You and Arjuna meet Bhishma and ask him to take back his blessings.”</p>'
+                           + '<p>Following Krishna’s orders, late in the night, Yudhisthira and Arjuna went to Bhishma’s tent, respectfully fell at Bhishma’s feet and said, “Please don’t bless us!” Bhishma asked, “Why?” Yudhisthira replied, “You blessed us victory, yet we are losing. Your arrows are destroying our army. Please take back your blessings!” Bhishma asked as to who suggested this. Yudhisthira innocently replied, “It was Krishna’s idea!” Bhishma could sense the subtle trick of Krishna! Bhishma said, “Blessings, once given cannot be taken back. My arrows will not strike your army if there is a woman on your side.” Yudhisthira was totally confused and asked, “How can we have a woman on our side to fight this war?” Bhishma replied, “I have told you enough. Go and consult with Krishna!” (Krishna later suggests to put Shikandi in the war against Bhishma)</p>'
+                           + '<p>Blessings are showered when the heart is filled with love.</p><p>One curses someone when the heart is filled with hatred!</p>' 
+                           + '<p>These are like arrows. Once they are released from the bow, they can’t be recalled. Therefore, the person who blesses or curses assumes a very great responsibility! King Parikshith was cursed that he would die of a snake bit in seven days. He then went to sage Suka to spend his last days in a proper way so that he could get liberation. Sage Suka narrated the life story of Krishna to Parikshith which is well known as Srimad Bhagavatam.</p>',
+                       author: 'Swami T',
+                       seriesId: 'Blessings(Mahabharat)',
+                       seq: '2',
+                       img: root + '/images/dwarkamai_1.jpg'
+                   }, {
+                       posted: 'May 14 2016',
+                       postDate: new Date('May 14 2016 3:30 AM'),
+                       title: 'Seeking blessings from elders',
+                       content: '<p>Moments before the Mahabharatha war was about to begin, Yudhisthira got down from his chariot, walked to the Kaurava’s side and fell at Bhishma’s feet to seek his blessings. Bhishma blessed him by saying, “Let there be victory on your side!” When Yudhisthira walked away, Duryodhana, who was in the chariot next to Bhishma, scolded him by saying, “What is this? You bless him with victory. I am stuck with people like you!” Bhishma calmly replied to Duryodhana, “If you had sought Yudhisthira’s blessings, he would have also blessed you with victory. If someone comes and falls at your feet, you naturally touch his head and bless him. Only people with ego like you cannot bless another person!”</p>'
+                       +'<p>When you seek blessings from elders, you drop your ego momentarily and surrender at the other person’s feet. The other person also drops his ego momentarily and blesses you whole-heartedly. In this process, both mutually reap the benefit. People filled with ego walk away when someone wants to touch their feet</p>',
+                        author: 'Swami T',
+                       seriesId: 'Blessings(Mahabharat)',
+                       seq: '1',
+                       img: root + '/images/sai_unplugged.jpg'
+                   }, {
+                       posted: 'May 13 2016',
+                       postDate: new Date('May 13 2016 3:30 AM'),
+                       title: 'Baba’s promise',
+                       content: 'I have never neglected My devotees. I am the slave of My devotees. I have always stood by them and longed for their love. If you listen to me carefully, you will benefit. Sitting in this masjid, I never speak the untruth.',
+                       author: 'shirdi Sai Baba',
+                       seriesId: '-1',
+                       seq: '-1',
+                       img: root + '/images/dwarkamai_1.jpg'
+                   }, {
+                       posted: 'May 12 2016',
+                       postDate: new Date('May 12 2016 3:30 AM'),
+                       title: 'Stages of Bhakthi',
+                       content: 'Like the body which passes through childhood, boyhood, adolescence, middle age and old age, Bhakthi too has stages in its growth. The tender fruit of Bhakthi is called Love, the grown one is Devotion and the ripe fruit is Surrender.',
+                       author: '-Gems of Wisdom from Sri Sathya Sai Baba, p305',
+                       seriesId: 'Bhakti (Gems of Wisdom)',
+                       seq: 2,
+                       img: root + '/images/dwarkamai_1.jpg'
+                   }, {
+                       posted: 'May 11 2016',
+                       postDate: new Date('May 11 2016 2016 5:30 AM'),
+                       title: 'It is not easy to become a Bhaktha',
+                       content: 'Bhakthi is very difficult to acquire. Do not think it is easy to become a Bhaktha! As a matter of fact, it is even more difficult than Jnana (the path of knowledge). Bhakthi means full surrender and full contentment whatever may happen.',
+                       author: '-Gems of Wisdom from Sri Sathya Sai Baba, p309',
+                       seriesId: 'Bhakti (Gems of Wisdom)',
+                       seq: 1,
+                       img: root + '/images/sai_1221_1.jpg'
+                   }, {
+                       posted: 'May 10 2016',
+                       postDate: new Date('May 10 2016 3:30 AM'),
+                       title: 'Adi Sankara and Ramanuja Jayanthi',
+                       content: '<h5>Today is Adi Sankara and Ramanuja Jayanthi</h5>'
+                            + '<p><u>Life: Adi Shankaracharya</u>(788-820 A.D) was the greatest exponent of the theory of Non-Dualism or Advaita (the individual Self and God are one). He was born to a pious Brahmin couple Sivaguru and Aryaamba in a village named Kaladi in Kerala. He wanted to become a Sanyaasi (a celibate and renunciate) at a young age and his mother did not accept his proposal. One day, when Sankara was taking a bath in a nearby river, a crocodile caught his feet. He started crying, “Mother! Mother! This crocodile is pulling me into the water. It is not going to leave me until you permit me to become a Sanyaasi.” His mother, at last, gave him permission and Sankara was released by the crocodile'
+                            + '<br/><u>Deeper meaning:</u>The inner meaning of the episode is that the river is comparable to Samsaara (worldly life) and the crocodile is vishaya (sensual pleasures). Man is dragged into the river of worldly life by the crocodile of sensual pleasures. Release is possible only by renunciation or detachment.'
+                            + '<br/><u>His message:</u>Truth (Reality) can never change with time. Since the world changes with time, it is not real. Brahman (God) alone is real, this world is unreal; the Jeeva (individual Self) is none other than Brahman. (Brahma Satya Jagat Mithya Jeevo Brahmaiva Na Aparah). Adi Sankara wrote commentaries on Bhagavad Gita, Brahma Sutras and the Upanishads'
+                            + '<br/><u>Note:</u>Adi Shankaracharya, also known as Sankara Bhagavatpadacharya, is the greatest Hindu saint and Indian philosopher who consolidated the doctrine of Advaita Vedanta. Adi Shankara’s teachings were mainly based on Advaita (Non-dualism) – or the unity of Brahman and the soul. Adi Sankaracharya is also regarded as an incarnation of Lord Shiva, who took the avatar to teach and guide the Hindu religion.</p>'
+                            + '<p><u>Life: Sri Ramanujacharya</u>(1027-1147A.D) was a proponent of Vishistadvaita Philosophy (qualified Non-dualism) was born in Sri Perambudur, a village near Chennai. Ramanuja was very liberal in his outlook. He admitted even lower caste people (Harijans) to enter the temple of Tiru Narayana at Melkote in Karnataka state. He hugged even the downtrodden to his bosom. He wrote a commentary on Brahma Sutras and three books on Vedanta- Essence of Vedanta, A Resume of Vedanta and Light of Vedanta.'
+                            + '<br/><u>His message:</u>According to Vishistadvaita, God has attributes, which are real and permanent, but subject to His control. Jeevas (individual souls) always remain distinct from Him both in bondage and in liberation. In bondage, Jeeva is one with the matter; in liberation it is one with God, without its individuality being lost in either of these cases.</p>'
+                            ,
+                       author: '– Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
+                       seriesId: '-1',
+                       seq: '-1',
+                       img: root + '/images/sai_unplugged.jpg'
+                   }, {
+                       posted: 'May 09 2016',
+                       postDate: new Date('May 09 2016 3:30 AM'),
+                       title: 'The simplest Sadhana',
+                       content: 'Let no one suffer even the slightest pain as a result of your thought, word or actions. Let this be your simplest Sadhana.',
+                       author: '– Gems of Wisdom from Sri Sathya Sai Baba, p298.',
+                       seriesId: '-1',
+                       seq: '-1',
+                       img: root + '/images/sai_unplugged.jpg'
+                   }],
                      [{
                          posted: 'May 08 2016',
                          postDate: new Date('May 08 2016 3:30 AM'),

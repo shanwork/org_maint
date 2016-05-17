@@ -1,0 +1,31 @@
+﻿<div>
+    <h2>Status summary</h2>
+    <span>
+        Available : {{budgetStatus.BudgetAvailable}} (Liquid: {{budgetStatus.BudgetLiquidAvailable}}, Items cash equivalent:{{budgetStatus.BudgetItemsAvailable}})  
+        Allocated : {{budgetStatus.BudgetAllocated}}  Required : {{budgetStatus.BudgetRequired}} 
+        Last Updated {{budgetStatus.DateUpdated}}
+        <button ng-click="allocateFunds()" ng-show="{{budgetStatus.BudgetAvailable>0.0}}">Allocate</button>
+    </span>
+</div>
+<div>
+    <div style="float:left;">
+        <h2>Status snapshot history</h2>
+        <div ng-repeat="budgetStatusSnapshot in budgetStatusHistory">
+            <span>
+                Av: {{budgetStatusSnapshot.BudgetAvailable}}
+                Alc: {{budgetStatusSnapshot.BudgetAllocated}}  Req: {{budgetStatusSnapshot.BudgetRequired}}
+                Dt: {{budgetStatusSnapshot.DateUpdated}}
+            </span>
+        </div>
+    </div>
+    <div style="float:right;">
+        <h2>Transaction history</h2>
+        <div ng-repeat="budgetHistoryElement in budgetHistory">
+            <span>
+                Name: {{budgetHistoryElement.Name}}
+                Amt: {{budgetHistoryElement.Amount}}  
+                Type: {{budgetHistoryElement.DebitCredit}}
+            </span>
+        </div>
+    </div>
+</div>

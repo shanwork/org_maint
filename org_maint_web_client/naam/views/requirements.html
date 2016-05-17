@@ -1,0 +1,25 @@
+﻿
+<label for="requirementName">Name:</label>
+
+<input type="text" id="requirementName" ng-model="requirementName" placeholder="Enter Name"/>
+<label for="requirementType">Type:</label>
+<input type="text" id="requirementType" ng-model="requirementType" placeholder="Enter Type" /> 
+Funds required: {{fundsRequired}}, Allocated {{fundsAllocated}}
+<button style="float:right;" ng-click="addRequirement()">Add requirement</button>
+<div style="border:solid 1px black;margin-left:100px;">
+    <div ng-repeat="item in requirementItems">
+        <input type="text" ng-model="item.ItemName" placeholder="Item Name" />
+        <input type="text" ng-model="item.ItemCategory" placeholder="Category or Description"/>
+        <input type="number" ng-model="item.Quantity" placeholder="Quantity" />
+        <input type="number" ng-model="item.UnitPrice" ng-blur="calculateFundsRequired(item)" />
+        {{item.FundsRequired}}
+        <input type="number" ng-model="allocated" />
+    </div><button value="add item" ng-click="addItem()">Add Item</button>
+</div>
+
+<div ng-repeat="requirement in requirements">
+    Name: {{requirement.Name}}, Type: {{requirement.Type}},Funds Required {{requirement.FundsRequired}}, Funds Allocated {{requirement.FundsAllocated}}
+    <div ng-repeat="item in requirement.RequirementItems" style="margin-left:100px;">
+        Item {{item.ItemName}}, Category {{item.ItemCategory}}, Funds Required {{item.FundsRequired}}, Funds Allocated {{item.FundsAllocated}}
+    </div>
+</div>

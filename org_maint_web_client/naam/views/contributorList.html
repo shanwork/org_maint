@@ -1,0 +1,42 @@
+﻿<input type="text" ng-model="individ_or_groupName" placeholder="enter name"/>
+<input type="text" ng-model="individualOrGroup" placeholder="(I)ndiviual or (G)roup"/>
+<select ng-model="cashOrItem">
+    <option value="cash" selected>cash</option>
+    <option value="items">items</option>
+    <option value="both">both</option>
+</select>
+
+<select ng-model="currency" ng-change="convertCashAmount()">
+    <option value="INR, 1.00" selected>INR</option>
+    <option value="USD,61.25">USD</option>
+    <option value="GBP,85.78">GBP</option>
+    <option value="EUR,95.78">EUR</option>
+</select>
+<input type="number" ng-model="cashAmount" placeholder="Unconverted Amount" min="0.00" ng-blur="convertCashAmount()" />
+{{convertedCashAmount}}
+<input type="button" ng-click="addContributor()" value="Add" />
+List:
+<div ng-repeat="contributorElement in contributors">
+    <div>
+        <span>
+            Name:  {{contributorElement.individ_or_groupName}} 
+            Cash Amount: {{contributorElement.cashAmount}} in INR:
+            {{contributorElement.convertedCashAmount}} 
+        </span>
+    </div>
+</div>
+<!-- var contributor =
+          {
+              individ_or_groupName:
+              individualOrGroup :
+              cashOrItem :
+              currency:
+              conversion:
+              items: [],
+              totalItemAmount,
+              totalItemConvertedAmount,
+              cashAmount:
+              convertedCashAmount
+
+          }
+    -->

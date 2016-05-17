@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="animations/home.html">
-      <publishTime>05/07/2016 07:57:44</publishTime>
+      <publishTime>05/15/2016 18:58:28</publishTime>
     </File>
     <File Include="animations/scripts/app.js">
       <publishTime>05/04/2016 22:36:42</publishTime>
@@ -26,10 +26,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/04/2016 22:30:50</publishTime>
     </File>
     <File Include="animations/views/basicAnimation.html">
-      <publishTime>05/07/2016 07:35:04</publishTime>
+      <publishTime>05/09/2016 18:26:36</publishTime>
     </File>
     <File Include="animations/views/reactionTester.html">
-      <publishTime>05/07/2016 10:11:48</publishTime>
+      <publishTime>05/09/2016 18:38:24</publishTime>
     </File>
     <File Include="app/app.js">
       <publishTime>03/04/2016 07:03:30</publishTime>
@@ -40,17 +40,80 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="app/controllers/ordersController.js">
       <publishTime>11/20/2015 06:48:14</publishTime>
     </File>
+    <File Include="app/directives.js">
+      <publishTime>05/09/2016 10:06:26</publishTime>
+    </File>
     <File Include="app/views/customers.html">
       <publishTime>11/20/2015 06:39:30</publishTime>
     </File>
+    <File Include="app/views/MainMenu.html">
+      <publishTime>05/09/2016 10:06:07</publishTime>
+    </File>
     <File Include="app/views/orders.html">
       <publishTime>11/20/2015 06:39:30</publishTime>
+    </File>
+    <File Include="assignments/home.html">
+      <publishTime>05/17/2016 10:45:08</publishTime>
+    </File>
+    <File Include="assignments/images/HubNetwork.png">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/images/HubNetwork_Amrutavani.png">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/images/HubNetwork_var1.png">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/images/HubNetwork_var1a.png">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/images/intricateNetwork.png">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/images/nectarWordNetwork.png">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/images/simpleMVC.png">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/scripts/app.js">
+      <publishTime>05/17/2016 06:27:58</publishTime>
+    </File>
+    <File Include="assignments/scripts/Controllers/AboutThisSiteController.js">
+      <publishTime>05/17/2016 06:21:53</publishTime>
+    </File>
+    <File Include="assignments/scripts/Controllers/GitAPIController.js">
+      <publishTime>05/17/2016 10:05:08</publishTime>
+    </File>
+    <File Include="assignments/scripts/globals/Hub.js">
+      <publishTime>05/17/2016 10:05:19</publishTime>
+    </File>
+    <File Include="assignments/styling/assignments.css">
+      <publishTime>05/17/2016 10:13:54</publishTime>
+    </File>
+    <File Include="assignments/styling/nectar preTheming.css">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/styling/nectar_ver1.css">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/views/aboutThisSite.html">
+      <publishTime>05/17/2016 11:00:56</publishTime>
+    </File>
+    <File Include="assignments/views/caseStudyWhatUAte.html">
+      <publishTime>05/17/2016 06:19:37</publishTime>
+    </File>
+    <File Include="assignments/views/gitApi.html">
+      <publishTime>05/17/2016 11:00:11</publishTime>
+    </File>
+    <File Include="assignments/views/principals.html">
+      <publishTime>05/17/2016 06:19:37</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="bin/org_maint_web_client.dll">
-      <publishTime>05/07/2016 10:12:26</publishTime>
+      <publishTime>05/17/2016 11:01:05</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/15/2015 07:10:03</publishTime>
@@ -193,6 +256,39 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="comingNext/home.html">
       <publishTime>01/05/2016 06:54:18</publishTime>
     </File>
+    <File Include="Ganesha/Ashtavinayak.html">
+      <publishTime>05/14/2016 14:35:24</publishTime>
+    </File>
+    <File Include="Ganesha/Feedback.html">
+      <publishTime>05/14/2016 15:53:01</publishTime>
+    </File>
+    <File Include="Ganesha/home.html">
+      <publishTime>05/15/2016 15:14:05</publishTime>
+    </File>
+    <File Include="Ganesha/images/ganesh_icon.jpg">
+      <publishTime>05/14/2016 07:52:53</publishTime>
+    </File>
+    <File Include="Ganesha/images/jai_ganesh_deva_poster.png">
+      <publishTime>05/15/2016 14:28:34</publishTime>
+    </File>
+    <File Include="Ganesha/multimedia/videos/Jai_Ganesh_Deva_Aarti.mp4">
+      <publishTime>05/15/2016 08:11:02</publishTime>
+    </File>
+    <File Include="Ganesha/multimedia/videos/Jai_Ganesh_Deva_Aarti.webm">
+      <publishTime>05/15/2016 09:12:12</publishTime>
+    </File>
+    <File Include="Ganesha/multimedia/videos/mikethefrog.mp4">
+      <publishTime>05/15/2016 09:05:44</publishTime>
+    </File>
+    <File Include="Ganesha/multimedia/videos/mikethefrog.ogv">
+      <publishTime>05/15/2016 09:05:46</publishTime>
+    </File>
+    <File Include="Ganesha/multimedia/videos/mikethefrog.webm">
+      <publishTime>05/15/2016 09:05:47</publishTime>
+    </File>
+    <File Include="Ganesha/styles/mainStyle.css">
+      <publishTime>05/15/2016 15:06:03</publishTime>
+    </File>
     <File Include="HubMVC/home.html">
       <publishTime>04/20/2016 07:04:21</publishTime>
     </File>
@@ -263,10 +359,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 12:45:45</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>04/20/2016 06:50:29</publishTime>
+      <publishTime>05/15/2016 18:56:24</publishTime>
+    </File>
+    <File Include="naam/home.html">
+      <publishTime>05/16/2016 09:46:10</publishTime>
+    </File>
+    <File Include="naam/scripts/app.js">
+      <publishTime>05/16/2016 09:37:34</publishTime>
+    </File>
+    <File Include="naam/scripts/controllers/BudgetStatusController.js">
+      <publishTime>05/16/2016 19:27:17</publishTime>
+    </File>
+    <File Include="naam/scripts/controllers/ContributorController.js">
+      <publishTime>05/16/2016 18:05:51</publishTime>
+    </File>
+    <File Include="naam/scripts/controllers/RequirementsController.js">
+      <publishTime>05/16/2016 18:58:15</publishTime>
+    </File>
+    <File Include="naam/scripts/globals/Hub.js">
+      <publishTime>05/16/2016 19:26:43</publishTime>
+    </File>
+    <File Include="naam/styling/hubTemplate.css">
+      <publishTime>05/09/2016 19:58:05</publishTime>
+    </File>
+    <File Include="naam/views/budgetStatus.html">
+      <publishTime>05/16/2016 19:27:42</publishTime>
+    </File>
+    <File Include="naam/views/contributorList.html">
+      <publishTime>05/16/2016 18:09:27</publishTime>
+    </File>
+    <File Include="naam/views/requirements.html">
+      <publishTime>05/16/2016 18:52:32</publishTime>
     </File>
     <File Include="nectar-words/home.html">
-      <publishTime>05/02/2016 09:50:37</publishTime>
+      <publishTime>05/09/2016 11:14:47</publishTime>
     </File>
     <File Include="nectar-words/images/dwarkamai_1.JPG">
       <publishTime>02/01/2016 07:21:52</publishTime>
@@ -365,13 +491,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/09/2016 16:13:52</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Q2_2016.js">
-      <publishTime>05/01/2016 06:11:08</publishTime>
+      <publishTime>05/16/2016 23:44:52</publishTime>
     </File>
     <File Include="nectar-words/styling/nectar preTheming.css">
       <publishTime>03/30/2016 07:48:22</publishTime>
     </File>
     <File Include="nectar-words/styling/nectar.css">
-      <publishTime>05/01/2016 05:36:19</publishTime>
+      <publishTime>05/16/2016 23:03:06</publishTime>
+    </File>
+    <File Include="nectar-words/styling/nectar_greenblue.css">
+      <publishTime>05/16/2016 22:44:57</publishTime>
     </File>
     <File Include="nectar-words/styling/nectar_ver1.css">
       <publishTime>03/27/2016 20:01:22</publishTime>
@@ -446,7 +575,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/15/2016 06:33:44</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/07/2016 10:12:36</publishTime>
+      <publishTime>05/17/2016 11:01:20</publishTime>
     </File>
     <File Include="what-u-ate/home.html">
       <publishTime>04/14/2016 18:33:46</publishTime>

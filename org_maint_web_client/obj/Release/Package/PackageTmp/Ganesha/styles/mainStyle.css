@@ -1,0 +1,57 @@
+﻿body {
+    background-color:lightgoldenrodyellow;
+}
+#logo
+{
+  background-color:burlywood;
+  height:94px;
+  padding:4px;
+  border: inset 4px brown;
+  border-radius:5px;
+  /*  background-image:url(../images/ganesh_icon.jpg);*/
+   
+}
+nav{
+ /* height:35px;
+  text-wrap:none;*/
+ 
+}
+ul li
+{
+   
+   text-orientation:sideways;
+}
+form
+{
+    padding:2px;
+    border: 2px ridge silver;
+    max-width:410px;
+}
+.field
+{
+    border:1px ridge #EEFFFF;
+    margin:0px;
+    background-color:lightyellow;
+    padding:3px;
+    padding-top:5px;
+    max-width:400px;
+    height:auto;
+}
+.field input,textarea
+{
+    float:right;
+    padding-right:10px;
+}
+.rightEdge
+{
+    float:right;
+    margin-right:5px;
+}
+article{
+    border:2px solid brown;
+    border-radius:4px;
+    background-color:lightyellow;
+    padding:3px;
+    padding-top:5px;
+    height:auto;
+}

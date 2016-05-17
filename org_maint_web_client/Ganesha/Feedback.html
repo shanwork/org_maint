@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>All About Shree Ganesh </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/mainStyle.css" />
+</head>
+<body>
+
+    <div id="container">
+        <!-- Header -->
+        <header>
+            <!-- logo -->
+            <div id="logo">
+                <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:left;" />
+                <h1 style="float:left;">Shree Ganesh - The Remover of Obstacles - Information  </h1>
+
+                <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:right;" />
+            </div>
+            <nav>
+                Navigation Links
+                <a href="../index.html"><b>Parent Website</b></a>
+                <a href="home.html">Home page</a>
+                <a href="Ashtavinayak.html">The 'Swayambhu' Ashtavinyaks</a>
+                <a href="Feedback.html">Feedback</a>
+             </nav>
+        </header>
+        <!-- Main content -->
+        <div>
+            <!-- internal navigation -->
+            <div id="page-content"><h2>Feedback</h2></div>
+           
+            <!--- SPA content -->
+            <section id="content-text">
+                <form action="home.html" method="get">
+                    <fieldset>
+                        
+                        <div class="field">
+                            <label for="name" value="Your Name (First MI Last)">Your Name (First MI Last)</label>
+                            <input type="text" name="name" id="name" placeholder="Enter name" autofocus required/>
+                        </div>
+                        <div class="field">
+                            <label for="emailAddress">Email</label>
+                            <input type="email" name="emailAddress" id="emailAddress" placeholder="Email" />
+                        </div>
+                        <div class="field">
+                            <label for="dateFd">Date for feedback</label>
+                            <input type="datetime-local" name="dateFd" id="dateFd" placeholder="Date" />
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Phone (X-)-XXX(X)-XXXX" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="field">
+                            <label for="opinionSummary">One Word opinion</label>
+                            <input type="text" name="opinionSummary" list="opinionSummaryList">
+
+                            <datalist id="opinionSummaryList">
+                                <option value="Great"> 
+                                <option value="OK">
+                                <option value="Boring">
+                                <option value="Bad">
+                            </datalist>
+                            <label for="rangeOfOpinion">Opinion in a nutshell</label>
+                            <select name="rangeOfOpinion" id="rangeOfOpinion">
+                                <optgroup label="Dairy" title="Dairy">
+                                    <option>Milk</option>
+                                    <option>Egg</option>
+                                    <option>Cheese</option>
+                                </optgroup>
+                                <optgroup label="Bakery" title="Bakery">
+                                    <option>Bread</option>
+                                    <option>Rolls</option>
+                                    <option>Baguette</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="comments">Overall Website Comments</label>
+                            <textarea name="comments" id="comments" placeholder="Enter your comments here" required></textarea><br />
+                        </div>
+                    </fieldset>
+                        <div class="field">
+                            <label for="submitForm">Submit</label>
+                            <input type="submit" name="submitForm" />
+                        </div>
+                   
+                </form>
+            </section>
+            <footer><small>connect with me!! email me at webfeedback2016@gmail.com</small></footer>
+        </div>
+    </div>
+
+</body>
+</html>
