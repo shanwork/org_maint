@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html style="min-height:90%">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styling/hubTemplate.css" rel="stylesheet" type="text/css" />
+    <style>
+        .initialCircle2 {
+            border: 5px ridge maroon;
+            position: absolute;
+            top: 10px;
+            float:right;
+           left: 1000px; 
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            overflow: auto;
+        }
+
+        .midCircle {
+            border: 5px ridge orangered;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            overflow: auto;
+            display: none;
+        }
+
+        .rightCircle {
+            border: 5px ridge orange;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            overflow: auto;
+            display: none;
+        }
+    </style>
+
+    <title>Random Animation</title>
+
+</head>
+<body  >
+   
+    <div id="playground" 
+         style="position:absolute; top: 100px; left:10px;border: 5px inset gray;  background-color:silver;min-width: 70%;min-height:500px;border-radius:10px;margin: 2px 100px 2px 2px;margin-bottom:2px;">
+    &nbsp;</div>
+    <div class="initialCircle2" id="circle1" style="float:right;margin-right:5px;"   > </div>
+    <span id="counter"></span><br /><input type="text" id="interval" value="1000"/>
+  <script src="../scripts/randomAnimations.js"></script>
+</body>
+</html>

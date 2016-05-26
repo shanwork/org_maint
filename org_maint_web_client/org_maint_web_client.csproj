@@ -66,8 +66,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="animations\bouncingBall.html" />
+    <Content Include="animations\scripts\randomAnimations.js" />
     <Content Include="animations\views\basic.html" />
     <Content Include="animations\views\basicAnimation.html" />
+    <Content Include="animations\views\randomAnimation.html" />
     <Content Include="animations\views\reactionTester.html" />
     <Content Include="app\app.js" />
     <Content Include="app\controllers\customersController.js" />
@@ -115,6 +118,7 @@
     <Content Include="Ganesha\home.html" />
     <Content Include="Ganesha\images\ganesh_icon.jpg" />
     <Content Include="Ganesha\images\jai_ganesh_deva_poster.png" />
+    <Content Include="Ganesha\multimedia\audio\Tuzha_Magato_Me_Aata.mp3" />
     <Content Include="Ganesha\multimedia\videos\Jai_Ganesh_Deva_Aarti.mp4" />
     <Content Include="Ganesha\multimedia\videos\mikethefrog.mp4" />
     <Content Include="Ganesha\styles\mainStyle.css" />
@@ -140,6 +144,7 @@
     <Content Include="HubMVC\home.html" />
     <Content Include="HubMVC\images\HubNetwork.png" />
     <Content Include="HubMVC\images\HubNetwork_Amrutavani.png" />
+    <Content Include="HubMVC\images\HubNetwork_Budget.png" />
     <Content Include="HubMVC\images\HubNetwork_var1.png" />
     <Content Include="HubMVC\images\HubNetwork_var1a.png" />
     <Content Include="HubMVC\images\intricateNetwork.png" />
@@ -162,16 +167,19 @@
     <Content Include="animations\styling\hubTemplate.css" />
     <Content Include="naam\home.html" />
     <Content Include="naam\scripts\app.js" />
+    <Content Include="naam\scripts\controllers\AboutAndSettingsController.js" />
     <Content Include="naam\scripts\controllers\BudgetStatusController.js" />
     <Content Include="naam\scripts\controllers\ContributorController.js" />
     <Content Include="naam\scripts\controllers\RequirementsController.js" />
     <Content Include="naam\scripts\globals\Hub.js" />
+    <Content Include="naam\scripts\homeController.js" />
     <Content Include="naam\styling\hubTemplate.css" />
     <Content Include="hubTemplate\home.html" />
     <Content Include="hubTemplate\scripts\app.js" />
     <Content Include="hubTemplate\scripts\globals\Hub.js" />
     <Content Include="hubTemplate\styling\hubTemplate.css" />
     <Content Include="index.html" />
+    <Content Include="naam\views\aboutAndSettings.html" />
     <Content Include="naam\views\budgetStatus.html" />
     <Content Include="naam\views\contributorList.html" />
     <Content Include="naam\views\requirements.html" />
@@ -258,7 +266,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\amrutvani\" />
-    <Folder Include="Ganesha\multimedia\audio\" />
     <Folder Include="Ganesha\views\" />
     <Folder Include="hubTemplate\views\" />
   </ItemGroup>

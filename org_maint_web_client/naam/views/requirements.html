@@ -4,7 +4,7 @@
 <input type="text" id="requirementName" ng-model="requirementName" placeholder="Enter Name"/>
 <label for="requirementType">Type:</label>
 <input type="text" id="requirementType" ng-model="requirementType" placeholder="Enter Type" /> 
-Funds required: {{fundsRequired}}, Allocated {{fundsAllocated}}
+Original Funds required: {{fundsRequired}}, Oustanding Funds: {{fundsOutstanding}}, Allocated: {{fundsAllocated}}
 <button style="float:right;" ng-click="addRequirement()">Add requirement</button>
 <div style="border:solid 1px black;margin-left:100px;">
     <div ng-repeat="item in requirementItems">
@@ -18,7 +18,8 @@ Funds required: {{fundsRequired}}, Allocated {{fundsAllocated}}
 </div>
 
 <div ng-repeat="requirement in requirements">
-    Name: {{requirement.Name}}, Type: {{requirement.Type}},Funds Required {{requirement.FundsRequired}}, Funds Allocated {{requirement.FundsAllocated}}
+    Name: {{requirement.Name}}, Type: {{requirement.Type}},Funds Required {{requirement.FundsRequired}}, Funds Outstanding {{requirement.FundsOutstanding}}, Funds Allocated {{requirement.FundsAllocated}}, Ditributed {{requirement.FundsDistributed}}
+    <button ng-click="distributeFunds( $index )" ng-show="{{requirement.FundsAllocated>0.0 && requirement.FundsAllocated > requirement.FundsDistributed}}">Distribute</button>
     <div ng-repeat="item in requirement.RequirementItems" style="margin-left:100px;">
         Item {{item.ItemName}}, Category {{item.ItemCategory}}, Funds Required {{item.FundsRequired}}, Funds Allocated {{item.FundsAllocated}}
     </div>

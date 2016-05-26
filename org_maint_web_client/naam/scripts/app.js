@@ -23,9 +23,9 @@
                 controller: 'BudgetStatusController',
                 templateUrl: 'views/budgetStatus.html'
             })
-             .when('/about', {
-             //    controller: 'AboutThisSiteController',
-                 templateUrl: 'views/aboutThisSite.html'
+             .when('/aboutAndSettings', {
+                 controller: 'AboutAndSettingsController',
+                 templateUrl: 'views/aboutAndSettings.html'
              })
             .when('/home', {
                 templateUrl: '../../index.html'

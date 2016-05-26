@@ -1,0 +1,18 @@
+﻿<div style="overflow:scroll;overflow-wrap:break-word;">
+    <div style="float:left;border:7px ridge;border-radius:8px; min-height:600px;  padding:3px;max-width:79%" >
+        <h2>About this Site</h2>
+        <p>
+            This is an attempt to show case a prood of concept of Hub View Controller Design pattern I have thought about and came up
+            when working with angular applications.
+        </p>
+    </div>
+    <div style="float:right;border:7px ridge;border-radius:8px; min-height:600px; padding:3px;max-width:20% ">
+        <h2>Settings</h2>
+        <p>The final iteration of this project aims to reach out to a nodejs server which will take care of the data base stuff.
+        <br /> At this point, however, I will use the angular $localStorage to persist data. </p>
+        Persist Data? <input type="checkbox" ng-model="persistData" ng-change="setPersistence()" />
+        <input type="button" ng-show="persistData==true" value="Clear Cache" ng-click="clearCache()"/>
+        Automatically allocate funds from budget to requirements <input type="checkbox" ng-model="autoAllocate" ng-change="setAutoAllocate()" />
+        Automatically distribute funds from requirementsto items <input type="checkbox" ng-model="autoDistribute" ng-change="setAutoDistribute()" />
+    </div>
+</div>
