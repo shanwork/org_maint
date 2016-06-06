@@ -1,31 +1,84 @@
-﻿<div>
+﻿ 
     <h2>Status summary</h2>
-    <span>
-        Available : {{budgetStatus.BudgetAvailable}} (Liquid: {{budgetStatus.BudgetLiquidAvailable}}, Items cash equivalent:{{budgetStatus.BudgetItemsAvailable}})  
-        Allocated : {{budgetStatus.BudgetAllocated}}  Required : {{budgetStatus.BudgetRequired}} 
-        Last Updated {{budgetStatus.DateUpdated}}
-        <button ng-click="allocateFunds()" ng-show="{{budgetStatus.BudgetAvailable>0.0}}">Allocate</button>
-    </span>
-</div>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped" 1" cellpadding="0" cellspacing="0" class="table" data-ng-init="showGraph()">
+                <tr>
+                    <th>Available</th>
+                    <td>{{budgetStatus.BudgetAvailable}} (Liquid: {{budgetStatus.BudgetLiquidAvailable}}, Items cash equivalent:{{budgetStatus.BudgetItemsAvailable}})  </td>
+
+                </tr>
+                <tr>
+                    <th>Allocated</th>
+                    <td>{{budgetStatus.BudgetAllocated}}</td>
+                </tr>
+                <tr>
+                    <th>Deficit</th>
+                    <td>{{budgetStatus.BudgetRequired}}</td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <button  id="allocate" ng-click="allocateFunds()" >Allocate</button>
+                     
+                    </td>
+                    <td>
+                        <input type='text' data-ng-model="budgetStatus.BudgetAvailable" style="background-color:silver;color:gray;" readonly title="wip.. when functional, will enable for allocating a different amount from available"/>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+      
+    </div>
+   
 <div>
-    <div style="float:left;">
+    <div class="col-sm-6" style="overflow:auto;">
         <h2>Status snapshot history</h2>
-        <div ng-repeat="budgetStatusSnapshot in budgetStatusHistory">
-            <span>
-                Av: {{budgetStatusSnapshot.BudgetAvailable}}
-                Alc: {{budgetStatusSnapshot.BudgetAllocated}}  Req: {{budgetStatusSnapshot.BudgetRequired}}
-                Dt: {{budgetStatusSnapshot.DateUpdated}}
-            </span>
-        </div>
+        <table border="1" cellpadding="0" cellspacing="0" width="300"    >
+            <tr>
+                <th class="col-sm-1" ng-click="doSort('DateUpdated')">Date</th>
+                <th class="col-sm-1" ng-click="doSort('BudgetAvailable')">Available</th>
+                <th class="col-sm-1" ng-click="doSort('BudgetAllocated')">Allocated </th>
+                <th class="col-sm-1" ng-click="doSort('BudgetRequired')">Required </th>
+            </tr>
+            <tr>
+                <th><input type="text" ng-model="budgetStatusHistoryFilter.DateUpdated" /></th>
+                <th><input type="text" ng-model="budgetStatusHistoryFilter.BudgetAvailable"> </th>
+                <th> <input type="text" ng-model="budgetStatusHistoryFilter.BudgetAllocated">  </th>
+                <th> <input type="text" ng-model="budgetStatusHistoryFilter.BudgetRequired">  </th>
+            </tr>
+            <tr ng-repeat="budgetStatusSnapshot in budgetStatusHistory| filter:budgetStatusHistoryFilter | orderBy:sortBy:reverse" ">
+                <td>{{budgetStatusSnapshot.DateUpdated |date:'MMM dd yyyy'}}</td>
+                <td>{{budgetStatusSnapshot.BudgetAvailable}}</td>
+                <td>{{budgetStatusSnapshot.BudgetAllocated}}</td>
+                <td>{{budgetStatusSnapshot.BudgetRequired}}</td>
+            </tr>
+        </table>
     </div>
-    <div style="float:right;">
+    <div class="col-sm-6">
         <h2>Transaction history</h2>
-        <div ng-repeat="budgetHistoryElement in budgetHistory">
-            <span>
-                Name: {{budgetHistoryElement.Name}}
-                Amt: {{budgetHistoryElement.Amount}}  
-                Type: {{budgetHistoryElement.DebitCredit}}
-            </span>
-        </div>
+        <table border="1" cellpadding="0" cellspacing="0" class="table table-special"  >
+            <tr>
+                <th ng-click="doSort('Amount')" >Amount</th>
+                <th ng-click="doSort('DebitCredit')">Debit or Credit</th>
+                <th ng-click="doSort('Date')">Dates </th>
+                <th ng-click="doSort('Name')">Principal </th>
+            </tr>
+            <tr>
+                <th><input type="text" ng-model="budgetHistoryFilter.Amount" /></th>
+                <th><input type="text" ng-model="budgetHistoryFilter.DebitCredit"> </th>
+                <th> <input type="text" ng-model="budgetHistoryFilter.DateString">  </th>
+                <th> <input type="text" ng-model="budgetHistoryFilter.Name">  </th>
+            </tr>
+            <tr ng-repeat="budgetHistoryElement in budgetHistory | filter:budgetHistoryFilter | orderBy:sortBy:reverse" ">
+                <td>{{budgetHistoryElement.Amount}}</td>
+                <td>{{budgetHistoryElement.DebitCredit}}</td>
+                <td>{{budgetHistoryElement.DateUpdated |date:'MMM dd yyyy'}}</td>
+                <td>{{budgetHistoryElement.Name}}</td>
+            </tr>
+        </table>
+        
     </div>
 </div>
+ 

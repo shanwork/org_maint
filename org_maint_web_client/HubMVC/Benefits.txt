@@ -1,0 +1,8 @@
+Using Hub is very convenient.
+1. It avoids cyclical dependencies and potential multiple injections (Cite examples)
+2. A one place stop shop for making changes
+   e.g. at this stage, after I add a contributor:
+   - after adding the controller, the budget status gets updated, and records for budget status snapshot and budget history are updated
+   - then I would click the allocate button on the budget status page to allocate to requiring entities
+    NOW, if I want to automate the allocation, all I have to do is modify the functionality in the Hub class, wherein, I simply invoke the
+    allocate function in the addContributor function

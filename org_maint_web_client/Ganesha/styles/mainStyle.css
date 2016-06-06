@@ -4,8 +4,8 @@
 #logo
 {
   background-color:burlywood;
-  height:94px;
-  padding:4px;
+  height:100px;
+  padding:2px;
   border: inset 4px brown;
   border-radius:5px;
   /*  background-image:url(../images/ganesh_icon.jpg);*/
@@ -20,6 +20,10 @@ ul li
 {
    
    text-orientation:sideways;
+}
+nav
+{
+    margin-top:3px;
 }
 form
 {
@@ -44,15 +48,38 @@ form
 }
 .rightEdge
 {
-
+     
+    margin-right:2px;
     float:right;
-    margin-right:5px;
+    border:4px ridge;
+    border-radius:5px;
+    border-color:orangered;
+    background-color:goldenrod;
+    overflow:auto;
 }
 article{
     border:2px solid brown;
     border-radius:4px;
-    background-color:lightyellow;
+    background-color:sandybrown;
     padding:3px;
     padding-top:5px;
     height:auto;
+}
+#container{
+    min-width:1000px;
+}
+.enclosedArticle
+{
+    border:inset 4px saddlebrown;
+    background-color:burlywood;
+    padding:2px;
+}
+.articlePic
+{
+
+}
+.articlePic img
+{
+    margin-right:3px;
+    border:ridge 2px gold;
 }

@@ -1,0 +1,14 @@
+﻿body {
+}
+div
+{
+    margin:0px;
+    padding:0px;
+   // border:5px groove;
+   // overflow: no-content;
+}
+.table .table-special
+{
+    border:20px;
+    background-color:pink;
+}

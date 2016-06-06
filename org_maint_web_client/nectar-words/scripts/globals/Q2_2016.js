@@ -17,101 +17,72 @@ angular.module('nectar_words_app')
       var allWeeksSaying =
          [
               [{
-                  posted: 'May 24 2016',
-                  postDate: new Date('May 24 2016 3:30 AM'),
-                  title: 'What happens when you come out of a Movie Theater?',
-                  content: 'Just consider- do you come out of the Cinema Theatre more peaceful, more heroic, purer, nobler than when you went in? No. Your passions are aroused, your animal impulses are catered for, your lower nature is fed. Nothing else can give you that rich reward, which silence, prayer and communion with the Lord can give.  Not even a decent bank account or a string of degrees.',
-                  author: ' Sadhana- the Inward Path by Sri Sathya Sai Baba, p88',
-                  seriesId: '-1',
-                  seq: '-1',
-                  img: root + '/images/sai_unplugged.jpg'
-              }, {
-                  posted: 'May 23 2016',
-                  postDate: new Date('May 23 2016 3:30 AM'),
-                  title: 'Key to peace',
-                  content: 'The key to peace and joy is the complete faith that one is an instrument in God’s hand for the execution of His divine plan',
-                  author: 'Sri Sathya Sai Baba',
-                  seriesId: 'Blessings(Mahabharat)',
-                  seq: '2',
-                  img: root + '/images/dwarkamai_1.jpg'
-              }, {
-                  posted: 'May 22 2016',
-                  postDate: new Date('May 22 2016 3:30 AM'),
-                  title: 'True education',
-                  content: 'True education is one that unites man and God as one. A righteous life is one which looks at all wealth as a source of sorrow and pleasures as different shades of myth. Unless you ignore the outer attractions, you cannot see the scintillating Lord within your heart. The more and more you are involved in the outer world, the less and less you realize the beauties of the Lord residing in you. Never expect abatement of desires to develop to detach from family bonds. Desires grow with double vigor immediately after satisfaction. It is like waiting for the sea waves to recede to take bath. In the hour of pain and strain, everything is in vain except the grace divine!',
-                  author: 'Saint Annamacharya (Yesterday was Saint Annamacharya’s birthday. 1408-1503)',
-                  seriesId: '-1',
-                  seq: '-1',
-                  img: root + '/images/sai_unplugged.jpg'
-              }, {
-                  posted: 'May 21 2016',
-                  postDate: new Date('May 21 2016 3:30 AM'),
-                  title: 'The real sacrifice',
-                  content: '<p>Let us be at peace. Perfect peace with ourselves!</p>'
-                    + '<p>Give up our whole body and mind and everything as an eternal sacrifice unto God.</p>'
-                    + '<p>Instead of the sacrifice of pouring oblations into the fire,</p>'
-                    + '<p>Perform this one great sacrifice day and night </p>'
-                    + '<p>The sacrifice of your little ego.</p>',
-                  author: 'Swami Vivekananda in Complete Works, V(1), p 102.',
+                  posted: 'May 31 2016',
+                  postDate: new Date('May 31 2016 3:30 AM'),
+                  title: 'God does service too!',
+                  content: 'Lord Krishna was all-knowing, all-powerful and an Avatar, yet He worked as a charioteer for Arjuna. Krishna was one who recognized the importance of service to the community. By His own example, He showed that service to others was very important. Every day, after the war of Mahabharata, Krishna took the horses to the river, washed them and tended to their wounds and applied medicines. Krishna demonstrated that hard work and compassion to all living beings constitute the duty of all human beings.',
+                  author: 'Sri Sathya Sai Baba in Summer Roses in Blue Mountains, 1976, Ch.3',
                   seriesId: '-1',
                   seq: '-1',
                   img: root + '/images/sai_1221_1.jpg'
               }, {
-                  posted: 'May 20 2016',
-                  postDate: new Date('May 20 2016 3:30 AM'),
-                  title: 'Call out to God sincerely!',
-                  content: 'When you call out to God in all sincerity, the response will certainly come. Give up all low desires and call from the anguished heart. Do not pray from the lips, as you do now, from the Puja room which is but a corner of the kitchen! You worship the Lord with an eye on the dishes cooking on the oven, while the nose is inhaling hungrily the smells of boiling curries! Your thoughts of God are vitiated by the attachment to sensory objects (Vishaya-vasana). ',
-                  author: 'Sadhana, The Inward Path by Sri Sathya Sai Baba, pp161-162',
-                  seriesId: 'Bhakti (Gems of Wisdom)',
-                  seq: 2,
+                  posted: 'May 30 2016',
+                  postDate: new Date('May 30 2016 3:30 AM'),
+                  title: 'Alas, it is not a Memorable Day but Memorial Day!',
+                  content: '<p>I only regret that I have but one life to lose for my country. – <strong>Nathan Hale</strong></p>'
+                    + '<p>tt is those who kept the faith and fought the fight;<br>&nbsp;The glory is theirs, but the duty is ours – <strong>Wallace Bruce</strong></p>'
+                    + '<p>A hero is someone who has given his or her life to something bigger than oneself. – <strong>Joseph Campbell</strong></p>'
+                    + '<p>In the end, we will remember not the words of our enemies, but the silence of our fallen friends. - <strong>Martin Luther King</strong> </p>'
+                    + '<p>A man’s country is not a certain area of land, of mountains, rivers and woods, but it is a principle, patriotism and loyalty to that principle. – <strong>George William Curtis</strong></p>',
+                  author: 'Multiple',
+                  seriesId: '-1',
+                  seq: '-1',
                   img: root + '/images/sai_unplugged.jpg'
               }, {
-                  posted: 'May 19 2016',
-                  postDate: new Date('May 19 2016 2016 5:30 AM'),
-                  title: 'Narasimha Jayanthi',
-                  content: '<p>People generally remember Rama Navami and Krishna Janmashtami but they forget Narasimha Jayanthi. Starting from Narasimha Avatar, Lord Vishnu begins to take the human form.  Sri Ramakrishna Paramahamsa says, “Man can love God only if He comes in human form.”</p>'
-
-
-         + '<p>&nbsp;&nbsp;Today is Narasimha Jayanthi. Narasimha is the fourth incarnation of Lord Vishnu in man-lion form, who killed Hiranyakashipu. Hiranyakashipu hated Vishnu because his younger brother Hiranyaksha was killed by Vishnu in a previous incarnation as a boar. Hiranyakashipu had obtained a boon from Brahma (the Lord of creation) that death would not come to him from a man or beast, either during the day or night, either indoors or outdoors, on earth or in the sky.</p>'
-
-         + '<p>&nbsp;&nbsp;Prahlada, the son of Hiranyakashipu, was a great devotee of Vishnu, much to the disappointment of his father. He asked Prahlada, "You always talk about Vishnu as the supreme Lord who is all pervading. But where is he? If he is everywhere, why is he not present in this pillar?" Prahlada replied, "He is in the pillar. He is in the smallest twig. He is also in the words that you spoke just now!" Hiranyakashipu became angry and smashed the pillar with his mace. Immediately, Lord Narasimha appeared in man-lion in form, during twilight, at the doorway, placed Hiranyakashipu on his thighs and killed him with His finger nails. No one was able to calm Lord Narasimha\'s fury. At the request of Brahma, Prahlada was finally presented to the Lord and he pacified the Lord by his prayers. Many Hindu families have Lord Narasimha as their family deity.</p>',
-                  author: '',
-                  seriesId: 'Bhakti (Gems of Wisdom)',
-                  seq: 1,
+                  posted: 'May 29 2016',
+                  postDate: new Date('May 29 2016 3:30 AM'),
+                  title: ' India’s Freedom',
+                  content: '<p>India has never waged a war against any nation. She has put up sometimes a half-organized resistance in self-defense, pure and simple. She has therefore, no need to develop the will for Peace. She has that in abundance whether she knows it or not! – Mahatma Gandhi in Young India, July 4, 1929.</p><p>India’s freedom must revolutionize the world’s outlook upon peace and war. Her inability to fight affects the whole of mankind</p>',
+                  author: 'Mahatma Gandhi in Young India, Sept 17, 1925.',
+                  seriesId: '-1',
+                  seq: -1,
+                  img: root + '/images/sai_1221_1.jpg'
+              }, {
+                  posted: 'May 28 2016',
+                  postDate: new Date('May 28 2016 2016 5:30 AM'),
+                  title: 'The ways of Peace',
+                  content: 'India’s destiny lies not along the bloody way of the West, which shows no signs of tiredness, but along the bloodless way of peace that comes from a simple and Godly life. She must be strong enough to resist the temptation from the West for her own sake and that of the world. ',
+                  author: 'Mahatma Gandhi in Young India, Oct 7, 1926.',
+                  seriesId: '-1',
+                  seq: -1,
                   img: root + '/images/dwarkamai_1.jpg'
               }, {
-                  posted: 'May 18 2016',
-                  postDate: new Date('May 18 2016 3:30 AM'),
-                  title: 'Wasting human life',
-                  content: 'Is there a man, who, having somehow gained the human birth, having a right temperament and also having a complete knowledge of the scriptures, is foolish enough not to strive for Self-realization? He verily commits suicide, clinging to things that are unreal.'
+                  posted: 'May 27 2016',
+                  postDate: new Date('May 27 2016 3:30 AM'),
+                  title: 'Looking forward to Memorial Day weekend?',
+                  content: 'To many, Memorial Day, is just an excuse for a three-day weekend. It is also known as the day that marks the official start of summer and as a day devoted to getting great deals at the mall. However, the true meaning of Memorial Day goes far beyond barbecues and mattress sales. '
                             ,
-                  author: '– Viveka Choodamani by Adi Sankara, Verse 4',
-                  seriesId: 'Viveka Choodamani',
-                  seq: '3',
+                  author: 'from the Web',
+                  seriesId: '-1',
+                  seq: '-1',
                   img: root + '/images/sai_unplugged.jpg'
               }, {
-                  posted: 'May 17 2016',
-                  postDate: new Date('May 17 2016 3:30 AM'),
-                  title: 'Rare things',
-                  content: 'Adhering to righteousness, burning desire for liberation and the capacity to surrender completely to a man of wisdom (Guru)- these three things are rare indeed and wherever they are found, they are due to Lord’s grace',
-                  author: '– Viveka Choodamani by Adi Sankara, Verse 3.',
-                  seriesId: 'Viveka Choodamani',
-                  seq: '2',
+                  posted: 'May 26 2016',
+                  postDate: new Date('May 26 2016 3:30 AM'),
+                  title: 'Can you see me?',
+                  content: 'If you want to see Me, be egoless and humble and meditate on Me. If any devotee meditates on Me with complete self-surrender, he shall experience complete union with Me. It is impossible to describe all my ways and measures.',
+                  author: 'Shirdi Sai Baba',
+                  seriesId: '-1',
+                  seq: '-1',
                   img: root + '/images/dwarkamai_1.jpg'
               }, {
-                  posted: 'May 16 2016',
-                  postDate: new Date('May 16 2016 3:30 AM'),
-                  title: 'Rarest of rare things',
-                  content: 'Of all the living creatures, human birth indeed is very rare;'
-                      + '<br/>&nbsp;Much more difficult is to become a righteous man;'
-                      + '<br/>Rarer than this is a Saattwic attitude in life.'
-                      + '<br/>&nbsp;Even after gaining these things, having steadfastness in spiritual practice is yet rarer;'
-                      + '<br/>Even more difficult is to have correct knowledge and deep significance of the scriptures;'
-                      + '<br/>&nbsp;Discriminating between the Real and unreal and getting fully established in living consciousness leads to liberation.'
-                      + '<br/>This kind of perfect liberation cannot be had without the earned merits of hundred crores of lives lived properly.',
-                  author: 'Viveka Choodamani by Adi Sankara, Verse 2.',
-                  seriesId: 'Viveka Choodamani',
-                  seq: '1',
+                  posted: 'May 25 2016',
+                  postDate: new Date('May 25 2016 3:30 AM'),
+                  title: 'Many mirrors, many reflections of one',
+                  content: 'All are one, be alike to everyone. That is your primary duty. This is the most important teaching of Buddha. You will see unity everywhere once you understand this truth. There is unity in the apparent multiplicity. When you are surrounded by many mirrors, you see a number of reflections of yourself. Reflections are many but the person is one.',
+                  author: 'Sri Sathya Sai Baba on Buddha Purnima, May 13, 1996.',
+                  seriesId: '-1',
+                  seq: '-1',
                   img: root + '/images/sai_unplugged.jpg'
               }],
                    [   {
