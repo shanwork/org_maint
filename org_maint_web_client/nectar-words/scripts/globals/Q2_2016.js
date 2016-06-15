@@ -16,6 +16,155 @@ angular.module('nectar_words_app')
       */
       var allWeeksSaying =
          [
+               [{
+                   posted: 'June 13 2016',
+                   postDate: new Date('June 13 2016 3:30 AM'),
+                   title: 'The spirit of non-violence',
+                   content: 'If the best minds of the world have not imbibed the spirit of non-violence, they have to meet gangsterism in its own way. But that would only show that we have not gone far beyond the law of the jungle and we have not yet learnt to appreciate the heritage that God has given us. In spite of the teachings of Christianity which is 1900 years old and Hinduism and Buddhism which are older and even of Islam, we have not made much headway as human beings. But whilst I would understand the use of force by those who do not have the spirit of non-violence in them, I still believe that even gangsterism has to be met with non-violence.',
+                   author: 'Mahatma Gandhi in Harijan, Dec 10, 1938',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 12 2016',
+                   postDate: new Date('June 12 2016 3:30 AM'),
+                   title: 'Pleasure and Pain',
+                   content: 'Pleasure arises from pain and pain results in pleasure. Because the Pandavas were in the jungle for twelve years and hid themselves unrecognized for the thirteenth year, people now appreciate their noble qualities. Because of the many obstacles and troubles that Prahlada encountered and the punishments meted out to him, the rest of the world now knows how great his devotion was. Prahlada never had tears in his eyes and never exhibited any pain when the demons were harming him. He was simply uttering the name of the Lord and requested the Lord’s presence. His devotion and equanimity in pain and pleasure is a living example even today of what real faith and devotion can do. On the other hand, had Prahlada lived with his father in luxury with care and tenderness, how could his faith be known to the world?',
+                   author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
+                   seriesId: 'Pleasure and Pain',
+                   seq: 2,
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 11 2016',
+                   postDate: new Date('June 11 2016 3:30 AM'),
+                   title: 'Pain ultimately leads to pleasure',
+                   content: 'All the pains and difficulties that you get will ultimately turn out as a means to give you happiness and pleasure. Even a diamond of high quality does not get its value unless we cut the faces on it. Pure gold will not be turned into a beautiful ornament unless it is repeatedly put into fire and molded. Whenever you experience pains, trials, obstacles and tribulations, you should recognize them as paths for obtaining ultimate happiness. So, we should be prepared to accept pain. To seek pleasure alone and not to welcome pain is not right. Pleasure comes out of pain. We should recognize that all pain will ultimately end in pleasure.',
+                   author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
+                   seriesId: 'Pleasure and Pain',
+                   seq: 1,
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 10  2016',
+                   postDate: new Date('June 10 2016 2016 5:30 AM'),
+                   title: 'Why there is diversity in the world?',
+                   content: '<u>Devotee:</u> If God alone exists in everyone, why the world has diversities and inequalities caused by ego?<br/><br/>' +
+                        '<u>Master:</u> It is all His play, His Leela!  A king has four sons. They are all princes but when they play, one becomes the minister, another, a policeman and so on. A prince he is, yet playing as a policeman!',
+                   author: 'Sayings of Sri Ramakrishna, p244',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 9 2016',
+                   postDate: new Date('June 9 2016 3:30 AM'),
+                   title: 'Different aspects of God',
+                   content: 'Do you know what the form and aspect of God is like? It is like rising bubbles on a sheet of water. It can be seen actually with different forms and different colors. The divine incarnation (Avatar) is one of the forms. Unless one sees God, one is not able to realize all this. For the sake of those who love God, He manifests Himself in various ways and forms.',
+                   author: 'Sayings of Sri Ramakrishna, p245',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_1221_1.jpg'
+               }, {
+                   posted: 'June 8 2016',
+                   postDate: new Date('June 8 2016 3:30 AM'),
+                   title: 'Ringing bell',
+                   content: 'When a bell is rung, the repeated ding-dongs may be distinguished one from the other, as if each sound has a form. But, when we stop the ringing, the indistinguishable sound, which is audible for a while and gradually dies away, appears formless. Like the sounds of the bell, God is both with and without form. ',
+                   author: 'Sayings of Sri Ramakrishna, p246',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 7 2016',
+                   postDate: new Date('June 7 2016 3:30 AM'),
+                   title: 'Why do we worship God with form?',
+                   content: '<p>So long as there is ego or ‘I’ in me, there are desires in me. Then, there is a need for a Personal God to whom I can appeal to fulfill my desires.  There is this Personal God before me, revealing Himself through various forms of glory, as the world and living beings.</p>&nbsp;&nbsp;&nbsp; God without form and with form are one and the same. A belief in one implies the belief in the other. Fire cannot be thought to be apart from its burning power. Again, sun’s rays cannot be thought of apart from the sun, nor the sun from its rays. You cannot think of the whiteness of the milk, apart from milk, nor milk apart from its whiteness. Thus, God without form cannot be thought apart from the idea of God with form and vice versa.',
+                   author: 'Sayings of Sri Ramakrishna, p239 and p241.',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_1221_1.jpg'
+               }, {
+                   posted: 'June 7 2016',
+                   postDate: new Date('June 7 2016 2:30 AM'),
+                   title: 'Ramadan Mubarak!',
+                   content: 'Ramadan, the Islamic holy month of fasting, contemplation and prayer, began Sunday, June 5 and will run through Tuesday, July 5. It is celebrated as the month during which Prophet Muhammad received the initial revelations that would become the Quran. During Ramadan, Muslims do not eat or drink (not even water) from sunrise to sunset, and try to abstain from impure thoughts or behavior. Daily fasts are to be broken by sharing meals with family after sunset. At the end of the month, a three-day festival called Eid al-Fitr marks Ramadan\'s conclusion. Islam is the world\'s second-largest religion, after Christianity, with over 1 billion followers.',
+                   author: '-',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/dwarkamai_1.jpg'
+               }], [{
+                   posted: 'June 6 2016',
+                   postDate: new Date('June 6 2016 3:30 AM'),
+                   title: 'To me God is..',
+                   content: '<p>To me God is Truth and Love;</p>' + 
+                       '<p>God is ethics and morality;</p>' + 
+                       '<p>God is fearlessness;</p>' + 
+                       '<p>God is conscience;</p>' + 
+                       '<p>God is the source of Light and Life; yet he is beyond all these!</p>' + 
+                       '<p>He is the atheism of the atheist….</p>' +
+                       '<p>for, in His boundless love, God permits even the atheist to live!</p>',
+                   author: 'Mahatma Gandhi in Young India, March 5, 1925',
+                   seriesId: 'Mahatma Gandhi in Young India',
+                   seq: 0,
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 5 2016',
+                   postDate: new Date('June 5 2016 3:30 AM'),
+                   title: 'You Are Divine!!',
+                   content: 'Man is essentially Divine. However, he believes himself to be an individual, limited and temporary. This is because he is entangled in the characteristics of the five sense elements, namely, sound, touch, form, taste and smell. This error brings about joy and grief, good and bad, birth and death. To escape from this association with the senses and to rid oneself from their pulls, is the sign of liberation, called in Sanskrit as Kaivalya, Moksha or Mukthi. ',
+                   author: 'Sathya Sai Baba in Upanishad Vahini, Ch.1, p1',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/sai_1221_1.jpg'
+               }, {
+                   posted: 'June 4  2016',
+                   postDate: new Date('June 4 2016 2016 5:30 AM'),
+                   title: 'How to pay back a person who has hurt you?',
+                   content: 'The best way to get back to you a person who has hurt you is to do something wonderfully good to him so that he is put to shame. ',
+                   author: ' Thiruvalluvar',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 3 2016',
+                   postDate: new Date('June 3 2016 3:30 AM'),
+                   title: 'Shaving and controlling the mind',
+                   content: '<p>Many men are accustomed to shaving and they know that if they press the razor too hard, they will cut the skin and if they do not press at all, it will not be possible to remove the unwanted hair.<br/>' +
+                       '&nbsp;Only when they apply moderate pressure, they will be able to get the necessary result.</p>' +
+                       '<p>The human mind is like a razor’s edge. Without controlling the mind too rigidly and without allowing it to go too freely, we should encourage it to do good acts. We should control it when it shows a tendency to participate in bad acts.<br/>' +
+                       '&nbsp;As you hold the razor and guide (glide!) it on your face, you should hold the mind and make it behave in a manner in which it ought to. Only then you conduct yourself a human being.<br/>' +
+                       '&nbsp;You must discriminate and distinguish between good and bad acts and guide the mind moderately between the two extremes.</p>'
+                            ,
+                   author: 'Sri Sathya Sai Baba in Summer Showers in Brindavan, 1974, Ch.2',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 2 2016',
+                   postDate: new Date('June 2 2016 3:30 AM'),
+                   title: 'Man, play your role!',
+                   content: 'As all rivers hurry towards the sea,</p>' +
+                            '<p>Let all your thoughts wend their way to God.</p>' +
+                          '<p>The play is His;</p>' +
+                          '<p>The role is His gift;</p>' +
+                          '<p>The lines are written by Him;</p>' +
+                          '<p>He decides the dress and decoration;</p>' +
+                          '<p>He decides the gesture and the tone;</p>' +
+                          '<p>He decides the entrance and exit too!</p>' +
+                          '<p>You have to act well your part and receive His approbation, when the curtain falls.</p>' +
+                          '<p>Earn by your effort and enthusiasm the right to play higher and higher roles…</p>' +
+                          '<p>That is the meaning and purpose of life!</p>',
+                   author: 'Shri Sathya Sai Baba',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 1 2016',
+                   postDate: new Date('June 1 2016 3:30 AM'),
+                   title: 'The power of Service',
+                   content: 'Seva (service) is the blossom of Love (Prema), a flower that fills the mind with rapture. Harmlessness is the fragrance of that flower. Let even your little acts be scented with compassion and reverence. Be assured that your character would thereby shine greatly. The highest happiness is contentment. Where there is no harshness, there holiness will thrive and virtues will flourish.',
+                   author: 'Sri Sathya Sai Baba in Vidya Vahini, Ch.VIII, p44.',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_unplugged.jpg'
+               }],
               [{
                   posted: 'May 31 2016',
                   postDate: new Date('May 31 2016 3:30 AM'),
@@ -44,8 +193,8 @@ angular.module('nectar_words_app')
                   title: ' India’s Freedom',
                   content: '<p>India has never waged a war against any nation. She has put up sometimes a half-organized resistance in self-defense, pure and simple. She has therefore, no need to develop the will for Peace. She has that in abundance whether she knows it or not! – Mahatma Gandhi in Young India, July 4, 1929.</p><p>India’s freedom must revolutionize the world’s outlook upon peace and war. Her inability to fight affects the whole of mankind</p>',
                   author: 'Mahatma Gandhi in Young India, Sept 17, 1925.',
-                  seriesId: '-1',
-                  seq: -1,
+                  seriesId: 'Mahatma Gandhi in Young India',
+                  seq: 2,
                   img: root + '/images/sai_1221_1.jpg'
               }, {
                   posted: 'May 28 2016',
@@ -53,8 +202,8 @@ angular.module('nectar_words_app')
                   title: 'The ways of Peace',
                   content: 'India’s destiny lies not along the bloody way of the West, which shows no signs of tiredness, but along the bloodless way of peace that comes from a simple and Godly life. She must be strong enough to resist the temptation from the West for her own sake and that of the world. ',
                   author: 'Mahatma Gandhi in Young India, Oct 7, 1926.',
-                  seriesId: '-1',
-                  seq: -1,
+                  seriesId: 'Mahatma Gandhi in Young India',
+                  seq: 1,
                   img: root + '/images/dwarkamai_1.jpg'
               }, {
                   posted: 'May 27 2016',
