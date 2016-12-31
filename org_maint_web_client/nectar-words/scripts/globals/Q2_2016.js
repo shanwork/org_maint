@@ -1,5 +1,5 @@
 ﻿
-var root = '/myApp/nectar-words';
+var root = '.';
 angular.module('nectar_words_app')
   .service('Q2_2016', function () {
       /*
@@ -16,7 +16,175 @@ angular.module('nectar_words_app')
       */
       var allWeeksSaying =
          [
-               [{
+                 [{
+                     posted: 'June 30 2016',
+                     postDate: new Date('June 30 2016 3:30 AM'),
+                     title: 'Fire covered by ash',
+                     content: 'Here is fire. It is covered by ash. Why has the ash covered the fire? It has covered the fire because we have neglected it.  Where did the ash come from? It has come from the fire only. If you blow it off, the ash will go and you will see the fire. Similarly, the fire of divinity is present within you, but you have neglected it.  Therefore, the ash of illusion has covered it. So, you are not able to visualize the divinity within you. You blow off the ash of illusion through renunciation, then, you will see the fire of divinity. The fire of divinity has not come afresh from somewhere. It was already there within you.',
+                     author: 'Sri Sathya Sai Baba’s Kodaikanal discourse, April 8, 1993',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_unplugged.jpg'
+                 }, {
+                     posted: 'June 29 2016',
+                     postDate: new Date('June 29 2016 3:30 AM'),
+                     title: 'Why do we miss God?',
+                     content: 'No one completely knows the mystery of electric current, why it behaves so, what is the exact nature of its origin and flow. Yet, it is manipulated into a thousand uses and it manifesting through thousand appliances and instruments. So too, God is present everywhere; but we can understand only that part of Him that manifests before our eyes. Ordinary people will swear that the earth does not move at all; but it has two motions—it rotates on its own axis and it moves around the Sun. But do we notice it while it happens? No! God too is a reality ever present in us and in every being; but we miss Him as we miss the movement of the earth. ',
+                     author: 'Sri Sathya Sai Baba in Sadhana- The Inward Path, p68',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 28 2016',
+                     postDate: new Date('June 28 2016 3:30 AM'),
+                      title: ' There is no sin?',
+                     content: '<strong><u>Devotee:</u></strong> Sir, if God has become everything, then there is no sin or virtue (punyam)?<br/>&nbsp;&nbsp;' +
+                     '<strong><u>Master:</u></strong> As long as there is ego in us, then there exists sin and virtue. In some people, God completely wipes away the ego; then they are beyond all good and bad. You may say in words that good and bad all have become one to you and you do just what God makes you do. But in your heart you know that all these are mere words. The moment you do some evil actions, your conscience will begin to prick you! ',
+                     author: 'Sayings of Sri Ramakrishna, p250.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 27 2016',
+                     postDate: new Date('June 27 2016 3:30 AM'),
+                     title: ' Is there God(3)?',
+                     content: '<strong><u>Devotee:</u></strong> Sir, I have a doubt. Do we have free will? That is, we can do whatever we feel like, good, bad or otherwise. Is that true?<br/>&nbsp;&nbsp;' +
+                        '<strong><u>Master:</u></strong> God is in everything and everything depends on God’s will! This is all His play. He is making us do various things in various ways, good and bad, great and small, weak and strong- all these are ultimately from Him. Good people, bad people – all these are His play. For instance, all the trees of a garden are not equal in height, beauty or grandeur.<br/>&nbsp;&nsbp;' +
+                     'Coming back to your question-- so long as one has not realized God, one thinks that he has free will. But it is God who maintains this delusion in man! Otherwise, there would have been a mighty increase of sins; people would not have feared to do evil, nor would there have been any punishment for crime or sin.<br/>&nbsp;&nbsp;' +
+                         'Do you know the attitude of a man who has realized God? He says and feels, ‘I am the machine, You are the operator; I am the house, You are the indweller; I am the chariot, You are the charioteer; I move as You make me move; I speak what You make me speak!’ ',
+                     author: 'Sayings of Sri Ramakrishna, p251.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 26  2016',
+                     postDate: new Date('June 26 2016 2016 5:30 AM'),
+                     title: 'God with form and without form',
+                     content: 'Fire itself has no definite shape but as glowing embers it assumes different forms. Thus the formless fire is seen endowed with forms. Similarly, the formless God (Brahman) sometimes invests Himself with definite forms for the sake of His devotees.',
+                     author: 'Sayings of Sri Ramakrishna, p247.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 25  2016',
+                     postDate: new Date('June 25 2016 2016 5:30 AM'),
+                     title: 'Why do Avatars appear and disappear?',
+                     content: '<strong><u>Devotee:</u></strong> Master! Why do Avatars appear and disappear?<br/>&nbsp;&nbsp;'+
+                     '<strong><u>Master:</u></strong>  Water, which is clear and formless, when frozen, becomes ice and takes a form. So also, the formless Brahman takes the visible form and manifests as an Avatar. This happens when the formless Brahman is cooled by the call of the devotees, as it were. The ice, which is a part and parcel of water, remains in water and afterwards melts into it. So too, the Avatar, the Personal God, who is a part and parcel of the formless Brahman, rises from the Impersonal, remains there and ultimately merges into it and disappears.',
+                     author: 'Sayings of Sri Ramakrishna, p247.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 24  2016',
+                     postDate: new Date('June 24 2016 2016 5:30 AM'),
+                     title: 'Headmaster of a school',
+                     content: 'The Headmaster of a school is a good example of the attitude you should develop. He knows that the chairs, tables and benches are not his. Nevertheless, he knows that it is his duty to see that no item of furniture or equipment is lost or damaged. Everything is to be handed over intact when he leaves. Therefore, he keeps a vigilant watch, though unattached. The senses, the intelligence, the heart, the mind—you are in charge of this furniture. Look after them with care. If any of them are misused by oversight, explain the circumstances to the Lord and ask for His pardon and Grace. ',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 23 2016',
+                     postDate: new Date('June 23 2016 3:30 AM'),
+                     title: 'A bar of iron sinks!',
+                     content: ' A bar of iron sinks in water; but beat it into a hollow vessel and it will float merrily and even carry some weight! So too, man’s mind sinks easily in the sea of the senses; beat it hollow, hammering it with the Name of the Lord. It will float safely on the sea of troubles.',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
+                     seriesId: '-1',
+                     seq: 1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 22 2016',
+                     postDate: new Date('June 22 2016 3:30 AM'),
+                     title: 'Prayer',
+                     content: 'As food is necessary for the body, prayer is necessary for the soul. I have not the slightest doubt that prayer is an unfailing means of cleansing the heart of passions. But it must be done with utmost humility. Prayer is impossible without a living faith in the presence of the God within.',
+                     author: 'The Story of My Experiments with Truth – by M. K. Gandhi',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 21 2016',
+                     postDate: new Date('June 21 2016 2:30 AM'),
+                     title: ' Prayer and Dhyana',
+                     content: 'Prayer is the very breath of all religions, for it brings man and God together, and with every sigh, nearer and nearer. Dhyana is the process of listening to the Song Celestial, the Flute of Krishna, with mental ears alert on the melody. Yoga is the merging of the mind in the bliss of self-forgetfulness, when the music fills the consciousness. Words like these do not completely denote their inexpressible ecstasy which one gets after this long exile in this world. ',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, p145.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }],
+                 [{
+                     posted: 'June 20 2016',
+                     postDate: new Date('June 20 2016 3:30 AM'),
+                     title: 'Is there God(4)?',
+                     content: 'A pious man in Rajahmundry (Andhra Pradesh) had a big problem. He had lucoderma (localized loss of pigmentation of the skin) and no girl wanted to marry him. Accepting it as the Lord’s blessing, he continued to be a faithful devotee of Baba.<br/>7nbsp; One day, he was invited to a Sai Bhajan in a devotee’s place. He went there and sang with great devotion the famous bhajan, “Avo, Avo Sai Natha..” Baba’s car was passing through Rajahmundry at that time.  Baba directed the driver to go to the devotee’s place.  Baba entered the house and touched the head of this man. At once, his lucoderma disappeared. The man fell at Baba’s feet and cried. He then got up and asked Baba, “Swami, what made you come here?” Baba smiling said, “You kept calling Avo, Avo Sai Natha..” How can I ignore when someone calls Me?”',
+                     author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C (Baba used to stay at their house whenever He visited Bangalore)',
+                     seriesId: 'Is there God',
+                     seq: 4,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 19 2016',
+                     postDate: new Date('June 19 2016 3:30 AM'),
+                     title: 'Father’s Day',
+                     content: '<p>Whoever is born, the father is the cause of his birth. Therefore, the father is everyone’s visible God. We address God as Father, because we couldn’t give Him a holier name. If someone asks you, “Who is your father?” you say, “My father is so and so.” If he questions you further, “On whose authority do you declare him to be your father?” You say, “On my mother. Her word I believe to be the truth.”</p>'
+                         + '<p>Therefore, the mother who bore you, the father who fostered you and the teacher who opened your eyes to the mystery of Nature in and around you all have to be revered. The parents gave you this body, and fostered the intelligence and love. So, gratitude is due to them. However high you my rise in social status, however huge may be your bank account, if your parents are neglected, your life would be tragic waste. Parents are mightily happy when their children show even the slightest concern for their comfort. Any little sign of gratitude is welcomed by them with delight. If you have no urge to please them and make them happy, how can you ever hope to please God?If you give joy to your parents, your children will be a source if joy to you in your later years. You don’t have to deserve your mother’s love. It is a given! You have to deserve your father’s love. <br/> -Sathya Sai Speaks, Vol XI, ch.39, p223.</p>'
+                         + '<br/><p>When a father gives a gift to his son, both laugh; when a son gives a gift to his father, both cry. <br/>&nbsp;– William Shakespeare</p>',
+                     author: 'various',
+                     seriesId: '-1',
+                     seq: 2,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 18 2016',
+                     postDate: new Date('June 18 2016 3:30 AM'),
+                     title: ' Is there God(3)?',
+                     content: '<p>There was a pious man who lived with his family and his elderly mother in a village not too far from Puttapathi. He was a great devotee of Hanuman. He built a beautiful Hanuman temple in his village. He went to Puttaparthi and requested Bhagawan Sri Sathya Sai Baba to come and inaugurate the temple. Baba accepted his invitation. On the appointed day, this man and his family had assembled at the temple. He left his mother at home as she was very old and could not even walk to the temple. This man was feeling very sad because Baba was coming all the way from Puttaparthi to his village, yet his mother will not be able to have His darshan.</p>'+
+                         '<p>On that day, Baba’s car was heading towards that temple. Baba told the driver, “You do not know how to get there. Make a turn here and let us ask someone for directions.” The driver immediately replied, “Swami, I know how to get there. There is no need to ask for directions.” Baba told the driver, “Simply make a turn here and stop by the house there.” The driver followed Baba’s directions and stopped in front of a small house. There, an old woman was sitting in the verandah. Swami lowered the glass window and asked the old woman in Telugu, “How to go to the Hanuman temple?” She told the driver to go straight, make a left and then a right and go all the way to the end. As promised, Baba arrived there on time and inaugurated the temple with proper rituals. The man and his family were very pleased with the presence of Bhagawan and they took Baba’s blessings. The man told Baba, “Swami, we are very fortunate to have your darshan and be able to touch your feet and get your blessings. I am very sad that my mother is unable to come here and have your darshan.” Baba smiled and said, “I know, I know. That is why I stopped at your house and gave her darshan on my way to the temple!” Tears rolled down from the cheeks of this man and he fell at Baba’s feet and thanked him for his grace.</p>',
+                     author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C.',
+                     seriesId: 'Is there God',
+                     seq: 3,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 17  2016',
+                     postDate: new Date('June 17 2016 2016 5:30 AM'),
+                     title: 'Is there God(2)?',
+                     content: '<p>Professor Kasturi was Sri Sathya Sai Baba’s personal assistant for many years.<br/>' +
+                         '&nbsp;Once, during a visit to Bombay, Baba was staying in the first floor of a devotee’s house. Kasturi was given a room on the ground floor..<br/>' +
+                         '&nbsp;One morning, around 5:00, Kasturi was woken up by the growling and barking noise of dogs. He looked through the window and he was shocked to see what was happening. Beyond the compound wall of the house, there was a heap of banana leaves with food scattered all over, probably from a dinner party. The beggars were trying to get to the food and were fighting against the dogs. Kasturi thought, “If Baba is God, why does He allow all these things to happen?”<br/>' +
+                         '&nbsp;As he turned away from the window, he was surprised to find Baba standing in front of him! Even before Kasturi could open his mouth, Baba said, “These people in their previous births were wasting their food without any concern. Now, they have to pay the price.”</p>'+
+                         '<h4><strong>Annam Brahma (Food is God)</strong></h4>',
+                     author: 'Story from Loving God by N. Kasturi.',
+                     seriesId: 'Is there God',
+                     seq: 2,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 16 2016',
+                     postDate: new Date('June 16 2016 3:30 AM'),
+                     title: 'Is there God?',
+                     content: '<p>When we hear about the violence, killings and shootings all around the world, one begins to think, ‘Is there God? If so, why is He letting all these bad things happen?’<br/> Baba answers:</p>' + 
+                         '<p> “The fate of the country will depend on the character of its people. The character of the people can be elevated and purified only by sadhana, which is the hard way of regulation of behavior and control of desires.  God is the guardian and as a guardian, He has to warn and punish to wean people away from harmful habits. If it is necessary, the guardian will resort to the infliction of pain too, as a curative and corrective.</p>' + 
+                         '<p>Limit, control, regulate and set bounds: that is the only way to succeed. If people let loose their thoughts, words and actions, calamity will be the consequence. Sastra means that which ‘lays down limits’; interest in the art of harmonious living is created by these rules. Imagine a game of football which has no rules, the ball is never ‘out’, there is no ‘foul’, no corner, no offside, no hands, nothing by which you can decide who plays well or ill, who wins or loses. The game will lose all the zest; it will be pandemonium, a free fight. Rules of behavior must be observed by politicians, rulers and subjects. Sannyasins, who are the leaders of the community, heads of monasteries and scholars who set an example by their behavior and who provide guidelines for proper behavior, their responsibilities are even greater.” </p>',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp165-166.',
+                     seriesId: 'Is there God',
+                     seq: 1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 15 2016',
+                     postDate: new Date('June 15 2016 3:30 AM'),
+                     title: 'Retrospection',
+                     content: 'If one undertakes retrospection of the day’s events, one must do it regularly at the appointed hour, not restlessly, not doing it today, neglecting it to do it tomorrow and the day after and then taking it up again on the fourth day. Such irregular practice is not conducive to the confirmation of the habit of retrospection.',
+                     author: 'Mahavir',
+                     seriesId: 'Saint Mahavir Says',
+                     seq: 2,
+                     img: root + '/images/sai_unplugged.jpg'
+                 }, {
+                     posted: 'June 14 2016',
+                     postDate: new Date('June 14 2016 2:30 AM'),
+                     title: 'Attachment and aversion',
+                     content: 'Attachment and aversion are the root cause of karma and karma originates from infatuation. Karma is the root cause of birth and death and these are said to be the source of misery. None can escape the effect of their own past karma.',
+                     author: 'Mahavir',
+                     seriesId: 'Saint Mahavir Says',
+                     seq: 1,
+                     img: root + '/images/sai_unplugged.jpg'
+                 }], [{
                    posted: 'June 13 2016',
                    postDate: new Date('June 13 2016 3:30 AM'),
                    title: 'The spirit of non-violence',

@@ -1,0 +1,70 @@
+﻿<div>
+ <div class="row">
+
+     <div class="col-md-12 col-lg-7" style="overflow: auto;">
+         <table class="table table-striped custom">
+             <tr>
+                 <th>Enter Post</th>
+                 <th>Choose Type of post</th>
+                 <th>Submit post</th>
+            </tr>
+             <tr>
+                 <td><input type="text" placeholder="Tony's chat" ng-model="tonysText" /></td>
+                 <td>
+                    <label> <input type="radio" ng-model="tonysCategory" value="2"> Idea</label>
+                    <label> <input type="radio" ng-model="tonysCategory" value="17"> Comment </label>
+                    <label> <input type="radio" ng-model="tonysCategory" value="18"> Reply </label> 
+                 </td>
+                 <td>
+                     <img src="images/avatar1465389809397.png" ng-click="addActivity(tonysText , tonysCategory, 'Tony Handy','images/avatar1465389809397.png')" />
+                 </td>
+             </tr>
+             <tr>
+                 <td><input type="text" placeholder="Elmo's chat" ng-model="elmosText" /></td>
+                 <td>
+                     <label> <input type="radio" ng-model="elmosCategory" value="2"> Idea  </label>
+                     <label> <input type="radio" ng-model="elmosCategory" value="17"> Comment </label>
+                     <label>  <input type="radio" ng-model="elmosCategory" value="18"> Reply </label>
+                 </td>
+                 <td>
+                     <img src="images/avatar1461606369555.jpg" ng-click="addActivity(elmosText , elmosCategory, 'Elmo Elmo','images/avatar1461606369555.jpg')" /><br />
+                </td>
+             </tr>
+             <tr>
+                 <td><input type="text" placeholder="Cookie Monster's chat" ng-model="cookieMonsterText" /></td>
+                 <td>
+                     <label> <input type="radio" ng-model="cookieMonsterCategory" value="2"> Idea  </label>
+                     <label> <input type="radio" ng-model="cookieMonsterCategory" value="17"> Comment </label>
+                     <label>  <input type="radio" ng-model="cookieMonsterCategory" value="18"> Reply </label>
+                 </td>
+                 <td>
+                     <img src="images/no_avatar.gif" ng-click="addActivity(cookieMonsterText , cookieMonsterCategory, 'Cookie Monster','images/no_avatar.gif')" /><br />
+                 </td>
+             </tr>
+         </table>
+        
+        
+        
+        
+          
+       
+   </div>
+     <div class="col-md-12 col-lg-5" style="overflow: auto;">
+        
+         <table class="table activityCustom">
+             <tr>
+                 <th colspan="2" class="activityTableHeader">Activity </th>
+             </tr>
+             <tr ng-repeat="activityElement in activityHistory.data.recentActivities">
+                 <td><img src={{activityElement.authorAvatar}}></td>
+                 <td> 
+                    <span style="font-size:smaller; font-weight:bold">{{activityElement.author}}</span>
+                     <span style="font-size:smaller; color:silver">{{getAction(activityElement.nodeTypeString)}}</span><br />
+                     {{activityElement.title}} 
+                    <hr />
+                 </td>
+            </tr>
+         </table>
+     </div>
+  </div>
+</div>

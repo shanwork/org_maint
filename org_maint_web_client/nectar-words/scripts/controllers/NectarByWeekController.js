@@ -3,7 +3,7 @@
 
     var NectarByWeekController = function ($scope, $routeParams, $localStorage,$sce, Hub) {
         //publish   
-        $scope.root = '/myApp/nectar-words';
+        $scope.root = '.';
         $scope.sortType3 = 'postDate';
         $scope.sortType1 = 'seriesId';
         $scope.sortType2 = 'seq';

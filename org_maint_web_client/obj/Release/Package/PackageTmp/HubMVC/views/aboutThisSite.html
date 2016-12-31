@@ -1,57 +1,151 @@
 ﻿<!DOCTYPE html>
-<para>
-    <a name="top"><H1>The Concept of Hub MVC </H1></a>
-    <i>Disclaimer:<br/> Please note this blog is a living docunent and will be iteratively changing<br/>
-       Also, I haven't been too fancy, too orderly or consistent on my images.<br /> I would also have liked this to be less of a static site, adding animation and user events, but constraints on time etc have 
-    left me with little bandwidth to do so. I do HOPE to get this in order. <br/>.. so please bear with me</i>
+<style>
+    section
+    {
+        border:5px groove;
+        border-radius:6px;
+        background-color:lightgoldenrodyellow;
+        padding-left:10px;
+
+    }
+    #toc
+    {
+        border:7px ridge;
+        border-color:saddlebrown;
+        color:maroon;
+        margin-bottom:20px;
+    }
+    .chapter
+    {
+        border-color:slateblue;
+        background-color:lightcyan;
+        font-weight:300;
+        font-size:large;
+        margin-bottom:15px;
+    }
+    section h3,h4,h5
+    {
+        font-style:italic;
+        margin-left:10px;
+        
+    }
+        section h3 {
+            font-weight: 900;
+        }
+         section h4 {
+            font-weight: 700;
+           margin-left:30px;
+      }
+          section h5 {
+            font-weight: 600;
+           margin-left:40px;
+      }
+          #toc h3 a { text-decoration-style:none;color:maroon;}
+          #toc h4 a { text-decoration-style:none;color:brown;}
+          #toc h5 a { text-decoration-style:none;color:saddlebrown;}
+
+          .chapter h4 a { text-decoration-style:none;color:darkblue;font-weight:600;}
+          .chapter h5 a { text-decoration-style:none;color: blue;margin:5px;font-weight:600;font-size:large;}
+           .chapter a {text-decoration-style:none;color:mediumblue; font-size:larger; font-weight:400;margin-top:5px;}
+           .chapter ul ,ol,li  { font-weight:normal;background-color:lightcyan; }
    
-   <p> Hi, <p>
-       I have been dabbling around in web application development using the layered (UI middle tiers backend data) and MVC patterns<p>
-        Each has its advantages and drawbacks. However, the trend today has been more towards the MVC pattern, whose basic is as shown:  <p />
+}
+</style>
+<para>
+   <H1>The Concept of Hub MVC </H1>
+    <section id="toc">
+        <h3><a name="top">Index</a></h3>
+            <h4><a ng-click="scrollTo('Disclaimer')">Disclaimer</a></h4>
+            <h4><a ng-click="scrollTo('mvc limit')"> MVC, and its limitations</a></h4>
+                <h5><a ng-click="scrollTo('basic mvc')"> Basic MVC </a></h5>
+                <h5><a ng-click="scrollTo('mvc limit')"> MVC limitations</a></h5>
+            <h4><a ng-click="scrollTo('hMVC concept')"> Concept of Hub MVC </a></h4>
+            <h4><a ng-click="scrollTo('hMVC variant1')"> Inner details</a></h4>
+            <h4><a ng-click="scrollTo('hMVC applications')"> Live examples: </a></h4>
+                <h5><a ng-click="scrollTo('hHMVC nectarWords')"> Sai Amrutvani website </a></h5>
+                <h5><a ng-click="scrollTo('hHMVC budget maintenance')">Budgeting website(2) *** </a></h5>
+            <h4><a ng-click="scrollTo('Contact')">Comments? Feedback?</a></h4>
+    </section>
+    <section class="chapter">
+        <h4><a name="Disclaimer">Disclaimer</a></h4> <em>
+            Please note this blog is a living document and will be iteratively changing. Also, I haven't been too fancy, too orderly or consistent on my images.<br /> I would also have liked this to be less of a static site, adding animation and user events, but constraints on time etc have
+            left me with little bandwidth to do so. I do HOPE to get this in order... so please bear with me 
+        </em>
+    </section>
+    <section class="chapter">
+        <h4><a name="mvc limit">MVC, and its limitations</a> </h4>
+        <h5><a name="basic mvc"> Basic MVC </a></h5>
+         I have been dabbling around in web application development using the layered (UI middle tiers backend data) and MVC patterns.Each has its advantages and drawbacks. However, the trend today has been more towards the MVC pattern, whose basic is as shown:<br/>
         <img src="images/simpleMVC.png" style="width:320px;border:4px groove;border-radius:5px;" />
-    <p>Please read on..</p>  
-   <h3>Main content</h3>   <a ng-click="scrollTo('mvc limit')"><li>Limitations of MVC</a></li>
-    <a ng-click="scrollTo('hMVC concept')"><li>Concept of Hub MVC</a></li>
-    <a ng-click="scrollTo('hMVC variant1')"><li> Inner details - one example</a></li>
-    <a ng-click="scrollTo('hHMVC application')"><li>Live example of Hub MVC</a></li>
-    <a ng-click="scrollTo('Contact')"><li>Comments? Feedback?</a></li>
+        <br/>
+        <p>
+            <h5><a name="mvc limit"> MVC limitations</a></h5>
+            Taking the basic ring of nodes above, if you try to design a system with separate flows, <b>but with</b> inter-dependencies, the situation can get complex with
+            increasing amount of dependencies and can even get messy. Shown below:(click to enlarge)<br />
+            <img src="images/intricateNetwork.png" ng-style="imageStyle[0]" ng-click="toggleSize(0)" />
+        </p>
+        <a ng-click="scrollTo('top')">Top of page</a>
+        </section>
+        <section class="chapter">
+            <h4><a name="hMVC concept">Concept of Hub MVC</a> </h4>
+            <p>
+                <strong>Enter Hub MVC.</strong> <br />This is not a completely new concept. It is just an attempt to bring some order and anchor point to that intricate web shown above, and
+                selectively hide it.<br/>Shown below. (click to enlarge)<br/>
+            <img src="images/HubNetwork.png" ng-style="imageStyle[1]" ng-click="toggleSize(1)" />
+            <br />
+            <a ng-click="scrollTo('top')">Top of page</a>
+        </section>
+    <section class="chapter">
+       <h4><a name="hMVC variant1">Inner details</a>  </h4>
 
-    <a name="mvc limit"><h3>Limitations of MVC </h3></a>
-    Taking the basic ring of nodes above, if you try to design a system with separate flows, <b>but with</b> inter-dependencies, the situation can get complex with 
-    increasing amount of dependencies and can even get messy. Shown below:<br/>
-    <img src="images/intricateNetwork.png" style="width:500px;border:4px groove;border-radius:5px;"/>
-   <br/>
- <a ng-click="scrollTo('top')">Top of page</a>
+        <p>
+            Thoughts of what would be behind the scenes, how input and output are handled...<br />
+            This is one way of how the models 'pour' into the Hub, and controllers 'extract' from it through an API.    Shown below.(click to enlarge)
+        <p />
+        <img src="images/HubNetwork_var1.png" ng-style="imageStyle[2]" ng-click="toggleSize(2)" />
+        <p>Now let's add external sources and dependencies like angular libraries, etc (click to enlarge)</p>
+        <img src="images/HubNetwork_var1a.png" ng-style="imageStyle[3]" ng-click="toggleSize(3)" />
+        <br />
 
-    <a name="hMVC concept"><h3>Concept of Hub MVC </h3></a>
-    <p>Enter Hub MVC. <br />This is not a completely new concept. It is just an attempt to bring some order and anchor point to that intricate web shown above, and 
-    selectively hide it </p>Shown below. One thought is to take away the complexity of interrelationships away from the teams does the separate flows and offer an API - let's call it Hub API
-    <img src="images/HubNetwork.png" style="width:500px;border:4px groove;border-radius:5px;" />
-    <br/>
-     <a ng-click="scrollTo('top')">Top of page</a>
+        <a ng-click="scrollTo('top')">Top of page</a>
+        </section>
+        <section class="chapter">
+            <h4><a name="hMVC applications">Live examples:</a></h4>
+        <h5><a name="hHMVC nectarWords"> Sai Amrutavani website</a></h5>
+        This is not a classic or extensive application of this pattern, but it <i>does</i> use the concept of a central hub where data and signals flow in and out of<br />
+        <strong>The Sai Amruta Vani web site can be found <a href="../../nectar-words/home.html" target="_blank">here </a></strong><br />
+        Showing how HMVC is applied here. To repeat, it is not a classic example, just uses the concept (click to enlarge/contract)<br />
 
-    <a name="hMVC variant1"><h3>Inner details - one example  </h3></a>
-
-    <p>
-        Thoughts of what would be behind the scenes, how input and output are handled...<br/> 
-      This is one way of how the models 'pour' into the Hub, and controllers 'extract' from it through an API.    Shown below. <p/>
-        <img src="images/HubNetwork_var1.png" style="width:500px;border:4px groove;border-radius:5px;" />
-    <p>Now let's add external sources and dependencies like angular libraries, etc </p>
-    <img src="images/HubNetwork_var1a.png" style="width:500px;border:4px groove;border-radius:5px;" />
-    <br />
-
-    <a ng-click="scrollTo('top')">Top of page</a>
-
-
-    <a name="technical"><h3>Live example of Hub MVC  </h3></a>
-    This is not a classic or extensive application of this pattern, but it <i>does</i> use the concept of a central hub where data and signals flow in and out of<br/>
-    The Sai Amruta Vani web site can be found <a href="http://www.use-my-software.com/myApp/nectar-words/home.html#/about" target="_blank">here </a><br/>
-    Showing how HMVC is applied here. To repeat, it is not a classic example, just uses the concept<br/>
-    <img src="images/HubNetwork_Amrutavani.png" style="width:500px;border:4px groove;border-radius:5px;" /><br/>
-    <a ng-click="scrollTo('top')">Top of page</a>
-
-    <a name="Contact"><h4>Feedback  </h4></a>
-    <p> Email me feedback at webfeedback2016@gmail.com - mention 'Hub MVC' in the subject</p>
-    <a ng-click="scrollTo('top')">Top of page</a>
+        <img src="images/HubNetwork_Amrutavani.png" ng-style="imageStyle[4]" ng-click="toggleSize(4)" /><br />
+        <a ng-click="scrollTo('top')">Top of page</a>
+            <hr />
+            <h5><a name="hHMVC budget maintenance"> Budgetting website </a> </h5>
+        <em><strong>The theme that set me on thinking about this pattern.</strong></em> <br />
+        My idea of application of the <u>classic Hub, Mother Ship or Single Dependency Injection</u> pattern.<br />
+        The germ of the idea came up when developing the <a href="../../myApp/budget/home.html" target="_blank"> original budgetting application </a>
+        I conceptualized the budgetting site into three main sets of elements
+        <ul >
+            <li >Requirements (or needs)</li>
+            <li>  Contributions</li>
+            <li>  Budget Status</li>
+        </ul>
+        <ol>
+            <li>Whenever a requirement was added, the required amount in the budget went up, as also a new update to budget history lists, so we had a dependency injected of the budget status class in the requirements class</li>
+            <li>Likewise for contributions added, it was DI for budget status.</li>
+            <li>While with the budget there would potentially be dependency injection from requirements and contributions</li>
+        </ol>
+        <p>
+            <em><u>Now,</u></em> if I were to add or change, say, add one more MVC (let's say I want to be able to factor in non cash contributions), or
+            automate something, like the allocation when a new contributor or requirement is added, it could potentially mean having to change multiple files and logic.
+            <br /><em>(A further example:<br />I have worked in the manufacturing industry. A product has many many components and other dependencies which keep changing. Imagine trying to maintain this using a network of MVC flows...)</em>
+        </p>
+        Shown below, how I would go about using the Hub concept for the budgeting website. To repeat, HUB is the one-stop shop for my calculation and processing <br/>
+        The website is under construction. <strong>Lacks styling and stuff like sorting and filtering, but you can find it <a href="../../myApp/naam/home.html">Here</a></strong>  
+        <img src="images/HubNetwork_Budget.png" ng-style="imageStyle[5]"   /><br />
+        </section>
+        <a ng-click="scrollTo('top')">Top of page</a>
+        <a name=" Contact"><h4>Feedback  </h4></a>
+        <p> Email me feedback at webfeedback2016@gmail.com - mention 'Hub MVC' in the subject</p>
+        <a ng-click="scrollTo('top')">Top of page</a>
 </para>
 

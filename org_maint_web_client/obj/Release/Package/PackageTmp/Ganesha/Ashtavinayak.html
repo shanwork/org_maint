@@ -1,7 +1,12 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="ashtavinayak_app">
 <head>
-    <title>All About Shree Ganesh </title>
+    <title>All About Shree Ganesh -Ashtavinayak Darshan </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="this sub website aims at giving information of the Lord Ganesh. It hopes to clarify and explain about the Diety to people who are new or unfamiliar" />
+    <meta name="keywords" content="Ganesha Ganapati Lambodhar Shurpakarna  Mayureshwar  Siddhivinayak Waradavinayak Balaleshwar Chintamani Girijatmaja Shree Vigneshwar  Shree Mahaganapati " />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles/mainStyle.css" />
 </head>
@@ -13,41 +18,115 @@
         <!-- logo -->
         <div id="logo">
             <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:left;" />
-            <h1 style="float:left;">Shree Ganesh - The Remover of Obstacles - Information  </h1>
+            <h1 style="float:left;">Shree Ganesh - 'Ashtavinayak Darshan'  </h1>
 
             <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:right;" />
         </div>
-        <nav>
-            Navigation Links
-            <a href="../index.html"><b>Parent Website</b></a>
-            <a href="home.html">Home page</a>
-            <a href="Ashtavinayak.html">The 'Swayambhu' Ashtavinyaks</a>
-            <a href="Feedback.html">Feedback</a>
+        <nav class="navbar navbar-default" style="border:2px outset silver;padding-top:10px;">
+            <ul class="navbar navbar-nav">
+                <li><a href="../index.html"><b>Parent Website</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li> <a href="home.html">Home page</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="Ashtavinayak.html">The 'Swayambhu' Ashtavinyaks</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="FamousGaneshTemples.html">Other Famous Ganesh temples</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="GaneshMahotsav.html">Ganesh Festival in Public - 'Sarvajanik Mahotsav'</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+            </ul>
         </nav>
     </header>
     <!-- Main content -->
     <div >
+        
         <!-- internal navigation -->
         <section id="internal-nav-text">
-            <nav>
-                <ul>
-                    <li>About</li>
-                    <li>Shree Mayureshwar</li>
-                    <li>Shree Siddhivinayak</li>
-                    <li>Shree Waradavinayak</li>
-                    <li>Shree Balaleshwar</li>
-                    <li>Shree Chintamani</li>
-                    <li>Shree Girijatmaja</li>
-                    <li>Shree Vigneshwar</li>
-                    <li>Shree Mahaganapati</li>
-                 </ul>
-            </nav>
+          
         </section>
         <!--- SPA content -->
-        <section id="content-text"></section>
+        <section id="content-text">
+            <article>
+                <p>There are many important and famous places of Lord Ganesha all over the world. Among these some places are more powerful & important than the others. There are eight such powerful places, which are called as Ashtavinayaka. These eight place are in India in the state of Maharashtra. A lot of importance is given to these places in India and in Hindu religion. The incarnation stories of these Ganesha’s are ancient, the places are also ancient. Some of the temples are built recently. Among these, few are rebuilt in Madhavrao Peshwa’s period. The idols of Ashtavinayaka are self-existent. They are installed in the temples as they were found. Each idol is an incarnation of Lord Ganesha. There are some mythological stories giving the importance of each Ganesha (idol). These stories tell us about why and how these idols of Ganesha got their names and came into existence. The idols are not beautiful like the man made ones but the self-existent appearance of then does please the devotees.</p>
+                <p>The mangalashtaka (poetic lines spoken at the time of marriage or thread ceremony) of Ashtavinayaka is sang on holy occasions. The sequence of Ashtavinayak pilgrimage, according to the Stotra (poetic lines) mentioned in the Puran is as follows.</p>
+                <div>
+                   <div class="col-sm-3">
+                        <nav>
+                            <ul>
+                                <li><a href="#/General">Typical Image</a></li>
+                                <li><a href="#/Moreshwar">SHRI MAYURESHWAR OF MOREGAON</a></li>
+                                <li><a href="#/Siddhivinayak">SHRI SIDDHIVINAYAK OF SIDDHATEK</a></li>
+                                <li><a href="#/Ballaleshwar">SHRI BALLALESHWAR OF PALI</a></li>
+                                <li><a href="#/Varadvinayaka">SHRI VARAD VINAYAKA OF MAHAD</a></li>
+                                <li><a href="#/Chintamani">SHRI CHINTAMANI OF THEUR</a></li>
+                                <li><a href="#/Girijatmaj">SHRI GIRIJATMAJ OF LENYADRI</a></li>
+                                <li><a href="#/Vigneshwar">SHRI VIGNESHWAR OF OZAR</a></li>
+                                <li><a href="#/Mahaganapati">SHRI MAHAGANAPATI OF RANJANGAON</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-sm-9  enclosedArticle"><div ng-view></div></div>
+                    &nbsp;<br/>
+                    &nbsp;<br />
+                    &nbsp;<br />
+                    &nbsp;<br />
+                    &nbsp;<br />
+                    &nbsp;<br />
+                    &nbsp;<br />
+                    &nbsp;<br />
+
+                    ...
+
+                </div>
+            </article>
+        </section>
         <footer><small>connect with me!! email me at webfeedback2016@gmail.com</small></footer>
 </div>
 </div>
+    <script src="../scripts/angular.js"></script>
+    <script src="../scripts/angular-route.js"></script>
+    <script>
+        (function () {
 
+
+            var ashtavinayak_app = angular.module('ashtavinayak_app', ['ngRoute']);
+           
+            ashtavinayak_app.config(function ($routeProvider) {
+                $routeProvider
+                 
+                 .when('/General', {
+                  
+                templateUrl: 'AshtavinayakViews/General.html'
+            }).when('/PastWeek/:weekIndex', {
+                controller: 'NectarByWeekController',
+
+                templateUrl: 'AshtavinayakViews/NectarByWeek.html'
+            }).when('/Moreshwar', {
+                templateUrl: 'AshtavinayakViews/Mayureshwar.html'
+            }).when('/Siddhivinayak', {
+                     
+                templateUrl: 'AshtavinayakViews/Siddhivinayak.html'
+            }).when('/Ballaleshwar', {
+                templateUrl: 'AshtavinayakViews/Ballaleshwar.html'
+            }).when('/Varadvinayaka', {
+                templateUrl: 'AshtavinayakViews/Varadvinayaka.html'
+            }).when('/Chintamani', {
+                templateUrl: 'AshtavinayakViews/Chintamani.html'
+            })
+                    .when('/Girijatmaj', {
+                        templateUrl: 'AshtavinayakViews/Girijatmaj.html'
+                    })
+                    .when('/Vigneshwar', {
+                        templateUrl: 'AshtavinayakViews/Vigneshwar.html'
+                    })
+                    .when('/Mahaganapati', {
+                        templateUrl: 'AshtavinayakViews/Mahaganapati.html'
+                    })
+                     .otherwise({ redirectTo: '/General' });
+            }, function ($httpProvider) {
+                $httpProvider.defaults.headers.common = {};
+                $httpProvider.defaults.headers.post = {};
+                $httpProvider.defaults.headers.put = {};
+                $httpProvider.defaults.headers.patch = {};
+            });
+           
+        }());
+    </script>
 </body>
 </html>

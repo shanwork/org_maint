@@ -1,5 +1,5 @@
 ﻿
-    var root = '/myApp/nectar-words';
+    var root = '.';
     angular.module('nectar_words_app')
       .service('Q1_2016', function () {
           var allWeeksSaying = [

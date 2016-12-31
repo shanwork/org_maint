@@ -1,0 +1,19 @@
+﻿.main-bordered {
+   border: inset 3px ;
+ 
+}
+th {
+    border: groove 1px;  
+    border-radius:10px;
+    margin: 10px;
+     border-color:gray;
+    
+}
+ td{
+    border: inset 1px;  
+    border-color:silver;
+    border-radius:10px;
+    margin: 10px;
+    
+    
+}

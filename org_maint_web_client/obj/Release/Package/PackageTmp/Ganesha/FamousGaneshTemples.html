@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html ng-app="famousGaneshTemples_app">
+<head>
+    <title>All About Shree Ganesh -Ashtavinayak Darshan </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="this sub website aims at giving information of the Lord Ganesh. It hopes to clarify and explain about the Diety to people who are new or unfamiliar" />
+    <meta name="keywords" content="Ganesha Ganapati Lambodhar Shurpakarna  Mayureshwar  Siddhivinayak Waradavinayak Balaleshwar Chintamani Girijatmaja Shree Vigneshwar  Shree Mahaganapati " />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/mainStyle.css" />
+</head>
+<body>
+
+    <div id="container">
+        <!-- Header -->
+        <header>
+            <!-- logo -->
+            <div id="logo">
+                <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:left;" />
+                <h1 style="float:left;">Shree Ganesh - Other Famous Temples <em>I know of</em>  </h1>
+
+                <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:right;" />
+            </div>
+            <nav class="navbar navbar-default" style="border:2px outset silver;padding-top:10px;">
+                <ul class="navbar navbar-nav">
+                    <li><a href="../index.html"><b>Parent Website</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li> <a href="home.html">Home page</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="Ashtavinayak.html">The 'Swayambhu' Ashtavinyaks</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="FamousGaneshTemples.html">Other Famous Ganesh temples</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="GaneshMahotsav.html">Ganesh Festival in Public - 'Sarvajanik Mahotsav'</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+                </ul>
+            </nav>
+        </header>
+        <!-- Main content -->
+        <div>
+
+            <!-- internal navigation -->
+            <section id="internal-nav-text"></section>
+            <!--- SPA content -->
+            <section id="content-text">
+                <article>
+                    <nav class="innerNav" >
+                        <ul  >
+                            <li><a href="#/Titwala">Shree Siddhivinayak Mahaganapati (Titwala)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#/GanapatiPule">Ganapati Pule</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+                        </ul>
+                    </nav>
+                   <div class=" enclosedArticle" ><div ng-view></div><br /></div>
+                </article>
+            </section>
+            <footer><small>connect with me!! email me at webfeedback2016@gmail.com</small></footer>
+        </div>
+    </div>
+    <script src="../scripts/angular.js"></script>
+    <script src="../scripts/angular-route.js"></script>
+    <script>
+        (function () {
+
+
+            var famousGaneshTemples_app = angular.module('famousGaneshTemples_app', ['ngRoute']);
+
+            famousGaneshTemples_app.config(function ($routeProvider) {
+                $routeProvider
+             .when('/Titwala', {
+                templateUrl: 'OtherGaneshTempleViews/Titwala.html'
+             }).when('/GanapatiPule', {
+
+                templateUrl: 'OtherGaneshTempleViews/GanapatiPule.html'
+             }).otherwise({ redirectTo: '/Titwala' });
+            }, function ($httpProvider) {
+                $httpProvider.defaults.headers.common = {};
+                $httpProvider.defaults.headers.post = {};
+                $httpProvider.defaults.headers.put = {};
+                $httpProvider.defaults.headers.patch = {};
+            });
+
+        }());
+    </script>
+</body>
+</html>

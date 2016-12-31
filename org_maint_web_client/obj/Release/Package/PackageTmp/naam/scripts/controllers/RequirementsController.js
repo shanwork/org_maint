@@ -25,8 +25,8 @@
         }
         $scope.rollUpItemCosts = function()
         {
-            $scope.fundsRequired = 0.0;
-            $scope.requirementItems.forEach(function (item) { $scope.fundsRequired += parseFloat(item.FundsRequired); });
+            $scope.fundsRequired = 0.0; $scope.fundsOutstanding = 0.0;
+            $scope.requirementItems.forEach(function (item) { $scope.fundsRequired += parseFloat(item.FundsRequired); $scope.fundsOutstanding += parseFloat(item.FundsRequired); });
         }
         $scope.addRequirement = function()
         {
@@ -61,12 +61,19 @@
                     Name: $scope.requirementName,
                     Type: $scope.requirementType,
                     FundsRequired: $scope.fundsRequired,
+                    FundsOutstanding: $scope.fundsRequired,
                     FundsAllocated: $scope.fundsAllocated,
+                    FundsDistributed: 0.00,
                     RequirementItems: $scope.requirementItems
                 };
             Hub.addRequirement(newRequirement);
             $scope.requirements = Hub.getRequirements();
             
+        }
+        $scope.distributeFunds = function (index) {
+            Hub.distributeRequirementFunds(parseInt(index));
+            $scope.requirements = Hub.getRequirements();
+       //     $scope.$digest();
         }
     };
     RequirementsController.$inject = ['$scope', '$routeParams', '$localStorage', '$sce', 'Hub'];

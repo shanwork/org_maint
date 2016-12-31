@@ -1,5 +1,5 @@
 ﻿
-var root = '/myApp/nectar-words';
+var root = '.';
 angular.module('nectar_words_app')
   .service('Q2_2016', function () {
       /*
@@ -16,22 +16,393 @@ angular.module('nectar_words_app')
       */
       var allWeeksSaying =
          [
-                   [{
-                       posted: 'May 16 2016',
-                       postDate: new Date('May 16 2016 3:30 AM'),
-                       title: 'Rarest of rare things',
-                       content: 'Of all the living creatures, human birth indeed is very rare;' 
-                           + '<br/>&nbsp;Much more difficult is to become a righteous man;' 
-                           + '<br/>Rarer than this is a Saattwic attitude in life.' 
-                           + '<br/>&nbsp;Even after gaining these things, having steadfastness in spiritual practice is yet rarer;' 
-                           + '<br/>Even more difficult is to have correct knowledge and deep significance of the scriptures;' 
-                           + '<br/>&nbsp;Discriminating between the Real and unreal and getting fully established in living consciousness leads to liberation.' 
-                           + '<br/>This kind of perfect liberation cannot be had without the earned merits of hundred crores of lives lived properly.',
-                       author: 'Viveka Choodamani by Adi Sankara, Verse 2.',
-                       seriesId: '-1',
-                       seq: '-1',
-                       img: root + '/images/sai_unplugged.jpg'
-                   }, {
+                 [{
+                     posted: 'June 30 2016',
+                     postDate: new Date('June 30 2016 3:30 AM'),
+                     title: 'Fire covered by ash',
+                     content: 'Here is fire. It is covered by ash. Why has the ash covered the fire? It has covered the fire because we have neglected it.  Where did the ash come from? It has come from the fire only. If you blow it off, the ash will go and you will see the fire. Similarly, the fire of divinity is present within you, but you have neglected it.  Therefore, the ash of illusion has covered it. So, you are not able to visualize the divinity within you. You blow off the ash of illusion through renunciation, then, you will see the fire of divinity. The fire of divinity has not come afresh from somewhere. It was already there within you.',
+                     author: 'Sri Sathya Sai Baba’s Kodaikanal discourse, April 8, 1993',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_unplugged.jpg'
+                 }, {
+                     posted: 'June 29 2016',
+                     postDate: new Date('June 29 2016 3:30 AM'),
+                     title: 'Why do we miss God?',
+                     content: 'No one completely knows the mystery of electric current, why it behaves so, what is the exact nature of its origin and flow. Yet, it is manipulated into a thousand uses and it manifesting through thousand appliances and instruments. So too, God is present everywhere; but we can understand only that part of Him that manifests before our eyes. Ordinary people will swear that the earth does not move at all; but it has two motions—it rotates on its own axis and it moves around the Sun. But do we notice it while it happens? No! God too is a reality ever present in us and in every being; but we miss Him as we miss the movement of the earth. ',
+                     author: 'Sri Sathya Sai Baba in Sadhana- The Inward Path, p68',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 28 2016',
+                     postDate: new Date('June 28 2016 3:30 AM'),
+                      title: ' There is no sin?',
+                     content: '<strong><u>Devotee:</u></strong> Sir, if God has become everything, then there is no sin or virtue (punyam)?<br/>&nbsp;&nbsp;' +
+                     '<strong><u>Master:</u></strong> As long as there is ego in us, then there exists sin and virtue. In some people, God completely wipes away the ego; then they are beyond all good and bad. You may say in words that good and bad all have become one to you and you do just what God makes you do. But in your heart you know that all these are mere words. The moment you do some evil actions, your conscience will begin to prick you! ',
+                     author: 'Sayings of Sri Ramakrishna, p250.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 27 2016',
+                     postDate: new Date('June 27 2016 3:30 AM'),
+                     title: ' Is there God(3)?',
+                     content: '<strong><u>Devotee:</u></strong> Sir, I have a doubt. Do we have free will? That is, we can do whatever we feel like, good, bad or otherwise. Is that true?<br/>&nbsp;&nbsp;' +
+                        '<strong><u>Master:</u></strong> God is in everything and everything depends on God’s will! This is all His play. He is making us do various things in various ways, good and bad, great and small, weak and strong- all these are ultimately from Him. Good people, bad people – all these are His play. For instance, all the trees of a garden are not equal in height, beauty or grandeur.<br/>&nbsp;&nsbp;' +
+                     'Coming back to your question-- so long as one has not realized God, one thinks that he has free will. But it is God who maintains this delusion in man! Otherwise, there would have been a mighty increase of sins; people would not have feared to do evil, nor would there have been any punishment for crime or sin.<br/>&nbsp;&nbsp;' +
+                         'Do you know the attitude of a man who has realized God? He says and feels, ‘I am the machine, You are the operator; I am the house, You are the indweller; I am the chariot, You are the charioteer; I move as You make me move; I speak what You make me speak!’ ',
+                     author: 'Sayings of Sri Ramakrishna, p251.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 26  2016',
+                     postDate: new Date('June 26 2016 2016 5:30 AM'),
+                     title: 'God with form and without form',
+                     content: 'Fire itself has no definite shape but as glowing embers it assumes different forms. Thus the formless fire is seen endowed with forms. Similarly, the formless God (Brahman) sometimes invests Himself with definite forms for the sake of His devotees.',
+                     author: 'Sayings of Sri Ramakrishna, p247.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 25  2016',
+                     postDate: new Date('June 25 2016 2016 5:30 AM'),
+                     title: 'Why do Avatars appear and disappear?',
+                     content: '<strong><u>Devotee:</u></strong> Master! Why do Avatars appear and disappear?<br/>&nbsp;&nbsp;'+
+                     '<strong><u>Master:</u></strong>  Water, which is clear and formless, when frozen, becomes ice and takes a form. So also, the formless Brahman takes the visible form and manifests as an Avatar. This happens when the formless Brahman is cooled by the call of the devotees, as it were. The ice, which is a part and parcel of water, remains in water and afterwards melts into it. So too, the Avatar, the Personal God, who is a part and parcel of the formless Brahman, rises from the Impersonal, remains there and ultimately merges into it and disappears.',
+                     author: 'Sayings of Sri Ramakrishna, p247.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 24  2016',
+                     postDate: new Date('June 24 2016 2016 5:30 AM'),
+                     title: 'Headmaster of a school',
+                     content: 'The Headmaster of a school is a good example of the attitude you should develop. He knows that the chairs, tables and benches are not his. Nevertheless, he knows that it is his duty to see that no item of furniture or equipment is lost or damaged. Everything is to be handed over intact when he leaves. Therefore, he keeps a vigilant watch, though unattached. The senses, the intelligence, the heart, the mind—you are in charge of this furniture. Look after them with care. If any of them are misused by oversight, explain the circumstances to the Lord and ask for His pardon and Grace. ',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 23 2016',
+                     postDate: new Date('June 23 2016 3:30 AM'),
+                     title: 'A bar of iron sinks!',
+                     content: ' A bar of iron sinks in water; but beat it into a hollow vessel and it will float merrily and even carry some weight! So too, man’s mind sinks easily in the sea of the senses; beat it hollow, hammering it with the Name of the Lord. It will float safely on the sea of troubles.',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
+                     seriesId: '-1',
+                     seq: 1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 22 2016',
+                     postDate: new Date('June 22 2016 3:30 AM'),
+                     title: 'Prayer',
+                     content: 'As food is necessary for the body, prayer is necessary for the soul. I have not the slightest doubt that prayer is an unfailing means of cleansing the heart of passions. But it must be done with utmost humility. Prayer is impossible without a living faith in the presence of the God within.',
+                     author: 'The Story of My Experiments with Truth – by M. K. Gandhi',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 21 2016',
+                     postDate: new Date('June 21 2016 2:30 AM'),
+                     title: ' Prayer and Dhyana',
+                     content: 'Prayer is the very breath of all religions, for it brings man and God together, and with every sigh, nearer and nearer. Dhyana is the process of listening to the Song Celestial, the Flute of Krishna, with mental ears alert on the melody. Yoga is the merging of the mind in the bliss of self-forgetfulness, when the music fills the consciousness. Words like these do not completely denote their inexpressible ecstasy which one gets after this long exile in this world. ',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, p145.',
+                     seriesId: '-1',
+                     seq: -1,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }],
+                 [{
+                     posted: 'June 20 2016',
+                     postDate: new Date('June 20 2016 3:30 AM'),
+                     title: 'Is there God(4)?',
+                     content: 'A pious man in Rajahmundry (Andhra Pradesh) had a big problem. He had lucoderma (localized loss of pigmentation of the skin) and no girl wanted to marry him. Accepting it as the Lord’s blessing, he continued to be a faithful devotee of Baba.<br/>7nbsp; One day, he was invited to a Sai Bhajan in a devotee’s place. He went there and sang with great devotion the famous bhajan, “Avo, Avo Sai Natha..” Baba’s car was passing through Rajahmundry at that time.  Baba directed the driver to go to the devotee’s place.  Baba entered the house and touched the head of this man. At once, his lucoderma disappeared. The man fell at Baba’s feet and cried. He then got up and asked Baba, “Swami, what made you come here?” Baba smiling said, “You kept calling Avo, Avo Sai Natha..” How can I ignore when someone calls Me?”',
+                     author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C (Baba used to stay at their house whenever He visited Bangalore)',
+                     seriesId: 'Is there God',
+                     seq: 4,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 19 2016',
+                     postDate: new Date('June 19 2016 3:30 AM'),
+                     title: 'Father’s Day',
+                     content: '<p>Whoever is born, the father is the cause of his birth. Therefore, the father is everyone’s visible God. We address God as Father, because we couldn’t give Him a holier name. If someone asks you, “Who is your father?” you say, “My father is so and so.” If he questions you further, “On whose authority do you declare him to be your father?” You say, “On my mother. Her word I believe to be the truth.”</p>'
+                         + '<p>Therefore, the mother who bore you, the father who fostered you and the teacher who opened your eyes to the mystery of Nature in and around you all have to be revered. The parents gave you this body, and fostered the intelligence and love. So, gratitude is due to them. However high you my rise in social status, however huge may be your bank account, if your parents are neglected, your life would be tragic waste. Parents are mightily happy when their children show even the slightest concern for their comfort. Any little sign of gratitude is welcomed by them with delight. If you have no urge to please them and make them happy, how can you ever hope to please God?If you give joy to your parents, your children will be a source if joy to you in your later years. You don’t have to deserve your mother’s love. It is a given! You have to deserve your father’s love. <br/> -Sathya Sai Speaks, Vol XI, ch.39, p223.</p>'
+                         + '<br/><p>When a father gives a gift to his son, both laugh; when a son gives a gift to his father, both cry. <br/>&nbsp;– William Shakespeare</p>',
+                     author: 'various',
+                     seriesId: '-1',
+                     seq: 2,
+                     img: root + '/images/sai_1221_1.jpg'
+                 }, {
+                     posted: 'June 18 2016',
+                     postDate: new Date('June 18 2016 3:30 AM'),
+                     title: ' Is there God(3)?',
+                     content: '<p>There was a pious man who lived with his family and his elderly mother in a village not too far from Puttapathi. He was a great devotee of Hanuman. He built a beautiful Hanuman temple in his village. He went to Puttaparthi and requested Bhagawan Sri Sathya Sai Baba to come and inaugurate the temple. Baba accepted his invitation. On the appointed day, this man and his family had assembled at the temple. He left his mother at home as she was very old and could not even walk to the temple. This man was feeling very sad because Baba was coming all the way from Puttaparthi to his village, yet his mother will not be able to have His darshan.</p>'+
+                         '<p>On that day, Baba’s car was heading towards that temple. Baba told the driver, “You do not know how to get there. Make a turn here and let us ask someone for directions.” The driver immediately replied, “Swami, I know how to get there. There is no need to ask for directions.” Baba told the driver, “Simply make a turn here and stop by the house there.” The driver followed Baba’s directions and stopped in front of a small house. There, an old woman was sitting in the verandah. Swami lowered the glass window and asked the old woman in Telugu, “How to go to the Hanuman temple?” She told the driver to go straight, make a left and then a right and go all the way to the end. As promised, Baba arrived there on time and inaugurated the temple with proper rituals. The man and his family were very pleased with the presence of Bhagawan and they took Baba’s blessings. The man told Baba, “Swami, we are very fortunate to have your darshan and be able to touch your feet and get your blessings. I am very sad that my mother is unable to come here and have your darshan.” Baba smiled and said, “I know, I know. That is why I stopped at your house and gave her darshan on my way to the temple!” Tears rolled down from the cheeks of this man and he fell at Baba’s feet and thanked him for his grace.</p>',
+                     author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C.',
+                     seriesId: 'Is there God',
+                     seq: 3,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 17  2016',
+                     postDate: new Date('June 17 2016 2016 5:30 AM'),
+                     title: 'Is there God(2)?',
+                     content: '<p>Professor Kasturi was Sri Sathya Sai Baba’s personal assistant for many years.<br/>' +
+                         '&nbsp;Once, during a visit to Bombay, Baba was staying in the first floor of a devotee’s house. Kasturi was given a room on the ground floor..<br/>' +
+                         '&nbsp;One morning, around 5:00, Kasturi was woken up by the growling and barking noise of dogs. He looked through the window and he was shocked to see what was happening. Beyond the compound wall of the house, there was a heap of banana leaves with food scattered all over, probably from a dinner party. The beggars were trying to get to the food and were fighting against the dogs. Kasturi thought, “If Baba is God, why does He allow all these things to happen?”<br/>' +
+                         '&nbsp;As he turned away from the window, he was surprised to find Baba standing in front of him! Even before Kasturi could open his mouth, Baba said, “These people in their previous births were wasting their food without any concern. Now, they have to pay the price.”</p>'+
+                         '<h4><strong>Annam Brahma (Food is God)</strong></h4>',
+                     author: 'Story from Loving God by N. Kasturi.',
+                     seriesId: 'Is there God',
+                     seq: 2,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 16 2016',
+                     postDate: new Date('June 16 2016 3:30 AM'),
+                     title: 'Is there God?',
+                     content: '<p>When we hear about the violence, killings and shootings all around the world, one begins to think, ‘Is there God? If so, why is He letting all these bad things happen?’<br/> Baba answers:</p>' + 
+                         '<p> “The fate of the country will depend on the character of its people. The character of the people can be elevated and purified only by sadhana, which is the hard way of regulation of behavior and control of desires.  God is the guardian and as a guardian, He has to warn and punish to wean people away from harmful habits. If it is necessary, the guardian will resort to the infliction of pain too, as a curative and corrective.</p>' + 
+                         '<p>Limit, control, regulate and set bounds: that is the only way to succeed. If people let loose their thoughts, words and actions, calamity will be the consequence. Sastra means that which ‘lays down limits’; interest in the art of harmonious living is created by these rules. Imagine a game of football which has no rules, the ball is never ‘out’, there is no ‘foul’, no corner, no offside, no hands, nothing by which you can decide who plays well or ill, who wins or loses. The game will lose all the zest; it will be pandemonium, a free fight. Rules of behavior must be observed by politicians, rulers and subjects. Sannyasins, who are the leaders of the community, heads of monasteries and scholars who set an example by their behavior and who provide guidelines for proper behavior, their responsibilities are even greater.” </p>',
+                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp165-166.',
+                     seriesId: 'Is there God',
+                     seq: 1,
+                     img: root + '/images/dwarkamai_1.jpg'
+                 }, {
+                     posted: 'June 15 2016',
+                     postDate: new Date('June 15 2016 3:30 AM'),
+                     title: 'Retrospection',
+                     content: 'If one undertakes retrospection of the day’s events, one must do it regularly at the appointed hour, not restlessly, not doing it today, neglecting it to do it tomorrow and the day after and then taking it up again on the fourth day. Such irregular practice is not conducive to the confirmation of the habit of retrospection.',
+                     author: 'Mahavir',
+                     seriesId: 'Saint Mahavir Says',
+                     seq: 2,
+                     img: root + '/images/sai_unplugged.jpg'
+                 }, {
+                     posted: 'June 14 2016',
+                     postDate: new Date('June 14 2016 2:30 AM'),
+                     title: 'Attachment and aversion',
+                     content: 'Attachment and aversion are the root cause of karma and karma originates from infatuation. Karma is the root cause of birth and death and these are said to be the source of misery. None can escape the effect of their own past karma.',
+                     author: 'Mahavir',
+                     seriesId: 'Saint Mahavir Says',
+                     seq: 1,
+                     img: root + '/images/sai_unplugged.jpg'
+                 }], [{
+                   posted: 'June 13 2016',
+                   postDate: new Date('June 13 2016 3:30 AM'),
+                   title: 'The spirit of non-violence',
+                   content: 'If the best minds of the world have not imbibed the spirit of non-violence, they have to meet gangsterism in its own way. But that would only show that we have not gone far beyond the law of the jungle and we have not yet learnt to appreciate the heritage that God has given us. In spite of the teachings of Christianity which is 1900 years old and Hinduism and Buddhism which are older and even of Islam, we have not made much headway as human beings. But whilst I would understand the use of force by those who do not have the spirit of non-violence in them, I still believe that even gangsterism has to be met with non-violence.',
+                   author: 'Mahatma Gandhi in Harijan, Dec 10, 1938',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 12 2016',
+                   postDate: new Date('June 12 2016 3:30 AM'),
+                   title: 'Pleasure and Pain',
+                   content: 'Pleasure arises from pain and pain results in pleasure. Because the Pandavas were in the jungle for twelve years and hid themselves unrecognized for the thirteenth year, people now appreciate their noble qualities. Because of the many obstacles and troubles that Prahlada encountered and the punishments meted out to him, the rest of the world now knows how great his devotion was. Prahlada never had tears in his eyes and never exhibited any pain when the demons were harming him. He was simply uttering the name of the Lord and requested the Lord’s presence. His devotion and equanimity in pain and pleasure is a living example even today of what real faith and devotion can do. On the other hand, had Prahlada lived with his father in luxury with care and tenderness, how could his faith be known to the world?',
+                   author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
+                   seriesId: 'Pleasure and Pain',
+                   seq: 2,
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 11 2016',
+                   postDate: new Date('June 11 2016 3:30 AM'),
+                   title: 'Pain ultimately leads to pleasure',
+                   content: 'All the pains and difficulties that you get will ultimately turn out as a means to give you happiness and pleasure. Even a diamond of high quality does not get its value unless we cut the faces on it. Pure gold will not be turned into a beautiful ornament unless it is repeatedly put into fire and molded. Whenever you experience pains, trials, obstacles and tribulations, you should recognize them as paths for obtaining ultimate happiness. So, we should be prepared to accept pain. To seek pleasure alone and not to welcome pain is not right. Pleasure comes out of pain. We should recognize that all pain will ultimately end in pleasure.',
+                   author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
+                   seriesId: 'Pleasure and Pain',
+                   seq: 1,
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 10  2016',
+                   postDate: new Date('June 10 2016 2016 5:30 AM'),
+                   title: 'Why there is diversity in the world?',
+                   content: '<u>Devotee:</u> If God alone exists in everyone, why the world has diversities and inequalities caused by ego?<br/><br/>' +
+                        '<u>Master:</u> It is all His play, His Leela!  A king has four sons. They are all princes but when they play, one becomes the minister, another, a policeman and so on. A prince he is, yet playing as a policeman!',
+                   author: 'Sayings of Sri Ramakrishna, p244',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 9 2016',
+                   postDate: new Date('June 9 2016 3:30 AM'),
+                   title: 'Different aspects of God',
+                   content: 'Do you know what the form and aspect of God is like? It is like rising bubbles on a sheet of water. It can be seen actually with different forms and different colors. The divine incarnation (Avatar) is one of the forms. Unless one sees God, one is not able to realize all this. For the sake of those who love God, He manifests Himself in various ways and forms.',
+                   author: 'Sayings of Sri Ramakrishna, p245',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_1221_1.jpg'
+               }, {
+                   posted: 'June 8 2016',
+                   postDate: new Date('June 8 2016 3:30 AM'),
+                   title: 'Ringing bell',
+                   content: 'When a bell is rung, the repeated ding-dongs may be distinguished one from the other, as if each sound has a form. But, when we stop the ringing, the indistinguishable sound, which is audible for a while and gradually dies away, appears formless. Like the sounds of the bell, God is both with and without form. ',
+                   author: 'Sayings of Sri Ramakrishna, p246',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 7 2016',
+                   postDate: new Date('June 7 2016 3:30 AM'),
+                   title: 'Why do we worship God with form?',
+                   content: '<p>So long as there is ego or ‘I’ in me, there are desires in me. Then, there is a need for a Personal God to whom I can appeal to fulfill my desires.  There is this Personal God before me, revealing Himself through various forms of glory, as the world and living beings.</p>&nbsp;&nbsp;&nbsp; God without form and with form are one and the same. A belief in one implies the belief in the other. Fire cannot be thought to be apart from its burning power. Again, sun’s rays cannot be thought of apart from the sun, nor the sun from its rays. You cannot think of the whiteness of the milk, apart from milk, nor milk apart from its whiteness. Thus, God without form cannot be thought apart from the idea of God with form and vice versa.',
+                   author: 'Sayings of Sri Ramakrishna, p239 and p241.',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_1221_1.jpg'
+               }, {
+                   posted: 'June 7 2016',
+                   postDate: new Date('June 7 2016 2:30 AM'),
+                   title: 'Ramadan Mubarak!',
+                   content: 'Ramadan, the Islamic holy month of fasting, contemplation and prayer, began Sunday, June 5 and will run through Tuesday, July 5. It is celebrated as the month during which Prophet Muhammad received the initial revelations that would become the Quran. During Ramadan, Muslims do not eat or drink (not even water) from sunrise to sunset, and try to abstain from impure thoughts or behavior. Daily fasts are to be broken by sharing meals with family after sunset. At the end of the month, a three-day festival called Eid al-Fitr marks Ramadan\'s conclusion. Islam is the world\'s second-largest religion, after Christianity, with over 1 billion followers.',
+                   author: '-',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/dwarkamai_1.jpg'
+               }], [{
+                   posted: 'June 6 2016',
+                   postDate: new Date('June 6 2016 3:30 AM'),
+                   title: 'To me God is..',
+                   content: '<p>To me God is Truth and Love;</p>' + 
+                       '<p>God is ethics and morality;</p>' + 
+                       '<p>God is fearlessness;</p>' + 
+                       '<p>God is conscience;</p>' + 
+                       '<p>God is the source of Light and Life; yet he is beyond all these!</p>' + 
+                       '<p>He is the atheism of the atheist….</p>' +
+                       '<p>for, in His boundless love, God permits even the atheist to live!</p>',
+                   author: 'Mahatma Gandhi in Young India, March 5, 1925',
+                   seriesId: 'Mahatma Gandhi in Young India',
+                   seq: 0,
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 5 2016',
+                   postDate: new Date('June 5 2016 3:30 AM'),
+                   title: 'You Are Divine!!',
+                   content: 'Man is essentially Divine. However, he believes himself to be an individual, limited and temporary. This is because he is entangled in the characteristics of the five sense elements, namely, sound, touch, form, taste and smell. This error brings about joy and grief, good and bad, birth and death. To escape from this association with the senses and to rid oneself from their pulls, is the sign of liberation, called in Sanskrit as Kaivalya, Moksha or Mukthi. ',
+                   author: 'Sathya Sai Baba in Upanishad Vahini, Ch.1, p1',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/sai_1221_1.jpg'
+               }, {
+                   posted: 'June 4  2016',
+                   postDate: new Date('June 4 2016 2016 5:30 AM'),
+                   title: 'How to pay back a person who has hurt you?',
+                   content: 'The best way to get back to you a person who has hurt you is to do something wonderfully good to him so that he is put to shame. ',
+                   author: ' Thiruvalluvar',
+                   seriesId: '-1',
+                   seq: -1,
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 3 2016',
+                   postDate: new Date('June 3 2016 3:30 AM'),
+                   title: 'Shaving and controlling the mind',
+                   content: '<p>Many men are accustomed to shaving and they know that if they press the razor too hard, they will cut the skin and if they do not press at all, it will not be possible to remove the unwanted hair.<br/>' +
+                       '&nbsp;Only when they apply moderate pressure, they will be able to get the necessary result.</p>' +
+                       '<p>The human mind is like a razor’s edge. Without controlling the mind too rigidly and without allowing it to go too freely, we should encourage it to do good acts. We should control it when it shows a tendency to participate in bad acts.<br/>' +
+                       '&nbsp;As you hold the razor and guide (glide!) it on your face, you should hold the mind and make it behave in a manner in which it ought to. Only then you conduct yourself a human being.<br/>' +
+                       '&nbsp;You must discriminate and distinguish between good and bad acts and guide the mind moderately between the two extremes.</p>'
+                            ,
+                   author: 'Sri Sathya Sai Baba in Summer Showers in Brindavan, 1974, Ch.2',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_unplugged.jpg'
+               }, {
+                   posted: 'June 2 2016',
+                   postDate: new Date('June 2 2016 3:30 AM'),
+                   title: 'Man, play your role!',
+                   content: 'As all rivers hurry towards the sea,</p>' +
+                            '<p>Let all your thoughts wend their way to God.</p>' +
+                          '<p>The play is His;</p>' +
+                          '<p>The role is His gift;</p>' +
+                          '<p>The lines are written by Him;</p>' +
+                          '<p>He decides the dress and decoration;</p>' +
+                          '<p>He decides the gesture and the tone;</p>' +
+                          '<p>He decides the entrance and exit too!</p>' +
+                          '<p>You have to act well your part and receive His approbation, when the curtain falls.</p>' +
+                          '<p>Earn by your effort and enthusiasm the right to play higher and higher roles…</p>' +
+                          '<p>That is the meaning and purpose of life!</p>',
+                   author: 'Shri Sathya Sai Baba',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/dwarkamai_1.jpg'
+               }, {
+                   posted: 'June 1 2016',
+                   postDate: new Date('June 1 2016 3:30 AM'),
+                   title: 'The power of Service',
+                   content: 'Seva (service) is the blossom of Love (Prema), a flower that fills the mind with rapture. Harmlessness is the fragrance of that flower. Let even your little acts be scented with compassion and reverence. Be assured that your character would thereby shine greatly. The highest happiness is contentment. Where there is no harshness, there holiness will thrive and virtues will flourish.',
+                   author: 'Sri Sathya Sai Baba in Vidya Vahini, Ch.VIII, p44.',
+                   seriesId: '-1',
+                   seq: '-1',
+                   img: root + '/images/sai_unplugged.jpg'
+               }],
+              [{
+                  posted: 'May 31 2016',
+                  postDate: new Date('May 31 2016 3:30 AM'),
+                  title: 'God does service too!',
+                  content: 'Lord Krishna was all-knowing, all-powerful and an Avatar, yet He worked as a charioteer for Arjuna. Krishna was one who recognized the importance of service to the community. By His own example, He showed that service to others was very important. Every day, after the war of Mahabharata, Krishna took the horses to the river, washed them and tended to their wounds and applied medicines. Krishna demonstrated that hard work and compassion to all living beings constitute the duty of all human beings.',
+                  author: 'Sri Sathya Sai Baba in Summer Roses in Blue Mountains, 1976, Ch.3',
+                  seriesId: '-1',
+                  seq: '-1',
+                  img: root + '/images/sai_1221_1.jpg'
+              }, {
+                  posted: 'May 30 2016',
+                  postDate: new Date('May 30 2016 3:30 AM'),
+                  title: 'Alas, it is not a Memorable Day but Memorial Day!',
+                  content: '<p>I only regret that I have but one life to lose for my country. – <strong>Nathan Hale</strong></p>'
+                    + '<p>tt is those who kept the faith and fought the fight;<br>&nbsp;The glory is theirs, but the duty is ours – <strong>Wallace Bruce</strong></p>'
+                    + '<p>A hero is someone who has given his or her life to something bigger than oneself. – <strong>Joseph Campbell</strong></p>'
+                    + '<p>In the end, we will remember not the words of our enemies, but the silence of our fallen friends. - <strong>Martin Luther King</strong> </p>'
+                    + '<p>A man’s country is not a certain area of land, of mountains, rivers and woods, but it is a principle, patriotism and loyalty to that principle. – <strong>George William Curtis</strong></p>',
+                  author: 'Multiple',
+                  seriesId: '-1',
+                  seq: '-1',
+                  img: root + '/images/sai_unplugged.jpg'
+              }, {
+                  posted: 'May 29 2016',
+                  postDate: new Date('May 29 2016 3:30 AM'),
+                  title: ' India’s Freedom',
+                  content: '<p>India has never waged a war against any nation. She has put up sometimes a half-organized resistance in self-defense, pure and simple. She has therefore, no need to develop the will for Peace. She has that in abundance whether she knows it or not! – Mahatma Gandhi in Young India, July 4, 1929.</p><p>India’s freedom must revolutionize the world’s outlook upon peace and war. Her inability to fight affects the whole of mankind</p>',
+                  author: 'Mahatma Gandhi in Young India, Sept 17, 1925.',
+                  seriesId: 'Mahatma Gandhi in Young India',
+                  seq: 2,
+                  img: root + '/images/sai_1221_1.jpg'
+              }, {
+                  posted: 'May 28 2016',
+                  postDate: new Date('May 28 2016 2016 5:30 AM'),
+                  title: 'The ways of Peace',
+                  content: 'India’s destiny lies not along the bloody way of the West, which shows no signs of tiredness, but along the bloodless way of peace that comes from a simple and Godly life. She must be strong enough to resist the temptation from the West for her own sake and that of the world. ',
+                  author: 'Mahatma Gandhi in Young India, Oct 7, 1926.',
+                  seriesId: 'Mahatma Gandhi in Young India',
+                  seq: 1,
+                  img: root + '/images/dwarkamai_1.jpg'
+              }, {
+                  posted: 'May 27 2016',
+                  postDate: new Date('May 27 2016 3:30 AM'),
+                  title: 'Looking forward to Memorial Day weekend?',
+                  content: 'To many, Memorial Day, is just an excuse for a three-day weekend. It is also known as the day that marks the official start of summer and as a day devoted to getting great deals at the mall. However, the true meaning of Memorial Day goes far beyond barbecues and mattress sales. '
+                            ,
+                  author: 'from the Web',
+                  seriesId: '-1',
+                  seq: '-1',
+                  img: root + '/images/sai_unplugged.jpg'
+              }, {
+                  posted: 'May 26 2016',
+                  postDate: new Date('May 26 2016 3:30 AM'),
+                  title: 'Can you see me?',
+                  content: 'If you want to see Me, be egoless and humble and meditate on Me. If any devotee meditates on Me with complete self-surrender, he shall experience complete union with Me. It is impossible to describe all my ways and measures.',
+                  author: 'Shirdi Sai Baba',
+                  seriesId: '-1',
+                  seq: '-1',
+                  img: root + '/images/dwarkamai_1.jpg'
+              }, {
+                  posted: 'May 25 2016',
+                  postDate: new Date('May 25 2016 3:30 AM'),
+                  title: 'Many mirrors, many reflections of one',
+                  content: 'All are one, be alike to everyone. That is your primary duty. This is the most important teaching of Buddha. You will see unity everywhere once you understand this truth. There is unity in the apparent multiplicity. When you are surrounded by many mirrors, you see a number of reflections of yourself. Reflections are many but the person is one.',
+                  author: 'Sri Sathya Sai Baba on Buddha Purnima, May 13, 1996.',
+                  seriesId: '-1',
+                  seq: '-1',
+                  img: root + '/images/sai_unplugged.jpg'
+              }],
+                   [   {
                        posted: 'May 15 2016',
                        postDate: new Date('May 15 2016 3:30 AM'),
                        title: 'Blessings cannot be taken back',

@@ -27,6 +27,8 @@
                 <li><a href="../index.html"><b>Parent Website</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                 <li> <a href="home.html">Home page</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                 <li><a href="Ashtavinayak.html">The 'Swayambhu' Ashtavinyaks</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="FamousGaneshTemples.html">Other Famous Ganesh temples</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="GaneshMahotsav.html">Ganesh Festival in Public - 'Sarvajanik Mahotsav'</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 
             </ul>
         </nav>
@@ -59,7 +61,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-9"><div ng-view></div></div>
+                    <div class="col-sm-9  enclosedArticle"><div ng-view></div></div>
                     &nbsp;<br/>
                     &nbsp;<br />
                     &nbsp;<br />
@@ -90,31 +92,31 @@
                  
                  .when('/General', {
                   
-                templateUrl: 'views/General.html'
+                templateUrl: 'AshtavinayakViews/General.html'
             }).when('/PastWeek/:weekIndex', {
                 controller: 'NectarByWeekController',
 
-                templateUrl: 'views/NectarByWeek.html'
+                templateUrl: 'AshtavinayakViews/NectarByWeek.html'
             }).when('/Moreshwar', {
-                templateUrl: 'views/Mayureshwar.html'
+                templateUrl: 'AshtavinayakViews/Mayureshwar.html'
             }).when('/Siddhivinayak', {
                      
-                templateUrl: 'views/Siddhivinayak.html'
+                templateUrl: 'AshtavinayakViews/Siddhivinayak.html'
             }).when('/Ballaleshwar', {
-                templateUrl: 'views/Ballaleshwar.html'
+                templateUrl: 'AshtavinayakViews/Ballaleshwar.html'
             }).when('/Varadvinayaka', {
-                templateUrl: 'views/Varadvinayaka.html'
+                templateUrl: 'AshtavinayakViews/Varadvinayaka.html'
             }).when('/Chintamani', {
-                templateUrl: 'views/Chintamani.html'
+                templateUrl: 'AshtavinayakViews/Chintamani.html'
             })
                     .when('/Girijatmaj', {
-                        templateUrl: 'views/Girijatmaj.html'
+                        templateUrl: 'AshtavinayakViews/Girijatmaj.html'
                     })
                     .when('/Vigneshwar', {
-                        templateUrl: 'views/Vigneshwar.html'
+                        templateUrl: 'AshtavinayakViews/Vigneshwar.html'
                     })
                     .when('/Mahaganapati', {
-                        templateUrl: 'views/Mahaganapati.html'
+                        templateUrl: 'AshtavinayakViews/Mahaganapati.html'
                     })
                      .otherwise({ redirectTo: '/General' });
             }, function ($httpProvider) {

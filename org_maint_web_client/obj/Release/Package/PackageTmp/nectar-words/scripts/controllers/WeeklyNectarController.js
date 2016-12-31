@@ -2,7 +2,7 @@
     
     var WeeklyNectarController = function ($scope, $routeParams, $localStorage, connectToService) {
         //publish   
-        $scope.root = '/myApp/nectar-words';
+        $scope.root = '.';
         // local $scope.root = '/nectar-words';
         var startOfThisWeek = parseInt(new Date().getDay());
         var deltaToDesiredWeek = startOfThisWeek + (($routeParams.weekIndex - 1) * 7)
@@ -24,7 +24,7 @@
                     title: ' Faith-1',
                     content: 'Parvati once asked Shiva, “O Lord, what is the root of the eternal, everlasting, all-embracing bliss?” To her Shiva replied, “The root is faith.” Let everyone take to devotional practices and perform the duties of his own creed and faith',
                     author: 'Sayings of Sri Ramakrishna, p133',
-                    img: $scope.root + '/images/sai_1221_1.jpg'
+                    img: $scope.root + '/images/sai_1221_2.jpg'
                 }, {
                     posted: 'March 9 2016',
                     postDate: new Date('March 9 2016'),

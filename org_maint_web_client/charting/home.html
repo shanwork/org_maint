@@ -1,60 +1,59 @@
-﻿<!doctype html>
-<html ng-app="org_maint_budget">
+﻿<!DOCTYPE html>
+<html ng-app="charting_app">
 <head>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <title>Angular-nvD3 Line Chart</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../styles/globalStyles.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/c3.min.css" rel="stylesheet" type="text/css" />
-
-
-    <title>Fun with Charting </title> 
-   
+<link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.5/angular-nvd3.min.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
-<body>
-    <div class="container-fluid" style="overflow:auto;">
+<body >
+    <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-cm-12">
-            <header>
-                <nav class="navbar navbar-default" style="border:2px outset silver;">
-                    <ul class="navbar navbar-nav">
-                        <li><a href="../index.html"><b>Home Page</b></a></li>
-                        <li><a href="#/about">About this site</a></li>
-                        <li><a href="#/budgetStatus">Budget Status</a></li>
-                        <li><a href="#/contributors">Contributors</a></li>
-                        <li><a href="#/entityFinanceSummaries">Entity Summaries</a></li>
-                        <li><a href="#/settings">Settings</a></li>
-                        <li><a href="views/charting.html">Charting</a></li>
-                     </ul>
-                </nav>
-            </header>
+            <div class="col-md-12">
+                <div ng-controller="AnimationCtrl">
 
-
-
-            <div ng-view></div>
+                   
+                    <hr />
+                    Blood 1 : <font color='red'>{{blood_1}}</font>
+                    Blood 2 : <font color='red'>{{blood_2}}</font>
+                    <button type="button" data-ng-click="roll()">Start</button>
+                    <button type="button" data-ng-click="pause()">Rause </button>
+                    <button type="button" data-ng-click="reset()">Reset </button>
+                    <nvd3 options="options" data="data" class="with-3d-shadow with-transitions"></nvd3>
+                </div>
+                </div>
             </div>
-          
-        </div>
-    </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div ng-controller="DemoCtrl">
+                        <label>Date format: <input ng-model="format"></label> <hr />
+                        Current time is: <span my-current-time="format"></span>
+                        <hr />
+                        Blood 1 : <font color='red'>{{blood_1}}</font>
+                        Blood 2 : <font color='red'>{{blood_2}}</font>
+                        <button type="button" data-ng-click="fight()">Fight</button>
+                        <button type="button" data-ng-click="stopFight()">StopFight</button>
+                        <button type="button" data-ng-click="resetFight()">resetFight</button>
+                        <nvd3 options="options" data="data" class="with-3d-shadow with-transitions"></nvd3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div ng-controller="StatsCtrl">
+                        <nvd3 options="options" data="data" class="with-3d-shadow with-transitions"></nvd3>
 
-    <script src="../scripts/angular.js"></script>
-    <script src="../scripts/angular-route.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-sanitize.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
-<script src="scripts/app.js"></script>
-    <script src="scripts/controllers/budgetStatusController.js"></script>
-    <script src="scripts/globals/budgetStatusService.js"></script>
-    <script src="scripts/controllers/contributorController.js"></script>
-    <script src="scripts/globals/contributorService.js"></script>
-    <script src="scripts/controllers/entityController.js"></script>
-    <script src="scripts/globals/entityService.js"></script>
-    <script src="scripts/controllers/entityFinanceSummaryController.js"></script>
-    <script src="scripts/globals/entityFinanceSummaryService.js"></script>
-    <script src="scripts/controllers/entityItemExpensesController.js"></script>
-    <script src="scripts/globals/entityItemExpensesService.js"></script>
-    <script src="scripts/controllers/aboutThisSiteController.js"></script>
-    <script src="scripts/controllers/settingsController.js"></script>
-    <script src="scripts/d3.min.js"></script>
-   <script src="scripts/c3.min.js"></script>
-   
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
 </body>
 </html>

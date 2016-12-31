@@ -1,0 +1,40 @@
+﻿<div>
+    <ul>
+        <li>Implementation for activity stream <a href="#/quickImplementation">Quick Implementation</a></li>
+        <li>
+            I used the concept of a single page application and angularjs
+        </li>
+
+        <li>
+            using a single view and controller to simulate the three chat persons and showing the chat stream
+        </li>
+        <li>
+            three chat text boxes are stacked on the left, and the activity stream is on the right
+        </li>
+        <li>
+            focusing on the core functionality of updating a list
+        </li>
+        <li>
+            the json is copied into the controller and binds to a table
+        </li>
+        <li>
+            chat participants select a category and click their avatar icon
+        </li>
+        <li>
+            the activity stream updates
+        </li>
+           <li><b>TO DO</b></li>
+        <li>
+            This was implemented early hours this morning (Nov 21 ), and I took about 2 hours on this.<br /><em>Sorry about that, but I prioritized my office work, which left me with little time to work on this</em>
+        </li>
+        <li>
+            Given the time constraint I focussed on getting it to work. Anything that was breaking, I worked around it (e.g localStorage)
+        </li>
+<li>Didnt implement the time portion. No validations</li>
+        <li> ideally, the data should be maintained in a service or factory class</li>
+        <li> My thinking is that this would be part of a login based application</li>
+        <li> each logged in user would have their own avatar icon the activity stream would highlight the users chats</li>
+        <li> Data would come from the factory class which may retrieve the activity stream from a web service</li>
+        <li> Use ng-interval or similar polling mechanism to update the activity stream</li>
+</ul>
+</div>

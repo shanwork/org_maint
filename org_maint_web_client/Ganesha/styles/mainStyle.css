@@ -4,11 +4,11 @@
 #logo
 {
   background-color:burlywood;
-  height:100px;
+  min-height:100px;
   padding:2px;
   border: inset 4px brown;
   border-radius:5px;
-  /*  background-image:url(../images/ganesh_icon.jpg);*/
+  overflow:auto;
    
 }
 nav{
@@ -76,10 +76,45 @@ article{
 }
 .articlePic
 {
-
+    margin-right:16px;
 }
 .articlePic img
 {
-    margin-right:3px;
-    border:ridge 2px gold;
+    margin-right:33px;
+    border:ridge 4px gold;
+    width:auto; 
+    overflow:hidden;
+}
+.articleText
+{
+   margin-left:20px;
+}
+article .innerNav
+{
+     border:4px outset brown;
+    border-radius:4px;
+    background-color:beige;
+    padding:3px;
+   /* padding-top:15px;*/
+    height:auto;
+    min-height:50px;
+}
+article nav li 
+{
+   float:left;
+   padding:2px;
+   font-size:larger;
+   
+}
+.articlePicResp
+{
+
+}
+.articlePicResp img
+{
+    width:20px;
+    margin-right:33px;
+    border:ridge 4px gold;
+    width:auto; 
+    overflow:hidden;
 }

@@ -1,0 +1,97 @@
+﻿body {
+    background-color:lightseagreen;
+}
+h3 em
+{
+    font-size:smaller;
+}
+#logo
+{
+  background-color:lightgray;
+  height:100px;
+  padding:5px;
+  border: groove 8px slategray;
+  border-radius:10px;
+  height:auto;
+  margin:5px 10px 2px 10px;
+  /*  background-image:url(../images/ganesh_icon.jpg);*/
+   
+}
+.topRightSection{
+    background-color:lightskyblue;
+    color:darkslategray;
+    border:2px ridge slateblue;
+}
+nav{
+ /* height:35px;
+  text-wrap:none;*/
+ 
+}
+ul li
+{
+   
+   text-orientation:sideways;
+}
+nav
+{
+    margin-top:3px;
+}
+form
+{
+    padding:2px;
+    border: 2px ridge silver;
+    max-width:410px;
+}
+.field
+{
+    border:1px ridge #EEFFFF;
+    margin:0px;
+    background-color:lightyellow;
+    padding:3px;
+    padding-top:5px;
+    max-width:400px;
+    height:auto;
+}
+.field input,textarea
+{
+    float:right;
+    padding-right:10px;
+}
+.rightEdge
+{
+     
+    margin-right:2px;
+    float:right;
+    border:4px ridge;
+    border-radius:5px;
+    border-color:orangered;
+    background-color:goldenrod;
+    overflow:auto;
+}
+article{
+    border:8px inset slateblue;
+    border-radius:10px ;
+    margin:10px;
+    background-color:lightblue;
+    padding:3px;
+    padding-top:5px;
+    height:auto;
+}
+#container{
+    min-width:1000px;
+}
+.enclosedArticle
+{
+    border:inset 4px saddlebrown;
+    background-color:burlywood;
+    padding:2px;
+}
+.articlePic
+{
+
+}
+.articlePic img
+{
+    margin-right:3px;
+    border:ridge 2px gold;
+}

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="use-my-software.com/myapp" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Shantanu\\Technical\\Web\ Development\\My-projects\\org_maint\\org_maint_web_client\\obj\\Release\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Shantanu\\Technical\\Web\ Development\\My-projects\\org_maint\\org_maint_web_client\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Shantanu\\Technical\\Web\ Development\\My-projects\\org_maint\ -\ Copy\ \(3\)\\org_maint_web_client\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Shantanu\\Technical\\Web\ Development\\My-projects\\org_maint\ -\ Copy\ \(3\)\\org_maint_web_client\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
 </parameters>

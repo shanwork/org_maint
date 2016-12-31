@@ -62,18 +62,20 @@
 <body  >
     <div class="container-fluid" style="overflow:auto;margin:0px;padding:0px;">
         <div class="row" style="height:100%;min-height:700px;">
-            <div class="col-lg-12 col-cm-12">
+            <div class="col-lg-12 col-cm-12"  >
                 <header style="border:1px outset silver;margin:0px;padding:0px;">
                     <nav class="navbar navbar-default nectar-navbar-default">
                         <ul class="navbar navbar-nav">
                             <li><a href="../index.html"><b>Home Page</b></a></li>
-                            <li><a href="#" onclick="showIFrame('basicAnim')"> Basic Animation</a></li>
+                             
                             <li><a href="#" onclick="showIFrame('reac1')"> Test your reaction 1</a></li>
+                            <li><a href="#" onclick="showIFrame('randomAnim')"> Random Animations</a></li>
 
                         </ul>
                     </nav>
                 </header>
                 <iframe src="views/basicAnimation.html" id="basicAnim" style="display:none;"></iframe>
+                <iframe src="views/randomAnimation.html" id="randomAnim" style="display:none;"></iframe>
                 <iframe src="views/reactionTester.html" id="reac1"></iframe>
               
 
@@ -81,11 +83,33 @@
         </div>
     </div>
   
-    <script>
+    <script> 
+       
+        function a()
+        {
+            function b() {
+                console.log('b()', var1);
+            }
+            var var1 = 2;
+            b();
+            console.log('a()', var1);
+
+        }
+        var var1 = 3;
+        console.log('global', var1);
+        a();
         var currentIFrameId = 'reac1';
         function showIFrame(iFrameId)
         {
+
+
             if (currentIFrameId != iFrameId) {
+                if (iFrameId == 'basicAnim') {
+                    divGet = true;
+                }
+                else {
+                    divget = false;
+                }
                 document.getElementById(currentIFrameId).style.display = "none";
                 document.getElementById(iFrameId).style.display = "block";
                 currentIFrameId = iFrameId;

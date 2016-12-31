@@ -3,7 +3,8 @@
     angular.module('nectar_words_app')
       .service('Hub', function ($http, $q,$localStorage,
             Q1_2016,
-            Q2_2016) {
+            Q2_2016,
+            Q3_2016) {
           //  var budgetStatus = {};
           var allWeeksSaying = [];
           // allWeeksSaying = Q1_2016.returnAllWeeksSaying();
@@ -19,6 +20,10 @@
 
           Q2_2016AllWeeksSaying = Q2_2016.returnAllWeeksSaying();
           this.insertQuarterData(Q2_2016AllWeeksSaying);
+
+
+          Q3_2016AllWeeksSaying = Q3_2016.returnAllWeeksSaying();
+          this.insertQuarterData(Q3_2016AllWeeksSaying);
 
           var weekCount = [];
           var nectarVisitedStats = [];

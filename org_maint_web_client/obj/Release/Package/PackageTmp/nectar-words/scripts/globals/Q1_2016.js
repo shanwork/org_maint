@@ -1,5 +1,5 @@
 ﻿
-    var root = '/myApp/nectar-words';
+    var root = '.';
     angular.module('nectar_words_app')
       .service('Q1_2016', function () {
           var allWeeksSaying = [
@@ -788,7 +788,18 @@
                   seriesId: 'Baba will you be my valentine',
                   seq: '1',
                   img: root + '/images/dwarkamai_1.jpg'
-              }
+              },
+              {
+                  posted: 'Unknown',
+                  postDate: new Date('April 1 2010'),
+                  title: 'Prayer',
+                  content: '<em>Arpito tuzhya payashi mazhe Deha Bhaan<br/> Kar malaa stitha pradyna naahi maan apamaan<br/>Kari mee tuzhi Seva lavi jivaachey raan<br/>De re Vithala, malaa darshanaachey varadaan</em><br/>'+ 
+                      '<p>(I surrender my body and soul at your feet, <br/>please make my mind steady and one-pointed, no honor nor insult, <br/>let me engross myself in your seva, <br/>Vithoba, give me the gift or your darshan )</p>',
+                  author: 'anon',
+                  seriesId: '-1',
+                  seq: -1,
+                  img: root + '/images/sai_1221_1.jpg'
+              },
               ]
 
           ];

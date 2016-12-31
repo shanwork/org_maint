@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        #downloads div
+        {
+            border:2px solid gray;
+            background-color:lightsteelblue;
+            padding:3px;
+            margin-top:5px;
+            width:auto;
+        }
+        div a
+        {
+            text-decoration:none;
+            color:darkslateblue;
+            font-weight:200;
+            padding-right:40px;
+
+        }
+         div a:hover
+        {
+            text-decoration:none;
+            color:brown;
+            font-weight:600;
+            
+
+        }
+        div a:checked
+        {
+            text-decoration:none;
+            color:saddlebrown;
+            font-weight:500;
+        }
+    </style>
+</head>
+<body>
+    <div style="border:5px inset lightgray;background-color:cornsilk;border-radius:6px;padding:10px;">
+        <h1>Download area</h1>
+        <div id="downloads"><div>files available for download</div></div>
+        <button id="allDownloadBtn">Download</button>
+    </div>
+    <input type="file" id="files" name="filename" />
+    
+    <!--button onclick="downloadWithContent('TextFile1.txt', 'hello')">Dow</!--button>
+    <input type="file" id="files" name="files[]" multiple />
+    <!--form action="downloadMaterial" method="post" enctype="multipart/form-data">
+       
+        <input type="submit" value="Upload" />
+    </!--form-->
+<script src="scripts/fileManager.js"></script>
+</body>
+</html>
