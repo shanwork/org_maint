@@ -1,0 +1,35 @@
+﻿<style>
+    .centered{
+        margin: 40px auto;
+        
+    }
+</style>
+<div class="container centered" id="login" ng-controller='SessionController as loginForm'>
+    <form class="form-inline" id="login1">
+        <div class="row" id='loginForm'>
+
+            <div class="form-group row ">
+                <label for="inputUsername" class="inline">Username</label>
+                <input placeholder="Enter user id" id="inputUserame" class="form-control" ng-model='loginForm.userName' autofocus>
+            </div>
+        </div>
+        <div class="row" id='loginForm'>
+            <div class="form-group row ">
+                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" ng-model='loginForm.userPassword' class="form-control">
+            </div>
+            <div class="form-group row pull-right">
+                <span class="validation pull-left" style="overflow:none;" ng-hide=(loginSuccess)>
+                    {{loginErrorMessage}}<br />
+                    <span style='color: blue;display: none'>Contact Admin <em>({{adminEmail}})</em>.</span>
+                </span>
+            </div>
+        </div>
+        <div class="row" id='loginForm'>
+            <div class="form-group row " ng-hide="invalidInitialization">
+                <button class="btn btn-primary btn-block" type="submit" ng-click="login(loginForm.userName,loginForm.userPassword)">Login</button>
+            </div>
+
+        </div>
+    </form>
+</div> <!-- end login div -->
