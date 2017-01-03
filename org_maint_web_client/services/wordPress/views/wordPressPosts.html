@@ -1,0 +1,135 @@
+<div class="container" id="login" ng-controller='SessionController as logoutForm'>
+    <div>Logged in </div>
+    <div ng-repeat="loggedIn in loggedInUsers">dd{{loggedIn}}</div>
+    <button class="btn btn-primary btn-block" type="submit" ng-click="logout()">
+        Logout</button>
+
+</div>
+    <form name="wordPressPostForm">
+        {{loggedInUsers[0]}}
+        1<div ng-repeat="loggedInUser in loggedInUsers">dd{{loggedInUser}}</div>2
+            <div class="row">
+                <div>
+                    <div class="tabContainer">
+                        <div class="row" style="margin:20px;">
+                            <em>
+                                Implemenation so far.  Time spent - about two hours
+                                <ul>
+                                    <li>High level data dump</li>
+                                    <li>Tooltips for some of the level two objects</li>
+                                    <li> Idea for layout of how level two details will be shown (on the right </li>
+                                </ul>
+                                To be done (incomplete because of time constraint)
+                                <ul>
+                                    <li> Pagination and sorting the high level table (left) </li>
+                                    <li>completion of the right side - tables, other placeholders for the level two drill down details</li>
+                                    <li> completion of the right side - population of the drill down details when selecting a row on the left table </li>
+                                    <li> custom styling, titles, etc </li>
+                                </ul>
+
+                            </em>
+                            <div class="col-md-12 col-lg-7" style="border: 1px">
+
+
+
+                                <table id="main" class="table table-striped " cellspacing="0" width="70%">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                            <th>Post ID <span class="instructions noBreak">(hover for details)</span></th>
+                                            <th class="border-left">Link</th>
+                                            <th class="text-center border-left noBorderBottom">Date</th>
+                                            <th class="text-center border-left noBorderBottom">Comment Count</th>
+                                            <th class="text-center border-left noBorderBottom">Content (hover for detail)</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="{{getSelectedRowClass(0)}}" ng-click=" getCellDetails($index) " ng-repeat="postDetail in wordPressPostList  ">
+                                            <td>{{$index+1}}</td>
+                                            <td title='full name: {{postDetail.author.first_name + " "  + postDetail.author.last_name}}, capabilities {{postDetail.capabilities}}, \n categories {{postDetail.categories}}'>{{postDetail.ID}}</td>
+                                            <td><a href='{{postDetail.URL}}' target="_blank">click </a></td>
+                                            <td>
+                                                {{postDetail.date}}
+                                            </td>
+                                            <td>
+                                                {{postDetail.comment_count}}
+                                            </td>
+                                            <td title={{postDetail.content}}>
+                                                (hover)
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-12 col-lg-5">
+                                <div><em> (Clicking the cell row on the table to the left will fill in the details below )</em> </div>
+
+
+                                <table id="author" class="table table-striped " cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr class="odd">
+                                            <th colspan="2">Author</th>
+
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>ID</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>Full Name</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>Profile URL</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td colspan="2">.....</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <h3>content</h3><p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='640' height='390' src='https://www.youtube.com/embed/Y-TZOHYIVIE?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></p>↵<p><a href="https://twitter.com/JaguarJFrench" target="_blank">@JaguarJFrench</a></p>↵<p><a href="http://www.jfrenchforever.com/" target="_blank">www.jfrenchforever.com</a></p>
+
+
+                                </div>
+                                <table id="author" class="table table-striped " cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr class="odd">
+                                            <th>Links</th>
+
+                                        </tr>
+                                        <tr class="odd">
+                                            <td><a href="https://public-api.wordpress.com/rest/v1/sites/20683037/posts/3556/help" target="_blank">help</a></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td><a href="https://public-api.wordpress.com/rest/v1/sites/20683037/posts/3556/likes/" target="_blank">likes</a></td>
+
+                                        </tr>
+                                        <tr class="odd">
+                                            <td><a href="https://public-api.wordpress.com/rest/v1/sites/20683037/posts/3556/replies/" target="_blank">replies</a></td>
+
+                                        </tr>
+                                        <tr class="even">
+                                            <td><a href="https://public-api.wordpress.com/rest/v1/sites/20683037/posts/3556" target="_blank">self</a></td>
+
+                                        </tr>
+                                        <tr class="odd">
+                                            <td><a href="https://public-api.wordpress.com/rest/v1/sites/20683037" target="_blank">site</a></td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+</div>
+   </form>
