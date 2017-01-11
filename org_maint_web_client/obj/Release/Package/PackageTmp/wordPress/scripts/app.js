@@ -1,4 +1,5 @@
-( function() 
+/* Word Press module level class app.js */
+(function ()
 { 
     'use strict' ;
     var posts_app = angular.module('posts_app', ['ngRoute','ngStorage','ngCookies' ]);
@@ -9,19 +10,19 @@
     
     posts_app.config(function ($routeProvider) {
         $routeProvider
-             .when('/login', {
-                 controller: 'SessionController',
-                 templateUrl: 'views/login.html'
+            /* for future use - if the post page is part of a multi view SPA
+             .when('/newFlow', {
+                 controller: 'NewFlowController',
+                 templateUrl: 'views/newFlow.html'
              })
+             ..
+             ...
+             */
             .when('/wordPressPosts', {
                     controller: 'WordPressPostController',
                     templateUrl: 'views/wordPressPosts.html'
             })
-            .when('/otherPosts', {
-              //      controller: 'WordPressPostController',
-              //        templateUrl: 'views/wordPressPosts.html'
-                })
-                .otherwise({ redirectTo: '/wordPressPosts' });
+            .otherwise({ redirectTo: '/wordPressPosts' });
             }), 
             function ($httpProvider) {
                 $httpProvider.defaults.headers.common = {};

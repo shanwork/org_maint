@@ -160,11 +160,38 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="assignments/views/principals.html">
       <publishTime>05/17/2016 06:19:37</publishTime>
     </File>
+    <File Include="basic_mv_flow/home.html">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/scripts/app.js">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/scripts/globals/newFlowFactory.js">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/scripts/globals/wordPressPostFactory.js">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/scripts/page/newFlowController.js">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/scripts/page/wordPressPostController.js">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/style/styles.css">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/views/newFlow.html">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
+    <File Include="basic_mv_flow/views/wordPressPosts.html">
+      <publishTime>01/03/2017 05:46:20</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="bin/org_maint_web_client.dll">
-      <publishTime>12/24/2016 06:23:02</publishTime>
+      <publishTime>01/07/2017 17:27:20</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/15/2015 07:10:03</publishTime>
@@ -350,7 +377,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/24/2016 06:21:00</publishTime>
     </File>
     <File Include="Ganesha/GaneshMahotsav.html">
-      <publishTime>12/24/2016 06:21:36</publishTime>
+      <publishTime>12/24/2016 06:40:12</publishTime>
     </File>
     <File Include="Ganesha/home.html">
       <publishTime>12/24/2016 05:24:53</publishTime>
@@ -584,7 +611,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 12:45:45</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>06/08/2016 06:24:32</publishTime>
+      <publishTime>01/06/2017 07:27:11</publishTime>
     </File>
     <File Include="naam/home.html">
       <publishTime>05/27/2016 09:23:27</publishTime>
@@ -817,6 +844,147 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="packages.config">
       <publishTime>11/18/2015 05:49:42</publishTime>
     </File>
+    <File Include="photo_gallery/home.html">
+      <publishTime>01/05/2017 19:29:22</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1455.JPG">
+      <publishTime>12/26/2016 12:51:38</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1456.JPG">
+      <publishTime>12/26/2016 12:51:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1457.JPG">
+      <publishTime>12/26/2016 12:52:12</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1458.JPG">
+      <publishTime>12/26/2016 12:54:54</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1459.JPG">
+      <publishTime>12/26/2016 12:54:58</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1460.JPG">
+      <publishTime>12/26/2016 12:55:02</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1461.JPG">
+      <publishTime>12/26/2016 12:55:06</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1462.JPG">
+      <publishTime>12/26/2016 12:55:06</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1463.JPG">
+      <publishTime>12/26/2016 12:55:16</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1464.JPG">
+      <publishTime>12/26/2016 12:55:20</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1465.JPG">
+      <publishTime>12/26/2016 12:56:12</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1466.JPG">
+      <publishTime>12/26/2016 12:56:42</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1467.JPG">
+      <publishTime>12/26/2016 12:56:54</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1468.JPG">
+      <publishTime>12/26/2016 12:56:56</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1469.JPG">
+      <publishTime>12/26/2016 12:57:24</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1470.JPG">
+      <publishTime>12/26/2016 12:59:04</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1471.JPG">
+      <publishTime>12/26/2016 13:43:08</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_1.jpg">
+      <publishTime>01/07/2017 16:48:43</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_10.jpg">
+      <publishTime>01/07/2017 17:11:54</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_11.jpg">
+      <publishTime>01/07/2017 17:12:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_12.jpg">
+      <publishTime>01/07/2017 17:14:16</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_13.jpg">
+      <publishTime>01/07/2017 17:18:50</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_14.jpg">
+      <publishTime>01/07/2017 17:20:35</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_15.jpg">
+      <publishTime>01/07/2017 17:21:57</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_16.jpg">
+      <publishTime>01/07/2017 17:23:37</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_17.jpg">
+      <publishTime>01/07/2017 17:24:17</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_2.jpg">
+      <publishTime>01/07/2017 16:51:26</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_3.jpg">
+      <publishTime>01/07/2017 16:53:04</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_4.jpg">
+      <publishTime>01/07/2017 17:03:41</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_5.jpg">
+      <publishTime>01/07/2017 17:04:12</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_6.jpg">
+      <publishTime>01/07/2017 17:04:50</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_7.jpg">
+      <publishTime>01/07/2017 17:05:28</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_8.jpg">
+      <publishTime>01/07/2017 17:06:50</publishTime>
+    </File>
+    <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_9.jpg">
+      <publishTime>01/07/2017 17:07:52</publishTime>
+    </File>
+    <File Include="photo_gallery/images/woodgrain1.jpg">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/scripts/app.js">
+      <publishTime>01/05/2017 19:26:44</publishTime>
+    </File>
+    <File Include="photo_gallery/scripts/globals/newFlowFactory.js">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/scripts/globals/wordPressPostFactory.js">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/scripts/page/newFlowController.js">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/scripts/page/wordPressPostController.js">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/style/styles.css">
+      <publishTime>01/05/2017 19:48:19</publishTime>
+    </File>
+    <File Include="photo_gallery/views/css_basic.html">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/views/newFlow.html">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/views/scenic_nature.html">
+      <publishTime>01/07/2017 17:25:22</publishTime>
+    </File>
+    <File Include="photo_gallery/views/wordPressPosts.html">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
+    <File Include="photo_gallery/woodgrain1.jpg">
+      <publishTime>01/05/2017 19:18:40</publishTime>
+    </File>
     <File Include="Profile/home.html">
       <publishTime>06/06/2016 18:59:34</publishTime>
     </File>
@@ -828,6 +996,33 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Profile/Views/EntireResume.html">
       <publishTime>06/06/2016 15:08:57</publishTime>
+    </File>
+    <File Include="reddit/home.html">
+      <publishTime>01/03/2017 05:57:02</publishTime>
+    </File>
+    <File Include="reddit/scripts/app.js">
+      <publishTime>01/03/2017 05:57:28</publishTime>
+    </File>
+    <File Include="reddit/scripts/globals/newFlowFactory.js">
+      <publishTime>01/03/2017 05:46:57</publishTime>
+    </File>
+    <File Include="reddit/scripts/globals/reactjsAPIFactory.js">
+      <publishTime>01/03/2017 05:55:51</publishTime>
+    </File>
+    <File Include="reddit/scripts/page/newFlowController.js">
+      <publishTime>01/03/2017 05:46:57</publishTime>
+    </File>
+    <File Include="reddit/scripts/page/reactjsAPIController.js">
+      <publishTime>01/03/2017 06:30:04</publishTime>
+    </File>
+    <File Include="reddit/style/styles.css">
+      <publishTime>01/03/2017 11:49:48</publishTime>
+    </File>
+    <File Include="reddit/views/newFlow.html">
+      <publishTime>01/03/2017 05:46:57</publishTime>
+    </File>
+    <File Include="reddit/views/subReddits.html">
+      <publishTime>01/03/2017 06:40:49</publishTime>
     </File>
     <File Include="scripts/angular-route.js">
       <publishTime>11/20/2015 06:39:30</publishTime>
@@ -842,13 +1037,52 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/18/2016 18:01:46</publishTime>
     </File>
     <File Include="styles/globalStyles.css">
-      <publishTime>01/15/2016 06:33:44</publishTime>
+      <publishTime>01/06/2017 07:29:53</publishTime>
     </File>
     <File Include="tutorials/javascript_pure/Sections1_5.html">
       <publishTime>06/08/2016 12:44:24</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/24/2016 06:23:11</publishTime>
+      <publishTime>01/07/2017 17:27:47</publishTime>
+    </File>
+    <File Include="web_developer_css/home.html">
+      <publishTime>01/03/2017 16:04:21</publishTime>
+    </File>
+    <File Include="web_developer_css/images/woodgrain1.jpg">
+      <publishTime>01/03/2017 14:09:16</publishTime>
+    </File>
+    <File Include="web_developer_css/scripts/app.js">
+      <publishTime>01/03/2017 22:44:10</publishTime>
+    </File>
+    <File Include="web_developer_css/scripts/globals/newFlowFactory.js">
+      <publishTime>01/03/2017 14:11:48</publishTime>
+    </File>
+    <File Include="web_developer_css/scripts/globals/wordPressPostFactory.js">
+      <publishTime>01/03/2017 14:11:48</publishTime>
+    </File>
+    <File Include="web_developer_css/scripts/page/newFlowController.js">
+      <publishTime>01/03/2017 14:13:17</publishTime>
+    </File>
+    <File Include="web_developer_css/scripts/page/wordPressPostController.js">
+      <publishTime>01/03/2017 14:12:47</publishTime>
+    </File>
+    <File Include="web_developer_css/style/styles.css">
+      <publishTime>01/04/2017 06:46:12</publishTime>
+    </File>
+    <File Include="web_developer_css/views/css_basic.html">
+      <publishTime>01/03/2017 15:50:21</publishTime>
+    </File>
+    <File Include="web_developer_css/views/css_basic_to_intermediate.html">
+      <publishTime>01/05/2017 17:50:08</publishTime>
+    </File>
+    <File Include="web_developer_css/views/newFlow.html">
+      <publishTime>01/03/2017 14:09:16</publishTime>
+    </File>
+    <File Include="web_developer_css/views/wordPressPosts.html">
+      <publishTime>01/03/2017 14:09:16</publishTime>
+    </File>
+    <File Include="web_developer_css/woodgrain1.jpg">
+      <publishTime>01/03/2017 14:09:16</publishTime>
     </File>
     <File Include="what-u-ate/home.html">
       <publishTime>04/14/2016 18:33:46</publishTime>
@@ -926,10 +1160,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/14/2016 17:48:11</publishTime>
     </File>
     <File Include="wordPress/home.html">
-      <publishTime>12/11/2016 22:50:16</publishTime>
+      <publishTime>01/02/2017 23:16:21</publishTime>
+    </File>
+    <File Include="wordPress/images/woodgrain1.jpg">
+      <publishTime>01/03/2017 11:46:58</publishTime>
     </File>
     <File Include="wordPress/scripts/app.js">
-      <publishTime>12/13/2016 23:01:05</publishTime>
+      <publishTime>01/02/2017 16:57:00</publishTime>
+    </File>
+    <File Include="wordPress/scripts/globals/newFlowFactory.js">
+      <publishTime>01/02/2017 16:56:07</publishTime>
     </File>
     <File Include="wordPress/scripts/globals/sessionFactory.js">
       <publishTime>12/11/2016 22:49:39</publishTime>
@@ -937,20 +1177,59 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="wordPress/scripts/globals/wordPressPostFactory.js">
       <publishTime>12/11/2016 15:14:10</publishTime>
     </File>
+    <File Include="wordPress/scripts/page/newFlowController.js">
+      <publishTime>01/02/2017 16:58:48</publishTime>
+    </File>
     <File Include="wordPress/scripts/page/SessionController.js">
       <publishTime>12/12/2016 22:29:16</publishTime>
     </File>
     <File Include="wordPress/scripts/page/wordPressPostController.js">
-      <publishTime>12/13/2016 23:24:14</publishTime>
+      <publishTime>01/02/2017 17:06:25</publishTime>
     </File>
     <File Include="wordPress/style/styles.css">
-      <publishTime>12/14/2016 07:26:34</publishTime>
+      <publishTime>01/03/2017 11:59:24</publishTime>
     </File>
     <File Include="wordPress/views/login.html">
       <publishTime>12/11/2016 22:41:24</publishTime>
     </File>
+    <File Include="wordPress/views/newFlow.html">
+      <publishTime>01/02/2017 23:07:54</publishTime>
+    </File>
     <File Include="wordPress/views/wordPressPosts.html">
-      <publishTime>12/14/2016 07:36:30</publishTime>
+      <publishTime>01/02/2017 22:38:23</publishTime>
+    </File>
+    <File Include="wordPress/woodgrain1.jpg">
+      <publishTime>01/03/2017 11:47:35</publishTime>
+    </File>
+    <File Include="wordPressDynamic/home.html">
+      <publishTime>01/02/2017 16:48:01</publishTime>
+    </File>
+    <File Include="wordPressDynamic/images/woodgrain1.jpg">
+      <publishTime>01/03/2017 12:37:07</publishTime>
+    </File>
+    <File Include="wordPressDynamic/scripts/app.js">
+      <publishTime>01/02/2017 16:48:01</publishTime>
+    </File>
+    <File Include="wordPressDynamic/scripts/globals/sessionFactory.js">
+      <publishTime>01/02/2017 16:48:01</publishTime>
+    </File>
+    <File Include="wordPressDynamic/scripts/globals/wordPressPostFactory.js">
+      <publishTime>01/02/2017 16:48:01</publishTime>
+    </File>
+    <File Include="wordPressDynamic/scripts/page/SessionController.js">
+      <publishTime>01/02/2017 16:48:01</publishTime>
+    </File>
+    <File Include="wordPressDynamic/scripts/page/wordPressPostController.js">
+      <publishTime>01/02/2017 16:48:01</publishTime>
+    </File>
+    <File Include="wordPressDynamic/style/styles.css">
+      <publishTime>01/03/2017 14:08:42</publishTime>
+    </File>
+    <File Include="wordPressDynamic/views/login.html">
+      <publishTime>01/02/2017 16:48:01</publishTime>
+    </File>
+    <File Include="wordPressDynamic/views/wordPressPosts.html">
+      <publishTime>01/02/2017 16:48:01</publishTime>
     </File>
   </ItemGroup>
 </Project>

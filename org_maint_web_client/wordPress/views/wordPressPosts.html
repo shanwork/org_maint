@@ -3,31 +3,27 @@
             <div class="row">
                 <div >
                     <div class="tabContainer">
-                        <div class="row indent120"  >
-                            <h3>ID Cistro Word Press Posts as on {{dateOfRetrieval}}</h3>
-                        </div>
-                            <div class="row  ">
-                                <div class="col-md-12 col-lg-7" >
-                                    
-
-
-                                    <table id="main" class="table table-striped main-bordered"  >
+                        
+                            <div class="row carpetted ">
+                                <h1>ID Cistro Word Press Posts as on {{dateOfRetrieval}}</h1>
+                                    <div class="col-md-12 col-lg-7" id="left-side">
+                                        <h2>List</h2>
+                                        <table id="main" class="table table-striped main-bordered"  >
                                         <thead>
                                             <tr>
-                                                <th></th>
-                                                <th ng-click="doSort('ID')">
+                                                <th><!-- ng-click="doSort('ID')">
                                                     <span ng-style="getSortArrowStyle('ID',sortBy)">
                                                         <span class="glyphicon glyphicon-chevron-up" ng-hide="sortBy=='ID' && reverse"></span>
                                                         <span class="glyphicon glyphicon-chevron-down" ng-show="sortBy=='ID' && reverse"></span>
-                                                    </span>  
+                                                    </span>  -->
                                                 Post ID <span class="instructions noBreak">(hover for details)</span>
                                                 </th>
                                                 <th class="border-left">Link</th>
-                                                <th class="text-center border-left noBorderBottom" ng-click="doSort('date')">
+                                                <th class="text-center border-left noBorderBottom"><!--  ng-click="doSort('date')">
                                                     <span ng-style="getSortArrowStyle('date',sortBy)">
                                                         <span class="glyphicon glyphicon-chevron-up" ng-hide="sortBy=='date' && reverse"></span>
                                                         <span class="glyphicon glyphicon-chevron-down" ng-show="sortBy=='date' && reverse"></span>
-                                                    </span>  Date</th>
+                                                    </span>-->  Date</th>
                                                 <th class="text-center border-left noBorderBottom">Comment Count</th>
                                                 <th class="text-center border-left noBorderBottom">Content (hover for detail)</th>
                                             </tr>
@@ -36,7 +32,6 @@
 
                                         <tbody>
                                             <tr class="{{getSelectedRowClass($index)}}" ng-click=" getCellDetails($index) " ng-repeat="postDetail in wordPressPostList| orderBy:sortBy:reverse   ">
-                                                <td>{{$index+1}}</td>
                                                 <td title='full name: {{postDetail.author.first_name + " "  + postDetail.author.last_name}}, capabilities {{postDetail.capabilities}}, \n categories {{postDetail.categories}}'>{{postDetail.ID}}</td>
                                                 <td><a href='{{postDetail.URL}}' target="_blank">click </a></td>
                                                 <td>
@@ -53,7 +48,9 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="col-md-12 col-lg-5" id="right-side">
+                                <div class="col-md-12 col-lg-4" id="right-side">
+                                    <h2>Detail</h2>
+
                                     <div><em> (Clicking the cell row on the table to the left will fill in the details below )</em> </div>
 
 

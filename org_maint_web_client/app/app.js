@@ -7,6 +7,7 @@
      //   $scope.todayShort = new Date('MMM-DD-YYYY'); //$scope.todayShort = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
         $scope.DateFormat = ' Format = MMM / Day / Year ';
         $scope.AmrutvaniTitle = "Sai Amruta Vani";
+        console.log($scope.AmrutvaniTitle);
     }
     IndexPageController.$inject = ['$scope',  '$localStorage'];
 

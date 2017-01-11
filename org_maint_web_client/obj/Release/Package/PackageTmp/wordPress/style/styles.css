@@ -1,19 +1,106 @@
-﻿.main-bordered {
-   border: inset 3px ;
+﻿body {
+/* Background Gradient for Monochromatic Colors */
+
+    background-color: #FFFFFF;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#D4D4D4), to(#FFFFFF)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #FFFFFF -moz-linear-gradient(top, #D4D4D4, #FFFFFF) no-repeat;
+     
+    color:darkslategrey;
+    margin:20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:10px;
+      max-height:1000px;
+    min-height:800px;
+}
+h1 {
+    text-shadow:3px 2px;
+    font-style:italic;
+    margin:-10px 0px 0px 40px;
+}
+h2 {
+    color:dimgray;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:900;
+    font-style:italic;
+    margin:10px 30px 5px 50px;
+}
+.carpetted {
+    background-color:rgba(50,56,56,0.1);
+    padding:50px;
+}
+#left-side{
+    background-color:rgba(50,76,56,0.125);
+    padding:5px;
+
+}
+#right-side{
+    background-color:rgba(50,56,76,0.125);
+    padding:5px;
+    box-shadow:2px 2px;
+     
+}
+.main-bordered {
+   box-shadow: 5px 3px ;
+   border:1px white solid;
+   margin-left:20px;
+   width:90%;
+ /*  opacity:0.9;
+   background-color: lightsalmon;*/
  
 }
 th {
     border: groove 1px;  
-    border-radius:10px;
-    margin: 10px;
+   margin: 10px;
      border-color:gray;
     
 }
  td{
     border: inset 1px;  
     border-color:silver;
-    border-radius:10px;
     margin: 10px;
     
     
+}
+table.table-striped tr.selectedRow
+{
+         background-color:darkslategray;
+         font-weight: 200; 
+         color:lightgray;
+         text-decoration:none;
+} 
+table.table-striped tr.selectedRow a
+{
+          font-weight: 200; 
+         color:antiquewhite;
+         text-decoration: underline;
+         font-style:italic ;
+         
+} 
+
+ #right-side #selectedContent
+{
+    
+   background-color:antiquewhite;
+   border: inset 4px ;
+   overflow:auto;
+   margin:3px;
+    
+}
+ #selectedContent h4
+ {
+     color:darkslategray;
+     font-weight:900;
+     font-style:italic;
+     font-family:'Times New Roman' sans-serif;
+     margin:5px 25px;
+ }
+.indent20
+{
+    margin-left:20px;
+}
+.indent120
+{
+    margin-left:120px;
 }

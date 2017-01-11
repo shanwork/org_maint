@@ -55,6 +55,15 @@ retrieves word press posts, controls selection of a post row master-detail sync
                        $scope.doSort = function (propName) {
                            $scope.sortBy = propName;
                            $scope.reverse = !$scope.reverse;
+                           for (var i = 0; i < $scope.wordPressPostList.length;i++){
+                               if ($scope.wordPressPostList[i].ID == $scope.selectedCell.ID)
+                               {
+                                   $scope.getSelectedRowClass(i);
+                                   break;
+                               }
+                           }
+                           var testIndex = $scope.wordPressPostList.indexOf(function (object) { return object.ID == $scope.selectedCell.ID; });
+
                        };
                        // 2. setting the glyphicon and color based on the above
                        $rootScope.getSortArrowStyle = function (propName, sortBy) {
