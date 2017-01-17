@@ -83,7 +83,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/09/2016 18:38:24</publishTime>
     </File>
     <File Include="app/app.js">
-      <publishTime>03/04/2016 07:03:30</publishTime>
+      <publishTime>01/07/2017 22:28:58</publishTime>
     </File>
     <File Include="app/controllers/customersController.js">
       <publishTime>11/20/2015 06:48:14</publishTime>
@@ -191,7 +191,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="bin/org_maint_web_client.dll">
-      <publishTime>01/07/2017 17:27:20</publishTime>
+      <publishTime>01/17/2017 14:59:40</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/15/2015 07:10:03</publishTime>
@@ -380,7 +380,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/24/2016 06:40:12</publishTime>
     </File>
     <File Include="Ganesha/home.html">
-      <publishTime>12/24/2016 05:24:53</publishTime>
+      <publishTime>01/15/2017 16:02:42</publishTime>
+    </File>
+    <File Include="Ganesha/home_backup.html">
+      <publishTime>01/15/2017 15:24:15</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak.jpg">
       <publishTime>05/31/2016 12:57:56</publishTime>
@@ -611,7 +614,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 12:45:45</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>01/06/2017 07:27:11</publishTime>
+      <publishTime>01/13/2017 07:46:27</publishTime>
     </File>
     <File Include="naam/home.html">
       <publishTime>05/27/2016 09:23:27</publishTime>
@@ -844,8 +847,47 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="packages.config">
       <publishTime>11/18/2015 05:49:42</publishTime>
     </File>
+    <File Include="photo_gallery/adjustibleGallery.html">
+      <publishTime>01/17/2017 14:58:59</publishTime>
+    </File>
     <File Include="photo_gallery/home.html">
-      <publishTime>01/05/2017 19:29:22</publishTime>
+      <publishTime>01/16/2017 21:48:41</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/1.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/10.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/11.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/12.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/2.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/3.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/4.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/5.png">
+      <publishTime>01/16/2017 21:30:48</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/6.png">
+      <publishTime>01/16/2017 21:30:49</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/7.png">
+      <publishTime>01/16/2017 21:30:49</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/8.png">
+      <publishTime>01/16/2017 21:30:49</publishTime>
+    </File>
+    <File Include="photo_gallery/images/dynamic_list/9.png">
+      <publishTime>01/16/2017 21:30:49</publishTime>
     </File>
     <File Include="photo_gallery/images/scenic_nature/grand_canyon_west_rim/DSC_1455.JPG">
       <publishTime>12/26/2016 12:51:38</publishTime>
@@ -952,8 +994,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="photo_gallery/images/woodgrain1.jpg">
       <publishTime>01/05/2017 19:18:40</publishTime>
     </File>
+    <File Include="photo_gallery/scenic_nature.html">
+      <publishTime>01/16/2017 21:48:29</publishTime>
+    </File>
+    <File Include="photo_gallery/scenic_nature_list_detail.html">
+      <publishTime>01/16/2017 21:48:54</publishTime>
+    </File>
     <File Include="photo_gallery/scripts/app.js">
-      <publishTime>01/05/2017 19:26:44</publishTime>
+      <publishTime>01/10/2017 07:05:05</publishTime>
+    </File>
+    <File Include="photo_gallery/scripts/dynamicImageLoader.js">
+      <publishTime>01/17/2017 14:31:17</publishTime>
     </File>
     <File Include="photo_gallery/scripts/globals/newFlowFactory.js">
       <publishTime>01/05/2017 19:18:40</publishTime>
@@ -967,8 +1018,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="photo_gallery/scripts/page/wordPressPostController.js">
       <publishTime>01/05/2017 19:18:40</publishTime>
     </File>
+    <File Include="photo_gallery/style/gray_scale_style.css">
+      <publishTime>01/17/2017 14:58:26</publishTime>
+    </File>
     <File Include="photo_gallery/style/styles.css">
-      <publishTime>01/05/2017 19:48:19</publishTime>
+      <publishTime>01/16/2017 21:50:50</publishTime>
     </File>
     <File Include="photo_gallery/views/css_basic.html">
       <publishTime>01/05/2017 19:18:40</publishTime>
@@ -978,6 +1032,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="photo_gallery/views/scenic_nature.html">
       <publishTime>01/07/2017 17:25:22</publishTime>
+    </File>
+    <File Include="photo_gallery/views/scenic_nature_carousel.html">
+      <publishTime>01/10/2017 08:38:33</publishTime>
     </File>
     <File Include="photo_gallery/views/wordPressPosts.html">
       <publishTime>01/05/2017 19:18:40</publishTime>
@@ -1037,13 +1094,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/18/2016 18:01:46</publishTime>
     </File>
     <File Include="styles/globalStyles.css">
-      <publishTime>01/06/2017 07:29:53</publishTime>
+      <publishTime>01/09/2017 14:09:18</publishTime>
     </File>
     <File Include="tutorials/javascript_pure/Sections1_5.html">
       <publishTime>06/08/2016 12:44:24</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/07/2017 17:27:47</publishTime>
+      <publishTime>01/17/2017 14:59:53</publishTime>
     </File>
     <File Include="web_developer_css/home.html">
       <publishTime>01/03/2017 16:04:21</publishTime>
@@ -1184,10 +1241,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2016 22:29:16</publishTime>
     </File>
     <File Include="wordPress/scripts/page/wordPressPostController.js">
-      <publishTime>01/02/2017 17:06:25</publishTime>
+      <publishTime>01/10/2017 05:20:44</publishTime>
     </File>
     <File Include="wordPress/style/styles.css">
-      <publishTime>01/03/2017 11:59:24</publishTime>
+      <publishTime>01/10/2017 05:03:51</publishTime>
     </File>
     <File Include="wordPress/views/login.html">
       <publishTime>12/11/2016 22:41:24</publishTime>
@@ -1196,7 +1253,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2017 23:07:54</publishTime>
     </File>
     <File Include="wordPress/views/wordPressPosts.html">
-      <publishTime>01/02/2017 22:38:23</publishTime>
+      <publishTime>01/10/2017 05:54:40</publishTime>
     </File>
     <File Include="wordPress/woodgrain1.jpg">
       <publishTime>01/03/2017 11:47:35</publishTime>

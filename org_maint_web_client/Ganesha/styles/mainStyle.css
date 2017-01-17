@@ -1,5 +1,10 @@
 ﻿body {
-    background-color:lightgoldenrodyellow;
+   /* background-color: rgba(0, 0, 0, 0.5);
+    background:url('../images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 (2).jpg');
+    background-size:100% ;
+    background-repeat:no-repeat;*/
+    
+     
 }
 #logo
 {
@@ -11,14 +16,38 @@
   overflow:auto;
    
 }
+ .ganeshnav {
+  
+ background-color:rgba(255,245,125,0.5);
+ color:saddlebrown;
+}
+ nav ul     {
+  
+ background-color: rgba(255,245,125,0.0);  
+ color:saddlebrown;
+}
+ nav ul li   {
+  
+ background-color: rgba(255,245,125,0.0); 
+ color:saddlebrown;
+ font-weight:900;
+}
+li a  {
+  
+ background-color: rgba(255,245,125,0.0); 
+ color:saddlebrown;
+ text-decoration:none;
+ font-weight:900;
+}
 nav{
+
  /* height:35px;
   text-wrap:none;*/
  
 }
 ul li
 {
-   
+    
    text-orientation:sideways;
 }
 nav
@@ -54,7 +83,7 @@ form
     border:4px ridge;
     border-radius:5px;
     border-color:orangered;
-    background-color:goldenrod;
+    background-color:rgba(218,165,32,0.75);
     overflow:auto;
 }
 article{
