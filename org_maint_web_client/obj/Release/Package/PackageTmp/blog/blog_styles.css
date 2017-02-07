@@ -1,0 +1,66 @@
+﻿ /* slide show*/
+ .dark {
+     border: 1px solid gray;
+     background-color:gray;
+     vertical-align:top;
+ }
+.carousel-inner > .item > div,
+  .carousel-inner > .item > a > div {
+      width: 70%;
+      margin: auto;
+      border: inset 5px silver;
+      border-radius:5px;
+      background-color:gray;
+      color:gray;
+  }
+  #blog-page1
+  {
+      border: inset 5px silver;
+      border-radius:5px;
+      background-color:antiquewhite;
+      padding-bottom:30px;
+  }
+  #blog-page2
+  {
+    background-color:ivory;
+    padding-bottom:30px;
+  }
+  .page1 p{
+    padding-left: 20px;
+  }
+  .page1 p:first-line{
+                       padding-left:50px;
+
+                    }
+                   #blog-page1 p:nth-of-type(1)::first-letter{
+                        font-size:36px;
+                    }
+                    .page1 p:nth-of-type(1){
+                        font-family:Georgia;
+                        font-style:italic;
+                        font-size:large;
+                       
+                    }
+                    .page1 p:nth-of-type(4){
+                        font-family:'Times New Roman';
+                        font-style:italic;
+                        font-size:large;
+                        font-weight:900;
+                       
+                    }
+                    .page2 p:nth-of-type(4){
+                        font-family:'Courier New';
+                        
+                        font-size:inherit;
+                        font-weight:normal;
+                       
+                    }
+                    .page1 hr  {
+                        border: 0;
+                        height: 2px;
+                        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+                    }
+                    .page1 em {
+                        font-size: 1.05em;
+                    }
+

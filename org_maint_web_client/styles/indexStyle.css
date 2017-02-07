@@ -1,0 +1,45 @@
+﻿  #page1
+  {
+                         
+   border: inset 5px silver;
+   border-radius:5px;
+   background-color:antiquewhite;
+  }
+  #page1 p{
+    padding-left: 20px;
+  }
+  #page1 p:first-line{
+    padding-left:50px;
+  }
+  #page1 p:nth-of-type(1)::first-letter{
+    font-size:36px;
+  }
+  #page1 p:nth-of-type(1){
+    font-family:Georgia;
+    font-style:italic;
+    font-size:large;
+  }
+   #page1 p:nth-of-type(4){
+                        font-family:'Times New Roman';
+                        font-style:italic;
+                        font-size:large;
+                        font-weight:900;
+                       
+                    }
+                    #page1 hr  {
+                        border: 0;
+                        height: 2px;
+                        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+                    }
+                    #page1 em {
+                        font-size: 1.05em;
+                    }
+
+                    .sideBar{
+    background-color:tan;
+    padding:10px;
+    position:fixed;
+    border-radius:4px;
+    box-shadow: 5px 3px #070F08 ;
+    margin-top: 0px;
+}

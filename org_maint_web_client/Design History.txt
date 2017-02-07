@@ -1,0 +1,23 @@
+Redesign major aspects on the personal website.
+===============================================
+1. Reorganize 
+  category level 1
+  a. Blog and personal
+  b. Photo Gallery
+  c. Technical stuff
+
+
+Index page
+- remove the angular stuff. 
+- Maintain simple and plain html/css/javascript
+- Add carousel
+  all pages at the bottom '.. read on' 
+  slide 1 - existing page
+  slide 2 - 'DONT I LOVE MY BOOTSTRAP CAROUSEL?
+  slide 3 - 'indtroducing my website'
+  slide 4 - religious websites
+  slide 5 - my blog
+  slide 6 - photo gallery
+  slide 7 - plain JS
+  slide 5 - angular - add word press as a link
+  slide 5 

@@ -1,18 +1,20 @@
 <!doctype html>
-<html data-ng-app="org_maint_app">
+<html  >
 <head>
     <title>Shantanu's Personal WebSite</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/globalStyles.css" rel="stylesheet" type="text/css" />
+    <link href="styles/indexStyle.css" rel="stylesheet" type="text/css" />
 </head>
-<body data-ng-controller="IndexPageController">
+<body >
    
         <header style="display:none;">
             <nav class="navbar navbar-default" >
                 <ul class="navbar navbar-nav">
                     
-                    <li ><a href="Ganesha/home.html">Shree Ganesha</a></li>
+                    <!--li><a href="Ganesha/home.html">Shree Ganesha</a></li-->
+                    <li><a href="Ganesha/ganeshHome.html">Shree Ganesha</a></li>
                     <li><a href="budget/home.html#/about">Budgeting Website(1)</a></li>
                     <li><a href="nectar-words/home.html#/about">Sai Amrutvani</a></li>
                     <!--li><a href="what-u-ate/home.html#/about">'What U Ate'</a></!--li-->
@@ -32,20 +34,25 @@
              <div class="fixed">
                  <H1>Shantanu's Personal Web Stuff <span >*</span></H1>
 
-                <div class="col-sm-12 col-md-3">
+                <div class="col-sm-12 col-md-3  ">
                     <div class="sideBar">
                         <h5>Current Available Links</h5>
                         <hr />
                         <ul  >
-                            <li><a href="Ganesha/home.html">Shree Ganesha</a></li>
-                            <li><a href="budget/home.html#/about">Budgeting Website(1)</a></li>
+                            <li class="sectionHeader" ><u> Religious Related content</u></li>
+                            <!--li><a href="Ganesha/home.html">Shree Ganesha</a></li-->
+                            <li><a href="Ganesha/ganeshHome.html">Shree Ganesha</a></li>
                             <li><a href="nectar-words/home.html#/about">Sai Amrutvani</a></li>
+                            <li class="sectionHeader"><u> Multimedia, Personal, Misc</u></li>
+                            <li ><a href="blog/home.html"  > My Blog</a> </li>
+                            <li><a href="photo_gallery/home.html">Photo Gallery</a></li>
+                            <li class="sectionHeader"><u> Technical Showcase</u></li>
+                            <li><a href="budget/home.html#/about">Budgeting Website(1)</a></li>
                             <!--li><a href="what-u-ate/home.html#/about">'What U Ate'</a></!--li-->
                             <li><a href="HubMVC/home.html#/about">Review - HMVC</a></li>
                             <li><a href="naam/home.html#/aboutAndSettings">Budgeting Website(HMVC)</a></li>
                             <li><a href="animations/home.html">Gaming</a></li>
-                            <li><a href="photo_gallery/home.html">Photo Gallery</a></li>
-
+                            
                             <li><a href="comingNext/home.html">Coming Soon!!</a></li>
                             <li title="you need to have your mail sever set up for this"><a href="mailto:webfeedback2016@gmail.com">Connect with me</a></li>
                             
@@ -54,59 +61,9 @@
                 </div>
                 <!-- move to global style once fixed -->
                 
-                <style>
-                    #page1
-                    {
-                         
-                        border: inset 5px silver;
-                        border-radius:5px;
-                        background-color:antiquewhite;
-                    }
-                    #page1 p{
-                        padding-left: 20px;
-
-                    }
-                    #page1 p:first-line{
-                       padding-left:50px;
-
-                    }
-                    #page1 p:nth-of-type(1)::first-letter{
-                        font-size:36px;
-                    }
-                    #page1 p:nth-of-type(1){
-                        font-family:Georgia;
-                        font-style:italic;
-                        font-size:large;
-                       
-                    }
-                    #page1 p:nth-of-type(4){
-                        font-family:'Times New Roman';
-                        font-style:italic;
-                        font-size:large;
-                        font-weight:900;
-                       
-                    }
-                    #page1 hr  {
-                        border: 0;
-                        height: 2px;
-                        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-                    }
-                    #page1 em {
-                        font-size: 1.05em;
-                    }
-
-                </style>
-                <div class="col-sm-12 col-md-9">
-                    <div class="row" style="display:none;">
-                        <ul>
-                            <li style="float:left;margin:2px;">
-                                <div>ee</div>
-                            </li>
-                            <li style="float:left ">
-                                <div>ff</div>
-                            </li>
-                        </ul>
-                    </div>
+               
+                <div class="col-sm-12 col-md-9 "  >
+                  
                     <div id="page1" >
                         <p>"And Alexander wept because he had no more lands to conquer".</p>
                         <p>Sound profound? Makes me seem like someone who gets philosophical? 
@@ -151,26 +108,7 @@
                             thoroughly.</p> <p>Handed over before EOD as promised. <em>Happy Ending</em></p>
 
                       
-                             <para style="display:none;">
-                        Hi, <p>
-                            <i>It was about time, I presented something to the outside world, so I picked up a basic hosting package and started publishing....</i>
-                        <p>
-                        <p>
-                            <h3>Published Work as on <span id="dateShow">{{todayShort}} </span> </h3>
-                            <a href="#budgetSite"><li>About the Budgeting Wesbite</a></li>
-                            <a name="budgetSite"><h5>Budgeting Wesbite</h5></a>
-                            As of   I have developed the  budgeting website. Some background:<br />
-                            A humanitarian effort like <a href="https://en.wikipedia.org/wiki/Naam_Foundation" target="_blank">NAAM movement for Farmer Suicides in Maharashtra (India)</a> has different ways by which we can help.
-                            Sometimes organized accounting may take a backseat to the more urgent needs and emotions to resolve things, help etc. Thus entered an idea into my head to use a subject matter to apply whatever I am in the process of learning.
-                            <br />
-
-                            At this point, this is a simple accounting web site with the aim of tracking finances, how much the inflow is, what is the deficit, how the funds have  been used, etc.<br />
-                            While, as said, it was initiated with NAAM as an inspiration, it can be applied to any calamity or disaster situation, or any regular situation where a budget is used to maintain
-                            a list of items, say a transport service which maintains a bunch of trucks.
-
-                        <p /> <b>Go to this section by clicking <a href="budget/home.html#/about"> here  </a>. </b>
-                        <p />
-                    </para>
+               
                 </div>
                 
 </div>
@@ -178,10 +116,5 @@
           <hr />   
                 <span>At this point in time, this is an iteratively evolving site. While I try my best to publish a stable iteration, it is more than likely that there may be a stray 'test' or bright red square show up. Please bear with me!! </span>
    </div>
-    <script src="scripts/angular.js"></script>
-    <script src="scripts/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
-    <script src="app/app.js"></script>
-    <script>document.getElementById("dateShow").innerHTML = new Date().getMonth() + 1 + '-' + new Date().getDate() + '-' + new Date().getFullYear(); //alert($localStorage.todayShort);</script>
 </body>
 </html>

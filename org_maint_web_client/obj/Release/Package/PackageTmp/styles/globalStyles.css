@@ -11,20 +11,28 @@
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D4B996, endColorstr=#D4B996)" no-repeat;
     color:saddlebrown;
-    margin:20px;
+    margin:2px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding:10px;
-      max-height:1000px;
+    padding:2px;
+    max-height:1000px;
     min-height:800px;
     
 }
 .fixed {
     background-color:rgba(56,0,0,0.1);
-    padding:50px;
+    padding:5px;
+    margin:0px;
 }
 .fixed h1 
 {
-    margin-bottom:50px;
+    
+    margin :0px auto 10px 50px;
+}
+.minLeftMargin{
+    margin-left:5px;
+}
+.minLeftPad{
+    padding-left:5px;
 }
  .row .fixed {
     min-width:800px;
@@ -61,7 +69,7 @@ header{
     border:inset 2px #ABAB7A;
     border-radius:4px;
 }
-.sideBar{
+#sideBar{
     background-color:tan;
     padding:10px;
      position:fixed;
@@ -82,10 +90,27 @@ header{
 }
 .sideBar li
 {
-     background-color:tan;
+     background-color:  tan;
      color:brown;
      text-decoration:none;
+     margin:5px;
    
+}
+.sideBar h1,h2,h3,h4,h5 {
+    font-size:1.35em;
+     
+    letter-spacing:1px;
+    text-shadow:1px 1px beige;
+}
+.sectionHeader {
+    
+    list-style:none;
+    font-size:1.1em;
+    font-weight:bolder;
+    font-style:oblique;
+    text-shadow:1px 1px saddlebrown; 
+    letter-spacing:2px;
+    
 }
 .sideBar li a
 {

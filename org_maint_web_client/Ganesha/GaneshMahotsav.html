@@ -18,17 +18,17 @@
             <!-- logo -->
             <div id="logo">
                 <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:left;" />
-                <h1 style="float:left;">Shree Ganesh - Famous and Known 'Sarvajanik' Festivals  </h1>
+                <h1 style="float:left;">Shree Ganesh Special Days and Famous 'Sarvajanik' Festivals  </h1>
 
                 <img src="images/ganesh_icon.jpg" width="148" height="90" style="float:right;" />
             </div>
             <nav class="navbar navbar-default" style="border:2px outset silver;padding-top:10px;">
                 <ul class="navbar navbar-nav">
                     <li><a href="../index.html"><b>Parent Website</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                    <li> <a href="home.html">Home page</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li> <a href="ganeshHome.html">Home page</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                     <li><a href="Ashtavinayak.html">The 'Swayambhu' Ashtavinyaks</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                     <li><a href="FamousGaneshTemples.html">Other Famous Ganesh temples</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                    <li><a href="GaneshMahotsav.html">Ganesh Festival in Public - 'Sarvajanik Mahotsav'</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="GaneshMahotsav.html">Special Ganesh Festivals and Public Ganesh Chaturthi</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 
                 </ul>
             </nav>
@@ -43,7 +43,10 @@
                 <article>
                     <nav class="innerNav">
                         <ul>
-                            <li><a href="#/BayAreaGanesh">Bay Area Ganeshotsav</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#/VinayakChaturthi">'Maghi' Ganesh Jayanti</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#/GaneshChaturthi"> Ganesh Chaturthi</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#/BayAreaGaneshFest">Sarvajanik Bay Area Ganeshotsav</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="#/LalbaughchaRaja">'Lalbaugcha Raja'</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                             <li>(coming soon)</li>
 
                         </ul>
@@ -64,12 +67,21 @@
 
             famousGaneshTemples_app.config(function ($routeProvider) {
                 $routeProvider
-             .when('/BayAreaGanesh', {
+             .when('/BayAreaGaneshFest', {
                 templateUrl: 'GaneshMahostav/bayAreaGanesh.html'
-             }).when('/GanapatiPule', {
+             })
+             .when('/VinayakChaturthi', {
 
-                templateUrl: 'OtherGaneshTempleViews/GanapatiPule.html'
-             }).otherwise({ redirectTo: '/BayAreaGanesh' });
+                 templateUrl: 'GaneshMahostav/vinayakiChaturthi.html'
+             })
+             .when('/GaneshChaturthi', {
+
+                 templateUrl: 'GaneshMahostav/ganeshChaturthi.html'
+             }).when('/LalbaughchaRaja', {
+
+                 templateUrl: 'GaneshMahostav/lalbaughchaRaja.html'
+             })
+             .otherwise({ redirectTo: '/BayAreaGaneshFest' });
             }, function ($httpProvider) {
                 $httpProvider.defaults.headers.common = {};
                 $httpProvider.defaults.headers.post = {};

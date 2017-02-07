@@ -8,10 +8,10 @@
     background: #FFFFFF -moz-linear-gradient(top, #D4D4D4, #FFFFFF) no-repeat;
      
     color:darkslategrey;
-    margin:20px;
+    margin:2px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding:10px;
-      max-height:1000px;
+    padding:2px;
+    max-height:1000px;
     min-height:800px;
 }
 ul {

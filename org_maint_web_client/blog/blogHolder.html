@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta title="Photo Gallery">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="styles/blog_styles.css" rel="stylesheet" type="text/css" />
+
+
+    <title>My Blog</title>
+</head>
+<body>
+    <div id='mainAppDiv' style='overflow:auto;'>
+        <div id="landing" >
+
+            <!---- MAIN CONTENT-->
+            <div class="fixed">
+                <h1>A little bit of this and that. Scribblings and Ramblings....</h1>
+            </div>
+             
+            <div class="col-sm-12 col-md-3">
+                <div class="sideBar">
+                    <h5>Pages</h5>
+                    <hr />
+                    <ul id="carousel-side">
+                        <li><a href="../index.html"><b>Parent Home Page</b></a></li>
+                        <li data-target="#myCarousel" data-slide-to="0">Introduction</li>
+                        <li data-target="#myCarousel" data-slide-to="1">The 'Foony' game</li>
+
+                    </ul>
+                </div>
+            </div><!--col-sm-12 col-md-3 md3-->
+            <div class="col-sm-12 col-md-9">
+                <div id="myCarousel" class="carousel slide blogframe" data-ride="carousel" data-interval="false">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators dark" id="bottom-slide">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2" style="display:none;"></li>
+
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox" id="blog-carousel-pages">
+                        <div class="item active">
+                            <div id="blog-page1" class="page1">
+                                <p>"Its all about what you like to do and how strongly you want to do it".</p>
+                                <p>
+                                    Hello friends. Welcome to my blog
+                                </p>
+                                <p>
+                                    At this point, I'll just be publishing stuff which I have posted on FB. Poems, only. Maybe adorn with appropriate styling and photos. Maybe add passages of text.. Maybe, a lot of things..
+                                    <br />&nbsp;Been in the software profession, I am focusing my sites on web development, the 'Front End' (as they say). I am re-discovering the joys that be in showing some cool <em>(at least I think so)</em> styled web content.
+                                </p>
+                                <p><em>(For software developers)</em>This blog is, currently, hard coded. I am writing text directly in the markup. Pretty soon <em>(define 'pretty'? anything from one month to one year )</em></p>
+
+
+
+                            </div>
+
+                        </div> <!-- class item active-->
+                        <div class="item">
+                            <div id="blog-page2" class="page2">
+                                whdwkqdqw
+                            </div>
+                        </div> <!-- class item active-->
+                    </div> <!-- blog carousel pages-->
+                    <!-- Left and right controls -->
+                    <a class="carousel-control left " href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control right " href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                  </div> <!-- carousel container-->
+             </div> <!--col-sm-12 col-md-9 md9 -->
+         </div> <!-- landing-->
+     </div> <!-- main App Div-->
+</body>
+</html>

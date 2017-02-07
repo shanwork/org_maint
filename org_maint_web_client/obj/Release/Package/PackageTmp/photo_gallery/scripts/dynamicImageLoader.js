@@ -1,12 +1,14 @@
 ﻿/* Javascript to display a dynamic (unknown quantity) list of images and then drag and drop them
-   Part 1: display the dynamic list
+  Part 1: display the dynamic list
    ================================
-   Using dom manipulation 
+   Using dom manipulation adding child elements
    - call a function fetch image array.  (the code inside this function could be a call to a REST API)
    
-   part 2 drag and drop
+   part 2 drag and drop. Used the HTML5 bases attributes and APIs isdraggable, ondrag, etc 
+   On the drop, I calculate the new positions in the image array given the start index from the image and the end index from the div (the names of the img and divs end with 1 based index)
 
-   I am also using localstorage  I 
+   I am also using localstorage as the get for the latest snapshot of the image array. Took this decision to preserve state even if the user refreshes the browser
+   (There is a reset button which restores the original order)
 */
 /* <--- HTML5/Javascript for drag and drop and reorder ---- */
 function drag(ev) {

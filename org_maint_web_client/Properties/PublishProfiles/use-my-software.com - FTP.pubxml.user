@@ -191,7 +191,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="bin/org_maint_web_client.dll">
-      <publishTime>01/17/2017 14:59:40</publishTime>
+      <publishTime>02/03/2017 06:55:51</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/15/2015 07:10:03</publishTime>
@@ -228,6 +228,27 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>11/15/2015 07:10:04</publishTime>
+    </File>
+    <File Include="blog/blogHolder.html">
+      <publishTime>01/23/2017 07:12:41</publishTime>
+    </File>
+    <File Include="blog/blog_styles.css">
+      <publishTime>01/21/2017 15:45:40</publishTime>
+    </File>
+    <File Include="blog/home.html">
+      <publishTime>02/03/2017 06:41:57</publishTime>
+    </File>
+    <File Include="blog/images/sachin1.jpg">
+      <publishTime>01/21/2017 16:34:10</publishTime>
+    </File>
+    <File Include="blog/scripts/blogContent.js">
+      <publishTime>01/22/2017 08:14:52</publishTime>
+    </File>
+    <File Include="blog/scripts/buildBlog.js">
+      <publishTime>01/23/2017 21:41:30</publishTime>
+    </File>
+    <File Include="blog/styles/blog_styles.css">
+      <publishTime>01/31/2017 13:35:07</publishTime>
     </File>
     <File Include="budget/home.html">
       <publishTime>02/01/2016 07:35:42</publishTime>
@@ -338,181 +359,202 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/05/2016 06:54:18</publishTime>
     </File>
     <File Include="Ganesha/Ashtavinayak.html">
-      <publishTime>12/24/2016 05:25:57</publishTime>
+      <publishTime>02/03/2017 06:46:21</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Ballaleshwar.html">
-      <publishTime>06/09/2016 15:39:27</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Chintamani.html">
-      <publishTime>06/07/2016 15:31:16</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/General.html">
-      <publishTime>06/07/2016 15:23:45</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Girijatmaj.html">
-      <publishTime>06/07/2016 15:33:42</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Mahaganapati.html">
-      <publishTime>06/07/2016 15:39:25</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Mayureshwar.html">
-      <publishTime>06/07/2016 15:44:48</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Siddhivinayak.html">
-      <publishTime>06/07/2016 15:21:00</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Varadvinayaka.html">
-      <publishTime>06/07/2016 15:18:44</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/AshtavinayakViews/Vigneshwar.html">
-      <publishTime>06/07/2016 15:36:39</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/FamousGaneshTemples.html">
-      <publishTime>12/24/2016 05:25:45</publishTime>
+      <publishTime>02/03/2017 06:47:19</publishTime>
     </File>
     <File Include="Ganesha/Feedback.html">
-      <publishTime>12/24/2016 05:26:09</publishTime>
+      <publishTime>02/03/2017 06:47:19</publishTime>
+    </File>
+    <File Include="Ganesha/ganeshHome.html">
+      <publishTime>02/01/2017 06:46:12</publishTime>
     </File>
     <File Include="Ganesha/GaneshMahostav/bayAreaGanesh.html">
-      <publishTime>12/24/2016 06:21:00</publishTime>
+      <publishTime>01/31/2017 07:33:26</publishTime>
+    </File>
+    <File Include="Ganesha/GaneshMahostav/ganeshChaturthi.html">
+      <publishTime>01/31/2017 07:18:03</publishTime>
+    </File>
+    <File Include="Ganesha/GaneshMahostav/lalbaughchaRaja.html">
+      <publishTime>01/31/2017 07:31:25</publishTime>
+    </File>
+    <File Include="Ganesha/GaneshMahostav/vinayakiChaturthi.html">
+      <publishTime>01/31/2017 07:12:22</publishTime>
     </File>
     <File Include="Ganesha/GaneshMahotsav.html">
-      <publishTime>12/24/2016 06:40:12</publishTime>
+      <publishTime>02/03/2017 06:47:19</publishTime>
     </File>
     <File Include="Ganesha/home.html">
-      <publishTime>01/15/2017 16:02:42</publishTime>
+      <publishTime>01/31/2017 07:01:26</publishTime>
     </File>
     <File Include="Ganesha/home_backup.html">
-      <publishTime>01/15/2017 15:24:15</publishTime>
+      <publishTime>01/31/2017 07:01:26</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak.jpg">
       <publishTime>05/31/2016 12:57:56</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/All_Ashtavinayak.jpg">
-      <publishTime>05/31/2016 12:57:56</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/ballaleshwar.jpg">
-      <publishTime>06/07/2016 15:15:20</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/chintamani_of_theur.jpg">
-      <publishTime>06/07/2016 15:30:45</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/chintamani_theur.jpg">
-      <publishTime>06/07/2016 15:28:57</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/mahaganpati-mandir-ranjangaon.jpg">
-      <publishTime>06/07/2016 15:39:03</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/mayureshwar.jpg">
-      <publishTime>06/01/2016 06:16:47</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/shri_girijatmaj_lenyadri.jpg">
-      <publishTime>06/07/2016 15:32:53</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/siddhivinayak_siddhatek.jpg">
-      <publishTime>06/07/2016 15:06:21</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/varadavinayak_mahad.jpg">
-      <publishTime>06/07/2016 15:16:54</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/Ashtavinayak/vigneshwar.jpg">
-      <publishTime>06/07/2016 15:35:42</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/FamousGaneshTemples/ganapatiPule.jpg">
-      <publishTime>06/08/2016 16:10:38</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/FamousGaneshTemples/TitwalaSiddhiMahaGanesh.jpg">
-      <publishTime>06/08/2016 16:03:54</publishTime>
+      <publishTime>01/28/2017 14:35:18</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %281%29.jpg">
-      <publishTime>12/24/2016 05:37:01</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2810%29.jpg">
-      <publishTime>12/24/2016 05:37:47</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2811%29.jpg">
-      <publishTime>12/24/2016 05:37:52</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2812%29.jpg">
-      <publishTime>12/24/2016 05:37:57</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2813%29.jpg">
-      <publishTime>12/24/2016 05:38:02</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2814%29.jpg">
-      <publishTime>12/24/2016 05:38:08</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2815%29.jpg">
-      <publishTime>12/24/2016 05:38:13</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2816%29.jpg">
-      <publishTime>12/24/2016 05:38:17</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %2817%29.jpg">
-      <publishTime>12/24/2016 05:38:21</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %282%29.jpg">
-      <publishTime>12/24/2016 05:37:06</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %283%29.jpg">
-      <publishTime>12/24/2016 05:37:11</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %285%29.jpg">
-      <publishTime>12/24/2016 05:37:22</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %286%29.jpg">
-      <publishTime>12/24/2016 05:37:28</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %287%29.jpg">
-      <publishTime>12/24/2016 05:37:33</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %288%29.jpg">
-      <publishTime>12/24/2016 05:37:37</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016 %289%29.jpg">
-      <publishTime>12/24/2016 05:37:42</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/ganeshMahotsav/BayAreaGanesh/bayAreaGanesh2016_4.jpg">
-      <publishTime>12/24/2016 05:37:16</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
+    </File>
+    <File Include="Ganesha/images/ganeshMahotsav/mumbaiSarvajanik/lalbaughchaRaja.jpg">
+      <publishTime>01/31/2017 07:25:09</publishTime>
+    </File>
+    <File Include="Ganesha/images/ganeshMahotsav/mumbaiSarvajanik/lalbaughRajaVisarjan.jpg">
+      <publishTime>01/31/2017 07:23:25</publishTime>
     </File>
     <File Include="Ganesha/images/ganesh_icon.jpg">
-      <publishTime>05/14/2016 07:52:53</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/jai_ganesh_deva_poster.png">
-      <publishTime>05/15/2016 14:28:34</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/images/mayureshwar.jpg">
       <publishTime>06/01/2016 06:16:47</publishTime>
     </File>
     <File Include="Ganesha/multimedia/audio/Tuzha_Magato_Me_Aata.mp3">
-      <publishTime>03/02/2010 02:53:31</publishTime>
+      <publishTime>01/28/2017 14:35:19</publishTime>
     </File>
     <File Include="Ganesha/multimedia/videos/Jai_Ganesh_Deva_Aarti.mp4">
-      <publishTime>05/15/2016 08:11:02</publishTime>
+      <publishTime>01/28/2017 14:35:20</publishTime>
     </File>
     <File Include="Ganesha/multimedia/videos/Jai_Ganesh_Deva_Aarti.webm">
-      <publishTime>05/15/2016 09:12:12</publishTime>
+      <publishTime>01/28/2017 14:35:20</publishTime>
     </File>
     <File Include="Ganesha/multimedia/videos/mikethefrog.mp4">
-      <publishTime>05/15/2016 09:05:44</publishTime>
+      <publishTime>01/28/2017 14:35:21</publishTime>
     </File>
     <File Include="Ganesha/multimedia/videos/mikethefrog.ogv">
-      <publishTime>05/15/2016 09:05:46</publishTime>
+      <publishTime>01/28/2017 14:35:21</publishTime>
     </File>
     <File Include="Ganesha/multimedia/videos/mikethefrog.webm">
-      <publishTime>05/15/2016 09:05:47</publishTime>
+      <publishTime>01/28/2017 14:35:21</publishTime>
     </File>
     <File Include="Ganesha/OtherGaneshTempleViews/GanapatiPule.html">
-      <publishTime>06/09/2016 22:28:19</publishTime>
+      <publishTime>01/28/2017 14:35:21</publishTime>
     </File>
     <File Include="Ganesha/OtherGaneshTempleViews/Titwala.html">
-      <publishTime>06/09/2016 15:37:42</publishTime>
+      <publishTime>01/28/2017 14:35:21</publishTime>
     </File>
     <File Include="Ganesha/scripts/app.js">
-      <publishTime>06/08/2016 15:28:31</publishTime>
+      <publishTime>01/28/2017 14:35:21</publishTime>
+    </File>
+    <File Include="Ganesha/styles/ganesh_styles.css">
+      <publishTime>02/03/2017 06:55:05</publishTime>
     </File>
     <File Include="Ganesha/styles/mainStyle.css">
-      <publishTime>12/24/2016 05:54:34</publishTime>
+      <publishTime>01/28/2017 14:35:21</publishTime>
     </File>
     <File Include="Ganesha/views/Ballaleshwar.html">
       <publishTime>06/07/2016 15:24:35</publishTime>
@@ -614,7 +656,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 12:45:45</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>01/13/2017 07:46:27</publishTime>
+      <publishTime>02/03/2017 06:42:49</publishTime>
+    </File>
+    <File Include="index_blog.html">
+      <publishTime>01/19/2017 17:27:01</publishTime>
     </File>
     <File Include="naam/home.html">
       <publishTime>05/27/2016 09:23:27</publishTime>
@@ -659,7 +704,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2016 11:54:57</publishTime>
     </File>
     <File Include="nectar-words/home.html">
-      <publishTime>12/11/2016 09:50:51</publishTime>
+      <publishTime>02/03/2017 06:43:35</publishTime>
     </File>
     <File Include="nectar-words/images/dwarkamai_1.JPG">
       <publishTime>02/01/2016 07:21:52</publishTime>
@@ -836,7 +881,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/02/2016 09:59:42</publishTime>
     </File>
     <File Include="nectar-words/views/templateSideMenu.html">
-      <publishTime>07/04/2016 10:40:06</publishTime>
+      <publishTime>02/03/2017 06:45:30</publishTime>
     </File>
     <File Include="nectar-words/views/WeeklyArchive.html">
       <publishTime>03/09/2016 05:25:42</publishTime>
@@ -1004,7 +1049,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/10/2017 07:05:05</publishTime>
     </File>
     <File Include="photo_gallery/scripts/dynamicImageLoader.js">
-      <publishTime>01/17/2017 14:31:17</publishTime>
+      <publishTime>01/17/2017 22:18:39</publishTime>
     </File>
     <File Include="photo_gallery/scripts/globals/newFlowFactory.js">
       <publishTime>01/05/2017 19:18:40</publishTime>
@@ -1019,7 +1064,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/05/2017 19:18:40</publishTime>
     </File>
     <File Include="photo_gallery/style/gray_scale_style.css">
-      <publishTime>01/17/2017 14:58:26</publishTime>
+      <publishTime>01/17/2017 15:04:00</publishTime>
     </File>
     <File Include="photo_gallery/style/styles.css">
       <publishTime>01/16/2017 21:50:50</publishTime>
@@ -1094,13 +1139,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/18/2016 18:01:46</publishTime>
     </File>
     <File Include="styles/globalStyles.css">
-      <publishTime>01/09/2017 14:09:18</publishTime>
+      <publishTime>01/31/2017 13:33:49</publishTime>
+    </File>
+    <File Include="styles/indexStyle.css">
+      <publishTime>01/26/2017 15:36:09</publishTime>
     </File>
     <File Include="tutorials/javascript_pure/Sections1_5.html">
       <publishTime>06/08/2016 12:44:24</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/17/2017 14:59:53</publishTime>
+      <publishTime>02/03/2017 06:56:06</publishTime>
     </File>
     <File Include="web_developer_css/home.html">
       <publishTime>01/03/2017 16:04:21</publishTime>
