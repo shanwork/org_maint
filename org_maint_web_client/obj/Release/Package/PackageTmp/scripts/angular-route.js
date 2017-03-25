@@ -15,7 +15,7 @@
  * The `ngRoute` module provides routing and deeplinking services and directives for angular apps.
  *
  * ## Example
- * See {@link ngRoute.$route#example $route} for an example of configuring and using `ngRoute`.
+ * See {@link ngRoute.$route#example $route} for an example of configuring and using  `ngRoute`.
  *
  *
  * <div doc-module-components="ngRoute"></div>
@@ -34,7 +34,7 @@ var ngRouteModule = angular.module('ngRoute', ['ng']).
  * Used for configuring routes.
  *
  * ## Example
- * See {@link ngRoute.$route#example $route} for an example of configuring and using `ngRoute`.
+ * See {@link ngRoute.$route#example $route} for an example of configuring and using  `ngRoute`.
  *
  * ## Dependencies
  * Requires the {@link ngRoute `ngRoute`} module to be installed.
@@ -180,7 +180,7 @@ function $RouteProvider() {
    * @description
    *
    * A boolean property indicating if routes defined
-   * using this provider should be matched using a case insensitive
+   * using  this provider should be matched using  a case insensitive
    * algorithm. Defaults to `false`.
    */
   this.caseInsensitiveMatch = false;
@@ -442,7 +442,7 @@ function $RouteProvider() {
      * @name $route#$routeUpdate
      * @eventType broadcast on root scope
      * @description
-     * The `reloadOnSearch` property has been set to false, and we are reusing the same
+     * The `reloadOnSearch` property has been set to false, and we are reusing  the same
      * instance of the Controller.
      *
      * @param {Object} angularEvent Synthetic event object
@@ -928,7 +928,7 @@ function ngViewFactory($route, $anchorScroll, $animate) {
 
             // Note: This will also link all children of ng-view that were contained in the original
             // html. If that content contains controllers, ... they could pollute/change the scope.
-            // However, using ng-view on an element with additional content does not make sense...
+            // However, using  ng-view on an element with additional content does not make sense...
             // Note: We can't remove them in the cloneAttchFn of $transclude as that
             // function is called before linking the content, which would apply child
             // directives to non existing elements.

@@ -22,8 +22,20 @@
 </head>
 
 
-<body>
+<body ng-controller="HomeController">
     <!-- Main SPA area    -->
+    <div style="background-color:aliceblue; border:2px solid darkcyan;margin:10px;padding:5px;width:auto">
+        <a href="../index.html">go back to Parent Index page....</a><br/><div class="row" style="margin:5px;">
+    <h3>ID Cistro Word Press Posts as on {{dateOfRetrieval}}</h3>
+</div>
+           <ul>
+            <li><em>This page showcases usage of a REST api using  angularjs.</em></li>
+            <li><em>This consumes a publicly available webservice: <a href="https://public-api.wordpress.com/rest/v1/sites/idcdistro.wordpress.com/posts" target="_blank"><b> https://public-api.wordpress.com/rest/v1/sites/idcdistro.wordpress.com/posts </b></a></em></li>
+            <li><em>It is a simple master detail show case where selecting a row on the table to the left displays detail on the right</em></li>
+            <li><em>This page, as other pages on my website, is in a sort of styling transit. <b>Please bear with the strange color combinations</b></em></li>
+           </ul>
+       
+    </div>
     <div id='mainAppDiv' style='overflow:auto;'>
         <div id="landing">
 
@@ -53,6 +65,34 @@
 
     <script src="scripts/page/wordPressPostController.js"></script>
     <script src="scripts/page/SessionController.js"></script>
+    <script>
+        (function () {
 
+            'use strict';
+            angular.module('posts_app').
+                controller('HomeController',
+                           function ($scope,
+                                        $rootScope,
+                                        $routeParams,
+                                        $http,
+                                        $q,
+                                        $location,
+                                        $localStorage
+                                         , WordPressPostFactory
+                                         , loggedIn
+                                     ) {
+                               $scope.init = function () {
+                                   $rootScope.dateOfRetrieval = new Date().toDateString();
+                                    
+                               }
+                               // Initialize section
+                               $scope.init();
+
+                           });
+
+
+        })();//IIFE
+
+    </script>
 </body>
 </html>

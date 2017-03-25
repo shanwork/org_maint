@@ -7,7 +7,7 @@
    part 2 drag and drop. Used the HTML5 bases attributes and APIs isdraggable, ondrag, etc 
    On the drop, I calculate the new positions in the image array given the start index from the image and the end index from the div (the names of the img and divs end with 1 based index)
 
-   I am also using localstorage as the get for the latest snapshot of the image array. Took this decision to preserve state even if the user refreshes the browser
+   I am also using  localstorage as the get for the latest snapshot of the image array. Took this decision to preserve state even if the user refreshes the browser
    (There is a reset button which restores the original order)
 */
 /* <--- HTML5/Javascript for drag and drop and reorder ---- */

@@ -136,7 +136,7 @@ font-family:'Times New Roman', Times, serif;
     text-shadow: 2px 2px silver;
     font-style:italic;
     font-weight:700;
-    margin:5px 40px 5px;
+    margin:-2px 40px -15px;
 }
 
 .sideBar ul 
@@ -164,6 +164,7 @@ font-family:'Times New Roman', Times, serif;
   
    
 }
+
 #ganesh-subsite-links {
     padding:  1px ;
     padding-left:5px;

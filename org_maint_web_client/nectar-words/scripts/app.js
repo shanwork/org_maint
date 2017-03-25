@@ -5,8 +5,9 @@
     nectar_words_app.value('connectToService', 'false');
     nectar_words_app.value('configuration', { imMemoryData: 'yes', verbose: 'yes' });
     nectar_words_app.config(function ($routeProvider) {
+        var dateD= new Date()
         $routeProvider
-          .when('/Week/:weekIndex', {
+          .when('/Week/:weekIndexx/' + dateD, {
               controller: 'WeeklyNectarController',
               
               templateUrl: 'views/WeeklyNectar.html'

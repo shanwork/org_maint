@@ -124,6 +124,7 @@ article .innerNav
     border-radius:4px;
     background-color:beige;
     padding:3px;
+    font-size:smaller;
    /* padding-top:15px;*/
     height:auto;
     min-height:50px;
@@ -132,7 +133,7 @@ article nav li
 {
    float:left;
    padding:2px;
-   font-size:larger;
+   
    
 }
 .articlePicResp

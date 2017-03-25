@@ -18,7 +18,7 @@ retrieves word press posts, controls selection of a post row master-detail sync
                              ) {
                        $scope.init = function () {
                            $scope.selectedRow = $localStorage.selectedRow = 0;
-                           $scope.dateOfRetrieval = new Date().toDateString();
+                           $rootScope.dateOfRetrieval = new Date().toDateString();
                            // init retrieves data from the REST API through the factory class, defaults selected cell to zero index
                            WordPressPostFactory.getWordPressPosts(function (postData) {
                                 if (postData != null && postData.posts.length > 0) {

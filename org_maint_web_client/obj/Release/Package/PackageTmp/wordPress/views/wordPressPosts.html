@@ -1,11 +1,25 @@
-  <form name="wordPressPostForm">
+  <style>
+    #top-left-link {
+    margin-bottom:10px;
+    margin-top:-30px;
+    margin-left:15px;
+    background-color:rgba(180,196,196,0.5);
+    color:darkblue;
+    width:300px;
+}</style><form name="wordPressPostForm">
      
             <div class="row">
                 <div >
                     <div class="tabContainer">
-                        
+                           
                             <div class="row carpetted ">
+                                <div id="top-left-link"><a href="../index.html">go back to Parent Index page....</a></div>
                                 <h1>ID Cistro Word Press Posts as on {{dateOfRetrieval}}</h1>
+                                <ul>
+                                    <li><em>This page showcases usage of a REST api using  angularjs.</em></li>
+                                    <li><em>This consumes a publicly available webservice: <a href="https://public-api.wordpress.com/rest/v1/sites/idcdistro.wordpress.com/posts" target="_blank"><b> https://public-api.wordpress.com/rest/v1/sites/idcdistro.wordpress.com/posts </b></a></em></li>
+                                    <li><em>It is a simple master detail show case where selecting a row on the table to the left displays detail on the right</em></li>
+                                </ul>
                                     <div class="col-md-12 col-lg-7" id="left-side">
                                         <h2>List</h2>
                                         <table id="main" class="table table-striped main-bordered"  >

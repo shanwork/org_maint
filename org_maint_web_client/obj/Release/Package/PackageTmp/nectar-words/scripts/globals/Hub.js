@@ -4,7 +4,8 @@
       .service('Hub', function ($http, $q,$localStorage,
             Q1_2016,
             Q2_2016,
-            Q3_2016) {
+            Q3_2016,
+            Q1_Q2_2017) {
           //  var budgetStatus = {};
           var allWeeksSaying = [];
           // allWeeksSaying = Q1_2016.returnAllWeeksSaying();
@@ -24,6 +25,9 @@
 
           Q3_2016AllWeeksSaying = Q3_2016.returnAllWeeksSaying();
           this.insertQuarterData(Q3_2016AllWeeksSaying);
+
+          Q1_Q2_2017AllWeeksSaying = Q1_Q2_2017.returnAllWeeksSaying();
+          this.insertQuarterData(Q1_Q2_2017AllWeeksSaying);
 
           var weekCount = [];
           var nectarVisitedStats = [];

@@ -6,7 +6,7 @@
           /* Budget */
           /* hard coded values for requirements
              hard wired requirement 1 and requirement 2
-             all other updates using functions
+             all other updates using  functions
           */
           var budgetStatus =
              {

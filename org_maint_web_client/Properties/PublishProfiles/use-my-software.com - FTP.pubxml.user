@@ -44,7 +44,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/11/2016 22:14:53</publishTime>
     </File>
     <File Include="acivityStream/views/about.html">
-      <publishTime>11/21/2016 07:55:01</publishTime>
+      <publishTime>02/20/2017 06:22:41</publishTime>
     </File>
     <File Include="acivityStream/views/quickImplementation.html">
       <publishTime>11/21/2016 07:40:45</publishTime>
@@ -149,16 +149,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/17/2016 06:19:37</publishTime>
     </File>
     <File Include="assignments/views/aboutThisSite.html">
-      <publishTime>05/17/2016 11:00:56</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="assignments/views/caseStudyWhatUAte.html">
-      <publishTime>05/17/2016 06:19:37</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="assignments/views/gitApi.html">
-      <publishTime>05/17/2016 11:00:11</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="assignments/views/principals.html">
-      <publishTime>05/17/2016 06:19:37</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="basic_mv_flow/home.html">
       <publishTime>01/03/2017 05:46:20</publishTime>
@@ -176,7 +176,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/03/2017 05:46:20</publishTime>
     </File>
     <File Include="basic_mv_flow/scripts/page/wordPressPostController.js">
-      <publishTime>01/03/2017 05:46:20</publishTime>
+      <publishTime>02/12/2017 08:01:54</publishTime>
     </File>
     <File Include="basic_mv_flow/style/styles.css">
       <publishTime>01/03/2017 05:46:20</publishTime>
@@ -191,7 +191,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="bin/org_maint_web_client.dll">
-      <publishTime>02/03/2017 06:55:51</publishTime>
+      <publishTime>03/25/2017 16:10:21</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/15/2015 07:10:03</publishTime>
@@ -230,13 +230,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2015 07:10:04</publishTime>
     </File>
     <File Include="blog/blogHolder.html">
-      <publishTime>01/23/2017 07:12:41</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="blog/blog_styles.css">
       <publishTime>01/21/2017 15:45:40</publishTime>
     </File>
     <File Include="blog/home.html">
-      <publishTime>02/03/2017 06:41:57</publishTime>
+      <publishTime>02/24/2017 07:15:56</publishTime>
     </File>
     <File Include="blog/images/sachin1.jpg">
       <publishTime>01/21/2017 16:34:10</publishTime>
@@ -248,7 +248,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2017 21:41:30</publishTime>
     </File>
     <File Include="blog/styles/blog_styles.css">
-      <publishTime>01/31/2017 13:35:07</publishTime>
+      <publishTime>02/06/2017 22:04:28</publishTime>
     </File>
     <File Include="budget/home.html">
       <publishTime>02/01/2016 07:35:42</publishTime>
@@ -311,7 +311,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/19/2015 15:28:24</publishTime>
     </File>
     <File Include="budget/views/aboutThisSite.html">
-      <publishTime>01/24/2016 09:19:34</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="budget/views/budgetStatus.html">
       <publishTime>01/31/2016 07:45:00</publishTime>
@@ -338,10 +338,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2015 14:35:00</publishTime>
     </File>
     <File Include="budget/views/Settings.html">
-      <publishTime>01/17/2016 12:50:58</publishTime>
+      <publishTime>02/25/2017 14:55:06</publishTime>
     </File>
     <File Include="charting/home.html">
-      <publishTime>08/16/2016 06:28:49</publishTime>
+      <publishTime>02/14/2017 06:33:55</publishTime>
     </File>
     <File Include="charting/scripts/app.js">
       <publishTime>08/16/2016 06:35:37</publishTime>
@@ -395,10 +395,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2017 06:47:19</publishTime>
     </File>
     <File Include="Ganesha/ganeshHome.html">
-      <publishTime>02/01/2017 06:46:12</publishTime>
+      <publishTime>02/24/2017 07:15:16</publishTime>
+    </File>
+    <File Include="Ganesha/GaneshMahostav/angarikaAndSankashti.html">
+      <publishTime>02/14/2017 07:07:50</publishTime>
     </File>
     <File Include="Ganesha/GaneshMahostav/bayAreaGanesh.html">
-      <publishTime>01/31/2017 07:33:26</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="Ganesha/GaneshMahostav/ganeshChaturthi.html">
       <publishTime>01/31/2017 07:18:03</publishTime>
@@ -410,7 +413,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/31/2017 07:12:22</publishTime>
     </File>
     <File Include="Ganesha/GaneshMahotsav.html">
-      <publishTime>02/03/2017 06:47:19</publishTime>
+      <publishTime>02/14/2017 07:01:31</publishTime>
     </File>
     <File Include="Ganesha/home.html">
       <publishTime>01/31/2017 07:01:26</publishTime>
@@ -551,10 +554,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2017 14:35:21</publishTime>
     </File>
     <File Include="Ganesha/styles/ganesh_styles.css">
-      <publishTime>02/03/2017 06:55:05</publishTime>
+      <publishTime>02/14/2017 06:45:54</publishTime>
     </File>
     <File Include="Ganesha/styles/mainStyle.css">
-      <publishTime>01/28/2017 14:35:21</publishTime>
+      <publishTime>02/14/2017 06:58:59</publishTime>
     </File>
     <File Include="Ganesha/views/Ballaleshwar.html">
       <publishTime>06/07/2016 15:24:35</publishTime>
@@ -584,7 +587,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/07/2016 15:36:39</publishTime>
     </File>
     <File Include="HubMVC/home.html">
-      <publishTime>04/20/2016 07:04:21</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="HubMVC/images/HubNetwork.png">
       <publishTime>04/08/2016 06:52:46</publishTime>
@@ -632,16 +635,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/11/2016 16:09:37</publishTime>
     </File>
     <File Include="HubMVC/views/aboutThisSite.html">
-      <publishTime>06/06/2016 14:23:58</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="HubMVC/views/caseStudyAmrutvani.html">
       <publishTime>04/11/2016 17:09:13</publishTime>
     </File>
     <File Include="HubMVC/views/caseStudyWhatUAte.html">
-      <publishTime>04/11/2016 16:57:47</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="HubMVC/views/principals.html">
-      <publishTime>04/11/2016 16:57:43</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="hubTemplate/home.html">
       <publishTime>04/25/2016 08:05:32</publishTime>
@@ -656,10 +659,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 12:45:45</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>02/03/2017 06:42:49</publishTime>
+      <publishTime>02/24/2017 07:15:56</publishTime>
     </File>
     <File Include="index_blog.html">
-      <publishTime>01/19/2017 17:27:01</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="naam/home.html">
       <publishTime>05/27/2016 09:23:27</publishTime>
@@ -680,7 +683,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/16/2016 18:58:15</publishTime>
     </File>
     <File Include="naam/scripts/globals/Hub.js">
-      <publishTime>05/27/2016 06:12:02</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="naam/scripts/homeController.js">
       <publishTime>05/22/2016 07:32:08</publishTime>
@@ -704,10 +707,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2016 11:54:57</publishTime>
     </File>
     <File Include="nectar-words/home.html">
-      <publishTime>02/03/2017 06:43:35</publishTime>
+      <publishTime>03/25/2017 15:10:12</publishTime>
     </File>
     <File Include="nectar-words/images/dwarkamai_1.JPG">
       <publishTime>02/01/2016 07:21:52</publishTime>
+    </File>
+    <File Include="nectar-words/images/dwarkamai_1_2017.jpg">
+      <publishTime>03/25/2017 15:23:13</publishTime>
     </File>
     <File Include="nectar-words/images/Ganesha.JPG">
       <publishTime>02/14/2016 07:49:42</publishTime>
@@ -718,11 +724,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="nectar-words/images/sai_1221_1.JPG">
       <publishTime>07/21/2016 20:12:35</publishTime>
     </File>
+    <File Include="nectar-words/images/sai_1221_1_2017.jpg">
+      <publishTime>03/25/2017 15:26:44</publishTime>
+    </File>
     <File Include="nectar-words/images/sai_1221_2.JPG">
       <publishTime>07/15/2016 06:47:46</publishTime>
     </File>
     <File Include="nectar-words/images/sai_unplugged.JPG">
       <publishTime>03/05/2016 06:45:50</publishTime>
+    </File>
+    <File Include="nectar-words/images/sai_unplugged_1_2017.jpg">
+      <publishTime>03/25/2017 15:27:51</publishTime>
     </File>
     <File Include="nectar-words/images/thursday_baba.JPG">
       <publishTime>07/31/2016 09:11:58</publishTime>
@@ -782,7 +794,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/02/2016 09:55:41</publishTime>
     </File>
     <File Include="nectar-words/scripts/controllers/WeeklyNectarController.js">
-      <publishTime>07/31/2016 09:11:19</publishTime>
+      <publishTime>02/20/2017 06:22:42</publishTime>
     </File>
     <File Include="nectar-words/scripts/d3.min.js">
       <publishTime>02/01/2016 06:29:38</publishTime>
@@ -809,16 +821,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/13/2016 07:17:39</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Hub.js">
-      <publishTime>07/04/2016 10:40:49</publishTime>
+      <publishTime>03/25/2017 15:07:30</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Q1_2016.js">
-      <publishTime>07/15/2016 07:02:50</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
+    </File>
+    <File Include="nectar-words/scripts/globals/Q1_Q2_2017.js">
+      <publishTime>03/25/2017 16:09:23</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Q2_2016.js">
-      <publishTime>07/15/2016 07:03:51</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/Q3_2016.js">
-      <publishTime>09/16/2016 00:23:44</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="nectar-words/scripts/globals/statsDemoGraphics.js">
       <publishTime>12/11/2016 14:31:44</publishTime>
@@ -888,6 +903,297 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="nectar-words/views/WeeklyNectar.html">
       <publishTime>04/17/2016 07:25:14</publishTime>
+    </File>
+    <File Include="onkar/adjustibleGallery.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/home.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/1.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/10.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/11.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/12.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/2.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/3.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/4.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/5.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/6.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/7.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/8.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/dynamic_list/9.png">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_1.jpg">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_10.jpg">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_11.jpg">
+      <publishTime>02/24/2017 06:55:47</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_12.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_13.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_14.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_15.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_16.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_17.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_2.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_3.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_4.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_5.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_6.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_7.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_8.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/scenic_nature/grand_canyon_west_rim/gc_westrim12_2016_9.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %281%29.jpg">
+      <publishTime>02/24/2017 06:50:52</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2810%29.jpg">
+      <publishTime>02/24/2017 06:50:52</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2811%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2812%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2813%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2814%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2815%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2816%29.jpg">
+      <publishTime>02/24/2017 06:50:52</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2817%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2818%29.jpg">
+      <publishTime>02/24/2017 06:50:52</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2819%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %282%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2820%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2821%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2822%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2823%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2824%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2825%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2826%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2827%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2828%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2829%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %283%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2830%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2831%29.jpg">
+      <publishTime>02/24/2017 06:50:52</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2832%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2833%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2834%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2835%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2836%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2837%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2838%29.jpg">
+      <publishTime>02/24/2017 06:50:52</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2839%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %284%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2840%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2841%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2842%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2843%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2844%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2845%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2846%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %2847%29.jpg">
+      <publishTime>02/24/2017 06:50:52</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %285%29.jpg">
+      <publishTime>02/24/2017 06:50:55</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %286%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %287%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %288%29.jpg">
+      <publishTime>02/24/2017 06:50:54</publishTime>
+    </File>
+    <File Include="onkar/images/shiva_1/shiva_photo %289%29.jpg">
+      <publishTime>02/24/2017 06:50:53</publishTime>
+    </File>
+    <File Include="onkar/images/woodgrain1.jpg">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/photoHome.html">
+      <publishTime>02/24/2017 07:19:25</publishTime>
+    </File>
+    <File Include="onkar/scenic_nature.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/scenic_nature_list_detail.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/scripts/app.js">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/scripts/dynamicImageLoader.js">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/scripts/globals/newFlowFactory.js">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/scripts/globals/wordPressPostFactory.js">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/scripts/page/newFlowController.js">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/scripts/page/wordPressPostController.js">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/style/gray_scale_style.css">
+      <publishTime>02/24/2017 06:55:48</publishTime>
+    </File>
+    <File Include="onkar/style/photo_styles.css">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/style/styles.css">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/views/css_basic.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/views/newFlow.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/views/scenic_nature.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/views/scenic_nature_carousel.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/views/wordPressPosts.html">
+      <publishTime>02/24/2017 06:55:49</publishTime>
+    </File>
+    <File Include="onkar/woodgrain1.jpg">
+      <publishTime>02/24/2017 06:55:49</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>11/18/2015 05:49:42</publishTime>
@@ -1039,6 +1345,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="photo_gallery/images/woodgrain1.jpg">
       <publishTime>01/05/2017 19:18:40</publishTime>
     </File>
+    <File Include="photo_gallery/photoHome.html">
+      <publishTime>02/14/2017 06:38:49</publishTime>
+    </File>
     <File Include="photo_gallery/scenic_nature.html">
       <publishTime>01/16/2017 21:48:29</publishTime>
     </File>
@@ -1049,7 +1358,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/10/2017 07:05:05</publishTime>
     </File>
     <File Include="photo_gallery/scripts/dynamicImageLoader.js">
-      <publishTime>01/17/2017 22:18:39</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="photo_gallery/scripts/globals/newFlowFactory.js">
       <publishTime>01/05/2017 19:18:40</publishTime>
@@ -1065,6 +1374,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="photo_gallery/style/gray_scale_style.css">
       <publishTime>01/17/2017 15:04:00</publishTime>
+    </File>
+    <File Include="photo_gallery/style/photo_styles.css">
+      <publishTime>02/05/2017 08:14:39</publishTime>
     </File>
     <File Include="photo_gallery/style/styles.css">
       <publishTime>01/16/2017 21:50:50</publishTime>
@@ -1127,10 +1439,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/03/2017 06:40:49</publishTime>
     </File>
     <File Include="scripts/angular-route.js">
-      <publishTime>11/20/2015 06:39:30</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="scripts/angular.js">
-      <publishTime>11/20/2015 06:39:30</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="services/test.html">
       <publishTime>01/08/2016 06:03:54</publishTime>
@@ -1148,7 +1460,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/08/2016 12:44:24</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/03/2017 06:56:06</publishTime>
+      <publishTime>03/25/2017 16:10:41</publishTime>
     </File>
     <File Include="web_developer_css/home.html">
       <publishTime>01/03/2017 16:04:21</publishTime>
@@ -1226,7 +1538,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/14/2016 17:48:11</publishTime>
     </File>
     <File Include="what-u-ate/scripts/controllers/WeeklyNectarController.js">
-      <publishTime>04/14/2016 17:48:11</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="what-u-ate/scripts/controllers/WhatUAteCRUDController.js">
       <publishTime>04/14/2016 18:32:01</publishTime>
@@ -1238,7 +1550,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/14/2016 18:21:42</publishTime>
     </File>
     <File Include="what-u-ate/scripts/globals/Q1_2016.js">
-      <publishTime>07/15/2016 07:03:15</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="what-u-ate/styling/nectar preTheming.css">
       <publishTime>04/14/2016 17:48:11</publishTime>
@@ -1292,7 +1604,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/10/2017 05:20:44</publishTime>
     </File>
     <File Include="wordPress/style/styles.css">
-      <publishTime>01/10/2017 05:03:51</publishTime>
+      <publishTime>02/13/2017 06:50:26</publishTime>
     </File>
     <File Include="wordPress/views/login.html">
       <publishTime>12/11/2016 22:41:24</publishTime>
@@ -1301,13 +1613,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2017 23:07:54</publishTime>
     </File>
     <File Include="wordPress/views/wordPressPosts.html">
-      <publishTime>01/10/2017 05:54:40</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="wordPress/woodgrain1.jpg">
       <publishTime>01/03/2017 11:47:35</publishTime>
     </File>
     <File Include="wordPressDynamic/home.html">
-      <publishTime>01/02/2017 16:48:01</publishTime>
+      <publishTime>02/20/2017 06:22:43</publishTime>
     </File>
     <File Include="wordPressDynamic/images/woodgrain1.jpg">
       <publishTime>01/03/2017 12:37:07</publishTime>
@@ -1334,7 +1646,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2017 16:48:01</publishTime>
     </File>
     <File Include="wordPressDynamic/views/wordPressPosts.html">
-      <publishTime>01/02/2017 16:48:01</publishTime>
+      <publishTime>02/12/2017 08:06:03</publishTime>
     </File>
   </ItemGroup>
 </Project>
