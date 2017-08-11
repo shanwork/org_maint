@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="test_stats_app">
+<head>
+    <meta charset="utf-8" />
+    <title>Statistics Sample</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css" />
+<style>
+    body {
+    background-color: aliceblue;
+    border:2px solid slateBlue;
+    padding:5px;
+        margin:10px;
+}
+.main-bordered {
+   border: inset 3px ;
+ 
+}
+.centered
+{
+  margin:auto;
+  width:70%;  
+  height:auto;
+}
+h1, h2, h3, h4 {
+    text-align: center;
+}
+input[type=text ],
+input[type= number ],
+input[type= label ]
+{
+    width:auto;
+    max-width:75px;
+}
+.li-header {
+    list-style: none;
+    font-weight:bolder;
+}
+ .badValue {
+               color: red;
+               font-weight:600;
+               padding-left:3px;
+                 border:1px solid gray;
+                 width:auto;margin-left:15px;
+                
+             }
+             .goodValue 
+             {
+                 color: green;
+                 font-weight:800;
+                 padding-left:3px;
+                 border:1px solid silver;
+                 width:auto;
+                 margin-left:15px;
+                
+             }
+</style>    
+</head>
+<body >
+    <div id="top-left-link"><a href="../index.html">go back to Parent Index page....</a></div>
+    <h4> Proof of concept - test cloning and modification of Java Script objects, statistics API</h4>
+     <nav class="navbar navbar-default" style="height:auto;border:3px outset silver;width:550px;padding-top:5px;margin-left:5px">
+       <ul class="navbar navbar-nav" >
+           <li><span  ><a href="#/about" style="background-color:aliceBlue;text-decorations:none;padding-right:20px;margin-left">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+          <li><span  ><a href="#/entry" style="background-color:antiqueWhite;text-decorations:none;padding-right:20px;margin-left">Data Entry</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+          <li><span  ><a href="#/stats" style="background-color:beige;text-decorations:none;padding-right:20px;margin-left">Range Statistics</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+           <li><span  ><a href="#/generalHealthStats" style="background-color:beige;text-decorations:none;padding-right:20px;margin-left">Health Monitoring</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>                 
+                        </ul>
+                    </nav>
+    <div data-ng-view></div>
+    
+   
+    <script src="data/refData.json"></script>
+    <script src="scripts/MathStatsAndMisc.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.5/angular-nvd3.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/globals/Hub.js"></script>
+    <script src="scripts/pages/DataEntryController.js"></script>
+    <script src="scripts/pages/RangeStatisticsController.js"></script>
+      <script src="scripts/pages/HealthStatsController.js"></script>
+</body>
+</html>

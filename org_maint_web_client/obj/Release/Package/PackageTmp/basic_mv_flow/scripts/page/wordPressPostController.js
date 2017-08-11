@@ -25,6 +25,10 @@ retrieves word press posts, controls selection of a post row master-detail sync
                                     $scope.wordPressPostList = postData.posts
                                     $scope.getCellDetails(0)
                                     console.log(postData);
+                                    WordPressPostFactory.getStockQuote(function (postData2) {
+                                        if (postData2 != null)
+                                            console.log(postData2);
+                                    });
                                 }
                            });
                        }

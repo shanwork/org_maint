@@ -1,0 +1,55 @@
+﻿.main-bordered {
+   border: inset 3px ;
+  
+ 
+}
+th {
+    border: groove 1px;  
+   margin: 10px;
+     border-color:gray;
+    
+}
+ td{
+    border: inset 1px;  
+    border-color:silver;
+    margin: 10px;
+    
+    
+}
+table.table-striped tr.selectedRow
+{
+         background-color: #cce0f5;
+         font-weight: bold; 
+} 
+
+ #right-side  
+{
+     
+    margin-left:-25px;
+
+    
+}
+ #right-side #selectedContent
+{
+    
+   background-color:silver;
+   border: solid 2px black;
+   overflow:auto;
+   padding:3px;
+    
+}
+ #selectedContent h4
+ {
+     color:darkslategray;
+     font-weight:900;
+     font-style:italic;
+     margin-left:20px;
+ }
+.indent20
+{
+    margin-left:20px;
+}
+.indent120
+{
+    margin-left:120px;
+}

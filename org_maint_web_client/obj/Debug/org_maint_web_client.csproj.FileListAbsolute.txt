@@ -95,6 +95,5 @@ C:\Shantanu\Technical\Web Development\My-projects\org_maint - Copy (3)\org_maint
 C:\Shantanu\Technical\Web Development\My-projects\org_maint - Copy (3)\org_maint_web_client\bin\org_maint_web_client.pdb
 C:\Shantanu\Technical\Web Development\My-projects\org_maint - Copy (3)\org_maint_web_client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Shantanu\Technical\Web Development\My-projects\org_maint - Copy (3)\org_maint_web_client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Shantanu\Technical\Web Development\My-projects\org_maint - Copy (3)\org_maint_web_client\obj\Debug\org_maint_web_client.csprojResolveAssemblyReference.cache
 C:\Shantanu\Technical\Web Development\My-projects\org_maint - Copy (3)\org_maint_web_client\obj\Debug\org_maint_web_client.dll
 C:\Shantanu\Technical\Web Development\My-projects\org_maint - Copy (3)\org_maint_web_client\obj\Debug\org_maint_web_client.pdb

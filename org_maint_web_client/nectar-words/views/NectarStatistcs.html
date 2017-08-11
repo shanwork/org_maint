@@ -1,0 +1,35 @@
+﻿<div>
+    <h2>Sai Amritvani Stats</h2>
+    <p>I hope to build a statistical analysis of the postings. Right now  it is just about started and I have to restructure the data to make it easy to extract the numbers and lists</p>
+    <div style="float:left;width:20%">
+        <h3>Authors/Sources</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Works</th>
+                <th>Count</th>
+            </tr>
+            <tr ng-repeat="authorWorkCount in authorsWorksCounts">
+                <td>{{authorWorkCount.author}}</td>
+                <td>{{authorWorkCount.work}}</td>
+                <td>{{authorWorkCount.count}}</td>
+              </tr>
+            </table>
+    
+</div>
+    <div style="float:right;width:75%">
+        <h3>Authors/Sources</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Works</th>
+                <th>Count</th>
+            </tr>
+            <tr ng-repeat="author in authorLists.allAuthorRecs">
+                <td>{{ author}}</td>
+                
+            </tr>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="posts_app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta title="WordPress Post">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link href="style/styles.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+    </style>
+    <title>WordPress Post Application</title>
+</head>
+
+
+<body>
+    <!-- Main SPA area    -->
+    <div id='mainAppDiv' style='overflow:auto;'>
+        <div id="landing">
+
+            <!---- MAIN CONTENT-->
+            <div ng-view style="margin: auto;"></div>
+            <!---- /MAIN CONTENT-->
+
+
+        </div>
+    </div>
+    <!-- SCRIPTING-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular-route.js" data-semver="1.4.9"></script>
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular-cookies.js" data-semver="1.4.9"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/globals/bigStringFactory.js"></script>
+  
+
+
+    <script src="scripts/page/bigStringController.js"></script>
+  
+</body>
+</html>

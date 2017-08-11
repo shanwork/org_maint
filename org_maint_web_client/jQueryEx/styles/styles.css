@@ -1,0 +1,26 @@
+﻿body {
+    background-repeat:repeat;
+    background-image:url(../images/woodgrain1.jpg); 
+    opacity:0.95;
+}
+.main-bordered {
+   border: inset 3px ;
+ 
+}
+table {
+    opacity:3.0;
+}
+th {
+    border: groove 1px;  
+   margin: 10px;
+     border-color:gray;
+    
+}
+
+ td{
+    border: inset 1px;  
+    border-color:silver;
+    margin: 10px;
+    
+    
+}

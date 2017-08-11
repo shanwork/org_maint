@@ -8,7 +8,7 @@ angular.module('nectar_words_app')
                     postDate: new Date('April 08 2016 3:00 AM'),
                     title: 'repetition of Ramayana and Ramnavmi',
                     content: 'This week, the posts of Ramayan and Ramnavmi have been repeated...',
-                    author: '',
+                    source : { author: '', location: ''}, author: '',
                     seriesId: '-10',
                     seq: '-1',
                     img: root + '/images/dwarkamai_1.jpg'
@@ -21,7 +21,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 30 2016 3:30 AM'),
                      title: 'Fire covered by ash',
                      content: 'Here is fire. It is covered by ash. Why has the ash covered the fire? It has covered the fire because we have neglected it.  Where did the ash come from? It has come from the fire only. If you blow it off, the ash will go and you will see the fire. Similarly, the fire of divinity is present within you, but you have neglected it.  Therefore, the ash of illusion has covered it. So, you are not able to visualize the divinity within you. You blow off the ash of illusion through renunciation, then, you will see the fire of divinity. The fire of divinity has not come afresh from somewhere. It was already there within you.',
-                     author: 'Sri Sathya Sai Baba’s Kodaikanal discourse, April 8, 1993',
+                     source: { author: 'Sri Sathya Sai Baba', location: 'Kodaikanal discourse: April 8, 1993' }, author: 'Sri Sathya Sai Baba’s Kodaikanal discourse, April 8, 1993',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_unplugged.jpg'
@@ -30,7 +30,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 29 2016 3:30 AM'),
                      title: 'Why do we miss God?',
                      content: 'No one completely knows the mystery of electric current, why it behaves so, what is the exact nature of its origin and flow. Yet, it is manipulated into a thousand uses and it manifesting through thousand appliances and instruments. So too, God is present everywhere; but we can understand only that part of Him that manifests before our eyes. Ordinary people will swear that the earth does not move at all; but it has two motions—it rotates on its own axis and it moves around the Sun. But do we notice it while it happens? No! God too is a reality ever present in us and in every being; but we miss Him as we miss the movement of the earth. ',
-                     author: 'Sri Sathya Sai Baba in Sadhana- The Inward Path, p68',
+                     source: { author: 'Sri Sathya Sai Baba', location: 'The Inward Path: p68' }, author: 'Sri Sathya Sai Baba in Sadhana- The Inward Path, p68',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -40,7 +40,7 @@ angular.module('nectar_words_app')
                       title: ' There is no sin?',
                      content: '<strong><u>Devotee:</u></strong> Sir, if God has become everything, then there is no sin or virtue (punyam)?<br/>&nbsp;&nbsp;' +
                      '<strong><u>Master:</u></strong> As long as there is ego in us, then there exists sin and virtue. In some people, God completely wipes away the ego; then they are beyond all good and bad. You may say in words that good and bad all have become one to you and you do just what God makes you do. But in your heart you know that all these are mere words. The moment you do some evil actions, your conscience will begin to prick you! ',
-                     author: 'Sayings of Sri Ramakrishna, p250.',
+                     source: { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p250.' }, author: 'Sayings of Sri Ramakrishna, p250.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -52,7 +52,7 @@ angular.module('nectar_words_app')
                         '<strong><u>Master:</u></strong> God is in everything and everything depends on God’s will! This is all His play. He is making us do various things in various ways, good and bad, great and small, weak and strong- all these are ultimately from Him. Good people, bad people – all these are His play. For instance, all the trees of a garden are not equal in height, beauty or grandeur.<br/>&nbsp;&nsbp;' +
                      'Coming back to your question-- so long as one has not realized God, one thinks that he has free will. But it is God who maintains this delusion in man! Otherwise, there would have been a mighty increase of sins; people would not have feared to do evil, nor would there have been any punishment for crime or sin.<br/>&nbsp;&nbsp;' +
                          'Do you know the attitude of a man who has realized God? He says and feels, ‘I am the machine, You are the operator; I am the house, You are the indweller; I am the chariot, You are the charioteer; I move as You make me move; I speak what You make me speak!’ ',
-                     author: 'Sayings of Sri Ramakrishna, p251.',
+                     source: { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p251.' }, author: 'Sayings of Sri Ramakrishna, p251.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -61,7 +61,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 26 2016 2016 5:30 AM'),
                      title: 'God with form and without form',
                      content: 'Fire itself has no definite shape but as glowing embers it assumes different forms. Thus the formless fire is seen endowed with forms. Similarly, the formless God (Brahman) sometimes invests Himself with definite forms for the sake of His devotees.',
-                     author: 'Sayings of Sri Ramakrishna, p247.',
+                     source: { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p247.' }, author: 'Sayings of Sri Ramakrishna, p247.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -71,7 +71,7 @@ angular.module('nectar_words_app')
                      title: 'Why do Avatars appear and disappear?',
                      content: '<strong><u>Devotee:</u></strong> Master! Why do Avatars appear and disappear?<br/>&nbsp;&nbsp;'+
                      '<strong><u>Master:</u></strong>  Water, which is clear and formless, when frozen, becomes ice and takes a form. So also, the formless Brahman takes the visible form and manifests as an Avatar. This happens when the formless Brahman is cooled by the call of the devotees, as it were. The ice, which is a part and parcel of water, remains in water and afterwards melts into it. So too, the Avatar, the Personal God, who is a part and parcel of the formless Brahman, rises from the Impersonal, remains there and ultimately merges into it and disappears.',
-                     author: 'Sayings of Sri Ramakrishna, p247.',
+                     source: { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p247.' }, author: 'Sayings of Sri Ramakrishna, page 247.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -80,7 +80,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 24 2016 2016 5:30 AM'),
                      title: 'Headmaster of a school',
                      content: 'The Headmaster of a school is a good example of the attitude you should develop. He knows that the chairs, tables and benches are not his. Nevertheless, he knows that it is his duty to see that no item of furniture or equipment is lost or damaged. Everything is to be handed over intact when he leaves. Therefore, he keeps a vigilant watch, though unattached. The senses, the intelligence, the heart, the mind—you are in charge of this furniture. Look after them with care. If any of them are misused by oversight, explain the circumstances to the Lord and ask for His pardon and Grace. ',
-                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
+                     source: { author: 'Sri Sathya Sai Baba', location: 'Sadhana-The Inward Path: pp158.' }, author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -89,7 +89,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 23 2016 3:30 AM'),
                      title: 'A bar of iron sinks!',
                      content: ' A bar of iron sinks in water; but beat it into a hollow vessel and it will float merrily and even carry some weight! So too, man’s mind sinks easily in the sea of the senses; beat it hollow, hammering it with the Name of the Lord. It will float safely on the sea of troubles.',
-                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
+                     source: { author: 'Sri Sathya Sai Baba', location: 'Sadhana-The Inward Path: pp158.' }, author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp158.',
                      seriesId: '-1',
                      seq: 1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -98,7 +98,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 22 2016 3:30 AM'),
                      title: 'Prayer',
                      content: 'As food is necessary for the body, prayer is necessary for the soul. I have not the slightest doubt that prayer is an unfailing means of cleansing the heart of passions. But it must be done with utmost humility. Prayer is impossible without a living faith in the presence of the God within.',
-                     author: 'The Story of My Experiments with Truth – by M. K. Gandhi',
+                     source: { author: 'Mahatma Gandhi', location: 'The Story of My Experiments with Truth' }, author: 'The Story of My Experiments with Truth – by M. K. Gandhi',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -107,7 +107,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 21 2016 2:30 AM'),
                      title: ' Prayer and Dhyana',
                      content: 'Prayer is the very breath of all religions, for it brings man and God together, and with every sigh, nearer and nearer. Dhyana is the process of listening to the Song Celestial, the Flute of Krishna, with mental ears alert on the melody. Yoga is the merging of the mind in the bliss of self-forgetfulness, when the music fills the consciousness. Words like these do not completely denote their inexpressible ecstasy which one gets after this long exile in this world. ',
-                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, p145.',
+                     source: { author: 'Sri Sathya Sai Baba', location: 'Sadhana-The Inward Path: pp145.' }, author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, p145.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -117,7 +117,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 20 2016 3:30 AM'),
                      title: 'Is there God(4)?',
                      content: 'A pious man in Rajahmundry (Andhra Pradesh) had a big problem. He had lucoderma (localized loss of pigmentation of the skin) and no girl wanted to marry him. Accepting it as the Lord’s blessing, he continued to be a faithful devotee of Baba.<br/>7nbsp; One day, he was invited to a Sai Bhajan in a devotee’s place. He went there and sang with great devotion the famous bhajan, “Avo, Avo Sai Natha..” Baba’s car was passing through Rajahmundry at that time.  Baba directed the driver to go to the devotee’s place.  Baba entered the house and touched the head of this man. At once, his lucoderma disappeared. The man fell at Baba’s feet and cried. He then got up and asked Baba, “Swami, what made you come here?” Baba smiling said, “You kept calling Avo, Avo Sai Natha..” How can I ignore when someone calls Me?”',
-                     author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C (Baba used to stay at their house whenever He visited Bangalore)',
+                     source: { author: 'Smt. Gita Ram ', location: 'Narration by her in Washington DC' }, author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C (Baba used to stay at their house whenever He visited Bangalore)',
                      seriesId: 'Is there God',
                      seq: 4,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -128,7 +128,7 @@ angular.module('nectar_words_app')
                      content: '<p>Whoever is born, the father is the cause of his birth. Therefore, the father is everyone’s visible God. We address God as Father, because we couldn’t give Him a holier name. If someone asks you, “Who is your father?” you say, “My father is so and so.” If he questions you further, “On whose authority do you declare him to be your father?” You say, “On my mother. Her word I believe to be the truth.”</p>'
                          + '<p>Therefore, the mother who bore you, the father who fostered you and the teacher who opened your eyes to the mystery of Nature in and around you all have to be revered. The parents gave you this body, and fostered the intelligence and love. So, gratitude is due to them. However high you my rise in social status, however huge may be your bank account, if your parents are neglected, your life would be tragic waste. Parents are mightily happy when their children show even the slightest concern for their comfort. Any little sign of gratitude is welcomed by them with delight. If you have no urge to please them and make them happy, how can you ever hope to please God?If you give joy to your parents, your children will be a source if joy to you in your later years. You don’t have to deserve your mother’s love. It is a given! You have to deserve your father’s love. <br/> -Sathya Sai Speaks, Vol XI, ch.39, p223.</p>'
                          + '<br/><p>When a father gives a gift to his son, both laugh; when a son gives a gift to his father, both cry. <br/>&nbsp;– William Shakespeare</p>',
-                     author: 'various',
+                     source : { author: 'various', location: 'n.a.'}, author: 'various',
                      seriesId: '-1',
                      seq: 2,
                      img: root + '/images/sai_1221_1.jpg'
@@ -138,7 +138,7 @@ angular.module('nectar_words_app')
                      title: ' Is there God(3)?',
                      content: '<p>There was a pious man who lived with his family and his elderly mother in a village not too far from Puttapathi. He was a great devotee of Hanuman. He built a beautiful Hanuman temple in his village. He went to Puttaparthi and requested Bhagawan Sri Sathya Sai Baba to come and inaugurate the temple. Baba accepted his invitation. On the appointed day, this man and his family had assembled at the temple. He left his mother at home as she was very old and could not even walk to the temple. This man was feeling very sad because Baba was coming all the way from Puttaparthi to his village, yet his mother will not be able to have His darshan.</p>'+
                          '<p>On that day, Baba’s car was heading towards that temple. Baba told the driver, “You do not know how to get there. Make a turn here and let us ask someone for directions.” The driver immediately replied, “Swami, I know how to get there. There is no need to ask for directions.” Baba told the driver, “Simply make a turn here and stop by the house there.” The driver followed Baba’s directions and stopped in front of a small house. There, an old woman was sitting in the verandah. Swami lowered the glass window and asked the old woman in Telugu, “How to go to the Hanuman temple?” She told the driver to go straight, make a left and then a right and go all the way to the end. As promised, Baba arrived there on time and inaugurated the temple with proper rituals. The man and his family were very pleased with the presence of Bhagawan and they took Baba’s blessings. The man told Baba, “Swami, we are very fortunate to have your darshan and be able to touch your feet and get your blessings. I am very sad that my mother is unable to come here and have your darshan.” Baba smiled and said, “I know, I know. That is why I stopped at your house and gave her darshan on my way to the temple!” Tears rolled down from the cheeks of this man and he fell at Baba’s feet and thanked him for his grace.</p>',
-                     author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C.',
+                     source: { author: 'Smt. Gita Ram ', location: 'Narration by her in Washington DC' }, author: 'Story as narrated by Smt. Gita Ram who lives in Washington, D.C.',
                      seriesId: 'Is there God',
                      seq: 3,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -151,7 +151,7 @@ angular.module('nectar_words_app')
                          '&nbsp;One morning, around 5:00, Kasturi was woken up by the growling and barking noise of dogs. He looked through the window and he was shocked to see what was happening. Beyond the compound wall of the house, there was a heap of banana leaves with food scattered all over, probably from a dinner party. The beggars were trying to get to the food and were fighting against the dogs. Kasturi thought, “If Baba is God, why does He allow all these things to happen?”<br/>' +
                          '&nbsp;As he turned away from the window, he was surprised to find Baba standing in front of him! Even before Kasturi could open his mouth, Baba said, “These people in their previous births were wasting their food without any concern. Now, they have to pay the price.”</p>'+
                          '<h4><strong>Annam Brahma (Food is God)</strong></h4>',
-                     author: 'Story from Loving God by N. Kasturi.',
+                     source: { author: 'N. Kasturi', location: 'Story from Loving God' }, author: 'Story from Loving God by N. Kasturi.',
                      seriesId: 'Is there God',
                      seq: 2,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -162,7 +162,7 @@ angular.module('nectar_words_app')
                      content: '<p>When we hear about the violence, killings and shootings all around the world, one begins to think, ‘Is there God? If so, why is He letting all these bad things happen?’<br/> Baba answers:</p>' + 
                          '<p> “The fate of the country will depend on the character of its people. The character of the people can be elevated and purified only by sadhana, which is the hard way of regulation of behavior and control of desires.  God is the guardian and as a guardian, He has to warn and punish to wean people away from harmful habits. If it is necessary, the guardian will resort to the infliction of pain too, as a curative and corrective.</p>' + 
                          '<p>Limit, control, regulate and set bounds: that is the only way to succeed. If people let loose their thoughts, words and actions, calamity will be the consequence. Sastra means that which ‘lays down limits’; interest in the art of harmonious living is created by these rules. Imagine a game of football which has no rules, the ball is never ‘out’, there is no ‘foul’, no corner, no offside, no hands, nothing by which you can decide who plays well or ill, who wins or loses. The game will lose all the zest; it will be pandemonium, a free fight. Rules of behavior must be observed by politicians, rulers and subjects. Sannyasins, who are the leaders of the community, heads of monasteries and scholars who set an example by their behavior and who provide guidelines for proper behavior, their responsibilities are even greater.” </p>',
-                     author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp165-166.',
+                     source: { author: 'Sri Sathya Sai Baba', location: 'Sadhana-The Inward Path: pp165-166.' }, author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, pp165-166.',
                      seriesId: 'Is there God',
                      seq: 1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -171,7 +171,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 15 2016 3:30 AM'),
                      title: 'Retrospection',
                      content: 'If one undertakes retrospection of the day’s events, one must do it regularly at the appointed hour, not restlessly, not doing it today, neglecting it to do it tomorrow and the day after and then taking it up again on the fourth day. Such irregular practice is not conducive to the confirmation of the habit of retrospection.',
-                     author: 'Mahavir',
+                     source: { author: 'Mahavir', location: '' }, author: 'Mahavir',
                      seriesId: 'Saint Mahavir Says',
                      seq: 2,
                      img: root + '/images/sai_unplugged.jpg'
@@ -180,7 +180,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('June 14 2016 2:30 AM'),
                      title: 'Attachment and aversion',
                      content: 'Attachment and aversion are the root cause of karma and karma originates from infatuation. Karma is the root cause of birth and death and these are said to be the source of misery. None can escape the effect of their own past karma.',
-                     author: 'Mahavir',
+                     source: { author: 'Mahavir', location: '' }, author: 'Mahavir',
                      seriesId: 'Saint Mahavir Says',
                      seq: 1,
                      img: root + '/images/sai_unplugged.jpg'
@@ -189,7 +189,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 13 2016 3:30 AM'),
                    title: 'The spirit of non-violence',
                    content: 'If the best minds of the world have not imbibed the spirit of non-violence, they have to meet gangsterism in its own way. But that would only show that we have not gone far beyond the law of the jungle and we have not yet learnt to appreciate the heritage that God has given us. In spite of the teachings of Christianity which is 1900 years old and Hinduism and Buddhism which are older and even of Islam, we have not made much headway as human beings. But whilst I would understand the use of force by those who do not have the spirit of non-violence in them, I still believe that even gangsterism has to be met with non-violence.',
-                   author: 'Mahatma Gandhi in Harijan, Dec 10, 1938',
+                   source: { author: 'Mahatma Gandhi', location: 'Harijan: Dec 10, 1938' }, author: 'Mahatma Gandhi in Harijan, Dec 10, 1938',
                    seriesId: '-1',
                    seq: -1,
                    img: root + '/images/sai_unplugged.jpg'
@@ -198,7 +198,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 12 2016 3:30 AM'),
                    title: 'Pleasure and Pain',
                    content: 'Pleasure arises from pain and pain results in pleasure. Because the Pandavas were in the jungle for twelve years and hid themselves unrecognized for the thirteenth year, people now appreciate their noble qualities. Because of the many obstacles and troubles that Prahlada encountered and the punishments meted out to him, the rest of the world now knows how great his devotion was. Prahlada never had tears in his eyes and never exhibited any pain when the demons were harming him. He was simply uttering the name of the Lord and requested the Lord’s presence. His devotion and equanimity in pain and pleasure is a living example even today of what real faith and devotion can do. On the other hand, had Prahlada lived with his father in luxury with care and tenderness, how could his faith be known to the world?',
-                   author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
+                   source: { author: 'Sri Sathya Sai Baba', location: 'Summer Roses on Blue Mountains: 1976, Ch.3' }, author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
                    seriesId: 'Pleasure and Pain',
                    seq: 2,
                    img: root + '/images/dwarkamai_1.jpg'
@@ -207,7 +207,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 11 2016 3:30 AM'),
                    title: 'Pain ultimately leads to pleasure',
                    content: 'All the pains and difficulties that you get will ultimately turn out as a means to give you happiness and pleasure. Even a diamond of high quality does not get its value unless we cut the faces on it. Pure gold will not be turned into a beautiful ornament unless it is repeatedly put into fire and molded. Whenever you experience pains, trials, obstacles and tribulations, you should recognize them as paths for obtaining ultimate happiness. So, we should be prepared to accept pain. To seek pleasure alone and not to welcome pain is not right. Pleasure comes out of pain. We should recognize that all pain will ultimately end in pleasure.',
-                   author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
+                   source: { author: 'Sri Sathya Sai Baba', location: 'Summer Roses on Blue Mountains: 1976, Ch.3' }, author: 'Sri Sathya Sai Baba in Summer Roses on Blue Mountains, 1976, Ch.3',
                    seriesId: 'Pleasure and Pain',
                    seq: 1,
                    img: root + '/images/dwarkamai_1.jpg'
@@ -217,7 +217,7 @@ angular.module('nectar_words_app')
                    title: 'Why there is diversity in the world?',
                    content: '<u>Devotee:</u> If God alone exists in everyone, why the world has diversities and inequalities caused by ego?<br/><br/>' +
                         '<u>Master:</u> It is all His play, His Leela!  A king has four sons. They are all princes but when they play, one becomes the minister, another, a policeman and so on. A prince he is, yet playing as a policeman!',
-                   author: 'Sayings of Sri Ramakrishna, p244',
+                   source: { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p244' }, author: 'Sayings of Sri Ramakrishna, p244',
                    seriesId: '-1',
                    seq: -1,
                    img: root + '/images/sai_unplugged.jpg'
@@ -226,7 +226,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 9 2016 3:30 AM'),
                    title: 'Different aspects of God',
                    content: 'Do you know what the form and aspect of God is like? It is like rising bubbles on a sheet of water. It can be seen actually with different forms and different colors. The divine incarnation (Avatar) is one of the forms. Unless one sees God, one is not able to realize all this. For the sake of those who love God, He manifests Himself in various ways and forms.',
-                   author: 'Sayings of Sri Ramakrishna, p245',
+                   source: { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p245' }, author: 'Sayings of Sri Ramakrishna, p245',
                    seriesId: '-1',
                    seq: '-1',
                    img: root + '/images/sai_1221_1.jpg'
@@ -235,7 +235,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 8 2016 3:30 AM'),
                    title: 'Ringing bell',
                    content: 'When a bell is rung, the repeated ding-dongs may be distinguished one from the other, as if each sound has a form. But, when we stop the ringing, the indistinguishable sound, which is audible for a while and gradually dies away, appears formless. Like the sounds of the bell, God is both with and without form. ',
-                   author: 'Sayings of Sri Ramakrishna, p246',
+                   source: { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p246' }, author: 'Sayings of Sri Ramakrishna, p246',
                    seriesId: '-1',
                    seq: '-1',
                    img: root + '/images/sai_unplugged.jpg'
@@ -244,7 +244,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 7 2016 3:30 AM'),
                    title: 'Why do we worship God with form?',
                    content: '<p>So long as there is ego or ‘I’ in me, there are desires in me. Then, there is a need for a Personal God to whom I can appeal to fulfill my desires.  There is this Personal God before me, revealing Himself through various forms of glory, as the world and living beings.</p>&nbsp;&nbsp;&nbsp; God without form and with form are one and the same. A belief in one implies the belief in the other. Fire cannot be thought to be apart from its burning power. Again, sun’s rays cannot be thought of apart from the sun, nor the sun from its rays. You cannot think of the whiteness of the milk, apart from milk, nor milk apart from its whiteness. Thus, God without form cannot be thought apart from the idea of God with form and vice versa.',
-                   author: 'Sayings of Sri Ramakrishna, p239 and p241.',
+                   source : { author: 'Sri Ramakrishna', location: 'Sayings of Sri Ramakrishna: p239 & 241' }, author: 'Sayings of Sri Ramakrishna, p239 and p241.',
                    seriesId: '-1',
                    seq: '-1',
                    img: root + '/images/sai_1221_1.jpg'
@@ -253,7 +253,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 7 2016 2:30 AM'),
                    title: 'Ramadan Mubarak!',
                    content: 'Ramadan, the Islamic holy month of fasting, contemplation and prayer, began Sunday, June 5 and will run through Tuesday, July 5. It is celebrated as the month during which Prophet Muhammad received the initial revelations that would become the Quran. During Ramadan, Muslims do not eat or drink (not even water) from sunrise to sunset, and try to abstain from impure thoughts or behavior. Daily fasts are to be broken by sharing meals with family after sunset. At the end of the month, a three-day festival called Eid al-Fitr marks Ramadan\'s conclusion. Islam is the world\'s second-largest religion, after Christianity, with over 1 billion followers.',
-                   author: '-',
+                   source : { author: '-', location: ''}, author: '-',
                    seriesId: '-1',
                    seq: '-1',
                    img: root + '/images/dwarkamai_1.jpg'
@@ -268,7 +268,7 @@ angular.module('nectar_words_app')
                        '<p>God is the source of Light and Life; yet he is beyond all these!</p>' + 
                        '<p>He is the atheism of the atheist….</p>' +
                        '<p>for, in His boundless love, God permits even the atheist to live!</p>',
-                   author: 'Mahatma Gandhi in Young India, March 5, 1925',
+                   source: { author: 'Mahatma Gandhi', location: 'Young India' }, author: 'Mahatma Gandhi in Young India, March 5, 1925',
                    seriesId: 'Mahatma Gandhi in Young India',
                    seq: 0,
                    img: root + '/images/sai_unplugged.jpg'
@@ -277,7 +277,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 5 2016 3:30 AM'),
                    title: 'You Are Divine!!',
                    content: 'Man is essentially Divine. However, he believes himself to be an individual, limited and temporary. This is because he is entangled in the characteristics of the five sense elements, namely, sound, touch, form, taste and smell. This error brings about joy and grief, good and bad, birth and death. To escape from this association with the senses and to rid oneself from their pulls, is the sign of liberation, called in Sanskrit as Kaivalya, Moksha or Mukthi. ',
-                   author: 'Sathya Sai Baba in Upanishad Vahini, Ch.1, p1',
+                   source: { author: 'Sathya Sai Baba', location: ' Upanishad Vahini: Ch.1, p1' }, author: 'Sathya Sai Baba in Upanishad Vahini, Ch.1, p1',
                    seriesId: '-1',
                    seq: -1,
                    img: root + '/images/sai_1221_1.jpg'
@@ -286,7 +286,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 4 2016 2016 5:30 AM'),
                    title: 'How to pay back a person who has hurt you?',
                    content: 'The best way to get back to you a person who has hurt you is to do something wonderfully good to him so that he is put to shame. ',
-                   author: ' Thiruvalluvar',
+                   source: { author: 'Thiruvalluvar0-]', location: '' }, author: ' Thiruvalluvar',
                    seriesId: '-1',
                    seq: -1,
                    img: root + '/images/dwarkamai_1.jpg'
@@ -300,7 +300,7 @@ angular.module('nectar_words_app')
                        '&nbsp;As you hold the razor and guide (glide!) it on your face, you should hold the mind and make it behave in a manner in which it ought to. Only then you conduct yourself a human being.<br/>' +
                        '&nbsp;You must discriminate and distinguish between good and bad acts and guide the mind moderately between the two extremes.</p>'
                             ,
-                   author: 'Sri Sathya Sai Baba in Summer Showers in Brindavan, 1974, Ch.2',
+                   source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba in Summer Showers in Brindavan, 1974, Ch.2',
                    seriesId: '-1',
                    seq: '-1',
                    img: root + '/images/sai_unplugged.jpg'
@@ -319,7 +319,7 @@ angular.module('nectar_words_app')
                           '<p>You have to act well your part and receive His approbation, when the curtain falls.</p>' +
                           '<p>Earn by your effort and enthusiasm the right to play higher and higher roles…</p>' +
                           '<p>That is the meaning and purpose of life!</p>',
-                   author: 'Shri Sathya Sai Baba',
+                   source : { author: '', location: ''}, author: 'Shri Sathya Sai Baba',
                    seriesId: '-1',
                    seq: '-1',
                    img: root + '/images/dwarkamai_1.jpg'
@@ -328,7 +328,7 @@ angular.module('nectar_words_app')
                    postDate: new Date('June 1 2016 3:30 AM'),
                    title: 'The power of Service',
                    content: 'Seva (service) is the blossom of Love (Prema), a flower that fills the mind with rapture. Harmlessness is the fragrance of that flower. Let even your little acts be scented with compassion and reverence. Be assured that your character would thereby shine greatly. The highest happiness is contentment. Where there is no harshness, there holiness will thrive and virtues will flourish.',
-                   author: 'Sri Sathya Sai Baba in Vidya Vahini, Ch.VIII, p44.',
+                   source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba in Vidya Vahini, Ch.VIII, p44.',
                    seriesId: '-1',
                    seq: '-1',
                    img: root + '/images/sai_unplugged.jpg'
@@ -338,7 +338,7 @@ angular.module('nectar_words_app')
                   postDate: new Date('May 31 2016 3:30 AM'),
                   title: 'God does service too!',
                   content: 'Lord Krishna was all-knowing, all-powerful and an Avatar, yet He worked as a charioteer for Arjuna. Krishna was one who recognized the importance of service to the community. By His own example, He showed that service to others was very important. Every day, after the war of Mahabharata, Krishna took the horses to the river, washed them and tended to their wounds and applied medicines. Krishna demonstrated that hard work and compassion to all living beings constitute the duty of all human beings.',
-                  author: 'Sri Sathya Sai Baba in Summer Roses in Blue Mountains, 1976, Ch.3',
+                  source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba in Summer Roses in Blue Mountains, 1976, Ch.3',
                   seriesId: '-1',
                   seq: '-1',
                   img: root + '/images/sai_1221_1.jpg'
@@ -351,7 +351,7 @@ angular.module('nectar_words_app')
                     + '<p>A hero is someone who has given his or her life to something bigger than oneself. – <strong>Joseph Campbell</strong></p>'
                     + '<p>In the end, we will remember not the words of our enemies, but the silence of our fallen friends. - <strong>Martin Luther King</strong> </p>'
                     + '<p>A man’s country is not a certain area of land, of mountains, rivers and woods, but it is a principle, patriotism and loyalty to that principle. – <strong>George William Curtis</strong></p>',
-                  author: 'Multiple',
+                  source : { author: '', location: ''}, author: 'Multiple',
                   seriesId: '-1',
                   seq: '-1',
                   img: root + '/images/sai_unplugged.jpg'
@@ -360,7 +360,7 @@ angular.module('nectar_words_app')
                   postDate: new Date('May 29 2016 3:30 AM'),
                   title: ' India’s Freedom',
                   content: '<p>India has never waged a war against any nation. She has put up sometimes a half-organized resistance in self-defense, pure and simple. She has therefore, no need to develop the will for Peace. She has that in abundance whether she knows it or not! – Mahatma Gandhi in Young India, July 4, 1929.</p><p>India’s freedom must revolutionize the world’s outlook upon peace and war. Her inability to fight affects the whole of mankind</p>',
-                  author: 'Mahatma Gandhi in Young India, Sept 17, 1925.',
+                  source : { author: '', location: ''}, author: 'Mahatma Gandhi in Young India, Sept 17, 1925.',
                   seriesId: 'Mahatma Gandhi in Young India',
                   seq: 2,
                   img: root + '/images/sai_1221_1.jpg'
@@ -369,7 +369,7 @@ angular.module('nectar_words_app')
                   postDate: new Date('May 28 2016 2016 5:30 AM'),
                   title: 'The ways of Peace',
                   content: 'India’s destiny lies not along the bloody way of the West, which shows no signs of tiredness, but along the bloodless way of peace that comes from a simple and Godly life. She must be strong enough to resist the temptation from the West for her own sake and that of the world. ',
-                  author: 'Mahatma Gandhi in Young India, Oct 7, 1926.',
+                  source : { author: '', location: ''}, author: 'Mahatma Gandhi in Young India, Oct 7, 1926.',
                   seriesId: 'Mahatma Gandhi in Young India',
                   seq: 1,
                   img: root + '/images/dwarkamai_1.jpg'
@@ -379,7 +379,7 @@ angular.module('nectar_words_app')
                   title: 'Looking forward to Memorial Day weekend?',
                   content: 'To many, Memorial Day, is just an excuse for a three-day weekend. It is also known as the day that marks the official start of summer and as a day devoted to getting great deals at the mall. However, the true meaning of Memorial Day goes far beyond barbecues and mattress sales. '
                             ,
-                  author: 'from the Web',
+                  source : { author: '', location: ''}, author: 'from the Web',
                   seriesId: '-1',
                   seq: '-1',
                   img: root + '/images/sai_unplugged.jpg'
@@ -388,7 +388,7 @@ angular.module('nectar_words_app')
                   postDate: new Date('May 26 2016 3:30 AM'),
                   title: 'Can you see me?',
                   content: 'If you want to see Me, be egoless and humble and meditate on Me. If any devotee meditates on Me with complete self-surrender, he shall experience complete union with Me. It is impossible to describe all my ways and measures.',
-                  author: 'Shirdi Sai Baba',
+                  source: { author: 'Shirdi Sai Baba', location: 'Shirdi' }, author: 'Shirdi Sai Baba',
                   seriesId: '-1',
                   seq: '-1',
                   img: root + '/images/dwarkamai_1.jpg'
@@ -397,7 +397,7 @@ angular.module('nectar_words_app')
                   postDate: new Date('May 25 2016 3:30 AM'),
                   title: 'Many mirrors, many reflections of one',
                   content: 'All are one, be alike to everyone. That is your primary duty. This is the most important teaching of Buddha. You will see unity everywhere once you understand this truth. There is unity in the apparent multiplicity. When you are surrounded by many mirrors, you see a number of reflections of yourself. Reflections are many but the person is one.',
-                  author: 'Sri Sathya Sai Baba on Buddha Purnima, May 13, 1996.',
+                  source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba on Buddha Purnima, May 13, 1996.',
                   seriesId: '-1',
                   seq: '-1',
                   img: root + '/images/sai_unplugged.jpg'
@@ -410,7 +410,7 @@ angular.module('nectar_words_app')
                            + '<p>Following Krishna’s orders, late in the night, Yudhisthira and Arjuna went to Bhishma’s tent, respectfully fell at Bhishma’s feet and said, “Please don’t bless us!” Bhishma asked, “Why?” Yudhisthira replied, “You blessed us victory, yet we are losing. Your arrows are destroying our army. Please take back your blessings!” Bhishma asked as to who suggested this. Yudhisthira innocently replied, “It was Krishna’s idea!” Bhishma could sense the subtle trick of Krishna! Bhishma said, “Blessings, once given cannot be taken back. My arrows will not strike your army if there is a woman on your side.” Yudhisthira was totally confused and asked, “How can we have a woman on our side to fight this war?” Bhishma replied, “I have told you enough. Go and consult with Krishna!” (Krishna later suggests to put Shikandi in the war against Bhishma)</p>'
                            + '<p>Blessings are showered when the heart is filled with love.</p><p>One curses someone when the heart is filled with hatred!</p>' 
                            + '<p>These are like arrows. Once they are released from the bow, they can’t be recalled. Therefore, the person who blesses or curses assumes a very great responsibility! King Parikshith was cursed that he would die of a snake bit in seven days. He then went to sage Suka to spend his last days in a proper way so that he could get liberation. Sage Suka narrated the life story of Krishna to Parikshith which is well known as Srimad Bhagavatam.</p>',
-                       author: 'Swami T',
+                       source : { author: '', location: ''}, author: 'Swami T',
                        seriesId: 'Blessings(Mahabharat)',
                        seq: '2',
                        img: root + '/images/dwarkamai_1.jpg'
@@ -420,7 +420,7 @@ angular.module('nectar_words_app')
                        title: 'Seeking blessings from elders',
                        content: '<p>Moments before the Mahabharatha war was about to begin, Yudhisthira got down from his chariot, walked to the Kaurava’s side and fell at Bhishma’s feet to seek his blessings. Bhishma blessed him by saying, “Let there be victory on your side!” When Yudhisthira walked away, Duryodhana, who was in the chariot next to Bhishma, scolded him by saying, “What is this? You bless him with victory. I am stuck with people like you!” Bhishma calmly replied to Duryodhana, “If you had sought Yudhisthira’s blessings, he would have also blessed you with victory. If someone comes and falls at your feet, you naturally touch his head and bless him. Only people with ego like you cannot bless another person!”</p>'
                        +'<p>When you seek blessings from elders, you drop your ego momentarily and surrender at the other person’s feet. The other person also drops his ego momentarily and blesses you whole-heartedly. In this process, both mutually reap the benefit. People filled with ego walk away when someone wants to touch their feet</p>',
-                        author: 'Swami T',
+                        source : { author: '', location: ''}, author: 'Swami T',
                        seriesId: 'Blessings(Mahabharat)',
                        seq: '1',
                        img: root + '/images/sai_unplugged.jpg'
@@ -429,7 +429,7 @@ angular.module('nectar_words_app')
                        postDate: new Date('May 13 2016 3:30 AM'),
                        title: 'Baba’s promise',
                        content: 'I have never neglected My devotees. I am the slave of My devotees. I have always stood by them and longed for their love. If you listen to me carefully, you will benefit. Sitting in this masjid, I never speak the untruth.',
-                       author: 'shirdi Sai Baba',
+                       source : { author: '', location: ''}, author: 'shirdi Sai Baba',
                        seriesId: '-1',
                        seq: '-1',
                        img: root + '/images/dwarkamai_1.jpg'
@@ -438,7 +438,7 @@ angular.module('nectar_words_app')
                        postDate: new Date('May 12 2016 3:30 AM'),
                        title: 'Stages of Bhakthi',
                        content: 'Like the body which passes through childhood, boyhood, adolescence, middle age and old age, Bhakthi too has stages in its growth. The tender fruit of Bhakthi is called Love, the grown one is Devotion and the ripe fruit is Surrender.',
-                       author: '-Gems of Wisdom from Sri Sathya Sai Baba, p305',
+                       source : { author: '', location: ''}, author: '-Gems of Wisdom from Sri Sathya Sai Baba, p305',
                        seriesId: 'Bhakti (Gems of Wisdom)',
                        seq: 2,
                        img: root + '/images/dwarkamai_1.jpg'
@@ -447,7 +447,7 @@ angular.module('nectar_words_app')
                        postDate: new Date('May 11 2016 2016 5:30 AM'),
                        title: 'It is not easy to become a Bhaktha',
                        content: 'Bhakthi is very difficult to acquire. Do not think it is easy to become a Bhaktha! As a matter of fact, it is even more difficult than Jnana (the path of knowledge). Bhakthi means full surrender and full contentment whatever may happen.',
-                       author: '-Gems of Wisdom from Sri Sathya Sai Baba, p309',
+                       source : { author: '', location: ''}, author: '-Gems of Wisdom from Sri Sathya Sai Baba, p309',
                        seriesId: 'Bhakti (Gems of Wisdom)',
                        seq: 1,
                        img: root + '/images/sai_1221_1.jpg'
@@ -463,7 +463,7 @@ angular.module('nectar_words_app')
                             + '<p><u>Life: Sri Ramanujacharya</u>(1027-1147A.D) was a proponent of Vishistadvaita Philosophy (qualified Non-dualism) was born in Sri Perambudur, a village near Chennai. Ramanuja was very liberal in his outlook. He admitted even lower caste people (Harijans) to enter the temple of Tiru Narayana at Melkote in Karnataka state. He hugged even the downtrodden to his bosom. He wrote a commentary on Brahma Sutras and three books on Vedanta- Essence of Vedanta, A Resume of Vedanta and Light of Vedanta.'
                             + '<br/><u>His message:</u>According to Vishistadvaita, God has attributes, which are real and permanent, but subject to His control. Jeevas (individual souls) always remain distinct from Him both in bondage and in liberation. In bondage, Jeeva is one with the matter; in liberation it is one with God, without its individuality being lost in either of these cases.</p>'
                             ,
-                       author: '– Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
+                       source : { author: '', location: ''}, author: '– Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
                        seriesId: '-1',
                        seq: '-1',
                        img: root + '/images/sai_unplugged.jpg'
@@ -472,7 +472,7 @@ angular.module('nectar_words_app')
                        postDate: new Date('May 09 2016 3:30 AM'),
                        title: 'The simplest Sadhana',
                        content: 'Let no one suffer even the slightest pain as a result of your thought, word or actions. Let this be your simplest Sadhana.',
-                       author: '– Gems of Wisdom from Sri Sathya Sai Baba, p298.',
+                       source : { author: '', location: ''}, author: '– Gems of Wisdom from Sri Sathya Sai Baba, p298.',
                        seriesId: '-1',
                        seq: '-1',
                        img: root + '/images/sai_unplugged.jpg'
@@ -489,7 +489,7 @@ angular.module('nectar_words_app')
                           + '<br />Devaki in her previous birth was a very pious woman and always thinking of Lord Narayana. After many years of her prayers, Lord Narayana appeared before her and asked what she wanted. She could have asked for Moksha (Liberation) then and there. However, since she was always thinking of Narayana, her selfish needs did not surface to her mind. She felt that her body should be useful to humanity. So, she asked Lord Narayana, “Please give me the boon so that you will be born in my womb”. Lord Narayana granted her boon saying that in her next birth He will be born to her. She thought that she could love the Lord even more because as a baby, she could nurse Him, fondle Him with love, feed Him, bathe Him, clothe Him and play with Him.'
                           + '<br /> As destined, baby Krishna was born to Devaki and Vasudeva in the prison, in the early morning hours. As instructed by the Lord, the baby had to be transported to Gokul and placed beside Yashoda, before dawn. Devaki did not get to a chance to fondle baby Krishna and Yashoda had the great fortune of bringing up Krishna. As you can see, the Lord gave her the boon exactly as she requested: “Please give me the boon so that you will be born in my womb”. <br/>–Story as narrated by Sri Sathya Sai Baba'
                          ,
-                         author: '- Various',
+                         source : { author: '', location: ''}, author: '- Various',
                          seriesId: '-1',
                          seq: '-1',
                          img: root + '/images/sai_1221_1.jpg'
@@ -498,7 +498,7 @@ angular.module('nectar_words_app')
                          postDate: new Date('May 07 2016 3:30 AM'),
                          title: 'When will I see the results of Sadhana?',
                          content: 'No tree will yield fruits the moment you plant the seedlings in your backyard. To reach that stage, you have to follow carefully without break, all the preparatory procedures. No one can acquire the spiritual fruit without vigilance and steadfastness.',
-                         author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, p89',
+                         source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba in Sadhana-The Inward Path, p89',
                          seriesId: 'Sadhana -2',
                          seq: '3',
                          img: root + '/images/dwarkamai_1.jpg'
@@ -507,7 +507,7 @@ angular.module('nectar_words_app')
                          postDate: new Date('May 04 2016 3:30 AM'),
                          title: 'How does Self reveal Itself?',
                          content: 'The Self is not attained through discourses, not through intellectual enquiry, not through much learning.  It is gained only by him who longs forIt, whole-heartedly. For such a one, the Self reveals Its own nature.<br/> – Mundaka Upanishad, verse 3.2.3.<br/><br/>The Self is always of the nature of one’s innermost being; it has not to be gained from anywhere else. Only ignorance veils it. True longing of the heart dispels that ignorance and then the Self, which was always there, reveals itself.<br/> - Swami Sarvananda in Mundaka Upanishad, p70.',
-                         author: 'Various',
+                         source : { author: '', location: ''}, author: 'Various',
                          seriesId: '-1',
                          seq: '-1',
                          img: root + '/images/sai_unplugged.jpg'
@@ -516,7 +516,7 @@ angular.module('nectar_words_app')
                          postDate: new Date('May 06 2016 3:30 AM'),
                          title: 'I have a job. No time for Sadhana!',
                          content: 'Everyone says, “I am too busy with my job. I have no time for Sadhana.” The Sanskrit word ‘Udyogam’ is commonly understood as employment in some job, something worth doing. No. It means ud (higher) yogam (spiritual discipline), a sadhana which has assumed the status of a job. All jobs which you take up are udyogas - higher spiritual disciplines which stands out in man (Udyogam Purusha Lakshanam). All jobs are meant for higher eternal values in man (parama purushartha). Your daily living (nithya jeevitham) must be transformed into live prayers and live Sadhana. Of the many billions of living beings, man alone has the privilege of being entitled to examine the Truth and merge into the bliss of Self-Realization. Do not squander away the time allotted to you in this life',
-                         author: ' -Sri Sathya Sai Baba in Sadhana-The Inward Path, pp69-70',
+                         source : { author: '', location: ''}, author: ' -Sri Sathya Sai Baba in Sadhana-The Inward Path, pp69-70',
                          seriesId: 'Sadhana -2',
                          seq: '2',
                          img: root + '/images/dwarkamai_1.jpg'
@@ -525,7 +525,7 @@ angular.module('nectar_words_app')
                          postDate: new Date('May 05 2016 3:30 AM'),
                          title: 'Sadhana must start very early',
                          content: 'When the mind is drifting from one thing to the other, how can chanting of ‘Om, Om’ by your vocal organs give you liberation? The senses have to be curbed, thoughts have to be one pointed and the glory of the Lord has to be apprehended.  That is why the Lord advised that from birth to death you must be engaged in search for Truth. Instead, you postpone Sadhana (spiritual practice) until the last moment. It is like the student who turns over the pages of his text book for the first time, just before he enters the examination hall! The student feels that he has before him one full year and he neglects to learn from the teacher, from the lecture notes and from books. Now can anything enter his brain when he opens the pages of his book that very morning? It will only add to his despair! ',
-                         author: '-Sri Sathya Sai Baba in Sadhana-The Inward Path, p89',
+                         source : { author: '', location: ''}, author: '-Sri Sathya Sai Baba in Sadhana-The Inward Path, p89',
                          seriesId: 'Sadhana -2',
                          seq: '1',
                          img: root + '/images/dwarkamai_1.jpg'
@@ -534,7 +534,7 @@ angular.module('nectar_words_app')
                          postDate: new Date('May 03 2016 2016 5:30 AM'),
                          title: 'The Lord is nearest to you',
                          content: 'The Lord is nearest to you. Slide ajar the door of delusion; part the curtain if ignorance; open the closed eye; He is right there before you! The fog of sensual pleasure is hiding Him from you. Turn on the inner light; the darkness disappears and He becomes visible.',
-                         author: '-Sri Sathya Sai Baba in Sadhana-The Inward Path, p14',
+                         source : { author: '', location: ''}, author: '-Sri Sathya Sai Baba in Sadhana-The Inward Path, p14',
                          seriesId: '-1',
                          seq: '-1',
                          img: root + '/images/sai_1221_1.jpg'
@@ -543,7 +543,7 @@ angular.module('nectar_words_app')
                          postDate: new Date('May 02 2016 3:30 AM'),
                          title: 'Proper way to chant God’s name',
                          content: 'Many people know the efficacy of chanting the Divine name of God. As narrated before, by hearing the name of Rama, the parrot had next birth as calf and the calf as prince. (See TFD 1761) Many people chant ‘Sai Ram’, ‘Sai Ram’ constantly, yet there is no transformation in them? It is not enough if you repeat the Name of the Lord. The tape recorder can also repeat the Name of the Lord. So, we should not chant the Name of the Lord mechanically. We should do it with full awareness. Everything should come out of the heart, not merely out of the lips. We should imprint the divine feelings in the heart and chant the Name of the Lord',
-                         author: '– Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
+                         source : { author: '', location: ''}, author: '– Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
                          seriesId: '-1',
                          seq: '-1',
                          img: root + '/images/sai_unplugged.jpg'
@@ -552,7 +552,7 @@ angular.module('nectar_words_app')
                          postDate: new Date('May 01 2016 3:30 AM'),
                          title: 'Rama in Threta and Krishna in Dwapara Yuga?',
                          content: 'There are four Yugas (eons): Satya, Threta, Dwapara and Kali.  Some confusion may arise in devotees’ minds now. Rama was before Krishna. Yet, Rama was in Threta Yuga (referring to third) and Krishna was in Dwapara Yuga (referring to second). Is there a mistake? No. The Yugas are based on the strength of Dharma (righteousness). Dharma is depicted as a four legged animal (like a cow for example). It rests all its four legs on the earth when there is only pure Dharma. When the Dharma declines slightly, it lifts one leg and three legs are on the earth. This is Threta Yuga because of three legs are on the earth. When Dharma declines further, two legs are up and only two legs are on the earth. This is Dwapara Yuga. In Kali Yuga (the present Yuga), only one leg is down and three are up and Dharama is in its last (lost!) legs',
-                         author: '– Discourses from Sri Sathya Sai Baba (slightly edited and summarized)',
+                         source : { author: '', location: ''}, author: '– Discourses from Sri Sathya Sai Baba (slightly edited and summarized)',
                          seriesId: '-1',
                          seq: '-1',
                          img: root + '/images/sai_unplugged.jpg'
@@ -565,7 +565,7 @@ angular.module('nectar_words_app')
                     + '<br /><br />Then, Krishna called Duryodhana and said to him, “Duryodhana! A great task is to be performed. For that, a noble person is required who is pure, kind hearted and virtuous. Can you bring such a person?”'
                     + '<br /><br />Both of them agreed to perform the tasks assigned to them and went in different directions. After some time, Yudhishthira came back and said most humbly to Krishna, “Oh, Lord! There is no wicked person in our kingdom. I am the only person who has some wickedness. Please make use of me.” Sometime later, Duryodhana also came back and said to Krishna, “Krishna! A completely noble person is nowhere to be seen in this kingdom. I thinkI am the only such person. Please make use of me.”'
                      + '<br /><br />In the egoistic outlook of Duryodhana, all appeared to be wicked. In the humble nature of Yudhishthira, all appeared to be good. Therefore, whatever is the color of the glasses that you wear, everything will appear to you of that color. If you vision is evil, everything will appear evil to you. Yudhishthira was an epitome of virtues. Therefore, everyone appeared noble and good to him. ',
-                    author: ' Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
+                    source : { author: '', location: ''}, author: ' Discourse by Sri Sathya Sai Baba in Kodaikanal, April 4th, 1993.',
       seriesId: '-1',
       seq: '-1',
       img: root + '/images/sai_1221_1.jpg'
@@ -574,7 +574,7 @@ angular.module('nectar_words_app')
                     postDate: new Date('April 29 2016 3:30 AM'),
                     title: 'Why use foul words when you have nice words?',
                     content: 'To use fowl and bitter words, when kind words are at hand, is like going after unripe fruits and eating them when a tree is fully laden with sweet ripe fruits',
-                    author: 'Thiruvalluvar',
+                    source : { author: '', location: ''}, author: 'Thiruvalluvar',
                     seriesId: '-1',
                     seq: '-1',
                     img: root + '/images/dwarkamai_1.jpg'
@@ -583,7 +583,7 @@ angular.module('nectar_words_app')
                     postDate: new Date('April 28 2016 3:30 AM'),
                     title: 'Effect of using  foul words',
                     content: 'A tank full of water gets quickly emptied through a small sluice. Similarly, your accumulated spiritual merits will diminish very quickly with the use of one foul word. Therefore, there is no greater penance than integrating one’s heart and word.',
-                    author: 'Malayala Swami. Taken from Sant Darshan, p52.',
+                    source : { author: '', location: ''}, author: 'Malayala Swami. Taken from Sant Darshan, p52.',
                     seriesId: '-1',
                     seq: '-1',
                     img: root + '/images/sai_unplugged.jpg'
@@ -594,7 +594,7 @@ angular.module('nectar_words_app')
                     content: '<strong>Devotee:</strong><br /> What is the use of being in a holy company?'
                              + '<br/><br /><strong>Sri Ramakrishna:</strong><br /> It begets yearning for God. It begets love of God. By constantly being in the company of holy men, the soul becomes restless for God. Nothing whatsoever is achieved in spiritual life without yearning. This yearning is like the state of man who has someone seriously ill in the family. His mind is in a state of perpetual restlessness, thinking how the sick person can be cured. Or, one should feel a yearning for God like the yearning of a man who has lost his job and is wandering from office to office looking for a job. If he is sent away from a certain place which has no vacancy, he goes there again next day and inquires, “Is there any vacancy today?”'
                              + '<br /><br />It is like constantly seeking God.',
-                    author: 'Sayings of Sri Ramakrishna taken from Sant Darshan, p40',
+                    source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna taken from Sant Darshan, p40',
                     seriesId: '-1',
                     seq: '-1',
                     img: root + '/images/sai_1221_1.jpg'
@@ -603,7 +603,7 @@ angular.module('nectar_words_app')
                     postDate: new Date('April 26 2016 3:30 AM'),
                     title: 'Keep the right company',
                     content: 'If you keep fine tea bags next to a bottle of heeng (asafoetida), over time, the tea will smell of heeng and becomes unusable. However, if you keep the same tea bags next to freshly plucked Jasmine flowers, it acquires the Jasmine flavor and the tea is still usable. So, be careful of the company you keep',
-                    author: ' Swami Thiruchitrambalam (Swami T for short)',
+                    source : { author: '', location: ''}, author: ' Swami Thiruchitrambalam (Swami T for short)',
                     seriesId: '-1',
                     seq: '-1',
                     img: root + '/images/dwarkamai_1.jpg'
@@ -629,7 +629,7 @@ angular.module('nectar_words_app')
                     + '<br/>To hold you in my loving arms and to cast away your fears.'
                     + '<br/>&nbsp;&nbsp;Don’t miss Me, I have not gone away, there is no place for Me to go,'
                     + '<br/>Just look inside your peaceful heart- My presence you will surely know. ',
-                    author: ' – Sri Sathya Sai Baba, April 2, 1984',
+                    source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba, April 2, 1984',
                     seriesId: '-1',
                     seq: '-1',
                     img: root + '/images/sai_1221_1.jpg'
@@ -638,7 +638,7 @@ angular.module('nectar_words_app')
                     postDate: new Date('April 24 2016 3:30 AM'),
                     title: 'True penance',
                     content: 'To emaciate one’s body with fasts and the like is not true penance. So long as evil passions persist in man, all external rituals and ordeals are useless. The two greatest impediments to spiritual progress are woman and wealth. ',
-                    author: 'Sant Eknath. Taken from Sant Darshan, p27',
+                    source : { author: '', location: ''}, author: 'Sant Eknath. Taken from Sant Darshan, p27',
                     seriesId: '-1',
                     seq: '-1',
                     img: root + '/images/sai_unplugged.jpg'
@@ -647,7 +647,7 @@ angular.module('nectar_words_app')
                     postDate: new Date('April 23 2016 3:30 AM'),
                     title: 'Purify your inner self',
                     content: 'If you smear your face with lamp-soot and go on cleaning the mirror in front, can you get your face cleaned? One, who doesn’t cleanse his habits, practices and actions but merely performs worship and prayer, cannot purify one’s inner self. Without purity of action, one cannot attain Self-knowledge' , 
-                    author: 'Malayala Swami taken from Sant Darshan, p52',
+                    source : { author: '', location: ''}, author: 'Malayala Swami taken from Sant Darshan, p52',
                     seriesId: '-1',
                     seq: '-1',
                     img: root + '/images/sai_unplugged.jpg'
@@ -657,7 +657,7 @@ angular.module('nectar_words_app')
                       postDate: new Date('April 08 2016 3:00 AM'),
                       title: 'repetition of Ramayana and Ramnavmi',
                       content: 'This week, the posts of Ramayan and Ramnavmi have been repeated...',
-                      author: '',
+                      source : { author: '', location: ''}, author: '',
                       seriesId: '-10',
                       seq: '-1',
                       img: root + '/images/dwarkamai_1.jpg'
@@ -666,7 +666,7 @@ angular.module('nectar_words_app')
                       postDate: new Date('April 22 2016 3:30 AM'),
                       title: ' Attitude is in your look',
                       content: 'To all women, every man except her husband should be her son. To all men, every woman except his own wife should be his mother. When I look around me and see what you call gallantry, my soul is filled with disgust! Not until you learn to ignore this evil looks and to meet on a common ground of humanity, will men and women develop spiritually.',
-                      author: ' – Swami Vivekananda in Complete Works, V(5), p 412.',
+                      source : { author: '', location: ''}, author: ' – Swami Vivekananda in Complete Works, V(5), p 412.',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/dwarkamai_1.jpg'
@@ -676,7 +676,7 @@ angular.module('nectar_words_app')
                       title: 'Similarities between snake and man',
                       content: 'The sound of a manthra is as valuable as its meaning. Even a poisonous cobra can be calmed by music. Sound (naadam) has that allaying property. The child in the cradle stops wailing as soon as the lullaby is sung; it may not carry any meaning. It may be a nonsensical rhyme or just a jingle. But, it calms, soothes the nerves and induces sleep.'
                       + '<br/>&nbsp;In the case of Gayathri manthra, the meaning is too easy and profound. It does not ask for mercy or pardon; it asks for a clear intellect so that the Truth may be reflected.',
-                        author: ' – Excerpts from Sri Sathya Sai Baba’s discourses',
+                        source : { author: '', location: ''}, author: ' – Excerpts from Sri Sathya Sai Baba’s discourses',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/sai_unplugged.jpg'
@@ -685,7 +685,7 @@ angular.module('nectar_words_app')
                       postDate: new Date('April 19 2016 3:30 AM'),
                       title: ' Repetition of a Manthra',
                       content: 'Spiritual aspirants would benefit more if they repeat the Panchakshari (Nama Shivaaya) or Ashtakshari (Namo Narayanaya) with the Pranava (Om) added in the beginning. When they have made sufficient progress, they can give up even the words and concentrate on the form of the Lord that is depicted through the manthra leading to silence. That is why scriptures say, “Brahman is Silence, the absence of Sound.”',
-                      author: ' – Sri Sathya Sai Baba in Sadhana-The inward path, pp83-84',
+                      source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba in Sadhana-The inward path, pp83-84',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/sai_unplugged.jpg'
@@ -694,7 +694,7 @@ angular.module('nectar_words_app')
                       postDate: new Date('April 18 2016 3:30 AM'),
                       title: 'Message in offering a flower to God',
                       content: 'Consider a rose plant which has leaves, thorns, branches and flowers. The ability to distinguish between thorns, leaves, branches and flowers is called discrimination. Focusing  the attention on the flower alone is called concentration. Once you are able to locate the flower and concentrate on it, you can pluck the flower without touching the thorns. Once you have plucked the flower, there is no connection whatsoever between the flower in your hand and the thorns, leaves and branches of the plant. The separation of the flower from the other parts of the plant is called contemplation.  You will take this flower and offer it to God. After you have offered the flower to the God, there is no connection between the plant, the branches, the hand and even the flower. This offering, where everything has disappeared and God alone exits is called meditation.',
-                      author: ' – Sri Sathya Sai Baba in Sadhana-The inward path, pp93-94',
+                      source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba in Sadhana-The inward path, pp93-94',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/sai_1221_1.jpg'
@@ -704,7 +704,7 @@ angular.module('nectar_words_app')
                       title: ' External cleanliness only?',
                       content: 'When your clothes get dirty, you change them because you are ashamed to appear in dirty garments. If your house is dirty, you clean it so that visitors do not get a bad impression. But when your minds and your hearts are polluted, you do not feel ashamed. Isn’t it strange that you are so concerned about the cleanliness of your clothes and homes, but not concerned about the purity of your hearts and minds which affects your entire life?'
                         + '<br/>&nbsp;&nbsp;Once a friend of Michelangelo asked him, “Why are working so hard, chiseling this huge rock? Why don’t you go home and get some rest?” Michelangelo replied, “I want to bring out the living Divinity that is embedded in this lifeless stone.” If that sculptor could create out of an inanimate piece of stone, a living image of God, cannot human beings vibrant with life bring out the living Divinity that resides within them?',
-                      author: ' – Sri Sathya Sai Baba, April 2, 1984',
+                      source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba, April 2, 1984',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/sai_unplugged.jpg'
@@ -723,7 +723,7 @@ angular.module('nectar_words_app')
 + '<li> The Bridge is built over the Ocean of Delusion. The three Rakshasa chiefs are personifications of the Rajasic (Ravana), Thamasic (Kumbhakarna) and the Sathwic qualities (Vibhishana). '
 + '<li>Sita is Brahma jnana or the Awareness of the Universal Absolute, which the Individual must acquire and regain undergoing travails in the crucible of Life.'
 + '<li> Make your heart pure and strong, contemplating the grandeur of the Ramayana. Be established in the faith that Rama is the Reality of your existence.',
-                      author: ' – Sri Sathya Sai Baba in Rama Katha Rasa Vahini, V(1)',
+                      source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba in Rama Katha Rasa Vahini, V(1)',
                       seriesId: 'Ramayan and Ramnavmi',
                       seq: '2',
                       img: root + '/images/sai_1221_1.jpg'
@@ -740,7 +740,7 @@ angular.module('nectar_words_app')
 + '<br/>Narada went to the parrot and said, “Rama!” The parrot repeated, “Rama!” and fell down dead. Narada immediately rushed to Vaikunta and reported this to Narayana. Narayana said, “Narada, there is a village close to this forest. There a cow that gave birth to a calf. Go and say ‘Rama’ to the calf and tell me what happens.” Narada rushed to the village with enthusiasm. There, a poor brahmin owned this cow and was selling the milk to make a living. Narada went to the calf and said, “Rama!” The calf on hearing ‘Rama’, fell dead. The poor Brahmin got very angry with Narada for having destroyed his only income from the milk. He threw Narada out of his house.'
 + '<br/>Narada immediately rushed to Vaikunta and reported this incident to Narayana. Narayana with a gentle smile on His face told Narada, “There is a city next to this village. A king of that country lives in that city. The queen delivered a baby boy now. Go and tell ‘Rama!’ to this baby and report back.” Narada went to the city reluctantly because he was afraid that he might bring death to the baby. With hesitation, he approached the king and the king was extremely happy to see sage Narada visit his palace. The king gave a grand welcome to Narada and took him to his chambers to show the new born baby. Narada looked at the baby boy.  He was very beautiful and chubby. Narada touched the baby boy and blessed him. Then he said, “Rama!” and closed his eyes being afraid of the outcome. He heard the voice, “O revered sage Narada! How blessed I am! You have taken me through three births by simply chanting name ‘Rama’ in my ears. Now that same mantra has given me the power to speak. I am forever grateful to you for liberating me!” Narada opened his eyes and found that the baby was actually saying all these words with a smile on its face.'
 + '<br/><br/>Narada immediately flew to Vaikunta and told Narayana, “O Lord, I don’t know how to thank you for exposing me to the great mahima of Rama mantra. The people of Bhuloka are indeed are very realized, blessed and fortunate! But, I have one question. Why did you kill the calf and created a problem for the Brahmin family who was dependent on the cow for his livelihood?” Lord Narayana smilingly said, “He was all the time thinking of his cow and its milk for his livelihood. He never thought of Me! So, I have to take it away from him so that he will turn his attention to Me!” – Story as narrated by Sri Sathya Sai Baba',
-                      author: '',
+                      source : { author: '', location: ''}, author: '',
                       seriesId: 'Ramayan and Ramnavmi',
                       seq: '1',
                       img: root + '/images/sai_1221_1.jpg'
@@ -751,7 +751,7 @@ angular.module('nectar_words_app')
                       title: 'Festivals, Multiple Sayings and Sundara Kaandam',
                       content: 'This page has a lot of content - <li> Wishes for Ram Navmi</li><li> Ramana Maharshis Mahasamadhi day</li><li>Wishes for Tamil New Year</li><li>Regular Sayings</li><li>Sundara Kaandam narrations</li>' +
                           'Will require lot of scrolling, so please bear',
-                      author: '',
+                      source : { author: '', location: ''}, author: '',
                       seriesId: '-10',
                       seq: '-1',
                       img: root + '/images/dwarkamai_1.jpg'
@@ -768,7 +768,7 @@ angular.module('nectar_words_app')
 + '<br/>Narada went to the parrot and said, “Rama!” The parrot repeated, “Rama!” and fell down dead. Narada immediately rushed to Vaikunta and reported this to Narayana. Narayana said, “Narada, there is a village close to this forest. There a cow that gave birth to a calf. Go and say ‘Rama’ to the calf and tell me what happens.” Narada rushed to the village with enthusiasm. There, a poor brahmin owned this cow and was selling the milk to make a living. Narada went to the calf and said, “Rama!” The calf on hearing ‘Rama’, fell dead. The poor Brahmin got very angry with Narada for having destroyed his only income from the milk. He threw Narada out of his house.'
 + '<br/>Narada immediately rushed to Vaikunta and reported this incident to Narayana. Narayana with a gentle smile on His face told Narada, “There is a city next to this village. A king of that country lives in that city. The queen delivered a baby boy now. Go and tell ‘Rama!’ to this baby and report back.” Narada went to the city reluctantly because he was afraid that he might bring death to the baby. With hesitation, he approached the king and the king was extremely happy to see sage Narada visit his palace. The king gave a grand welcome to Narada and took him to his chambers to show the new born baby. Narada looked at the baby boy.  He was very beautiful and chubby. Narada touched the baby boy and blessed him. Then he said, “Rama!” and closed his eyes being afraid of the outcome. He heard the voice, “O revered sage Narada! How blessed I am! You have taken me through three births by simply chanting name ‘Rama’ in my ears. Now that same mantra has given me the power to speak. I am forever grateful to you for liberating me!” Narada opened his eyes and found that the baby was actually saying all these words with a smile on its face.'
 + '<br/><br/>Narada immediately flew to Vaikunta and told Narayana, “O Lord, I don’t know how to thank you for exposing me to the great mahima of Rama mantra. The people of Bhuloka are indeed are very realized, blessed and fortunate! But, I have one question. Why did you kill the calf and created a problem for the Brahmin family who was dependent on the cow for his livelihood?” Lord Narayana smilingly said, “He was all the time thinking of his cow and its milk for his livelihood. He never thought of Me! So, I have to take it away from him so that he will turn his attention to Me!” – Story as narrated by Sri Sathya Sai Baba',
-                      author: '',
+                      source : { author: '', location: ''}, author: '',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/dwarkamai_1.jpg'
@@ -786,7 +786,7 @@ angular.module('nectar_words_app')
 + '<i>On the evening of 14 April 1950, we were massaging Ramana\'s body. At about 5 o\'clock, he asked us to help him to sit up. Precisely at that moment devotees started chanting \'Arunachala Siva, Arunachala Siva\'. When Ramana heard this, his face lit up with radiant joy. Tears began to flow from his eyes and continued to flow for a long time. I was wiping them from time to time. I was also giving him spoonful of water boiled with ginger. Ramana’s breathing became gradually slower and slower and at 8:47 p.m. it subsided quietly.<br/>&nbsp;&nbsp; –Swami Satyananda' 
 +  '<br/><br/></i>Henri Cartier- Bresson, the French photographer, who had been staying at the ashram for a fortnight prior to Ramana’s  passing away, recounted the event:<i>'
 +  '<br/>&nbsp;It is a most astonishing experience. I was in the open space in front of my house, when my friends drew my attention to the sky, where I saw a vividly-luminous shooting star with a luminous tail, unlike any shooting star I had before seen, coming from the South, moving slowly across the sky and, reaching the top of Arunachala, disappeared behind it. Because of its singularity we all guessed its import and immediately looked at our watches – it was 8:47 – and then raced to the Ashram only to find that our premonition had been only too sadly true: the Master had passed into Nirvana at that very minute.</i></p>',
-                      author: '',
+                      source : { author: '', location: ''}, author: '',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/dwarkamai_1.jpg'
@@ -796,7 +796,7 @@ angular.module('nectar_words_app')
                       title: 'Tamil New Year’s Day',
                       content: 'Sai Amruta Vani wishes a very Happy and Prosperous New Year for all those who celebrate Tamil New Year/Vishu today.<br/>' 
                       + 'God is present in everyone. He resides in every heart. So, do not confine God to a temple, a mosque or a church. Wherever there is a human being, there is God. God takes the form of a human (Daivam manusha rupena). You forget this fact and indulge in criticizing others. God is present in all. Therefore, if you criticize others, you criticize God. Whomever you salute, it reaches God and whoever you insult also reaches God! Right from this moment, embark on a new life giving up bad thoughts and evil qualities and purify your heart. Let your thoughts, words and deeds be sacred. Only then, your life will be blissful.',
-                      author: 'Sri Sathya Sai Baba, April 13, 2002.',
+                      source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba, April 13, 2002.',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/dwarkamai_1.jpg'
@@ -813,7 +813,7 @@ angular.module('nectar_words_app')
  + '<h4>You may not know who is an Avatar(April 12 2016)</h4>' +
  'The elephant has two sets of ivory teeth, the tusks visible externally and the grinders are inside the mouth. Similarly, Avatars like Sri Krishna have an external manifestation and behave like common men in the view of all, while internally they dwell in transcendental peace far beyond the influence of Karma.'
  + '<br/><h5>– Sayings of Sri Ramakrishna, p192</h5>',
-                      author: '',
+                      source : { author: '', location: ''}, author: '',
                       seriesId: '-1',
                       seq: '-1',
                       img: root + '/images/dwarkamai_1.jpg'
@@ -831,7 +831,7 @@ angular.module('nectar_words_app')
 + '<br/>&nbsp;&nbsp;As soon as Hanuman touched ground, they asked him about what happened in Lanka, about Sita and her welfare, and circumstances and conditions of Lanka. Hanuman told them all they wanted, with high enthusiasm, and left for where Rama was. Hanuman said, “Oh Lord of my Life. It is impossible to describe. Sita is reduced to bones, for she does not take food nor does she sleep. She is counting every minute praying for your Darshan. She has no other thought than the recitation of your name. She wanted me to inform you of her countless prostrations. She remembered Lakshmana often and shed profuse tears. The sharp verbal dagger thrusts that Ravana administers every morning and evening when he comes to her and speaks to her, I have heard with my own ears. Mother does not listen to his prattle in the least. She is ever melting away in the agony of separation and in thoughts centered on you.” “Save Sita this very moment!” cried Hanuman falling at the feet of Rama.'
 + '<br/>&nbsp;&nbsp;Hearing these words, Lakshmana rose in vengeful anger and wept at Sita’s condition. The picture of Sita in Lanka burnt his inner being. He said at last, “Brother! Do not delay. Save my sister-in-law!” Rama replied with a smile, “Lakshmana! Do not hurry. Bide your time. There is a time when each step has to be taken. Do not be dejected when grief invades or exult when joy flows in.” Rama consoled him with soft and soothing words.'
 + '.<h5>  Concluded </h5>',
-                      author: 'Jai Sai Ram',
+                      source : { author: '', location: ''}, author: 'Jai Sai Ram',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 8,
                       img: root + '/images/sai_1221_1.jpg'
@@ -854,7 +854,7 @@ angular.module('nectar_words_app')
 + '<br/>&nbsp;&nbsp;When Hanuman spoke thus, in utter fearlessness, with no bounds or limits, Ravana was enraged beyond control. He rose, spouting fire and slapping his thighs in challenge he roared an order to his henchmen to kill the impertinent monkey. Everyone rushed to where Hanuman sat, bound in snake ropes. Just at that moment, Vibhishana, Ravana’s brother, entered the Hall, followed by his retinue. He prostrated before his elder brother and said, protestingly, “Master! It is not right to kill an emissary. Rajadharma will not approve the deed. Punish him in any other manner, but do not pronounce the sentence of death.” The ministers of Ravana supported this stand and declared that what he had suggested was the noblest truth. Ravana laughed in scorn at their absurd ideas of right and wrong. Still, he  climbed down and said, “Well, mutilate him and send him off.”'
 + '<br/>&nbsp;&nbsp;The ministers gathered in a group to decide on the mutilation. They came to the conclusion that monkeys are proud of their tails and would fain keep them intact long and strong. Someone suggested that the best punishment would be to wind sheets of cloth on the tail, pour oil until it soaks and drips and then set fire to the tail. This plan got unanimous acceptance. They exulted among themselves at the brilliance of the idea. “The tailless monkey will proceed to its master and bring him here for avenging the loss. Then we can witness the manliness of his master and his might.” There was a wave of whispers in the Hall.'
 + '.<h5>  to be continued ...</h5>',
-                      author: 'Jai Sai Ram',
+                      source : { author: '', location: ''}, author: 'Jai Sai Ram',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 7,
                       img: root + '/images/sai_1221_1.jpg'
@@ -871,7 +871,7 @@ angular.module('nectar_words_app')
 + '<h4>Hanuman takes leave of Sita</h4>'
 + 'But Sita was inconsolable. She had her doubts. “Hanuman, what is it that you say! Can monkey hordes fight against and destroy these Rakshasas who have mastered many a mysterious stratagem and subterfuge, and who are themselves much stronger? How can the two brothers, Rama and Lakshmana, stand up against these demons and win? Victory over the demons is an impossible dream. This can end only in my death. Rather than causing  the death of so many of you on the battlefield, I would fain breathe my last and save all your lives.” Sita was lamenting thus, while Hanuman interrupted her and said, “Mother! Do not weep. We of the monkey hordes are the bond slaves of Rama. All of us believe that Rama is our strength and our courage. We take in as our very breath the name, Rama. We have no other source of life. Therefore, even if each of these Rakshasas increases a thousand fold in deviltry, we monkeys can easily destroy them. We can win victory over them in spite of their wiles and wickedness. You are doubting the extent of our strength and skills, since we appear in our habitual forms. Let me show the Form I can assume in battle.” Hanuman rose sky-high, and stood before Sita—a mountain-peak of shining Gold. Sita was astonished at this. She said, “Hanuman! Stop. Stop. Enough! Limit yourself. If the eyes of the Rakshasas fall on you, you may not be able to return soon to Rama.” Sita protested and pleaded with him to assume his old form. Hanuman gave up the terrible form he had converted himself into, and became a quiet little monkey in no time. Hanuman fell at the feet of Sita and turned his steps away. But the plight of Sita and her anguished face were so deeply imprinted on his heart that his feet would not move away.<h5>  to be continued ...</h5>'
 ,
-                      author: 'Jai Sai Ram',
+                      source : { author: '', location: ''}, author: 'Jai Sai Ram',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 6,
                       img: root + '/images/sai_1221_1.jpg'
@@ -891,7 +891,7 @@ angular.module('nectar_words_app')
 + '&nbsp;&nbsp;Sita pleaded, “Hanuman! I do not know whether you will be back at this place or when. Please stay for a day more and delight me, by telling me about Rama and Lakshmana.” But since the demonesses gathered around in groups to carry out their separate assignments, Hanuman resumed his miniature size and hopped onto a branch of the tree.'
 + '<br/>&nbsp;&nbsp;Sita sat under the tree, ruminating on all that Hanuman had related to her. She derived delight while doing so, and she cast her eyes showering benediction on Hanuman sitting on the branch above her head. That day, she had no thirst or hunger. She did not touch the fruits and drinks that the women-guards brought for her. Her pathetic condition hurt the kind heart of Hanuman. She appeared to him as the very picture of misery. Hanuman heard the harsh and sharp pointed words used by the women-guards, and he gnashed his teeth in anger, for he could not deal with them as he wished to. Sita alone could give him orders what to do.'
 + '.<h5>  to be continued ...</h5>',
-                      author: 'Jai Sai Ram',
+                      source : { author: '', location: ''}, author: 'Jai Sai Ram',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 5,
                       img: root + '/images/sai_1221_1.jpg'
@@ -911,7 +911,7 @@ angular.module('nectar_words_app')
 + '<h4>Sita in jubilant mood</h4>'
 + 'There she saw a small monkey sitting on a branch of the tree and reciting in deep devotion, “Rama, Rama,” continuously. In a flash, she remembered the incidents in Thrijata’s (a rakshasi) dream as related by her. “Ah! Good days seem to be fast approaching. For ten long months, I have not heard the name of Rama pronounced in this Lanka. This day, I am able to see a living being reciting the holy name. I also received the dearly loved ring of my Lord,” she exulted. She could not keep her joyful excitement down. Sita, who had not talked to any stranger for long, looked at the monkey-form and addressed it thus: “Oh monkey! Who are you? Wherefrom is this ring?” She could not put full trust in the monkey, for, she had been deceived for months by tricks of impersonation. She interrogated the monkey in various ways in order to verify his credentials. Off and on, she would ask the monkey about the welfare of Rama and at the very thought of His being alone, in the forest, tears would flow profusely from her eyes. Sita swung alternately between joy and grief. Hanuman watched her plight. He could not keep away from her the bond of love and loyalty that was holding him onto Rama.<h5>  to be continued ...</h5>'
 + '<br/>Jai Sai Ram',
-                      author: 'Jai Sai Ram',
+                      source : { author: '', location: ''}, author: 'Jai Sai Ram',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 4,
                       img: root + '/images/sai_1221_1.jpg'
@@ -937,7 +937,7 @@ angular.module('nectar_words_app')
 + '<br/> Though for a moment he had some doubt regarding the stranger, Vibhishana, the owner of the house, decided that, whoever he is, he surely must be honored since he was a Brahmin. So he came forward and prostrated before Hanuman. “Master! which is your native place? Where are you coming from? How could you avoid being noticed and harassed by the Rakshasas in the streets?” Vibhishana asked. He described to his guest the horrors indulged in by the Rakshasas and extolled the audacity and fearlessness of Hanuman. Hanuman replied, “I am a servant of Hari. My name is Hanuman. I have come because Rama sent me,” and he spoke thereafter of the virtues and excellences of Rama in some detail.'
 + '<br/> Hanuman noticed that while he was describing Rama, tears rolled down the cheeks of Vibhishana. “Oh, what a happy day! How great is my fortune! As soon as I rose from bed, I could hear today these glorious words which bring peace and joy,” thought Vibhishana to himself.'
 ,
-                      author: 'Jai Sai Ram',
+                      source : { author: '', location: ''}, author: 'Jai Sai Ram',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 3,
                       img: root + '/images/sai_1221_1.jpg'
@@ -961,7 +961,7 @@ angular.module('nectar_words_app')
 'Angada looked around, and looking at Hanuman, he said, “Oh Son of the Wind-God, you are the dedicated servant of Rama. Your devotion is indeed deep. You were blessed first among all of us with the Darshan of Rama. Through your intelligence, diplomacy and moral pressure, you established friendship between Rama and our ruler, Sugriva. And now, you are observing silence, when we are involved with difficulties in the execution of the mission of Rama. I find it difficult to understand the meaning of this silence.”' +
 '<h5><b>..to be continued</b></h5>'
 ,
-                      author: 'Jai Sai Ram',
+                      source : { author: '', location: ''}, author: 'Jai Sai Ram',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 2,
                       img: root + '/images/sai_1221_1.jpg'
@@ -970,7 +970,7 @@ angular.module('nectar_words_app')
                       postDate: new Date('April 08 2016 11:00 AM'),
                       title: 'Sundara Kaandam Paraayan - Prelude: Real meaning of Ugadi ',
                       content: 'You have celebrated many Ugadis, but have you given up your bad qualities? Do not limit Ugadi to merely putting on new clothes and partaking delicious food. Today, you may wear a new shirt, but how long will it remain new? Our life is like a newspaper. Once you have finished reading a newspaper, would you like to read the same newspaper again and again? You have been given this birth. Pray to God to take you across this ocean of life and death and grant you liberation. True Ugadi is the day when you give up bad qualities, fill your heart with love and take to the path of sacrifice.<br/>&nbsp;From today till Rama Navami, we will work hard to give up our bad qualities by doing Sundara Kaandam Paraayan.',
-                      author: '–Sri Sathya Sai Baba. Discourse on April 13, 2002',
+                      source : { author: '', location: ''}, author: '–Sri Sathya Sai Baba. Discourse on April 13, 2002',
                       seriesId: 'Sundara Kaandam Paraayan',
                       seq: 1,
                       img: root + '/images/sai_1221_1.jpg'
@@ -983,7 +983,7 @@ angular.module('nectar_words_app')
                  title: ' Happy Ugadi/Gudi Padwa',
                  content: 'Sai Amruta Vani wishes all its readers a very happy, healthy, prosperous and spiritual New Year –Ugadi/Gudi Padwa!<br/><br/>' + 
                      'Today is Ugadi day. It is commonly believed that this marks the beginning of the New Year. It is really the beginning of an eon (Yuga). The Lord is the beginning and the end of any Yuga. Yugadi (note the spelling), the first day of Spring and the New Year is acclaimed as the beginning of the vasantha navarathri (nine days of spring) culminating with Rama Navami, the day on which Rama was born',
-                 author: '–Sathya Sai Speaks, V(10), ch.21, p108',
+                 source : { author: '', location: ''}, author: '–Sathya Sai Speaks, V(10), ch.21, p108',
                  seriesId: '-1',
                  seq: '-1',
                  img: root + '/images/sai_1221_1.jpg'
@@ -993,7 +993,7 @@ angular.module('nectar_words_app')
                  title: 'You, the mirror and the light',
                  content: 'Can you see yourself? No, you need a mirror. Even if you have a mirror, can you see yourself in darkness? No, you need light.  If the light is behind the mirror, can you see yourself? No, the light has to shine on you first so that the light that is reflected from you when it strikes the mirror produces the image. Similarly, according to the sages, there are three things in the world. God, Nature and I. Man and everything came from God. God when seen through the mirror of Nature appears as I.  Remove the mirror; the image disappears and merges with the Original; then there is only God. Man is but the image of God. Even nature is but an appearance of God; the reality is He alone. The multitude of manifestations in the world which deludes man comes from the mirror called Maya.<br/><br/>' +
                      'When the image is conceived as distinct from you, we have dualism, Dwaitham. When it is recognized as only an unreal image, but, when given some relevance to it, because it is related to the Original, then it is called Qualified Non-dualism (Vishishta-adwaitham). When both the ‘I’ image and the mirror are recognized as illusions and dismissed as such, and the ultimate One Reality is recognized, we have Adwaitham. The search for One, without a Second is the basis of Vedanta and all spiritual practices. ',
-                 author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p64 (slightly edited and summarized)',
+                 source : { author: '', location: ''}, author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p64 (slightly edited and summarized)',
                  seriesId: '-1',
                  seq: '-1',
                  img: root + '/images/dwarkamai_1.jpg'
@@ -1002,7 +1002,7 @@ angular.module('nectar_words_app')
                  postDate: new Date('April 05 2016'),
                  title: 'Jnana, Bhakti and Karma Yoga',
                  content: 'Bhakthi is the Ganga, Vairagyam is Yamuna and Jnana is the Saraswathi in the Spiritual Triveni of rivers.  Jnanam is a through–train; you just board it; that is enough, it takes you directly to the destination. Bhakathi is a through-carriage; though it may be detached from one train and connected with another train, if you get into it, you need not worry; it is bound to take you to the destination. Karma is the ordinary train; if you board it, you have to disembark, climb in and climb out at very junction, load your luggage and unload it and do a good lot of work to reach your destination',
-                 author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p40',
+                 source : { author: '', location: ''}, author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p40',
                  seriesId: '-1',
                  seq: '-1',
                  img: root + '/images/dwarkamai_1.jpg'
@@ -1011,7 +1011,7 @@ angular.module('nectar_words_app')
                  postDate: new Date('April 04 2016'),
                  title: ' Proper use of the Japamala',
                  content: 'Leaving out the index finger, keep the other three fingers together. The index finger is considered inauspicious because it always points to the faults in others. The little finger, ring finger and the middle finger represent tamas, rajas and saathwic gunas respectively. Hold the rosary over the middle finger (saathwic finger), keeping the other three guna fingers together. This means that you are now transcending the three gunas of diverse worldly attributes and proceeding towards the knowledge of Unity. The thumb represents Brahman. Now, slowly pass each bead with the tip of the thumb towards you. When the bead passes over, the mergence with Brahman is emphasized with every bead, every breath while the tongue too repeats a mantra or name of the Lord. The Japamala is very useful for the beginners in Sadhana, but as you progress, Japa must become the very breath of your life and the Japamala should become superfluous. The safety float has to be discarded when you have learnt to swim, the crutches when you are able to walk. Always, at all times, in all places, the Lord has to be meditated upon.',
-                 author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p44-45',
+                 source : { author: '', location: ''}, author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p44-45',
                  seriesId: 'The Japmala',
                  seq: 3,
                  img: root + '/images/sai_unplugged.jpg'
@@ -1020,7 +1020,7 @@ angular.module('nectar_words_app')
                  postDate: new Date('April 03 2016'),
                  title: ' Why 108 beads in Japamala?',
                  content: 'Why 108 beads in a Japamala (rosary)? 108 is the product when 12 is multiplied 9 times. 12 is the number of the Adityas or Luminaries that illumine the objective world (Varuna, Mitra, Aryama, Bhaga, Amshuman, Dhata, Indra, Parjanya, Tvashtha, Sun-God, Pushya and Vivasvan. In each month of the year, a different Aditya shines as the Sun-God). 9 is the screen on which images appear as the basis, like the rope which appears as a snake at dusk. 9 is Brahman number, for it is always 9 however many times you multiply it. It is immutable because it always adds up to 9.  So, when you turn the beads, impress upon yourself the fact that Unity behind all the beads (the string) and there is Truth and travesty in the world, travesty attracts, distracts and deceives you; and Truth makes you free!',
-                 author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p44',
+                 source : { author: '', location: ''}, author: '– Sri Sathya Sai Baba in Sadhana – The Inward Path, p44',
                  seriesId: 'The Japmala',
                  seq: 2,
                  img: root + '/images/sai_unplugged.jpg'
@@ -1029,7 +1029,7 @@ angular.module('nectar_words_app')
                  postDate: new Date('April 02 2016'),
                  title: 'The Japmala',
                  content: 'The japamala (rosary) teaches you Unity, though it has 108 beads! If it is a sphatika mala (crystal beads) you can see the string running through each bead, the Inner Reality on which all this is strung! If the beads are not transparent, you still know that the string passes through and holds the beads together. God may not be visible but He holds the world together.',
-                 author: ' – Sri Sathya Sai Baba in Sadhana – The Inward Path, p44',
+                 source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba in Sadhana – The Inward Path, p44',
                  seriesId: 'The Japmala',
                  seq: 1,
                  img: root + '/images/sai_unplugged.jpg'

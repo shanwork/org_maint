@@ -7,33 +7,67 @@
             Q3_2016,
             Q1_Q2_2017) {
           //  var budgetStatus = {};
+          var allWeekCount = 0;
           var allWeeksSaying = [];
           // allWeeksSaying = Q1_2016.returnAllWeeksSaying();
           this.insertQuarterData = function (quarterDump) {
+              if (!$localStorage.allWeekCount) {
+                  $localStorage.allWeekCount =
+                      {
+                          complete: false,
+                          count: 0
+
+                      };
+                   
+              }
               for (var quarterElement = (quarterDump.length - 1) ; quarterElement >= 0  ; quarterElement--) {
                   allWeeksSaying.splice(0, 0, quarterDump[quarterElement]);
+                   $localStorage.allWeekCount.count = 24;
+                  
+                  
               }
           }
 
+          this.getAllData = function () {
+              Q1_2016AllWeeksSaying = Q1_2016.returnAllWeeksSaying();
+              this.insertQuarterData(Q1_2016AllWeeksSaying);
 
-          Q1_2016AllWeeksSaying = Q1_2016.returnAllWeeksSaying();
-          this.insertQuarterData(Q1_2016AllWeeksSaying);
-
-          Q2_2016AllWeeksSaying = Q2_2016.returnAllWeeksSaying();
-          this.insertQuarterData(Q2_2016AllWeeksSaying);
+              Q2_2016AllWeeksSaying = Q2_2016.returnAllWeeksSaying();
+              this.insertQuarterData(Q2_2016AllWeeksSaying);
 
 
-          Q3_2016AllWeeksSaying = Q3_2016.returnAllWeeksSaying();
-          this.insertQuarterData(Q3_2016AllWeeksSaying);
+              Q3_2016AllWeeksSaying = Q3_2016.returnAllWeeksSaying();
+              this.insertQuarterData(Q3_2016AllWeeksSaying);
 
-          Q1_Q2_2017AllWeeksSaying = Q1_Q2_2017.returnAllWeeksSaying();
-          this.insertQuarterData(Q1_Q2_2017AllWeeksSaying);
+              Q1_Q2_2017AllWeeksSaying = Q1_Q2_2017.returnAllWeeksSaying();
+              this.insertQuarterData(Q1_Q2_2017AllWeeksSaying);
+              if ($localStorage.allWeekCount)
+                  $localStorage.allWeekCount.complete = true;
+          }
+          this.getAllData();
+          this.getAuthorLists = function(sort ){
+              if (allWeeksSaying.length == 0)
+                  this.getAllData();
+              var authorLists = {
+                  allAuthorRecs: [],
+                  distinctAuthorWorks: []
+              };
+              var allSayings = this.getArchives();
+              allSayings.forEach(function (saying) {
+                  authorLists.allAuthorRecs.push(saying.author);
+              });
 
+              authorLists.allAuthorRecs.sort(function (a, b) {
+                  return a > b ;
+              });
+              return authorLists;
+          }
           var weekCount = [];
           var nectarVisitedStats = [];
           var latestStats = {};
           for (var i = 1; i <= allWeeksSaying.length; i++)
           { weekCount.push(i); }
+          console.log(weekCount.length)
           var archive = [];
           for (var weekInd = 0; weekInd < allWeeksSaying.length; weekInd++) {
               for (var dayInd = 0 ; dayInd < allWeeksSaying[weekInd].length; dayInd++) {
@@ -52,6 +86,7 @@
                   archive.push(archiveElement);
               }
           }
+         // alert()
           var narrations = [];
           narrations = archive.filter(function (obj) {
               return obj.seriesId != '-1';
@@ -61,6 +96,7 @@
               //     allWeeksSaying.splice(0, 0, Week3March2016.marchApril2016());
               return allWeeksSaying[whichWeek];
           };
+          
           this.getWeekIndices = function () {
               return weekCount;
           };

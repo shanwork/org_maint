@@ -9,7 +9,7 @@
                      postDate: new Date('April 1 2016'),
                      title: 'Fools can’t….',
                      content: 'Sage Suka said, “Fools cannot grasp the Truth. They cannot recognize Divinity and understand the power of God. They live in delusion that their petty plans will save them and that they can triumph through their own efforts. They don’t know the fact that even the smallest success can’t be won without God’s grace.” – describing that Kamsa is a fool.',
-                     author: 'Taken from Bhagavata Vahini, p229 by Sri Sathya Sai Baba.',
+                     source : { author: '', location: ''}, author: 'Taken from Bhagavata Vahini, p229 by Sri Sathya Sai Baba.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -18,7 +18,7 @@
                      postDate: new Date('March 31 2016'),
                      title: ' Sadhana will not liberate you',
                      content: 'Sadhana does not bring about liberation. It only calms and controls the rajasic and thamasic gunas. Only when the saathwic guna takes control of a man, liberation comes.',
-                     author: 'Conversations with Sathya Sai Baba, p100',
+                     source : { author: '', location: ''}, author: 'Conversations with Sathya Sai Baba, p100',
                      seriesId: 'Sadhana',
                      seq: 4,
                      img: root + '/images/sai_unplugged.jpg'
@@ -27,7 +27,7 @@
                      postDate: new Date('March 30 2016'),
                      title: '  No time for Sadhana?',
                      content: 'Of the various sadhanas, repetition of the name of the Lord (Namasmarana) is the most effective. If you don’t have the time for it, then Karma Yoga (dedicating your work to the Lord) is the next best. Even if this can’t be done, then love of God is enough. With love of God, no discipline or practice is necessary. ',
-                     author: 'Conversations with Sathya Sai Baba, p33',
+                     source : { author: '', location: ''}, author: 'Conversations with Sathya Sai Baba, p33',
                      seriesId: 'Sadhana',
                      seq: 3,
                      img: root + '/images/sai_unplugged.jpg'
@@ -36,7 +36,7 @@
                      postDate: new Date('March 29 2016'),
                      title: 'Benefits of Sadhana',
                      content: 'The conscious mind is our external mind with which we perceive the external world. The subconscious mind contains our memory patterns and all impressions of the past, due to the interaction of our senses with the external world. Beneath the subconscious mind reside the seeds of the past karmas that are yet to manifest. Through the regular practice of sadhana, it is possible to dissolve or wash off the un-manifested karmas. Sadhana is the greatest boon given to mankind by our religions. ',
-                     author: 'Subramaniya Swami in Living with Siva, pp 42-44',
+                     source : { author: '', location: ''}, author: 'Subramaniya Swami in Living with Siva, pp 42-44',
                      seriesId: 'Sadhana',
                      seq: 2,
                      img: root + '/images/sai_1221_1.jpg'
@@ -45,7 +45,7 @@
                      postDate: new Date('March 28 2016'),
                      title: 'Spiritual practice (Sadhana)',
                      content: 'Namasmarana (repetition of the Lord’s name) is the most effective sadhana (spiritual practice). Select one name and one form for smarana (repetition) and manana (contemplation). Remember with each name the glory behind the name. Namasmarana will help you escape from the clutches of anger, jealousy, hatred, malice and greed.  The best sadhana is to discover your Atmic reality and to recognize the oneness of that Atma in all others. The body is to be kept trim for this. Keep it light and bright. It is a boat which can take you across the sea of illusion. Don’t add to its weight by attaching it to worldly things and others; then, it is in danger of sinking during the journey.',
-                     author: 'Sri Sathya Sai Baba in Sadhana- The Inward Path, pp42-43',
+                     source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba in Sadhana- The Inward Path, pp42-43',
                      seriesId: 'Sadhana',
                      seq: 1,
                      img: root + '/images/sai_unplugged.jpg'
@@ -54,7 +54,7 @@
                      postDate: new Date('March 27 2016'),
                      title: ' Receiving God’s grace',
                      content: 'God’s grace is like sunlight. It is everywhere but you have to do some sadhana (spiritual practice) to acquire it. When you first begin your daily sadhana, it is likely to begin in an awkward way. Don’t be discouraged when the mind runs wild as you sit quietly and are unable to control it. Don’t be discouraged if you find that you are unable to even choose a time to sit quietly for half an hour. If you persist, soon all this will be overcome and vagaries of the mind will settle down. If you must bring the power from the Power-House to your residence to illumine your place, you have to put up poles at regular intervals and connect your house with the Power-House with cables. So too, if you must win the Grace of God, do sadhana everyday, at regular timings and connect yourself with God by the cable of Namasmarana (repetition of the Lord’s name). ',
-                     author: '– Sri Sathya Sai Baba in Sadhana- The Inward Path, p42',
+                     source : { author: '', location: ''}, author: '– Sri Sathya Sai Baba in Sadhana- The Inward Path, p42',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -63,7 +63,7 @@
                      postDate: new Date('March 26 2016'),
                      title: 'The nature of God’s grace',
                      content: 'God’s grace is like sunlight. It is everywhere but you have to do some sadhana (spiritual practice) to acquire it. Sadhana is like opening the door of your heart so that the sun may illumine it. Like the music that is broadcast over the radio, it is all around you; but you have to tune your receiver to the right wavelength so that you can hear and enjoy it.  The main consequence of grace is ‘Self-realization’ but there are other incidental benefits too, like a happy and contented life, unruffled equanimity or santhi (peace). The plantain tree has the bunch of fruits as its man gift! But the leaves, the soft core of the trunk, the flower bud – these are subsidiary items that can also be used. That is the nature of God’s grace. It fulfills a variety of wants.',
-                     author: ' – Sri Sathya Sai Baba in Sadhana- The Inward Path, p14',
+                     source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba in Sadhana- The Inward Path, p14',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -72,7 +72,7 @@
                      postDate: new Date('March 25 2016'),
                      title: 'Secret to misery',
                      content: 'Never say, “mine”. Whenever we say a thing is “mine”, misery will immediately come. Do not say, “my house.” Do not say, “my body.” The whole difficulty lies there. The body is neither yours, nor mine, nor anybody’s. These bodies come and go by the laws of Nature, but we are free, standing as a witness. This body is not any more free, than picture on a wall.  Why should we be attached so much to the body? If somebody paints a picture, he does it and passes on. Do not project the limb of selfishness, “I must possess it.” As soon as that is projected, misery will begin.',
-                     author: 'Swami Vivekananda in Complete Works, V(1), pp100-101.',
+                     source : { author: '', location: ''}, author: 'Swami Vivekananda in Complete Works, V(1), pp100-101.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -81,7 +81,7 @@
                      postDate: new Date('March 24 2016'),
                      title: 'Secret to wellness',
                      content: 'Give up all this ‘I’ and ‘mine’.<br/><br/>Illness begins with ‘I’.<br/><br/>Wellness begins with ‘We’.',
-                     author: 'taken from Sri Swami Narayan Sampradaya',
+                     source : { author: '', location: ''}, author: 'taken from Sri Swami Narayan Sampradaya',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -90,7 +90,7 @@
                      postDate: new Date('March 23 2016'),
                      title: ' Learn from your mistakes',
                      content: 'Do not brood over your past mistakes and failures as this will only fill your mind with grief, regret and depression. Do not repeat them in the future. There is something good in all seeming failures. You are not to see that now. Time will reveal it. Be patient. ',
-                     author: 'Swami Sivananda',
+                     source : { author: '', location: ''}, author: 'Swami Sivananda',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_unplugged.jpg'
@@ -99,7 +99,7 @@
                      postDate: new Date('March 22 2016'),
                      title: 'Hatred',
                      content: 'Give up the feelings of hatred of others in your heart. You are considering others as others because of egoism, pomp and show. Every living being and human being is an embodiment of Paramatma.  We are the birds of the same nest; we are the children of the same mother; we are the flowers of the same creeper; we are the people of the same world. Why should we harbor hatred? In truth, you hate yourself when you hate others. The greatest quality in every man is love. When love is absent, evil qualities like hatred and jealousy raise their heads.',
-                     author: 'Discourses of Bhagavan Sri Sathya Sai Baba, Nov 19-24, 1987, p25.',
+                     source : { author: '', location: ''}, author: 'Discourses of Bhagavan Sri Sathya Sai Baba, Nov 19-24, 1987, p25.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -108,7 +108,7 @@
                      postDate: new Date('March 20 2016'),
                      title: 'Touching the feet-1',
                      content: 'By merely touching, you can transfer your sins to the other person. It is for that reason that devotees are not allowed to touch the feet of some swamis. It is not the physical touch wherein lies the danger, but in mental conditions also; bad influences may flow from one person to the other by the mere touch. ',
-                     author: 'Conversations with Sri Sathya Sai Baba, p69.',
+                     source : { author: '', location: ''}, author: 'Conversations with Sri Sathya Sai Baba, p69.',
                      seriesId: 'Touching the feet',
                      seq: 1,
                      img: root + '/images/sai_unplugged.jpg'
@@ -117,7 +117,7 @@
                      postDate: new Date('March 21 2016'),
                      title: ' Touching the feet -2',
                      content: 'We pay respect to the elders by touching their feet. When touching, people cross their hands. The reason for this is simple.  The right side of the human body is considered positive and left side of the body is considered negative. When you face the elders and cross your hands, the right hand touches the right foot and the left hand touches left foot of the person. During this process, the elders touch the head of the person and gives blessings.  This way, a complete circuit is formed wherein your sins are transmitted to him and you receive positive energy from him.',
-                     author: 'taken from Sri Swami Narayan Sampradaya',
+                     source : { author: '', location: ''}, author: 'taken from Sri Swami Narayan Sampradaya',
                      seriesId: 'Touching the feet',
                      seq: 2,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -126,7 +126,7 @@
                      postDate: new Date('March 18 2016'),
                      title: 'Touching the feet of the Lord',
                      content: 'The idea behind bowing one’s head at the feet of Bhagawan is that sacred thoughts enter the devotee’s mind. When the devotee’s head touches the Lord’s feet, the Lord’s divine energy flows towards him. By the Lord’s touch, you can be relieved of your sins.',
-                     author: ' – Sri Sathya Sai Baba in Summer Showers in Brindavan, 1996.',
+                     source : { author: '', location: ''}, author: ' – Sri Sathya Sai Baba in Summer Showers in Brindavan, 1996.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -138,7 +138,7 @@
                      seq: -1,
                      content: '<u>Devotee:</u> What is Sadhana (spiritual practice)?<p/>' +
  '<u>Bhagawan:</u> It is mind that binds man and the same mind liberates him. Mind is constituted of desire (sankalpa) and disposition (vikalpa) [desires and fulfillment of desires].  Desire is of two kinds: the noble and the base. The base desires are lust and greed. Noble desire is directed towards enlightenment and emancipation.  Base desire contaminates and clouds the understanding. Sadhana is easy for the aspirant who is endowed with noble desires. Calmness is the criterion of spiritual progress. Plunge the purified mind into your heart. Then, the work is over. This is the essence of all spiritual practice.',
-                     author: ' –Ramana Maharshi',
+                     source : { author: '', location: ''}, author: ' –Ramana Maharshi',
                      img: root + '/images/dwarkamai_1.jpg'
                  }, {
                      posted: 'March 16 2016',
@@ -147,7 +147,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'Peace is a reflection of spiritual consciousness. It begins with each person and extends to home, the neighborhood, the nation and beyond. Peace comes when the higher nature in man takes over the lower nature. Peace is the natural state of mind.',
-                     author: 'Sivaya Subramaniya Swami (Himalayan Academy)',
+                     source : { author: '', location: ''}, author: 'Sivaya Subramaniya Swami (Himalayan Academy)',
                      img: root + '/images/sai_unplugged.jpg'
                  }, {
                      posted: 'March 15 2016',
@@ -157,7 +157,7 @@
                      seq: -1,
                      content: '<u>Devotee:</u> Swamiji, Why the world is full of opposites?<p/>' +
  '<u>Swamiji:</u> So that you can use your is discrimination (viveka) to differentiate between the good and the bad and develop dispassion (vairagya) for bad things in the world. There are people in this world, who are so poor that they don’t have any food to eat. There are people who are very rich and have a lot of food in the fridge. Yet they can’t eat; they starve. Do you know why? They are dieting! (Everyone laughs) The message is that neither should you starve nor eat too much. Buddha once starved during his penance and became just bone and skin and was about to collapse. People around him gave him food and water so that he was healthy enough to continue his penance. Buddha learnt a lesson that one should take the middle path and not torture the body to achieve salvation.',
-                     author: ' –Swami T',
+                     source : { author: '', location: ''}, author: ' –Swami T',
                      img: root + '/images/dwarkamai_1.jpg'
                  }, {
                      posted: 'March 14 2016',
@@ -166,7 +166,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'A man wanted to cross a river in spate due to torrential rains. A sage gave him a talisman and said, “This will carry you across.” The man holding it in his hand began to cross the river. Before he had gone half the way, he was seized with curiosity and opened the talisman to see what was in it. Therein he found, written on a piece of paper, the sacred name ‘Rama’. At this, the man said depreciatingly, “Is this the whole secret?” No sooner did this skepticism enter his mind, he sank down! It is the faith in the ‘name’ of the Lord that works wonders! ',
-                     author: 'Sayings of Sri Ramakrishna, p135',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p135',
                      img: root + '/images/sai_1221_1.jpg'
                  }],
                  [{
@@ -176,7 +176,7 @@
                      seriesId: 'Faith',
                      seq: 1,
                      content: 'Parvati once asked Shiva, “O Lord, what is the root of the eternal, everlasting, all-embracing bliss?” To her Shiva replied, “The root is faith.” Let everyone take to devotional practices and perform the duties of his own creed and faith',
-                     author: 'Sayings of Sri Ramakrishna, p133',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p133',
                      img: root + '/images/sai_1221_1.jpg'
                  }, {
                      posted: 'March 9 2016',
@@ -185,7 +185,7 @@
                      seriesId: 'Faith',
                      seq: 2,
                      content: 'Unless one becomes child-like in faith, it is difficult for one to realize God. If the mother says to the child, “He is your brother”, the child fully believes that the person referred to is really its brother. If the mother says, “Don’t go there. There is bogey man”, the child is indeed convinced that there is a bogey man. God is really moved when He sees in a man that kind of child-like faith. None can realize God with the calculating nature of the worldly-minded',
-                     author: 'Sayings of Sri Ramakrishna, p134',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p134',
                      img: root + '/images/sai_unplugged.jpg'
                  }, {
                      posted: 'March 10 2016',
@@ -194,7 +194,7 @@
                      seriesId: 'Faith',
                      seq: 3,
                      content: 'The stone may remain in water for many years; yet the water will never penetrate into it. But clay soon disintegrates into mud when it comes in contact with water. So too, the strong heart of a faithful devotee does not despair however long he is subjected to trials and torments. But the man of weak faith is shaken even by the most trifling cause.',
-                     author: 'Sayings of Sri Ramakrishna, p135',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p135',
                      img: root + '/images/dwarkamai_1.jpg'
                  }, {
                      posted: 'March 10 2016',
@@ -209,7 +209,7 @@
                  '<br/><br/><u>TFD (1729): Sun 3/13/16. Faith-6</u><br/><br/>' +
                  'Sri Rama, who was God incarnate, had to build a bridge to cross the ocean to reach Lanka. But, Hanuman, his faithful monkey devotee and servant, crossed the ocean in one leap, because of his firm faith in Rama. Here, the servant achieved more than the master, simply through faith.',
                      img: root + '/images/sai_unplugged.jpg',
-                     author: 'Sayings of Sri Ramakrishna, p135',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p135',
                  }, {
                      posted: 'March 7 2016',
                      postDate: new Date('March 7 2016'),
@@ -218,7 +218,7 @@
                      seq: 1,
                      content: 'Rathri means night, signifying darkness. Shiva means auspiciousness. ‘Shivarathri’ signifies auspiciousness which is inherent in darkness. It refers to the wisdom which exists in the midst of ignorance. Wisdom and ignorance are not two different things; they are essentially the same, opposite polarities of the same underlying principle. The state that transcends both wisdom and ignorance is Divinity (Paratatva). This Shivarathri is a day when one tries to establish friendship between mind and God. Shivarathri reminds everyone of the fact that Divinity is all pervasive and is to be found everywhere. It is said that Shiva lives in Kailasa. But where is Kailasa? Kailasa is our own mind full of joy and bliss. It means that when you develop purity, steadiness and sacredness from within, your heart becomes filled with peace and bliss and ultimately your heart itself becomes Kailasa.<p/>' +
                  ' Scriptures proclaim that Maha Shivarathri is very auspicious time to worship Lord Shiva. Performing Abhisheka to Shivalingam with Panchamruthams (Milk, Buttermilk, Ghee, Honey, Sugar, and Fruits) while chanting Sri Rudram pleases Lord Shiva the most. Staying awake throughout the night (Jagarana) and worshipping Lord Shiva is particularly pleasing to Him.  One has to worship Lord Shiva to achieve salvation and that too on Shivarathri day. It is certain that one who keeps awake on this day will attain Shiva Sayujyam (becoming one with Lord Shiva). It is believed that the devotee\'s sincere worship of Lord Shiva on this auspicious night will absolve past sins and enable salvation. ',
-                     author: 'Sri Sathya Sai Baba, Feb 17, 1985(1st passage)',
+                     source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba, Feb 17, 1985(1st passage)',
                      img: root + '/images/sai_unplugged.jpg'
                  }, {
                      posted: 'March 6 2016',
@@ -230,7 +230,7 @@
                  '<u>Mrutyunjaya Mantra <i>(due to Sage Vashishta)</i></u><br>' +
                  '<i>We offer or worship to the fragrant, three eyed Lord Shiva who enhances prosperity. May he liberate us from the bondage of death like the urvaruka melon (which effortlessly separates from the vine when ripe). May He not (let us turn away) from immortality.</i><p>' +
                  '<b><i>Om tryambakam yajamahe sugnadhim pushtivardhanam<br/>&nbsp;Urvarukamiva bandanaan mrutyur muksheeya mamrutat</i></b>',
-                     author: ' ',
+                     source : { author: '', location: ''}, author: ' ',
                      img: root + '/images/dwarkamai_1.jpg'
                  }],
                  [{
@@ -242,7 +242,7 @@
                      content: '"Namah Shivaya" is a very powerful mantra to worship Lord Shiva and also to meditate upon Him. Adi Sankara has composed Shiva Panchakshara Stotram with each verse starting with each letter of the mantra Namah Shivaya.  Click <a href="https://www.youtube.com/watch?v=nGiHxuAhpRw" target=_blank ><span style="font-weight:bolder">here</span></a> to enjoy Shiva’s glory!<p/>' +
                         'My salutations to Lord Shiva, who is in the form the syllable ‘Na’, who wears serpent king as a garland, who has three eyes, who has ashes smeared all over his body, who is the supreme Lord, who is eternal, pure and who wears space as his clothing.<p/>' +
                         '<i>Naagendra-Haaraaya Tri-Lochanaaya<br/>Bhasma-Angga-Raagaaya Maheshvaraaya |<br/>Nityaaya Shuddhaaya Dig-Ambaraaya<br/>Tasmai Nakaaraaya NamahShivaaya ||1||</i>',
-                     author: 'Shankaracharya',
+                     source : { author: '', location: ''}, author: 'Shankaracharya',
                      img: root + '/images/sai_1221_1.jpg'
                  }, {
                      posted: 'March 2 2016',
@@ -252,7 +252,7 @@
                      seq: 2,
                      content: 'My salutations to Lord Shiva, who is in the form the syllable "Ma", who is bathed with waters of Ganga and sandal paste, who is the supreme Lord of Nandi and other leaders of the troop of attendants in Kailasa and who is elaborately worshipped with mandara and many other flowers.  Click <a href="https://www.youtube.com/watch?v=nGiHxuAhpRw" target=_blank ><span style="font-weight:bolder">here</span></a> to enjoy Shiva’s glory!<p/>' +
                         '<p/>Mandaakinii-Salila-Chandana-Carcitaaya<br/>Nandi-Iishvara-Pramatha-Naatha-Maheshvaraaya |<br/>Mandaara-Pushpa-Bahu-Pushpa-Su-Puujitaaya<br/>Tasmai Makaaraaya Namah Shivaaya ||2||',
-                     author: 'Shankaracharya',
+                     source : { author: '', location: ''}, author: 'Shankaracharya',
                      img: root + '/images/sai_unplugged.jpg'
                  }, {
                      posted: 'March 3 2016',
@@ -265,7 +265,7 @@
                          'Dakssa-Adhvara-Naashakaaya |<br/>' +
                          'Shree-Neelakantaaya Vrsha-Dhvajaaya<br/>' +
                          'Tasmai Shikaaraaya Namah Shivaaya ||3||',
-                     author: 'Shankaracharya',
+                     source : { author: '', location: ''}, author: 'Shankaracharya',
                      img: root + '/images/dwarkamai_1.jpg'
                  }, {
                      posted: 'March 4 2016',
@@ -278,7 +278,7 @@
  'Muuni-Indra-Deva-Aarcita-Shekharaaya |<br/>' +
  'Candra-Aarka-Vaishvaanara-Locanaaya<br/>' +
  'Tasmai Vakaaraaya Namah Shivaaya ||4||',
-                     author: 'Shankaracharya',
+                     source : { author: '', location: ''}, author: 'Shankaracharya',
                      img: root + '/images/sai_unplugged.jpg'
                  }, {
                      posted: 'March 5 2016',
@@ -294,7 +294,7 @@
  'He, who recites this meritorious five syllabled hymn in the shrine of Lord Shiva, gains the abode of Shiva and rejoices with the Lord.<p/>' +
  'Panchaakssaram-Idam Punnyam Yah Pateth-Shiva-Sannidhau |<br/>' +
  'Shivalokam-Aavaapnoti Shivena Saha Modate ||6||',
-                     author: 'Shankaracharya',
+                     source : { author: '', location: ''}, author: 'Shankaracharya',
                      img: root + '/images/sai_1221_1.jpg'
                  }, {
                      posted: 'Feb 29 2016',
@@ -303,7 +303,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'When the mind is still, then the truth gets a chance to be heard in the purity of silence',
-                     author: 'Sri Aurobindo',
+                     source : { author: '', location: ''}, author: 'Sri Aurobindo',
                      img: root + '/images/sai_unplugged.jpg'
                  }, {
                      posted: 'Feb 28 2016',
@@ -312,7 +312,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'This world is the best teacher. There is a lesson in everything. There is a lesson in each experience. Learn it and become wise. Every failure is a stepping stone to success. Every difficulty or disappointment is a trail of your faith. Every unpleasant incident or temptation is a test of your inner strength. Therefore, do not despair. Match forward!',
-                     author: 'Swami Sivananda',
+                     source : { author: '', location: ''}, author: 'Swami Sivananda',
                      img: root + '/images/dwarkamai_1.jpg'
                  }, {
                      posted: 'Feb 27 2016',
@@ -321,7 +321,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'Just as a flower gives out its fragrance to whosoever approaches it or uses it, so too, love from our heart radiates towards everybody and manifests as spontaneous service.',
-                     author: 'Swami Ramdas',
+                     source : { author: '', location: ''}, author: 'Swami Ramdas',
                      img: root + '/images/sai_1221_1.jpg'
                  }],
                  [{
@@ -331,7 +331,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'Sing with Bhakti the sacred ‘name’ of the Lord and the mountain of your sins will vanish, just as a mountain of cotton will burn to ashes and disappear in no time if a spark of fire falls on it.',
-                     author: 'Sayings of Sri Ramakrishna, p99',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p99',
                      img: root + '/images/sai_1221_1.jpg'
                  }, {
                      posted: 'Feb 25 2016',
@@ -343,7 +343,7 @@
                          'Sayings of Sri Ramakrishna, p99<p/>' +
                          '<br/> ---- Prema Se Bolo Ek Baar Sai Ram<p/>Jai Jai Ram Sai Ram<p/>Bolo Ram Sai Ram<p/>Prema Se Bolo Ek Baar Sai Ram<p/>Hey Madhuta Manohara Ram<p/>Hey Mohana Mooratha Ram<p/>Hey Karuna Sindhu Ram<p/>Hey Raghupathi Raghava Ram<p/>Hey Patheetha Pavana Ram<p/>Jai Jai Ram Sai Ram<p/>Bolo Ram Sai Ram (Prema Se..)<p/>' +
                          '<br/> ----- Can anyone compare the grace of Lord Shiva with any other God?<p/>You have to say only once with love, “Shiva, Chidambaram”<p/>To get liberation, you have to do no other Punya!<p/>- ‘Sabha pathiku veru daivam samanam aaguma?’ –a famous song by Gopalakrishna Bharati',
-                     author: '(various)',
+                     source : { author: '', location: ''}, author: '(various)',
                      img: root + '/images/dwarkamai_1.jpg'
                  },
                  {
@@ -353,7 +353,7 @@
                      seriesId: 'The Power of Gods Name',
                      seq: 3,
                      content: 'A man, who voluntarily goes to a river, gets the benefit of the bath; so does he, who has been pushed into the river by another, or who, when sleeping soundly, has a bucket of river water thrown upon him. So too, knowingly or unknowingly, consciously or unconsciously, in whatever state of mind a man utters God’s name, he acquires the merit of such utterance.',
-                     author: 'Sayings of Sri Ramakrishna, p96. (slightly edited)',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p96. (slightly edited)',
                      img: root + '/images/sai_unplugged.jpg'
                  }, {
                      posted: 'Feb 23 2016',
@@ -362,7 +362,7 @@
                      seriesId: 'The Power of Gods Name',
                      seq: 2,
                      content: 'People do not know what the ‘name’ of God can do. Those who repeat it constantly alone know its power. It can purify our mind completely. The ‘name’ can take us to the summit of spiritual experience.',
-                     author: 'Swami Ramdas',
+                     source : { author: '', location: ''}, author: 'Swami Ramdas',
                      img: root + '/images/dwarkamai_1.jpg'
                  },
                  {
@@ -372,7 +372,7 @@
                      seriesId: 'The Power of Gods Name',
                      seq: 1,
                      content: 'A king guilty of the heinous sin of killing a Brahmana went to the hermitage of a Rishi to learn what penance he must perform in order to be purified. The Rishi was absent but his son was in the hermitage. Hearing the report of the King, he said, “Repeat the name ‘Rama’ three times and your sin will be expiated.” When the Rishi came back and heard of the remedy prescribed by his son, he remarked angrily, “Sins committed in myriads of births are purged immediately by uttering the ‘name’ of the Lord just once. How weak must be your faith! O fool! You have ordered the holy name to be repeated thrice? For this weakness in your faith, you shall become an outcaste.” And the son became Guha, a boatman of the Ramayana.',
-                     author: 'Sayings of Sri Ramakrishna, p136',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p136',
                      img: root + '/images/sai_1221_1.jpg'
                  }, {
                      posted: 'Feb 21 2016',
@@ -381,7 +381,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'Japa means repeating the name of the Lord, silently, by sitting in a quiet place. If one continues the repetition with concentration and devotion, one is sure to be blessed with Divine Vision and ultimately God-realization. Suppose a chest of treasures is immersed in the Ganges with one end attached to a chain, which is fixed on the bank. Following the chain, link by link, you can dive into the water and gradually trace your way to the treasure chest. In the same manner, if you become absorbed in the repetition of the His holy name, you will eventually realize Him.',
-                     author: 'Sayings of Sri Ramakrishna, p359. (slightly edited)',
+                     source : { author: '', location: ''}, author: 'Sayings of Sri Ramakrishna, p359. (slightly edited)',
                      img: root + '/images/dwarkamai_1.jpg'
                  },
                  {
@@ -391,7 +391,7 @@
                      seriesId: '-1',
                      seq: -1,
                      content: 'Karma Yoga makes us understand and admit that this world is a world of five minutes and it is something that we have to pass through, and that freedom is not here but is only to be found beyond. To find the way out of bondages of the world, we have to go through it slowly and surely. There may be a few exceptional persons who can stand aside and give up the world, as a snake casts off its skin and stands aside and looks at it. There is no doubt, these are exceptional beings. But the rest of us have to go slowly through the world of work (Karma). Karma Yoga shows the process, the secret and the method of doing it to the best of our advantage.',
-                     author: 'Swami Vivekananda in Complete Works, V(1), pp 99-100.',
+                     source : { author: '', location: ''}, author: 'Swami Vivekananda in Complete Works, V(1), pp 99-100.',
                      img: root + '/images/sai_unplugged.jpg'
                  }],
                   [{
@@ -401,7 +401,7 @@
                       seriesId: '-1',
                       seq: -1,
                       content: 'Gratitude is a great virtue. When the power of the gratitude is realized, it can give benefits much more than anyone can imagine. If out of narrow mindedness, people become ungrateful, they will suffer immensely. If such is the case inpurely human relationships, how much more rewarding it will be, if gratitude is offered to God? ',
-                      author: 'Sri Sathya Sai Baba, 1992',
+                      source : { author: '', location: ''}, author: 'Sri Sathya Sai Baba, 1992',
                       img: root + '/images/dwarkamai_1.jpg'
                   }, {
                       posted: 'Feb 17 2016',
@@ -410,7 +410,7 @@
                       seriesId: '-1',
                       seq: -1,
                       content: 'As fragrance abides in the flower, as the reflection is within the mirror, so does the Lord resides with in you. Why are you searching from Him elsewhere?',
-                      author: 'Guru Nanak',
+                      source : { author: '', location: ''}, author: 'Guru Nanak',
                       img: root + '/images/sai_1221_1.jpg'
                   }, {
                       posted: 'Feb 16 2016',
@@ -419,7 +419,7 @@
                       seriesId: '-1',
                       seq: -1,
                       content: 'The waxing and waning of the moon has nothing to do with the moon. When the moon waxes, we falsely think that the moon is growing; and when it wanes, we think that the moon is shrinking. Factually, the moon as it is, always the same. It solely depends on the observer on the earth who is looking at the moon. So too, the faults that you see in others are mainly due to you',
-                      author: 'Balarama’s advice to Rukmini in Srimad Bhagavatam',
+                      source : { author: '', location: ''}, author: 'Balarama’s advice to Rukmini in Srimad Bhagavatam',
                       img: root + '/images/dwarkamai_1.jpg'
                   },
                   {
@@ -432,7 +432,7 @@
  '<p>Krishna was the eighth son of Devaki and Vasudeva. The fetus of the seventh son Balarama was transferred to the womb of Rohini and he was brought up in Gokul. Devaki’s father was Devaka and his elder brother Ugrasena was ruling over Mathura. Ugrasena had nine sons and Kamsa was the eldest son. Kamsa had no sisters of his own and so he loved Devaki as his dearest self. Kamsa imprisoned his father Ugrasena and installed himself as the King of Mathura.</p><p>Jarasandha ruled over Magadha. He gave his two daughters Asti and Prapti in marriage to Kamsa. Krishna killed Kamsa in a fight and restored the crown to Ugrasena. Krishna refused to take the crown, handed over Mathura to Ugrasena and went back to Dwaraka. Jarasandha hated Krishna because both his daughters were widowed by Krishna.</p><p>Jarasandha’s friend Damaghosha was a king of Chedi. He was very cruel and a stubborn King. (Dama means curbing down. Ghosha means famous. So, he was famous for curbing down and controlling his citizens.) He had a son Sishupala who will be the crown prince of Chedi. Damaghosha loved his son so much that he would many perform many rituals to invoke good fortune on him.</p>' +
  '<h4>Rukmi brings the news</h4><p>Bheeshmaka was the King of Vidharba. He had five sons and only one daughter. The first son was Rukmi and the youngest daughter was Rukmini. She was very beautiful and was at the right age to be married. Narada used to visit Bhishmaka’s palace often and from their conversations she had heard many good things about Krishna. Slowly, Rukmini started thinking of Krishna and began to dote on Krishna.</p><p>Rukmini’s brother Rukmi was always in bad company and he was very friendly with Kamsa and  Jarasandha. Rukmi brought the news to Bheeshmaka that the cowherd boy Krishna had slain Kamsa.<br/>Rukmini said, “He is not a cowherd boy. He is a noble Yadava.”<br/>Rukmi snapped immediately, “Rukmini, he has killed my friend and you call him noble?”<br/>“Don’t forget! Kamsa was cruel. He imprisoned his own father and usurped the throne”, shouted Rukmini.<br/>Bheeshmaka interrupted, “I assume Krishna will now become the King of Mathura.”<br/>Rukmi said, “No. Krishna refused the crown and Ugrasena was re-instated.”<br/>Rukmini cut him short, “Don’t you see! How noble Krishna is?”<br/>“How did Jarasandha react?” asked Bheeshmaka.<br/>Rukmi replied, “He is furious. He vows to take revenge. He has sent word for me. I must go and see him.”</p>' +
  '<h4>Rukmini longs for Krishna</h4><p>All this news and incidents made Rukmini’s love for Krishna even stronger. Bheeshmaka and his wife also felt that Krishna was the most suitable groom for Rukmini.<br/>Meanwhile, Jarasandha with Rukmi and his allies made several attempts to kill Krishna but in vain. After the eighteenth attempt, they decided to bide their time and go back to their capitals.<br/>In Dwaraka, Balarama broke the news: “Krishna, we have come to know that Jarasandha has decided to lie low for a while. Now, you will have some time to think of the beautiful princess of Vidharba!”<br/>“Balarama! Somehow, I have also developed love for Rukmini. I am thinking of her all the time! My mind is also set on marrying her. But her brother Rukmi is a staunch ally of Jarasandha.”<br/>At the same time, in Vidharba, Rukmini too was lost in the dreams of Krishna hugging her (when the Lord thinks of His devotee, the devotee also thinks of Him!). She thought, “Even with Rukmi and his allies, Jarasandha could not vanquish Krishna. You are great, Krishna! You and only You shall be my Lord!”<p><h4>To be continued….</h4>',
-                      author: 'anon',
+                      source : { author: '', location: ''}, author: 'anon',
                       img: root + '/images/sai_unplugged.jpg'
                   },
 
@@ -449,7 +449,7 @@
  + '<h4>Rukmini’s anxiety builds up</h4><p>At Vidarbha, Rukmini’s anxiety was building up every moment. She thought, “Has Krishna felt disgusted with my message that I have no shame in asking him to be my husband? Then, why has Sunanda not come back?” As she started looking at the window for the hundredth time, she saw Sunanda entering the palace. She quickly ran to the door to meet Sunanda. Sunanda briefed her, “Krishna has come dear! Everything is going according to the plan. Balarama too has come with his forces” and left the palace in a hurry.</p>' +
  '<h4>Rukmini heads to Durga’s shrine</h4><p>“Rukmini, your chariot has arrived. Are you ready?”, shouted one of the maids. Rukmini was dressed nicely and she got into the chariot. She was taken to the temple courtyard where she stepped down. Many Kings had assembled there. From there, she looked for Krishna and thought, “I don’t see Krishna among them. They say that he is dark blue, wears a yellow robe and sports a peacock feather in his crown.” She entered the temple, washed the feet of Goddess Durga, and placed flowers at her feet. Overcome by anxiety and emotion, she prayed, “O Goddess Durga, please let Krishna and only Krishna win and marry me. O Durga, please do not disappoint me.” As she walked towards the gate, her eyes scanned the assembly of Kings again,  looking for Krishna. She murmured, “Will Krishna ever come and rescue me?”</p>'
  + '<h4>To be continued</h4>',
-                      author: 'anon',
+                      source : { author: '', location: ''}, author: 'anon',
                       img: root + '/images/dwarkamai_1.jpg'
                   }, {
                       posted: 'Feb 15 2016',
@@ -464,7 +464,7 @@
                           '<h4>Rukmini weds Krishna in Dwaraka</h4>' +
                           '<p>Krishna said, “Come into the chariot Rukmini. We must hurry to Dwaraka and have our wedding solemnized by rituals.” After a few days, they were married according to Vedic rituals. After this marriage, Krishna became the King of Yadus at Dwaraka. The inhabitants of Dwaraka City were so pleased that they dressed themselves with nicest garments and ornaments and went to present gifts, according to their means, to the newly married couple. All the houses of Dwaraka were decorated with flags, festoons and flowers.  The whole city became fragrant by burning of fine incense. At night, there was illumination from thousands of lamps, which decorated every building. The Goddess of fortune Rukmini, was finally united with the Lord Krishna and all the people of Dwaraka felt extremely jubilant.',
 
-                      author: 'anon',
+                      source : { author: '', location: ''}, author: 'anon',
                       img: root + '/images/sai_unplugged.jpg'
                   }],
                  [{
@@ -482,7 +482,7 @@
                           'Is truly holy indeed!<br/>' +
                           'On such a holy man’s feet<br/>' +
                           'I would lie like dust, says Kabir.',
-                     author: 'Sant Kabir',
+                     source : { author: '', location: ''}, author: 'Sant Kabir',
                      img: root + '/images/dwarkamai_1.jpg'
                  },
              {
@@ -493,7 +493,7 @@
                  seq: -1,
                  content: 'You love your friends so much that you invite them for dinner at your home. You talk to them, and entertain them. After the dessert and coffee is served, you expect them to slowly leave. What will happen if everyone wants to stay back? (everyone laughs) For those who are still chatting and not thinking of leaving, you give a hint saying, “Shall I offer some more coffee?” or “Can you help us in the kitchen to put things away?”(big laughter)<p/>' +
                          'What has happened? A few hours ago, you loved them so much that you poured your hearts out to them. Now you want them to leave. Why?.. because, you want to spend time with yourself and your family. So too, be engaged in the worldly things only to the extent necessary for your survival. Spend the rest of the time in contemplating on the glories of the Lord and engaging in Sadhana (spiritual practice).',
-                 author: 'Swami T',
+                 source : { author: '', location: ''}, author: 'Swami T',
                  img: root + '/images/sai_unplugged.jpg'
              },
               {
@@ -504,7 +504,7 @@
                   seq: -1,
                   content: 'The mind is everything. It is in mind alone that one becomes pure and impure.<p/>' +
                               'A man, first of all, makes his own mind impure and then alone he sees other man’s faults. I tell you one thing. If you want peace of mind, do not find fault with others. Rather see your own faults. -Sri Sarada Devi (wife of Sri Ramakrishna ',
-                  author: '-Sri Sarada Devi (wife of Sri Ramakrishna Paramahamsa)',
+                  source : { author: '', location: ''}, author: '-Sri Sarada Devi (wife of Sri Ramakrishna Paramahamsa)',
                   img: root + '/images/dwarkamai_1.jpg'
               },
               {
@@ -515,7 +515,7 @@
                   seq: -1,
                   content: 'One should always be active. One should be never without work.<p/>' +
                       'For, when one is idle, all sorts of bad thoughts crop up in one’s mind.',
-                  author: '-Sri Ramakrishna Paramahamsa',
+                  source : { author: '', location: ''}, author: '-Sri Ramakrishna Paramahamsa',
                   img: root + '/images/sai_unplugged.jpg'
               }], [{
                   posted: 'Jan 31 2016',
@@ -524,7 +524,7 @@
                   seriesId: '-1',
                   seq: -1,
                   content: 'Just as fire fanned by powerful winds destroys heaps of firewood in no time, so also, the fire of meditation destroys heaps of Karma in a moment.',
-                  author: 'Lord Mahavir',
+                  source : { author: '', location: ''}, author: 'Lord Mahavir',
                   img: root + '/images/dwarkamai_1.jpg'
               },
               {
@@ -534,7 +534,7 @@
                   seriesId: '-1',
                   seq: -1,
                   content: 'He who recognizes the existence of suffering, its cause, its cessation and path leading to its cessation has fathomed the Four Noble Truths. He will walk in the right path. Right views will be the torch to light his way. Right aims will be his guide. Right words will be his dwelling place on the road. His gait will be straight, for it is right behavior. His refreshments will be the right way of earning his livelihood. Right efforts will be his steps; right thoughts his breath; and peace will follow in his footprints',
-                  author: 'Lord Buddha',
+                  source : { author: '', location: ''}, author: 'Lord Buddha',
                   img: root + '/images/sai_1221_1.jpg'
               }, {
                   posted: 'Jan 29 2016',
@@ -543,7 +543,7 @@
                   seriesId: '-1',
                   seq: -1,
                   content: 'We all look upon dust with contempt as something that we should avoid or not to come in contact with. Renu is a very common name for girls in northern part of India. Several months ago, one of the volunteers at the Shirdi Temple told me that Renu means ‘dust’. Please read this wonderful story……<p/>One day, Krishna by his maya, fell into a dreaded disease which no doctor could cure.  Narada came in the disguise of a physician and prescribed that if somebody can give his or her feet’s dust washed and give that water for Krishna to drink, he will be cured. Otherwise, he will die. When Krishna asked Rukmini and Sathyabhama for the ‘dust water’ they started cried saying that it will the highest sin because Krishna is their husband, as well as God.<p/> When Krishna approached Radha and the other Gopis, they were ready to offer their ‘dust water’. When Krishna warned them that they will be committing the greatest sin, they simply smiled and said that they would rather go to hell than lose their dear Krishna. The Lord craves for the ‘dust’ from the feet of the devotees because it is very auspicious. Then, what to speak of the Bhakta? Don’t you feel that you are blessed to have such a nice name, like Renu?',
-                  author: 'Anon',
+                  source : { author: '', location: ''}, author: 'Anon',
                   img: root + '/images/dwarkamai_1.jpg'
               }],
               [{
@@ -565,7 +565,7 @@
 '<p>Rhea had no time to respond. She had to be out of the house soon.</p><br>' +
 '<p>She was racing to get to Kato Road. There was a dense fog and the visibility was just a few feet. The traffic on Dixon Landing was bad due to the BART construction and it had backed up all the way to 880. When she was at the signal on Dixon Landing Road at California Circle, she thought she could make a right at California Circle to bypass the through traffic on Dixon Landing, make it through Milmont Drive and get to Kato Road. This could save a few minutes. So, she quickly made a right turn into California Circle and was speeding as there was no traffic.</p><br>' +
 '<p>                 As she was driving through, she came across a bridge. Right at the bridge, it appeared as though a brown leaf was being blown away by the wind from left to right. She sped through it and suddenly, there was a ‘thud’!    -to be continued</p><br>',
-                  author: 'Narration',
+                  source : { author: '', location: ''}, author: 'Narration',
                   img: root + '/images/sai_1221_1.jpg'
               }, {
                   posted: 'Jun 5 2015',
@@ -587,7 +587,7 @@
 '<p>Rhea being a gregarious, fashionable and always out-going person, this deafening silence bothered her. But, she has to do it if she wants to climb the corporate ladder. Every day, she would come in at 8:00 and notice that Hakim was already there having brewed the first pot of coffee. She would leave around 5:00 and Hakim would still continue to work. What a dedicated person Hakim must be!</p><br>' +
 '<p> Slowly, they go to know each other. Hakim began to like her company in the office. Rhea was tall 5’ 8”, slim, well dressed with brimming youth and pleasant manners. Hakim came to know that Rhea was not a coffee person. She liked Chai Latte. Sometimes, Hakim would take Rhea to Starbucks on Dixon Landing near Chevron and buy her a Chai Latte and chat on some personal matters. They would go out to lunch together and chat about their experiences in their jobs as well as previous jobs. -to be continued</p><br>'
 ,
-                  author: 'Narration',
+                  source : { author: '', location: ''}, author: 'Narration',
                   img: root + '/images/dwarkamai_1.jpg'
               }, {
                   posted: 'Jun 5 2015',
@@ -605,7 +605,7 @@
 '<p>  Months rolled by. One day, during lunch, Rhea asked Hakim as to how he is could work such long hours. This hit Hakim very hard at his heart.  He said, “Rhea, I am sorry to share this with you. I am divorced. I have nothing else to do. I am tired of playing golf all the time. My two daughters are married and well settled. My ex-wife is in Seattle. I have a retirement home in Phoenix. I am currently renting a place in Milpitas. Once I retire from here, I go straight to Phoenix and see how long I can sustain myself in that house, all alone. I don’t have any friends in Phoenix. Also, at my age, it is difficult to find people who have similar interests.” Rhea felt sorry that her question exposed the sad side of Hakim.</p><br>' +
 '<p> Rhea learnt a lot from Hakim during the three months she was with him in the factory.  Both had developed a 420 page document that showed the plan as to which tools they have to keep, which tools they have to sell and which tools they have to buy and install so that they can turn the factory to make C-Gate’s products. It was now time for Hakim to retire as his last Friday was coming up. Rhea wanted to take him to dinner and bid him farewell. She had chosen a very nice Italian restaurant in San Jose.</p></br>' +
 '<p> Hakim drove her to the restaurant and they both enjoyed the fine Italian spirits and the gourmet Italian cuisine. Hakim said that he feels very lonely because the only thing that he was holding onto was his job and it is also gone now. He has to transition now into retirement.  He said that he needed a week to clean up and vacate his apartment and that would make him even more miserable. Rhea could see the slight tears in his eyes and she felt sorry for him. Hakim then held Rhea’s both hands and said, “Rhea, I have got to know you during the past three months. You are a very smart and intelligent girl and you can pick up things very quickly and become good at it. You are an asset to C-Gate. I will talk to Scott Brown and strongly recommend that you be promoted to Senior VP of Operations and Finance. But, I need a small favor from you. You helped me clean up the Solar-Indra facility. Can you please stay with me for one week to help with packing and clean-up? Will you please help me with my transition to retirement?” -to be continued</p><br>',
-                  author: 'Narration',
+                  source : { author: '', location: ''}, author: 'Narration',
                   img: root + '/images/sai_1221_1.jpg'
               }, {
                   posted: 'Jun 7 2015',
@@ -622,7 +622,7 @@
 '<p>“Will you allow me to talk without being rude?”</p><br><p>“I am so sorry! I hardly know you, yet I am taking the liberty to scream at you!”</p></br>' +
 '<p>“Many years ago, I was working for Cisco in the Finance department. I repeatedly kept on telling the management, ‘the Company financesare not looking good.’ One day, there was a major layoff and I was one of them. Then, I joined a small start-up Fiasco (Financial Investment Advisors and Services Corp) and did very well. After many years, the CEO resigned and I took over the company and made it highly profitable. I sold the company to Merrill Lynch and made many millions. I could have bought a home, got married and settled down. Instead, I became greedy for money. I started my own Financial Services Company thinking that I could double or even triple my investment. This is when I failed. I lost all of it.….<br> To be continued</p>'
 ,
-                  author: 'Narration',
+                  source : { author: '', location: ''}, author: 'Narration',
                   img: root + '/images/sai_unplugged.jpg'
               }, {
                   posted: 'Jun 8 2015',
@@ -642,7 +642,7 @@
 '<p>“You are very selfish. You only make contacts with people who can help you in your career or do favors for you. Even when you spend time with them, you always keep thinking of ROI (Return on Investment), Preservation of Capital etc. Give up such expectations and let your friendship be genuine and come from your heart.”</p><br>' +
 '<p>“Next, believe in God and pray to him whole heartedly to free you from the greed for worldly objects. When the greed goes down, compassion and love will blossom in your heart. Then your face will shine, radiate peace and people will be attracted to you naturally, not because of you are beautiful and attractive. Respect the elders and engage in some volunteering activity to make up for the time you have wasted so far in your life.”<br/>…… to be continued</p></br>',
 
-                  author: 'Narration',
+                  source : { author: '', location: ''}, author: 'Narration',
                   img: root + '/images/sai_1221_1.jpg'
               }, {
                   posted: 'Jun 9 2015',
@@ -669,7 +669,7 @@
          '<p>“We do not know of any homeless person by name Sunil. We only know of one Sunil who comes on weekend mornings but he has a home.”</p><br>' +
          '<p>Rhea remembered her father’s remark, ‘He works in very mysterious ways!’<br/><h5>Jai Sai Ram</h5>'
 ,
-                  author: 'Narration',
+                  source : { author: '', location: ''}, author: 'Narration',
                   img: root + '/images/dwarkamai_1.jpg'
               }, {
                   posted: 'Jun 10 2015',
@@ -717,7 +717,7 @@
                       '<p>What a powerful message!</p><br/>' +
                       '<p>You all know what happened then….Rhea was born!</p><br/>' +
                       '<p>Jai Sai Ram!',
-                  author: 'Narration',
+                  source : { author: '', location: ''}, author: 'Narration',
                   img: root + '/images/sai_1221_1.jpg'
               }
               , {
@@ -784,7 +784,7 @@
 + '<p><i><span style="color:orange;">I bring men to Me from long distances and many places. I seek them and bring them to Me. They do not come of their own accord. I bring them to Me! - Baba</span></i><p/>'
 + '<p>Baba,<br/>&nbsp;&nbsp;&nbsp;&nbsp;My humble Pranams at your lotus feet. In our scriptures, they always depict You as Purusha (man) and all the living beings (jeevis) as women longing to merge with You. I had to depict You as a woman so that the story will be interesting to the readers.  Baba, thank for your for inspiring me to write this story as well as guiding me in developing the story. Please make my mind dwell on Your Lotus feet all the time and let me not have any other thought other than You!<br/>' 
 + '&nbsp;&nbsp;&nbspJai Sai Ram!',
-                  author: 'anon',
+                  source : { author: '', location: ''}, author: 'anon',
                   seriesId: 'Baba will you be my valentine',
                   seq: '1',
                   img: root + '/images/dwarkamai_1.jpg'
@@ -795,7 +795,7 @@
                   title: 'Prayer',
                   content: '<em>Arpito tuzhya payashi mazhe Deha Bhaan<br/> Kar malaa stitha pradyna naahi maan apamaan<br/>Kari mee tuzhi Seva lavi jivaachey raan<br/>De re Vithala, malaa darshanaachey varadaan</em><br/>'+ 
                       '<p>(I surrender my body and soul at your feet, <br/>please make my mind steady and one-pointed, no honor nor insult, <br/>let me engross myself in your seva, <br/>Vithoba, give me the gift or your darshan )</p>',
-                  author: 'anon',
+                  source : { author: '', location: ''}, author: 'anon',
                   seriesId: '-1',
                   seq: -1,
                   img: root + '/images/sai_1221_1.jpg'

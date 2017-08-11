@@ -8,7 +8,7 @@ angular.module('nectar_words_app')
                     postDate: new Date('April 08 2016 3:00 AM'),
                     title: 'repetition of Ramayana and Ramnavmi',
                     content: 'This week, the posts of Ramayan and Ramnavmi have been repeated...',
-                    author: '',
+                    source : { author: '', location: ''}, author: '',
                     seriesId: '-10',
                     seq: '-1',
                     img: root + '/images/dwarkamai_1.jpg'
@@ -48,7 +48,7 @@ angular.module('nectar_words_app')
 '<br/>Steep profits but shallow relationships;' +
 
 '<br/>It is a time when there is much in the window, but nothing in the room.</p>',
-                        author: 'Dalai Lama',
+                        source : { author: '', location: ''}, author: 'Dalai Lama',
                         seriesId: '-1',
                         seq: -1,
                         img: root + '/images/sai_unplugged.jpg'
@@ -59,7 +59,7 @@ angular.module('nectar_words_app')
                         content: 'The planet does not need more successful people. The planet desperately needs more peacemakers, healers and lovers of all kinds. Love and compassion are necessities, not luxuries.' +
 
 '<br/>&nbsp;&nbsp;Without them, humanity cannot survive. The more you are motivated by love, the more fearless and free your actions will be.',
-                        author: 'Dalai Lama',
+                        source : { author: '', location: ''}, author: 'Dalai Lama',
                         seriesId: '-1',
                         seq:-1,
                         img: root + '/images/sai_unplugged.jpg'
@@ -97,7 +97,7 @@ angular.module('nectar_words_app')
 
       '<h5>Om Namo Bhagavate Vasudevaya!</h5></p>' 
       ,
-      author: '',
+      source : { author: '', location: ''}, author: '',
       seriesId: 'Seven Days of Penance:',
       seq:8,
       img: root + '/images/sai_1221_1.jpg'
@@ -132,7 +132,7 @@ angular.module('nectar_words_app')
 
 '<p><u>The Lord moves to Gokul:</u> Vasudeva did not delay. He spread an old dhoti on a bamboo basket and placed the Babe on it. He tore an old sari of Devaki and covered the Babe and placed the basket on his head. He moved out of the open doors and gates, past the sleeping guards. He noticed the little drops of rain that was falling on the Babe and was afraid that the Babe would be soaked. But, when he turned back, he found a snake following his footsteps, holding the ribbed umbrella of its broad hoods over the child preventing the rain from wetting the Babe. He soon realized that it was Adisesha protecting the Lord. Though the sun had not risen yet, the lotus bloomed in all the tanks and leaned on its stalk towards the Babe. Though it was a dark night, with a deep yearning to look at the Babe, the full moon peeped through the clouds, with its cool rays illuminating the entire route to Gokul. Vasudeva began to cross Yamuna river to reach Gokul. The water was rising very rapidly above Vasudeva’s head and he was afraid that he would drown. It dawned on him that Yamuna was paying its respects to the Lord by wetting the feet of the Babe! The Babe was placed next to Yashoda and the baby girl that had just been born there was brought and placed into the hands of Devaki. No sooner this was done, Vasudeva burst into tears!While these words were coming from Suka’s lips, Parikshith exclaimed aloud, “Krishna, Krishna!” Everyone looked at the King. They saw a snake crawling away fast, after biting the right toe of the King. Suka shed tears of Bliss; He announced, “The King has merged with the Lord”. The word Suka means parrot. Yes, he was the parrot that plucked the ripe nectar filled fruit called Bhagavatha from the tree of the Vedas and enabled the world to taste it. May the world relish the fruit and derive the Atmic Bliss! Jai Sai Ram!S</p>'+
 '<p> (Ed - This has an appendix and conclusion - I am puting it in a separate section)</p>',
-                        author: '',
+                        source : { author: '', location: ''}, author: '',
                         seriesId: 'Seven Days of Penance:',
                         seq: 7,
                         img: root + '/images/sai_1221_1.jpg'
@@ -169,7 +169,7 @@ angular.module('nectar_words_app')
 '<p><u>Narada creates confusion:</u>  Meanwhile, sage Narada came to Kamsa’s court and enquired about Kamsa and his kingdom. During the course of the conversation, Narada said, “So, it is the eighth child that is going to kill you. Is it the eighth child counting from the first born or the last born or from the middle? Do not disregard death as a distant contingency!” With these parting wordsNarada left the palace.</p>'+
 
 '<p><u>Kamsa’s anger:</u> Narada’s words were like poking a dagger into a bleeding wound. Kamsa flew into a rage and sent word for Vasudeva. He roared, “How many children you have now?”Vasudeva’s lips quivered as he replied, “Now I have six!” Kamsa yelled, “Tomorrow morning bring all six and hand them over to me.” Vasudeva walked like a corpse, went to Devaki, held her in tight embrace and broke the sad news. Next morning, Vasudeva handed over all the six children unwillingly to Kamsa and burst into tears. The ego centric maniac caught hold of each of them by the leg and beat them out of shapeon the hard floor! Meanwhile, the seventh pregnancy! Surprisingly, it was aborted in the seventh month! When Kamsa came to knew about this, he thought that Devaki was capable of some strategy to deceive him. So, he put both of them in a closely guarded prison.</p>',
-             author: '',
+             source : { author: '', location: ''}, author: '',
                         seriesId: 'Seven Days of Penance:',
                         seq: 6,
                         img: root + '/images/sai_1221_1.jpg'
@@ -187,7 +187,7 @@ angular.module('nectar_words_app')
 
 '<p>Sameeka was shocked at this news and astonished at the behavior of his son. He knew that the curse could not be taken back. He instructed Sringi to go to King Parikshith’s palace and inform the King of the curse and seek his pardon. Sringi obediently followed the instructions of his father and informed King Pariskhith about the forthcoming danger from the snake. Parikshith knowing that his end is going to come in seven days, left the palace and began to seek sages and saints for spiritual knowledge. Parikshith was not satisfied with the advice many of them gave him.  Finally, he settled under a tree near Bhagirathi river and started to meditate on the Lord.  The story takes a sudden turn now!</p>',
 
-                        author: '',
+                        source : { author: '', location: ''}, author: '',
                         seriesId: 'Seven Days of Penance:',
                         seq: 5,
                         img: root + '/images/sai_1221_1.jpg'
@@ -202,7 +202,7 @@ angular.module('nectar_words_app')
 '<p>Dharmaraja called renowned astrologers and asked them, “O wise men, who know the past, present and future! Examine the horoscope of Parikshith and tell me how the future will be shaped.” The Pundits examined the horoscope at length and the head Pundit stood up and addressed King Yudhistra, “Maharaja, I have examined thousands of horoscopes, but I never yet to come across a more auspicious grouping than is indicated in this horoscope. All virtues will gather in this child. The great Manu has again come in your dynasty. He will revere and serve Gods and the Brahmins. He will outdistance all those who gone before him.”</p>' +
 '<p>Dharmaraja was still not satisfied. He asked, “I am happy with all the answers you have given. But, I would like to know how he will meet his end.”  The Pundits set about the calculations again and took a long time over it. Finally, they announced, “This prince will give up his kingdom as a result of a sage’s curse. He will be bitten by a serpent.”</p>' +
 '<p>After hearing this, Dharmaraja was very unhappy. He lamented, “O, the horror of it. Why should this child end up like that?” The Brahmins hastened to console him. “Maharaja”, they said, “There is no reason to grieve. As soon as he learns of the curse, he will give up his kingdom, as well as his wife and children and retire to the bank of the holy Bhagirathi river and surrender himself to the Lord. The great sage Suka, son of Vyasa, will arrive there and initiate him into Atma Jnana (Self-knowledge) through the recital of the glories of Lord Krishna and singing of His praise. Thus, he will spend his last days on the sacred bank of Ganga and breathe his last with the adoration of the Lord. He will not born again, for, through Bhakti Yoga (Path of devotion), he will attain oneness with the Lord.  Hearing this, Dharmaraja was consoled and said, “If so, this is no curse; it is a unique boon!”</p>',
-                        author: '',
+                        source : { author: '', location: ''}, author: '',
                         seriesId: 'Seven Days of Penance:',
                         seq: 4,
                         img: root + '/images/sai_1221_1.jpg'
@@ -218,7 +218,7 @@ angular.module('nectar_words_app')
 '<p>“For, how else are we to explain such a fact as this: a wife quarreled with her husband and is arguing before the judge in court that she should be permitted to go to her parents, leaving him to himself. How I am to face such a plea in court that she should be permitted to dissolve the marriage and leave for her parent’s home, deserting her husband? A petition from such a wife was admitted yesterday in the Court of Justice! How am I to ignore such disgraces?”</p>' +
 '<p>“Yesterday, the horses in the royal stables started weeping. They were shedding copious tears, the workers in the stables reported. These are the indications of wholesale destruction, not of any minor danger or small evil.”</p>' +
 '<p>Meanwhile, a guard from the main entrance rushed in, announcing that the soldiers had spotted Arjuna approaching the outskirts of the city.</p>',
-                        author: '',
+                        source : { author: '', location: ''}, author: '',
                         seriesId: 'Seven Days of Penance:',
                         seq: 3,
                         img: root + '/images/sai_1221_1.jpg'
@@ -236,7 +236,7 @@ angular.module('nectar_words_app')
                 '<p>&nbsp;&nbsp;Lord Krishna saw his yearning. He laughed aloud! He graciously bent low and lifted the child on to His lap. Sitting on His lap, the prince was staring at the Lord’s face without even a wink; he did not turn his head this way or that. He just sat and stared. Everyone was amazed at this behavior, so unlike that of a child. Sri Krishna turned to Yudhistra and said, “This fellow has started examining even Me! Well, I must test his behavior a little”. Then the Lord tried to distract the attention of the child by placing a variety of toys in front of him and hiding Himself from the view. But, his attention was not drawn towards any object. He had his eyes fixed inexorably on the Lord and he was seeking the Lord always! Krishna declared, “This is no ordinary child. So, Parikshith is the most appropriate name for him”. At this point, the Brahmins recited relevant passages from the Vedas and women sang auspicious songs. The family preceptor dipped a Navaratna (nine-gem) jewel in honey and wrote the name on the tongue of the child and the naming ceremony came to a happy end.</p>' +
 
                 '<p>&nbsp;&nbsp;Krishna stayed with the Pandavas for several months after the ceremony. The Pandavas enjoyed the intimacy with Krishna and benefited immensely from the Lord’s teachings every day. Finally, Krishna decided to go back to Dwaraka. Arjuna also decided to go with Krishna to Dwaraka to give Him company during the long journey, assure His safety and then return to Hastinapura. But, Arjuna does not return to Hastinapura for a very long time!',
-                        author: '',
+                        source : { author: '', location: ''}, author: '',
                         seriesId: 'Seven Days of Penance:',
                         seq: 2,
                         img: root + '/images/sai_1221_1.jpg'
@@ -258,7 +258,7 @@ angular.module('nectar_words_app')
       '<p>&nbsp;&nbsp;During the war, it becomes impossible for the Pandavas to kill Dronacharya as he is invincible due to his mastery of archery. In the war, there was an elephant by name Ashwatthama which gets killed. Krishna asks Yudhistra to say loudly that “Ashwatthama is killed” and followed by “the elephant” softly. Just when Yudhistra completes saying “Ashwatthama is killed”, Krishna blows the conch loudly that the words “the elephant” is not at all heard.  Hearing that Ashwatthama is killed, Dronacharya thinks that his son is killed in the war and he loses his hold on the bow. The bow falls to the ground. At this time, Arjuna sends an arrow and kills Dronacharya. Also, Abhimanyu, the son of Arjuna, gets killed by Kauravas when they cleverly surround him from all sides.</p>' +
 
       '<p>&nbsp;&nbsp;After the war was over, when Ashwatthama comes to know about the foul play by which his father Dronacharya was killed, he decides to take revenge by killing all the descendants of Pandavas.  Abhimanyu’s wife Uttara was pregnant at that time. Ashwatthama goes to the house of Abhimanyu and shoots an arrow at Uttara’s womb. But, mysteriously, a spinning wheel comes and grinds the arrow to pieces. Uttara with her fetus was saved. An interesting story begins to develop from here. Please wait for the next installment!.</p>',
-      author: '',
+      source : { author: '', location: ''}, author: '',
                         seriesId: 'Seven Days of Penance:',
                         seq: 1,
                         img: root + '/images/sai_1221_1.jpg'
@@ -274,7 +274,7 @@ angular.module('nectar_words_app')
 'please make my mind steady and one-pointed, no honor nor insult,<br/> ' +
 'let me engross myself in your seva, <br/>' +
 'Vithoba, give me the gift or your darshan )<br/>',
-                     author: '-',
+                     source : { author: '', location: ''}, author: '-',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/vitthala.jpg'
@@ -284,7 +284,7 @@ angular.module('nectar_words_app')
                      title: 'The power of honesty',
                      content: '<p>My father always had a cane at home to punish me whenever I did something wrong. On one Monday morning, I and my mother were sipping the morning coffee in the kitchen. My father was drinking the coffee and reading the newspaper in the living room. My mother was upset with me because of something I did wrong the previous day. Just then, my father walked into the kitchen, with the newspaper in his left hand and the empty coffee cup in the right hand. He placed the empty cup in the sink and was about to walk away. My mother stopped him and narrated in detail all the things that I had done wrong on the previous day. I expected the ‘cane ceremony’ but I had not finished the coffee. I told him, “I will quickly finish the coffee and come to the living room.” It was also getting late to go to school.</p>'
                          + '<p>&nbsp;&nbsp;&nbsp;&nbsp;As I entered the living room, my father was sitting on the chair, still engrossed in reading the newspaper and his face was covered by the newspaper. I stood in front of him and said, “I have come!” “For what?” he roared without even lifting his head. I said, “I have come to receive the beatings from the cane!” He stood up, put the newspaper down and looked at me. I could see tears well up in his eyes and he wiped it with the end of his dhoti. He quietly walked into the kitchen and started talking to my mother. I could overhear him telling my mother, “I thought, he would dodge me by saying that it was getting late for school. But, he kept up his word and stood in front of me with a bent back, fearing how hard the cane would strike him. I could not reach for the cane at that moment and I let him go! </p>',
-                     author: '(True story)',
+                     source : { author: '', location: ''}, author: '(True story)',
                      seriesId: 'The power of',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -294,7 +294,7 @@ angular.module('nectar_words_app')
                      title: 'The power of Ahimsa (non-violence)',
                      content: '<p>My friend had in his arm, an armlet of solid gold. It was not difficult to clip a bit of gold out of it. Well, it was done, but I could not bear it anymore.  I made up my mind to confess to my father. I wrote on a piece of paper what I had done and I was trembling as I handed the confession to my father expecting to be reprimanded. He read it through and pearl-drops trickled down his cheeks wetting the paper. For a moment he closed his eyes in some thought and tore up the note. I also cried. I could feel my father’s agony. Those pearl-drops of love cleansed my heart and washed my sin away. Only he, who has experienced such Love can know what it is.</p>'
                          + '<p>&nbsp;&nbsp;&nbsp;&nbsp; This was, for me, a lesson in Ahimsa. At that time, I could read in it nothing more than a father’s love, but today, I know that it was pure Ahimsa! When such ahimsa becomes all-embracing, it transforms everything it touches. There is no limit to its power! </p>',
-                     author: 'Mahatma Gandhi in The Story of my Experiments with Truth, p24',
+                     source : { author: '', location: ''}, author: 'Mahatma Gandhi in The Story of my Experiments with Truth, p24',
                      seriesId: 'The power of',
                      seq: -1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -303,7 +303,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('July 13 2016 3:30 AM'),
                      title: 'The power of silence',
                      content: 'Experience has taught me that silence is a part of the spiritual discipline of a votary of Truth. Proneness to exaggerate, to suppress or modify truth, wittingly or unwittingly, is a natural weakness of man. Therefore, silence is necessary in order to surmount it. A man of few words will rarely be thoughtless in his speech; he will measure every word. We find so many people impatient to talk. There is no chairman of a meeting who is not pestered with notes from people for permission to talk. And whenever the permission is given, the speaker generally exceeds the time limit, asks for more time and keeps on talking. All this talking can hardly be said to be of any benefit to the world. My shyness to speak has been in reality, my shield. It has allowed me to grow. It has helped me in my discernment of Truth.',
-                     author: 'Mahatma Gandhi in The Story of my Experiments with Truth, p53',
+                     source : { author: '', location: ''}, author: 'Mahatma Gandhi in The Story of my Experiments with Truth, p53',
                      seriesId: 'The power of',
                      seq:-1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -315,7 +315,7 @@ angular.module('nectar_words_app')
                           '<p>Can there be a wretch,<br/>So wicked and loathsome as I?<br/>I have forsaken my Lord;<br/>So faithless I have been</p>' +
                           '<p>For, it is an unbroken torture to me than I am still so far from Him, who, as I fully know, governs every breath of my life and whose offspring I am. I know that it is the evil passions within me that keep me so far from Him and yet I cannot get away from them.</p>' +
                           '<p>&nbsp;&nbsp;&nbsp;&nbsp; What I want to achieve – what I have been striving and pining to achieve these thirty years – is self-realization, to see God face to face, to attain Moksha (Liberation). I live and move about in pursuit of this goal. There are some things which are known only to oneself and one’s Maker. These are clearly incommunicable. The things that I am going to relate are not such. But they are spiritual or rather moral; for the essence of all religion is morality</p>',
-                     author: 'Mahatma Gandhi at the Sabarmati Ashram, Nov 26, 1925.',
+                     source : { author: '', location: ''}, author: 'Mahatma Gandhi at the Sabarmati Ashram, Nov 26, 1925.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_unplugged.jpg'
@@ -346,7 +346,7 @@ angular.module('nectar_words_app')
                         '<p>On being reminded that she is a foster mother, Yashoda gently smiles, gives Krishna a hug and says:</p>' +
 '<p>“Kanhaiya, it wasn’t you who ate the butter!”</p><br/>' +
 '<p>Krishna hugs Yashoda and confesses:“O Mother, it was me who ate the butter!”<br/><u>(Maiya Mori maine hi makhan khayo!)</p>',
-                     author: 'Sant Surdas',
+                     source : { author: '', location: ''}, author: 'Sant Surdas',
                      seriesId: 'Sur  Sagar 2016 July',
                      seq: 4,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -365,7 +365,7 @@ angular.module('nectar_words_app')
                          '<p>But, there is laughter in other people’s hearts.</p>' +
                          '<p>Hey, Lord of Surdas! Without a vision of you,</p>' +
                          '<p>We would give up our very lives!</p>',
-                     author: 'Sant Surdas',
+                     source : { author: '', location: ''}, author: 'Sant Surdas',
                      seriesId: 'Sur  Sagar 2016 July',
                      seq: 3,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -386,7 +386,7 @@ angular.module('nectar_words_app')
                          '<p>But all are one in Surdas’ Shyam.</p>'  +
                          '<p>This time, take me across this ocean,</p>' +
                          '<p>Or give up your vow to be a savior!</p>',
-                     author: 'Sant Surdas',
+                     source : { author: '', location: ''}, author: 'Sant Surdas',
                      seriesId: 'Sur  Sagar 2016 July',
                      seq: 2,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -400,7 +400,7 @@ angular.module('nectar_words_app')
                         '<p>“Why would somebody name you with a masculine name?”</p><p>“I don’t know. That is how my parents named me!”</p>' +
 
 '<p> Then, I explained to her the difference between Indra and Indira. Indra is the King of Gods in Heaven whereas ‘Indira’ is another name for Lakshmi, the consort of Vishnu. Indira means ‘beauty’ or ‘splendor’ in Sanskrit.</p>',
-                         author: 'Steve Jobs/Sayings of Shri Ramakrishna',
+                         source : { author: '', location: ''}, author: 'Steve Jobs/Sayings of Shri Ramakrishna',
       seriesId: 'Sur  Sagar 2016 July',
                      seq: 1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -409,7 +409,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('July 7 2016 3:30 AM'),
                      title: 'Dust does not settle on vertical surfaces',
                      content: 'Dust settles only on flat surfaces, not on vertical surfaces. If a vertical surface is slightly sloped or tilted, like the windshield of your car, dust settles on it again. Dust takes away the clean look, the shine and makes the object appear dull and un-cared for. Similarly, if you stand up and hold on to Dharma (righteousness), you will shine. If you even slightly deviate from the right path, you will be looked down, lose your respect and the charisma that you had before. ',
-                     author: 'Swami T',
+                     source : { author: '', location: ''}, author: 'Swami T',
                      seriesId: '-1',
                      seq: -1,
                      img:  './images/sai_1221_1.jpg'
@@ -418,7 +418,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('July 6 2016 3:30 AM'),
                      title: 'Why is my name Renu (dust)?',
                      content: 'The seeker of Truth should be humbler than the dust. The world crushes the dust under its feet, but the seeker of the Truth should be so humble that even the dust could crush him. Only then, and not till then, will he have a glimpse of Truth. The dialogue between Vasishta and Vishwamitra makes this abundantly clear. Christianity and Islam also amply make this point. out. ',
-                     author: 'Mahatma Gandhi and Sabarmathi Ashram, Nov 26, 1925.',
+                     source : { author: '', location: ''}, author: 'Mahatma Gandhi and Sabarmathi Ashram, Nov 26, 1925.',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_unplugged.jpg'
@@ -427,7 +427,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('July 5 2016 3:30 AM'),
                      title: 'Freedom versus Restraints',
                      content: 'Restraint never ruins one’s health. What ruins ones health is not restraint but outward suppression. A really self-controlled person grows every day from strength to more strength and from peace to more peace. The very first step in self-restraint is the restraint of thoughts. ',
-                     author: 'Mahatma Gandhi in Harijan, Oct 28, 1937.',
+                     source : { author: '', location: ''}, author: 'Mahatma Gandhi in Harijan, Oct 28, 1937.',
                      seriesId: 'Independence Day 2016',
                      seq: 3,
                      img: root + '/images/sai_1221_1.jpg'
@@ -437,7 +437,7 @@ angular.module('nectar_words_app')
                      title: 'Independence Day',
                      content: '<p>The Sanskrit word for freedom is Swatantra. Swa means Self, the Atma.  Tantra means dictated by or ruled by. So, Swatantra means acting according to the dictates of the Inner Self. Your freedom is subject to your duty towards other fellow beings. The Atma will never cause harm to others. So, a man who practices Swatantra is independent and ever free because he does not accumulate sins or have repeated births.</em><br/><strong> –Baba in Sanathana Sarathi, August 1995, p200.</strong><em></p>' + 
                          '<p>The highest form of freedom carries with it the greatest measure of discipline and humility. Freedom that comes from discipline and humility is pure and cannot be denied; unbridled freedom is a sign of vulgarity. It is harmful to oneself and to others. </em><br/><strong> –Mahatma Gandhi.</strong><em></p>',
-                     author: 'various',
+                     source : { author: '', location: ''}, author: 'various',
                      seriesId: 'Independence Day 2016',
                      seq: 2,
                      img: root + '/images/sai_1221_1.jpg'
@@ -446,7 +446,7 @@ angular.module('nectar_words_app')
                      postDate: new Date('July 3 2016 3:30 AM'),
                      title: 'Independence Day Fire Works',
                      content: 'Mere bookish knowledge is like an ordinary rocket: it bursts into a few sparks and dies out. But the knowledge of sages like Narada and Sukadeva is like a good rocket: for a while, it showers balls of different colors, and then it stops; again it throws out new balls, and again it stops; and thus it goes on. Those sages practiced Love (prema) for God. Prema is the rope by which one can reach the Lord and enjoy the eternal bliss (Satchidananda)',
-                     author: 'Gospel of Sri Ramakrishna, V(2),  p569.',
+                     source : { author: '', location: ''}, author: 'Gospel of Sri Ramakrishna, V(2),  p569.',
                      seriesId: 'Independence Day 2016',
                      seq: 1,
                      img: root + '/images/sai_1221_1.jpg'
@@ -457,7 +457,7 @@ angular.module('nectar_words_app')
                      content: '<p><H4><strong>Twisted Man because of wealth</strong></H4>“Non-stop pursuing of wealth will only turn a person into a twisted being, just like me.<br/>&nbsp;' + 
                                 'God gave us the senses to let us feel the love in everyone’s heart, not the illusions brought about by wealth.” – Steve Jobs<br/></p>' +
                             '<p><H4><strong>Twisted God because of Love</strong></H4>“Sri Krishna is called Tribhanga, that is, twisted in three different directions. It is only a soft thing that is capable of being twisted. So, this form of Sri Krishna implies that He must have been softened in some way or other. This softening in this case is due to His intense Prema or ecstatic Love for His devotees!<br/> – Sayings of Sri Ramakrishna, p248.</p>',
-      author: 'Steve Jobs/Sayings of Shri Ramakrishna',
+      source : { author: '', location: ''}, author: 'Steve Jobs/Sayings of Shri Ramakrishna',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/dwarkamai_1.jpg'
@@ -469,7 +469,7 @@ angular.module('nectar_words_app')
                             'Perhaps relationships, perhaps art, perhaps a dream from younger days ...<br/>' +
                             'Non-stop pursuing of wealth will only turn a person into a twisted being, just like me.<br/>' +
                             'God gave us the senses to let us feel the love in everyone’s heart, not the illusions brought about by wealth.”',
-                     author: 'Steve Jobs',
+                     source : { author: '', location: ''}, author: 'Steve Jobs',
                      seriesId: '-1',
                      seq: -1,
                      img: root + '/images/sai_unplugged.jpg'

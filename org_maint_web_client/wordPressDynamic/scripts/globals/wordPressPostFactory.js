@@ -19,7 +19,23 @@
                      }
                   )
               }
-             
+              wordPressPostFactory.getStockQuote = function (  callBack) {
+                 // var url = 'http://finance.google.com/finance/info?q=' + SE + ':' + symbol ;
+                  var url = 'http://finance.google.com/finance/info?q=NASDAQ:AAPL' ;
+                  console.log(url) ;
+                  $http.get(url).
+                    success(
+                      function (data) {
+                          console.log(data);
+                          callBack(data);
+                      }
+                  ).
+                  error(
+                     function () {
+                         callBack(null);
+                     }
+                  )
+              }
               return wordPressPostFactory;
 
           } ]);

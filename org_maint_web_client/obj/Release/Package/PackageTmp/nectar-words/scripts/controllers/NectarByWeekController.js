@@ -11,7 +11,17 @@
         var startOfThisWeek = parseInt(new Date().getDay());
         var deltaToDesiredWeek = startOfThisWeek + (($routeParams.weekIndex - 1) * 7)
         //console.log(startOfDateString);
-        $scope.weekIndex = $routeParams.weekIndex - 1;
+        $scope.weekIndex = parseInt($routeParams.weekIndex)
+        /* later to remove cache
+        if ($localStorage.allWeekCount)
+            $scope.allWeekCount = $localStorage.allWeekCount.count;
+
+        $scope.weekIndex = parseInt($scope.allWeekCount) - parseInt($routeParams.weekIndex) + 1;
+        alert($scope.allWeekCount);
+        alert($routeParams.weekIndex);
+        alert($scope.allWeekCount);
+        alert($scope.weekIndex);
+        */
         if ($routeParams.weekIndex == 1)
             $scope.WhichWeek = " the past week.";
         else
@@ -19,7 +29,11 @@
         $scope.startOfThisWeek = new Date(new Date().getTime() - parseInt(startOfThisWeek * 24 * 60 * 60 * 1000));
         $scope.startOfChosenWeek = new Date(new Date().getTime() - parseInt(deltaToDesiredWeek * 24 * 60 * 60 * 1000));
         $scope.today = new Date();
-        $scope.thisWeeksSaying = Hub.getThisWeekSaying(parseInt($scope.weekIndex));//$scope.allWeeksSaying[$scope.weekIndex];
+        $scope.allWeekCount = 0;
+       
+       // $scope.weekIndex = $scope.allWeekCount - $scope.weekIndex;
+      
+         $scope.thisWeeksSaying = Hub.getThisWeekSaying(parseInt($scope.weekIndex));//$scope.allWeeksSaying[$scope.weekIndex];
         var newStat =
             {
                 Page: 'Weekly Post' + $scope.WhichWeek,
