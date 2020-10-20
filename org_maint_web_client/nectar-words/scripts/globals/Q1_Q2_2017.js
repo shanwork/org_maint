@@ -140,6 +140,15 @@ angular.module('nectar_words_app')
                   }],
           */
                   [  {
+                    posted: 'Jan 12 2019',
+                    postDate: new Date('Jan 12 2019'),
+                    title: 'April 14',
+                    seriesId: '-1',
+                    seq: -1,
+                    content: 'It is not necessary to devote many hours to prayer. It is enough if one thinks of God with all his heart and offers himself even for a few minutes. A single match stick when struck can dispel the darkness in a room that was closed for years. Mountains of cotton can be burnt down by a single spark. Likewise, whole hearted chanting of the name of Rama even once can destroy mountains of sins. But the chanting should emanate from the depths of the heart.  Remember the name of Rama with love. God can be realized only through love and by no other means.',
+                    source: { author: 'Sri Sathya Sai Baba ', location: 'Sri Rama Navami, April 4, 1989' }, author: 'Sri Sathya Sai Baba on Sri Rama Navami, April 4, 1989',
+                    img: root + '/images/sai_unplugged_1_2017.jpg'
+                }, {
                       posted: 'April 14 2017',
                       postDate: new Date('April 14 2017'),
                       title: 'April 14',

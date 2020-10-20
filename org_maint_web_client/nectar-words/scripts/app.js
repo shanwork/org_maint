@@ -19,7 +19,9 @@
               controller: 'NectarArchiveController',
 
               templateUrl: 'views/NectarArchive.html'
-          }).when('/Narrations', {
+          }).when('/Poems', {
+            templateUrl: 'views/myPoem.html'
+        }).when('/Narrations', {
               controller: 'NectarNarrationController',
 
               templateUrl: 'views/NectarNarrations.html'
