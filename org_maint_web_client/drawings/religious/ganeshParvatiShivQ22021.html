@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html ng-app="test_app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta title="Photo Gallery">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="style/styles.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+    </style>
+    <title>Photo Gallery</title>
+</head>
+
+
+<body>
+    <header  >
+        <nav class="navbar navbar-default">
+            <ul class="navbar navbar-nav">
+
+                <li>
+                    <b><a href="../index.html">Parent Index Page</a></b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li>
+                    <b><a href="home.html">Overview</a> </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <!--li>
+                    <b><a href="adjustibleGallery.html">Dynamic Photo Gallery</a> </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li>
+                    <b><a href="scenic_nature.html">Grand Canyon West Rim Snaps  Gallery </a></b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li><b><a href="scenic_nature_list_detail.html">Grand Canyon West Rim Static Slide Show</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li-->
+                <li><b>Sketches of Shree Ganesh, Parvati and Shivji Q3 20220</b></li>
+            </ul>
+        </nav>
+    </header>  
+    <!-- Main SPA area    -->
+    <div style='float:left; width:450px;margin-right:3px;border:2px inset beige;'>   <ul>
+        <li><a href="ganeshParvatiShivQ32020.html">Ganesh Shiv Parvati Q3 2020</a></li>
+        <li><a href="ganeshParvatiShivQ42020.html">Ganesh Shiv Parvati Q4 2020</a></li>
+        <li><a href="ganeshParvatiShivQ12021.html">Images Q1 2021</a></li>
+        <li><a href="ganeshParvatiShivQ22021.html">Ganesh Shiv Parvati Q2 2021</a></li>
+    </ul>
+    </div>
+    <div id='mainAppDiv' style='overflow:auto;margin-left:-10px;padding:5px;'>
+        <div style='overflow:auto;margin-left:-10px;padding:5px;'>
+       <div id="landing">
+           
+            <!---- MAIN CONTENT-->
+            <div class="container">
+
+                <br>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                        <li data-target="#myCarousel" data-slide-to="6"></li>
+                        <li data-target="#myCarousel" data-slide-to="7"></li>
+                        <li data-target="#myCarousel" data-slide-to="8"></li>
+                        <li data-target="#myCarousel" data-slide-to="9"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <p style='padding:0px 120px;width:460;'> As I mentioned, I used to draw a lot of trains and planes. <br/> Like many born and brought up in India, Indian Railways, the network, the trains, everything else 
+                            have been a part of our lives. I grew up with vaccations involving a lot of train travel. Here I have attempted to capture the essence of IR travel trying to capture iconic and historic trains from the past to the present of the Indian Railways
+                            <br/>(The image below is the Indian Railways Emblem in the center. On the left is the 'Fairy Queen' IR steam locomotive c.a 1855 said to be the oldest operational loco in the world
+                            On the right is a express locomotive concept WAP5 'Tejas' variant targetting 180 - 200 kph)
+                            <img src="images/famousTrains/IMG_8922.jpg" alt="Punjab Mail" width="760" height="445">
+                        </p>
+                        </div>
+                        
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>Below is a collection of all the drawings I present stitched together in one canvas - sort of like the sneak peek you get 
+                                in a pictorial calendar. Each drawing follows.. </p>
+                            <img src="images/famousTrains/IRTrainCollageOCT2020.png" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>The Punjab Mail - would ply from Mumbai(Bombay) to Peshawar. Post Independence (1947)
+                            from Mumbai to Amristar. <br/>Attempt below shows a 1912 scenario - the inaugural year of this legendary train - at Ballard Pier Station next to the Mumbai Docks where passengers from Steamers would directly board the train after having disembarked from their voyage
+                            (The station no longer exists; the Mail now departs from what used to be known as Victoria, now Chhatrapati Shivaji, Terminus)</p>
+                            <img src="images/famousTrains/famousTrainsPunjabMail1912Oct162020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>The Frontier Mail - like the above would ply from Mumbai(Bombay) to Peshawar. Post Independence (1947)
+                            from Mumbai to Amristar. Here, the attempted scene is 1928-1929 (The 'Mail was started in 1928) There is a hilly section in the Mumbai Delhi Route 
+                            and this is known as the Dara Pass </p>
+                            <img src="images/famousTrains/famousTrainsFrontierDaraPassOct152020.jpeg" alt="Frontier Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>Attempt to draw Deccan Queeen 1930 passing through the Western Ghats. This train was started 1930'ish and has always been hauled on regular basis by Electic locomotives</p>
+                            <img src="images/famousTrains/famousTrainsDeccanQueenpre50sOct32020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>Taj Express Attempt - The background, scene, comtext are from imagination. 
+                                This train was started in 1964 as a fast between New Delhi and Agra. Typically one woould buy a tourist package - take this train from Delhi in the morning, 
+                                detrain at Agra and get onto a day tour of the Taj Mahal, Fatehpur Sikri and other tourist spots (Lunch included), then take the return back to Delhi late evening.<br/>
+                                 It was pulled by Steam locomotives (probably) for a long time even after 
+                            Diesel and Electric power was at hand on this route, as a sort of tradition</p>
+                            <img src="images/famousTrains/famousTrainsTajExpressSteamPower10122020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>Mumbai Delhi Rajdhani Superfast capture attempt. This was one of the highest speed trains in India, plying between Mumbai and Delhi overnight.<br/>
+                                This a (partly from imagination) 1980's - 1990's scenario where she was hauled by two coupled WDM2 Diesel Electric Locos - the train was 18 coaches long</p>
+                            <img src="images/famousTrains/famousTrainsBctNdlsRajdhani90sCct122020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>Two famous trains started in the 1980s KK express (top, with couple WDM3a Diesels) connects New Delhi with Bangalore <br/>
+                              GItanjali (bottom with WAP4 electric locomotive), Mumbai and Howrah<br/>
+                              <em>(This scenario is fictitious - the trains are not - a merge across different iterations of these trains, and a hypothetical meeting point 
+                                  near Nagpur Central India which has a principal North-South East-West intersection. <br/>
+                                  The period of the original liveries - green and yellow/gold for 'KK' and some red/gold/yellow combo for the Gitanjali in all likelihood didnt have WDM3A or WAP4 out yet..)</em></p>
+                            <img src="images/famousTrains/amousTrainsKKExpGitanjaliOct152020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>Two types of trains introduced in the late 90s/ early 21st century <br/>
+                                Shatabdi expresses (drawing on top) are high speed day trains. Typical top speeds are over 130 kph. The train here shown is pulled by a WAP5 electric loco capable of over 160 kph 
+                                <br/> Garib Rath (bottom) pulled here by a WDP4 Diesel passenger loco. Garib Rath ('Poor Chariot') provides luxury facilities for low income people 
+                                <em>(This scenario is completely fictitious - though not the trains, engine and rake for the generation attempted - scene of the bridge, river etc.</em></p>
+                            <img src="images/famousTrains/famousTrainsShatabdiGaribRathOct152020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>VandeBharat. The latest in Inter City travel. This is a multi unit train and can go upto speeds of 180 kph</p>
+                            <img src="images/famousTrains/famousTrainsVandeBharatOct142020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        
+                    </div>
+                    <br />
+                    <!-- Left and right controls -->
+                    <a class="carousel-control left " href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control right " href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <!---- /MAIN CONTENT-->
+
+
+        </div>
+    </div>
+    <!-- SCRIPTING-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    
+  
+  
+</body>
+</html>

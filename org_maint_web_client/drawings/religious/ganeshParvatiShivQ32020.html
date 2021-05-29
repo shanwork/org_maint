@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html ng-app="test_app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta title="Photo Gallery">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="style/styles.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+    </style>
+    <title>Photo Gallery</title>
+</head>
+
+
+<body>
+    <header  >
+        <nav class="navbar navbar-default">
+            <ul class="navbar navbar-nav">
+
+                <li>
+                    <b><a href="../index.html">Parent Index Page</a></b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li>
+                    <b><a href="home.html">Overview</a> </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <!--li>
+                    <b><a href="adjustibleGallery.html">Dynamic Photo Gallery</a> </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li>
+                    <b><a href="scenic_nature.html">Grand Canyon West Rim Snaps  Gallery </a></b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li><b><a href="scenic_nature_list_detail.html">Grand Canyon West Rim Static Slide Show</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li-->
+                <li><b>Sketches of Shree Ganesh, Parvati and Shivji Q3 20220</b></li>
+            </ul>
+        </nav>
+    </header>  
+    <!-- Main SPA area    -->
+    <div style='float:left; width:450px;margin-right:3px;border:2px inset beige;'>   <ul>
+        <li><a href="ganeshParvatiShivQ32020.html">Ganesh Shiv Parvati Q3 2020</a></li>
+        <li><a href="ganeshParvatiShivQ42020.html">Ganesh Shiv Parvati Q4 2020</a></li>
+        <li><a href="ganeshParvatiShivQ12021.html">Images Q1 2021</a></li>
+        <li><a href="ganeshParvatiShivQ22021.html">Ganesh Shiv Parvati Q2 2021</a></li>
+    </ul>
+    </div>
+    <div id='mainAppDiv' style='overflow:auto;margin-left:-10px;padding:5px;'>
+        <div style='overflow:auto;margin-left:-10px;padding:5px;'>
+        <div id="landing">
+           
+            <!---- MAIN CONTENT-->
+            <div class="container">
+
+                <br>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                        <li data-target="#myCarousel" data-slide-to="6"></li>
+                        <li data-target="#myCarousel" data-slide-to="7"></li>
+                        <li data-target="#myCarousel" data-slide-to="8"></li>
+                        <li data-target="#myCarousel" data-slide-to="9"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <p style='padding:0px 120px;width:460;'> 
+                            <img src="images/ganeshParvatiShivQ32020//Aumkar-Ganesh-sept-2020-final.jpeg" alt="Punjab Mail" width="760" height="945">
+                        </p>
+                        </div>
+                        
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>(WIP version) </p>
+                            <img src="images/ganeshParvatiShivQ32020/Aumkar-Ganesh-sept-2020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'></p>
+                            <img src="images/ganeshParvatiShivQ32020/Aumkar-Ganesh-sur-niragas-ho-sept-29-2020.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'></p>
+                            <img src="images/ganeshParvatiShivQ32020/Aumnamaha-Shivaya-Namaha 3yosdashi lock92920.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>(WIP)</p>
+                            <img src="images/ganeshParvatiShivQ32020/Aumnamaha-Shivaya-Namaha 3yosdashi 91520.jpeg" alt="Frontier Mail" width="460" height="345">
+                        </div>
+                        
+                        <div class="item">
+                            <p style='padding:0px 120px;width:460;'>I've redrawn this in Q4 2020 - see the evolution</p>
+                            <img src="images/ganeshParvatiShivQ32020/Aumnamaha-Shivaya-ShivaVeena 92520.jpeg" alt="Punjab Mail" width="460" height="345">
+                        </div>
+                       
+                    </div>
+                    <br />
+                    <!-- Left and right controls -->
+                    <a class="carousel-control left " href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control right " href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <!---- /MAIN CONTENT-->
+
+
+        </div>
+    </div>
+    <!-- SCRIPTING-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    
+  
+  
+</body>
+</html>
